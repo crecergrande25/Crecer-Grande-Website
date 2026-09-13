@@ -1,0 +1,5 @@
+CRECER GRANDE WEBSITE
+Version: 2.0 — V1.9.3 Classic Rebuild
+Build date: 2026-09-13
+Frontend basis: saved Crecer Grande V1.9.3 final structure and design language
+Backend compatibility: Supabase V2.0-R4 (already migrated and verified PASS)

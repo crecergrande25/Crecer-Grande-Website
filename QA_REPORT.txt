@@ -1,0 +1,46 @@
+CRECER GRANDE WEBSITE V2.0 — V1.9.3 CLASSIC REBUILD QA REPORT
+================================================================
+Build date: 2026-09-13
+
+DESIGN BASIS
+------------
+- Fresh frontend rebuild using the saved V1.9.3 homepage structure as the visual/master reference.
+- V1.9.3 dark industrial hero, credibility strip, 8 image-backed division cards, start-input cards,
+  featured products, 7-step process, estimate block, industry chips, CTA and footer restored.
+- Original finalized Crecer Grande logo retained at assets/images/logo.png.
+- No font files bundled.
+- V2.0 focused SEO pages, division pages, product pages, project page and Website Manager retained.
+
+BACKEND
+-------
+- Live Supabase R4 migration previously returned SUCCESS / 2.0-R4.
+- Post-upgrade verification previously returned FINAL / PASS.
+- This deployment package contains NO database migration SQL to run.
+- Protected admin-users Edge Function retained under supabase/functions/admin-users/.
+
+STATIC QA
+---------
+HTML files checked: 38
+Public HTML files: 36
+Sitemap URLs: 35
+Sitemap missing files: 0
+Local reference / SEO / structure issues: 0
+Image files checked: 48
+Image integrity failures: 0
+PDF files included: 16
+Bundled font files: 0
+Obvious embedded secret-token patterns: 0
+
+JAVASCRIPT
+----------
+JavaScript syntax is checked separately using node --check on every .js file.
+
+RUNTIME CONFIG
+--------------
+assets/js/runtime-config.js contains no secret/service-role credentials. The Supabase Project URL and browser-safe
+publishable/anon key remain project-specific. If not already present in the live repository, Website Manager's
+Connect Supabase flow can be used with ONLY those browser-safe values.
+
+RESULT
+------
+PASS

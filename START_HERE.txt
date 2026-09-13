@@ -1,0 +1,30 @@
+CRECER GRANDE WEBSITE V2.0 — V1.9.3 STYLE REBUILD
+=================================================
+
+IMPORTANT
+- The live Supabase backend has already been upgraded successfully to V2.0-R4 and verified PASS.
+- DO NOT run any more SQL migration files.
+- This package is a FRONTEND rebuild based on the saved V1.9.3 website structure and visual system.
+
+DEPLOYMENT
+1. Back up the current GitHub repository.
+2. Upload the CONTENTS of this package to the repository root.
+3. Keep CNAME, .nojekyll, index.html, robots.txt and sitemap.xml at repository root.
+4. Keep the existing Supabase browser-safe Project URL and publishable/anon key in assets/js/runtime-config.js.
+   If runtime-config.js is blank, use Website Manager -> Connect Supabase and provide ONLY the Project URL and browser publishable/anon key.
+5. Do not place service_role, secret keys, database passwords or admin passwords in GitHub.
+6. Commit and wait for GitHub Pages.
+7. Test https://crecergrande.in/ and https://crecergrande.in/admin/.
+
+VISUAL BASIS
+- Homepage rebuilt to the saved V1.9.3 structure.
+- Original image-backed division cards restored.
+- Original five-item credibility strip restored.
+- Original featured products, workflow, estimate, industry chips and CTA treatment restored.
+- All V2.0 SEO/service/product/division pages remain included.
+
+BACKEND
+- Do not alter the R4 database.
+- Existing Auth users remain:
+  ramiz.islam@admin.crecergrande.in
+  sourav.bhowmik@admin.crecergrande.in
