@@ -151,7 +151,7 @@
         <div class="stat"><span>WhatsApp clicks</span><b>${a.whatsapp_clicks || 0}</b></div>
         <div class="stat"><span>New enquiries</span><b>${newEnquiries}</b></div>
       </div>
-      <div class="card"><h2>Website V2.1</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
+      <div class="card"><h2>Website V2.2</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
   }
 
   async function settings() {
@@ -391,7 +391,7 @@
   function userCreateEditor(roles) {
     const ed = document.getElementById('editor');
     const pw = randomPassword();
-    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.1 forces a password change on first login.</div></form>`;
+    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.2 forces a password change on first login.</div></form>`;
     document.getElementById('regen-password').onclick = () => { document.getElementById('new-user-password').value = randomPassword(); };
     document.getElementById('usercreate').onsubmit = async (e) => {
       e.preventDefault();
