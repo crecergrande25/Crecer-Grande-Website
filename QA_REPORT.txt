@@ -1,39 +1,45 @@
-CRECER GRANDE WEBSITE V2.0-R4 — FINAL STATIC QA REPORT
-==============================================================
+CRECER GRANDE WEBSITE V2.0 — FINAL RESTORED QA REPORT
+=====================================================
+Build date: 2026-09-13
 
-Package root: Crecer_Grande_Website_V2.0_COMPLETE_R4
-HTML files: 38
-JavaScript files: 9
+BACKEND STATUS PROVIDED BY LIVE SUPABASE RUN
+--------------------------------------------
+R4 master migration: SUCCESS / version 2.0-R4
+Post-upgrade verification: FINAL = PASS
+No further database migration is required for the current project.
+
+FRONTEND RESTORATION
+--------------------
+- Restored image-rich homepage visual system from the V1.9.3 design direction.
+- Restored V1.9.3-compatible div-*.webp, prod-*.webp, process-*.webp and project-*.webp paths.
+- Added actual engineering/manufacturing imagery from Crecer Grande division materials.
+- Restored image cards for Divisions, Services, Products and Projects.
+- Added real-image hero panels on division, product and six SEO service pages.
+- Public pages retain full static fallback content when Supabase runtime config is absent.
+- Website Manager provides guided one-time Supabase connection rather than a dead login state.
+
+AUTOMATED STATIC CHECKS
+-----------------------
+HTML files checked: 38
+Sitemap URLs checked: 35
+Image assets checked: 56
 Division profile PDFs: 8
-Sitemap URLs: 35
+Legacy PDF download aliases: 8
+Broken local references: 0
+Missing public page titles: 0
+Missing meta descriptions: 0
+Missing canonicals: 0
+Missing H1 elements: 0
+Missing image alt attributes: 0
+Image integrity failures: 0
+PDF integrity failures: 0
+JavaScript syntax failures: 0
+Edge Function brace/parser sanity failures: 0
+Bundled font files: 0
+Obvious embedded admin passwords / DB connection strings / service-role literals: 0
 
-[PASS] Local file/link references: 0 broken
-[PASS] Public SEO title/meta/canonical basics: 0 missing
-[PASS] Sitemap URLs map to local files: 0 missing
-[PASS] All six new SEO pages are in sitemap: 6/6
-[PASS] JavaScript syntax (node --check): 0 errors
-[PASS] Edge Function parser-level TypeScript syntax: 0 parser errors
-[PASS] Secret/JWT/database URL scan: 0 suspicious embedded values
-[PASS] SQL dollar-quote balance: {'$$': 62, '$fmt$': 6, '$sql$': 2, '$fn$': 2, '$q$': 2, '$seed$': 2}
-[PASS] SQL single atomic Phase-B transaction: BEGIN=1 COMMIT=1
-[PASS] No active references to obsolete migration filenames: 0 stale references
-[PASS] Runtime config intentionally requires existing public URL/key: blank browser-safe values by design
-
-LEGACY DATABASE COMPATIBILITY CHECKS
-[PASS] site_settings text-id safe
-[PASS] estimate title compatibility
-[PASS] estimate created_at normalized before ranking
-[PASS] legacy extra estimate required-column defaults
-[PASS] legacy extra resource required-column defaults
-[PASS] existing admin auth domain
-[PASS] atomic migration
-[PASS] backup schema
-[PASS] analytics allowlist
-[PASS] single-root index
-
-KNOWN DEPLOYMENT INPUT
-- assets/js/runtime-config.js intentionally contains blank Supabase Project URL / publishable browser key.
-- Copy those two browser-safe values from the currently working V1.9.3 deployment before GitHub deployment.
-- No secret/service-role/database password is bundled.
-
-FINAL STATIC QA: PASS
+IMPORTANT CONFIGURATION NOTE
+----------------------------
+The Supabase Project URL and browser publishable/anon key are project-specific values and were not available in the supplied files. They are therefore intentionally not hard-coded.
+After deployment, open /admin/, choose Connect Supabase, paste only those two browser-safe values, and click Save, connect & download config. Replace assets/js/runtime-config.js in GitHub with the automatically downloaded file.
+Never place a service_role/secret key, database password or admin password in website files.

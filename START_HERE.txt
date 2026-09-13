@@ -1,62 +1,74 @@
-CRECER GRANDE WEBSITE V2.0 — COMPLETE R4 UPGRADE
-================================================
+CRECER GRANDE WEBSITE V2.0 — FINAL RESTORED COMPLETE BUILD
+===========================================================
 
-WHY R4 EXISTS
--------------
-The live Supabase database is a mixed/legacy schema and did not fully match the intended V1.9.3 foundation.
-R4 normalizes the live schema before installing V2.0. It specifically handles:
-- legacy site_settings with text ID
-- legacy estimate_rules with extra columns and missing created_at
-- missing security/user/permission tables
-- missing CMS and analytics tables/functions
-- missing V2 columns on existing content tables
-- existing Ramiz/Sourav Auth users under @admin.crecergrande.in
-- duplicate/blank legacy slugs before unique indexes
-- old storage and RLS policies
-
-DO NOT RUN R1 / R2 / R3 AGAIN.
-
-STEP 1 — DATABASE
------------------
-1. Supabase > SQL Editor > New query.
-2. Open V2.0_MASTER_BACKEND_UPGRADE_R4.sql.
-3. Paste the ENTIRE file and click Run.
-4. Do not run only a selected portion.
-5. A successful result ends with JSON containing:
-   "status": "SUCCESS"
-   "version": "2.0-R4"
-
-R4 creates a committed pre-upgrade snapshot under:
-  cg_v2_backup_20260913_r4
-
-STEP 2 — VERIFY
----------------
-Run POST_UPGRADE_VERIFY_R4.sql in a new SQL query.
-The final result should say PASS, and required tables/functions/columns should say EXISTS.
-
-STEP 3 — EDGE FUNCTION
+CURRENT BACKEND STATUS
 ----------------------
-Deploy supabase/functions/admin-users/index.ts using the instructions in that folder.
-Never place a service_role key in website/browser code.
+The Supabase R4 upgrade has ALREADY completed successfully and the post-upgrade verification returned FINAL = PASS.
+DO NOT run R1, R2, R3 or R4 migration SQL again on the current Crecer Grande project.
+The database is not the deployment problem anymore.
 
-STEP 4 — WEBSITE
-----------------
-Only after Steps 1-3 pass, deploy the CONTENTS of this V2.0 package to the existing GitHub Pages repository root.
-Keep CNAME, index.html, .nojekyll, sitemap.xml and robots.txt at the repository root.
-Do not change HostingRaja DNS.
+WHAT THIS FINAL BUILD FIXES
+---------------------------
+- Restores the image-rich V1.9.3 visual language instead of icon-only placeholder cards.
+- Restores V1.9.3-compatible image filenames used by existing CMS/product/project records.
+- Restores downloadable division-profile aliases expected by legacy records.
+- Keeps the V2.0 six dedicated SEO service pages.
+- Keeps all 8 division pages, 8 product pages, projects, estimates, resources, industries and RFQ/contact pages.
+- Keeps Website Manager V2.0 and the successful R4 database model.
+- Public website remains fully readable and visually complete even before Supabase runtime configuration is connected.
+- Website Manager now provides a one-time Connect Supabase screen instead of a dead login dropdown.
 
-STEP 5 — TEST
+DEPLOY NOW
+----------
+1. Back up the current GitHub repository / current live files.
+2. Replace the repository website files with the CONTENTS of this folder.
+3. Keep index.html, CNAME, .nojekyll, robots.txt and sitemap.xml at repository root.
+4. Do NOT change HostingRaja DNS or the crecergrande.in domain.
+5. Commit/push and let GitHub Pages redeploy.
+
+ONE-TIME WEBSITE MANAGER CONNECTION
+-----------------------------------
+The Project URL and publishable/anon browser key are account-specific and are intentionally not embedded in this ZIP.
+They are browser-safe values, but the service_role/secret key must NEVER be placed in the website.
+
+After deployment:
+1. Open https://crecergrande.in/admin/
+2. Click Connect Supabase.
+3. In Supabase Dashboard -> Project Settings -> API, copy:
+   - Project URL
+   - publishable / anon browser key
+4. Paste them into Website Manager and click Save & connect.
+5. Click Save, connect & download config. Website Manager stores the connection in that browser and automatically downloads a permanent runtime-config.js.
+6. Website Manager reloads and should show the Ramiz Islam / Sourav Bhowmik login choices.
+7. Replace assets/js/runtime-config.js in the GitHub repository with the downloaded file and commit that one file. This makes CMS updates visible to all public visitors, not only the browser that saved the local connection.
+
+ADMIN AUTH IDENTITIES
+---------------------
+Existing internal login identities are preserved:
+- ramiz.islam@admin.crecergrande.in
+- sourav.bhowmik@admin.crecergrande.in
+No passwords are included in this package.
+
+EDGE FUNCTION
 -------------
-- https://crecergrande.in/
-- https://crecergrande.in/admin/
-- Ramiz login
-- Sourav login
-- Dashboard / analytics
-- harmless CMS edit + public refresh
-- Audit Log attribution
-- one test RFQ
-- all six SEO service URLs
+Normal login, CMS editing, enquiries, analytics and audit functions use the R4 backend.
+Website Manager -> Users & Access CREATE/RESET-PASSWORD actions additionally require the included Supabase Edge Function:
+  supabase/functions/admin-users/index.ts
+Deploy it as: admin-users
+The service_role key belongs only in the Supabase server environment, never in website files.
 
-STEP 6 — SEARCH CONSOLE
------------------------
-After V2.0 is live and verified, resubmit sitemap.xml and request indexing once for the six new service pages.
+FIRST TESTS
+-----------
+1. Home page: images, division cards, products and process images visible.
+2. /divisions.html, /services.html, /products.html and /projects.html show image cards.
+3. Six SEO pages open and show service photography.
+4. /admin/ shows login names after Supabase connection.
+5. Ramiz and Sourav login successfully.
+6. Make one harmless Page/SEO edit and confirm Audit Log attribution.
+7. Submit one RFQ and confirm it appears in Enquiries.
+
+SEARCH CONSOLE
+--------------
+After the visual site and admin are confirmed, resubmit:
+https://crecergrande.in/sitemap.xml
+Then request indexing once for the six new V2.0 service pages.

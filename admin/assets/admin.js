@@ -25,10 +25,50 @@
     return ((await client.auth.getUser()).data.user || {}).id;
   }
 
+  function setupConfigUI() {
+    const panel = document.getElementById('config-panel');
+    const open = document.getElementById('open-config');
+    const save = document.getElementById('save-config');
+    const cancel = document.getElementById('cancel-config');
+    if (!panel || !open || !save) return;
+    open.onclick = () => { panel.classList.remove('hidden'); document.getElementById('cfg-url').focus(); };
+    cancel.onclick = () => panel.classList.add('hidden');
+    save.onclick = () => {
+      const url = document.getElementById('cfg-url').value.trim().replace(/\/$/, '');
+      const key = document.getElementById('cfg-key').value.trim();
+      const st = document.getElementById('config-status');
+      st.classList.remove('hidden');
+      if (!/^https:\/\/[a-z0-9.-]+\.supabase\.co$/i.test(url)) { st.textContent='Enter the Supabase Project URL, for example https://xxxxx.supabase.co'; return; }
+      if (key.length < 40) { st.textContent='The publishable/anon key does not look complete.'; return; }
+      localStorage.setItem('cg_v2_supabase_config', JSON.stringify({supabaseUrl:url,supabasePublishableKey:key}));
+      const body = `// Crecer Grande V2.0 permanent browser-safe config\nwindow.CG_CONFIG = {\n  supabaseUrl: ${JSON.stringify(url)},\n  supabasePublishableKey: ${JSON.stringify(key)},\n  adminAuthDomain: "admin.crecergrande.in",\n  adminUsersFunctionUrl: ""\n};\n`;
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([body], {type:'text/javascript'}));
+      a.download = 'runtime-config.js';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+      st.textContent='Saved. The permanent runtime-config.js was downloaded. Reloading Website Manager…';
+      setTimeout(() => location.reload(), 700);
+    };
+    const dl = document.getElementById('download-config');
+    if (dl) dl.onclick = () => {
+      const url = document.getElementById('cfg-url').value.trim().replace(/\/$/, '');
+      const key = document.getElementById('cfg-key').value.trim();
+      if (!url || !key) { alert('Enter the Project URL and publishable/anon key first.'); return; }
+      const body = `// Crecer Grande V2.0 permanent browser-safe config\nwindow.CG_CONFIG = {\n  supabaseUrl: ${JSON.stringify(url)},\n  supabasePublishableKey: ${JSON.stringify(key)},\n  adminAuthDomain: "admin.crecergrande.in",\n  adminUsersFunctionUrl: ""\n};\n`;
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([body], {type:'text/javascript'}));
+      a.download = 'runtime-config.js';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    };
+  }
+
   async function boot() {
+    setupConfigUI();
     if (!configured()) {
       configWarning.classList.remove('hidden');
-      document.getElementById('login-user').innerHTML = '<option value="">Backend configuration required</option>';
+      document.getElementById('login-user').innerHTML = '<option value="">Connect Supabase first</option>';
       return;
     }
     client = window.supabase.createClient(cfg.supabaseUrl, cfg.supabasePublishableKey);

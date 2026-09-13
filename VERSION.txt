@@ -1,2 +1,2 @@
-Crecer Grande Website V2.0-R4
-Legacy-aware complete release
+Crecer Grande Website V2.0 — Final Restored Complete Build
+Backend: R4 migration SUCCESS / post-upgrade FINAL PASS
