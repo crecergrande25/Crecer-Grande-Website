@@ -1,7 +1,7 @@
-CRECER GRANDE V2.0 BACKEND NOTE
-===============================
-The live Supabase database has already completed the V2.0-R4 migration and post-upgrade verification successfully.
+CRECER GRANDE WEBSITE V2.1 - SUPABASE BACKEND NOTE
+==================================================
+The live Supabase database has already completed the R4 backend upgrade and post-upgrade verification successfully.
 DO NOT RUN ANY DATABASE MIGRATIONS FROM THIS WEBSITE PACKAGE.
 
-This folder contains only the protected admin-users Edge Function implementation required for user administration.
-Existing live backend data and Auth users should be preserved as-is.
+This folder contains only the protected admin-users Edge Function implementation used by Website Manager user administration.
+Existing live backend data and Auth users must be preserved as-is.

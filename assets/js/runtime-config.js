@@ -1,4 +1,4 @@
-// Crecer Grande V2.0 — browser-safe runtime configuration.
+// Crecer Grande V2.1 — browser-safe runtime configuration.
 // The Website Manager can save the Project URL + publishable key in this browser
 // for immediate use. For permanent deployment, place those same PUBLIC values below.
 // NEVER put a Supabase secret key, service_role key, database password or admin password here.

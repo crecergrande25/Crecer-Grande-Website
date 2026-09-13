@@ -3,9 +3,11 @@
 
 .small{padding:7px 10px;font-size:12px}.table-wrap{overflow:auto}.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.media-card{display:grid;gap:9px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}.media-card small{color:var(--muted)}.media-card a{color:#7a5800;text-decoration:underline}@media(max-width:1100px){.media-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:700px){.media-grid{grid-template-columns:1fr}}
 
-/* V2.0 final one-time backend connector */
+/* V2.1 admin login styling */
 #config-warning{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
 .config-panel{width:min(620px,calc(100% - 32px));margin:18px auto 0;background:#fff;border:1px solid #d8dee8;border-radius:18px;padding:24px;box-shadow:0 18px 48px rgba(7,26,54,.12)}
 .config-panel h2{margin-top:0;color:#071a36}.config-panel textarea{width:100%;border:1px solid #c8d0dc;border-radius:10px;padding:12px;font:inherit;resize:vertical}.config-panel details{margin:12px 0 18px}.config-panel summary{cursor:pointer;font-weight:700;color:#071a36}
 /* V1.9.3 visual refinement; admin behavior unchanged */
 body{font-family:"Century Gothic",CenturyGothic,"Trebuchet MS",Arial,sans-serif}.login{background:radial-gradient(circle at 82% 10%,rgba(244,176,0,.16),transparent 26%),linear-gradient(145deg,#041227,#0d2b55)}.login-card{border-top:5px solid var(--gold);box-shadow:0 28px 70px rgba(0,0,0,.25);padding:34px}.login-card img{width:275px;max-height:100px;object-fit:contain}.login-card h1{color:var(--navy)}.sidebar{background:linear-gradient(180deg,#041227,#071a36)}.sidebar button:hover,.sidebar button.active{background:rgba(244,176,0,.14);color:#ffd35a}.card,.stat,.media-card{box-shadow:0 6px 20px rgba(7,26,54,.035)}.primary{box-shadow:0 6px 16px rgba(244,176,0,.18)}
+
+.admin-back-link{display:inline-flex;align-items:center;gap:8px;color:#8a6500;font-weight:800;margin-top:14px;text-decoration:none}.admin-back-link .social-svg{width:17px;height:17px}.admin-back-link:hover{color:#071a36}

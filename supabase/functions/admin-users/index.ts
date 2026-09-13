@@ -1,4 +1,4 @@
-// Crecer Grande Website V2.0 - protected admin user management Edge Function.
+// Crecer Grande Website V2.1 - protected admin user management Edge Function.
 // Deploy as function name: admin-users
 // Server-only secret: SUPABASE_SERVICE_ROLE_KEY. Never place that key in public website files.
 

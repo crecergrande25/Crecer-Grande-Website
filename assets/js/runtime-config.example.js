@@ -1,4 +1,4 @@
-// Crecer Grande V2.0 browser-safe runtime configuration.
+// Crecer Grande V2.1 browser-safe runtime configuration.
 // Copy the existing V1.9.3 Project URL and PUBLISHABLE browser key here.
 // Never put a Supabase secret key, service_role key, database password or admin password in this file.
 window.CG_CONFIG = {

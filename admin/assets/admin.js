@@ -4,7 +4,6 @@
   const appPane = document.getElementById('app');
   const content = document.getElementById('content');
   const viewTitle = document.getElementById('view-title');
-  const configWarning = document.getElementById('config-warning');
 
   let client = null;
   let profile = null;
@@ -25,50 +24,13 @@
     return ((await client.auth.getUser()).data.user || {}).id;
   }
 
-  function setupConfigUI() {
-    const panel = document.getElementById('config-panel');
-    const open = document.getElementById('open-config');
-    const save = document.getElementById('save-config');
-    const cancel = document.getElementById('cancel-config');
-    if (!panel || !open || !save) return;
-    open.onclick = () => { panel.classList.remove('hidden'); document.getElementById('cfg-url').focus(); };
-    cancel.onclick = () => panel.classList.add('hidden');
-    save.onclick = () => {
-      const url = document.getElementById('cfg-url').value.trim().replace(/\/$/, '');
-      const key = document.getElementById('cfg-key').value.trim();
-      const st = document.getElementById('config-status');
-      st.classList.remove('hidden');
-      if (!/^https:\/\/[a-z0-9.-]+\.supabase\.co$/i.test(url)) { st.textContent='Enter the Supabase Project URL, for example https://xxxxx.supabase.co'; return; }
-      if (key.length < 40) { st.textContent='The publishable/anon key does not look complete.'; return; }
-      localStorage.setItem('cg_v2_supabase_config', JSON.stringify({supabaseUrl:url,supabasePublishableKey:key}));
-      const body = `// Crecer Grande V2.0 permanent browser-safe config\nwindow.CG_CONFIG = {\n  supabaseUrl: ${JSON.stringify(url)},\n  supabasePublishableKey: ${JSON.stringify(key)},\n  adminAuthDomain: "admin.crecergrande.in",\n  adminUsersFunctionUrl: ""\n};\n`;
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([body], {type:'text/javascript'}));
-      a.download = 'runtime-config.js';
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-      st.textContent='Saved. The permanent runtime-config.js was downloaded. Reloading Website Manager…';
-      setTimeout(() => location.reload(), 700);
-    };
-    const dl = document.getElementById('download-config');
-    if (dl) dl.onclick = () => {
-      const url = document.getElementById('cfg-url').value.trim().replace(/\/$/, '');
-      const key = document.getElementById('cfg-key').value.trim();
-      if (!url || !key) { alert('Enter the Project URL and publishable/anon key first.'); return; }
-      const body = `// Crecer Grande V2.0 permanent browser-safe config\nwindow.CG_CONFIG = {\n  supabaseUrl: ${JSON.stringify(url)},\n  supabasePublishableKey: ${JSON.stringify(key)},\n  adminAuthDomain: "admin.crecergrande.in",\n  adminUsersFunctionUrl: ""\n};\n`;
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(new Blob([body], {type:'text/javascript'}));
-      a.download = 'runtime-config.js';
-      a.click();
-      setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-    };
-  }
 
   async function boot() {
-    setupConfigUI();
     if (!configured()) {
-      configWarning.classList.remove('hidden');
-      document.getElementById('login-user').innerHTML = '<option value="">Connect Supabase first</option>';
+      const sel = document.getElementById('login-user');
+      const btn = document.querySelector('#login-form button[type="submit"]');
+      if (sel) sel.innerHTML = '<option value="">Website Manager is not connected</option>';
+      if (btn) btn.disabled = true;
       return;
     }
     client = window.supabase.createClient(cfg.supabaseUrl, cfg.supabasePublishableKey);
@@ -140,7 +102,7 @@
     if (r.error) { st.textContent = r.error.message; return; }
     enter();
   };
-  document.getElementById('logout').onclick = async () => { await client.auth.signOut(); location.reload(); };
+  document.getElementById('logout').onclick = async () => { await client.auth.signOut(); location.href='../index.html'; };
   document.getElementById('refresh').onclick = () => view(currentView);
   document.querySelectorAll('[data-view]').forEach((b) => { b.onclick = () => view(b.dataset.view); });
 
@@ -189,14 +151,14 @@
         <div class="stat"><span>WhatsApp clicks</span><b>${a.whatsapp_clicks || 0}</b></div>
         <div class="stat"><span>New enquiries</span><b>${newEnquiries}</b></div>
       </div>
-      <div class="card"><h2>Website V2.0</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
+      <div class="card"><h2>Website V2.1</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
   }
 
   async function settings() {
     if (!can('website.edit')) return noPerm();
     const r = await client.from('site_settings').select('*').limit(1).maybeSingle();
     const d = r.data || {};
-    const fields = ['company_name', 'tagline', 'gstin', 'udyam', 'phone_primary', 'phone_secondary', 'phone_tertiary', 'whatsapp', 'email_primary', 'email_secondary', 'instagram_handle', 'website_url', 'address', 'city', 'state', 'postal_code', 'logo_url', 'favicon_url', 'social_image_url', 'color_navy', 'color_gold'];
+    const fields = ['company_name', 'tagline', 'gstin', 'udyam', 'phone_primary', 'phone_tertiary', 'whatsapp', 'email_primary', 'email_secondary', 'instagram_handle', 'website_url', 'address', 'city', 'state', 'postal_code', 'logo_url', 'favicon_url', 'social_image_url', 'color_navy', 'color_gold'];
     content.innerHTML = `<form id="setform" class="card"><div class="grid2">${fields.map((k) => fieldHtml(k, d[k])).join('')}</div><button class="primary">Save settings</button></form>`;
     document.getElementById('setform').onsubmit = async (e) => {
       e.preventDefault();
@@ -429,7 +391,7 @@
   function userCreateEditor(roles) {
     const ed = document.getElementById('editor');
     const pw = randomPassword();
-    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.0 forces a password change on first login.</div></form>`;
+    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.1 forces a password change on first login.</div></form>`;
     document.getElementById('regen-password').onclick = () => { document.getElementById('new-user-password').value = randomPassword(); };
     document.getElementById('usercreate').onsubmit = async (e) => {
       e.preventDefault();

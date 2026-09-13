@@ -44,3 +44,36 @@ h1,h2,h3,h4{margin-top:0;line-height:1.14}h1,h2{letter-spacing:-.025em}h2{color:
 .product-visual-grid{grid-template-columns:repeat(4,1fr)}.product-card-restored{padding:0}.product-note{padding:14px 16px;background:#fff7dd;border:1px solid #efd47a;border-radius:11px;color:#654a00;font-size:12px}.variant-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.variant-grid>*{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}.legal{font-size:12px;color:var(--muted)}.restored-project-grid{grid-template-columns:repeat(2,1fr)}
 @media(max-width:860px){.process{grid-template-columns:1fr 1fr}.variant-grid{grid-template-columns:1fr 1fr}.product-visual-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.process,.variant-grid,.product-visual-grid,.restored-project-grid{grid-template-columns:1fr}.division-hero-photo{height:250px}}
+
+
+/* ===== Crecer Grande Website V2.1 ===== */
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.card-media{height:210px;position:relative;overflow:hidden;background:var(--navy)}
+.card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.visual-card:hover .card-media img{transform:scale(1.035)}
+.card-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,18,39,.04) 25%,rgba(4,18,39,.84) 100%);pointer-events:none}
+.card-media-label{position:absolute;left:17px;right:17px;bottom:15px;z-index:2;color:#fff;font-weight:900;font-size:16px;line-height:1.18;text-shadow:0 2px 9px rgba(0,0,0,.45)}
+.product-visual-grid .card-media-label{font-size:15px}
+.labeled-media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.labeled-media{position:relative;border-radius:16px;overflow:hidden;background:var(--navy);min-height:245px;box-shadow:0 9px 24px rgba(7,26,54,.10)}
+.labeled-media img{width:100%;height:245px;object-fit:cover;display:block}
+.labeled-media:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(4,18,39,.92) 100%)}
+.labeled-media .label{position:absolute;left:18px;right:18px;bottom:17px;z-index:2;color:#fff;font-weight:900;font-size:16px;line-height:1.18}
+.labeled-media .label small{display:block;color:#f7c842;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px}
+.about-image-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.about-image-card{position:relative;border-radius:17px;overflow:hidden;min-height:290px;box-shadow:var(--shadow)}
+.about-image-card img{width:100%;height:290px;object-fit:cover;display:block}
+.about-image-card:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,18,39,.05),rgba(4,18,39,.88))}
+.about-image-card div{position:absolute;z-index:2;left:20px;right:20px;bottom:19px;color:#fff}
+.about-image-card h3{color:#fff;margin:0 0 5px}.about-image-card p{color:#dbe5f0;margin:0;font-size:12.5px}
+.resource-card-v21{padding:0;overflow:hidden}.resource-card-v21 .resource-img{width:100%;height:165px;object-fit:cover;display:block}.resource-card-v21 .resource-body{padding:20px}.resource-card-v21 .resource-type{display:inline-block;color:#8d6500;font-weight:900;font-size:10px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.calc-grid-v21{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;align-items:start}.calc-card select{width:100%;border:1px solid #cbd3de;border-radius:9px;padding:11px;background:#fff;color:var(--ink)}.calc-note{font-size:11.5px;color:var(--muted);margin-top:10px}.density-readout{font-size:11px;color:#765700;margin-top:-4px}
+.contact-brand-panel{background:linear-gradient(145deg,#071a36,#0e2c55);border-radius:19px;padding:26px;color:#fff;box-shadow:var(--shadow)}
+.contact-brand-panel .contact-brand-logo{width:100%;max-width:370px;height:auto;display:block;margin:0 0 22px}.contact-brand-title{color:var(--gold2);font-weight:900;letter-spacing:.07em;text-transform:uppercase;font-size:22px;margin:0 0 5px}.contact-brand-sub{color:#cad5e1;margin:0 0 20px}.contact-methods{display:grid;gap:10px;margin-top:18px}.contact-method{display:flex;align-items:center;gap:11px;color:#fff;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:11px;padding:10px 12px}.contact-method:hover{border-color:rgba(244,176,0,.55);color:#fff}.contact-method .social-svg{color:var(--gold2)}.contact-brand-panel .website-qr{width:145px;height:145px;background:#fff;border-radius:12px;padding:8px;margin-top:20px}.contact-brand-panel .qr-caption{font-size:11px;color:#cad5e1;margin-top:8px}
+.social-svg,.wa-svg{width:20px;height:20px;display:block;flex:0 0 auto}.footer-v21 .footer-social-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.footer-icon-link{display:flex!important;align-items:center;gap:7px!important;padding:8px 10px!important;border:1px solid rgba(255,255,255,.13);border-radius:10px;color:#e8eef6!important;font-size:11px!important}.footer-icon-link:hover{border-color:var(--gold);color:#fff!important}.footer-icon-link .social-svg{color:var(--gold2)}.footer-contact .contact-line{display:flex;align-items:center;gap:9px}.footer-contact .contact-line .social-svg{color:var(--gold2)}.footer-address{color:#c6d1dd;line-height:1.5;font-size:11.5px}.floating-wa-v21{display:grid;place-items:center}.floating-wa-v21 .wa-svg{width:28px;height:28px}.footer-bottom:after{content:"V2.1";font-size:10px;color:#6f8197;margin-left:12px}
+.project-card .project-type{display:inline-block;margin-bottom:8px;color:#8a6500;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.admin-back-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;color:#765700;font-weight:800;font-size:12px}
+@media(max-width:900px){.labeled-media-grid,.about-image-grid{grid-template-columns:1fr 1fr}.calc-grid-v21{grid-template-columns:1fr}}
+@media(max-width:620px){.labeled-media-grid,.about-image-grid{grid-template-columns:1fr}.card-media{height:220px}.about-image-card,.about-image-card img{height:250px}.footer-social-row{gap:7px}.footer-icon-link span{display:none}}
+
+.contact-brand-icon{width:86px;height:86px;object-fit:contain;display:block;margin-bottom:12px}.contact-pirulen-wordmark{width:100%;max-width:430px;height:auto;display:block;margin:0 0 8px}.contact-brand-logo{display:none}
