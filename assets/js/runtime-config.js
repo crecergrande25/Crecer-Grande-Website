@@ -3,8 +3,8 @@
 // remains connected after upgrade. Only PUBLIC Supabase browser values belong here.
 (() => {
   const defaults = {
-    supabaseUrl: '',
-    supabasePublishableKey: '',
+    supabaseUrl: 'https://nznjqglgiezjehutdsbp.supabase.co',
+    supabasePublishableKey: 'sb_publishable_4B16fVwvlWYc2J2DDBVbaw_k99IJTgv',
     adminAuthDomain: 'admin.crecergrande.in',
     adminUsersFunctionUrl: ''
   };
