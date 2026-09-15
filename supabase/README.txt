@@ -1,4 +1,4 @@
-CRECER GRANDE WEBSITE V2.2 - SUPABASE BACKEND NOTE
+CRECER GRANDE WEBSITE V2.3 - SUPABASE BACKEND NOTE
 ==================================================
 The live Supabase database has already completed the R4 backend upgrade and post-upgrade verification successfully.
 DO NOT RUN ANY DATABASE MIGRATIONS FROM THIS WEBSITE PACKAGE.

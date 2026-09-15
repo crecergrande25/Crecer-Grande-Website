@@ -1,3 +1,3 @@
-Crecer Grande Website V2.2
-Build: 2026-09-13
-Frontend only; Supabase R4 backend remains unchanged.
+Crecer Grande Website V2.3
+Build: 2026-09-15
+Public website + Website Manager + Supabase-compatible front end + reference backend package.

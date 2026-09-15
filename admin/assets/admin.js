@@ -11,6 +11,14 @@
   let currentView = 'dashboard';
   let productOptions = [];
 
+  const connectionDetails = document.querySelector('.connection-details');
+  const cfgUrl = document.getElementById('cfg-url');
+  const cfgKey = document.getElementById('cfg-key');
+  const cfgDomain = document.getElementById('cfg-domain');
+  const cfgStatus = document.getElementById('config-status');
+  const saveConfigBtn = document.getElementById('save-config');
+  const clearConfigBtn = document.getElementById('clear-config');
+
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (m) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[m]));
@@ -25,14 +33,35 @@
   }
 
 
+  function applyConnectionFields() {
+    if (cfgUrl) cfgUrl.value = cfg.supabaseUrl || '';
+    if (cfgKey) cfgKey.value = cfg.supabasePublishableKey || '';
+    if (cfgDomain) cfgDomain.value = cfg.adminAuthDomain || 'admin.crecergrande.in';
+  }
+
+  function showConfigMessage(message) {
+    if (!cfgStatus) return;
+    cfgStatus.classList.remove('hidden');
+    cfgStatus.textContent = message;
+  }
+
+  function setConnectionPanel(visible) {
+    if (!connectionDetails) return;
+    if (visible) connectionDetails.setAttribute('open', '');
+    else connectionDetails.removeAttribute('open');
+  }
+
   async function boot() {
+    applyConnectionFields();
+    const sel = document.getElementById('login-user');
+    if (sel) sel.innerHTML = '<option value="">Choose user</option><option value="ramiz.islam">Ramiz Islam</option><option value="sourav.bhowmik">Sourav Bhowmik</option>';
+
     if (!configured()) {
-      const sel = document.getElementById('login-user');
-      const btn = document.querySelector('#login-form button[type="submit"]');
-      if (sel) sel.innerHTML = '<option value="">Website Manager is not connected</option>';
-      if (btn) btn.disabled = true;
+      // Keep the normal login screen clean. Connection settings remain available
+      // as a collapsed fallback only when this browser has never stored them.
       return;
     }
+
     client = window.supabase.createClient(cfg.supabaseUrl, cfg.supabasePublishableKey);
     const { data: { session } } = await client.auth.getSession();
     if (session) return enter();
@@ -66,7 +95,7 @@
     (p.data || []).forEach((x) => { perms[x.permission_key] = x.allowed; });
     loginPane.style.display = 'none';
     appPane.style.display = 'block';
-    document.getElementById('who').textContent = `${profile.display_name} • ${profile.role_key}`;
+    document.getElementById('who').textContent = `${profile.display_name}`;
     filterNav();
     try {
       await client.rpc('log_admin_event', {
@@ -96,6 +125,7 @@
     const pw = document.getElementById('login-pass').value;
     const st = document.getElementById('login-status');
     st.classList.remove('hidden');
+    if (!configured() || !client) { st.textContent = 'This browser is not connected to the existing Website Manager backend. Open Connection settings below and save the public Project URL and publishable key once.'; setConnectionPanel(true); return; }
     st.textContent = 'Signing in…';
     const authDomain = cfg.adminAuthDomain || 'admin.crecergrande.in';
     const r = await client.auth.signInWithPassword({ email: `${slug}@${authDomain}`, password: pw });
@@ -103,6 +133,29 @@
     enter();
   };
   document.getElementById('logout').onclick = async () => { await client.auth.signOut(); location.href='../index.html'; };
+  if (saveConfigBtn) saveConfigBtn.onclick = () => {
+    const url = (cfgUrl?.value || '').trim();
+    const key = (cfgKey?.value || '').trim();
+    const domain = (cfgDomain?.value || 'admin.crecergrande.in').trim();
+    if (!url || !key) {
+      showConfigMessage('Please enter both the Supabase Project URL and the publishable / anon key.');
+      return;
+    }
+    const next = window.CG_setConfig({ supabaseUrl: url, supabasePublishableKey: key, adminAuthDomain: domain || 'admin.crecergrande.in' });
+    Object.assign(cfg, next);
+    showConfigMessage('Connection saved. Reloading Website Manager…');
+    setTimeout(() => location.reload(), 600);
+  };
+
+  if (clearConfigBtn) clearConfigBtn.onclick = () => {
+    window.CG_clearConfig();
+    if (cfgUrl) cfgUrl.value = '';
+    if (cfgKey) cfgKey.value = '';
+    if (cfgDomain) cfgDomain.value = 'admin.crecergrande.in';
+    showConfigMessage('Saved connection cleared. Reloading…');
+    setTimeout(() => location.reload(), 500);
+  };
+
   document.getElementById('refresh').onclick = () => view(currentView);
   document.querySelectorAll('[data-view]').forEach((b) => { b.onclick = () => view(b.dataset.view); });
 
@@ -151,7 +204,7 @@
         <div class="stat"><span>WhatsApp clicks</span><b>${a.whatsapp_clicks || 0}</b></div>
         <div class="stat"><span>New enquiries</span><b>${newEnquiries}</b></div>
       </div>
-      <div class="card"><h2>Website V2.2</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
+      <div class="card"><h2>Website V2.3</h2><p>Manage content, SEO, divisions, products, variants, private pricing, estimate defaults, projects, downloads, media, enquiries, analytics, users and audit history. Identity creation/password changes remain protected by the server-side <code>admin-users</code> Edge Function.</p></div>`;
   }
 
   async function settings() {
@@ -391,7 +444,7 @@
   function userCreateEditor(roles) {
     const ed = document.getElementById('editor');
     const pw = randomPassword();
-    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.2 forces a password change on first login.</div></form>`;
+    ed.innerHTML = `<form id="usercreate" class="card"><h2>Create user</h2><p class="muted">The login alias becomes an internal authentication identifier ending in <code>@admin.crecergrande.in</code>. It does not need to be a real mailbox.</p><div class="grid2"><label class="field">Display name<input name="display_name" required></label><label class="field">Login alias<input name="login_slug" placeholder="firstname.lastname" pattern="[a-z0-9._-]+" required></label><label class="field">Role${roleSelect(roles, 'administrator')}</label><label class="field">Show on login<select name="show_on_login"><option value="true">Yes</option><option value="false">No</option></select></label><label class="field">Temporary password<input id="new-user-password" name="temporary_password" value="${esc(pw)}" minlength="10" required></label></div><div class="toolbar"><button class="primary">Create user</button><button type="button" id="regen-password">Generate another password</button></div><div class="status">Give the temporary password securely to the user. V2.3 forces a password change on first login.</div></form>`;
     document.getElementById('regen-password').onclick = () => { document.getElementById('new-user-password').value = randomPassword(); };
     document.getElementById('usercreate').onsubmit = async (e) => {
       e.preventDefault();
