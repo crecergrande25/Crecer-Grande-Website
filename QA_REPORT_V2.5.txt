@@ -1,0 +1,22 @@
+Crecer Grande Website V2.5 — QA Report
+Build date: 2026-09-16
+Status: PASS
+
+Public HTML pages checked: 59
+Total HTML pages checked: 61
+Sitemap URLs: 58
+New commercial SEO pages: 6
+JavaScript syntax: checked separately with Node.js
+
+Checks performed:
+- Page title / H1 / meta description / canonical
+- og:site_name
+- JSON-LD parse validity
+- Local href/src existence
+- Sitemap inclusion
+- Sitemap duplicate URLs
+- New-page links from services hub
+- Retired phone-number search
+- runtime-config presence in full source
+
+Errors: 0
