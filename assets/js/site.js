@@ -37,6 +37,52 @@
   }
   window.CGTrack=track;
 
+  function enhanceDesignJobWork(){
+    const path=location.pathname;
+    const designUrl='/design-job-work.html';
+
+    const designMega=$('.mega-grid a[href="/divisions/engineering-design.html"] small');
+    if(designMega)designMega.textContent='2D/3D CAD, piping, drawings, DFM/DFA and reverse engineering';
+
+    if(path==='/'||path.endsWith('/index.html')){
+      const card=$$('.route-card').find(a=>/Design Something/i.test(a.querySelector('h3')?.textContent||'')||/Design%20Something/.test(a.getAttribute('href')||''));
+      if(card){
+        card.href=designUrl;
+        const h=card.querySelector('h3'),p=card.querySelector('p'),tags=card.querySelector('.tags'),link=card.querySelector('.route-link');
+        if(h)h.textContent='Mechanical Design Job Work';
+        if(p)p.textContent='2D drafting, 3D modelling, piping layouts, manufacturing drawings, BOM and reverse engineering.';
+        if(tags)tags.innerHTML='<span class="tag">2D / 3D CAD</span><span class="tag">Piping</span><span class="tag">Drawings</span>';
+        if(link)link.textContent='Send design work →';
+      }
+      const chips=$('.quick-chips');
+      if(chips&&!chips.querySelector('[data-copy-search="2D 3D piping design job work"]')){
+        const b=document.createElement('button');b.type='button';b.dataset.copySearch='2D 3D piping design job work';b.textContent='2D / 3D / piping design';chips.prepend(b);
+        b.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=b.dataset.copySearch;q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}});
+      }
+    }
+
+    if(path.endsWith('/mechanical-design-services-kolkata.html')){
+      const primary=$('.service-hero .actions .btn.primary');
+      if(primary){primary.href=designUrl;primary.textContent='Start a Design Job →'}
+      const hero=$('.service-hero h1');if(hero)hero.textContent='MECHANICAL DESIGN, 2D / 3D CAD & PIPING';
+      const hp=$('.service-hero h1 + p');if(hp)hp.textContent='Outsourced mechanical design job work covering 2D drafting, 3D part and assembly modelling, piping layouts, manufacturing drawings, BOM, revisions and reverse engineering.';
+    }
+
+    if(path.endsWith('/divisions/engineering-design.html')){
+      const actions=$('.service-hero .actions');
+      if(actions&&!actions.querySelector(`a[href="${designUrl}"]`)){
+        const a=document.createElement('a');a.className='btn primary';a.href=designUrl;a.textContent='Start Design Job →';actions.prepend(a);
+      }
+    }
+
+    const panel=$('.ask-panel');
+    if(panel&&!panel.querySelector(`a[href="${designUrl}"]`)){
+      const firstLink=panel.querySelector('a');
+      const a=document.createElement('a');a.href=designUrl;a.textContent='2D / 3D / Piping Design';
+      if(firstLink)panel.insertBefore(a,firstLink);else panel.appendChild(a);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded',()=>{
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
@@ -49,13 +95,16 @@
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
 
     const suite=$('.cg-suite-maintained');
-    if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.6.4';
+    if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.7.0';
     $$('.cg-footer-version').forEach(x=>x.remove());
+
+    enhanceDesignJobWork();
 
     document.addEventListener('click',(e)=>{
       const a=e.target.closest('a'); if(!a)return;
       if(/wa\.me/.test(a.href)) track('whatsapp_click',{href:a.href});
       else if(a.href.startsWith('mailto:')) track('email_click',{href:a.href});
+      else if(/design-job-work\.html/.test(a.href)) track('design_job_click',{href:a.href});
       else if(a.classList.contains('quote-nav')||/request-quote/.test(a.href)) track('quote_click',{href:a.href});
     });
     setTimeout(()=>track('page_view'),300);
