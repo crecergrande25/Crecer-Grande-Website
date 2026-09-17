@@ -1,0 +1,197 @@
+import * as THREE from 'three';
+import {STLLoader} from 'three/addons/loaders/STLLoader.js';
+import {OBJLoader} from 'three/addons/loaders/OBJLoader.js';
+import {ThreeMFLoader} from 'three/addons/loaders/3MFLoader.js';
+import {PLYLoader} from 'three/addons/loaders/PLYLoader.js';
+import {AMFLoader} from 'three/addons/loaders/AMFLoader.js';
+import {STLExporter} from 'three/addons/exporters/STLExporter.js';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+const el=id=>document.getElementById(id);
+const fileInput=el('q3d-file'),drop=el('q3d-drop'),meta=el('q3d-file-meta'),fileState=el('q3d-file-state'),viewer=el('q3d-viewer');
+const processSel=el('process'),materialSel=el('material'),qualitySel=el('quality'),infillSel=el('infill'),qtyEl=el('quantity'),complexitySel=el('complexity');
+const manualVolume=el('manual-volume'),calcBtn=el('calculate-quote'),sendBtn=el('send-rfq'),slicerStatus=el('q3d-slicer-status');
+let analysed={fileName:'',volumeCm3:null,dimensions:null,fileType:'',analysisMode:'none'};
+let currentObject=null,selectedFile=null,lastQuote=null,occtPromise=null,kiriPromise=null,renderCleanup=null;
+
+const directFormats=new Set(['stl','step','stp','ste','igs','iges','ige','brep','brp','3mf','obj','ply','amf']);
+const nativeReviewFormats=new Set(['sldprt','sldasm','ipt','iam','prt','x_t','x_b','sat','sab','catpart','catproduct','jt','3dm','f3d','f3z','dwg','dxf','zip']);
+const uploadFormats=new Set([...directFormats,...nativeReviewFormats]);
+const MAX_UPLOAD=50*1024*1024;
+
+const defaults={gst:18,minimum:150,setup:{fdm:80,resin:120,sls:450,mjf:550},hourly:{fdm:55,resin:85,sls:180,mjf:220},materials:{
+  fdm:{PLA:{density:1.24,rate:3.2,note:'Economical prototypes, concept models and visual parts.'},PETG:{density:1.27,rate:4.2,note:'Functional parts with better toughness and chemical resistance than PLA.'},ABS:{density:1.04,rate:4.5,note:'Engineering parts requiring toughness and improved temperature resistance.'},ASA:{density:1.07,rate:5.2,note:'Outdoor-capable engineering material with improved UV resistance.'},TPU:{density:1.20,rate:6.0,note:'Flexible parts, bumpers, seals and vibration-damping components.'},Nylon:{density:1.15,rate:7.5,note:'Strong functional parts, wear components and engineering applications.'},'PA-CF':{density:1.20,rate:11.5,note:'Carbon-fibre reinforced nylon for stiff, functional engineering components.'}},
+  resin:{'Standard Resin':{density:1.10,rate:8.5,note:'Fine-detail visual prototypes and presentation parts.'},'ABS-like Resin':{density:1.10,rate:10.5,note:'Tougher resin for functional prototypes and snap-fit style features.'},'Tough Resin':{density:1.12,rate:12.5,note:'Higher-impact resin for demanding prototype applications.'},'Clear Resin':{density:1.10,rate:13.5,note:'Transparent or translucent prototypes; finishing affects final clarity.'},'High-Temp Resin':{density:1.15,rate:17.5,note:'Specialist resin for elevated-temperature prototype requirements.'}},
+  sls:{PA12:{density:1.01,rate:16,note:'Industrial nylon for durable functional parts and low-volume production.'},PA11:{density:1.03,rate:20,note:'Tough nylon with improved elongation for functional components.'},'PA12 GF':{density:1.22,rate:22,note:'Glass-filled nylon for stiffer engineering applications.'}},
+  mjf:{PA12:{density:1.01,rate:18,note:'Production-grade nylon suitable for functional batches.'},PA11:{density:1.03,rate:22,note:'Tough nylon for components needing higher ductility.'},TPU:{density:1.10,rate:26,note:'Flexible production parts through MJF.'}}
+}};
+let rules=structuredClone(defaults);
+
+function setState(text,kind=''){if(!fileState)return;fileState.textContent=text;fileState.className='q3d-file-state'+(kind?' '+kind:'')}
+function setSliceStatus(text,kind=''){if(!slicerStatus)return;slicerStatus.textContent=text;slicerStatus.className='q3d-slicer-status'+(kind?' '+kind:'')}
+function invalidateQuote(){lastQuote=null;if(sendBtn)sendBtn.disabled=true}
+function populateMaterials(){const p=processSel.value;materialSel.innerHTML='';Object.keys(rules.materials[p]||{}).forEach(m=>{const o=document.createElement('option');o.value=m;o.textContent=m;materialSel.appendChild(o)});toggleInfill();updateMaterialNote();invalidateQuote()}
+function toggleInfill(){const enabled=processSel.value==='fdm';infillSel.disabled=!enabled;infillSel.closest('label')?.classList.toggle('q3d-disabled',!enabled);const sup=el('opt-support');if(sup)sup.disabled=!enabled}
+function updateMaterialNote(){const x=rules.materials[processSel.value]?.[materialSel.value];el('material-note').textContent=x?.note||'Material selection will be reviewed before production.'}
+
+async function loadRules(){
+  try{
+    const cfg=window.CG_CONFIG||{};
+    if(!window.supabase||!cfg.supabaseUrl||!cfg.supabasePublishableKey){populateMaterials();return}
+    const c=window.supabase.createClient(cfg.supabaseUrl,cfg.supabasePublishableKey);
+    const {data,error}=await c.from('estimate_rules').select('configuration').eq('rule_key','3d-print-quote-v1').eq('active',true).maybeSingle();
+    if(!error&&data?.configuration)rules={...defaults,...data.configuration,materials:{...defaults.materials,...(data.configuration.materials||{})}};
+  }catch(e){}
+  populateMaterials();
+}
+
+async function getOCCT(){
+  if(!occtPromise)occtPromise=import('https://cdn.jsdelivr.net/npm/@sunbox/occt-import-js@0.0.28/dist/occt-import-js.js').then(m=>m.default());
+  return occtPromise;
+}
+
+function occtToObject(result){
+  if(!result?.success||!result.meshes?.length)throw new Error('CAD import returned no mesh');
+  const group=new THREE.Group();
+  for(const rm of result.meshes){
+    const g=new THREE.BufferGeometry();
+    g.setAttribute('position',new THREE.Float32BufferAttribute(rm.attributes.position.array,3));
+    if(rm.attributes.normal?.array)g.setAttribute('normal',new THREE.Float32BufferAttribute(rm.attributes.normal.array,3));else g.computeVertexNormals();
+    if(rm.index?.array?.length)g.setIndex(Array.from(rm.index.array));
+    const c=rm.color?new THREE.Color(rm.color[0],rm.color[1],rm.color[2]):new THREE.Color(0x0c2b54);
+    group.add(new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:c,metalness:.12,roughness:.55,side:THREE.DoubleSide})));
+  }
+  return group;
+}
+
+function geometrySignedVolume(mesh){
+  const g=mesh.geometry,pos=g?.attributes?.position;if(!pos)return 0;
+  mesh.updateWorldMatrix(true,false);
+  const idx=g.index,a=new THREE.Vector3(),b=new THREE.Vector3(),c=new THREE.Vector3(),cross=new THREE.Vector3();
+  let vol=0;
+  const tri=(ia,ib,ic)=>{a.fromBufferAttribute(pos,ia).applyMatrix4(mesh.matrixWorld);b.fromBufferAttribute(pos,ib).applyMatrix4(mesh.matrixWorld);c.fromBufferAttribute(pos,ic).applyMatrix4(mesh.matrixWorld);cross.crossVectors(b,c);vol+=a.dot(cross)/6};
+  if(idx){for(let i=0;i<idx.count;i+=3)tri(idx.getX(i),idx.getX(i+1),idx.getX(i+2))}else{for(let i=0;i<pos.count;i+=3)tri(i,i+1,i+2)}
+  return vol;
+}
+
+function analyseObject(object){
+  object.updateMatrixWorld(true);
+  const box=new THREE.Box3().setFromObject(object),size=new THREE.Vector3();box.getSize(size);
+  let vol=0;
+  object.traverse(o=>{if(o.isMesh)vol+=Math.abs(geometrySignedVolume(o))});
+  vol/=1000;
+  analysed.volumeCm3=Number.isFinite(vol)&&vol>0.0001?vol:null;
+  analysed.dimensions={x:size.x,y:size.y,z:size.z};
+  el('dim-x').textContent=size.x.toFixed(2);el('dim-y').textContent=size.y.toFixed(2);el('dim-z').textContent=size.z.toFixed(2);el('model-volume').textContent=analysed.volumeCm3?analysed.volumeCm3.toFixed(2):'—';
+  if(analysed.volumeCm3)manualVolume.value=analysed.volumeCm3.toFixed(3);
+  renderObject(object);
+  return analysed;
+}
+
+function renderObject(object){
+  if(renderCleanup)renderCleanup();viewer.innerHTML='';
+  const w=viewer.clientWidth||600,h=viewer.clientHeight||390,scene=new THREE.Scene();scene.background=new THREE.Color(0xe8eef4);
+  const camera=new THREE.PerspectiveCamera(40,w/h,.1,100000),renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(w,h);viewer.appendChild(renderer.domElement);
+  const display=object.clone(true);display.traverse(o=>{if(o.isMesh&&!o.material)o.material=new THREE.MeshStandardMaterial({color:0x0c2b54,metalness:.15,roughness:.55,side:THREE.DoubleSide})});
+  const box=new THREE.Box3().setFromObject(display),center=new THREE.Vector3(),size=new THREE.Vector3();box.getCenter(center);box.getSize(size);display.position.sub(center);scene.add(display);
+  const max=Math.max(size.x,size.y,size.z)||1;camera.position.set(max*1.7,max*1.4,max*1.9);camera.lookAt(0,0,0);scene.add(new THREE.HemisphereLight(0xffffff,0x6b7785,2.2));const dl=new THREE.DirectionalLight(0xffffff,2);dl.position.set(2,3,4);scene.add(dl);
+  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;let active=true;const animate=()=>{if(!active)return;controls.update();renderer.render(scene,camera);requestAnimationFrame(animate)};animate();
+  const ro=new ResizeObserver(()=>{const W=viewer.clientWidth,H=viewer.clientHeight;if(!W||!H)return;camera.aspect=W/H;camera.updateProjectionMatrix();renderer.setSize(W,H)});ro.observe(viewer);
+  renderCleanup=()=>{active=false;ro.disconnect();renderer.dispose();controls.dispose()};
+}
+
+async function parseDirect(file,ext){
+  const buffer=await file.arrayBuffer();
+  if(ext==='stl'){const g=new STLLoader().parse(buffer);g.computeVertexNormals();return new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0x0c2b54,metalness:.12,roughness:.55,side:THREE.DoubleSide}))}
+  if(ext==='obj')return new OBJLoader().parse(await file.text());
+  if(ext==='3mf')return new ThreeMFLoader().parse(buffer);
+  if(ext==='ply'){const g=new PLYLoader().parse(buffer);g.computeVertexNormals();return new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0x0c2b54,roughness:.6,side:THREE.DoubleSide}))}
+  if(ext==='amf')return new AMFLoader().parse(buffer);
+  if(['step','stp','ste','igs','iges','ige','brep','brp'].includes(ext)){
+    setState('Loading CAD kernel and triangulating model in your browser…','busy');
+    const occt=await getOCCT(),bytes=new Uint8Array(buffer);let result;
+    if(['step','stp','ste'].includes(ext))result=occt.ReadStepFile(bytes,{linearUnit:'millimeter'});else if(['igs','iges','ige'].includes(ext))result=occt.ReadIgesFile(bytes,{linearUnit:'millimeter'});else result=occt.ReadBrepFile(bytes,null);
+    return occtToObject(await result);
+  }
+  throw new Error('No direct parser for this format');
+}
+
+async function handleFile(file){
+  if(!file)return;
+  selectedFile=file;invalidateQuote();currentObject=null;manualVolume.value='';['dim-x','dim-y','dim-z','model-volume'].forEach(id=>el(id).textContent='—');
+  const ext=(file.name.split('.').pop()||'').toLowerCase();analysed={fileName:file.name,volumeCm3:null,dimensions:null,fileType:ext,analysisMode:'none'};meta.textContent=`${file.name} • ${(file.size/1024/1024).toFixed(2)} MB`;
+  if(file.size>MAX_UPLOAD)setState('This file can be analysed locally, but secure website upload is limited to 50 MB. For larger files, submit the RFQ and share the file by email/cloud link.','warn');
+  if(directFormats.has(ext)){
+    try{
+      setState('Analysing geometry locally in your browser…','busy');currentObject=await parseDirect(file,ext);analyseObject(currentObject);analysed.analysisMode='direct';
+      const volmsg=analysed.volumeCm3?`Volume ${analysed.volumeCm3.toFixed(2)} cm³ calculated.`:'Dimensions calculated; enclosed volume could not be established reliably, so enter volume manually.';
+      setState(`Direct analysis ready (${ext.toUpperCase()}). ${volmsg}${file.size>MAX_UPLOAD?' File is over the 50 MB secure upload limit.':''}`,'ok');setSliceStatus(processSel.value==='fdm'?'Ready for browser-based FDM slicing.':'Geometry ready. Selected process uses planning estimation.');
+    }catch(err){console.error(err);currentObject=null;analysed.analysisMode='manual';viewer.innerHTML='<div class="q3d-viewer-placeholder">Automatic conversion could not complete for this file. It is still accepted for Crecer Grande engineering review.</div>';setState('Automatic analysis failed. File can still be sent for engineering conversion/review.','warn')}
+  }else if(nativeReviewFormats.has(ext)){
+    analysed.analysisMode='manual';viewer.innerHTML='<div class="q3d-viewer-placeholder">Native/proprietary CAD file accepted for engineering review. Instant browser geometry is not available for this format.</div>';const assembly=['iam','sldasm','catproduct'].includes(ext);
+    setState(assembly?'Assembly accepted for review. Include referenced part files in a ZIP, or export the assembly as STEP for instant analysis.':'Native CAD file accepted. For instant dimensions/volume, export STEP/STP when possible.','warn');setSliceStatus('Instant slicing requires a directly analysed mesh. CG can convert/review this native CAD file.','fallback');
+  }else{
+    analysed.analysisMode='manual';viewer.innerHTML='<div class="q3d-viewer-placeholder">File accepted for RFQ, but this format needs manual engineering review.</div>';setState('Unrecognized for instant analysis; accepted as an RFQ reference file.','warn');
+  }
+}
+
+function loadKiri(){
+  if(kiriPromise)return kiriPromise;
+  kiriPromise=new Promise((resolve,reject)=>{if(window.Engine){resolve(window.Engine);return}const s=document.createElement('script');s.src='https://grid.space/code/engine.js';s.async=true;s.onload=()=>window.Engine?resolve(window.Engine):reject(new Error('Slicer engine did not initialize'));s.onerror=()=>reject(new Error('Could not load slicer engine'));document.head.appendChild(s)});
+  return kiriPromise;
+}
+function fdmSettings(){const layer={economy:.28,standard:.20,fine:.12}[qualitySel.value]||.20;const infill=Math.max(.01,Number(infillSel.value||20)/100);const support=!!el('opt-support')?.checked;return{layer,infill,support}}
+
+async function sliceFDM(mat){
+  if(!currentObject)throw new Error('No directly analysed geometry');
+  setSliceStatus('Preparing mesh for browser slicer…','working');const Engine=await loadKiri(),exporter=new STLExporter(),data=exporter.parse(currentObject,{binary:true});const buf=data instanceof DataView?data.buffer:data,url=URL.createObjectURL(new Blob([buf],{type:'model/stl'}));const {layer,infill,support}=fdmSettings();
+  try{
+    const eng=new Engine();if(eng.setRender)eng.setRender(false);eng.setMode('FDM');
+    eng.setDevice({mode:'FDM',deviceName:'CG Generic FDM 0.4 mm',bedWidth:300,bedDepth:300,maxHeight:340,originCenter:false,gcodeFExt:'gcode',gcodeSpace:true,gcodeStrip:false,extruders:[{extFilament:1.75,extNozzle:.4,extSelect:['T0'],extDeselect:[],extOffsetX:0,extOffsetY:0}],gcodePre:['G21','G90'],gcodePost:[';CG_PRINT_TIME_S:{time}',';CG_FILAMENT_MM:{material}']});
+    eng.setProcess({processName:'CG Quote '+qualitySel.value,sliceHeight:layer,firstSliceHeight:layer,sliceShells:qualitySel.value==='fine'?3:2,sliceFillAngle:45,sliceFillOverlap:.3,sliceFillSparse:infill,sliceFillType:'gyroid',sliceBottomLayers:3,sliceTopLayers:3,sliceSupportEnable:support,sliceSupportDensity:.22,sliceSupportAngle:50,outputFeedrate:50,outputFinishrate:40,outputSeekrate:80,outputRetractDist:5,outputRetractSpeed:35,outputLayerRetract:true,detectThinWalls:true,outputTemp:materialSel.value==='ABS'?240:materialSel.value==='ASA'?245:materialSel.value==='PETG'?235:materialSel.value==='TPU'?225:205,outputBedTemp:materialSel.value==='ABS'||materialSel.value==='ASA'?90:materialSel.value==='PETG'?70:60});
+    eng.setListener?.(msg=>{if(msg?.slice||msg?.prepare)setSliceStatus('Slicing model and calculating toolpath…','working')});setSliceStatus('Slicing model and calculating toolpath…','working');await eng.load(url);await eng.slice();await eng.prepare();const gcode=await eng.export();
+    const tm=gcode.match(/;CG_PRINT_TIME_S:([0-9.]+)/i)||gcode.match(/;\s*---\s*print time:\s*([0-9.]+)s/i);const fm=gcode.match(/;CG_FILAMENT_MM:([0-9.]+)/i)||gcode.match(/Filament used:\s*([0-9.]+)m/i);let timeSec=tm?Number(tm[1]):NaN,filamentMm=fm?Number(fm[1]):NaN;if(fm&&/Filament used:/i.test(fm[0])&&!/CG_FILAMENT/i.test(fm[0]))filamentMm*=1000;
+    if(!Number.isFinite(timeSec)||!Number.isFinite(filamentMm))throw new Error('Slicer completed but metadata was unavailable');
+    const area=Math.PI*Math.pow(1.75/2,2),grams=filamentMm*area/1000*mat.density;setSliceStatus(`Slicer result: ${(timeSec/3600).toFixed(2)} h, ${grams.toFixed(1)} g filament per part.`,'success');return{hours:timeSec/3600,grams,filamentMm,source:'Kiri:Moto browser slicer',layer,infill,support};
+  }finally{URL.revokeObjectURL(url)}
+}
+
+function geometricEstimate(p,mat,volume){const infill=p==='fdm'?Number(infillSel.value||20)/100:1,qFactor={economy:.86,standard:1,fine:1.28}[qualitySel.value]||1,complexity={simple:.88,normal:1,complex:1.32}[complexitySel.value]||1;let materialFactor=p==='fdm'?(0.24+0.76*infill):1.08;if(p==='sls'||p==='mjf')materialFactor=.94;const grams=volume*mat.density*materialFactor;let hours;if(p==='fdm')hours=Math.max(.45,volume*(.055+.10*infill))*qFactor*complexity;else if(p==='resin')hours=Math.max(.6,Math.cbrt(volume)*.55)*qFactor*complexity;else hours=Math.max(.8,Math.cbrt(volume)*.7)*qFactor*complexity;return{grams,hours,source:'geometry planning model'}}
+
+async function estimate(){
+  const p=processSel.value,m=materialSel.value,mat=rules.materials[p]?.[m],volume=Number(manualVolume.value||analysed.volumeCm3||0),q=Math.max(1,Number(qtyEl.value||1));
+  if(!mat||!volume){el('quote-price').textContent='₹ —';el('quote-gst').textContent='Analyse the model or enter a valid model volume.';sendBtn.disabled=true;return}
+  calcBtn.disabled=true;const old=calcBtn.textContent;calcBtn.textContent=p==='fdm'&&currentObject?'Slicing & calculating…':'Calculating…';let metrics;
+  try{if(p==='fdm'&&currentObject){try{metrics=await sliceFDM(mat)}catch(err){console.warn(err);metrics=geometricEstimate(p,mat,volume);setSliceStatus('Live browser slicing was unavailable, so the geometric planning model was used. Final quote will be slicer-verified by CG.','fallback')}}else{metrics=geometricEstimate(p,mat,volume);setSliceStatus(p==='fdm'?'Native file has not been converted in-browser; geometric planning estimate used.':'This process uses a planning estimate; final supplier/machine nesting and process data govern the quote.','fallback')}}finally{calcBtn.disabled=false;calcBtn.textContent=old}
+  const grams=metrics.grams,hours=metrics.hours,perMaterial=grams*mat.rate,perMachine=hours*(rules.hourly[p]||0);let extras=0;if(el('opt-inserts').checked)extras+=60;if(el('opt-finish').checked)extras+=80;if(el('opt-paint').checked)extras+=120;if(el('opt-fai').checked)extras+=150;let subtotal=(perMaterial+perMachine)*q+(rules.setup[p]||0)+extras;const discount=q>=25?.88:q>=10?.92:q>=5?.96:1;subtotal*=discount;subtotal=Math.max(subtotal,rules.minimum||0);const gst=subtotal*(rules.gst||18)/100,total=subtotal+gst;
+  lastQuote={process:p,material:m,volume,grams,hours,q,subtotal,gst,total,quality:qualitySel.value,infill:p==='fdm'?Number(infillSel.value):null,complexity:complexitySel.value,file:analysed.fileName,fileType:analysed.fileType,analysisMode:analysed.analysisMode,estimateSource:metrics.source,extras:[el('opt-support')?.checked?'Auto supports':'',el('opt-inserts').checked?'Brass inserts':'',el('opt-finish').checked?'Finishing':'',el('opt-paint').checked?'Primer/painting':'',el('opt-fai').checked?'FAI':''].filter(Boolean)};
+  el('quote-price').textContent=`₹ ${Math.round(subtotal).toLocaleString('en-IN')}`;el('quote-gst').textContent=`Approx. ₹${Math.round(total).toLocaleString('en-IN')} incl. ${rules.gst||18}% GST`;el('quote-breakdown').innerHTML=`<div><span>Material / part</span><b>${grams.toFixed(1)} g</b></div><div><span>Machine time / part</span><b>${hours.toFixed(2)} h</b></div><div><span>Quantity</span><b>${q}</b></div><div><span>Calculation</span><b>${metrics.source.includes('slicer')?'Slicer-based':'Planning model'}</b></div><div><span>Process</span><b>${p.toUpperCase()} · ${m}</b></div>`;sendBtn.disabled=false;sessionStorage.setItem('cg_3d_quote',JSON.stringify(lastQuote));if(window.CGTrack)window.CGTrack('estimate_used',{calculator:'3d-print-quote',process:p,material:m,source:metrics.source});
+}
+
+const cleanName=name=>String(name||'cad-file').replace(/[^a-zA-Z0-9._-]+/g,'-').replace(/-+/g,'-').slice(-180);
+const uid=()=>crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(36).slice(2)}`;
+async function uploadPendingFile(){
+  if(!selectedFile||!selectedFile.name)return null;
+  const ext=(selectedFile.name.split('.').pop()||'').toLowerCase();if(!uploadFormats.has(ext))throw new Error('Unsupported secure-upload format');if(selectedFile.size>MAX_UPLOAD)throw new Error('File exceeds the 50 MB secure upload limit');
+  const cfg=window.CG_CONFIG||{};if(!window.supabase||!cfg.supabaseUrl||!cfg.supabasePublishableKey)throw new Error('Secure upload service is unavailable');
+  const c=window.supabase.createClient(cfg.supabaseUrl,cfg.supabasePublishableKey),month=new Date().toISOString().slice(0,7),path=`public-rfq/pending/${month}/${uid()}-${cleanName(selectedFile.name)}`;
+  const up=await c.storage.from('rfq-files').upload(path,selectedFile,{upsert:false,contentType:selectedFile.type||'application/octet-stream'});if(up.error)throw up.error;
+  return{path,name:selectedFile.name,size:selectedFile.size,type:selectedFile.type||''};
+}
+
+async function sendRFQ(){
+  if(!lastQuote)return;
+  const x=lastQuote,msg=[`3D Printing Estimate from CG website`,`File: ${x.file||'not attached'} (${x.fileType||'unknown'})`,`Analysis: ${x.analysisMode}; Estimate: ${x.estimateSource}`,`Process: ${x.process.toUpperCase()}`,`Material: ${x.material}`,`Model volume: ${x.volume.toFixed(2)} cm³`,x.infill?`Infill: ${x.infill}%`:null,`Quality: ${x.quality}`,`Complexity: ${x.complexity}`,`Quantity: ${x.q}`,`Estimated material: ${x.grams.toFixed(1)} g/pc`,`Estimated machine time: ${x.hours.toFixed(2)} h/pc`,`Approx subtotal: ₹${Math.round(x.subtotal)}`,`Approx total incl. GST: ₹${Math.round(x.total)}`,x.extras.length?`Options: ${x.extras.join(', ')}`:null,`Please review orientation, supports, tolerances, finish and manufacturability and send the final quotation.`].filter(Boolean);
+  const old=sendBtn.textContent;sendBtn.disabled=true;sendBtn.textContent=selectedFile?'Uploading CAD file…':'Opening RFQ…';let attachment=null;
+  if(selectedFile){try{attachment=await uploadPendingFile();setState('CAD file securely uploaded. Complete the RFQ details to attach it to your enquiry.','ok')}catch(err){console.warn(err);msg.push(`Automatic CAD upload note: ${err?.message||'upload unavailable'}; file must be shared manually.`);setState('The estimate is ready, but the CAD file could not be uploaded automatically. Re-attach it on the RFQ page or send it by email/WhatsApp.','warn')}}
+  const u=new URL('../request-quote.html',location.href);u.searchParams.set('requirement','3D Printing');u.searchParams.set('message',msg.join('\n'));if(x.material)u.searchParams.set('material',x.material);u.searchParams.set('quantity',String(x.q));
+  if(attachment){u.searchParams.set('attachment_path',attachment.path);u.searchParams.set('attachment_name',attachment.name);u.searchParams.set('attachment_size',String(attachment.size));if(attachment.type)u.searchParams.set('attachment_type',attachment.type)}
+  location.href=u.toString();sendBtn.textContent=old;
+}
+
+processSel.addEventListener('change',()=>{populateMaterials();setSliceStatus(processSel.value==='fdm'&&currentObject?'Ready for browser-based FDM slicing.':'Selected process will use the appropriate planning route.')});
+materialSel.addEventListener('change',()=>{updateMaterialNote();invalidateQuote()});
+[qualitySel,infillSel,qtyEl,complexitySel].forEach(x=>x?.addEventListener('change',invalidateQuote));document.querySelectorAll('.q3d-options input').forEach(x=>x.addEventListener('change',invalidateQuote));
+calcBtn.addEventListener('click',estimate);sendBtn.addEventListener('click',sendRFQ);fileInput.addEventListener('change',()=>handleFile(fileInput.files[0]));
+['dragenter','dragover'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.add('drag')}));['dragleave','drop'].forEach(ev=>drop.addEventListener(ev,e=>{e.preventDefault();drop.classList.remove('drag')}));drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f){fileInput.files=e.dataTransfer.files;handleFile(f)}});manualVolume.addEventListener('input',()=>{analysed.volumeCm3=Number(manualVolume.value||0);invalidateQuote()});
+loadRules();
