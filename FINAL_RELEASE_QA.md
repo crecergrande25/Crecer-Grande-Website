@@ -48,3 +48,7 @@ Static QA cannot prove live Supabase RLS/Auth/storage behavior. After deployment
 4. Non-critical CMS edit.
 5. `admin-users` Edge Function using a disposable non-root test account.
 6. Search Console sitemap / URL inspection.
+
+## Footer visual correction
+
+PASS — Final CSS footer refinement applied across all pages through the shared `assets/css/site.css` footer rules.
