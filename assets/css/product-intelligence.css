@@ -1,0 +1,29 @@
+/* Phase 1 Step 2D — live public product catalogue intelligence */
+.cg-product-intelligence{border-top:1px solid rgba(148,163,184,.18)}
+.cg-product-intelligence .section-head{align-items:flex-start}
+.cg-fact-grid,.cg-spec-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.cg-fact{display:flex;justify-content:space-between;gap:18px;padding:14px 16px;border:1px solid rgba(148,163,184,.2);border-radius:12px;background:rgba(255,255,255,.025)}
+.cg-fact span{color:var(--muted,#9aa9bc);font-size:.88rem}
+.cg-fact b{text-align:right;overflow-wrap:anywhere}
+.cg-intel-block{margin-top:34px}
+.cg-compatibility-note{border-left:3px solid var(--gold,#f4b000)}
+.cg-compatibility-note p{margin-bottom:0}
+.cg-tech-table{width:100%;border-collapse:collapse}
+.cg-tech-table th,.cg-tech-table td{padding:12px 14px;text-align:left;border-bottom:1px solid rgba(148,163,184,.17);vertical-align:top}
+.cg-tech-table th{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted,#9aa9bc)}
+.cg-doc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cg-document-card{display:flex;flex-direction:column;gap:5px;padding:16px;border:1px solid rgba(148,163,184,.2);border-radius:12px;text-decoration:none;background:rgba(255,255,255,.025)}
+.cg-document-card span{color:var(--muted,#9aa9bc);font-size:.86rem}
+.cg-document-card:hover{border-color:var(--gold,#f4b000)}
+.cg-media-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.cg-media-card{margin:0;border:1px solid rgba(148,163,184,.2);border-radius:14px;overflow:hidden;background:rgba(255,255,255,.025)}
+.cg-media-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.cg-media-card figcaption{padding:10px 12px;color:var(--muted,#9aa9bc);font-size:.88rem}
+.cg-variant-card .variant-sku{display:block;margin-top:4px;color:var(--muted,#9aa9bc);font-size:.82rem}
+.cg-variant-card p{margin-bottom:0}
+@media(max-width:760px){
+  .cg-fact-grid,.cg-spec-grid,.cg-doc-grid,.cg-media-grid{grid-template-columns:1fr}
+  .cg-fact{flex-direction:column;gap:4px}
+  .cg-fact b{text-align:left}
+  .cg-tech-table{min-width:640px}
+}
