@@ -1,4 +1,6 @@
-Crecer Grande Website V2.6
-Release status: FINAL HOST-READY PACKAGE
+Crecer Grande Website V2.7.0
+Release status: MAJOR FEATURE RELEASE
 Release date: 2026-09-18
 Target: GitHub Pages + existing CG Supabase backend
+Feature focus: Mechanical Design Job Work — 2D, 3D, piping, drawings, BOM and reverse engineering
+Stable reference versions: V1.9.3 and V2.6.4
