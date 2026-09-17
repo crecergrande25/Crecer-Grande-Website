@@ -26,7 +26,7 @@
     ['case_by_case', 'Case by case'], ['manufacturer', 'Manufacturer'], ['limited', 'Limited'],
     ['none', 'None'], ['not_applicable', 'Not applicable']
   ];
-  const PRICE_MODES = [['quote', 'Quotation'], ['fixed', 'Fixed price'], ['from', 'From price'], ['contact', 'Contact for price']];
+  const PRICE_MODES = [['quote', 'Quotation'], ['fixed', 'Fixed price'], ['from', 'From price'], ['range', 'Price range']];
 
   const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (m) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
