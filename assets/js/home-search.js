@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const rows=[];
   const add=(name,kind,desc,href,keywords='')=>rows.push({name,kind,desc,href,hay:[name,kind,desc,keywords].join(' ').toLowerCase()});
   [
-    ['Mechanical Design & CAD','Engineering service','3D CAD, 2D manufacturing drawings, BOM, DFM/DFA and reverse engineering.','/mechanical-design-services-kolkata.html','inventor cad drawing design reverse engineering dfm dfa bom'],
+    ['Mechanical Design Job Work','Engineering service','2D drafting, 3D part and assembly modelling, piping layouts, manufacturing drawings, BOM, revisions and reverse engineering.','/design-job-work.html','mechanical engineer senior design engineer 2d drafting 3d modelling piping design layout inventor autocad dwg dxf step stp assembly drawing manufacturing drawing bom ga isometric reverse engineering dfm dfa job work outsourced cad'],
+    ['Mechanical Design & CAD','Engineering service','Mechanical CAD, manufacturing drawings, BOM, DFM/DFA and reverse engineering.','/mechanical-design-services-kolkata.html','inventor cad drawing design reverse engineering dfm dfa bom'],
     ['3D Printing & Rapid Prototyping','Manufacturing','STL preliminary estimate, STEP/STP engineering review, FAI, inserts and finishing.','/products/3d-print-quote.html','stl step stp resin fdm pla petg abs nylon inserts prototype'],
     ['Industrial Machine Maintenance','Machine support','Breakdown, troubleshooting, preventive maintenance and restoration support.','/industrial-machine-maintenance-kolkata.html','breakdown alarm repair cnc vmc laser chiller machine maintenance'],
     ['Inspection / FAI / RCA / CAPA','Quality','Inspection, first article, NCR, root-cause and corrective-action support.','/industrial-inspection-qa-kolkata.html','quality inspection fai ncr rca capa sop audit'],
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
       if(!error)(data||[]).forEach(x=>add(x.name,'Catalogue product',x.short_description||x.subcategory||x.category||'','/products/product-detail.html?slug='+encodeURIComponent(x.slug),[x.category,x.subcategory,x.mpn,x.manufacturer_part_number,x.sku,Array.isArray(x.tags)?x.tags.join(' '):x.tags].filter(Boolean).join(' ')));
     }catch(_){ }
   }
-  const esc=s=>String(s||'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
+  const esc=s=>String(s||'').replace(/[&<>'\"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','\"':'&quot;'}[m]));
   function score(row,terms,q){let s=0;const name=row.name.toLowerCase();if(name===q)s+=12;if(name.startsWith(q))s+=7;if(name.includes(q))s+=5;for(const t of terms){if(name.includes(t))s+=4;if(row.hay.includes(t))s+=1}return s}
   function render(){
     const raw=input.value.trim(),q=raw.toLowerCase();
