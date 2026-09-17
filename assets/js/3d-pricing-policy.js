@@ -16,7 +16,7 @@
       mjf:{PA12:{rate:51},PA11:{rate:53},TPU:{rate:58}}
     }
   };
-  let policy=structuredClone(fallback),writing=false,lastAdjusted=null;
+  let policy=structuredClone(fallback),lastAdjusted=null;
 
   const extOf=f=>(f?.name?.split('.').pop()||'').toLowerCase();
   const isSTL=()=>extOf(fileInput.files?.[0])==='stl';
@@ -56,14 +56,14 @@
     let grams=0,hours=0;
     for(const row of rows){
       const text=row.innerText||'';
-      if(/Material \/ part/i.test(text))grams=numText(row.querySelector('b')?.textContent);
-      if(/Machine time \/ part/i.test(text))hours=numText(row.querySelector('b')?.textContent);
+      if(/^Material \/ part/i.test(text.trim()))grams=numText(row.querySelector('b')?.textContent);
+      if(/^Machine time \/ part/i.test(text.trim()))hours=numText(row.querySelector('b')?.textContent);
     }
     return{grams,hours};
   }
 
   function reprice(){
-    if(writing||!isSTL())return;
+    if(!isSTL())return;
     const {grams,hours}=readBaseMetrics();if(!grams)return;
     const process=processSel?.value||'fdm',material=materialSel?.value||'',q=Math.max(1,Number(qtyEl?.value||1));
     const rate=Number(policy.materials?.[process]?.[material]?.rate||0);if(!rate)return;
@@ -77,10 +77,9 @@
     const pct=discountPct(q),subtotal=beforeDiscount*(1-pct/100),gst=subtotal*Number(policy.gst||18)/100,total=subtotal+gst;
     lastAdjusted={process,material,q,grams,hours,rate,insertCount,insertAmount,finishing,painting,fai,pct,subtotal,gst,total,quality:qualityEl?.value||'',infill:process==='fdm'?Number(infillEl?.value||0):null,complexity:complexityEl?.value||'',file:fileInput.files?.[0]?.name||''};
     sessionStorage.setItem('cg_3d_pricing_adjusted',JSON.stringify(lastAdjusted));
-    writing=true;
     quotePrice.textContent=`₹ ${money(subtotal)}`;
     quoteGst.textContent=`Approx. ₹${money(total)} incl. ${policy.gst||18}% GST`;
-    const lines=[
+    quoteBreakdown.innerHTML=[
       `<div><span>Estimated material / part</span><b>${grams.toFixed(1)} g</b></div>`,
       `<div><span>Material rate</span><b>₹${rate}/g</b></div>`,
       `<div><span>Material value (${q} pc)</span><b>₹${money(materialAmount)}</b></div>`,
@@ -92,14 +91,12 @@
       `<div><span>Quantity discount</span><b>${pct?`${pct}%`:'None'}</b></div>`,
       `<div><span>Setup / machine charge</span><b>₹0</b></div>`
     ].filter(Boolean).join('');
-    quoteBreakdown.innerHTML=lines;
     const warning=document.querySelector('.q3d-warning');
     if(warning)warning.innerHTML='<b>Pricing basis:</b> estimated printable material weight × selected material rate, plus selected add-ons, less the applicable quantity discount. There is no setup charge and no machine-time charge. GST is added separately. Final production suitability is subject to engineering review.';
-    writing=false;
   }
 
   function scheduleReprice(){setTimeout(reprice,80);setTimeout(reprice,500);setTimeout(reprice,1400)}
-  const obs=new MutationObserver(()=>{if(!writing&&isSTL())scheduleReprice()});obs.observe(quoteBreakdown,{subtree:true,childList:true,characterData:true});
+  const obs=new MutationObserver(()=>{const t=quoteBreakdown.innerText||'';if(isSTL()&&/Calculation/i.test(t))scheduleReprice()});obs.observe(quoteBreakdown,{subtree:true,childList:true,characterData:true});
   [qtyEl,materialSel,processSel,qualityEl,infillEl,complexityEl,finishOpt,paintOpt,faiOpt].forEach(e=>e?.addEventListener('change',scheduleReprice));
   calcBtn.addEventListener('click',scheduleReprice);
   fileInput.addEventListener('change',()=>{lastAdjusted=null;if(isSTL())scheduleReprice()});
