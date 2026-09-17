@@ -53,3 +53,28 @@ V2.6 changes the website from a primarily brochure-style presentation into a req
 - Moved the WhatsApp and Instagram action buttons from below the logo into the **Contact** footer column.
 - Removed the duplicate email action pill from below the logo; the main contact email remains in the Contact column.
 - Added stylesheet cache version `2.6.2`.
+
+## Header navigation correction — V2.6.3
+
+- Restored **Insights** as a top-level navigation item.
+- Header order is now: Solutions → Engineering Desk → Products → Projects → Resources → Insights → About → Request a Quote → Admin Login.
+- **Admin Login** is placed after **Request a Quote** with a deliberate long desktop gap.
+- Mobile navigation keeps both actions full-width and readable.
+- Public stylesheet cache version updated to `2.6.3`.
+
+- Final V2.6.3 header adjustment: Insights restored between Resources and About; Admin Login sits after Request a Quote with 72 px desktop separation.
+
+## Footer bottom signature — V2.6.4
+
+- Removed the GSTIN / Udyam line from the bottom-centre footer position.
+- Replaced it with **Made with ♥**.
+- GSTIN and Udyam information elsewhere on the website remains unchanged.
+
+## Final requested corrections — V2.6.5
+
+- Changed the floating **Ask CG** label to **Ask iKNOW**.
+- Changed the footer WhatsApp button label to **6291001781** while preserving the WhatsApp link.
+- Added **Site maintained by Crecer Grande Website Suite V2.6.2** beside the footer V2.6 area.
+- Removed all public internal links to Projects while keeping the Projects hub, project detail pages and project data files intact.
+- Removed project URLs from the public sitemap and project entries from the homepage/search content index.
+- Admin project-management functionality remains intact.

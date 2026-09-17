@@ -1,47 +1,5 @@
 [
   {
-    "name": "Laser Chiller Pump Replacement",
-    "kind": "Case study",
-    "desc": "How to verify electrical, hydraulic and mechanical duty before replacing a laser chiller pump.",
-    "href": "/projects/laser-chiller-pump-replacement.html",
-    "keywords": "laser chiller pump replacement flow head voltage port mounting equivalent"
-  },
-  {
-    "name": "Precision QR-Marked Components",
-    "kind": "Case study",
-    "desc": "Drawing-led metal component production with QR readability and inspection checks.",
-    "href": "/projects/precision-marked-components.html",
-    "keywords": "ss304 qr laser marking sheet metal inspection traceability"
-  },
-  {
-    "name": "3D Printing FAI Before Batch Production",
-    "kind": "Case study",
-    "desc": "Use a first article to catch material/process effects before releasing the full print quantity.",
-    "href": "/projects/3d-print-fai-batch.html",
-    "keywords": "3d printing fai first article resin batch design revision"
-  },
-  {
-    "name": "Laser Machine Breakdown RCA",
-    "kind": "Case study",
-    "desc": "A structured path for cutting-quality deterioration, optics, cleanliness, centering and maintenance evidence.",
-    "href": "/projects/laser-machine-rca.html",
-    "keywords": "laser machine breakdown rca optics lens nozzle focus centering cleaning"
-  },
-  {
-    "name": "Fit Correction for Replacement Components",
-    "kind": "Case study",
-    "desc": "Why field measurements and interface tolerances must be verified before grinding or modifying replacement parts.",
-    "href": "/projects/fit-correction-replacement-component.html",
-    "keywords": "reverse engineering fit shaft bore tolerance site measurement replacement component"
-  },
-  {
-    "name": "QMS Documentation & Audit Readiness",
-    "kind": "Case study",
-    "desc": "Build a practical ISO 9001-aligned documentation system without presenting consultancy as certification.",
-    "href": "/projects/qms-audit-readiness.html",
-    "keywords": "iso 9001 qms sop registers audit management review documentation"
-  },
-  {
     "name": "How to Identify an Unknown Laser Consumable",
     "kind": "Engineering guide",
     "desc": "Use cutting-head model, dimensions, position and photographs to identify nozzles, windows, ceramics and optics.",
