@@ -47,6 +47,11 @@
     ab?.addEventListener('click',()=>ap.classList.toggle('open'));
     document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask'))ap.classList.remove('open')});
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
+
+    const suite=$('.cg-suite-maintained');
+    if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.6.4';
+    $$('.cg-footer-version').forEach(x=>x.remove());
+
     document.addEventListener('click',(e)=>{
       const a=e.target.closest('a'); if(!a)return;
       if(/wa\.me/.test(a.href)) track('whatsapp_click',{href:a.href});
