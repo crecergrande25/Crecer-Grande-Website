@@ -39,3 +39,17 @@ V2.6 changes the website from a primarily brochure-style presentation into a req
 - Restored a clearly visible **Admin Login** link to `/admin/` on every public-page footer.
 - Restored direct footer links for Engineering Desk, Laser Product Finder, 3D Printing / CAD Quote and Insights while retaining the preferred V2.2-style footer layout.
 - The secured Website Manager files were verified present; only the public navigation link had been lost during the footer redesign.
+
+## Admin footer rendering correction
+
+- Removed the custom inline SVG padlock from the public footer because it could render at the browser's default SVG size when an older cached stylesheet was used.
+- Restored **Admin Login** as a normal Company-column footer link, matching the preferred clean footer layout.
+- Added `?v=2.6.1` to the shared public stylesheet URL to force browsers to load the corrected V2.6 CSS after deployment.
+- The secured `/admin/` Website Manager itself was preserved unchanged.
+
+## Header / footer action placement refinement
+
+- Moved **Admin Login** from the footer Company column to the main header immediately before **Request a Quote**, with deliberate separation from the normal navigation links.
+- Moved the WhatsApp and Instagram action buttons from below the logo into the **Contact** footer column.
+- Removed the duplicate email action pill from below the logo; the main contact email remains in the Contact column.
+- Added stylesheet cache version `2.6.2`.
