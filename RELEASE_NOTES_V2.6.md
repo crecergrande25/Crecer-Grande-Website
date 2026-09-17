@@ -33,3 +33,9 @@ V2.6 changes the website from a primarily brochure-style presentation into a req
 ## Footer restored to the preferred CG layout
 
 - Rebuilt the shared footer to match the preferred previous layout: top engineering CTA, large horizontal CG brand area, Capabilities / Company / Contact columns, WhatsApp + Instagram + Email icon pills, contact phone/address, and GSTIN/Udyam/version bottom bar.
+
+## Footer navigation regression corrected
+
+- Restored a clearly visible **Admin Login** link to `/admin/` on every public-page footer.
+- Restored direct footer links for Engineering Desk, Laser Product Finder, 3D Printing / CAD Quote and Insights while retaining the preferred V2.2-style footer layout.
+- The secured Website Manager files were verified present; only the public navigation link had been lost during the footer redesign.

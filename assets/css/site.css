@@ -290,3 +290,36 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
   .cg-footer-logo-link img{width:200px}
   .cg-social-pill{width:100%;justify-content:flex-start}
 }
+
+
+/* V2.6 — restore visible secure Admin Login in the preferred footer */
+.cg-admin-login{
+  display:inline-flex !important;
+  align-items:center;
+  gap:8px;
+  width:max-content;
+  margin-top:5px !important;
+  padding:8px 11px;
+  border:1px solid rgba(244,176,0,.42);
+  border-radius:9px;
+  color:var(--gold) !important;
+  background:rgba(244,176,0,.04);
+  font-weight:800;
+}
+.cg-admin-login:hover{
+  background:rgba(244,176,0,.11);
+  border-color:var(--gold);
+  color:#ffd45b !important;
+}
+.cg-admin-lock{
+  display:inline-grid;
+  place-items:center;
+  width:15px;
+  height:15px;
+  flex:0 0 15px;
+}
+.cg-admin-lock svg{
+  width:100%;
+  height:100%;
+  fill:currentColor;
+}
