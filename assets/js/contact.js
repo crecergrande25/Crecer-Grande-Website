@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded',()=>{
       }else{const other=[...sel.options].find(o=>o.textContent==='Other');if(other)sel.value=other.value}
     }
   }
+  if(type==='rfq'){
+    const prefill={message:'message',material:'material',quantity:'quantity',machine_model:'machine_model',dimensions:'dimensions',location:'location'};
+    Object.entries(prefill).forEach(([q,n])=>{const v=qs.get(q),field=f.querySelector(`[name="${n}"]`);if(v&&field)field.value=v});
+  }
 
   f.addEventListener('submit',async e=>{
     e.preventDefault();
