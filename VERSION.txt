@@ -1,2 +1,4 @@
-Crecer Grande Website V2.5 — Google Visibility Edition
-Build date: 2026-09-16
+Crecer Grande Website V2.6
+Release status: FINAL HOST-READY PACKAGE
+Release date: 2026-09-18
+Target: GitHub Pages + existing CG Supabase backend

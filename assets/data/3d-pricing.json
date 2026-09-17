@@ -1,0 +1,28 @@
+{
+  "currency": "INR",
+  "tax_note": "Taxes extra as applicable.",
+  "max_upload_mb": 50,
+  "fdm": {
+    "minimum_order": 250,
+    "setup": 90,
+    "shell_share": 0.24,
+    "waste_factor": 1.08,
+    "support_factor": 1.14,
+    "quantity_discount_max": 0.28
+  },
+  "resin": {
+    "minimum_order": 350,
+    "setup": 135,
+    "waste_factor": 1.16,
+    "support_factor": 1.18,
+    "quantity_discount_max": 0.24
+  },
+  "extras": {
+    "insert_each": 35,
+    "basic_finish": 75,
+    "premium_finish": 175,
+    "basic_inspection": 60,
+    "fai": 220
+  },
+  "note": "Planning defaults for website estimates. Final pricing must be confirmed after engineering review."
+}

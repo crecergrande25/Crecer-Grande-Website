@@ -1,0 +1,5 @@
+# Crecer Grande Website V2.6 — Supabase function configuration.
+# The admin-users function authenticates the bearer token inside the function and
+# also checks database permission `users.manage`.
+[functions.admin-users]
+verify_jwt = false

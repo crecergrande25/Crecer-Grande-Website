@@ -1,17 +1,28 @@
-# `admin-users` Edge Function
+# admin-users — Crecer Grande Website V2.6
 
-This is the protected V2.3 user-management backend used by Website Manager → Users & Access.
+Protected Edge Function for Website Manager → Users & Access.
 
-It supports:
-- create admin/user profile with a temporary password;
-- change display name, role, active status and login-list visibility;
-- reset a user's temporary password and force password change on next login.
+The browser sends the signed-in administrator JWT. The function:
+1. verifies the user session;
+2. checks the `users.manage` permission;
+3. confirms the caller has an active administrator profile;
+4. performs privileged Supabase Auth Admin actions using the server-only service/secret key;
+5. writes user-management audit events.
 
-Security model:
-- every request requires a valid logged-in Supabase access token;
-- the caller must have `users.manage`;
-- only the root Super Admin can assign `super_admin`;
-- the database root-protection trigger still prevents disabling/demoting the root account;
-- the service-role key stays only in the Edge Function environment and is never returned to the browser.
+Supported actions:
+- `create`
+- `update`
+- `reset_password`
 
-Deploy under the function name `admin-users` if it is not already deployed in the live project. No database migration is required for V2.3. Existing admin identities use the internal login domain `admin.crecergrande.in`; the function defaults to that domain and can be overridden with `ADMIN_AUTH_DOMAIN` if needed. Supabase normally provides `SUPABASE_URL`, `SUPABASE_ANON_KEY` and `SUPABASE_SERVICE_ROLE_KEY` to Edge Functions; verify the project environment before deployment.
+The service/secret key must remain in the Supabase function environment and must never be added to the public website repository as a browser configuration value.
+
+The function expects the established V2.x database helpers:
+- `has_permission`
+- `admin_set_user_profile`
+- `log_admin_event`
+
+and tables:
+- `user_profiles`
+- `app_roles`
+
+Default internal login domain: `admin.crecergrande.in`.

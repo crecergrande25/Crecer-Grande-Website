@@ -1,0 +1,654 @@
+[
+  {
+    "id": "pla-plus",
+    "name": "PLA / PLA+",
+    "process": "fdm",
+    "density": 1.24,
+    "availability": "estimate",
+    "material_rate": 5.8,
+    "machine_rate": 68,
+    "properties": {
+      "strength": 58,
+      "heat": 30,
+      "impact": 42,
+      "flexibility": 20,
+      "finish": 82,
+      "uv": 35
+    },
+    "tags": [
+      "visual",
+      "prototype",
+      "fit-check",
+      "low-cost"
+    ],
+    "use": "Visual prototypes, fit checks, concept parts and light-duty components.",
+    "notes": "Easy to print and dimensionally stable for many prototype geometries.",
+    "colors": [
+      "Black",
+      "White",
+      "Grey",
+      "Blue",
+      "Red",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "petg",
+    "name": "PETG",
+    "process": "fdm",
+    "density": 1.27,
+    "availability": "estimate",
+    "material_rate": 7.2,
+    "machine_rate": 76,
+    "properties": {
+      "strength": 74,
+      "heat": 56,
+      "impact": 72,
+      "flexibility": 38,
+      "finish": 72,
+      "uv": 58
+    },
+    "tags": [
+      "functional",
+      "prototype",
+      "housing",
+      "general-engineering"
+    ],
+    "use": "Functional prototypes, housings, guards and general engineering parts.",
+    "notes": "A useful general-purpose balance of strength, toughness and printability.",
+    "colors": [
+      "Black",
+      "White",
+      "Grey",
+      "Transparent / translucent",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "abs",
+    "name": "ABS",
+    "process": "fdm",
+    "density": 1.04,
+    "availability": "estimate",
+    "material_rate": 7.8,
+    "machine_rate": 84,
+    "properties": {
+      "strength": 72,
+      "heat": 70,
+      "impact": 78,
+      "flexibility": 34,
+      "finish": 68,
+      "uv": 35
+    },
+    "tags": [
+      "functional",
+      "housing",
+      "heat",
+      "post-process"
+    ],
+    "use": "Functional housings and parts needing better heat and impact performance than basic PLA.",
+    "notes": "Enclosed printing and geometry review are important because warping risk depends on part shape.",
+    "colors": [
+      "Black",
+      "White",
+      "Grey",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "asa",
+    "name": "ASA",
+    "process": "fdm",
+    "density": 1.07,
+    "availability": "estimate",
+    "material_rate": 8.8,
+    "machine_rate": 92,
+    "properties": {
+      "strength": 74,
+      "heat": 73,
+      "impact": 76,
+      "flexibility": 32,
+      "finish": 70,
+      "uv": 92
+    },
+    "tags": [
+      "outdoor",
+      "functional",
+      "uv",
+      "housing"
+    ],
+    "use": "Outdoor, UV-exposed and weather-facing functional components.",
+    "notes": "Often preferred over ABS when outdoor exposure is a primary requirement.",
+    "colors": [
+      "Black",
+      "White",
+      "Grey",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "tpu",
+    "name": "TPU",
+    "process": "fdm",
+    "density": 1.2,
+    "availability": "estimate",
+    "material_rate": 10.5,
+    "machine_rate": 108,
+    "properties": {
+      "strength": 48,
+      "heat": 48,
+      "impact": 92,
+      "flexibility": 98,
+      "finish": 58,
+      "uv": 62
+    },
+    "tags": [
+      "flexible",
+      "gasket",
+      "bumper",
+      "grip"
+    ],
+    "use": "Flexible guards, bumpers, grips, gaskets and soft functional parts.",
+    "notes": "Geometry, wall thickness and shore hardness affect printability and final feel.",
+    "colors": [
+      "Black",
+      "White",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "nylon-pa",
+    "name": "Nylon / PA",
+    "process": "fdm",
+    "density": 1.14,
+    "availability": "estimate",
+    "material_rate": 12.0,
+    "machine_rate": 118,
+    "properties": {
+      "strength": 86,
+      "heat": 80,
+      "impact": 88,
+      "flexibility": 56,
+      "finish": 60,
+      "uv": 48
+    },
+    "tags": [
+      "functional",
+      "jig-fixture",
+      "wear",
+      "engineering"
+    ],
+    "use": "Jigs, fixtures, wear-resistant parts and functional engineering components.",
+    "notes": "Moisture control and printing conditions materially affect quality.",
+    "colors": [
+      "Natural",
+      "Black",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "pa-cf",
+    "name": "PA-CF / Carbon-Filled Nylon",
+    "process": "fdm",
+    "density": 1.15,
+    "availability": "estimate",
+    "material_rate": 18.0,
+    "machine_rate": 138,
+    "properties": {
+      "strength": 95,
+      "heat": 86,
+      "impact": 76,
+      "flexibility": 28,
+      "finish": 70,
+      "uv": 55
+    },
+    "tags": [
+      "jig-fixture",
+      "rigid",
+      "engineering",
+      "load-bearing",
+      "heat"
+    ],
+    "use": "Rigid engineering parts, tooling, fixtures and stiffness-critical components.",
+    "notes": "Abrasive material; geometry and layer orientation are important for final strength.",
+    "colors": [
+      "Black"
+    ]
+  },
+  {
+    "id": "petg-cf",
+    "name": "PETG-CF",
+    "process": "fdm",
+    "density": 1.22,
+    "availability": "estimate",
+    "material_rate": 15.5,
+    "machine_rate": 126,
+    "properties": {
+      "strength": 88,
+      "heat": 64,
+      "impact": 72,
+      "flexibility": 26,
+      "finish": 76,
+      "uv": 62
+    },
+    "tags": [
+      "functional",
+      "rigid",
+      "engineering",
+      "housing"
+    ],
+    "use": "Stiff functional parts where PETG-like chemical behavior and improved rigidity are useful.",
+    "notes": "Carbon reinforcement improves stiffness but changes surface and anisotropy behavior.",
+    "colors": [
+      "Black"
+    ]
+  },
+  {
+    "id": "pc",
+    "name": "Polycarbonate (PC)",
+    "process": "fdm",
+    "density": 1.2,
+    "availability": "estimate",
+    "material_rate": 15.0,
+    "machine_rate": 132,
+    "properties": {
+      "strength": 92,
+      "heat": 91,
+      "impact": 94,
+      "flexibility": 42,
+      "finish": 62,
+      "uv": 42
+    },
+    "tags": [
+      "heat",
+      "impact",
+      "functional",
+      "engineering"
+    ],
+    "use": "High-impact and higher-temperature functional applications subject to geometry review.",
+    "notes": "Requires controlled printing conditions; not every geometry is economical.",
+    "colors": [
+      "Natural / clear-ish",
+      "Black",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "standard-resin",
+    "name": "Standard Resin",
+    "process": "resin",
+    "density": 1.12,
+    "availability": "estimate",
+    "material_rate": 13.5,
+    "machine_rate": 122,
+    "properties": {
+      "strength": 58,
+      "heat": 42,
+      "impact": 36,
+      "flexibility": 18,
+      "finish": 96,
+      "uv": 28
+    },
+    "tags": [
+      "visual",
+      "detail",
+      "smooth",
+      "prototype"
+    ],
+    "use": "Fine-detail visual prototypes, presentation models and smooth-surface parts.",
+    "notes": "Excellent detail and surface quality; brittleness and UV exposure should be considered.",
+    "colors": [
+      "Grey",
+      "White",
+      "Black",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "tough-resin",
+    "name": "Tough / ABS-Like Resin",
+    "process": "resin",
+    "density": 1.1,
+    "availability": "estimate",
+    "material_rate": 18.0,
+    "machine_rate": 148,
+    "properties": {
+      "strength": 76,
+      "heat": 58,
+      "impact": 72,
+      "flexibility": 34,
+      "finish": 94,
+      "uv": 32
+    },
+    "tags": [
+      "functional",
+      "detail",
+      "smooth",
+      "prototype"
+    ],
+    "use": "Detailed functional prototypes, housings and fit-check components.",
+    "notes": "Useful when fine detail and more robust handling are both required.",
+    "colors": [
+      "Grey",
+      "Black",
+      "White",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "clear-resin",
+    "name": "Clear Resin",
+    "process": "resin",
+    "density": 1.1,
+    "availability": "estimate",
+    "material_rate": 21.0,
+    "machine_rate": 158,
+    "properties": {
+      "strength": 60,
+      "heat": 48,
+      "impact": 40,
+      "flexibility": 20,
+      "finish": 98,
+      "uv": 28
+    },
+    "tags": [
+      "clear",
+      "visual",
+      "detail",
+      "smooth"
+    ],
+    "use": "Transparent / translucent prototypes, light guides and appearance models.",
+    "notes": "Optical clarity depends heavily on orientation and post-processing; perfect transparency is not assumed.",
+    "colors": [
+      "Clear / translucent"
+    ]
+  },
+  {
+    "id": "flex-resin",
+    "name": "Flexible / Elastic Resin",
+    "process": "resin",
+    "density": 1.1,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 46,
+      "heat": 44,
+      "impact": 88,
+      "flexibility": 96,
+      "finish": 88,
+      "uv": 30
+    },
+    "tags": [
+      "flexible",
+      "gasket",
+      "prototype",
+      "detail"
+    ],
+    "use": "Flexible detailed prototypes where elastomer-like behavior is required.",
+    "notes": "RFQ route; exact resin and hardness are confirmed during review.",
+    "colors": [
+      "Confirm during RFQ"
+    ]
+  },
+  {
+    "id": "high-temp-resin",
+    "name": "High-Temperature Resin",
+    "process": "resin",
+    "density": 1.15,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 72,
+      "heat": 96,
+      "impact": 48,
+      "flexibility": 20,
+      "finish": 90,
+      "uv": 32
+    },
+    "tags": [
+      "heat",
+      "tooling",
+      "detail",
+      "engineering"
+    ],
+    "use": "High-temperature prototypes, fixtures and process-specific parts.",
+    "notes": "RFQ route; temperature requirement and duty cycle must be stated.",
+    "colors": [
+      "Confirm during RFQ"
+    ]
+  },
+  {
+    "id": "pa12-sls",
+    "name": "PA12 Nylon",
+    "process": "sls",
+    "density": 1.01,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 88,
+      "heat": 80,
+      "impact": 86,
+      "flexibility": 44,
+      "finish": 76,
+      "uv": 58
+    },
+    "tags": [
+      "functional",
+      "production",
+      "jig-fixture",
+      "complex"
+    ],
+    "use": "Production-grade nylon parts, complex geometries and low-volume production.",
+    "notes": "RFQ route; powder-bed nesting and total build economics influence price.",
+    "colors": [
+      "Natural",
+      "Black / dyed",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "pa11-sls",
+    "name": "PA11 Nylon",
+    "process": "sls",
+    "density": 1.03,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 82,
+      "heat": 76,
+      "impact": 94,
+      "flexibility": 64,
+      "finish": 74,
+      "uv": 58
+    },
+    "tags": [
+      "functional",
+      "impact",
+      "flexible",
+      "production"
+    ],
+    "use": "Tough functional parts where impact resistance and ductility are important.",
+    "notes": "RFQ route; material availability is confirmed for the project.",
+    "colors": [
+      "Natural",
+      "Black / dyed",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "pa12-gf-sls",
+    "name": "Glass-Filled PA12",
+    "process": "sls",
+    "density": 1.24,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 92,
+      "heat": 86,
+      "impact": 64,
+      "flexibility": 18,
+      "finish": 68,
+      "uv": 60
+    },
+    "tags": [
+      "rigid",
+      "heat",
+      "jig-fixture",
+      "engineering"
+    ],
+    "use": "Rigid fixtures, housings and engineering parts where stiffness is a priority.",
+    "notes": "RFQ route; reinforcement reduces flexibility and changes finish.",
+    "colors": [
+      "Natural / grey"
+    ]
+  },
+  {
+    "id": "pa12-mjf",
+    "name": "PA12 Nylon",
+    "process": "mjf",
+    "density": 1.01,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 90,
+      "heat": 80,
+      "impact": 86,
+      "flexibility": 42,
+      "finish": 84,
+      "uv": 58
+    },
+    "tags": [
+      "functional",
+      "production",
+      "complex",
+      "batch"
+    ],
+    "use": "Functional production parts and repeat low-volume batches.",
+    "notes": "RFQ route; build nesting, finish and quantity drive project economics.",
+    "colors": [
+      "Grey",
+      "Black / dyed",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "tpu-mjf",
+    "name": "TPU",
+    "process": "mjf",
+    "density": 1.12,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 54,
+      "heat": 52,
+      "impact": 95,
+      "flexibility": 98,
+      "finish": 76,
+      "uv": 62
+    },
+    "tags": [
+      "flexible",
+      "production",
+      "gasket",
+      "batch"
+    ],
+    "use": "Flexible production parts and resilient components.",
+    "notes": "RFQ route; exact hardness and material grade are confirmed during review.",
+    "colors": [
+      "Grey",
+      "Black / dyed",
+      "Other / confirm"
+    ]
+  },
+  {
+    "id": "rigid-polyjet",
+    "name": "Rigid Photopolymer",
+    "process": "polyjet",
+    "density": 1.15,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 60,
+      "heat": 46,
+      "impact": 44,
+      "flexibility": 18,
+      "finish": 99,
+      "uv": 26
+    },
+    "tags": [
+      "visual",
+      "smooth",
+      "detail",
+      "color"
+    ],
+    "use": "High-detail appearance models, presentation prototypes and multi-material concepts.",
+    "notes": "Specialist RFQ route; availability, color and finish are confirmed during review.",
+    "colors": [
+      "Project-specific / confirm"
+    ]
+  },
+  {
+    "id": "ss316l-dmls",
+    "name": "Stainless Steel 316L",
+    "process": "metal",
+    "density": 8.0,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 96,
+      "heat": 94,
+      "impact": 84,
+      "flexibility": 14,
+      "finish": 52,
+      "uv": 100
+    },
+    "tags": [
+      "metal",
+      "functional",
+      "engineering",
+      "production"
+    ],
+    "use": "Metal additive requirements where corrosion-resistant stainless steel is appropriate.",
+    "notes": "Specialist RFQ route. Design, support strategy, heat treatment and machining/finishing requirements must be reviewed.",
+    "colors": [
+      "Metal"
+    ]
+  },
+  {
+    "id": "alsi10mg-dmls",
+    "name": "AlSi10Mg Aluminium",
+    "process": "metal",
+    "density": 2.68,
+    "availability": "rfq",
+    "material_rate": 0,
+    "machine_rate": 0,
+    "properties": {
+      "strength": 88,
+      "heat": 82,
+      "impact": 68,
+      "flexibility": 16,
+      "finish": 52,
+      "uv": 100
+    },
+    "tags": [
+      "metal",
+      "lightweight",
+      "engineering",
+      "production"
+    ],
+    "use": "Lightweight metal additive parts subject to engineering and finishing review.",
+    "notes": "Specialist RFQ route; dimensional finishing may require secondary machining.",
+    "colors": [
+      "Metal"
+    ]
+  }
+]

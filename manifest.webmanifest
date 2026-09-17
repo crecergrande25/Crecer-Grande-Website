@@ -1,19 +1,21 @@
 {
-  "name": "Crecer Grande Website V2.3",
+  "name": "Crecer Grande",
   "short_name": "Crecer Grande",
+  "description": "Engineering, manufacturing, industrial products and business support.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#071a36",
   "theme_color": "#071a36",
   "icons": [
     {
-      "src": "/assets/images/apple-touch-icon.png",
-      "sizes": "180x180",
+      "src": "/assets/images/favicon.png",
+      "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/favicon.png",
-      "sizes": "64x64",
+      "src": "/assets/images/apple-touch-icon.png",
+      "sizes": "180x180",
       "type": "image/png"
     }
   ]

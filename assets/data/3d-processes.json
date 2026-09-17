@@ -1,0 +1,119 @@
+[
+  {
+    "id": "fdm",
+    "name": "FDM / FFF",
+    "quote_mode": "estimate",
+    "summary": "Material extrusion for economical functional prototypes, jigs, fixtures and low-volume polymer parts.",
+    "best_for": [
+      "Functional prototypes",
+      "Jigs & fixtures",
+      "Large economical parts",
+      "Engineering polymers"
+    ],
+    "configuration": [
+      "Material",
+      "Layer height",
+      "Infill",
+      "Orientation",
+      "Supports",
+      "Colour",
+      "Secondary operations"
+    ]
+  },
+  {
+    "id": "resin",
+    "name": "SLA / DLP Resin",
+    "quote_mode": "estimate",
+    "summary": "Vat photopolymerization for fine details, smooth surfaces and high-quality prototypes.",
+    "best_for": [
+      "Fine detail",
+      "Smooth surfaces",
+      "Presentation models",
+      "Detailed functional prototypes"
+    ],
+    "configuration": [
+      "Resin family",
+      "Layer height",
+      "Orientation",
+      "Supports",
+      "Post-cure",
+      "Finish"
+    ]
+  },
+  {
+    "id": "sls",
+    "name": "SLS Nylon",
+    "quote_mode": "rfq",
+    "summary": "Powder-bed fusion for complex nylon parts without conventional support structures.",
+    "best_for": [
+      "Complex functional parts",
+      "PA12 / PA11",
+      "Low-volume production",
+      "Nested batches"
+    ],
+    "configuration": [
+      "Material",
+      "Quantity",
+      "Finish",
+      "Colour",
+      "Inspection"
+    ]
+  },
+  {
+    "id": "mjf",
+    "name": "MJF Nylon / TPU",
+    "quote_mode": "rfq",
+    "summary": "Powder-bed production route for functional nylon or flexible parts and repeat batches.",
+    "best_for": [
+      "Production batches",
+      "Functional nylon",
+      "Complex geometry",
+      "Repeatability"
+    ],
+    "configuration": [
+      "Material",
+      "Quantity",
+      "Finish",
+      "Dye / colour",
+      "Inspection"
+    ]
+  },
+  {
+    "id": "polyjet",
+    "name": "PolyJet / Multi-Material",
+    "quote_mode": "rfq",
+    "summary": "Specialist high-detail and multi-material / colour route where available.",
+    "best_for": [
+      "Appearance models",
+      "Fine detail",
+      "Multi-material concepts",
+      "Colour models"
+    ],
+    "configuration": [
+      "Material",
+      "Colour",
+      "Surface requirement",
+      "Quantity"
+    ]
+  },
+  {
+    "id": "metal",
+    "name": "Metal Additive / DMLS",
+    "quote_mode": "rfq",
+    "summary": "Specialist metal additive route for suitable engineering applications; availability is confirmed per project.",
+    "best_for": [
+      "Metal functional parts",
+      "Complex internal geometry",
+      "Weight reduction",
+      "Specialist production"
+    ],
+    "configuration": [
+      "Alloy",
+      "Orientation",
+      "Support strategy",
+      "Heat treatment",
+      "Machining",
+      "Inspection"
+    ]
+  }
+]

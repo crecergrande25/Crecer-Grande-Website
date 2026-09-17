@@ -1,3 +1,58 @@
-(()=>{const b=document.querySelector('.menu-btn'),n=document.querySelector('.nav');if(b&&n)b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false')});const cfg=window.CG_CONFIG||{};function ids(){let v=localStorage.getItem('cg_vid');if(!v){v=crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2);localStorage.setItem('cg_vid',v)}let s=sessionStorage.getItem('cg_sid');if(!s){s=crypto.randomUUID?crypto.randomUUID():Math.random().toString(36).slice(2);sessionStorage.setItem('cg_sid',s)}return[v,s]}async function track(type,meta={}){if(!window.supabase||!cfg.supabaseUrl||!cfg.supabasePublishableKey)return;try{const c=window.supabase.createClient(cfg.supabaseUrl,cfg.supabasePublishableKey),[v,s]=ids(),u=new URL(location.href),src=u.searchParams.get('utm_source')||'',main=document.querySelector('main'),product=main?.dataset.productSlug||'',division=main?.dataset.divisionSlug||'';await c.rpc('track_event',{p_visitor_id:v,p_session_id:s,p_event_type:type,p_page_path:location.pathname,p_page_title:document.title,p_product_slug:product||null,p_division_slug:division||null,p_referrer:document.referrer,p_source:src,p_medium:u.searchParams.get('utm_medium')||'',p_campaign:u.searchParams.get('utm_campaign')||'',p_term:u.searchParams.get('utm_term')||'',p_content:u.searchParams.get('utm_content')||'',p_device_type:innerWidth<768?'mobile':innerWidth<1100?'tablet':'desktop',p_browser_family:navigator.userAgent.slice(0,100),p_os_family:navigator.platform||'',p_language:navigator.language||'',p_screen_size:`${screen.width}x${screen.height}`,p_metadata:meta})}catch(e){}}track('page_view');const main=document.querySelector('main');if(main?.dataset.productSlug)track('product_view');if(main?.dataset.divisionSlug)track('division_view');document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.href||'';if(a.dataset.track)track(a.dataset.track);else if(h.includes('wa.me'))track('click_whatsapp');else if(h.startsWith('tel:'))track('click_phone');else if(h.startsWith('mailto:'))track('click_email');else if(h.includes('instagram.com'))track('outbound_instagram')});window.CGTrack=track;window.CGVisitorIds=ids;})();
+(() => {
+  const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
+  function id(storageKey){
+    try{
+      let v=localStorage.getItem(storageKey);
+      if(!v){v=crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(36).slice(2)}`;localStorage.setItem(storageKey,v)}
+      return v;
+    }catch(_){return ''}
+  }
+  window.CGVisitorIds=()=>[id('cg_visitor_id'),id('cg_session_id')];
 
-(()=>{const main=document.querySelector('main[data-product-slug="laser-chiller-pumps"]');if(!main||document.getElementById('cg-pump-comparison'))return;const section=document.createElement('section');section.id='cg-pump-comparison';section.className='section soft';section.innerHTML=`<div class="container"><div class="section-head"><div><div class="subhead">Model comparison</div><h2>LiCheng Laser Chiller Pump Range</h2></div><p>Technical values below are based on the manufacturer specifications for each model.</p></div><div class="table-wrap" style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;min-width:780px"><thead><tr><th>Model</th><th>Power</th><th>Rated Voltage</th><th>Max. Flow</th><th>Max. Head</th><th>Working Life</th><th></th></tr></thead><tbody><tr><td><b>CG1622403501</b></td><td>180 W</td><td>220 V AC</td><td>35 ±15% L/min</td><td>40 ±2 m</td><td>≥10,000 h</td><td><a href="licheng-cg1622403501-180w-laser-chiller-pump.html">View product</a></td></tr><tr><td><b>CG1622684002</b></td><td>360 W</td><td>220 V AC</td><td>40 ±15% L/min</td><td>68 ±3 m</td><td>≥10,000 h</td><td><a href="licheng-cg1622684002-360w-laser-chiller-pump.html">View product</a></td></tr><tr><td><b>CJ0622558828</b></td><td>600 ±10% W</td><td>220 V AC</td><td>88 ±15% L/min</td><td>55 ±3 m</td><td>≥15,000 h</td><td><a href="licheng-cj0622558828-600w-laser-chiller-pump.html">View product</a></td></tr><tr><td><b>CJ0622601028</b></td><td>880 ±10% W</td><td>220 V AC</td><td>100 ±15% L/min</td><td>≥60 m</td><td>≥15,000 h</td><td><a href="licheng-cj0622601028-880w-laser-chiller-pump.html">View product</a></td></tr></tbody></table></div></div>`;const target=main.querySelector('#product-variants')?.closest('section')||main.querySelector('.cta');if(target)target.insertAdjacentElement('beforebegin',section);else main.appendChild(section);})();
+  function deviceType(){
+    const w=window.innerWidth; return w<700?'mobile':w<1050?'tablet':'desktop';
+  }
+  function browserFamily(){
+    const u=navigator.userAgent;
+    if(/Edg\//.test(u)) return 'Edge'; if(/Chrome\//.test(u)) return 'Chrome'; if(/Firefox\//.test(u)) return 'Firefox'; if(/Safari\//.test(u)) return 'Safari'; return 'Other';
+  }
+  function osFamily(){
+    const u=navigator.userAgent;
+    if(/Windows/.test(u))return 'Windows'; if(/Android/.test(u))return 'Android'; if(/iPhone|iPad|iPod/.test(u))return 'iOS'; if(/Mac OS/.test(u))return 'macOS'; if(/Linux/.test(u))return 'Linux'; return 'Other';
+  }
+  async function track(eventType, metadata={}){
+    const cfg=window.CG_CONFIG||{}, client=window.CG_SUPABASE;
+    if(!client||!cfg.supabaseUrl)return;
+    try{
+      const qs=new URLSearchParams(location.search),ids=window.CGVisitorIds();
+      await client.rpc('track_event',{
+        p_visitor_id:ids[0]||null,p_session_id:ids[1]||null,p_event_type:eventType,
+        p_page_path:location.pathname,p_page_title:document.title,
+        p_product_slug:document.body.dataset.productSlug||null,p_division_slug:document.body.dataset.divisionSlug||null,
+        p_referrer:document.referrer||null,p_source:qs.get('utm_source'),p_medium:qs.get('utm_medium'),p_campaign:qs.get('utm_campaign'),
+        p_term:qs.get('utm_term'),p_content:qs.get('utm_content'),p_device_type:deviceType(),p_browser_family:browserFamily(),
+        p_os_family:osFamily(),p_language:navigator.language||null,p_screen_size:`${screen.width}x${screen.height}`,p_metadata:metadata||{}
+      });
+    }catch(_){}
+  }
+  window.CGTrack=track;
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
+    scroll(); addEventListener('scroll',scroll,{passive:true});
+    const btn=$('.menu-btn'),nav=$('.nav');
+    btn?.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))});
+    $$('.nav-group>button').forEach(b=>b.addEventListener('click',(e)=>{if(innerWidth<=1050){e.preventDefault();b.parentElement.classList.toggle('open')}}));
+    const ab=$('.ask-btn'),ap=$('.ask-panel');
+    ab?.addEventListener('click',()=>ap.classList.toggle('open'));
+    document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask'))ap.classList.remove('open')});
+    $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
+    document.addEventListener('click',(e)=>{
+      const a=e.target.closest('a'); if(!a)return;
+      if(/wa\.me/.test(a.href)) track('whatsapp_click',{href:a.href});
+      else if(a.href.startsWith('mailto:')) track('email_click',{href:a.href});
+      else if(a.classList.contains('quote-nav')||/request-quote/.test(a.href)) track('quote_click',{href:a.href});
+    });
+    setTimeout(()=>track('page_view'),300);
+  });
+})();

@@ -1,12 +1,7 @@
-// Crecer Grande V2.3 browser-safe runtime configuration.
-// Copy the existing V1.9.3 Project URL and PUBLISHABLE browser key here.
-// Never put a Supabase secret key, service_role key, database password or admin password in this file.
+// Example only. Use the public/publishable browser key — never a service-role key.
 window.CG_CONFIG = {
-  supabaseUrl: "",
-  supabasePublishableKey: "",
-  // Existing admin Auth identities use the internal login domain below.
-  adminAuthDomain: "admin.crecergrande.in",
-  // Optional. Leave blank when the included Edge Function is deployed as the standard name "admin-users".
-  // Set only if your protected function is exposed at a custom URL.
-  adminUsersFunctionUrl: ""
+  supabaseUrl: 'https://YOUR_PROJECT.supabase.co',
+  supabasePublishableKey: 'YOUR_PUBLIC_PUBLISHABLE_OR_ANON_KEY',
+  adminAuthDomain: 'admin.crecergrande.in',
+  adminUsersFunctionUrl: ''
 };

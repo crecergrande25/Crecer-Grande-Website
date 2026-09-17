@@ -1,0 +1,14 @@
+# Local / OS files
+.DS_Store
+Thumbs.db
+*.log
+*.zip
+
+# Local editor folders
+.vscode/
+.idea/
+
+# Never commit private environment files
+.env
+.env.*
+!.env.example
