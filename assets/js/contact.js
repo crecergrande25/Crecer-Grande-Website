@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   const f=document.getElementById('rfq-form'),s=document.getElementById('rfq-status');
   if(!f)return;
   const type=f.dataset.formType||'rfq';
+  const refFile=f.querySelector('[name="reference_file"]');
+  if(refFile)refFile.accept='.pdf,.jpg,.jpeg,.png,.webp,.dxf,.dwg,.step,.stp,.ste,.stl,.3mf,.obj,.ply,.amf,.igs,.iges,.ige,.brep,.brp,.sldprt,.sldasm,.ipt,.iam,.prt,.x_t,.x_b,.sat,.sab,.catpart,.catproduct,.jt,.3dm,.f3d,.f3z,.zip,.xlsx,.xls,.doc,.docx';
   const qs=new URLSearchParams(location.search);
   const req=qs.get('requirement');
   if(req&&type==='rfq'){
