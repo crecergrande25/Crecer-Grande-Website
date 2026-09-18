@@ -37,6 +37,27 @@
   }
   window.CGTrack=track;
 
+
+  function ensureContactNav(){
+    const nav=$('.nav'); if(!nav)return;
+    const current=location.pathname.toLowerCase();
+    const existing=$('.nav>a',nav).find(a=>{
+      try{
+        const p=new URL(a.getAttribute('href')||'',location.href).pathname.toLowerCase();
+        return p==='/contact.html'||p==='/contact'||p.endsWith('/contact.html');
+      }catch(_){return false}
+    });
+    if(existing){
+      if(current==='/contact.html'||current.endsWith('/contact.html')){existing.classList.add('active');existing.setAttribute('aria-current','page')}
+      return;
+    }
+    const a=document.createElement('a');
+    a.href='/contact.html';a.textContent='Contact Us';a.className='contact-nav-link';
+    if(current==='/contact.html'||current.endsWith('/contact.html')){a.classList.add('active');a.setAttribute('aria-current','page')}
+    const quote=nav.querySelector('.quote-nav');
+    if(quote)nav.insertBefore(a,quote);else nav.appendChild(a);
+  }
+
   function enhanceDesignJobWork(){
     const path=location.pathname;
     const designUrl='/design-job-work.html';
@@ -98,6 +119,7 @@
     if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.7.0';
     $$('.cg-footer-version').forEach(x=>x.remove());
 
+    ensureContactNav();
     enhanceDesignJobWork();
 
     document.addEventListener('click',(e)=>{
