@@ -463,3 +463,12 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
 .nav .contact-nav-link{white-space:nowrap}
 @media(max-width:1050px){.contact-v27-wrap{grid-template-columns:1fr}.contact-v27-quick{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.contact-v27-hero{padding:54px 0 40px}.contact-v27-card{padding:20px}.contact-v27-card .form-row,.contact-v27-quick{grid-template-columns:1fr}}
+
+/* V2.7.1 header spacing with Contact Us */
+@media(min-width:1051px){
+  .nav .admin-nav-top{margin-left:24px}
+}
+@media(min-width:1051px) and (max-width:1180px){
+  .nav>a,.nav-group>button{padding-left:8px;padding-right:8px;font-size:12px}
+  .nav .admin-nav-top{margin-left:12px}
+}
