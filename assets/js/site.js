@@ -1,6 +1,7 @@
 (() => {
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  const CG_VERSION = 'V2.8.1';
 
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
@@ -12,6 +13,28 @@
     style.id = 'cg-common-header-style';
     style.textContent = `.nav .contact-nav,.nav .contact-nav-link{border:1px solid rgba(7,26,54,.22)!important;background:#fff!important;color:#071a36!important;padding-inline:17px!important;border-radius:12px!important;box-shadow:0 8px 20px rgba(7,26,54,.05);white-space:nowrap}.nav .contact-nav:hover,.nav .contact-nav-link:hover{background:#071a36!important;color:#fff!important;border-color:#071a36!important}.nav .admin-nav{border:1px solid rgba(7,26,54,.24)!important;background:#fff!important;color:#071a36!important;padding-inline:17px!important;border-radius:12px!important;white-space:nowrap}.nav .admin-nav:hover{background:#f4f7fb!important;color:#071a36!important}.nav .quote-nav{white-space:nowrap}.nav{gap:5px}@media(max-width:1180px){.nav>a,.nav-group>button{padding-left:9px!important;padding-right:9px!important}.brand img{width:175px}}@media(max-width:1050px){.nav .contact-nav,.nav .contact-nav-link,.nav .admin-nav,.nav .quote-nav{width:100%;text-align:center;justify-content:center}.nav{gap:8px}}`;
     document.head.appendChild(style);
+  }
+
+  function injectFooterStyles(){
+    if($('#cg-footer-compact-style')) return;
+    const style = document.createElement('style');
+    style.id = 'cg-footer-compact-style';
+    style.textContent = `.cg-footer{padding:36px 0 14px!important}.cg-footer-grid{gap:32px!important}.cg-footer-logo-link img{width:200px!important;margin-bottom:14px!important}.cg-footer-tagline{margin-bottom:10px!important}.cg-footer-desc{margin-bottom:12px!important}.cg-footer-col h4{margin-bottom:12px!important}.cg-footer-col>a{margin-bottom:8px!important}.cg-footer-contact .cg-contact-line{margin-bottom:9px!important}.cg-contact-address{margin-top:2px!important}.cg-footer-socials{margin-top:12px!important}.cg-footer-bottom{margin-top:24px!important;padding-top:14px!important}.cg-footer-versionblock{display:flex!important;flex-direction:column!important;align-items:flex-end!important;gap:0!important}.cg-footer-versionblock .cg-footer-version,.cg-footer-versionblock .version-mark{display:none!important}@media(max-width:760px){.cg-footer{padding:30px 0 18px!important}.cg-footer-grid{gap:26px!important}.cg-footer-bottom{grid-template-columns:1fr!important;text-align:left!important}.cg-footer-versionblock{align-items:flex-start!important}.cg-footer-bottom span:nth-child(2),.cg-footer-bottom span:last-child{text-align:left!important}}`;
+    document.head.appendChild(style);
+  }
+
+  function normalizeFooter(){
+    injectFooterStyles();
+    const label = `Site maintained by Crecer Grande Website Suite ${CG_VERSION}`;
+    $$('.cg-suite-maintained').forEach(x => x.textContent = label);
+    $$('.cg-footer-version,.version-mark').forEach(x => x.textContent = CG_VERSION);
+    $$('.cg-footer-versionblock').forEach(block => {
+      const suite = block.querySelector('.cg-suite-maintained');
+      if(suite) suite.textContent = label;
+      [...block.children].forEach(child => {
+        if(child !== suite && (child.classList.contains('cg-footer-version') || child.classList.contains('version-mark'))) child.setAttribute('aria-hidden','true');
+      });
+    });
   }
 
   function syncCommonHeader(){
@@ -44,6 +67,7 @@
 
   function boot(){
     syncCommonHeader();
+    normalizeFooter();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
     const btn=$('.menu-btn'),nav=$('.nav');
