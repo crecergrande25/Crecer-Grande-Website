@@ -116,8 +116,8 @@
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
 
     const suite=$('.cg-suite-maintained');
-    if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.7.0';
-    $$('.cg-footer-version').forEach(x=>x.remove());
+    if(suite) suite.textContent='Site Maintained by Crecer Grande Website Suite V2.7.2';
+    $('.cg-footer-version,.version-mark').forEach(x=>x.textContent='V2.7.2');
 
     ensureContactNav();
     enhanceDesignJobWork();
