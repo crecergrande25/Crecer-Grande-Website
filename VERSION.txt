@@ -1,6 +1,6 @@
-Crecer Grande Website V2.7.0
-Release status: MAJOR FEATURE RELEASE
+Crecer Grande Website V2.7.2
+Release status: FEATURE / NAVIGATION CONSISTENCY RELEASE
 Release date: 2026-09-18
 Target: GitHub Pages + existing CG Supabase backend
-Feature focus: Mechanical Design Job Work — 2D, 3D, piping, drawings, BOM and reverse engineering
+Feature focus: Universal Contact Us navigation across current and legacy public pages; premium Contact page; laser product platform improvements
 Stable reference versions: V1.9.3 and V2.6.4
