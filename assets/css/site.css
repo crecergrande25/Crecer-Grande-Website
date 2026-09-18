@@ -552,3 +552,6 @@ url("../images/laser.webp") center/cover;color:#fff}
   .contact-premium-method i{display:none}
   .contact-premium-web{width:100%;margin-left:0}
 }
+
+.contact-premium-method a{display:block;margin-top:4px;color:#fff;font-size:11px;line-height:1.45;font-weight:800;overflow-wrap:anywhere}
+.contact-premium-method a:hover{color:var(--gold-2)}
