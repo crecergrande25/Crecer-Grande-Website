@@ -15,3 +15,11 @@
 .elite-detail-hero .elite-visual img{height:430px;object-fit:cover;object-position:center}
 @media(max-width:900px){.elite-band-grid{grid-template-columns:1fr}.elite-band-media img{height:310px}.elite-band-copy h2{font-size:31px}.elite-detail-hero .elite-visual img{height:340px}}
 @media(max-width:720px){.elite-visual-band{padding:24px 0 18px}.elite-band-media img{height:240px}.elite-band-copy h2{font-size:28px}.elite-detail-hero{padding-top:34px;padding-bottom:34px}.elite-detail-hero .elite-visual img{height:270px}}
+
+
+/* Advanced Manufacturing page enrichment */
+.elite-scope-card.rich ul{margin:14px 0 0;padding-left:18px;color:#5b6b81;font-size:14px;line-height:1.7}
+.elite-scope-card.rich li{margin:4px 0}
+.elite-process-band{padding-top:18px;padding-bottom:22px;background:linear-gradient(180deg,#fff 0%,#f7fafc 100%)}
+.usecase-grid .elite-deliver-card{min-height:168px;display:flex;flex-direction:column;justify-content:flex-start}
+.usecase-grid .elite-deliver-card b{margin-bottom:10px}
