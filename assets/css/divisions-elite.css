@@ -23,3 +23,13 @@
 .elite-process-band{padding-top:18px;padding-bottom:22px;background:linear-gradient(180deg,#fff 0%,#f7fafc 100%)}
 .usecase-grid .elite-deliver-card{min-height:168px;display:flex;flex-direction:column;justify-content:flex-start}
 .usecase-grid .elite-deliver-card b{margin-bottom:10px}
+
+
+/* Advanced Manufacturing unique visual flow */
+.elite-flow-grid{align-items:stretch}
+.elite-flow-visual{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;padding:22px;border-radius:26px;background:linear-gradient(135deg,#071a36,#0d3d69);box-shadow:0 20px 48px rgba(7,26,54,.12)}
+.elite-flow-step{padding:20px;border-radius:18px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.08);color:#fff;min-height:150px}
+.elite-flow-step span{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#f4b000;color:#071a36;font-size:11px;font-weight:900}
+.elite-flow-step b{display:block;margin-top:14px;font-size:19px}
+.elite-flow-step small{display:block;margin-top:7px;color:#cfdeec;line-height:1.55;font-size:12px}
+@media(max-width:720px){.elite-flow-visual{grid-template-columns:1fr}.elite-flow-step{min-height:auto}}
