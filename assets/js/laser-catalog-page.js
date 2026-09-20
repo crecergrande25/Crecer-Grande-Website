@@ -53,7 +53,11 @@ document.addEventListener('DOMContentLoaded',async()=>{
      'teyu-cwfl-3000':'/assets/images/project-chiller.webp',
      'teyu-cwfl-4000':'/assets/images/project-chiller-v23.webp',
      'teyu-cwfl-6000':'/assets/images/project-chiller-v23b.webp',
-     'fiber-laser-chiller-generic':'/assets/images/prod-chiller-v23.webp'
+     'fiber-laser-chiller-generic':'/assets/images/prod-chiller-v23.webp',
+     'custom-reverse-engineering':'/assets/images/project-reverse.webp',
+     'custom-machined-components':'/assets/images/am-approved-machined.webp',
+     'custom-legacy-parts':'/assets/images/am-approved-spares.webp',
+     'custom-prototype-fit':'/assets/images/am-approved-prototype.webp'
    };
    return map[String(x.slug||'')]||'';
  };
