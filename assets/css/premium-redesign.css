@@ -94,3 +94,107 @@
   .refined-proof-grid,.cg-why-mini-metrics{grid-template-columns:1fr!important}
   .cg-why-lead-card h3{font-size:30px}
 }
+
+
+
+/* CG Engineering Gateway premium dark panel */
+.cg-home-search-section{
+  position:relative;
+  padding:18px 0 18px!important;
+  background:linear-gradient(180deg,#f5f8fb 0%,#eef3f7 100%);
+}
+.cg-home-search-card{
+  position:relative;
+  overflow:hidden;
+  padding:32px!important;
+  border-radius:30px!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  background:
+    radial-gradient(circle at 88% 18%,rgba(244,176,0,.14),transparent 26%),
+    radial-gradient(circle at 10% 100%,rgba(28,115,174,.20),transparent 30%),
+    linear-gradient(135deg,#06172d 0%,#0a2c50 58%,#0d456d 100%)!important;
+  box-shadow:0 24px 54px rgba(7,26,54,.18)!important;
+}
+.cg-home-search-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background-image:
+    linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);
+  background-size:36px 36px;
+  mask-image:linear-gradient(to right,rgba(0,0,0,.8),rgba(0,0,0,.25));
+}
+.cg-home-search-card>*{position:relative;z-index:1}
+.cg-home-search-card .subhead{
+  color:#f4b000!important;
+  letter-spacing:.16em!important;
+}
+.cg-home-search-card h2{
+  color:#fff!important;
+  font-size:clamp(30px,3vw,42px)!important;
+  letter-spacing:-.035em;
+}
+.cg-home-search-card .search-card-top{
+  align-items:end!important;
+  margin-bottom:20px!important;
+}
+.cg-home-search-card .search-card-top>span{
+  color:#c6d5e4!important;
+  font-size:12px!important;
+}
+.cg-home-search-card .search-form{
+  gap:12px!important;
+}
+.cg-home-search-card .search-input{
+  background:#fff!important;
+  border:1px solid rgba(255,255,255,.55)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+.cg-home-search-card .search-input input{
+  color:#071a36!important;
+  background:transparent!important;
+}
+.cg-home-search-card .search-input input::placeholder{
+  color:#7a8798!important;
+  opacity:1;
+}
+.cg-home-search-card .search-input svg{
+  color:#0d4b75!important;
+}
+.cg-home-search-card .btn.outline{
+  color:#fff!important;
+  border-color:rgba(255,255,255,.42)!important;
+  background:rgba(255,255,255,.08)!important;
+}
+.cg-home-search-card .btn.outline:hover{
+  background:#fff!important;
+  color:#071a36!important;
+}
+.cg-home-search-card .btn.primary{
+  box-shadow:0 10px 24px rgba(244,176,0,.22)!important;
+}
+.cg-home-search-card .quick-chips{
+  margin-top:14px!important;
+}
+.cg-home-search-card .quick-chips button{
+  color:#dce8f3!important;
+  border:1px solid rgba(255,255,255,.13)!important;
+  background:rgba(255,255,255,.08)!important;
+  backdrop-filter:blur(8px);
+}
+.cg-home-search-card .quick-chips button:hover{
+  color:#071a36!important;
+  background:#f4b000!important;
+  border-color:#f4b000!important;
+}
+.cg-home-search-card .search-results{
+  color:#fff;
+}
+@media(max-width:800px){
+  .cg-home-search-card{padding:24px!important}
+  .cg-home-search-card .search-card-top{align-items:start!important;gap:10px}
+  .cg-home-search-card .search-card-top>span{display:block}
+}
