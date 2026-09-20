@@ -81,3 +81,23 @@
   .finder-media{aspect-ratio:16/10}
   .finder-item h3{font-size:17px}
 }
+
+
+/* Laser consumables dedicated visual sprite */
+.finder-media.finder-sprite{
+  aspect-ratio:520/230;
+  background-image:url('/assets/images/laser-consumables-sprite.webp');
+  background-repeat:no-repeat;
+  background-size:500% 200%;
+  background-color:#f7f8fa;
+}
+.finder-sprite.sprite-protective{background-position:0% 0%}
+.finder-sprite.sprite-single-nozzle{background-position:25% 0%}
+.finder-sprite.sprite-double-nozzle{background-position:50% 0%}
+.finder-sprite.sprite-ceramic{background-position:75% 0%}
+.finder-sprite.sprite-lens-drawer{background-position:100% 0%}
+.finder-sprite.sprite-focus{background-position:0% 100%}
+.finder-sprite.sprite-collimation{background-position:25% 100%}
+.finder-sprite.sprite-sensor{background-position:50% 100%}
+.finder-sprite.sprite-seal{background-position:75% 100%}
+.finder-sprite.sprite-qbh{background-position:100% 100%}
