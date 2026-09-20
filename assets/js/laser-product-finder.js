@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       'wire-feeder-spare':'part4-misc-12','cleaning-head-consumable':'part4-misc-13'
     };
     if(part4[slug])return part4[slug];
+    const part6={
+      'pb-standard-punch':'p6-tool-01','pb-v-die':'p6-tool-02','pb-gooseneck':'p6-tool-03','pb-offset-hemming':'p6-tool-04','pb-radius':'p6-tool-05',
+      'pb-air-bend':'p6-tool-06','pb-holder-clamp':'p6-tool-07','pb-custom':'p6-tool-08','pb-crowning':'p6-tool-09','pb-accessories':'p6-tool-10',
+      'custom-reverse-engineering':'p6-custom-01','custom-machined-components':'p6-custom-02','custom-legacy-parts':'p6-custom-03','custom-prototype-fit':'p6-custom-04'
+    };
+    if(part6[slug])return part6[slug];
 
     if(family==='chiller-spares'||text.includes('chiller')){
       if(text.includes('circulation pump')||text.includes('chiller pump')||text.includes('water pump'))return 'sprite-chiller-part-pump';
@@ -178,7 +184,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     'laser-spares-consumables':['consumables','co2','welding'],
     'laser-chillers':['chillers'],
     'laser-chiller-spares':['chiller-spares'],
-    'cnc-vmc-machine-spares':['cnc-vmc']
+    'cnc-vmc-machine-spares':['cnc-vmc'],
+    'press-brake-tooling':['press-brake'],
+    'custom-obsolete-spares':['custom-obsolete']
   };
   const categoryLabelMap={
     'manual-focus-cutting-heads':['manual-focus cutting head'],
