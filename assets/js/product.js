@@ -3,7 +3,7 @@
 
   const main = document.querySelector('main[data-product-slug]');
   const cfg = window.CG_CONFIG || {};
-  if (!main || !window.supabase || !cfg.supabaseUrl || !cfg.supabasePublishableKey) return;
+  if (!main) return;
 
   const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (m) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -473,9 +473,14 @@
     addStylesheet();
     const slug = main.dataset.productSlug;
     try {
-      const client = window.supabase.createClient(cfg.supabaseUrl, cfg.supabasePublishableKey);
-      const { data: product, error } = await client.from('products').select('*').eq('slug', slug).maybeSingle();
-      if (error) return;
+      if (!window.CG_CATALOG) return;
+      const resolved = await window.CG_CATALOG.getProductBySlug(slug);
+      const product = resolved.product;
+      const client = window.CG_SUPABASE || (
+        window.supabase && cfg.supabaseUrl && cfg.supabasePublishableKey
+          ? window.supabase.createClient(cfg.supabaseUrl, cfg.supabasePublishableKey)
+          : null
+      );
       if (!product) {
         markUnavailable();
         return;
@@ -486,7 +491,7 @@
       setText('[data-product="description"]', product.description, true);
       updateSeo(product);
 
-      const related = await loadRelated(client, product);
+      const related = client && resolved.source === 'supabase' ? await loadRelated(client, product) : {variants:[],category:null,brand:null,attributes:{values:[],definitions:[]},compatibility:[],models:[],equipmentTypes:[],equipmentBrands:[],documents:[],media:[]};
       renderVariants(product, related.variants, related.attributes);
       renderIntelligence(
         product,
