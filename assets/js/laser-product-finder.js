@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   model.innerHTML='<option value="">All models</option>'+models.map(x=>`<option value="${safe(String(x.id))}">${safe(x.model_name)}</option>`).join('');
   category.innerHTML='<option value="">All categories</option>'+categories.map(x=>`<option value="${safe(String(x.id))}">${safe(x.name)}</option>`).join('');
 
-  cats.innerHTML=categories.filter(x=>!x.parent_id).slice(0,14).map(x=>`<button class="finder-cat" data-cat="${safe(String(x.id))}"><b>${safe(x.name)}</b><small>${safe(x.short_description||'Browse compatible requirements')}</small></button>`).join('');
+  cats.innerHTML=categories.filter(x=>!x.parent_id).slice(0,24).map(x=>`<button class="finder-cat" data-cat="${safe(String(x.id))}"><b>${safe(x.name)}</b><small>${safe(x.short_description||'Browse compatible requirements')}</small></button>`).join('');
 
   function modelBrand(m){return brandNameById[String(m?.brand_id)]||(typeof m?.brand_id==='string'?m.brand_id:'')}
   function categoryIdsUnder(id){
