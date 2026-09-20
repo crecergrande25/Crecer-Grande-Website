@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const termMatch=(hay,t)=>hay.includes(t)||(aliases[t]||[]).some(a=>hay.includes(norm(a)));
   const termsMatch=(hay,terms)=>terms.every(t=>termMatch(hay,t));
 
-  const familyImage=(p={})=>{
+  const isGenericImage=(url='')=>{\n    const u=String(url||'').toLowerCase();\n    if(!u)return false;\n    return [\n      'laser-components.webp','prod-spares-v23.webp','prod-laser-v23.webp','prod-chiller-v23.webp',\n      'prod-pump-v23b.webp','project-co2-v23b.webp','service-laser-marking.webp','prod-cnc-v22.webp','prod-cnc-v23b.webp'\n    ].some(name=>u.includes(name));\n  };\n\n  const familyImage=(p={})=>{
     const family=norm(p.family||'');
     const category=norm(p.category||p.subcategory||'');
     const text=family+' '+category+' '+norm(p.name||p.title||'');
