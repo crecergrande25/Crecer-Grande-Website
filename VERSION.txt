@@ -1,6 +1,6 @@
-Crecer Grande Website V2.7.2
-Release status: FEATURE / NAVIGATION CONSISTENCY RELEASE
-Release date: 2026-09-18
+Crecer Grande Website V2.9.0
+Release status: WEBSITE COMPLETION PASS — STEP 1
+Release date: 2026-09-20
 Target: GitHub Pages + existing CG Supabase backend
-Feature focus: Universal Contact Us navigation across current and legacy public pages; premium Contact page; laser product platform improvements
+Feature focus: single global customer shell, navigation/footer normalization, cache-version unification and removal of public build metadata
 Stable reference versions: V1.9.3 and V2.6.4
