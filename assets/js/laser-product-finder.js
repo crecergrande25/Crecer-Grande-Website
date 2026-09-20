@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if(text.includes('welding')||text.includes('cleaning'))return '/assets/images/service-laser-marking.webp';
     if(text.includes('nozzle')||text.includes('lens')||text.includes('optic')||text.includes('ceramic')||text.includes('consumable')||text.includes('spare'))return '/assets/images/laser-components.webp';
     if(text.includes('head')||text.includes('cutting'))return '/assets/images/prod-laser-v23.webp';
+    if(text.includes('cnc')||text.includes('vmc')||text.includes('machine spare')||text.includes('spindle')||text.includes('servo'))return '/assets/images/prod-cnc-v22.webp';
     return '/assets/images/laser-components.webp';
   };
 
@@ -176,7 +177,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     'laser-cutting-heads':['cutting-heads'],
     'laser-spares-consumables':['consumables','co2','welding'],
     'laser-chillers':['chillers'],
-    'laser-chiller-spares':['chiller-spares']
+    'laser-chiller-spares':['chiller-spares'],
+    'cnc-vmc-machine-spares':['cnc-vmc']
   };
   const categoryLabelMap={
     'manual-focus-cutting-heads':['manual-focus cutting head'],
