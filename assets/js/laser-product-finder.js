@@ -265,8 +265,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
       brand:brandNameById[String(p.brand_id)]||'',
       meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
-      image:p.image_url||familyImage(p),
-      sprite:p.image_url?'':productSpriteKey(p)
+      image:(!p.image_url||isGenericImage(p.image_url))?'':p.image_url,
+      sprite:''
     })));
 
     rows.push(...((fallback.products||[]).filter(p=>{
@@ -282,8 +282,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:p.href,
       brand:p.brand||'',
       meta:[p.model,p.category].filter(Boolean),
-      image:p.image_url||p.image||chillerReferenceImage(p)||familyImage(p),
-      sprite:(p.image_url||p.image||chillerReferenceImage(p))?'':(chillerReferenceSprite(p)||productSpriteKey(p))
+      image:(()=>{const candidate=p.image_url||p.image||chillerReferenceImage(p)||'';return (!candidate||isGenericImage(candidate))?'':candidate})(),
+      sprite:''
     }))));
 
     if(!rows.length||terms.length){
@@ -298,8 +298,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         href:'/request-quote.html?requirement='+encodeURIComponent(c.name),
         brand:'',
         meta:[],
-        image:familyImage({name:c.name,category:c.name}),
-        sprite:productSpriteKey({name:c.name,category:c.name})
+        image:'',
+        sprite:''
       })));
 
       rows.push(...models.filter(m=>{
@@ -314,8 +314,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         href:'/request-quote.html?requirement='+encodeURIComponent(m.model_name),
         brand:modelBrand(m),
         meta:[m.model_code].filter(Boolean),
-        image:familyImage({name:m.model_name,category:m.equipment_type||'cutting head'}),
-        sprite:productSpriteKey({name:m.model_name,category:m.equipment_type||'cutting head'})
+        image:'',
+        sprite:''
       })));
     }
 
@@ -323,8 +323,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
     results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
-      <a class="finder-media${x.sprite?' finder-sprite '+safe(x.sprite):''}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
-        ${x.sprite?'':`<img src="${safe(x.image||'/assets/images/laser-components.webp')}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/images/laser-components.webp'">`}
+      <a class="finder-media${x.image?'':' finder-media-pending'}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
+        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.remove()">`:`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`}
         <span class="finder-kind">${safe(x.kind)}</span>
       </a>
       <div class="finder-item-body">

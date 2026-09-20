@@ -101,3 +101,24 @@
 .finder-sprite.sprite-sensor{background-position:50% 100%}
 .finder-sprite.sprite-seal{background-position:75% 100%}
 .finder-sprite.sprite-qbh{background-position:100% 100%}
+
+
+/* Step 2: honest product-image state — never substitute an unrelated product visual. */
+.finder-media-pending{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  background:linear-gradient(135deg,#f3f6f9,#e8eef4);
+}
+.finder-image-pending{
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+  max-width:260px;
+  text-align:center;
+  color:#54657a;
+}
+.finder-image-pending b{font-size:14px;color:#18314f}
+.finder-image-pending small{font-size:10.5px;line-height:1.55}
+.finder-media.finder-sprite{background-image:none!important}

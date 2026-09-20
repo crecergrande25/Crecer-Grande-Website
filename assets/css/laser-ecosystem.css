@@ -40,3 +40,18 @@
 .lz-photo{overflow:hidden;background:#f4f6f8}
 .lz-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .3s ease}
 .lz-item:hover .lz-photo img{transform:scale(1.025)}
+
+
+/* Step 2: no fabricated catalogue sprites when a dedicated image is unavailable. */
+.lz-image-pending{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:210px;
+  padding:26px;
+  background:linear-gradient(135deg,#f4f7fa,#e8eef4);
+  text-align:center;
+}
+.lz-image-pending span{display:flex;flex-direction:column;gap:6px;color:#56687d}
+.lz-image-pending b{font-size:14px;color:#18314f}
+.lz-image-pending small{font-size:10.5px;line-height:1.5}
