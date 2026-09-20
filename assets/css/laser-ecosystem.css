@@ -36,3 +36,7 @@
 .lz-sprite.sprite-sensor{background-position:50% 100%}
 .lz-sprite.sprite-seal{background-position:75% 100%}
 .lz-sprite.sprite-qbh{background-position:100% 100%}
+
+.lz-photo{overflow:hidden;background:#f4f6f8}
+.lz-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .3s ease}
+.lz-item:hover .lz-photo img{transform:scale(1.025)}
