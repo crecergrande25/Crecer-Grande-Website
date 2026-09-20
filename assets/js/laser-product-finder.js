@@ -26,6 +26,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   const termMatch=(hay,t)=>hay.includes(t)||(aliases[t]||[]).some(a=>hay.includes(norm(a)));
   const termsMatch=(hay,terms)=>terms.every(t=>termMatch(hay,t));
 
+  const familyImage=(p={})=>{
+    const family=norm(p.family||'');
+    const category=norm(p.category||p.subcategory||'');
+    const text=family+' '+category+' '+norm(p.name||p.title||'');
+    if(text.includes('chiller pump')||text.includes('circulation pump')||text.includes('water pump'))return '/assets/images/prod-pump-v23b.webp';
+    if(text.includes('chiller')||text.includes('cooling'))return '/assets/images/prod-chiller-v23.webp';
+    if(text.includes('co2'))return '/assets/images/project-co2-v23b.webp';
+    if(text.includes('welding')||text.includes('cleaning'))return '/assets/images/service-laser-marking.webp';
+    if(text.includes('nozzle')||text.includes('lens')||text.includes('optic')||text.includes('ceramic')||text.includes('consumable')||text.includes('spare'))return '/assets/images/laser-components.webp';
+    if(text.includes('head')||text.includes('cutting'))return '/assets/images/prod-laser-v23.webp';
+    return '/assets/images/laser-components.webp';
+  };
+
   let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
   try{
     const rr=await fetch('/assets/data/catalog-fallback.json');
@@ -160,7 +173,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       desc:p.short_description||p.description||p.subcategory||p.category||'',
       href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
       brand:brandNameById[String(p.brand_id)]||'',
-      meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean)
+      meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
+      image:p.image_url||familyImage(p)
     })));
 
     rows.push(...((fallback.products||[]).filter(p=>{
@@ -175,7 +189,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       desc:p.description,
       href:p.href,
       brand:p.brand||'',
-      meta:[p.model,p.category].filter(Boolean)
+      meta:[p.model,p.category].filter(Boolean),
+      image:p.image_url||p.image||familyImage(p)
     }))));
 
     if(!rows.length||terms.length){
@@ -189,7 +204,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         desc:c.short_description||'',
         href:'/request-quote.html?requirement='+encodeURIComponent(c.name),
         brand:'',
-        meta:[]
+        meta:[],
+        image:familyImage({name:c.name,category:c.name})
       })));
 
       rows.push(...models.filter(m=>{
@@ -203,14 +219,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         desc:'Search compatibility / send requirement',
         href:'/request-quote.html?requirement='+encodeURIComponent(m.model_name),
         brand:modelBrand(m),
-        meta:[m.model_code].filter(Boolean)
+        meta:[m.model_code].filter(Boolean),
+        image:familyImage({name:m.model_name,category:m.equipment_type||'cutting head'})
       })));
     }
 
     const seen=new Set();
     rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
-    results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item"><span class="badge">${safe(x.kind)}</span><h3>${safe(x.name)}</h3><p>${safe(x.desc||'Technical details are confirmed before quotation.')}</p><div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div><div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Live product'?'View details':'Send requirement'} →</a></div></article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
+    results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
+      <a class="finder-media" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
+        <img src="${safe(x.image||'/assets/images/laser-components.webp')}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/images/laser-components.webp'">
+        <span class="finder-kind">${safe(x.kind)}</span>
+      </a>
+      <div class="finder-item-body">
+        <h3>${safe(x.name)}</h3>
+        <p>${safe(x.desc||'Technical details are confirmed before quotation.')}</p>
+        <div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div>
+        <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Live product'?'View details':'Send requirement'} →</a></div>
+      </div>
+    </article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
   }
 
   [q,brand,model,category].forEach(x=>x.addEventListener('input',render));
