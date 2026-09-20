@@ -1112,27 +1112,6 @@
       "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors"
     },
     {
-      "slug": "chiller-coolant",
-      "name": "Laser-chiller coolant / water-quality requirement",
-      "family": "chiller-spares",
-      "category": "Coolant & maintenance",
-      "description": "Water quality, coolant or additive requirement should follow the laser/chiller manufacturer recommendation.",
-      "keywords": [
-        "coolant",
-        "deionized water",
-        "distilled water",
-        "antifreeze",
-        "additive"
-      ],
-      "brand": null,
-      "model": null,
-      "specs": {
-        "Important": "Use the OEM-recommended water/coolant specification; do not mix incompatible fluids"
-      },
-      "badge": "Maintenance",
-      "href": "/request-quote.html?requirement=Laser-chiller%20coolant%20/%20water-quality%20requirement"
-    },
-    {
       "slug": "co2-laser-tube",
       "name": "CO₂ laser tube",
       "family": "co2",
