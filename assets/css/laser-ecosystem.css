@@ -10,3 +10,29 @@
 .lz-source-note{margin-top:18px;color:#78879a;font-size:9px}.lz-source-note b{color:#506078}
 @media(max-width:1050px){.lz-anatomy,.lz-selector{grid-template-columns:1fr}.lz-catalog{grid-template-columns:repeat(2,1fr)}.lz-anatomy-visual,.lz-anatomy-visual img{height:400px;min-height:400px}}
 @media(max-width:680px){.lz-hero{padding:58px 0}.lz-hero h1{font-size:39px}.lz-points,.lz-catalog,.lz-identify,.lz-selector-grid{grid-template-columns:1fr}.lz-filterbar{grid-template-columns:1fr}.lz-selector-grid .wide{grid-column:auto}.lz-anatomy-visual,.lz-anatomy-visual img{height:300px;min-height:300px}.lz-callout{font-size:8px;padding:5px 7px}.lz-callout::before{width:20px}}
+
+
+/* Laser consumables catalogue visuals */
+.lz-item{padding:0;overflow:hidden}
+.lz-item-body{padding:17px;display:flex;flex-direction:column;flex:1}
+.lz-media{
+  width:100%;
+  aspect-ratio:520/230;
+  border-bottom:1px solid var(--line);
+  background-color:#f7f8fa;
+}
+.lz-sprite{
+  background-image:url('/assets/images/laser-consumables-sprite.webp');
+  background-repeat:no-repeat;
+  background-size:500% 200%;
+}
+.lz-sprite.sprite-protective{background-position:0% 0%}
+.lz-sprite.sprite-single-nozzle{background-position:25% 0%}
+.lz-sprite.sprite-double-nozzle{background-position:50% 0%}
+.lz-sprite.sprite-ceramic{background-position:75% 0%}
+.lz-sprite.sprite-lens-drawer{background-position:100% 0%}
+.lz-sprite.sprite-focus{background-position:0% 100%}
+.lz-sprite.sprite-collimation{background-position:25% 100%}
+.lz-sprite.sprite-sensor{background-position:50% 100%}
+.lz-sprite.sprite-seal{background-position:75% 100%}
+.lz-sprite.sprite-qbh{background-position:100% 100%}
