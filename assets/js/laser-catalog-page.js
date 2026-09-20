@@ -11,6 +11,18 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const spriteKey=x=>{
    const family=norm(x.family||'');
    const text=norm([x.name,x.description,x.category,x.family,x.model,(x.keywords||[]).join(' ')].filter(Boolean).join(' '));
+   const slug=String(x.slug||'');
+   const part4={
+     'raytools-bm111':'part4-head-01','raytools-bm110':'part4-head-02','raytools-bm114':'part4-head-03','raytools-bt240s':'part4-head-04',
+     'precitec-procutter-2':'part4-head-05','precitec-procutter-prime':'part4-head-06','precitec-procutter-zoom':'part4-head-07','precitec-procutter-thunder':'part4-head-08',
+     'precitec-minicutter':'part4-head-09','precitec-solidcutter':'part4-head-10','wsx-cutting-head':'part4-head-11','boci-cutting-head':'part4-head-12',
+     'ospri-cutting-head':'part4-head-13','au3tech-cutting-head':'part4-head-14',
+     'co2-laser-tube':'part4-misc-01','co2-psu':'part4-misc-02','znse-focus-lens':'part4-misc-03','co2-mirror':'part4-misc-04',
+     'co2-mirror-mount':'part4-misc-05','co2-head-nozzle':'part4-misc-06','co2-motion':'part4-misc-07','co2-controller':'part4-misc-08',
+     'welding-nozzle':'part4-misc-09','welding-protective-lens':'part4-misc-10','welding-ceramic':'part4-misc-11',
+     'wire-feeder-spare':'part4-misc-12','cleaning-head-consumable':'part4-misc-13'
+   };
+   if(part4[slug])return part4[slug];
 
    if(family==='chiller-spares'||text.includes('chiller')){
      if(text.includes('circulation pump')||text.includes('chiller pump')||text.includes('water pump'))return 'sprite-chiller-part-pump';
