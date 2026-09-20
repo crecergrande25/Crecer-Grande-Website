@@ -306,6 +306,26 @@
         "handheld welding",
         "cleaning head"
       ]
+    },
+    {
+      "slug": "cnc-vmc-machine-spares",
+      "name": "CNC / VMC & Machine Spares",
+      "parent": null,
+      "group": "Industrial Machine Spares",
+      "description": "Spindles, controls, sensors, pumps, bearings, lubrication, transmission, cooling and other CNC/VMC machine components.",
+      "keywords": [
+        "cnc",
+        "vmc",
+        "machine spare",
+        "spindle",
+        "servo",
+        "bearing",
+        "sensor",
+        "pump",
+        "lubrication",
+        "belt",
+        "control"
+      ]
     }
   ],
   "brands": [
@@ -1961,6 +1981,344 @@
       },
       "badge": "Cleaning spare",
       "href": "/request-quote.html?requirement=Laser%20cleaning-head%20protective%20optics%20/%20nozzle%20requirement"
+    },
+    {
+      "slug": "cnc-spindle-accessories",
+      "name": "Spindle & spindle accessories",
+      "family": "cnc-vmc",
+      "category": "Mechanical",
+      "description": "Spindle cartridge, bearings, drawbar and associated replacement requirements.",
+      "keywords": [
+        "spindle",
+        "spindle cartridge",
+        "drawbar",
+        "tool clamp",
+        "spindle bearing"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-cnc.webp",
+      "href": "/request-quote.html?requirement=Spindle%20%26%20spindle%20accessories"
+    },
+    {
+      "slug": "cnc-servo-drives",
+      "name": "Servo motors & drives",
+      "family": "cnc-vmc",
+      "category": "Motion",
+      "description": "Servo motors, drives and axis-control hardware identified by machine and part data.",
+      "keywords": [
+        "servo motor",
+        "servo drive",
+        "amplifier",
+        "axis drive",
+        "cnc drive"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-automation-v22.webp",
+      "href": "/request-quote.html?requirement=Servo%20motors%20%26%20drives"
+    },
+    {
+      "slug": "cnc-control-system",
+      "name": "CNC control systems",
+      "family": "cnc-vmc",
+      "category": "Control",
+      "description": "Controllers, HMIs, I/O and control-system components for machine restoration and upgrades.",
+      "keywords": [
+        "cnc control",
+        "fanuc",
+        "siemens",
+        "mitsubishi",
+        "hmi",
+        "controller"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/resource-automation-v23.webp",
+      "href": "/request-quote.html?requirement=CNC%20control%20systems"
+    },
+    {
+      "slug": "cnc-linear-motion",
+      "name": "Linear motion components",
+      "family": "cnc-vmc",
+      "category": "Mechanical",
+      "description": "Rails, guide blocks, ball screws and motion hardware matched by size and series.",
+      "keywords": [
+        "linear guide",
+        "lm guide",
+        "ball screw",
+        "rail",
+        "guide block",
+        "carriage"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-cnc-v23.webp",
+      "href": "/request-quote.html?requirement=Linear%20motion%20components"
+    },
+    {
+      "slug": "cnc-bearings",
+      "name": "CNC / VMC bearings",
+      "family": "cnc-vmc",
+      "category": "Mechanical",
+      "description": "Machine and spindle-bearing requirements reviewed by size, load, speed and application.",
+      "keywords": [
+        "bearing",
+        "angular contact",
+        "spindle bearing",
+        "ball bearing",
+        "roller bearing"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/div-inspection-v23b.webp",
+      "href": "/request-quote.html?requirement=CNC%20%2F%20VMC%20bearings"
+    },
+    {
+      "slug": "cnc-coolant-pump",
+      "name": "Machine coolant pump",
+      "family": "cnc-vmc",
+      "category": "Fluid",
+      "description": "Coolant-circulation and machine-fluid pumps matched by voltage, flow and mounting.",
+      "keywords": [
+        "coolant pump",
+        "machine pump",
+        "centrifugal pump",
+        "cutting fluid pump"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-pump-v22.webp",
+      "href": "/request-quote.html?requirement=Machine%20coolant%20pump"
+    },
+    {
+      "slug": "cnc-lubrication",
+      "name": "Lubrication system & pump",
+      "family": "cnc-vmc",
+      "category": "Maintenance",
+      "description": "Automatic lubrication pumps, metering units and distribution components.",
+      "keywords": [
+        "lubrication pump",
+        "oil pump",
+        "grease pump",
+        "metering unit",
+        "lubrication system"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/service-maintenance.webp",
+      "href": "/request-quote.html?requirement=Lubrication%20system%20%26%20pump"
+    },
+    {
+      "slug": "cnc-tool-turret",
+      "name": "Tool turret & tool holders",
+      "family": "cnc-vmc",
+      "category": "Tooling",
+      "description": "Tool-change, turret and holder-related components identified against machine configuration.",
+      "keywords": [
+        "tool turret",
+        "atc",
+        "tool holder",
+        "bt40",
+        "bt30",
+        "cat40",
+        "collet holder"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/maintenance.webp",
+      "href": "/request-quote.html?requirement=Tool%20turret%20%26%20tool%20holders"
+    },
+    {
+      "slug": "cnc-sensors-switches",
+      "name": "Machine sensors & switches",
+      "family": "cnc-vmc",
+      "category": "Electrical",
+      "description": "Proximity, limit, home-position and machine sensing components.",
+      "keywords": [
+        "proximity sensor",
+        "limit switch",
+        "home sensor",
+        "encoder",
+        "inductive sensor",
+        "machine switch"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/div-automation-v23.webp",
+      "href": "/request-quote.html?requirement=Machine%20sensors%20%26%20switches"
+    },
+    {
+      "slug": "cnc-transmission",
+      "name": "Couplings, belts & transmission",
+      "family": "cnc-vmc",
+      "category": "Mechanical",
+      "description": "Drive couplings, belts, pulleys and power-transmission components.",
+      "keywords": [
+        "coupling",
+        "timing belt",
+        "v belt",
+        "pulley",
+        "transmission",
+        "flexible coupling"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/service-machine-spares.webp",
+      "href": "/request-quote.html?requirement=Couplings%2C%20belts%20%26%20transmission"
+    },
+    {
+      "slug": "cnc-cooling",
+      "name": "Fans & cooling components",
+      "family": "cnc-vmc",
+      "category": "Cooling",
+      "description": "Cooling fans and machine-cabinet thermal-management components.",
+      "keywords": [
+        "cooling fan",
+        "cabinet fan",
+        "spindle cooling",
+        "machine fan",
+        "heat sink"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/div-maintenance-v23.webp",
+      "href": "/request-quote.html?requirement=Fans%20%26%20cooling%20components"
+    },
+    {
+      "slug": "cnc-electrical-panel",
+      "name": "Electrical & panel spares",
+      "family": "cnc-vmc",
+      "category": "Electrical",
+      "description": "Relays, contactors, breakers, power supplies and selected panel components.",
+      "keywords": [
+        "relay",
+        "contactor",
+        "breaker",
+        "power supply",
+        "smps",
+        "panel electrical"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/div-automation-v22.webp",
+      "href": "/request-quote.html?requirement=Electrical%20%26%20panel%20spares"
+    },
+    {
+      "slug": "cnc-hoses-fittings",
+      "name": "Hoses, fittings & coolant accessories",
+      "family": "cnc-vmc",
+      "category": "Fluid",
+      "description": "Machine hoses, fittings, flexible coolant lines and fluid-system accessories.",
+      "keywords": [
+        "hose",
+        "fitting",
+        "connector",
+        "coolant nozzle",
+        "flexible hose",
+        "machine plumbing"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-pump.webp",
+      "href": "/request-quote.html?requirement=Hoses%2C%20fittings%20%26%20coolant%20accessories"
+    },
+    {
+      "slug": "cnc-filters",
+      "name": "Machine filters & strainers",
+      "family": "cnc-vmc",
+      "category": "Fluid",
+      "description": "Coolant, lubrication and machine-fluid filters identified by dimensions and duty.",
+      "keywords": [
+        "filter",
+        "strainer",
+        "coolant filter",
+        "hydraulic filter",
+        "filter element"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/prod-pump-v23.webp",
+      "href": "/request-quote.html?requirement=Machine%20filters%20%26%20strainers"
+    },
+    {
+      "slug": "cnc-other-spares",
+      "name": "Other / obsolete machine spares",
+      "family": "cnc-vmc",
+      "category": "Sourcing",
+      "description": "Hard-to-find, obsolete and application-specific machine-spare sourcing support.",
+      "keywords": [
+        "obsolete spare",
+        "custom machine spare",
+        "bracket",
+        "shaft",
+        "gear",
+        "replacement part"
+      ],
+      "brand": null,
+      "model": null,
+      "specs": {
+        "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
+      },
+      "badge": "Machine spare",
+      "image": "/assets/images/resource-maintenance-v23.webp",
+      "href": "/request-quote.html?requirement=Other%20%2F%20obsolete%20machine%20spares"
     }
   ],
   "version": "2.6-part2",
