@@ -1,0 +1,39 @@
+/* CNC / VMC & Industrial Machine Spares — premium catalogue */
+.cnc-hero{
+  position:relative;overflow:hidden;color:#fff;padding:70px 0 62px;
+  background:
+    linear-gradient(90deg,rgba(4,22,43,.98) 0%,rgba(6,32,59,.94) 48%,rgba(6,32,59,.55) 74%,rgba(6,32,59,.18) 100%),
+    url('/assets/images/prod-cnc-v22.webp') right center/48% 100% no-repeat,
+    #071a36;
+}
+.cnc-hero:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent 72%)}
+.cnc-hero .container{position:relative;z-index:1}.cnc-hero .eyebrow{color:#f4b000}
+.cnc-hero h1{max-width:760px;margin:8px 0 16px;font-size:clamp(42px,5vw,68px);line-height:1;letter-spacing:-.045em}
+.cnc-hero p{max-width:690px;color:#d5e0eb;font-size:17px;line-height:1.7}.cnc-hero .actions{margin-top:24px}
+.cnc-highlights{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.cnc-highlights span{padding:8px 11px;border:1px solid rgba(255,255,255,.15);border-radius:999px;background:rgba(255,255,255,.07);font-size:11px;color:#e5edf5}
+
+.cnc-catalog-shell{padding:30px 0 68px;background:linear-gradient(180deg,#f5f8fb 0%,#fff 52%)}
+.cnc-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:end;margin-bottom:24px}
+.cnc-intro h2{margin:6px 0 0;font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-.035em;color:#071a36}
+.cnc-intro p{margin:0;color:#65758a;line-height:1.7}
+.cnc-toolbar{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;margin-bottom:10px}
+.cnc-search{position:relative}.cnc-search input{width:100%;height:56px;border:1px solid #d5dfe8;border-radius:16px;background:#fff;padding:0 52px 0 18px;color:#071a36;font:inherit;box-shadow:0 10px 28px rgba(7,26,54,.05)}
+.cnc-search:after{content:"⌕";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:25px;color:#66798e}
+.cnc-toolbar .btn{height:56px}.cnc-count{font-size:12px;color:#6f8093;margin:8px 0 16px}
+.cnc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+.cnc-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #dce5ed;border-radius:20px;background:#fff;box-shadow:0 12px 30px rgba(7,26,54,.055);transition:.22s ease}
+.cnc-card:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(7,26,54,.11);border-color:#c8d6e2}
+.cnc-card-media{aspect-ratio:4/3;overflow:hidden;background:#eef3f6;border-bottom:1px solid #e4eaf0}
+.cnc-card-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}.cnc-card:hover .cnc-card-media img{transform:scale(1.035)}
+.cnc-card-body{padding:17px;display:flex;flex-direction:column;flex:1}
+.cnc-card h3{font-size:17px;line-height:1.25;margin:10px 0 8px;color:#071a36}.cnc-card p{font-size:11.5px;line-height:1.6;color:#65758a;margin:0 0 12px}
+.cnc-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}.cnc-tags span{padding:5px 8px;border-radius:999px;background:#f1f5f8;color:#4e6276;font-size:9.5px;font-weight:700}
+.cnc-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;color:#9e6900;font-size:11px;font-weight:800;text-decoration:none}
+.cnc-empty{display:none;grid-column:1/-1;padding:34px;border:1px dashed #cfdbe5;border-radius:20px;text-align:center;color:#65758a;background:#fff}
+.cnc-help{margin-top:28px;display:grid;grid-template-columns:1.25fr .75fr;gap:18px;padding:28px;border-radius:24px;background:linear-gradient(135deg,#071a36,#0a365c);color:#fff}
+.cnc-help h2{margin:5px 0 10px}.cnc-help p{color:#cad7e4;line-height:1.65}.cnc-help-panel{padding:18px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.cnc-help-panel b{display:block;margin-bottom:10px}.cnc-help-panel ul{margin:0;padding-left:18px;color:#dbe5ee;font-size:12px;line-height:1.75}
+@media(max-width:1180px){.cnc-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.cnc-hero{padding:52px 0 44px;background-size:cover;background-position:center}.cnc-hero h1{font-size:42px}.cnc-intro,.cnc-help{grid-template-columns:1fr}.cnc-toolbar{grid-template-columns:1fr}.cnc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.cnc-grid{grid-template-columns:1fr}}
