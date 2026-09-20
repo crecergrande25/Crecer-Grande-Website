@@ -71,5 +71,5 @@ document.addEventListener('DOMContentLoaded',async()=>{
  }
  [input,cat].forEach(x=>x?.addEventListener('input',render)); document.getElementById('lz-clear')?.addEventListener('click',()=>{if(input)input.value='';if(cat)cat.value='';render()});
  document.querySelectorAll('[data-lz-filter]').forEach(x=>x.addEventListener('click',e=>{e.preventDefault();if(input)input.value=x.dataset.lzFilter||'';render();grid.scrollIntoView({behavior:'smooth'})}));
- const qs=new URLSearchParams(location.search); if(qs.get('q')&&input)input.value=qs.get('q'); render();
+ const qs=new URLSearchParams(location.search); if(qs.get('q')&&input)input.value=qs.get('q'); else if(input&&root.dataset.defaultQuery)input.value=root.dataset.defaultQuery; render();
 });
