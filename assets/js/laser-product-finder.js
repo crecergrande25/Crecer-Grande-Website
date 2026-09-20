@@ -39,6 +39,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     return '/assets/images/laser-components.webp';
   };
 
+  const consumableSpriteKey=(p={})=>{
+    const text=norm([p.name,p.title,p.category,p.subcategory,p.family,p.description,Array.isArray(p.tags)?p.tags.join(' '):p.tags].filter(Boolean).join(' '));
+    if(text.includes('qbh')||text.includes('qcs')||text.includes('fiber interface')||text.includes('fiber connector'))return 'sprite-qbh';
+    if(text.includes('seal')||text.includes('o ring')||text.includes('o-ring')||text.includes('gasket'))return 'sprite-seal';
+    if(text.includes('lens drawer')||text.includes('lens cartridge')||text.includes('drawer assembly'))return 'sprite-lens-drawer';
+    if(text.includes('collimation')||text.includes('collimator'))return 'sprite-collimation';
+    if(text.includes('focus lens')||text.includes('focusing lens'))return 'sprite-focus';
+    if(text.includes('sensor body')||text.includes('capacitive sensor')||text.includes('nozzle holder')||text.includes('height sensor'))return 'sprite-sensor';
+    if(text.includes('ceramic'))return 'sprite-ceramic';
+    if(text.includes('double nozzle')||text.includes('double layer nozzle'))return 'sprite-double-nozzle';
+    if(text.includes('nozzle'))return 'sprite-single-nozzle';
+    if(text.includes('protective window')||text.includes('protective lens')||text.includes('cover glass')||text.includes('cover window')||text.includes('optic'))return 'sprite-protective';
+    return '';
+  };
+
   let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
   try{
     const rr=await fetch('/assets/data/catalog-fallback.json');
@@ -174,7 +189,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
       brand:brandNameById[String(p.brand_id)]||'',
       meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
-      image:p.image_url||familyImage(p)
+      image:p.image_url||familyImage(p),
+      sprite:p.image_url?'':consumableSpriteKey(p)
     })));
 
     rows.push(...((fallback.products||[]).filter(p=>{
@@ -190,7 +206,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:p.href,
       brand:p.brand||'',
       meta:[p.model,p.category].filter(Boolean),
-      image:p.image_url||p.image||familyImage(p)
+      image:p.image_url||p.image||familyImage(p),
+      sprite:(p.image_url||p.image)?'':consumableSpriteKey(p)
     }))));
 
     if(!rows.length||terms.length){
@@ -205,7 +222,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         href:'/request-quote.html?requirement='+encodeURIComponent(c.name),
         brand:'',
         meta:[],
-        image:familyImage({name:c.name,category:c.name})
+        image:familyImage({name:c.name,category:c.name}),
+        sprite:consumableSpriteKey({name:c.name,category:c.name})
       })));
 
       rows.push(...models.filter(m=>{
@@ -220,7 +238,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         href:'/request-quote.html?requirement='+encodeURIComponent(m.model_name),
         brand:modelBrand(m),
         meta:[m.model_code].filter(Boolean),
-        image:familyImage({name:m.model_name,category:m.equipment_type||'cutting head'})
+        image:familyImage({name:m.model_name,category:m.equipment_type||'cutting head'}),
+        sprite:consumableSpriteKey({name:m.model_name,category:m.equipment_type||'cutting head'})
       })));
     }
 
@@ -228,8 +247,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
     results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
-      <a class="finder-media" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
-        <img src="${safe(x.image||'/assets/images/laser-components.webp')}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/images/laser-components.webp'">
+      <a class="finder-media${x.sprite?' finder-sprite '+safe(x.sprite):''}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
+        ${x.sprite?'':`<img src="${safe(x.image||'/assets/images/laser-components.webp')}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='/assets/images/laser-components.webp'">`}
         <span class="finder-kind">${safe(x.kind)}</span>
       </a>
       <div class="finder-item-body">
