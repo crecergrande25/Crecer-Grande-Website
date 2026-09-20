@@ -128,42 +128,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
+  let categories=[],brands=[],models=[];
   try{
-    const rr=await fetch('/assets/data/catalog-fallback.json');
-    if(rr.ok)fallback=await rr.json();
-    else throw new Error('fallback unavailable');
+    if(!window.CG_CATALOG) throw new Error('Catalogue service unavailable');
+    const snapshot=await window.CG_CATALOG.getSnapshot();
+    categories=snapshot.categories||[];
+    brands=snapshot.brands||[];
+    models=snapshot.models||[];
+    if(snapshot.source==='supabase') live.products=snapshot.products||[];
+    else fallback.products=snapshot.products||[];
+    document.documentElement.dataset.catalogSource=snapshot.source||'';
   }catch(_){
-    try{
-      const rr=await fetch('/assets/data/laser-ecosystem.json');
-      if(rr.ok)fallback.products=(await rr.json()).products||[];
-    }catch(__){}
+    count.textContent='Catalogue unavailable';
+    results.innerHTML='<div class="empty" style="grid-column:1/-1"><b>Catalogue temporarily unavailable.</b><p>Send a part photo, nameplate, model or requirement and CG can review it directly.</p><a class="btn primary" href="/request-quote.html?requirement=Product%20Identification">Send requirement →</a></div>';
+    return;
   }
-
-  const client=window.CG_SUPABASE;
-  if(client){
-    try{
-      const [cr,br,mr,pr]=await Promise.all([
-        client.from('product_categories').select('id,slug,name,parent_id,short_description,sort_order').eq('published',true).order('sort_order').limit(500),
-        client.from('product_brands').select('id,slug,name,brand_role,relationship_status,sort_order').eq('published',true).order('sort_order').limit(300),
-        client.from('equipment_models').select('id,model_name,model_code,aliases,brand_id,equipment_type_id,sort_order').eq('published',true).order('sort_order').limit(500),
-        client.from('products').select('id,name,title,slug,short_description,description,category,subcategory,category_id,brand_id,manufacturer_part_number,model_number,cg_product_code,tags,stock_status,lead_time,lead_time_note,price_mode,image_url,sort_order').eq('published',true).order('sort_order').limit(1000)
-      ]);
-      if(!cr.error)live.categories=cr.data||[];
-      if(!br.error)live.brands=br.data||[];
-      if(!mr.error)live.models=mr.data||[];
-      if(!pr.error)live.products=pr.data||[];
-    }catch(_){}
-  }
-
-  const categories=live.categories.length
-    ? live.categories
-    : (fallback.categories||[]).map((x,i)=>({id:x.slug,slug:x.slug,name:x.name,parent_id:x.parent,short_description:x.description,sort_order:i}));
-  const brands=live.brands.length
-    ? live.brands
-    : (fallback.brands||[]).map((x,i)=>({id:x.slug,slug:x.slug,name:x.name,relationship_status:x.role,sort_order:i}));
-  const models=live.models.length
-    ? live.models
-    : (fallback.models||[]).map((x,i)=>({id:'f'+i,model_name:x.name,model_code:'',aliases:x.keywords,brand_id:x.brand,sort_order:i}));
 
   const brandNameById=Object.fromEntries(brands.map(x=>[String(x.id),x.name]));
   brand.innerHTML='<option value="">All brands</option>'+brands.map(x=>`<option value="${safe(String(x.id))}">${safe(x.name)}</option>`).join('');
