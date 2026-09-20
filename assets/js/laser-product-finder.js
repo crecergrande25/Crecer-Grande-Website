@@ -39,8 +39,28 @@ document.addEventListener('DOMContentLoaded', async () => {
     return '/assets/images/laser-components.webp';
   };
 
-  const consumableSpriteKey=(p={})=>{
+  const productSpriteKey=(p={})=>{
+    const family=norm(p.family||'');
     const text=norm([p.name,p.title,p.category,p.subcategory,p.family,p.description,Array.isArray(p.tags)?p.tags.join(' '):p.tags].filter(Boolean).join(' '));
+
+    if(family==='chiller-spares'||text.includes('chiller')){
+      if(text.includes('circulation pump')||text.includes('chiller pump')||text.includes('water pump'))return 'sprite-chiller-part-pump';
+      if(text.includes('flow sensor')||text.includes('flow switch'))return 'sprite-chiller-part-flow';
+      if(text.includes('temperature sensor')||text.includes('thermistor')||text.includes('pt100')||text.includes('ntc'))return 'sprite-chiller-part-temp';
+      if(text.includes('level sensor')||text.includes('float switch')||text.includes('water level'))return 'sprite-chiller-part-level';
+      if(text.includes('filter')||text.includes('strainer'))return 'sprite-chiller-part-filter';
+      if(text.includes('fan'))return 'sprite-chiller-part-fan';
+      if(text.includes('compressor')||text.includes('refrigeration'))return 'sprite-chiller-part-compressor';
+      if(text.includes('plate heat exchanger'))return 'sprite-chiller-part-plateheatx';
+      if(text.includes('condenser')||text.includes('evaporator')||text.includes('heat exchanger')||text.includes('coil'))return 'sprite-chiller-part-heatx';
+      if(text.includes('controller')||text.includes('display')||text.includes('control board')||text.includes('pcb'))return 'sprite-chiller-part-controller';
+      if(text.includes('relay')||text.includes('contactor')||text.includes('capacitor')||text.includes('breaker')||text.includes('electrical'))return 'sprite-chiller-part-electrical';
+      if(text.includes('solenoid')||text.includes('expansion valve')||text.includes('service valve')||text.includes(' valve'))return 'sprite-chiller-part-valve';
+      if(text.includes('hose')||text.includes('fitting')||text.includes('quick connector')||text.includes('water pipe'))return 'sprite-chiller-part-hose';
+      if(text.includes('coolant')||text.includes('deionized')||text.includes('distilled')||text.includes('antifreeze')||text.includes('additive')||text.includes('water quality'))return 'sprite-chiller-part-coolant';
+      if(text.includes('pressure sensor')||text.includes('pressure transducer'))return 'sprite-chiller-part-pressure';
+    }
+
     if(text.includes('qbh')||text.includes('qcs')||text.includes('fiber interface')||text.includes('fiber connector'))return 'sprite-qbh';
     if(text.includes('seal')||text.includes('o ring')||text.includes('o-ring')||text.includes('gasket'))return 'sprite-seal';
     if(text.includes('lens drawer')||text.includes('lens cartridge')||text.includes('drawer assembly'))return 'sprite-lens-drawer';
@@ -52,6 +72,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     if(text.includes('nozzle'))return 'sprite-single-nozzle';
     if(text.includes('protective window')||text.includes('protective lens')||text.includes('cover glass')||text.includes('cover window')||text.includes('optic'))return 'sprite-protective';
     return '';
+  };
+
+  const chillerReferenceImage=(p={})=>{
+    const slug=String(p.slug||'');
+    const map={
+      'teyu-cwfl-1000':'/assets/images/chiller.webp',
+      'teyu-cwfl-1500':'/assets/images/prod-chiller.webp',
+      'teyu-cwfl-2000':'/assets/images/prod-chiller-v22.webp',
+      'teyu-cwfl-3000':'/assets/images/project-chiller.webp',
+      'teyu-cwfl-4000':'/assets/images/project-chiller-v23.webp',
+      'teyu-cwfl-6000':'/assets/images/project-chiller-v23b.webp',
+      'fiber-laser-chiller-generic':'/assets/images/prod-chiller-v23.webp'
+    };
+    return map[slug]||'';
+  };
+
+  const chillerReferenceSprite=(p={})=>{
+    const slug=String(p.slug||'');
+    const map={
+      'hanli-fiber-chiller':'sprite-chiller-unit-1',
+      'tongfei-chiller':'sprite-chiller-unit-2',
+      'co2-chiller':'sprite-chiller-unit-3',
+      'handheld-laser-chiller':'sprite-chiller-unit-4'
+    };
+    return map[slug]||'';
   };
 
   let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
@@ -190,7 +235,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       brand:brandNameById[String(p.brand_id)]||'',
       meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
       image:p.image_url||familyImage(p),
-      sprite:p.image_url?'':consumableSpriteKey(p)
+      sprite:p.image_url?'':productSpriteKey(p)
     })));
 
     rows.push(...((fallback.products||[]).filter(p=>{
@@ -206,8 +251,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:p.href,
       brand:p.brand||'',
       meta:[p.model,p.category].filter(Boolean),
-      image:p.image_url||p.image||familyImage(p),
-      sprite:(p.image_url||p.image)?'':consumableSpriteKey(p)
+      image:p.image_url||p.image||chillerReferenceImage(p)||familyImage(p),
+      sprite:(p.image_url||p.image||chillerReferenceImage(p))?'':(chillerReferenceSprite(p)||productSpriteKey(p))
     }))));
 
     if(!rows.length||terms.length){
@@ -223,7 +268,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         brand:'',
         meta:[],
         image:familyImage({name:c.name,category:c.name}),
-        sprite:consumableSpriteKey({name:c.name,category:c.name})
+        sprite:productSpriteKey({name:c.name,category:c.name})
       })));
 
       rows.push(...models.filter(m=>{
@@ -239,7 +284,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         brand:modelBrand(m),
         meta:[m.model_code].filter(Boolean),
         image:familyImage({name:m.model_name,category:m.equipment_type||'cutting head'}),
-        sprite:consumableSpriteKey({name:m.model_name,category:m.equipment_type||'cutting head'})
+        sprite:productSpriteKey({name:m.model_name,category:m.equipment_type||'cutting head'})
       })));
     }
 
