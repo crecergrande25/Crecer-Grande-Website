@@ -150,12 +150,17 @@
     return '';
   }
 
-  function normalizeLiveProducts(rows,categories,brands){
+  function normalizeLiveProducts(rows,categories,brands,fallbackProducts=[]){
     const brandMap=new Map(brands.map(b=>[String(b.id),b.name]));
     const categoryMap=new Map(categories.map(c=>[String(c.id),c]));
+    const fallbackImageBySlug=new Map((fallbackProducts||[]).map(p=>[
+      text(p.slug),
+      genericImage(p.image_url||p.image)?'':(p.image_url||p.image||'')
+    ]));
     return (rows||[]).map((p,i)=>{
       const cat=categoryMap.get(String(p.category_id))||null;
-      const image=genericImage(p.image_url)?'':(p.image_url||'');
+      const liveImage=genericImage(p.image_url)?'':(p.image_url||'');
+      const image=liveImage||fallbackImageBySlug.get(text(p.slug))||'';
       return {
         ...p,source:'supabase',family:inferFamily(p,categories),
         brand:p.brand||brandMap.get(String(p.brand_id))||'',
@@ -173,7 +178,7 @@
 
   async function buildSnapshot(){
     const [fallback,live]=await Promise.all([loadFallback(),loadLive()]);
-    const liveProducts=normalizeLiveProducts(live.products,live.categories,live.brands);
+    const liveProducts=normalizeLiveProducts(live.products,live.categories,live.brands,fallback.products);
     const liveAuthoritative=live.productsOk && liveProducts.length>0;
     return {
       source:liveAuthoritative?'supabase':'fallback-cache',
