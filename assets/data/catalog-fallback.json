@@ -919,7 +919,8 @@
         "Specify": "Head model • body Ø • thread • tip/orifice Ø • height"
       },
       "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=Single-layer%20fiber%20laser%20cutting%20nozzles"
+      "href": "/request-quote.html?requirement=Single-layer%20fiber%20laser%20cutting%20nozzles",
+      "image_url": "/assets/images/laser-consumables/generated-single-layer-nozzles.webp"
     },
     {
       "slug": "double-layer-nozzles",
@@ -940,7 +941,8 @@
         "Specify": "Head model • body Ø • thread • tip/orifice Ø • layer"
       },
       "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=Double-layer%20fiber%20laser%20cutting%20nozzles"
+      "href": "/request-quote.html?requirement=Double-layer%20fiber%20laser%20cutting%20nozzles",
+      "image_url": "/assets/images/laser-consumables/generated-double-layer-nozzles.webp"
     },
     {
       "slug": "high-speed-nozzles",
@@ -960,7 +962,8 @@
         "Specify": "Head model • material/process • nozzle geometry"
       },
       "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=High-speed%20/%20application-specific%20laser%20nozzles"
+      "href": "/request-quote.html?requirement=High-speed%20/%20application-specific%20laser%20nozzles",
+      "image_url": "/assets/images/laser-consumables/generated-high-speed-nozzles.webp"
     },
     {
       "slug": "protective-window-279-41",
@@ -982,7 +985,8 @@
         "Check": "Head model • optical position • coating/wavelength"
       },
       "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9827.9%20%C3%97%204.1%20mm%20%E2%80%94%20common%20reference%20size"
+      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9827.9%20%C3%97%204.1%20mm%20%E2%80%94%20common%20reference%20size",
+      "image_url": "/assets/images/laser-consumables/generated-protective-windows.webp"
     },
     {
       "slug": "protective-window-249-15",
@@ -1003,7 +1007,8 @@
         "Check": "Head model • optical position"
       },
       "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9824.9%20%C3%97%201.5%20mm%20%E2%80%94%20common%20reference%20size"
+      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9824.9%20%C3%97%201.5%20mm%20%E2%80%94%20common%20reference%20size",
+      "image_url": "/assets/images/laser-consumables/generated-protective-windows.webp"
     },
     {
       "slug": "protective-windows-other",
@@ -1024,7 +1029,8 @@
         "Specify": "OD × thickness • head model • upper/lower position"
       },
       "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20/%20cover%20windows%20%E2%80%94%20other%20sizes"
+      "href": "/request-quote.html?requirement=Protective%20/%20cover%20windows%20%E2%80%94%20other%20sizes",
+      "image_url": "/assets/images/laser-consumables/generated-protective-windows.webp"
     },
     {
       "slug": "focus-lens-group",
@@ -1044,7 +1050,8 @@
         "Specify": "Head model • lens OD • focal length • coating / wavelength"
       },
       "badge": "Optics",
-      "href": "/request-quote.html?requirement=Fiber-laser%20focusing%20lens%20/%20lens%20group"
+      "href": "/request-quote.html?requirement=Fiber-laser%20focusing%20lens%20/%20lens%20group",
+      "image_url": "/assets/images/laser-consumables/generated-focus-optics.webp"
     },
     {
       "slug": "collimation-lens-group",
@@ -1063,7 +1070,8 @@
         "Specify": "Head model • lens OD • focal length • coating / wavelength"
       },
       "badge": "Optics",
-      "href": "/request-quote.html?requirement=Fiber-laser%20collimating%20lens%20/%20lens%20group"
+      "href": "/request-quote.html?requirement=Fiber-laser%20collimating%20lens%20/%20lens%20group",
+      "image_url": "/assets/images/laser-consumables/generated-collimation-optics.webp"
     },
     {
       "slug": "ceramic-ring",
@@ -1084,7 +1092,8 @@
         "Specify": "Head model • OD • thread • connector/contact geometry"
       },
       "badge": "Ceramics",
-      "href": "/request-quote.html?requirement=Laser%20cutting-head%20ceramic%20ring"
+      "href": "/request-quote.html?requirement=Laser%20cutting-head%20ceramic%20ring",
+      "image_url": "/assets/images/laser-consumables/generated-ceramic-ring.webp"
     },
     {
       "slug": "sensor-body",
@@ -1104,7 +1113,8 @@
         "Specify": "Head model • part photo • dimensions / thread"
       },
       "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Nozzle%20holder%20/%20capacitive%20sensor%20body"
+      "href": "/request-quote.html?requirement=Nozzle%20holder%20/%20capacitive%20sensor%20body",
+      "image_url": "/assets/images/laser-consumables/generated-sensor-body.webp"
     },
     {
       "slug": "height-sensor-cable",
@@ -1124,7 +1134,8 @@
         "Specify": "Head/control model • connector photos • cable length"
       },
       "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Height-sensor%20/%20capacitive%20cable"
+      "href": "/request-quote.html?requirement=Height-sensor%20/%20capacitive%20cable",
+      "image_url": "/assets/images/laser-consumables/generated-height-sensor.webp"
     },
     {
       "slug": "lens-drawer",
@@ -1144,7 +1155,8 @@
         "Specify": "Head model • upper/lower position • part photo"
       },
       "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Protective-lens%20drawer%20/%20cartridge%20/%20holder"
+      "href": "/request-quote.html?requirement=Protective-lens%20drawer%20/%20cartridge%20/%20holder",
+      "image_url": "/assets/images/laser-consumables/generated-lens-drawer.webp"
     },
     {
       "slug": "head-seal-kit",
@@ -1164,7 +1176,8 @@
         "Specify": "Head model • service location • dimensions if available"
       },
       "badge": "Service parts",
-      "href": "/request-quote.html?requirement=Cutting-head%20seals%2C%20O-rings%20%26%20gaskets"
+      "href": "/request-quote.html?requirement=Cutting-head%20seals%2C%20O-rings%20%26%20gaskets",
+      "image_url": "/assets/images/laser-consumables/generated-seals.webp"
     },
     {
       "slug": "qbh-qcs-interface",
@@ -1185,7 +1198,8 @@
         "Required": "Laser source model • head model • interface photos"
       },
       "badge": "Fiber interface",
-      "href": "/request-quote.html?requirement=QBH%20/%20QCS%20connector%2C%20cap%20or%20adapter%20requirement"
+      "href": "/request-quote.html?requirement=QBH%20/%20QCS%20connector%2C%20cap%20or%20adapter%20requirement",
+      "image_url": "/assets/images/laser-consumables/generated-qbh-qcs.webp"
     },
     {
       "slug": "optics-cleaning",
@@ -1207,7 +1221,8 @@
         "Note": "Follow cutting-head / optics manufacturer cleaning procedure"
       },
       "badge": "Cleaning",
-      "href": "/request-quote.html?requirement=Laser%20optics%20cleaning%20consumables"
+      "href": "/request-quote.html?requirement=Laser%20optics%20cleaning%20consumables",
+      "image_url": "/assets/images/laser-consumables/generated-optics-cleaning.webp"
     },
     {
       "slug": "teyu-cwfl-1000",
@@ -1232,7 +1247,8 @@
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1000%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1000%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/chiller.webp"
     },
     {
       "slug": "teyu-cwfl-1500",
@@ -1257,7 +1273,8 @@
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1500%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1500%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/prod-chiller.webp"
     },
     {
       "slug": "teyu-cwfl-2000",
@@ -1282,7 +1299,8 @@
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-2000%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-2000%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/prod-chiller-v22.webp"
     },
     {
       "slug": "teyu-cwfl-3000",
@@ -1307,7 +1325,8 @@
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-3000%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-3000%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/project-chiller.webp"
     },
     {
       "slug": "teyu-cwfl-4000",
@@ -1331,7 +1350,8 @@
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-4000%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-4000%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/project-chiller-v23.webp"
     },
     {
       "slug": "teyu-cwfl-6000",
@@ -1355,7 +1375,8 @@
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-6000%20%E2%80%94%20chiller%20reference"
+      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-6000%20%E2%80%94%20chiller%20reference",
+      "image_url": "/assets/images/project-chiller-v23b.webp"
     },
     {
       "slug": "fiber-laser-chiller-generic",
@@ -1375,7 +1396,8 @@
         "Required": "Laser source make/model & power • head cooling requirement • voltage/phase • existing chiller label"
       },
       "badge": "Complete chiller",
-      "href": "/request-quote.html?requirement=Fiber%20laser%20chiller%20%E2%80%94%20identify%20by%20laser%20power%20%26%20circuits"
+      "href": "/request-quote.html?requirement=Fiber%20laser%20chiller%20%E2%80%94%20identify%20by%20laser%20power%20%26%20circuits",
+      "image_url": "/assets/images/prod-chiller-v23.webp"
     },
     {
       "slug": "hanli-fiber-chiller",
@@ -1481,7 +1503,8 @@
         "Check": "Voltage/frequency • rated flow • rated head/pressure • port size • mounting • dimensions • coolant"
       },
       "badge": "Pump",
-      "href": "/request-quote.html?requirement=Le%20Cheng%20/%20LiCheng%20220%20V%20600%20W%20laser-chiller%20pump%20%E2%80%94%20identify%20/%20source"
+      "href": "/request-quote.html?requirement=Le%20Cheng%20/%20LiCheng%20220%20V%20600%20W%20laser-chiller%20pump%20%E2%80%94%20identify%20/%20source",
+      "image_url": "/assets/images/prod-pump-v22.webp"
     },
     {
       "slug": "chiller-pump-other",
@@ -1501,7 +1524,8 @@
         "Required": "Original pump label • voltage/frequency • flow • head/pressure • port size • mounting"
       },
       "badge": "Pump",
-      "href": "/request-quote.html?requirement=Laser-chiller%20circulation%20pump%20%E2%80%94%20other%20model"
+      "href": "/request-quote.html?requirement=Laser-chiller%20circulation%20pump%20%E2%80%94%20other%20model",
+      "image_url": "/assets/images/prod-pump-v23.webp"
     },
     {
       "slug": "flow-switch",
@@ -1521,7 +1545,8 @@
         "Specify": "Flow range • connection • output/signal • chiller model"
       },
       "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Chiller%20flow%20switch%20/%20flow%20sensor"
+      "href": "/request-quote.html?requirement=Chiller%20flow%20switch%20/%20flow%20sensor",
+      "image_url": "/assets/images/chiller-components.webp"
     },
     {
       "slug": "water-filter",
@@ -1541,7 +1566,8 @@
         "Specify": "Housing/element dimensions • connection • micron rating if known"
       },
       "badge": "Filtration",
-      "href": "/request-quote.html?requirement=Chiller%20filter%20/%20strainer%20/%20filter%20element"
+      "href": "/request-quote.html?requirement=Chiller%20filter%20/%20strainer%20/%20filter%20element",
+      "image_url": "/assets/images/prod-chiller-spares-v23.webp"
     },
     {
       "slug": "temperature-sensor",
@@ -1562,7 +1588,8 @@
         "Specify": "Chiller model • sensor marking • connector • resistance/type if known"
       },
       "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Chiller%20temperature%20sensor%20/%20probe"
+      "href": "/request-quote.html?requirement=Chiller%20temperature%20sensor%20/%20probe",
+      "image_url": "/assets/images/project-chiller-v23b.webp"
     },
     {
       "slug": "level-sensor",
@@ -1582,7 +1609,8 @@
         "Specify": "Chiller model • mounting • contact/signal type"
       },
       "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Water-level%20sensor%20/%20float%20switch"
+      "href": "/request-quote.html?requirement=Water-level%20sensor%20/%20float%20switch",
+      "image_url": "/assets/images/am-approved-sparekit.webp"
     },
     {
       "slug": "chiller-fan",
@@ -1602,7 +1630,8 @@
         "Specify": "Voltage • wattage • RPM • frame/diameter • rotation/air direction"
       },
       "badge": "Cooling",
-      "href": "/request-quote.html?requirement=Condenser%20fan%20/%20cooling%20fan"
+      "href": "/request-quote.html?requirement=Condenser%20fan%20/%20cooling%20fan",
+      "image_url": "/assets/images/div-maintenance-v23.webp"
     },
     {
       "slug": "chiller-compressor",
@@ -1621,7 +1650,8 @@
         "Required": "Chiller model • compressor label • refrigerant • voltage • refrigeration data"
       },
       "badge": "Refrigeration",
-      "href": "/request-quote.html?requirement=Chiller%20compressor%20/%20refrigeration%20component"
+      "href": "/request-quote.html?requirement=Chiller%20compressor%20/%20refrigeration%20component",
+      "image_url": "/assets/images/prod-chiller-v22.webp"
     },
     {
       "slug": "chiller-condenser",
@@ -1641,7 +1671,8 @@
         "Required": "Chiller model • dimensions • port sizes • photos"
       },
       "badge": "Heat exchange",
-      "href": "/request-quote.html?requirement=Condenser%20/%20heat-exchanger%20component"
+      "href": "/request-quote.html?requirement=Condenser%20/%20heat-exchanger%20component",
+      "image_url": "/assets/images/project-chiller-v23.webp"
     },
     {
       "slug": "chiller-controller",
@@ -1661,7 +1692,8 @@
         "Required": "Chiller model • controller/PCB code • connector/wiring photos"
       },
       "badge": "Controls",
-      "href": "/request-quote.html?requirement=Chiller%20controller%20/%20display%20/%20control%20board"
+      "href": "/request-quote.html?requirement=Chiller%20controller%20/%20display%20/%20control%20board",
+      "image_url": "/assets/images/prod-chiller-v23.webp"
     },
     {
       "slug": "chiller-electrical",
@@ -1682,7 +1714,8 @@
         "Specify": "Part marking • voltage/current rating • function • chiller model"
       },
       "badge": "Electrical",
-      "href": "/request-quote.html?requirement=Chiller%20relays%2C%20contactors%2C%20capacitors%20%26%20electrical%20spares"
+      "href": "/request-quote.html?requirement=Chiller%20relays%2C%20contactors%2C%20capacitors%20%26%20electrical%20spares",
+      "image_url": "/assets/images/prod-spares-v23.webp"
     },
     {
       "slug": "chiller-valve",
@@ -1702,7 +1735,8 @@
         "Required": "Function • medium • port size • coil voltage / refrigeration data"
       },
       "badge": "Valves",
-      "href": "/request-quote.html?requirement=Solenoid%20/%20expansion%20/%20service%20valve%20requirement"
+      "href": "/request-quote.html?requirement=Solenoid%20/%20expansion%20/%20service%20valve%20requirement",
+      "image_url": "/assets/images/prod-custom-spares-v23.webp"
     },
     {
       "slug": "chiller-hose-fitting",
@@ -1723,7 +1757,8 @@
         "Specify": "ID/OD • thread/port • length • pressure/temperature"
       },
       "badge": "Plumbing",
-      "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors"
+      "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors",
+      "image_url": "/assets/images/resource-maintenance-v23.webp"
     },
     {
       "slug": "co2-laser-tube",
