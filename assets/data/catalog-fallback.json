@@ -1969,7 +1969,8 @@
         "Specify": "Welding-head model • nozzle shape • wire/no-wire process"
       },
       "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Handheld%20laser%20welding%20nozzle%20/%20copper%20tip"
+      "href": "/request-quote.html?requirement=Handheld%20laser%20welding%20nozzle%20/%20copper%20tip",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-nozzle.webp"
     },
     {
       "slug": "welding-protective-lens",
@@ -1989,7 +1990,8 @@
         "Specify": "Welding-head model • OD × thickness • optical position"
       },
       "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Laser%20welding%20protective%20window%20/%20lens"
+      "href": "/request-quote.html?requirement=Laser%20welding%20protective%20window%20/%20lens",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-protective-lens.webp"
     },
     {
       "slug": "welding-ceramic",
@@ -2009,7 +2011,8 @@
         "Specify": "Head model • part photo • dimensions"
       },
       "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Laser%20welding%20ceramic%20/%20insulator%20component"
+      "href": "/request-quote.html?requirement=Laser%20welding%20ceramic%20/%20insulator%20component",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-ceramic.webp"
     },
     {
       "slug": "wire-feeder-spare",
@@ -2029,7 +2032,8 @@
         "Specify": "Feeder model • wire diameter • part photo / marking"
       },
       "badge": "Welding spare",
-      "href": "/request-quote.html?requirement=Laser%20welding%20wire-feeder%20consumables%20/%20guide%20requirement"
+      "href": "/request-quote.html?requirement=Laser%20welding%20wire-feeder%20consumables%20/%20guide%20requirement",
+      "image_url": "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp"
     },
     {
       "slug": "cleaning-head-consumable",
@@ -2049,7 +2053,8 @@
         "Specify": "Cleaning-head model • source power • part dimensions / photo"
       },
       "badge": "Cleaning spare",
-      "href": "/request-quote.html?requirement=Laser%20cleaning-head%20protective%20optics%20/%20nozzle%20requirement"
+      "href": "/request-quote.html?requirement=Laser%20cleaning-head%20protective%20optics%20/%20nozzle%20requirement",
+      "image_url": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp"
     },
     {
       "slug": "cnc-spindle-accessories",
