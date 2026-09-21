@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div>
         <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Live product'?'View details':'Send requirement'} →</a></div>
       </div>
-    </article>`}).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
+    </article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
   }
 
   [q,brand,model,category].forEach(x=>x.addEventListener('input',render));
