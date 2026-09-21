@@ -239,6 +239,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return !terms.length||termsMatch(hay,terms);
     }).map(p=>({
       kind:'Live product',
+      slug:p.slug||'',
       name:p.name||p.title||'Product',
       desc:p.short_description||p.description||p.subcategory||p.category||'',
       href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
@@ -256,6 +257,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return catMatch&&brandMatch&&modelMatch&&(!terms.length||termsMatch(hay,terms));
     }).map(p=>({
       kind:'Catalogue reference',
+      slug:p.slug||'',
       name:p.name,
       desc:p.description,
       href:p.href,
@@ -301,9 +303,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const seen=new Set();
     rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
-    results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
-      <a class="finder-media${x.image?'':' finder-media-pending'}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
-        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.remove()">`:`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`}
+    results.innerHTML=rows.length?rows.map(x=>{const generated=window.CG_GENERATED_VISUAL_CLASS?.(x.slug)||'';return `<article class="finder-item">
+      <a class="finder-media${x.image?'':(generated?' '+generated:' finder-media-pending')}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
+        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.remove()">`:(generated?'':`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`)}
         <span class="finder-kind">${safe(x.kind)}</span>
       </a>
       <div class="finder-item-body">
@@ -312,7 +314,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div>
         <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Live product'?'View details':'Send requirement'} →</a></div>
       </div>
-    </article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
+    </article>`}).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
   }
 
   [q,brand,model,category].forEach(x=>x.addEventListener('input',render));
