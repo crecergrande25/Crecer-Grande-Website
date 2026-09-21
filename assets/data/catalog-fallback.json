@@ -1797,7 +1797,8 @@
         "Specify": "Rated power • tube length/diameter • terminal style • existing model"
       },
       "badge": "CO₂ source",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20tube"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20tube",
+      "image_url": "/assets/images/catalog/co2/co2-laser-tube.webp"
     },
     {
       "slug": "co2-psu",
@@ -1816,7 +1817,8 @@
         "Specify": "Tube power • PSU label • mains input • control connector"
       },
       "badge": "CO₂ electrical",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20power%20supply"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20power%20supply",
+      "image_url": "/assets/images/catalog/co2/co2-psu.webp"
     },
     {
       "slug": "znse-focus-lens",
@@ -1839,7 +1841,8 @@
         "Specify": "Lens diameter • focal length • machine/head model"
       },
       "badge": "CO₂ optics",
-      "href": "/request-quote.html?requirement=ZnSe%20CO%E2%82%82%20focus%20lens"
+      "href": "/request-quote.html?requirement=ZnSe%20CO%E2%82%82%20focus%20lens",
+      "image_url": "/assets/images/catalog/co2/znse-focus-lens.webp"
     },
     {
       "slug": "co2-mirror",
@@ -1860,7 +1863,8 @@
         "Specify": "Mirror diameter • thickness • material/coating if known • machine model"
       },
       "badge": "CO₂ optics",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20/%20reflector"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20/%20reflector",
+      "image_url": "/assets/images/catalog/co2/co2-mirror.webp"
     },
     {
       "slug": "co2-mirror-mount",
@@ -1879,7 +1883,8 @@
         "Specify": "Optic diameter • mounting pattern • photos/dimensions"
       },
       "badge": "CO₂ mechanics",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20mount%20/%20alignment%20holder"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20mount%20/%20alignment%20holder",
+      "image_url": "/assets/images/catalog/co2/co2-mirror-mount.webp"
     },
     {
       "slug": "co2-head-nozzle",
@@ -1899,7 +1904,8 @@
         "Specify": "Machine model • lens diameter/focal length • part dimensions"
       },
       "badge": "CO₂ head",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20head%2C%20nozzle%20%26%20air-assist%20component"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20head%2C%20nozzle%20%26%20air-assist%20component",
+      "image_url": "/assets/images/catalog/co2/co2-head-nozzle.webp"
     },
     {
       "slug": "co2-motion",
@@ -1921,7 +1927,8 @@
         "Specify": "Part marking • dimensions • pitch/profile • machine model"
       },
       "badge": "Motion",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20belts%2C%20pulleys%2C%20rails%2C%20blocks%20%26%20drag%20chains"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20belts%2C%20pulleys%2C%20rails%2C%20blocks%20%26%20drag%20chains",
+      "image_url": "/assets/images/catalog/co2/co2-motion.webp"
     },
     {
       "slug": "co2-controller",
@@ -1941,7 +1948,8 @@
         "Required": "Controller/driver model • machine wiring/photos • axis configuration"
       },
       "badge": "Controls",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20controller%20/%20motion-control%20requirement"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20controller%20/%20motion-control%20requirement",
+      "image_url": "/assets/images/catalog/co2/co2-controller.webp"
     },
     {
       "slug": "welding-nozzle",
