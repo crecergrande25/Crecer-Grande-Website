@@ -631,7 +631,8 @@
         "Selection": "Verify source interface, laser power, machine/control compatibility"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM111%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=RayTools%20BM111%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm111.webp"
     },
     {
       "slug": "raytools-bm110",
@@ -653,7 +654,8 @@
         "Selection": "Verify exact head version before supply"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM110%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=RayTools%20BM110%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm110.webp"
     },
     {
       "slug": "raytools-bm114",
@@ -674,7 +676,8 @@
         "Selection": "Head suffix/version and laser power must be confirmed"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM114%20/%20BM114S%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=RayTools%20BM114%20/%20BM114S%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm114.webp"
     },
     {
       "slug": "raytools-bt240s",
@@ -695,7 +698,8 @@
         "Selection": "Verify head label and optical/consumable stack"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BT240S%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=RayTools%20BT240S%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bt240s.webp"
     },
     {
       "slug": "precitec-procutter-2",
@@ -717,7 +721,8 @@
         "Application": "Flatbed and tube cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%202.0%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20ProCutter%202.0%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-2.webp"
     },
     {
       "slug": "precitec-procutter-prime",
@@ -737,7 +742,8 @@
         "Application": "2D cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Prime%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Prime%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp"
     },
     {
       "slug": "precitec-procutter-zoom",
@@ -758,7 +764,8 @@
         "Application": "2D cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Zoom%202.0%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Zoom%202.0%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-zoom.webp"
     },
     {
       "slug": "precitec-procutter-thunder",
@@ -778,7 +785,8 @@
         "Application": "2D, tube/profile and 3D cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Thunder%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Thunder%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp"
     },
     {
       "slug": "precitec-minicutter",
@@ -797,7 +805,8 @@
         "Application": "Thin / fine cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20MiniCutter%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20MiniCutter%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-minicutter.webp"
     },
     {
       "slug": "precitec-solidcutter",
@@ -816,7 +825,8 @@
         "Application": "3D cutting"
       },
       "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20SolidCutter%20%E2%80%94%20cutting-head%20requirement"
+      "href": "/request-quote.html?requirement=Precitec%20SolidCutter%20%E2%80%94%20cutting-head%20requirement",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp"
     },
     {
       "slug": "wsx-cutting-head",
@@ -836,7 +846,8 @@
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
       "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=WSX%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source"
+      "href": "/request-quote.html?requirement=WSX%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
+      "image_url": "/assets/images/catalog/cutting-heads/wsx-cutting-head.webp"
     },
     {
       "slug": "boci-cutting-head",
@@ -856,7 +867,8 @@
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
       "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=BOCI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source"
+      "href": "/request-quote.html?requirement=BOCI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
+      "image_url": "/assets/images/catalog/cutting-heads/boci-cutting-head.webp"
     },
     {
       "slug": "ospri-cutting-head",
@@ -876,7 +888,8 @@
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
       "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=OSPRI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source"
+      "href": "/request-quote.html?requirement=OSPRI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
+      "image_url": "/assets/images/catalog/cutting-heads/ospri-cutting-head.webp"
     },
     {
       "slug": "au3tech-cutting-head",
@@ -896,7 +909,8 @@
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
       "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=Au3Tech%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source"
+      "href": "/request-quote.html?requirement=Au3Tech%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
+      "image_url": "/assets/images/catalog/cutting-heads/au3tech-cutting-head.webp"
     },
     {
       "slug": "single-layer-nozzles",
