@@ -23,7 +23,23 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const image=p.image_url||p.image||'';
     document.body.dataset.productSlug=p.slug||slug;
     document.body.dataset.catalogSource=resolved.source||'';
-    document.title=(p.seo_title||p.name)+' | Crecer Grande';
+    const metaTitle=(p.seo_title||p.name)+' | Crecer Grande';
+    const metaDescription=p.seo_description||p.short_description||p.description||'Technical catalogue product details and compatibility information from Crecer Grande.';
+    const canonicalUrl=location.origin+'/products/product-detail.html?slug='+encodeURIComponent(p.slug||slug);
+    document.title=metaTitle;
+    const setMeta=(selector,attr,value)=>{const node=document.querySelector(selector);if(node&&value)node.setAttribute(attr,value)};
+    setMeta('meta[name="description"]','content',metaDescription);
+    setMeta('link[rel="canonical"]','href',canonicalUrl);
+    setMeta('meta[property="og:title"]','content',metaTitle);
+    setMeta('meta[property="og:description"]','content',metaDescription);
+    setMeta('meta[property="og:url"]','content',canonicalUrl);
+    setMeta('meta[name="twitter:title"]','content',metaTitle);
+    setMeta('meta[name="twitter:description"]','content',metaDescription);
+    if(image){
+      const absoluteImage=new URL(image,location.origin).href;
+      setMeta('meta[property="og:image"]','content',absoluteImage);
+      setMeta('meta[name="twitter:image"]','content',absoluteImage);
+    }
     host.innerHTML=`<div class="product-detail"><div class="product-gallery">${image?`<img src="${esc(image)}" alt="${esc(p.name)}">`:`<div class="finder-media-pending" style="min-height:360px"><span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span></div>`}</div><div><span class="badge">${esc(p.subcategory||p.category||'Industrial Product')}</span><h1>${esc(p.name)}</h1><p class="product-lede">${esc(p.short_description||p.description||'Technical product requirement available for review and quotation.')}</p>
       <div class="data-list">${brand?`<div class="data-row"><b>Brand reference</b><span>${esc(brand.name)}${brand.relationship_status==='reference_only'?' — compatibility/search reference':''}</span></div>`:''}${p.mpn||p.manufacturer_part_number?`<div class="data-row"><b>Part / MPN</b><span>${esc(p.mpn||p.manufacturer_part_number)}</span></div>`:''}${p.sku||p.cg_product_code?`<div class="data-row"><b>CG SKU</b><span>${esc(p.sku||p.cg_product_code)}</span></div>`:''}${p.stock_status?`<div class="data-row"><b>Status</b><span>${esc(p.stock_status)}</span></div>`:''}${p.lead_time_text||p.lead_time_note?`<div class="data-row"><b>Lead time</b><span>${esc(p.lead_time_text||p.lead_time_note)}</span></div>`:''}</div>
       <div class="product-actions"><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(p.name)}&machine_model=${encodeURIComponent(p.mpn||p.manufacturer_part_number||p.model||'')}">Request Price →</a><a class="btn outline" href="/products/laser-product-finder.html">Back to Finder</a></div>
