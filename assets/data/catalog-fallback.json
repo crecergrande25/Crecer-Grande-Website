@@ -1539,7 +1539,7 @@
       },
       "badge": "Pump",
       "href": "/request-quote.html?requirement=Laser-chiller%20circulation%20pump%20%E2%80%94%20other%20model",
-      "image_url": "/assets/images/prod-pump-v23.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-pump-other.webp"
     },
     {
       "slug": "flow-switch",
@@ -1603,7 +1603,7 @@
       },
       "badge": "Sensor",
       "href": "/request-quote.html?requirement=Chiller%20temperature%20sensor%20/%20probe",
-      "image_url": "/assets/images/project-chiller-v23b.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/temperature-sensor.webp"
     },
     {
       "slug": "level-sensor",
