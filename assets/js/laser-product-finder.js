@@ -135,8 +135,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     categories=snapshot.categories||[];
     brands=snapshot.brands||[];
     models=snapshot.models||[];
-    if(snapshot.source==='supabase') live.products=snapshot.products||[];
-    else fallback.products=snapshot.products||[];
+    fallback.products=snapshot.fallback?.products||[];
+    live.products=snapshot.live?.products||[];
+    if(!live.products.length && snapshot.source==='supabase') live.products=snapshot.products||[];
+    if(!fallback.products.length && snapshot.source!=='supabase') fallback.products=snapshot.products||[];
     document.documentElement.dataset.catalogSource=snapshot.source||'';
   }catch(_){
     count.textContent='Catalogue unavailable';
@@ -221,6 +223,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     return false;
   }
 
+  const fallbackImageBySlug=new Map((fallback.products||[]).map(p=>[
+    String(p.slug||''),
+    p.image_url||p.image||''
+  ]));
+
+  const resolveProductImage=(p={})=>{
+    const liveCandidate=p.image_url||p.image||'';
+    if(liveCandidate && !isGenericImage(liveCandidate)) return liveCandidate;
+    const fallbackCandidate=fallbackImageBySlug.get(String(p.slug||''))||'';
+    return fallbackCandidate||liveCandidate||'';
+  };
+
   function render(){
     const text=norm(q.value),terms=text.split(/\s+/).filter(Boolean),catIds=categoryIdsUnder(category.value);
     const selectedBrand=brand.value;
@@ -245,7 +259,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
       brand:brandNameById[String(p.brand_id)]||'',
       meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
-      image:(!p.image_url||isGenericImage(p.image_url))?'':p.image_url,
+      image:resolveProductImage(p),
       sprite:''
     })));
 
@@ -263,7 +277,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       href:p.href,
       brand:p.brand||'',
       meta:[p.model,p.category].filter(Boolean),
-      image:(()=>{const candidate=p.image_url||p.image||chillerReferenceImage(p)||'';return (!candidate||isGenericImage(candidate))?'':candidate})(),
+      image:resolveProductImage(p),
       sprite:''
     }))));
 
@@ -303,9 +317,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     const seen=new Set();
     rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
-    results.innerHTML=rows.length?rows.map(x=>{const generated=window.CG_GENERATED_VISUAL_CLASS?.(x.slug)||'';return `<article class="finder-item">
-      <a class="finder-media${x.image?'':(generated?' '+generated:' finder-media-pending')}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
-        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.remove()">`:(generated?'':`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`)}
+    results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
+      <a class="finder-media${x.image?'':' finder-media-pending'}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
+        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.replaceWith(Object.assign(document.createElement('span'),{className:'finder-image-pending',innerHTML:'<b>Image unavailable</b><small>Send the product reference to CG for identification.</small>'}))">`:`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`}
         <span class="finder-kind">${safe(x.kind)}</span>
       </a>
       <div class="finder-item-body">
