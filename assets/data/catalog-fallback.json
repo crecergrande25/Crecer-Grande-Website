@@ -1395,7 +1395,8 @@
         "Required": "Chiller nameplate • laser power • voltage • pump/flow data if spare-related"
       },
       "badge": "Reference brand",
-      "href": "/request-quote.html?requirement=Hanli%20fiber-laser%20chiller%20%E2%80%94%20model%20identification"
+      "href": "/request-quote.html?requirement=Hanli%20fiber-laser%20chiller%20%E2%80%94%20model%20identification",
+      "image_url": "/assets/images/chiller.webp"
     },
     {
       "slug": "tongfei-chiller",
@@ -1415,7 +1416,8 @@
         "Required": "Chiller model/nameplate • application • power/circuit data"
       },
       "badge": "Reference brand",
-      "href": "/request-quote.html?requirement=Tongfei%20/%20TONFY%20laser%20chiller%20%E2%80%94%20model%20identification"
+      "href": "/request-quote.html?requirement=Tongfei%20/%20TONFY%20laser%20chiller%20%E2%80%94%20model%20identification",
+      "image_url": "/assets/images/prod-chiller-v23.webp"
     },
     {
       "slug": "co2-chiller",
@@ -1435,7 +1437,8 @@
         "Required": "Tube rated power • coolant recommendation • ambient conditions • voltage"
       },
       "badge": "CO₂ cooling",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20water%20chiller%20/%20cooling%20system"
+      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20water%20chiller%20/%20cooling%20system",
+      "image_url": "/assets/images/project-co2-v23.webp"
     },
     {
       "slug": "handheld-laser-chiller",
@@ -1454,7 +1457,8 @@
         "Required": "Laser source power • machine make/model • voltage • integrated/external format"
       },
       "badge": "Handheld laser",
-      "href": "/request-quote.html?requirement=Handheld%20welding%20/%20cleaning%20laser%20chiller"
+      "href": "/request-quote.html?requirement=Handheld%20welding%20/%20cleaning%20laser%20chiller",
+      "image_url": "/assets/images/project-chiller-v23b.webp"
     },
     {
       "slug": "leicheng-600w-pump",
@@ -1720,27 +1724,6 @@
       },
       "badge": "Plumbing",
       "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors"
-    },
-    {
-      "slug": "chiller-coolant",
-      "name": "Laser-chiller coolant / water-quality requirement",
-      "family": "chiller-spares",
-      "category": "Coolant & maintenance",
-      "description": "Water quality, coolant or additive requirement should follow the laser/chiller manufacturer recommendation.",
-      "keywords": [
-        "coolant",
-        "deionized water",
-        "distilled water",
-        "antifreeze",
-        "additive"
-      ],
-      "brand": null,
-      "model": null,
-      "specs": {
-        "Important": "Use the OEM-recommended water/coolant specification; do not mix incompatible fluids"
-      },
-      "badge": "Maintenance",
-      "href": "/request-quote.html?requirement=Laser-chiller%20coolant%20/%20water-quality%20requirement"
     },
     {
       "slug": "co2-laser-tube",
@@ -2537,7 +2520,7 @@
       "badge": "Support",
       "sprite": "p6-tool-09",
       "href": "/request-quote.html?requirement=Crowning%20%2F%20Support%20Tools",
-      "image_url": "/assets/images/div-manufacturing-v23.webp"
+      "image_url": "/assets/images/prod-cnc-v23b.webp"
     },
     {
       "slug": "pb-accessories",
@@ -2558,7 +2541,7 @@
       "badge": "Accessory",
       "sprite": "p6-tool-10",
       "href": "/request-quote.html?requirement=Tooling%20Accessories",
-      "image_url": "/assets/images/service-machine-spares.webp"
+      "image_url": "/assets/images/prod-spares-v23.webp"
     },
     {
       "slug": "custom-reverse-engineering",
