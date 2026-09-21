@@ -81,3 +81,11 @@ select 'FINAL' section,
          then 'PASS'
          else 'CHECK RESULTS ABOVE'
        end status;
+
+
+-- V2.9 RFQ attachment verification
+select
+  to_regclass('public.enquiry_attachments') is not null as enquiry_attachments_table_ok,
+  exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname='register_enquiry_attachment') as register_attachment_rpc_ok,
+  exists(select 1 from storage.buckets where id='rfq-files' and public=false) as rfq_files_private_bucket_ok,
+  exists(select 1 from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname='submit_enquiry' and pg_get_functiondef(p.oid) ilike '%enquiry_id%') as submit_enquiry_returns_id_contract_ok;
