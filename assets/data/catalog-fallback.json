@@ -1645,7 +1645,7 @@
       },
       "badge": "Cooling",
       "href": "/request-quote.html?requirement=Condenser%20fan%20/%20cooling%20fan",
-      "image_url": "/assets/images/div-maintenance-v23.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-fan.webp"
     },
     {
       "slug": "chiller-compressor",
@@ -1686,7 +1686,7 @@
       },
       "badge": "Heat exchange",
       "href": "/request-quote.html?requirement=Condenser%20/%20heat-exchanger%20component",
-      "image_url": "/assets/images/project-chiller-v23.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-condenser.webp"
     },
     {
       "slug": "chiller-controller",
@@ -1707,7 +1707,7 @@
       },
       "badge": "Controls",
       "href": "/request-quote.html?requirement=Chiller%20controller%20/%20display%20/%20control%20board",
-      "image_url": "/assets/images/prod-chiller-v23.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-controller.webp"
     },
     {
       "slug": "chiller-electrical",
@@ -1772,7 +1772,7 @@
       },
       "badge": "Plumbing",
       "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors",
-      "image_url": "/assets/images/resource-maintenance-v23.webp"
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-hose-fitting.webp"
     },
     {
       "slug": "co2-laser-tube",
