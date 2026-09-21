@@ -14,6 +14,7 @@
     'press-brake-tooling':'press-brake',
     'custom-obsolete-spares':'custom-obsolete'
   };
+  const LIVE_QUERY_TIMEOUT_MS = 4500;
   const GENERIC_IMAGES = [
     'laser-components.webp','prod-spares-v23.webp','prod-laser-v23.webp','prod-chiller-v23.webp',
     'prod-pump-v23b.webp','project-co2-v23b.webp','service-laser-marking.webp','prod-cnc-v22.webp','prod-cnc-v23b.webp'
@@ -84,10 +85,19 @@
   }
 
   async function queryPublished(client,table,limit){
+    let timer=null;
     try{
-      const result=await client.from(table).select('*').eq('published',true).order('sort_order',{ascending:true}).limit(limit);
+      const query=client.from(table).select('*').eq('published',true).order('sort_order',{ascending:true}).limit(limit);
+      const timeout=new Promise((_,reject)=>{
+        timer=setTimeout(()=>reject(new Error(`Catalogue live query timed out: ${table}`)),LIVE_QUERY_TIMEOUT_MS);
+      });
+      const result=await Promise.race([query,timeout]);
+      if(timer) clearTimeout(timer);
       return {ok:!result.error,data:result.error?[]:(result.data||[]),error:result.error||null};
-    }catch(error){return {ok:false,data:[],error}}
+    }catch(error){
+      if(timer) clearTimeout(timer);
+      return {ok:false,data:[],error};
+    }
   }
 
   async function loadLive(){
