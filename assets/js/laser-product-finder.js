@@ -59,16 +59,31 @@ document.addEventListener('DOMContentLoaded', async () => {
     licheng:['li cheng','leicheng']
   };
 
-  const approvedFinderImage=url=>{
-    const u=String(url||'').trim().toLowerCase();
+  const duplicateOrInvalidImageSlugs=new Set([
+    'handheld-laser-welding-chillers',
+    'tube-3d-laser-cutting-heads',
+    'laser-chiller-compressors-refrigeration',
+    'laser-chiller-fans-cooling',
+    'laser-chiller-pumps',
+    'handheld-laser-chiller',
+    'teyu-cwfl-1500',
+    'laser-chiller-temperature-sensors',
+    'smart-high-power-laser-cutting-heads',
+    'laser-chiller-spares',
+    'laser-chiller-valves-hoses-fittings',
+    'laser-lens-cartridges-drawers',
+    'laser-welding-consumables',
+    'manual-focus-laser-cutting-heads'
+  ]);
+
+  const approvedFinderImage=(url,slug)=>{
+    const u=String(url||'').trim();
+    const lower=u.toLowerCase();
     if(!u)return '';
-    if(/\.svg(?:$|\?)/.test(u))return '';
-    if(!/\.(webp|png|jpe?g)(?:$|\?)/.test(u))return '';
-    const dedicated=
-      u.includes('/assets/images/catalog/') ||
-      u.includes('/assets/images/laser-consumables/generated-') ||
-      u.includes('/assets/images/laser-consumables/protective-window');
-    return dedicated?String(url).trim():'';
+    if(duplicateOrInvalidImageSlugs.has(String(slug||'')))return '';
+    if(/\.svg(?:$|\?)/.test(lower))return '';
+    if(!/\.(webp|png|jpe?g)(?:$|\?)/.test(lower))return '';
+    return u;
   };
 
   const productText=p=>norm([
@@ -152,7 +167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ...p,
       familyKey:familyFor(p),
       displayBrand:brandFor(p),
-      image:approvedFinderImage(p.image_url||p.image||''),
+      image:approvedFinderImage(p.image_url||p.image||'',p.slug),
       href:p.href||('/products/catalog/'+encodeURIComponent(p.slug||'')+'.html')
     }));
     els.source.textContent=`${products.length} laser products & references`;
@@ -210,7 +225,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function imageHtml(p){
     if(!p.image)return '<div class="lpf-img-fallback"><span>Image under verification<br>Use model / part number for identification</span></div>';
-    return `<img src="${safe(p.image)}" alt="${safe(p.name||p.title||'Laser product')}" loading="lazy" decoding="async" onload="if(this.naturalWidth<480||this.naturalHeight<320){this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image withheld — low resolution<br>Use model / part number for identification</span>'}))}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image under verification<br>Use model / part number for identification</span>'}))">`;
+    return `<img src="${safe(p.image)}" alt="${safe(p.name||p.title||'Laser product')}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image under verification<br>Use model / part number for identification</span>'}))">`;
   }
 
   function renderActive(){
