@@ -2676,7 +2676,7 @@
       "name": "3D-Printed Fit / Proof Parts",
       "family": "custom-obsolete",
       "category": "Prototype",
-      "description": "Rapid fit/form prototypes before final manufacturing.",
+      "description": "Rapid fit/form prototypes used to verify dimensions and assembly before final manufacturing.",
       "keywords": [
         "3d printed prototype",
         "fit check",
