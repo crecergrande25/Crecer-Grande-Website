@@ -267,7 +267,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       slug:p.slug||'',
       name:p.name||p.title||'Product',
       desc:p.short_description||p.description||p.subcategory||p.category||'',
-      href:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
+      href:p.href||('/products/catalog/'+encodeURIComponent(p.slug||'')+'.html'),
       brand:brandNameById[String(p.brand_id)]||p.brand||'',
       meta:[p.manufacturer_part_number,p.model,p.model_number,p.cg_product_code,p.category].filter(Boolean),
       image:resolveProductImage(p),
