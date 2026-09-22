@@ -177,7 +177,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     'laser-chiller-spares':['chiller-spares'],
     'cnc-vmc-machine-spares':['cnc-vmc'],
     'press-brake-tooling':['press-brake'],
-    'custom-obsolete-spares':['custom-obsolete']
+    'custom-obsolete-spares':['custom-obsolete'],
+    'automation-control':['automation'],
+    'rapid-prototyping':['3d-printing']
   };
   const categoryLabelMap={
     'manual-focus-cutting-heads':['manual-focus cutting head'],
