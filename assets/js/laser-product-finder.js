@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
-  let categories=[],brands=[],models=[];
+  let categories=[],brands=[],models=[],catalogProducts=[];
   try{
     if(!window.CG_CATALOG) throw new Error('Catalogue service unavailable');
     const snapshot=await window.CG_CATALOG.getSnapshot();
@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     models=snapshot.models||[];
     fallback.products=snapshot.fallback?.products||[];
     live.products=snapshot.live?.products||[];
+    catalogProducts=snapshot.products||fallback.products||[];
     if(!live.products.length && snapshot.source==='supabase') live.products=snapshot.products||[];
     if(!fallback.products.length && snapshot.source!=='supabase') fallback.products=snapshot.products||[];
     document.documentElement.dataset.catalogSource=snapshot.source||'';
@@ -242,45 +243,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     const selectedModel=models.find(x=>String(x.id)===model.value);
     let rows=[];
 
-    rows.push(...live.products.filter(p=>{
-      if(category.value&&!catIds.has(String(p.category_id)))return false;
-      if(selectedBrand&&String(p.brand_id)!==selectedBrand)return false;
+    rows.push(...catalogProducts.filter(p=>{
+      const categoryMatch=!category.value||
+        (p.category_id&&catIds.has(String(p.category_id)))||
+        fallbackCategoryMatch(p,catIds);
+      if(!categoryMatch)return false;
+      const productBrand=brandNameById[String(p.brand_id)]||p.brand||'';
+      if(selectedBrand&&String(p.brand_id)!==selectedBrand&&norm(productBrand)!==norm(selectedBrandName))return false;
+      const modelText=norm(p.model||p.model_number||'');
+      const modelMatch=!model.value||modelText===norm(selectedModel?.model_name)||
+        termMatch(norm([p.name,p.model,p.model_number,(p.keywords||p.search_keywords||[]).join?.(' ')||''].join(' ')),norm(selectedModel?.model_name));
+      if(!modelMatch)return false;
       const hay=norm([
-        p.name,p.title,p.short_description,p.description,p.category,p.subcategory,
-        p.manufacturer_part_number,p.model_number,p.cg_product_code,
-        Array.isArray(p.tags)?p.tags.join(' '):p.tags
+        p.name,p.title,p.short_description,p.description,p.category,p.subcategory,p.family,
+        p.manufacturer_part_number,p.model,p.model_number,p.cg_product_code,p.brand,productBrand,
+        Array.isArray(p.tags)?p.tags.join(' '):p.tags,
+        Array.isArray(p.keywords)?p.keywords.join(' '):p.keywords,
+        Array.isArray(p.search_keywords)?p.search_keywords.join(' '):p.search_keywords
       ].filter(Boolean).join(' '));
       return !terms.length||termsMatch(hay,terms);
     }).map(p=>({
-      kind:'Live product',
+      kind:'Catalogue product',
       slug:p.slug||'',
       name:p.name||p.title||'Product',
       desc:p.short_description||p.description||p.subcategory||p.category||'',
-      href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug),
-      brand:brandNameById[String(p.brand_id)]||'',
-      meta:[p.manufacturer_part_number,p.model_number,p.cg_product_code,p.stock_status,p.lead_time||p.lead_time_note].filter(Boolean),
+      href:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
+      brand:brandNameById[String(p.brand_id)]||p.brand||'',
+      meta:[p.manufacturer_part_number,p.model,p.model_number,p.cg_product_code,p.category].filter(Boolean),
       image:resolveProductImage(p),
       sprite:''
     })));
-
-    rows.push(...((fallback.products||[]).filter(p=>{
-      const catMatch=fallbackCategoryMatch(p,catIds);
-      const brandMatch=!selectedBrand||norm(p.brand)===norm(selectedBrandName);
-      const modelMatch=!model.value||norm(p.model)===norm(selectedModel?.model_name)||termMatch(norm([p.name,p.model,(p.keywords||[]).join(' ')].join(' ')),norm(selectedModel?.model_name));
-      const hay=norm([p.name,p.description,p.category,p.family,p.brand,p.model,(p.keywords||[]).join(' '),Object.values(p.specs||{}).join(' ')].filter(Boolean).join(' '));
-      return catMatch&&brandMatch&&modelMatch&&(!terms.length||termsMatch(hay,terms));
-    }).map(p=>({
-      kind:'Catalogue reference',
-      slug:p.slug||'',
-      name:p.name,
-      desc:p.description,
-      href:p.href,
-      brand:p.brand||'',
-      meta:[p.model,p.category].filter(Boolean),
-      image:resolveProductImage(p),
-      sprite:''
-    }))));
-
     if(!rows.length||terms.length){
       rows.push(...categories.filter(c=>{
         if(category.value&&!catIds.has(String(c.id)))return false;
@@ -315,7 +307,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const seen=new Set();
-    rows=rows.filter(x=>{const k=x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,72);
+    rows=rows.filter(x=>{const k=(x.slug||'')+'|'+x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,120);
     count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
     results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
       <a class="finder-media${x.image?'':' finder-media-pending'}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
@@ -326,7 +318,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         <h3>${safe(x.name)}</h3>
         <p>${safe(x.desc||'Technical details are confirmed before quotation.')}</p>
         <div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div>
-        <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Live product'?'View details':'Send requirement'} →</a></div>
+        <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Catalogue product'?'View details':'Send requirement'} →</a></div>
       </div>
     </article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
   }

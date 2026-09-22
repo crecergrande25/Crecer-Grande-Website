@@ -170,7 +170,7 @@
         specs:(p.specifications&&typeof p.specifications==='object')?p.specifications:{},
         badge:p.badge||p.subcategory||p.category||cat?.name||'Live product',
         image_url:image,
-        href:'/products/product-detail.html?slug='+encodeURIComponent(p.slug||''),
+        href:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
         sort_order:p.sort_order??i
       };
     });
@@ -180,7 +180,7 @@
     const liveBySlug=new Map((liveProducts||[]).filter(p=>text(p.slug)).map(p=>[text(p.slug),p]));
     return (fallbackProducts||[]).map((fallbackProduct,i)=>{
       const liveProduct=liveBySlug.get(text(fallbackProduct.slug));
-      if(!liveProduct) return {...fallbackProduct,source:'fallback-cache',sort_order:fallbackProduct.sort_order??i};
+      if(!liveProduct) return {...fallbackProduct,source:'fallback-cache',href:'/products/catalog/'+encodeURIComponent(fallbackProduct.slug||'')+'.html',sort_order:fallbackProduct.sort_order??i};
       const liveImage=genericImage(liveProduct.image_url)?'':text(liveProduct.image_url);
       return {
         ...fallbackProduct,
@@ -192,7 +192,7 @@
         keywords:Array.isArray(liveProduct.search_keywords)&&liveProduct.search_keywords.length?liveProduct.search_keywords:(fallbackProduct.keywords||fallbackProduct.tags||[]),
         specifications:(liveProduct.specifications&&Object.keys(liveProduct.specifications).length)?liveProduct.specifications:(fallbackProduct.specifications||fallbackProduct.specs||{}),
         specs:(liveProduct.specifications&&Object.keys(liveProduct.specifications).length)?liveProduct.specifications:(fallbackProduct.specs||fallbackProduct.specifications||{}),
-        href:'/products/product-detail.html?slug='+encodeURIComponent(liveProduct.slug||fallbackProduct.slug||''),
+        href:'/products/catalog/'+encodeURIComponent(liveProduct.slug||fallbackProduct.slug||'')+'.html',
         sort_order:fallbackProduct.sort_order??liveProduct.sort_order??i
       };
     });
