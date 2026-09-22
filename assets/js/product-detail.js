@@ -31,9 +31,11 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const metaTitle=(p.seo_title||p.name)+' | Crecer Grande';
     const rawDescription=p.seo_description||p.short_description||p.description||'Technical catalogue product details and compatibility information from Crecer Grande.';
     const metaDescription=String(rawDescription).replace(/\s+/g,' ').trim().slice(0,160);
-    const canonicalUrl=location.origin+'/products/catalog/'+encodeURIComponent(p.slug||slug)+'.html';
+    const canonicalUrl=p.canonical_url?new URL(p.canonical_url,location.origin).href:location.origin+'/products/catalog/'+encodeURIComponent(p.slug||slug)+'.html';
+    const currentUrl=location.origin+location.pathname;
+    const isCanonicalPage=currentUrl.replace(/\/$/,'')===canonicalUrl.replace(/\/$/,'');
     document.title=metaTitle;
-    setRobots('index,follow,max-image-preview:large');
+    setRobots(isCanonicalPage?'index,follow,max-image-preview:large':'noindex,follow');
     setMeta('meta[name="description"]','content',metaDescription);
     setMeta('link[rel="canonical"]','href',canonicalUrl);
     setMeta('meta[property="og:title"]','content',metaTitle);
