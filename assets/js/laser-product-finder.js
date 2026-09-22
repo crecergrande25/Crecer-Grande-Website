@@ -59,31 +59,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     licheng:['li cheng','leicheng']
   };
 
-  const duplicateOrInvalidImageSlugs=new Set([
-    'handheld-laser-welding-chillers',
-    'tube-3d-laser-cutting-heads',
-    'laser-chiller-compressors-refrigeration',
-    'laser-chiller-fans-cooling',
-    'laser-chiller-pumps',
-    'handheld-laser-chiller',
-    'teyu-cwfl-1500',
-    'laser-chiller-temperature-sensors',
-    'smart-high-power-laser-cutting-heads',
-    'laser-chiller-spares',
-    'laser-chiller-valves-hoses-fittings',
-    'laser-lens-cartridges-drawers',
-    'laser-welding-consumables',
-    'manual-focus-laser-cutting-heads'
-  ]);
-
-  const approvedFinderImage=(url,slug)=>{
+  const approvedFinderImage=(url)=>{
     const u=String(url||'').trim();
     const lower=u.toLowerCase();
     if(!u)return '';
-    if(duplicateOrInvalidImageSlugs.has(String(slug||'')))return '';
     if(/\.svg(?:$|\?)/.test(lower))return '';
     if(!/\.(webp|png|jpe?g)(?:$|\?)/.test(lower))return '';
-    return u;
+    const dedicated=
+      lower.includes('/assets/images/catalog/') ||
+      lower.includes('/assets/images/laser-consumables/generated-') ||
+      lower.includes('/assets/images/laser-consumables/protective-window');
+    return dedicated?u:'';
   };
 
   const productText=p=>norm([
@@ -167,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ...p,
       familyKey:familyFor(p),
       displayBrand:brandFor(p),
-      image:approvedFinderImage(p.image_url||p.image||'',p.slug),
+      image:approvedFinderImage(p.image_url||p.image||''),
       href:p.href||('/products/catalog/'+encodeURIComponent(p.slug||'')+'.html')
     }));
     els.source.textContent=`${products.length} laser products & references`;
@@ -257,7 +243,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     els.results.innerHTML=shown.length?shown.map(p=>{
       const badges=techBadges(p);
       const family=FAMILY_DEFS.find(f=>f.id===p.familyKey)?.label||'Laser product';
-      return `<article class="lpf-card">
+      return `<article class="lpf-card${p.image?'':' no-image'}">
         <a class="lpf-card-media" href="${safe(p.href)}" aria-label="Open ${safe(p.name||p.title||'product')}">
           ${imageHtml(p)}
           <span class="lpf-card-badge">${safe(family)}</span>
