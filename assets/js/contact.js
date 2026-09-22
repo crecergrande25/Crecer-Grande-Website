@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(client){
       try{
         const ids=window.CGVisitorIds?window.CGVisitorIds():['',''];
-        const source=type==='general'?'website-contact-v27':type==='design'?'website-design-rfq-v27':'website-rfq-v27';
+        const source=type==='general'?'website-contact':type==='design'?'website-design-rfq':'website-rfq';
         const r=await client.rpc('submit_enquiry',{p_name:d.name||null,p_company:d.company||null,p_phone:d.phone||null,p_email:d.email||null,p_requirement_type:requirement,p_product_id:null,p_variant_id:null,p_quantity:d.quantity||null,p_message:combined||null,p_source:source,p_visitor_id:ids[0]||null,p_session_id:ids[1]||null});
         if(r.error)throw r.error; saved=true; enquiryId=r.data?.enquiry_id||null;
         if(enquiryId&&files.length){for(const file of files){await upload(client,enquiryId,file);attached++}}
