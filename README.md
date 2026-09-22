@@ -1,13 +1,14 @@
-# Crecer Grande Website V2.9.2
+# Crecer Grande Website V2.9.3
 
 Production-ready static website for **https://crecergrande.in/**.
 
 ## Current release focus
 
-V2.9.2 is the **Website Completion & Consolidation** release:
+V2.9.3 is the **Website Completion & Consolidation** release:
 
 - Supabase is the authoritative published product catalogue
 - 141 published products now have complete image, SEO title, SEO description and canonical URL coverage
+- 141 published products use 141 unique, valid image paths, with the full 141-product offline fallback synchronized
 - Product Finder and homepage search honor canonical product routes
 - Website Manager supports record creation, protected analytics and media uploads
 - Homepage and division CMS edits can publish into the public website
@@ -49,9 +50,9 @@ Crecer Grande Website uses `V<generation>.<feature-release>.<revision>`.
 - Major platform-generation changes increment the first number.
 
 Known stable reference versions: **V1.9.3** and **V2.6.4**.  
-Current release: **V2.9.2**.
+Current release: **V2.9.3**.
 
-See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.2.md`.
+See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.3.md`.
 
 ## Important security rule
 
