@@ -121,3 +121,60 @@ radial-gradient(circle at 85% 18%,rgba(7,26,54,.06),transparent 26%),#fff}
 @media(max-width:1120px){.lpf-family-grid{grid-template-columns:repeat(2,1fr)}.lpf-workspace{grid-template-columns:230px minmax(0,1fr)}}
 @media(max-width:760px){.lpf-family-grid{grid-template-columns:1fr 1fr}.lpf-workspace{display:block}.lpf-card-media{aspect-ratio:4/3}}
 @media(max-width:460px){.lpf-family-grid{grid-template-columns:1fr}}
+
+
+/* =========================================================
+   PRODUCT DETAIL V4 — ALL STATIC CATALOGUE PAGES
+   ========================================================= */
+body[data-static-product-page="1"]{background:#f5f8fb}
+body[data-static-product-page="1"] .page-hero{padding:58px 0 52px;background:
+radial-gradient(circle at 86% 12%,rgba(244,176,0,.17),transparent 25%),
+linear-gradient(135deg,#031020,#071a36 55%,#0b3b63)}
+body[data-static-product-page="1"] .page-hero:after{content:"CATALOGUE";position:absolute;right:4vw;bottom:-18px;color:rgba(255,255,255,.035);font-size:clamp(82px,12vw,180px);font-weight:950;letter-spacing:-.07em;line-height:1;pointer-events:none}
+body[data-static-product-page="1"] .page-hero h1{max-width:980px;font-size:clamp(40px,5vw,66px);line-height:1;letter-spacing:-.05em}
+body[data-static-product-page="1"] .page-hero p{max-width:760px;font-size:15px;line-height:1.72}
+body[data-static-product-page="1"] main>.section{padding:46px 0 72px}
+body[data-static-product-page="1"] #product-detail{position:relative}
+body[data-static-product-page="1"] .product-detail{display:grid;grid-template-columns:1.08fr .92fr;gap:0;overflow:hidden;border:1px solid #dbe4ed;border-radius:32px;background:#fff;box-shadow:0 28px 64px rgba(7,26,54,.11)}
+body[data-static-product-page="1"] .product-gallery{position:relative;display:grid;place-items:center;min-height:560px;padding:42px;background:
+radial-gradient(circle at 50% 42%,rgba(255,255,255,.96),rgba(238,243,247,.9) 55%,#e7edf2 100%)}
+body[data-static-product-page="1"] .product-gallery:before{content:"TECHNICAL REFERENCE";position:absolute;left:22px;top:22px;padding:7px 10px;border-radius:999px;background:#071a36;color:#f3c452;font-size:9px;font-weight:900;letter-spacing:.12em}
+body[data-static-product-page="1"] .product-gallery img{display:block;max-width:100%;max-height:500px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 22px 28px rgba(7,26,54,.16))}
+body[data-static-product-page="1"] .product-detail>div:last-child{display:flex;flex-direction:column;padding:42px;background:
+radial-gradient(circle at 90% 10%,rgba(244,176,0,.08),transparent 24%),#fff}
+body[data-static-product-page="1"] .product-detail .badge{align-self:flex-start;padding:8px 11px;border-radius:999px;background:#fff5d7;border:1px solid #ecd894;color:#805900;font-size:10px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+body[data-static-product-page="1"] .product-name{margin:17px 0 10px;color:#071a36;font-size:clamp(30px,3vw,42px);line-height:1.05;letter-spacing:-.035em}
+body[data-static-product-page="1"] .product-lede{margin:0;color:#607186;font-size:15px;line-height:1.75}
+body[data-static-product-page="1"] .data-list{margin-top:24px;padding:8px 18px;border-radius:19px;background:#f6f8fb;border:1px solid #e0e7ee}
+body[data-static-product-page="1"] .data-row{grid-template-columns:145px 1fr;padding:13px 0}
+body[data-static-product-page="1"] .data-row:last-child{border-bottom:0}
+body[data-static-product-page="1"] .data-row b{color:#071a36;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+body[data-static-product-page="1"] .data-row span{font-size:13px;color:#516277;font-weight:700}
+body[data-static-product-page="1"] .product-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:24px}
+body[data-static-product-page="1"] .product-actions .btn{min-height:50px;display:flex;align-items:center;justify-content:center}
+body[data-static-product-page="1"] .notice{margin-top:16px;padding:14px 15px;border-left:0;border:1px solid #ead9aa;border-radius:14px;background:#fff9e8;color:#665126;line-height:1.55}
+body[data-static-product-page="1"] #product-detail>section{margin-top:28px!important;padding:30px;border-radius:28px;background:#fff;border:1px solid #dce5ed;box-shadow:0 12px 28px rgba(7,26,54,.05)}
+body[data-static-product-page="1"] #product-detail>section .section-head{margin-bottom:18px}
+body[data-static-product-page="1"] #product-detail>section .section-head h2{margin:6px 0 0;color:#071a36;font-size:32px}
+body[data-static-product-page="1"] .spec-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border:1px solid #dfe6ed;border-radius:16px;background:#fff}
+body[data-static-product-page="1"] .spec-table td{padding:14px 16px;border-bottom:1px solid #edf1f5;font-size:13px;line-height:1.5}
+body[data-static-product-page="1"] .spec-table tr:last-child td{border-bottom:0}
+body[data-static-product-page="1"] .spec-table td:first-child{width:34%;background:#f7f9fb;color:#071a36;font-weight:850}
+body[data-static-product-page="1"] .spec-table td:last-child{color:#5c6d81}
+body[data-static-product-page="1"] .finder-media-pending{display:grid;place-items:center;width:100%;min-height:440px!important;border-radius:22px;background:linear-gradient(135deg,#eaf0f5,#f8fafc);color:#617286;text-align:center}
+body[data-static-product-page="1"] .finder-image-pending b{display:block;color:#071a36;font-size:18px}body[data-static-product-page="1"] .finder-image-pending small{display:block;max-width:320px;margin-top:7px;line-height:1.55}
+@media(max-width:920px){
+  body[data-static-product-page="1"] .product-detail{grid-template-columns:1fr}
+  body[data-static-product-page="1"] .product-gallery{min-height:420px}
+  body[data-static-product-page="1"] .product-detail>div:last-child{padding:30px}
+}
+@media(max-width:620px){
+  body[data-static-product-page="1"] .page-hero{padding:44px 0 40px}
+  body[data-static-product-page="1"] .page-hero h1{font-size:39px}
+  body[data-static-product-page="1"] .product-gallery{min-height:330px;padding:28px}
+  body[data-static-product-page="1"] .product-detail>div:last-child{padding:24px}
+  body[data-static-product-page="1"] .product-actions{grid-template-columns:1fr}
+  body[data-static-product-page="1"] .data-row{grid-template-columns:1fr;gap:5px}
+  body[data-static-product-page="1"] #product-detail>section{padding:22px}
+  body[data-static-product-page="1"] .spec-table td{display:block;width:100%!important}
+}
