@@ -2187,7 +2187,8 @@
       },
       "badge": "Machine spare",
       "image": "/assets/images/prod-pump-v22.webp",
-      "href": "/request-quote.html?requirement=Machine%20coolant%20pump"
+      "href": "/request-quote.html?requirement=Machine%20coolant%20pump",
+      "image_url": "/assets/images/catalog/cnc-vmc/cnc-coolant-pump.webp"
     },
     {
       "slug": "cnc-lubrication",
