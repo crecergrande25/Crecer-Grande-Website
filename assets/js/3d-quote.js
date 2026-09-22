@@ -241,7 +241,7 @@ async function submitRequirement(){
   try{
     if(!client)throw new Error('Website backend is not available.');
     const ids=window.CGVisitorIds?window.CGVisitorIds():['',''];
-    const r=await client.rpc('submit_enquiry',{p_name:name,p_company:companyEl.value.trim()||null,p_phone:phone||null,p_email:email||null,p_requirement_type:'3D Printing / CAD Review',p_product_id:null,p_variant_id:null,p_quantity:String(q),p_message:lines.join('\n'),p_source:'3d-platform-v26-part3',p_visitor_id:ids[0]||null,p_session_id:ids[1]||null});
+    const r=await client.rpc('submit_enquiry',{p_name:name,p_company:companyEl.value.trim()||null,p_phone:phone||null,p_email:email||null,p_requirement_type:'3D Printing / CAD Review',p_product_id:null,p_variant_id:null,p_quantity:String(q),p_message:lines.join('\n'),p_source:'3d-platform',p_visitor_id:ids[0]||null,p_session_id:ids[1]||null});
     if(r.error)throw r.error;const enquiryId=r.data?.enquiry_id;if(!enquiryId)throw new Error('Enquiry reference was not returned.');
     await upload(client,enquiryId,current.file);window.CGTrack?.('3d_quote_submit',{process:processEl.value,material:materialEl.value,route:current.estimate?.route||'rfq'});
     submitStatus.className='q3-state ok';submitStatus.innerHTML=`<b>Requirement recorded and CAD file uploaded.</b> Reference ${String(enquiryId).slice(0,8).toUpperCase()}. CG can now review the actual file before confirming price and manufacturability.`;
