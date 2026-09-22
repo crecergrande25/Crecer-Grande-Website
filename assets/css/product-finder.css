@@ -78,3 +78,46 @@ linear-gradient(135deg,#020d1f 0%,#071a36 54%,#0b315e 100%);color:#fff}
 
 .lpf-card.no-image .lpf-card-media{aspect-ratio:auto;min-height:92px;background:linear-gradient(135deg,#eef3f7,#f8fafc)}
 .lpf-card.no-image .lpf-img-fallback{min-height:92px;padding:18px;color:#63758b;font-weight:800;line-height:1.5}
+
+
+/* =========================================================
+   PRODUCT FINDER V4 — INDUSTRIAL SEARCH CONSOLE
+   ========================================================= */
+.lpf-v4-console{overflow:hidden;background:
+radial-gradient(circle at 85% 12%,rgba(244,176,0,.12),transparent 26%),
+linear-gradient(145deg,rgba(2,14,32,.82),rgba(10,50,84,.66))}
+.lpf-v4-console:before{content:"";position:absolute;inset:0;opacity:.2;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px}
+.lpf-v4-console>*{position:relative;z-index:1}
+.lpf-signal{position:relative;overflow:hidden;min-height:104px;padding:15px 15px 15px 18px}
+.lpf-signal:before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#f3c452}
+.lpf-panel-note{border:1px solid rgba(244,176,0,.16)}
+.lpf-search-card{border-radius:28px;padding:26px}
+.lpf-input input{height:66px;border-radius:17px;font-size:16px}
+.lpf-search-line .btn{min-height:66px}
+
+/* family selectors behave like visual instrument tiles rather than plain buttons */
+.lpf-family-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+.lpf-family{min-height:144px;padding:18px 18px 16px;background:
+radial-gradient(circle at 85% 18%,rgba(7,26,54,.06),transparent 26%),#fff}
+.lpf-family:before{content:"";position:absolute;right:14px;top:14px;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#e9eff5,#f8fafc);box-shadow:inset 0 0 0 1px #dfe7ee}
+.lpf-family[data-family="cutting-heads"]:before{background:linear-gradient(135deg,#071a36,#184b75)}
+.lpf-family[data-family="nozzles"]:before{background:radial-gradient(circle at 50% 50%,#f3c452 0 20%,#071a36 22% 42%,#e9eff5 44%)}
+.lpf-family[data-family="optics"]:before{background:radial-gradient(circle,#bce7f3 0 30%,#5c91b4 32% 46%,#e9eff5 48%)}
+.lpf-family[data-family="ceramics-sensors"]:before{background:linear-gradient(45deg,#eee 0 35%,#d3a125 36% 48%,#071a36 49%)}
+.lpf-family[data-family="chillers"]:before{background:linear-gradient(135deg,#0a527a,#85cde5)}
+.lpf-family[data-family="chiller-spares"]:before{background:conic-gradient(#071a36,#f3c452,#56758e,#071a36)}
+.lpf-family[data-family="welding-cleaning"]:before{background:linear-gradient(135deg,#e77725,#f7d262 48%,#0b315d)}
+.lpf-family[data-family="co2"]:before{background:linear-gradient(135deg,#4e1717,#b8432e 55%,#071a36)}
+.lpf-family[data-family="all"]:before{background:linear-gradient(135deg,#071a36 0 33%,#f3c452 34% 66%,#7da2bc 67%)}
+.lpf-family .num{position:relative;z-index:2}.lpf-family b{max-width:75%;font-size:15px}.lpf-family small{max-width:82%;font-size:10px}
+.lpf-family.active:before{box-shadow:0 0 0 2px rgba(244,176,0,.32)}
+.lpf-workspace{grid-template-columns:270px minmax(0,1fr);gap:24px}
+.lpf-filter-panel{border-radius:22px;box-shadow:0 12px 28px rgba(7,26,54,.05)}
+.lpf-results{gap:16px}
+.lpf-card{border-radius:22px;box-shadow:0 12px 30px rgba(7,26,54,.06)}
+.lpf-card-media{aspect-ratio:1.18/1}.lpf-card-body{padding:18px}.lpf-card h3{font-size:18px}.lpf-card p{font-size:11px}
+.lpf-card-actions a{min-height:42px;border-radius:11px}
+.lpf-identify{border-radius:30px;box-shadow:0 22px 48px rgba(7,26,54,.12)}
+@media(max-width:1120px){.lpf-family-grid{grid-template-columns:repeat(2,1fr)}.lpf-workspace{grid-template-columns:230px minmax(0,1fr)}}
+@media(max-width:760px){.lpf-family-grid{grid-template-columns:1fr 1fr}.lpf-workspace{display:block}.lpf-card-media{aspect-ratio:4/3}}
+@media(max-width:460px){.lpf-family-grid{grid-template-columns:1fr}}
