@@ -55,10 +55,10 @@
     injectHeaderStyles();
   }
 
-  function id(storageKey){
-    try{let v=localStorage.getItem(storageKey);if(!v){v=crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(36).slice(2)}`;localStorage.setItem(storageKey,v)}return v}catch(_){return ''}
+  function id(storageKey,storage){
+    try{let v=storage.getItem(storageKey);if(!v){v=crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(36).slice(2)}`;storage.setItem(storageKey,v)}return v}catch(_){return ''}
   }
-  window.CGVisitorIds=()=>[id('cg_visitor_id'),id('cg_session_id')];
+  window.CGVisitorIds=()=>[id('cg_visitor_id',localStorage),id('cg_session_id',sessionStorage)];
 
   async function track(eventType, metadata={}){
     const cfg=window.CG_CONFIG||{}, client=window.CG_SUPABASE;
@@ -83,7 +83,7 @@
     ab?.addEventListener('click',()=>ap.classList.toggle('open'));
     document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask'))ap.classList.remove('open')});
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
-    document.addEventListener('click',(e)=>{const a=e.target.closest('a'); if(!a)return; if(/wa\.me/.test(a.href)) track('whatsapp_click',{href:a.href}); else if(a.href.startsWith('mailto:')) track('email_click',{href:a.href}); else if(/request-quote/.test(a.href)) track('quote_click',{href:a.href}); else if(/contact\.html/.test(a.href)) track('contact_click',{href:a.href});});
+    document.addEventListener('click',(e)=>{const a=e.target.closest('a'); if(!a)return; if(/wa\.me/.test(a.href)) track('click_whatsapp',{href:a.href}); else if(a.href.startsWith('tel:')) track('click_phone',{href:a.href}); else if(a.href.startsWith('mailto:')) track('click_email',{href:a.href}); else if(/instagram\.com/.test(a.href)) track('outbound_instagram',{href:a.href});});
     setTimeout(()=>track('page_view'),300);
   }
 
