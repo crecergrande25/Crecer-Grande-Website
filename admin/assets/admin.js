@@ -2,7 +2,7 @@
 (() => {
   const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
   const cfg=window.CG_CONFIG||{};
-  let client=null, profile=null, roles=[], currentView='dashboard', currentTable=null, tableRows=[], editing=null, creating=false;
+  let client=null, profile=null, roles=[], permissions=new Set(), currentView='dashboard', currentTable=null, tableRows=[], editing=null, creating=false;
 
   const tableDefs={
     settings:{label:'Website Settings',table:'site_settings',icon:'⚙',preferred:['id','company_name','tagline','email_primary','phone_primary','instagram_url','logo_url','website_version']},
@@ -61,12 +61,18 @@
     if(error)throw error;if(!data?.is_active)throw new Error('This administrator profile is inactive.');
     return data;
   }
+  async function loadPermissions(){
+    const {data,error}=await client.rpc('get_my_permissions');
+    if(error){permissions=new Set();return}
+    permissions=new Set((data||[]).filter(x=>x.allowed).map(x=>x.permission_key));
+  }
+  const can=key=>Boolean(profile?.is_root||permissions.has(key));
   async function login(e){
     e.preventDefault(); const b=$('#login-btn');b.disabled=true;$('#login-status').textContent='Signing in…';
     try{
       const email=aliasToEmail($('#login-alias').value),password=$('#login-password').value;
       const {error}=await client.auth.signInWithPassword({email,password}); if(error)throw error;
-      profile=await loadProfile(); showApp();
+      profile=await loadProfile(); await loadPermissions(); showApp();
     }catch(err){$('#login-status').textContent=err.message||String(err)}
     finally{b.disabled=false}
   }
@@ -74,6 +80,8 @@
     $('#login-shell').classList.add('hidden');$('#admin-app').classList.add('open');
     $('#profile-name').textContent=profile.display_name||profile.login_slug||'Administrator';
     $('#profile-role').textContent=(profile.role_key||'administrator')+(profile.is_root?' • Root':'');
+    const usersNav=$('[data-view="users"]');
+    if(usersNav)usersNav.hidden=!(can('users.view')||can('users.manage'));
     if(profile.must_change_password){status('This account is marked to change its password. Use Account → Change Password.','warn')}
     view('dashboard');
   }
@@ -253,14 +261,16 @@
     }catch(e){c.innerHTML=`<div class="notice bad">${escape(e.message||String(e))}</div>`}
   }
   async function userView(){
-    const c=$('#content');c.innerHTML='<div class="notice">Loading users and roles…</div>';
+    const c=$('#content');
+    if(!(can('users.view')||can('users.manage'))){c.innerHTML='<div class="notice bad">Your role does not have permission to manage users.</div>';return}
+    c.innerHTML='<div class="notice">Loading users and roles…</div>';
     const [u,r]=await Promise.all([client.from('user_profiles').select('*').order('display_name'),client.from('app_roles').select('*')]);
     if(u.error){c.innerHTML=`<div class="notice bad">${escape(u.error.message)}</div>`;return}
     roles=r.data||[];const users=u.data||[];
-    c.innerHTML=`<div class="toolbar"><button class="btn primary" id="new-user">Create User</button><span class="tag">${users.length} profiles</span><div class="spacer"></div><span class="tag">Privileged auth actions run through Edge Function</span></div><div class="user-grid">${users.map(x=>`<div class="user-card"><h3>${escape(x.display_name||x.login_slug||'User')}</h3><p>${escape(x.login_slug||'')} • ${escape(x.role_key||'administrator')}</p><p>${x.is_root?'Root • ':''}${x.is_active?'Active':'Inactive'} • ${x.show_on_login?'Shown on login':'Hidden on login'}${x.must_change_password?' • Must change password':''}</p><div class="row-actions"><button class="mini" data-useredit="${escape(x.user_id)}">Edit</button><button class="mini" data-userpass="${escape(x.user_id)}">Reset password</button></div></div>`).join('')}</div>`;
-    $('#new-user').onclick=()=>userModal('create',null);
-    $$('[data-useredit]').forEach(b=>b.onclick=()=>userModal('update',users.find(x=>x.user_id===b.dataset.useredit)));
-    $$('[data-userpass]').forEach(b=>b.onclick=()=>userModal('reset_password',users.find(x=>x.user_id===b.dataset.userpass)));
+    c.innerHTML=`<div class="toolbar">${can('users.manage')?'<button class="btn primary" id="new-user">Create User</button>':''}<span class="tag">${users.length} profiles</span><div class="spacer"></div><span class="tag">Privileged auth actions run through Edge Function</span></div><div class="user-grid">${users.map(x=>`<div class="user-card"><h3>${escape(x.display_name||x.login_slug||'User')}</h3><p>${escape(x.login_slug||'')} • ${escape(x.role_key||'administrator')}</p><p>${x.is_root?'Root • ':''}${x.is_active?'Active':'Inactive'} • ${x.show_on_login?'Shown on login':'Hidden on login'}${x.must_change_password?' • Must change password':''}</p><div class="row-actions"><button class="mini" data-useredit="${escape(x.user_id)}">Edit</button><button class="mini" data-userpass="${escape(x.user_id)}">Reset password</button></div></div>`).join('')}</div>`;
+    if($('#new-user'))$('#new-user').onclick=()=>userModal('create',null);
+    $('[data-useredit]').forEach(b=>{b.hidden=!can('users.manage');b.onclick=()=>userModal('update',users.find(x=>x.user_id===b.dataset.useredit))});
+    $('[data-userpass]').forEach(b=>{b.hidden=!can('users.manage');b.onclick=()=>userModal('reset_password',users.find(x=>x.user_id===b.dataset.userpass))});
   }
   function roleOptions(value){return roles.map(r=>`<option value="${escape(r.role_key)}" ${r.role_key===value?'selected':''}>${escape(r.name||r.role_key)}</option>`).join('')}
   function userModal(action,u){
@@ -300,7 +310,7 @@
     $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.9.2';
     status('');
     if(key==='dashboard')return dashboard();
-    if(key==='users')return userView();
+    if(key==='users'){if(!(can('users.view')||can('users.manage'))){status('Your role does not have permission to access Users & Access.','bad');return view('dashboard')}return userView();}
     if(key==='account')return accountView();
     if(key==='analytics')return analyticsView();
     if(key==='media')return mediaView();
@@ -314,7 +324,7 @@
       $('#user-modal-cancel').onclick=closeUserModal;
       $$('[data-view]').forEach(b=>b.onclick=()=>view(b.dataset.view));
       const {data:{session}}=await client.auth.getSession();
-      if(session){try{profile=await loadProfile();showApp()}catch(e){await client.auth.signOut();$('#login-status').textContent=e.message}}
+      if(session){try{profile=await loadProfile();await loadPermissions();showApp()}catch(e){await client.auth.signOut();$('#login-status').textContent=e.message}}
     }catch(e){$('#login-status').textContent=e.message||String(e)}
   }
   document.addEventListener('DOMContentLoaded',boot);
