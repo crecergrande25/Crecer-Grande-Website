@@ -177,8 +177,11 @@
   }
 
   function mergeCanonicalProducts(fallbackProducts,liveProducts){
-    const liveBySlug=new Map((liveProducts||[]).filter(p=>text(p.slug)).map(p=>[text(p.slug),p]));
-    return (fallbackProducts||[]).map((fallbackProduct,i)=>{
+    const fallbackRows=fallbackProducts||[];
+    const liveRows=liveProducts||[];
+    const liveBySlug=new Map(liveRows.filter(p=>text(p.slug)).map(p=>[text(p.slug),p]));
+    const canonicalSlugs=new Set(fallbackRows.map(p=>text(p.slug)).filter(Boolean));
+    const merged=fallbackRows.map((fallbackProduct,i)=>{
       const liveProduct=liveBySlug.get(text(fallbackProduct.slug));
       if(!liveProduct) return {...fallbackProduct,source:'fallback-cache',href:'/products/catalog/'+encodeURIComponent(fallbackProduct.slug||'')+'.html',sort_order:fallbackProduct.sort_order??i};
       const liveImage=genericImage(liveProduct.image_url)?'':text(liveProduct.image_url);
@@ -196,6 +199,15 @@
         sort_order:fallbackProduct.sort_order??liveProduct.sort_order??i
       };
     });
+    const liveOnly=liveRows
+      .filter(p=>text(p.slug)&&!canonicalSlugs.has(text(p.slug)))
+      .map((p,i)=>({
+        ...p,
+        source:'supabase',
+        href:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
+        sort_order:p.sort_order??(fallbackRows.length+i)
+      }));
+    return [...merged,...liveOnly].sort((a,b)=>(Number(a.sort_order??999999)-Number(b.sort_order??999999))||text(a.name||a.title).localeCompare(text(b.name||b.title)));
   }
 
   async function buildSnapshot(){
