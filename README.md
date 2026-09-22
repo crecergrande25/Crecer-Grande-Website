@@ -1,21 +1,17 @@
-# Crecer Grande Website V2.9.3
+# Crecer Grande Website V2.9.4
 
 Production-ready static website for **https://crecergrande.in/**.
 
 ## Current release focus
 
-V2.9.3 is the **Website Completion & Consolidation** release:
+V2.9.4 is the **Technical Stabilization** revision:
 
-- Supabase is the authoritative published product catalogue
-- 141 published products now have complete image, SEO title, SEO description and canonical URL coverage
-- 141 published products use 141 unique, valid image paths, with the full 141-product offline fallback synchronized
-- Product Finder and homepage search honor canonical product routes
-- Website Manager supports record creation, protected analytics and media uploads
-- Homepage and division CMS edits can publish into the public website
-- Analytics event naming and browser-session tracking are corrected
-- RFQ attachment ownership, extension controls and server-side abuse limits are hardened
-- The unused legacy Supabase security project is paused, not deleted
-- Sitemap and canonical coverage are normalized for the published catalogue
+- Fixes the shared footer-normalization JavaScript error that could stop common page initialization
+- Restores reliable initialization for the mobile navigation, Ask iKNOW and common analytics handlers
+- Removes obsolete references to the deleted `part4-visuals.css` stylesheet from laser product-family pages
+- Normalizes the public sitemap pages to the V2.9.4 shared-runtime cache key
+- Corrects the malformed duplicate query-string runtime reference on the 3D printing quote page
+- Preserves the V2.9.3 catalogue, SEO, RFQ and Website Manager functionality without structural redesign
 
 ## What is included
 
@@ -50,9 +46,9 @@ Crecer Grande Website uses `V<generation>.<feature-release>.<revision>`.
 - Major platform-generation changes increment the first number.
 
 Known stable reference versions: **V1.9.3** and **V2.6.4**.  
-Current release: **V2.9.3**.
+Current release: **V2.9.4**.
 
-See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.3.md`.
+See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.4.md`.
 
 ## Important security rule
 

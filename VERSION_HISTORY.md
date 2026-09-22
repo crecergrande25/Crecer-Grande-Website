@@ -20,5 +20,10 @@ These two versions should be treated as rollback / comparison reference points w
 
 ## Current release
 
+### V2.9.4
+Technical Stabilization revision. Fixes the shared footer-normalization runtime error, removes obsolete laser-page stylesheet references, normalizes public sitemap pages to the current shared-runtime cache key, and corrects malformed runtime query-string references without changing the public information architecture.
+
+## Previous release
+
 ### V2.9.3
 Website Completion & Consolidation final QA revision. Consolidates the 141-product catalogue, enforces unique valid product imagery, expands the offline fallback to all published products, aligns Website Manager controls with effective permissions, and repairs RFQ / 3D quote conversion tracking.
