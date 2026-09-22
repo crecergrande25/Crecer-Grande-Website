@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const input=document.getElementById('cg-global-search');
   const box=document.getElementById('cg-search-results');
   if(!input||!box)return;
-  const rows=[];
-  const add=(name,kind,desc,href,keywords='')=>rows.push({name,kind,desc,href,hay:[name,kind,desc,keywords].join(' ').toLowerCase()});
+  const rows=[],rowMap=new Map();
+  const add=(name,kind,desc,href,keywords='')=>{const key=(String(href||'')+'|'+String(name||'').toLowerCase());const row={name,kind,desc,href,hay:[name,kind,desc,keywords].join(' ').toLowerCase()};if(rowMap.has(key))Object.assign(rowMap.get(key),row);else{rows.push(row);rowMap.set(key,row)}};
   [
     ['Mechanical Design Job Work','Engineering service','2D drafting, 3D part and assembly modelling, piping layouts, manufacturing drawings, BOM, revisions and reverse engineering.','/design-job-work.html','mechanical engineer senior design engineer 2d drafting 3d modelling piping design layout inventor autocad dwg dxf step stp assembly drawing manufacturing drawing bom ga isometric reverse engineering dfm dfa job work outsourced cad'],
     ['Mechanical Design & CAD','Engineering service','Mechanical CAD, manufacturing drawings, BOM, DFM/DFA and reverse engineering.','/mechanical-design-services-kolkata.html','inventor cad drawing design reverse engineering dfm dfa bom'],
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
   try{
     const data=await (await fetch('/assets/data/catalog-fallback.json',{cache:'no-store'})).json();
     (data.categories||[]).forEach(x=>add(x.name,'Product family',x.description||'','/products/laser-product-finder.html?q='+encodeURIComponent(x.name),(x.keywords||[]).join(' ')));
+    (data.products||[]).forEach(x=>add(x.name,'Catalogue product',x.description||x.category||'',x.href||('/products/catalog/'+encodeURIComponent(x.slug)+'.html'),[x.category,x.family,x.brand,x.model,Array.isArray(x.keywords)?x.keywords.join(' '):x.keywords].filter(Boolean).join(' ')));
   }catch(_){ }
   try{
     const content=await (await fetch('/assets/data/content-index.json',{cache:'no-store'})).json();
