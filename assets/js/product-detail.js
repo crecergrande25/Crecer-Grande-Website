@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const host=document.getElementById('product-detail'); if(!host)return;
   const querySlug=new URLSearchParams(location.search).get('slug');
   const staticSlug=String(document.body.dataset.productSlug||'').trim();
-  if(querySlug&&!staticSlug){location.replace('/products/catalog/'+encodeURIComponent(querySlug)+'.html');return}
   const slug=staticSlug||querySlug;
   const setMeta=(selector,attr,value)=>{const node=document.querySelector(selector);if(node&&value)node.setAttribute(attr,value)};
   const setRobots=value=>setMeta('meta[name="robots"]','content',value);
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const rawDescription=p.seo_description||p.short_description||p.description||'Technical catalogue product details and compatibility information from Crecer Grande.';
     const metaDescription=String(rawDescription).replace(/\s+/g,' ').trim().slice(0,160);
     const canonicalUrl=p.canonical_url?new URL(p.canonical_url,location.origin).href:location.origin+'/products/catalog/'+encodeURIComponent(p.slug||slug)+'.html';
-    const currentUrl=location.origin+location.pathname;
+    const currentUrl=location.origin+location.pathname+location.search;
     const isCanonicalPage=currentUrl.replace(/\/$/,'')===canonicalUrl.replace(/\/$/,'');
     document.title=metaTitle;
     setRobots(isCanonicalPage?'index,follow,max-image-preview:large':'noindex,follow');
