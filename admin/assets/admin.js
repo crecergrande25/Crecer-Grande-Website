@@ -307,7 +307,7 @@
   async function view(key){
     currentView=key;$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===key));
     const label=key==='dashboard'?'Dashboard':key==='users'?'Users & Access':key==='account'?'My Account':(tableDefs[key]?.label||key);
-    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.9.2';
+    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.9.3';
     status('');
     if(key==='dashboard')return dashboard();
     if(key==='users'){if(!(can('users.view')||can('users.manage'))){status('Your role does not have permission to access Users & Access.','bad');return view('dashboard')}return userView();}
