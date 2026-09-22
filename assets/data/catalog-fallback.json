@@ -622,7 +622,8 @@
         "raytools",
         "cutting",
         "head",
-        "replacement"
+        "replacement",
+        "BM111"
       ],
       "brand": "RayTools",
       "model": "BM111",
@@ -630,9 +631,12 @@
         "Use": "2D fiber-laser cutting",
         "Selection": "Verify source interface, laser power, machine/control compatibility"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM111%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm111.webp"
+      "badge": "Autofocus cutting head",
+      "href": "/products/catalog/raytools-bm111.html",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm111.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 0
     },
     {
       "slug": "raytools-bm110",
@@ -645,7 +649,8 @@
         "autofocus",
         "raytools",
         "cutting",
-        "head"
+        "head",
+        "BM110"
       ],
       "brand": "RayTools",
       "model": "BM110",
@@ -653,9 +658,12 @@
         "Use": "2D fiber-laser cutting",
         "Selection": "Verify exact head version before supply"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM110%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm110.webp"
+      "badge": "Autofocus cutting head",
+      "href": "/products/catalog/raytools-bm110.html",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm110.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 1
     },
     {
       "slug": "raytools-bm114",
@@ -668,16 +676,20 @@
         "bm114s",
         "autofocus",
         "raytools",
-        "cutting head"
+        "cutting head",
+        "BM114 / BM114S"
       ],
       "brand": "RayTools",
       "model": "BM114 / BM114S",
       "specs": {
         "Selection": "Head suffix/version and laser power must be confirmed"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BM114%20/%20BM114S%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm114.webp"
+      "badge": "Autofocus cutting head",
+      "href": "/products/catalog/raytools-bm114.html",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bm114.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 2
     },
     {
       "slug": "raytools-bt240s",
@@ -689,7 +701,8 @@
         "bt240s",
         "manual focus",
         "raytools",
-        "cutting head"
+        "cutting head",
+        "BT240S"
       ],
       "brand": "RayTools",
       "model": "BT240S",
@@ -697,9 +710,12 @@
         "Use": "Manual-focus cutting-head applications",
         "Selection": "Verify head label and optical/consumable stack"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=RayTools%20BT240S%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/raytools-bt240s.webp"
+      "badge": "Manual-focus cutting head",
+      "href": "/products/catalog/raytools-bt240s.html",
+      "image_url": "/assets/images/catalog/cutting-heads/raytools-bt240s.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 3
     },
     {
       "slug": "precitec-procutter-2",
@@ -712,17 +728,21 @@
         "procutter",
         "procutter 2.0",
         "high power",
-        "cutting head"
+        "cutting head",
+        "ProCutter 2.0"
       ],
       "brand": "Precitec",
       "model": "ProCutter 2.0",
       "specs": {
-        "Manufacturer rating": "Up to 85 kW",
-        "Application": "Flatbed and tube cutting"
+        "Application": "Flatbed and tube cutting",
+        "Manufacturer rating": "Up to 85 kW"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%202.0%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-2.webp"
+      "badge": "High-power / intelligent cutting head",
+      "href": "/products/catalog/precitec-procutter-2.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-2.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 4
     },
     {
       "slug": "precitec-procutter-prime",
@@ -733,17 +753,21 @@
       "keywords": [
         "precitec",
         "procutter prime",
-        "cutting head"
+        "cutting head",
+        "ProCutter Prime"
       ],
       "brand": "Precitec",
       "model": "ProCutter Prime",
       "specs": {
-        "Manufacturer rating": "Up to 30 kW",
-        "Application": "2D cutting"
+        "Application": "2D cutting",
+        "Manufacturer rating": "Up to 30 kW"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Prime%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp"
+      "badge": "Autofocus / variable-beam cutting head",
+      "href": "/products/catalog/precitec-procutter-prime.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 5
     },
     {
       "slug": "precitec-procutter-zoom",
@@ -755,17 +779,21 @@
         "precitec",
         "procutter zoom",
         "zoom 2.0",
-        "cutting head"
+        "cutting head",
+        "ProCutter Zoom 2.0"
       ],
       "brand": "Precitec",
       "model": "ProCutter Zoom 2.0",
       "specs": {
-        "Manufacturer rating": "Up to 12 kW",
-        "Application": "2D cutting"
+        "Application": "2D cutting",
+        "Manufacturer rating": "Up to 12 kW"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Zoom%202.0%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-zoom.webp"
+      "badge": "Flexible 2D cutting head",
+      "href": "/products/catalog/precitec-procutter-zoom.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-zoom.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 6
     },
     {
       "slug": "precitec-procutter-thunder",
@@ -777,16 +805,20 @@
         "precitec",
         "procutter thunder",
         "3d cutting",
-        "tube cutting"
+        "tube cutting",
+        "ProCutter Thunder"
       ],
       "brand": "Precitec",
       "model": "ProCutter Thunder",
       "specs": {
         "Application": "2D, tube/profile and 3D cutting"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20ProCutter%20Thunder%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp"
+      "badge": "Medium-power 2D / 3D cutting head",
+      "href": "/products/catalog/precitec-procutter-thunder.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 7
     },
     {
       "slug": "precitec-minicutter",
@@ -797,16 +829,20 @@
       "keywords": [
         "precitec",
         "minicutter",
-        "compact cutting head"
+        "compact cutting head",
+        "MiniCutter"
       ],
       "brand": "Precitec",
       "model": "MiniCutter",
       "specs": {
         "Application": "Thin / fine cutting"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20MiniCutter%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-minicutter.webp"
+      "badge": "Compact cutting head",
+      "href": "/products/catalog/precitec-minicutter.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-minicutter.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 8
     },
     {
       "slug": "precitec-solidcutter",
@@ -817,16 +853,62 @@
       "keywords": [
         "precitec",
         "solidcutter",
-        "3d cutting"
+        "3d cutting",
+        "SolidCutter"
       ],
       "brand": "Precitec",
       "model": "SolidCutter",
       "specs": {
         "Application": "3D cutting"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=Precitec%20SolidCutter%20%E2%80%94%20cutting-head%20requirement",
-      "image_url": "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp"
+      "badge": "3D cutting head",
+      "href": "/products/catalog/precitec-solidcutter.html",
+      "image_url": "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 9
+    },
+    {
+      "slug": "fiber-laser-cutting-heads",
+      "name": "Fiber Laser Cutting Heads",
+      "family": "cutting-heads",
+      "category": "Laser Cutting Heads",
+      "description": "Complete cutting-head sourcing for manual-focus, autofocus, intelligent, tube and 3D laser applications. Compatibility is checked against laser power, source interface, machine and installed head.",
+      "keywords": [
+        "laser cutting head",
+        "fiber laser head",
+        "autofocus head",
+        "manual focus head",
+        "tube cutting head",
+        "3d cutting head",
+        "CG-LH-001"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Cutting Heads",
+      "href": "/products/catalog/fiber-laser-cutting-heads.html",
+      "image_url": "/assets/images/laser.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 10
+    },
+    {
+      "slug": "laser-consumables",
+      "name": "Laser Cutting, Welding & Marking Components",
+      "family": "welding",
+      "category": "Laser Equipment",
+      "description": "Nozzles, protective glasses, ceramic parts, lens holders, selected optics and laser-head wear parts.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Equipment",
+      "href": "/products/laser-consumables.html",
+      "image_url": "/assets/images/cg-advanced-manufacturing.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 10
     },
     {
       "slug": "wsx-cutting-head",
@@ -841,13 +923,16 @@
         "laser head"
       ],
       "brand": "WSX",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
-      "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=WSX%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
-      "image_url": "/assets/images/catalog/cutting-heads/wsx-cutting-head.webp"
+      "badge": "Cutting head",
+      "href": "/products/catalog/wsx-cutting-head.html",
+      "image_url": "/assets/images/catalog/cutting-heads/wsx-cutting-head.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 10
     },
     {
       "slug": "boci-cutting-head",
@@ -862,13 +947,16 @@
         "laser head"
       ],
       "brand": "BOCI",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
-      "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=BOCI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
-      "image_url": "/assets/images/catalog/cutting-heads/boci-cutting-head.webp"
+      "badge": "Cutting head",
+      "href": "/products/catalog/boci-cutting-head.html",
+      "image_url": "/assets/images/catalog/cutting-heads/boci-cutting-head.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 11
     },
     {
       "slug": "ospri-cutting-head",
@@ -883,13 +971,16 @@
         "laser head"
       ],
       "brand": "OSPRI",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
-      "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=OSPRI%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
-      "image_url": "/assets/images/catalog/cutting-heads/ospri-cutting-head.webp"
+      "badge": "Cutting head",
+      "href": "/products/catalog/ospri-cutting-head.html",
+      "image_url": "/assets/images/catalog/cutting-heads/ospri-cutting-head.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 12
     },
     {
       "slug": "au3tech-cutting-head",
@@ -904,13 +995,16 @@
         "laser head"
       ],
       "brand": "Au3Tech",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Head nameplate / model, laser power, source interface, machine make/model"
       },
-      "badge": "Identify by model",
-      "href": "/request-quote.html?requirement=Au3Tech%20laser%20cutting%20head%20%E2%80%94%20identify%20/%20source",
-      "image_url": "/assets/images/catalog/cutting-heads/au3tech-cutting-head.webp"
+      "badge": "Cutting head",
+      "href": "/products/catalog/au3tech-cutting-head.html",
+      "image_url": "/assets/images/catalog/cutting-heads/au3tech-cutting-head.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 13
     },
     {
       "slug": "single-layer-nozzles",
@@ -927,14 +1021,17 @@
         "m14",
         "fiber laser nozzle"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • body Ø • thread • tip/orifice Ø • height"
       },
-      "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=Single-layer%20fiber%20laser%20cutting%20nozzles",
-      "image_url": "/assets/images/laser-consumables/generated-single-layer-nozzles.webp"
+      "badge": "Cutting nozzles",
+      "href": "/products/catalog/single-layer-nozzles.html",
+      "image_url": "/assets/images/laser-consumables/generated-single-layer-nozzles.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 14
     },
     {
       "slug": "double-layer-nozzles",
@@ -949,14 +1046,17 @@
         "d32",
         "fiber laser nozzle"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • body Ø • thread • tip/orifice Ø • layer"
       },
-      "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=Double-layer%20fiber%20laser%20cutting%20nozzles",
-      "image_url": "/assets/images/laser-consumables/generated-double-layer-nozzles.webp"
+      "badge": "Cutting nozzles",
+      "href": "/products/catalog/double-layer-nozzles.html",
+      "image_url": "/assets/images/laser-consumables/generated-double-layer-nozzles.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 15
     },
     {
       "slug": "high-speed-nozzles",
@@ -970,14 +1070,17 @@
         "coated nozzle",
         "special nozzle"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • material/process • nozzle geometry"
       },
-      "badge": "Nozzles",
-      "href": "/request-quote.html?requirement=High-speed%20/%20application-specific%20laser%20nozzles",
-      "image_url": "/assets/images/laser-consumables/generated-high-speed-nozzles.webp"
+      "badge": "Cutting nozzles",
+      "href": "/products/catalog/high-speed-nozzles.html",
+      "image_url": "/assets/images/laser-consumables/generated-high-speed-nozzles.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 16
     },
     {
       "slug": "protective-window-279-41",
@@ -992,15 +1095,18 @@
         "cover glass",
         "window"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Size": "Ø27.9 × 4.1 mm",
         "Check": "Head model • optical position • coating/wavelength"
       },
-      "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9827.9%20%C3%97%204.1%20mm%20%E2%80%94%20common%20reference%20size",
-      "image_url": "/assets/images/laser-consumables/protective-window-279-41.webp"
+      "badge": "Protective windows",
+      "href": "/products/catalog/protective-window-279-41.html",
+      "image_url": "/assets/images/laser-consumables/protective-window-279-41.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 17
     },
     {
       "slug": "protective-window-249-15",
@@ -1014,15 +1120,18 @@
         "protective lens",
         "cover glass"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Size": "Ø24.9 × 1.5 mm",
         "Check": "Head model • optical position"
       },
-      "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20window%20%C3%9824.9%20%C3%97%201.5%20mm%20%E2%80%94%20common%20reference%20size",
-      "image_url": "/assets/images/laser-consumables/protective-window-249-15.webp"
+      "badge": "Protective windows",
+      "href": "/products/catalog/protective-window-249-15.html",
+      "image_url": "/assets/images/laser-consumables/protective-window-249-15.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 18
     },
     {
       "slug": "protective-windows-other",
@@ -1037,14 +1146,17 @@
         "laser glass",
         "optic window"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "OD × thickness • head model • upper/lower position"
       },
-      "badge": "Optics",
-      "href": "/request-quote.html?requirement=Protective%20/%20cover%20windows%20%E2%80%94%20other%20sizes",
-      "image_url": "/assets/images/laser-consumables/protective-windows-other.webp"
+      "badge": "Protective windows",
+      "href": "/products/catalog/protective-windows-other.html",
+      "image_url": "/assets/images/laser-consumables/protective-windows-other.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 19
     },
     {
       "slug": "focus-lens-group",
@@ -1058,14 +1170,67 @@
         "fiber laser lens",
         "focal length"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • lens OD • focal length • coating / wavelength"
       },
-      "badge": "Optics",
-      "href": "/request-quote.html?requirement=Fiber-laser%20focusing%20lens%20/%20lens%20group",
-      "image_url": "/assets/images/laser-consumables/generated-focus-optics.webp"
+      "badge": "Focus & collimation optics",
+      "href": "/products/catalog/focus-lens-group.html",
+      "image_url": "/assets/images/laser-consumables/generated-focus-optics.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 20
+    },
+    {
+      "slug": "laser-chiller-pumps",
+      "name": "Laser Chiller Pumps",
+      "family": "chiller-spares",
+      "category": "Laser Chillers",
+      "description": "Replacement pump sourcing for chiller systems serving 1500W, 2000W, 3000W and 6000W laser-system classes — exact pump matched by chiller and duty.",
+      "keywords": [
+        "laser chiller pump",
+        "laser cooling pump",
+        "replacement chiller pump",
+        "fiber laser chiller pump",
+        "industrial chiller circulation pump",
+        "1500W laser chiller pump",
+        "2000W laser chiller pump",
+        "3000W laser chiller pump",
+        "6000W laser chiller pump",
+        "pump replacement for laser chiller"
+      ],
+      "brand": "LiCheng",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Chillers",
+      "href": "/products/laser-chiller-pumps.html",
+      "image_url": "/assets/images/process-supply.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 20
+    },
+    {
+      "slug": "manual-focus-laser-cutting-heads",
+      "name": "Manual-Focus Laser Cutting Heads",
+      "family": "cutting-heads",
+      "category": "Laser Cutting Heads",
+      "description": "Manual-focus cutting-head families for compatible low- and medium-power fiber laser systems.",
+      "keywords": [
+        "manual focus cutting head",
+        "fiber laser head",
+        "laser head",
+        "CG-LH-010"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Cutting Heads",
+      "href": "/products/catalog/manual-focus-laser-cutting-heads.html",
+      "image_url": "/assets/images/am-hero-manufacturing-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 20
     },
     {
       "slug": "collimation-lens-group",
@@ -1078,14 +1243,71 @@
         "collimator",
         "collimating lens"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • lens OD • focal length • coating / wavelength"
       },
-      "badge": "Optics",
-      "href": "/request-quote.html?requirement=Fiber-laser%20collimating%20lens%20/%20lens%20group",
-      "image_url": "/assets/images/laser-consumables/generated-collimation-optics.webp"
+      "badge": "Focus & collimation optics",
+      "href": "/products/catalog/collimation-lens-group.html",
+      "image_url": "/assets/images/laser-consumables/generated-collimation-optics.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 21
+    },
+    {
+      "slug": "licheng-cg1622403501-180w-laser-chiller-pump",
+      "name": "LiCheng CG1622403501 180W Laser Chiller Pump",
+      "family": "chiller-spares",
+      "category": "Chiller Pumps",
+      "description": "Genuine LiCheng 180W electronic centrifugal circulation pump for laser water-chiller systems. 220V AC input, up to 35 L/min flow and 40 m head.",
+      "keywords": [
+        "laser chiller pump",
+        "LiCheng",
+        "180W pump",
+        "CG1622403501",
+        "LiCheng CG1622403501",
+        "180W laser chiller pump",
+        "1500W laser chiller pump",
+        "2000W welder chiller pump",
+        "220V chiller pump",
+        "laser cooling water pump",
+        "CG-LCP-180"
+      ],
+      "brand": "LiCheng",
+      "model": "CG1622403501",
+      "specs": {
+        "model": "CG1622403501",
+        "noise": "≤60 dBA at 1 m",
+        "liquid": "Clean water",
+        "max_flow": "35 ±15% L/min",
+        "max_head": "40 ±2 m",
+        "rated_power": "180 W",
+        "manufacturer": "Dongguan LiCheng Pump Industry Co., Ltd.",
+        "product_type": "Electronic centrifugal water pump",
+        "working_life": "≥10000 h",
+        "rated_voltage": "220 V AC",
+        "frame_material": "PPA/PPE",
+        "ambient_humidity": "≤90% RH",
+        "insulation_class": "Class F (155 °C)",
+        "operating_voltage": "180-260 V AC",
+        "liquid_temperature": "0-70 °C",
+        "ambient_temperature": "-25-70 °C",
+        "protection_functions": [
+          "Power limitation",
+          "Dry-running protection",
+          "Voltage protection",
+          "Rotor-blocking protection",
+          "Over-current protection",
+          "Short-circuit protection"
+        ]
+      },
+      "badge": "Chiller Pumps",
+      "href": "/products/licheng-cg1622403501-180w-laser-chiller-pump.html",
+      "image_url": "/assets/images/prod-pump-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 21
     },
     {
       "slug": "ceramic-ring",
@@ -1100,14 +1322,129 @@
         "d28",
         "d32"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • OD • thread • connector/contact geometry"
       },
-      "badge": "Ceramics",
-      "href": "/request-quote.html?requirement=Laser%20cutting-head%20ceramic%20ring",
-      "image_url": "/assets/images/laser-consumables/generated-ceramic-ring.webp"
+      "badge": "Ceramic rings",
+      "href": "/products/catalog/ceramic-ring.html",
+      "image_url": "/assets/images/laser-consumables/generated-ceramic-ring.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 22
+    },
+    {
+      "slug": "licheng-cg1622684002-360w-laser-chiller-pump",
+      "name": "LiCheng CG1622684002 360W Laser Chiller Pump",
+      "family": "chiller-spares",
+      "category": "Chiller Pumps",
+      "description": "Genuine LiCheng CG1622684002 360W high-pressure chiller circulation pump with 40 L/min maximum flow and 68 m maximum head.",
+      "keywords": [
+        "laser chiller pump",
+        "LiCheng",
+        "360W pump",
+        "CG1622684002",
+        "LiCheng CG1622684002",
+        "360W laser chiller pump",
+        "high pressure chiller pump",
+        "2000W laser cutter pump",
+        "3000W laser welder pump",
+        "CG-LCP-360"
+      ],
+      "brand": "LiCheng",
+      "model": "CG1622684002",
+      "specs": {
+        "model": "CG1622684002",
+        "noise": "≤60 dBA at 1 m",
+        "liquid": "Clean water",
+        "max_flow": "40 ±15% L/min",
+        "max_head": "68 ±3 m",
+        "rated_power": "360 W",
+        "manufacturer": "Dongguan LiCheng Pump Industry Co., Ltd.",
+        "product_type": "Electronic centrifugal water pump",
+        "working_life": "≥10000 h",
+        "rated_voltage": "220 V AC",
+        "frame_material": "PPA/PPE",
+        "ambient_humidity": "≤90% RH",
+        "insulation_class": "Class F (155 °C)",
+        "operating_voltage": "180-260 V AC",
+        "liquid_temperature": "0-70 °C",
+        "ambient_temperature": "-25-70 °C",
+        "protection_functions": [
+          "Power limitation",
+          "Dry-running protection",
+          "Voltage protection",
+          "Rotor-blocking protection",
+          "Over-current protection",
+          "Short-circuit protection"
+        ]
+      },
+      "badge": "Chiller Pumps",
+      "href": "/products/licheng-cg1622684002-360w-laser-chiller-pump.html",
+      "image_url": "/assets/images/cnc/cnc-lubrication-generated.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 22
+    },
+    {
+      "slug": "licheng-cj0622558828-600w-laser-chiller-pump",
+      "name": "LiCheng CJ0622558828 600W Laser Chiller Pump",
+      "family": "chiller-spares",
+      "category": "Chiller Pumps",
+      "description": "Original LiCheng CJ0622558828 600W laser-chiller circulation pump with up to 88 L/min flow, 55 m head and IPX4 protection.",
+      "keywords": [
+        "laser chiller pump",
+        "LiCheng",
+        "600W pump",
+        "CJ0622558828",
+        "CJ06",
+        "LiCheng CJ0622558828",
+        "600W laser chiller pump",
+        "CJ06 chiller pump",
+        "3000W laser cutter chiller pump",
+        "88 LPM chiller pump",
+        "55m head pump",
+        "CG-LCP-600"
+      ],
+      "brand": "LiCheng",
+      "model": "CJ0622558828",
+      "specs": {
+        "model": "CJ0622558828",
+        "noise": "≤60 dB at 1 m",
+        "liquid": "Clean water / antifreeze",
+        "series": "CJ06",
+        "weight": "2.84 kg",
+        "max_flow": "88 ±15% L/min",
+        "max_head": "55 ±3 m",
+        "input_power": "600 ±10% W",
+        "manufacturer": "Dongguan LiCheng Pump Industry Co., Ltd.",
+        "product_type": "Electronic centrifugal chiller circulation pump",
+        "working_life": "≥15000 h",
+        "rated_voltage": "220 V AC",
+        "frame_material": "HPPA",
+        "ambient_humidity": "≤90% RH",
+        "insulation_class": "Class F (155 °C)",
+        "protection_level": "IPX4",
+        "operating_voltage": "180-260 V AC",
+        "liquid_temperature": "0-60 °C / -30-60 °C with antifreeze",
+        "ambient_temperature": "-40-60 °C",
+        "protection_functions": [
+          "Power limitation",
+          "Dry-running protection",
+          "Over-voltage protection",
+          "Under-voltage protection",
+          "Rotor-blocking protection",
+          "Short-circuit protection",
+          "Open-phase protection"
+        ]
+      },
+      "badge": "Chiller Pumps",
+      "href": "/products/licheng-cj0622558828-600w-laser-chiller-pump.html",
+      "image_url": "/assets/images/prod-cnc-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 23
     },
     {
       "slug": "sensor-body",
@@ -1121,14 +1458,17 @@
         "capacitive sensor",
         "cutting head sensor"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • part photo • dimensions / thread"
       },
-      "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Nozzle%20holder%20/%20capacitive%20sensor%20body",
-      "image_url": "/assets/images/laser-consumables/generated-sensor-body.webp"
+      "badge": "Sensor bodies & holders",
+      "href": "/products/catalog/sensor-body.html",
+      "image_url": "/assets/images/laser-consumables/generated-sensor-body.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 23
     },
     {
       "slug": "height-sensor-cable",
@@ -1142,14 +1482,74 @@
         "capacitive cable",
         "height control"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head/control model • connector photos • cable length"
       },
-      "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Height-sensor%20/%20capacitive%20cable",
-      "image_url": "/assets/images/laser-consumables/generated-height-sensor.webp"
+      "badge": "Sensors & cables",
+      "href": "/products/catalog/height-sensor-cable.html",
+      "image_url": "/assets/images/laser-consumables/generated-height-sensor.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 24
+    },
+    {
+      "slug": "licheng-cj0622601028-880w-laser-chiller-pump",
+      "name": "LiCheng CJ0622601028 880W Laser Chiller Pump",
+      "family": "chiller-spares",
+      "category": "Chiller Pumps",
+      "description": "Heavy-duty LiCheng CJ0622601028 880W centrifugal laser-chiller pump delivering up to 100 L/min flow and at least 60 m head.",
+      "keywords": [
+        "laser chiller pump",
+        "LiCheng",
+        "880W pump",
+        "CJ0622601028",
+        "CJ06",
+        "LiCheng CJ0622601028",
+        "880W laser chiller pump",
+        "CJ06 water chiller pump",
+        "6000W laser cutter chiller pump",
+        "12000W laser chiller pump",
+        "100 LPM chiller pump",
+        "60m head water pump",
+        "CG-LCP-880"
+      ],
+      "brand": "LiCheng",
+      "model": "CJ0622601028",
+      "specs": {
+        "model": "CJ0622601028",
+        "liquid": "Clean water / antifreeze",
+        "series": "CJ06",
+        "weight": "3 kg",
+        "max_flow": "100 ±15% L/min",
+        "max_head": "≥60 m",
+        "input_power": "880 ±10% W",
+        "manufacturer": "Dongguan LiCheng Pump Industry Co., Ltd.",
+        "product_type": "High-flow electronic centrifugal chiller pump",
+        "working_life": "≥15000 h",
+        "rated_voltage": "220 V AC",
+        "frame_material": "PPA/PA66",
+        "ambient_humidity": "≤90% RH",
+        "insulation_class": "Class F (155 °C)",
+        "protection_level": "IPX4",
+        "operating_voltage": "180-260 V AC",
+        "liquid_temperature": "0-65 °C / -30-65 °C with antifreeze",
+        "ambient_temperature": "-40-60 °C",
+        "protection_functions": [
+          "Power limitation",
+          "Dry-running protection",
+          "Voltage protection",
+          "Rotor-blocking protection",
+          "Short-circuit protection"
+        ]
+      },
+      "badge": "Chiller Pumps",
+      "href": "/products/licheng-cj0622601028-880w-laser-chiller-pump.html",
+      "image_url": "/assets/images/process-supply-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 24
     },
     {
       "slug": "lens-drawer",
@@ -1163,14 +1563,17 @@
         "lens holder",
         "protective lens drawer"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • upper/lower position • part photo"
       },
-      "badge": "Head spares",
-      "href": "/request-quote.html?requirement=Protective-lens%20drawer%20/%20cartridge%20/%20holder",
-      "image_url": "/assets/images/laser-consumables/generated-lens-drawer.webp"
+      "badge": "Lens drawers & cartridges",
+      "href": "/products/catalog/lens-drawer.html",
+      "image_url": "/assets/images/laser-consumables/generated-lens-drawer.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 25
     },
     {
       "slug": "head-seal-kit",
@@ -1184,14 +1587,17 @@
         "gasket",
         "cutting head seal"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • service location • dimensions if available"
       },
-      "badge": "Service parts",
-      "href": "/request-quote.html?requirement=Cutting-head%20seals%2C%20O-rings%20%26%20gaskets",
-      "image_url": "/assets/images/laser-consumables/generated-seals.webp"
+      "badge": "Seals & service parts",
+      "href": "/products/catalog/head-seal-kit.html",
+      "image_url": "/assets/images/laser-consumables/generated-seals.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 26
     },
     {
       "slug": "qbh-qcs-interface",
@@ -1206,14 +1612,17 @@
         "laser connector",
         "adapter"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Laser source model • head model • interface photos"
       },
-      "badge": "Fiber interface",
-      "href": "/request-quote.html?requirement=QBH%20/%20QCS%20connector%2C%20cap%20or%20adapter%20requirement",
-      "image_url": "/assets/images/laser-consumables/generated-qbh-qcs.webp"
+      "badge": "Fiber interfaces",
+      "href": "/products/catalog/qbh-qcs-interface.html",
+      "image_url": "/assets/images/laser-consumables/generated-qbh-qcs.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 27
     },
     {
       "slug": "optics-cleaning",
@@ -1228,15 +1637,18 @@
         "cleaning solution",
         "laser lens cleaning"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Use": "Optics maintenance",
         "Note": "Follow cutting-head / optics manufacturer cleaning procedure"
       },
-      "badge": "Cleaning",
-      "href": "/request-quote.html?requirement=Laser%20optics%20cleaning%20consumables",
-      "image_url": "/assets/images/laser-consumables/generated-optics-cleaning.webp"
+      "badge": "Cleaning & service",
+      "href": "/products/catalog/optics-cleaning.html",
+      "image_url": "/assets/images/laser-consumables/generated-optics-cleaning.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 28
     },
     {
       "slug": "teyu-cwfl-1000",
@@ -1250,19 +1662,62 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "1000"
+        "1000",
+        "CWFL-1000"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-1000",
       "specs": {
-        "Reference class": "1 kW fiber-laser class",
-        "Architecture": "Dual-circuit fiber-laser cooling family",
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
+        "Architecture": "Dual-circuit fiber-laser cooling family",
+        "Reference class": "1 kW fiber-laser class",
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/chiller.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-1000.html",
+      "image_url": "/assets/images/chiller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 29
+    },
+    {
+      "slug": "autofocus-laser-cutting-heads",
+      "name": "Autofocus Laser Cutting Heads",
+      "family": "cutting-heads",
+      "category": "Laser Cutting Heads",
+      "description": "Motorized autofocus cutting-head families for industrial sheet and tube cutting.",
+      "keywords": [
+        "autofocus cutting head",
+        "auto focus laser head",
+        "fiber laser cutting head",
+        "CG-LH-020"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Cutting Heads",
+      "href": "/products/catalog/autofocus-laser-cutting-heads.html",
+      "image_url": "/assets/images/prod-laser-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 30
+    },
+    {
+      "slug": "sheet-metal-bending-tooling",
+      "name": "Sheet-Metal Bending Tooling",
+      "family": "press-brake",
+      "category": "Sheet Metal",
+      "description": "Press-brake punches, V-dies, segmented tooling and related bending components subject to machine and application compatibility.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Sheet Metal",
+      "href": "/products/sheet-metal-bending-tooling.html",
+      "image_url": "/assets/images/prod-bending.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 30
     },
     {
       "slug": "teyu-cwfl-1500",
@@ -1276,19 +1731,23 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "1500"
+        "1500",
+        "CWFL-1500"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-1500",
       "specs": {
-        "Reference class": "1.5 kW fiber-laser class",
-        "Architecture": "Dual-circuit fiber-laser cooling family",
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
+        "Architecture": "Dual-circuit fiber-laser cooling family",
+        "Reference class": "1.5 kW fiber-laser class",
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-1500%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/prod-chiller.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-1500.html",
+      "image_url": "/assets/images/prod-chiller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 30
     },
     {
       "slug": "teyu-cwfl-2000",
@@ -1302,19 +1761,23 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "2000"
+        "2000",
+        "CWFL-2000"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-2000",
       "specs": {
-        "Reference class": "2 kW fiber-laser class",
-        "Architecture": "Dual-circuit fiber-laser cooling family",
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
+        "Architecture": "Dual-circuit fiber-laser cooling family",
+        "Reference class": "2 kW fiber-laser class",
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-2000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/prod-chiller-v23.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-2000.html",
+      "image_url": "/assets/images/prod-chiller-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 31
     },
     {
       "slug": "teyu-cwfl-3000",
@@ -1328,19 +1791,23 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "3000"
+        "3000",
+        "CWFL-3000"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-3000",
       "specs": {
-        "Reference class": "3 kW fiber-laser class",
-        "Architecture": "Dual-circuit fiber-laser cooling family",
         "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
+        "Architecture": "Dual-circuit fiber-laser cooling family",
+        "Reference class": "3 kW fiber-laser class",
         "Manufacturer temperature stability": "±0.5 °C (selected CWFL family models)"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-3000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/project-chiller.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-3000.html",
+      "image_url": "/assets/images/project-chiller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 32
     },
     {
       "slug": "teyu-cwfl-4000",
@@ -1354,18 +1821,22 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "4000"
+        "4000",
+        "CWFL-4000"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-4000",
       "specs": {
-        "Reference class": "4 kW fiber-laser class",
+        "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
         "Architecture": "Dual-circuit fiber-laser cooling family",
-        "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification"
+        "Reference class": "4 kW fiber-laser class"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-4000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/project-chiller-v23.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-4000.html",
+      "image_url": "/assets/images/project-chiller-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 33
     },
     {
       "slug": "teyu-cwfl-6000",
@@ -1379,18 +1850,22 @@
         "teyu",
         "s&a",
         "fiber laser chiller",
-        "6000"
+        "6000",
+        "CWFL-6000"
       ],
       "brand": "TEYU / S&A",
       "model": "CWFL-6000",
       "specs": {
-        "Reference class": "6 kW fiber-laser class",
+        "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification",
         "Architecture": "Dual-circuit fiber-laser cooling family",
-        "Verify": "Exact chiller variant, electrical supply, flow/pressure and laser OEM cooling specification"
+        "Reference class": "6 kW fiber-laser class"
       },
-      "badge": "Reference model",
-      "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-6000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/div-products-v23.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/teyu-cwfl-6000.html",
+      "image_url": "/assets/images/div-products-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 34
     },
     {
       "slug": "fiber-laser-chiller-generic",
@@ -1404,14 +1879,17 @@
         "laser cooling",
         "cutting chiller"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Laser source make/model & power • head cooling requirement • voltage/phase • existing chiller label"
       },
-      "badge": "Complete chiller",
-      "href": "/request-quote.html?requirement=Fiber%20laser%20chiller%20%E2%80%94%20identify%20by%20laser%20power%20%26%20circuits",
-      "image_url": "/assets/images/project-chiller-v23b.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/fiber-laser-chiller-generic.html",
+      "image_url": "/assets/images/project-chiller-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 35
     },
     {
       "slug": "hanli-fiber-chiller",
@@ -1426,13 +1904,16 @@
         "fiber chiller"
       ],
       "brand": "Hanli",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Chiller nameplate • laser power • voltage • pump/flow data if spare-related"
       },
-      "badge": "Reference brand",
-      "href": "/request-quote.html?requirement=Hanli%20fiber-laser%20chiller%20%E2%80%94%20model%20identification",
-      "image_url": "/assets/images/catalog/chillers/hanli-fiber-chiller.webp"
+      "badge": "Fiber laser chiller",
+      "href": "/products/catalog/hanli-fiber-chiller.html",
+      "image_url": "/assets/images/catalog/chillers/hanli-fiber-chiller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 36
     },
     {
       "slug": "tongfei-chiller",
@@ -1447,13 +1928,16 @@
         "industrial chiller"
       ],
       "brand": "Tongfei / TONFY",
-      "model": null,
+      "model": "",
       "specs": {
         "Required": "Chiller model/nameplate • application • power/circuit data"
       },
-      "badge": "Reference brand",
-      "href": "/request-quote.html?requirement=Tongfei%20/%20TONFY%20laser%20chiller%20%E2%80%94%20model%20identification",
-      "image_url": "/assets/images/cg-machine-maintenance.webp"
+      "badge": "Laser chiller",
+      "href": "/products/catalog/tongfei-chiller.html",
+      "image_url": "/assets/images/cg-machine-maintenance.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 37
     },
     {
       "slug": "co2-chiller",
@@ -1467,14 +1951,17 @@
         "water chiller",
         "laser tube chiller"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Tube rated power • coolant recommendation • ambient conditions • voltage"
       },
-      "badge": "CO₂ cooling",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20water%20chiller%20/%20cooling%20system",
-      "image_url": "/assets/images/project-co2-v23.webp"
+      "badge": "CO₂ laser chiller",
+      "href": "/products/catalog/co2-chiller.html",
+      "image_url": "/assets/images/project-co2-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 38
     },
     {
       "slug": "handheld-laser-chiller",
@@ -1487,14 +1974,17 @@
         "laser welding chiller",
         "laser cleaning chiller"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Laser source power • machine make/model • voltage • integrated/external format"
       },
-      "badge": "Handheld laser",
-      "href": "/request-quote.html?requirement=Handheld%20welding%20/%20cleaning%20laser%20chiller",
-      "image_url": "/assets/images/div-maintenance.webp"
+      "badge": "Handheld laser chiller",
+      "href": "/products/catalog/handheld-laser-chiller.html",
+      "image_url": "/assets/images/div-maintenance.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 39
     },
     {
       "slug": "leicheng-600w-pump",
@@ -1511,14 +2001,56 @@
         "laser cutting machine pump",
         "chiller pump"
       ],
-      "brand": "Le Cheng / LiCheng",
-      "model": null,
+      "brand": "LiCheng",
+      "model": "",
       "specs": {
         "Check": "Voltage/frequency • rated flow • rated head/pressure • port size • mounting • dimensions • coolant"
       },
-      "badge": "Pump",
-      "href": "/request-quote.html?requirement=Le%20Cheng%20/%20LiCheng%20220%20V%20600%20W%20laser-chiller%20pump%20%E2%80%94%20identify%20/%20source",
-      "image_url": "/assets/images/prod-pump-v22.webp"
+      "badge": "Circulation pumps",
+      "href": "/products/catalog/leicheng-600w-pump.html",
+      "image_url": "/assets/images/prod-pump-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 40
+    },
+    {
+      "slug": "plc-iot-housings",
+      "name": "PLC, I/O, Industrial IoT & Housings",
+      "family": "automation",
+      "category": "Automation",
+      "description": "PLCs, HMIs, I/O modules, gateways, sensors, control components, DIN-rail hardware and industrial housings.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Automation",
+      "href": "/products/plc-iot-housings.html",
+      "image_url": "/assets/images/prod-plc.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 40
+    },
+    {
+      "slug": "smart-high-power-laser-cutting-heads",
+      "name": "Smart / High-Power Laser Cutting Heads",
+      "family": "cutting-heads",
+      "category": "Laser Cutting Heads",
+      "description": "Intelligent and high-power cutting-head families with monitoring, cooling and advanced control features.",
+      "keywords": [
+        "smart laser head",
+        "high power cutting head",
+        "intelligent cutting head",
+        "CG-LH-030"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Cutting Heads",
+      "href": "/products/catalog/smart-high-power-laser-cutting-heads.html",
+      "image_url": "/assets/images/automation-hero.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 40
     },
     {
       "slug": "chiller-pump-other",
@@ -1532,14 +2064,17 @@
         "laser pump",
         "cooling pump"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Original pump label • voltage/frequency • flow • head/pressure • port size • mounting"
       },
-      "badge": "Pump",
-      "href": "/request-quote.html?requirement=Laser-chiller%20circulation%20pump%20%E2%80%94%20other%20model",
-      "image_url": "/assets/images/catalog/chiller-spares/chiller-pump-other.webp"
+      "badge": "Circulation pumps",
+      "href": "/products/catalog/chiller-pump-other.html",
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-pump-other.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 41
     },
     {
       "slug": "flow-switch",
@@ -1553,14 +2088,17 @@
         "water flow alarm",
         "chiller sensor"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Flow range • connection • output/signal • chiller model"
       },
-      "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Chiller%20flow%20switch%20/%20flow%20sensor",
-      "image_url": "/assets/images/chiller-components.webp"
+      "badge": "Flow sensing",
+      "href": "/products/catalog/flow-switch.html",
+      "image_url": "/assets/images/chiller-components.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 42
     },
     {
       "slug": "water-filter",
@@ -1574,14 +2112,17 @@
         "filter element",
         "chiller filter"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Housing/element dimensions • connection • micron rating if known"
       },
       "badge": "Filtration",
-      "href": "/request-quote.html?requirement=Chiller%20filter%20/%20strainer%20/%20filter%20element",
-      "image_url": "/assets/images/prod-chiller-spares-v23.webp"
+      "href": "/products/catalog/water-filter.html",
+      "image_url": "/assets/images/prod-chiller-spares-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 43
     },
     {
       "slug": "temperature-sensor",
@@ -1596,14 +2137,17 @@
         "ntc",
         "chiller probe"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Chiller model • sensor marking • connector • resistance/type if known"
       },
-      "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Chiller%20temperature%20sensor%20/%20probe",
-      "image_url": "/assets/images/catalog/chiller-spares/temperature-sensor.webp"
+      "badge": "Temperature sensing",
+      "href": "/products/catalog/temperature-sensor.html",
+      "image_url": "/assets/images/catalog/chiller-spares/temperature-sensor.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 44
     },
     {
       "slug": "level-sensor",
@@ -1617,14 +2161,17 @@
         "water level",
         "tank sensor"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Chiller model • mounting • contact/signal type"
       },
-      "badge": "Sensor",
-      "href": "/request-quote.html?requirement=Water-level%20sensor%20/%20float%20switch",
-      "image_url": "/assets/images/am-approved-sparekit.webp"
+      "badge": "Level sensing",
+      "href": "/products/catalog/level-sensor.html",
+      "image_url": "/assets/images/am-approved-sparekit.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 45
     },
     {
       "slug": "chiller-fan",
@@ -1638,14 +2185,17 @@
         "cooling fan",
         "fan motor"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Voltage • wattage • RPM • frame/diameter • rotation/air direction"
       },
-      "badge": "Cooling",
-      "href": "/request-quote.html?requirement=Condenser%20fan%20/%20cooling%20fan",
-      "image_url": "/assets/images/catalog/chiller-spares/chiller-fan.webp"
+      "badge": "Fans",
+      "href": "/products/catalog/chiller-fan.html",
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-fan.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 46
     },
     {
       "slug": "chiller-compressor",
@@ -1658,14 +2208,17 @@
         "refrigeration compressor",
         "laser chiller compressor"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Chiller model • compressor label • refrigerant • voltage • refrigeration data"
       },
       "badge": "Refrigeration",
-      "href": "/request-quote.html?requirement=Chiller%20compressor%20/%20refrigeration%20component",
-      "image_url": "/assets/images/prod-chiller-v22.webp"
+      "href": "/products/catalog/chiller-compressor.html",
+      "image_url": "/assets/images/prod-chiller-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 47
     },
     {
       "slug": "chiller-condenser",
@@ -1679,14 +2232,17 @@
         "heat exchanger",
         "coil"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Chiller model • dimensions • port sizes • photos"
       },
       "badge": "Heat exchange",
-      "href": "/request-quote.html?requirement=Condenser%20/%20heat-exchanger%20component",
-      "image_url": "/assets/images/catalog/chiller-spares/chiller-condenser.webp"
+      "href": "/products/catalog/chiller-condenser.html",
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-condenser.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 48
     },
     {
       "slug": "chiller-controller",
@@ -1700,14 +2256,17 @@
         "control board",
         "temperature controller"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Chiller model • controller/PCB code • connector/wiring photos"
       },
       "badge": "Controls",
-      "href": "/request-quote.html?requirement=Chiller%20controller%20/%20display%20/%20control%20board",
-      "image_url": "/assets/images/catalog/chiller-spares/chiller-controller.webp"
+      "href": "/products/catalog/chiller-controller.html",
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-controller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 49
     },
     {
       "slug": "chiller-electrical",
@@ -1722,14 +2281,57 @@
         "breaker",
         "chiller electrical"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Part marking • voltage/current rating • function • chiller model"
       },
       "badge": "Electrical",
-      "href": "/request-quote.html?requirement=Chiller%20relays%2C%20contactors%2C%20capacitors%20%26%20electrical%20spares",
-      "image_url": "/assets/images/prod-spares-v23.webp"
+      "href": "/products/catalog/chiller-electrical.html",
+      "image_url": "/assets/images/prod-spares-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 50
+    },
+    {
+      "slug": "laser-chiller-spares",
+      "name": "Laser Chiller Service Spares",
+      "family": "chiller-spares",
+      "category": "Laser Chillers",
+      "description": "Filters, flow devices, temperature sensors, level components, hoses, valves, fittings and selected service parts.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Chillers",
+      "href": "/products/laser-chiller-spares.html",
+      "image_url": "/assets/images/prod-plc-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 50
+    },
+    {
+      "slug": "tube-3d-laser-cutting-heads",
+      "name": "Tube & 3D Laser Cutting Heads",
+      "family": "cutting-heads",
+      "category": "Laser Cutting Heads",
+      "description": "Cutting heads for tube, bevel, robot and three-dimensional laser processing applications.",
+      "keywords": [
+        "tube laser head",
+        "3d cutting head",
+        "bevel cutting head",
+        "robot laser head",
+        "CG-LH-040"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Cutting Heads",
+      "href": "/products/catalog/tube-3d-laser-cutting-heads.html",
+      "image_url": "/assets/images/resource-manufacturing-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 50
     },
     {
       "slug": "chiller-valve",
@@ -1743,14 +2345,17 @@
         "service valve",
         "chiller valve"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Function • medium • port size • coil voltage / refrigeration data"
       },
       "badge": "Valves",
-      "href": "/request-quote.html?requirement=Solenoid%20/%20expansion%20/%20service%20valve%20requirement",
-      "image_url": "/assets/images/prod-custom-spares-v23.webp"
+      "href": "/products/catalog/chiller-valve.html",
+      "image_url": "/assets/images/prod-custom-spares-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 51
     },
     {
       "slug": "chiller-hose-fitting",
@@ -1765,14 +2370,17 @@
         "water pipe",
         "chiller fitting"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "ID/OD • thread/port • length • pressure/temperature"
       },
-      "badge": "Plumbing",
-      "href": "/request-quote.html?requirement=Chiller%20hoses%2C%20fittings%20%26%20quick%20connectors",
-      "image_url": "/assets/images/catalog/chiller-spares/chiller-hose-fitting.webp"
+      "badge": "Hoses & fittings",
+      "href": "/products/catalog/chiller-hose-fitting.html",
+      "image_url": "/assets/images/catalog/chiller-spares/chiller-hose-fitting.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 52
     },
     {
       "slug": "co2-laser-tube",
@@ -1791,14 +2399,17 @@
         "150w",
         "180w"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Rated power • tube length/diameter • terminal style • existing model"
       },
-      "badge": "CO₂ source",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20tube",
-      "image_url": "/assets/images/catalog/co2/co2-laser-tube.webp"
+      "badge": "CO₂ laser source",
+      "href": "/products/catalog/co2-laser-tube.html",
+      "image_url": "/assets/images/catalog/co2/co2-laser-tube.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 53
     },
     {
       "slug": "co2-psu",
@@ -1811,14 +2422,17 @@
         "laser psu",
         "high voltage supply"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Tube power • PSU label • mains input • control connector"
       },
-      "badge": "CO₂ electrical",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20power%20supply",
-      "image_url": "/assets/images/catalog/co2/co2-psu.webp"
+      "badge": "CO₂ power supply",
+      "href": "/products/catalog/co2-psu.html",
+      "image_url": "/assets/images/catalog/co2/co2-psu.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 54
     },
     {
       "slug": "znse-focus-lens",
@@ -1835,14 +2449,17 @@
         "63.5",
         "101.6"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Lens diameter • focal length • machine/head model"
       },
       "badge": "CO₂ optics",
-      "href": "/request-quote.html?requirement=ZnSe%20CO%E2%82%82%20focus%20lens",
-      "image_url": "/assets/images/catalog/co2/znse-focus-lens.webp"
+      "href": "/products/catalog/znse-focus-lens.html",
+      "image_url": "/assets/images/catalog/co2/znse-focus-lens.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 55
     },
     {
       "slug": "co2-mirror",
@@ -1857,14 +2474,17 @@
         "si mirror",
         "mo mirror"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Mirror diameter • thickness • material/coating if known • machine model"
       },
       "badge": "CO₂ optics",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20/%20reflector",
-      "image_url": "/assets/images/catalog/co2/co2-mirror.webp"
+      "href": "/products/catalog/co2-mirror.html",
+      "image_url": "/assets/images/catalog/co2/co2-mirror.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 56
     },
     {
       "slug": "co2-mirror-mount",
@@ -1877,14 +2497,17 @@
         "laser mirror holder",
         "alignment mount"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Optic diameter • mounting pattern • photos/dimensions"
       },
       "badge": "CO₂ mechanics",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20mirror%20mount%20/%20alignment%20holder",
-      "image_url": "/assets/images/catalog/co2/co2-mirror-mount.webp"
+      "href": "/products/catalog/co2-mirror-mount.html",
+      "image_url": "/assets/images/catalog/co2/co2-mirror-mount.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 57
     },
     {
       "slug": "co2-head-nozzle",
@@ -1898,14 +2521,17 @@
         "air assist",
         "lens tube"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Machine model • lens diameter/focal length • part dimensions"
       },
-      "badge": "CO₂ head",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20head%2C%20nozzle%20%26%20air-assist%20component",
-      "image_url": "/assets/images/catalog/co2/co2-head-nozzle.webp"
+      "badge": "CO₂ head / air assist",
+      "href": "/products/catalog/co2-head-nozzle.html",
+      "image_url": "/assets/images/catalog/co2/co2-head-nozzle.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 58
     },
     {
       "slug": "co2-motion",
@@ -1921,14 +2547,34 @@
         "drag chain",
         "co2 motion"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Part marking • dimensions • pitch/profile • machine model"
       },
-      "badge": "Motion",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20belts%2C%20pulleys%2C%20rails%2C%20blocks%20%26%20drag%20chains",
-      "image_url": "/assets/images/catalog/co2/co2-motion.webp"
+      "badge": "CO₂ motion spares",
+      "href": "/products/catalog/co2-motion.html",
+      "image_url": "/assets/images/catalog/co2/co2-motion.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 59
+    },
+    {
+      "slug": "cnc-vmc-spares",
+      "name": "CNC / VMC & Machine Spares",
+      "family": "cnc-vmc",
+      "category": "Machine Spares",
+      "description": "Selected bearings, switches, sensors, belts, lubrication parts, electrical spares and maintenance-related components.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Machine Spares",
+      "href": "/products/cnc-vmc-spares.html",
+      "image_url": "/assets/images/prod-cnc.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 60
     },
     {
       "slug": "co2-controller",
@@ -1942,14 +2588,39 @@
         "laser controller",
         "stepper driver"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Controller/driver model • machine wiring/photos • axis configuration"
       },
-      "badge": "Controls",
-      "href": "/request-quote.html?requirement=CO%E2%82%82%20laser%20controller%20/%20motion-control%20requirement",
-      "image_url": "/assets/images/catalog/co2/co2-controller.webp"
+      "badge": "CO₂ controls",
+      "href": "/products/catalog/co2-controller.html",
+      "image_url": "/assets/images/catalog/co2/co2-controller.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 60
+    },
+    {
+      "slug": "laser-welding-cleaning-heads",
+      "name": "Laser Welding & Cleaning Heads",
+      "family": "welding",
+      "category": "Laser Welding / Cleaning",
+      "description": "Handheld and automated laser welding / cleaning head assemblies and related replaceable parts.",
+      "keywords": [
+        "laser welding head",
+        "laser cleaning head",
+        "handheld welding head",
+        "CG-LH-050"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Laser Welding / Cleaning",
+      "href": "/products/catalog/laser-welding-cleaning-heads.html",
+      "image_url": "/assets/images/div-manufacturing-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 60
     },
     {
       "slug": "welding-nozzle",
@@ -1963,14 +2634,17 @@
         "welding tip",
         "handheld welding"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Welding-head model • nozzle shape • wire/no-wire process"
       },
-      "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Handheld%20laser%20welding%20nozzle%20/%20copper%20tip",
-      "image_url": "/assets/images/catalog/welding-cleaning/welding-nozzle.webp"
+      "badge": "Welding nozzles",
+      "href": "/products/catalog/welding-nozzle.html",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-nozzle.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 61
     },
     {
       "slug": "welding-protective-lens",
@@ -1984,14 +2658,17 @@
         "cover glass",
         "handheld laser lens"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Welding-head model • OD × thickness • optical position"
       },
-      "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Laser%20welding%20protective%20window%20/%20lens",
-      "image_url": "/assets/images/catalog/welding-cleaning/welding-protective-lens.webp"
+      "badge": "Welding optics",
+      "href": "/products/catalog/welding-protective-lens.html",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-protective-lens.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 62
     },
     {
       "slug": "welding-ceramic",
@@ -2005,14 +2682,17 @@
         "insulator",
         "laser welding head"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Head model • part photo • dimensions"
       },
-      "badge": "Welding consumable",
-      "href": "/request-quote.html?requirement=Laser%20welding%20ceramic%20/%20insulator%20component",
-      "image_url": "/assets/images/catalog/welding-cleaning/welding-ceramic.webp"
+      "badge": "Welding ceramics",
+      "href": "/products/catalog/welding-ceramic.html",
+      "image_url": "/assets/images/catalog/welding-cleaning/welding-ceramic.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 63
     },
     {
       "slug": "wire-feeder-spare",
@@ -2026,14 +2706,17 @@
         "drive roller",
         "laser welding wire"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Feeder model • wire diameter • part photo / marking"
       },
-      "badge": "Welding spare",
-      "href": "/request-quote.html?requirement=Laser%20welding%20wire-feeder%20consumables%20/%20guide%20requirement",
-      "image_url": "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp"
+      "badge": "Wire feeding",
+      "href": "/products/catalog/wire-feeder-spare.html",
+      "image_url": "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 64
     },
     {
       "slug": "cleaning-head-consumable",
@@ -2047,14 +2730,17 @@
         "protective window",
         "cleaning nozzle"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Specify": "Cleaning-head model • source power • part dimensions / photo"
       },
-      "badge": "Cleaning spare",
-      "href": "/request-quote.html?requirement=Laser%20cleaning-head%20protective%20optics%20/%20nozzle%20requirement",
-      "image_url": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp"
+      "badge": "Cleaning-head consumables",
+      "href": "/products/catalog/cleaning-head-consumable.html",
+      "image_url": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 65
     },
     {
       "slug": "cnc-spindle-accessories",
@@ -2069,15 +2755,18 @@
         "tool clamp",
         "spindle bearing"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Mechanical",
       "image": "/assets/images/cnc/cnc-spindle-generated.webp",
-      "href": "/request-quote.html?requirement=Spindle%20%26%20spindle%20accessories",
-      "image_url": "/assets/images/cnc/cnc-spindle-generated.webp"
+      "href": "/products/catalog/cnc-spindle-accessories.html",
+      "image_url": "/assets/images/cnc/cnc-spindle-generated.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 66
     },
     {
       "slug": "cnc-servo-drives",
@@ -2092,14 +2781,18 @@
         "axis drive",
         "cnc drive"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Motion",
       "image": "/assets/images/prod-automation-v22.webp",
-      "href": "/request-quote.html?requirement=Servo%20motors%20%26%20drives"
+      "href": "/products/catalog/cnc-servo-drives.html",
+      "image_url": "/assets/images/prod-automation-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 67
     },
     {
       "slug": "cnc-control-system",
@@ -2115,14 +2808,18 @@
         "hmi",
         "controller"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Control",
       "image": "/assets/images/resource-automation-v23.webp",
-      "href": "/request-quote.html?requirement=CNC%20control%20systems"
+      "href": "/products/catalog/cnc-control-system.html",
+      "image_url": "/assets/images/resource-automation-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 68
     },
     {
       "slug": "cnc-linear-motion",
@@ -2138,14 +2835,18 @@
         "guide block",
         "carriage"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Mechanical",
       "image": "/assets/images/prod-cnc-v23.webp",
-      "href": "/request-quote.html?requirement=Linear%20motion%20components"
+      "href": "/products/catalog/cnc-linear-motion.html",
+      "image_url": "/assets/images/prod-cnc-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 69
     },
     {
       "slug": "cnc-bearings",
@@ -2160,14 +2861,35 @@
         "ball bearing",
         "roller bearing"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Mechanical",
       "image": "/assets/images/div-inspection-v23b.webp",
-      "href": "/request-quote.html?requirement=CNC%20%2F%20VMC%20bearings"
+      "href": "/products/catalog/cnc-bearings.html",
+      "image_url": "/assets/images/div-inspection-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 70
+    },
+    {
+      "slug": "custom-obsolete-spares",
+      "name": "Custom / Obsolete Machine Spares",
+      "family": "cnc-vmc",
+      "category": "Custom Spares",
+      "description": "Identification, reverse engineering, sourcing or manufacture of hard-to-find industrial parts where technically feasible.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Custom Spares",
+      "href": "/products/custom-obsolete-spares.html",
+      "image_url": "/assets/images/am-spares-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 70
     },
     {
       "slug": "cnc-coolant-pump",
@@ -2181,15 +2903,18 @@
         "centrifugal pump",
         "cutting fluid pump"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Fluid",
       "image": "/assets/images/prod-pump-v22.webp",
-      "href": "/request-quote.html?requirement=Machine%20coolant%20pump",
-      "image_url": "/assets/images/catalog/cnc-vmc/cnc-coolant-pump.webp"
+      "href": "/products/catalog/cnc-coolant-pump.html",
+      "image_url": "/assets/images/catalog/cnc-vmc/cnc-coolant-pump.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 71
     },
     {
       "slug": "cnc-lubrication",
@@ -2204,14 +2929,18 @@
         "metering unit",
         "lubrication system"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Maintenance",
       "image": "/assets/images/service-maintenance.webp",
-      "href": "/request-quote.html?requirement=Lubrication%20system%20%26%20pump"
+      "href": "/products/catalog/cnc-lubrication.html",
+      "image_url": "/assets/images/service-maintenance.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 72
     },
     {
       "slug": "cnc-tool-turret",
@@ -2228,14 +2957,18 @@
         "cat40",
         "collet holder"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Tooling",
       "image": "/assets/images/maintenance.webp",
-      "href": "/request-quote.html?requirement=Tool%20turret%20%26%20tool%20holders"
+      "href": "/products/catalog/cnc-tool-turret.html",
+      "image_url": "/assets/images/maintenance.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 73
     },
     {
       "slug": "cnc-sensors-switches",
@@ -2251,14 +2984,18 @@
         "inductive sensor",
         "machine switch"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Electrical",
       "image": "/assets/images/div-automation-v23.webp",
-      "href": "/request-quote.html?requirement=Machine%20sensors%20%26%20switches"
+      "href": "/products/catalog/cnc-sensors-switches.html",
+      "image_url": "/assets/images/div-automation-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 74
     },
     {
       "slug": "cnc-transmission",
@@ -2274,14 +3011,18 @@
         "transmission",
         "flexible coupling"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Mechanical",
       "image": "/assets/images/service-machine-spares.webp",
-      "href": "/request-quote.html?requirement=Couplings%2C%20belts%20%26%20transmission"
+      "href": "/products/catalog/cnc-transmission.html",
+      "image_url": "/assets/images/service-machine-spares.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 75
     },
     {
       "slug": "cnc-cooling",
@@ -2296,14 +3037,18 @@
         "machine fan",
         "heat sink"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Cooling",
       "image": "/assets/images/div-maintenance-v23.webp",
-      "href": "/request-quote.html?requirement=Fans%20%26%20cooling%20components"
+      "href": "/products/catalog/cnc-cooling.html",
+      "image_url": "/assets/images/div-maintenance-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 76
     },
     {
       "slug": "cnc-electrical-panel",
@@ -2319,14 +3064,18 @@
         "smps",
         "panel electrical"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Electrical",
       "image": "/assets/images/div-automation-v22.webp",
-      "href": "/request-quote.html?requirement=Electrical%20%26%20panel%20spares"
+      "href": "/products/catalog/cnc-electrical-panel.html",
+      "image_url": "/assets/images/div-automation-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 77
     },
     {
       "slug": "cnc-hoses-fittings",
@@ -2342,14 +3091,18 @@
         "flexible hose",
         "machine plumbing"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Fluid",
       "image": "/assets/images/prod-pump.webp",
-      "href": "/request-quote.html?requirement=Hoses%2C%20fittings%20%26%20coolant%20accessories"
+      "href": "/products/catalog/cnc-hoses-fittings.html",
+      "image_url": "/assets/images/prod-pump.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 78
     },
     {
       "slug": "cnc-filters",
@@ -2364,14 +3117,35 @@
         "hydraulic filter",
         "filter element"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Fluid",
       "image": "/assets/images/prod-pump-v23.webp",
-      "href": "/request-quote.html?requirement=Machine%20filters%20%26%20strainers"
+      "href": "/products/catalog/cnc-filters.html",
+      "image_url": "/assets/images/prod-pump-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 79
+    },
+    {
+      "slug": "rapid-prototyping",
+      "name": "3D Printing & Rapid Prototyping",
+      "family": "3d-printing",
+      "category": "Manufacturing",
+      "description": "Resin and FDM prototyping, design-validation parts, low-volume components and inserts/finishing where applicable.",
+      "keywords": [],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Manufacturing",
+      "href": "/products/rapid-prototyping.html",
+      "image_url": "/assets/images/printing.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 80
     },
     {
       "slug": "cnc-other-spares",
@@ -2387,14 +3161,18 @@
         "gear",
         "replacement part"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
-      "badge": "Machine spare",
+      "badge": "Sourcing",
       "image": "/assets/images/resource-maintenance-v23.webp",
-      "href": "/request-quote.html?requirement=Other%20%2F%20obsolete%20machine%20spares"
+      "href": "/products/catalog/cnc-other-spares.html",
+      "image_url": "/assets/images/resource-maintenance-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 80
     },
     {
       "slug": "pb-standard-punch",
@@ -2407,15 +3185,18 @@
         "segmented punch",
         "upper tool"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Punch",
       "sprite": "p6-tool-01",
-      "href": "/request-quote.html?requirement=Standard%20%2F%20Segmented%20Punches",
-      "image_url": "/assets/images/part6-tooling-hero.webp"
+      "href": "/products/catalog/pb-standard-punch.html",
+      "image_url": "/assets/images/part6-tooling-hero.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 81
     },
     {
       "slug": "pb-v-die",
@@ -2428,15 +3209,18 @@
         "multi v die",
         "lower die"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Die",
       "sprite": "p6-tool-02",
-      "href": "/request-quote.html?requirement=V-Dies",
-      "image_url": "/assets/images/prod-bending-v23.webp"
+      "href": "/products/catalog/pb-v-die.html",
+      "image_url": "/assets/images/prod-bending-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 82
     },
     {
       "slug": "pb-gooseneck",
@@ -2449,15 +3233,18 @@
         "box bending",
         "return flange"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Punch",
       "sprite": "p6-tool-03",
-      "href": "/request-quote.html?requirement=Gooseneck%20Punches",
-      "image_url": "/assets/images/part6-tooling-sprite.webp"
+      "href": "/products/catalog/pb-gooseneck.html",
+      "image_url": "/assets/images/part6-tooling-sprite.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 83
     },
     {
       "slug": "pb-offset-hemming",
@@ -2471,15 +3258,18 @@
         "flattening",
         "z bend"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Forming",
       "sprite": "p6-tool-04",
-      "href": "/request-quote.html?requirement=Offset%20%26%20Hemming%20Tools",
-      "image_url": "/assets/images/process-make-v23.webp"
+      "href": "/products/catalog/pb-offset-hemming.html",
+      "image_url": "/assets/images/process-make-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 84
     },
     {
       "slug": "pb-radius",
@@ -2492,15 +3282,18 @@
         "radius die",
         "large radius"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Forming",
       "sprite": "p6-tool-05",
-      "href": "/request-quote.html?requirement=Radius%20Tools",
-      "image_url": "/assets/images/process-make-v23b.webp"
+      "href": "/products/catalog/pb-radius.html",
+      "image_url": "/assets/images/process-make-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 85
     },
     {
       "slug": "pb-air-bend",
@@ -2513,15 +3306,18 @@
         "matched set",
         "punch die"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Tool set",
       "sprite": "p6-tool-06",
-      "href": "/request-quote.html?requirement=Air-Bending%20Tool%20Sets",
-      "image_url": "/assets/images/manufacturing.webp"
+      "href": "/products/catalog/pb-air-bend.html",
+      "image_url": "/assets/images/manufacturing.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 86
     },
     {
       "slug": "pb-holder-clamp",
@@ -2534,15 +3330,18 @@
         "quick clamp",
         "press brake clamp"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Clamping",
       "sprite": "p6-tool-07",
-      "href": "/request-quote.html?requirement=Tool%20Holders%20%26%20Clamping",
-      "image_url": "/assets/images/am-approved-fixture.webp"
+      "href": "/products/catalog/pb-holder-clamp.html",
+      "image_url": "/assets/images/am-approved-fixture.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 87
     },
     {
       "slug": "pb-custom",
@@ -2555,15 +3354,18 @@
         "special punch",
         "special die"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Custom",
       "sprite": "p6-tool-08",
-      "href": "/request-quote.html?requirement=Special%20%2F%20Custom%20Tools",
-      "image_url": "/assets/images/catalog/press-brake/pb-custom.webp"
+      "href": "/products/catalog/pb-custom.html",
+      "image_url": "/assets/images/catalog/press-brake/pb-custom.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 88
     },
     {
       "slug": "pb-crowning",
@@ -2576,15 +3378,18 @@
         "support tool",
         "lower support"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Support",
       "sprite": "p6-tool-09",
-      "href": "/request-quote.html?requirement=Crowning%20%2F%20Support%20Tools",
-      "image_url": "/assets/images/catalog/press-brake/pb-crowning.webp"
+      "href": "/products/catalog/pb-crowning.html",
+      "image_url": "/assets/images/catalog/press-brake/pb-crowning.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 89
     },
     {
       "slug": "pb-accessories",
@@ -2597,15 +3402,18 @@
         "spacer",
         "insert"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Accessory",
       "sprite": "p6-tool-10",
-      "href": "/request-quote.html?requirement=Tooling%20Accessories",
-      "image_url": "/assets/images/catalog/press-brake/pb-accessories.webp"
+      "href": "/products/catalog/pb-accessories.html",
+      "image_url": "/assets/images/catalog/press-brake/pb-accessories.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 90
     },
     {
       "slug": "custom-reverse-engineering",
@@ -2618,15 +3426,18 @@
         "sample measurement",
         "cad from sample"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Reverse engineering",
       "sprite": "p6-custom-01",
-      "href": "/request-quote.html?requirement=Reverse%20Engineering%20Support",
-      "image_url": "/assets/images/project-reverse.webp"
+      "href": "/products/catalog/custom-reverse-engineering.html",
+      "image_url": "/assets/images/project-reverse.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 91
     },
     {
       "slug": "custom-machined-components",
@@ -2641,15 +3452,18 @@
         "spacer",
         "bracket"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Machined component",
       "sprite": "p6-custom-02",
-      "href": "/request-quote.html?requirement=Custom%20Machined%20Components",
-      "image_url": "/assets/images/catalog/custom/custom-machined-components.webp"
+      "href": "/products/catalog/custom-machined-components.html",
+      "image_url": "/assets/images/catalog/custom/custom-machined-components.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 92
     },
     {
       "slug": "custom-legacy-parts",
@@ -2662,15 +3476,18 @@
         "legacy part",
         "discontinued spare"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Legacy support",
       "sprite": "p6-custom-03",
-      "href": "/request-quote.html?requirement=Obsolete%20%2F%20Legacy%20Parts",
-      "image_url": "/assets/images/am-approved-spares.webp"
+      "href": "/products/catalog/custom-legacy-parts.html",
+      "image_url": "/assets/images/am-approved-spares.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 93
     },
     {
       "slug": "custom-prototype-fit",
@@ -2683,17 +3500,672 @@
         "fit check",
         "proof part"
       ],
-      "brand": null,
-      "model": null,
+      "brand": "",
+      "model": "",
       "specs": {
         "Required": "Drawing / sample / dimensions • material / application • quantity"
       },
       "badge": "Prototype",
       "sprite": "p6-custom-04",
-      "href": "/products/3d-print-quote.html",
-      "image_url": "/assets/images/am-approved-prototype.webp"
+      "href": "/products/catalog/custom-prototype-fit.html",
+      "image_url": "/assets/images/am-approved-prototype.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 94
+    },
+    {
+      "slug": "fiber-laser-cutting-nozzles",
+      "name": "Fiber Laser Cutting Nozzles",
+      "family": "consumables",
+      "category": "Cutting Nozzles",
+      "description": "Single-layer, double-layer and application-specific copper cutting nozzles. Match by thread, height, outer geometry, orifice and cutting-head model.",
+      "keywords": [
+        "laser nozzle",
+        "single nozzle",
+        "double nozzle",
+        "copper nozzle",
+        "cutting nozzle",
+        "CG-LC-010"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Cutting Nozzles",
+      "href": "/products/catalog/fiber-laser-cutting-nozzles.html",
+      "image_url": "/assets/images/laser-consumables-sprite.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 100
+    },
+    {
+      "slug": "fiber-laser-protective-lenses",
+      "name": "Fiber Laser Protective / Cover Lenses",
+      "family": "consumables",
+      "category": "Protective Lenses",
+      "description": "Protective windows and cover glass matched by diameter, thickness, coating, position and laser-head model.",
+      "keywords": [
+        "protective lens",
+        "cover glass",
+        "protective window",
+        "laser lens",
+        "CG-LC-020"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Protective Lenses",
+      "href": "/products/catalog/fiber-laser-protective-lenses.html",
+      "image_url": "/assets/images/laser-consumables/generated-protective-windows.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 110
+    },
+    {
+      "slug": "fiber-laser-focus-collimation-lenses",
+      "name": "Fiber Laser Focus & Collimation Lenses",
+      "family": "consumables",
+      "category": "Focus & Collimation Lenses",
+      "description": "Focus and collimation optical elements and assemblies matched to the installed cutting head and optical specification.",
+      "keywords": [
+        "focus lens",
+        "focusing lens",
+        "collimation lens",
+        "laser optics",
+        "CG-LC-030"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Focus & Collimation Lenses",
+      "href": "/products/catalog/fiber-laser-focus-collimation-lenses.html",
+      "image_url": "/assets/images/laser-components.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 120
+    },
+    {
+      "slug": "laser-ceramic-rings",
+      "name": "Laser Ceramic Rings & Components",
+      "family": "consumables",
+      "category": "Ceramic Components",
+      "description": "Ceramic rings, ceramic bodies and insulating components for compatible capacitive height-sensing cutting heads.",
+      "keywords": [
+        "ceramic ring",
+        "ceramic body",
+        "laser ceramic",
+        "sensor ceramic",
+        "CG-LC-040"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Ceramic Components",
+      "href": "/products/catalog/laser-ceramic-rings.html",
+      "image_url": "/assets/images/service-laser-cutting.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 130
+    },
+    {
+      "slug": "laser-nozzle-holders-sensor-bodies",
+      "name": "Nozzle Holders & Sensor Bodies",
+      "family": "cutting-heads",
+      "category": "Cutting Head Spares",
+      "description": "Nozzle holders, sensor bodies and related head-end assemblies matched to cutting-head model.",
+      "keywords": [
+        "nozzle holder",
+        "sensor body",
+        "laser head sensor",
+        "capacitive sensor body",
+        "CG-LC-050"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Cutting Head Spares",
+      "href": "/products/catalog/laser-nozzle-holders-sensor-bodies.html",
+      "image_url": "/assets/images/am-approved-laser.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 140
+    },
+    {
+      "slug": "laser-lens-cartridges-drawers",
+      "name": "Lens Cartridges, Drawers & Holders",
+      "family": "cutting-heads",
+      "category": "Cutting Head Spares",
+      "description": "Protective-window drawers, lens cartridges, optical retainers and holder assemblies.",
+      "keywords": [
+        "lens drawer",
+        "protective lens cartridge",
+        "lens holder",
+        "optical cartridge",
+        "CG-LC-060"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Cutting Head Spares",
+      "href": "/products/catalog/laser-lens-cartridges-drawers.html",
+      "image_url": "/assets/images/am-laser-fabrication-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 150
+    },
+    {
+      "slug": "laser-seals-o-rings",
+      "name": "Laser Head Seals, O-Rings & Gaskets",
+      "family": "cutting-heads",
+      "category": "Cutting Head Spares",
+      "description": "Sealing rings, O-rings and gaskets for optical, gas and cooling paths in laser heads.",
+      "keywords": [
+        "laser o ring",
+        "seal ring",
+        "laser head gasket",
+        "optical seal",
+        "CG-LC-070"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Cutting Head Spares",
+      "href": "/products/catalog/laser-seals-o-rings.html",
+      "image_url": "/assets/images/part6-custom-sprite.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 160
+    },
+    {
+      "slug": "laser-qbh-qcs-connectors",
+      "name": "QBH / QCS Connectors & Accessories",
+      "family": "consumables",
+      "category": "Fiber Delivery Accessories",
+      "description": "Fiber delivery connector accessories, caps, adapters and interface components for compatible laser systems.",
+      "keywords": [
+        "QBH connector",
+        "QCS connector",
+        "fiber connector",
+        "laser source connector",
+        "CG-LC-080"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Fiber Delivery Accessories",
+      "href": "/products/catalog/laser-qbh-qcs-connectors.html",
+      "image_url": "/assets/images/cg-automation-solutions.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 170
+    },
+    {
+      "slug": "laser-optics-cleaning-consumables",
+      "name": "Laser Optics Cleaning Consumables",
+      "family": "welding",
+      "category": "Cleaning Consumables",
+      "description": "Lint-free wipes, optical swabs, cleaning tools and suitable cleaning consumables for laser optics maintenance.",
+      "keywords": [
+        "laser cleaning swab",
+        "optical wipe",
+        "lens cleaning",
+        "optics cleaning",
+        "CG-LC-090"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Cleaning Consumables",
+      "href": "/products/catalog/laser-optics-cleaning-consumables.html",
+      "image_url": "/assets/images/service-laser-marking.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 180
+    },
+    {
+      "slug": "laser-welding-consumables",
+      "name": "Laser Welding Consumables",
+      "family": "welding",
+      "category": "Welding Consumables",
+      "description": "Welding nozzles, protective windows, ceramic parts and other replaceable welding-head consumables.",
+      "keywords": [
+        "laser welding nozzle",
+        "welding protective lens",
+        "welding ceramic",
+        "welding consumables",
+        "CG-LC-100"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Welding Consumables",
+      "href": "/products/catalog/laser-welding-consumables.html",
+      "image_url": "/assets/images/manufacturing.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 190
+    },
+    {
+      "slug": "co2-laser-spares-consumables",
+      "name": "CO2 Laser Spares & Consumables",
+      "family": "co2",
+      "category": "CO2 Laser",
+      "description": "CO2 laser tubes, power supplies, mirrors, ZnSe focus lenses, heads, air-assist parts, motion parts and related service items.",
+      "keywords": [
+        "co2 laser tube",
+        "co2 power supply",
+        "ZnSe lens",
+        "co2 mirror",
+        "co2 laser spare",
+        "CG-CO2-001"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "CO2 Laser",
+      "href": "/products/catalog/co2-laser-spares-consumables.html",
+      "image_url": "/assets/images/project-co2-v23b.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 200
+    },
+    {
+      "slug": "complete-fiber-laser-chillers",
+      "name": "Complete Fiber Laser Chillers",
+      "family": "chillers",
+      "category": "Complete Chillers",
+      "description": "Industrial cooling systems for fiber laser cutting equipment, selected by laser power, cooling capacity, circuit arrangement, voltage and communication requirements.",
+      "keywords": [
+        "fiber laser chiller",
+        "laser water chiller",
+        "dual circuit chiller",
+        "laser cooling system",
+        "CG-CH-001"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Complete Chillers",
+      "href": "/products/catalog/complete-fiber-laser-chillers.html",
+      "image_url": "/assets/images/div-products.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 300
+    },
+    {
+      "slug": "complete-co2-laser-chillers",
+      "name": "Complete CO2 Laser Chillers",
+      "family": "co2",
+      "category": "Complete Chillers",
+      "description": "Cooling systems for CO2 laser tubes and associated laser equipment, selected against tube power and thermal duty.",
+      "keywords": [
+        "co2 laser chiller",
+        "CW5200",
+        "CW5000",
+        "laser water cooler",
+        "CG-CH-010"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Complete Chillers",
+      "href": "/products/catalog/complete-co2-laser-chillers.html",
+      "image_url": "/assets/images/project-co2-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 310
+    },
+    {
+      "slug": "handheld-laser-welding-chillers",
+      "name": "Handheld Laser Welding / Cleaning Chillers",
+      "family": "welding",
+      "category": "Complete Chillers",
+      "description": "Integrated and external cooling systems for handheld laser welding and cleaning equipment.",
+      "keywords": [
+        "laser welding chiller",
+        "handheld laser chiller",
+        "cleaning laser chiller",
+        "CG-CH-020"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Complete Chillers",
+      "href": "/products/catalog/handheld-laser-welding-chillers.html",
+      "image_url": "/assets/images/resource-products-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 320
+    },
+    {
+      "slug": "laser-chiller-pumps-family",
+      "name": "Laser Chiller Pumps & Circulation Pumps",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Replacement circulation pumps matched by voltage, motor power, rated flow, head, port size and actual chiller duty.",
+      "keywords": [
+        "laser chiller pump",
+        "circulation pump",
+        "water pump",
+        "chiller pump",
+        "CG-CS-010"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-pumps-family.html",
+      "image_url": "/assets/images/sourcing.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 330
+    },
+    {
+      "slug": "laser-chiller-flow-sensors",
+      "name": "Laser Chiller Flow Sensors & Switches",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Flow sensors, switches and related water-circuit monitoring components for laser chillers.",
+      "keywords": [
+        "flow sensor",
+        "flow switch",
+        "laser chiller flow sensor",
+        "CG-CS-020"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-flow-sensors.html",
+      "image_url": "/assets/images/prod-plc-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 340
+    },
+    {
+      "slug": "laser-chiller-temperature-sensors",
+      "name": "Laser Chiller Temperature Sensors",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Temperature probes, thermistors and related sensing components used in laser cooling systems.",
+      "keywords": [
+        "chiller temperature sensor",
+        "temperature probe",
+        "thermistor",
+        "CG-CS-030"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-temperature-sensors.html",
+      "image_url": "/assets/images/div-automation.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 350
+    },
+    {
+      "slug": "laser-chiller-filters-strainers",
+      "name": "Laser Chiller Filters & Strainers",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Water filters, strainers and replaceable filtration elements for laser chiller circulation systems.",
+      "keywords": [
+        "laser chiller filter",
+        "water filter",
+        "strainer",
+        "coolant filter",
+        "CG-CS-040"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-filters-strainers.html",
+      "image_url": "/assets/images/prod-plc-v22.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 360
+    },
+    {
+      "slug": "laser-chiller-fans-cooling",
+      "name": "Laser Chiller Fans & Cooling Components",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Axial fans, condenser cooling components and selected airflow service parts for laser chillers.",
+      "keywords": [
+        "chiller fan",
+        "condenser fan",
+        "cooling fan",
+        "CG-CS-050"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-fans-cooling.html",
+      "image_url": "/assets/images/project-spares.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 370
+    },
+    {
+      "slug": "laser-chiller-valves-hoses-fittings",
+      "name": "Laser Chiller Valves, Hoses & Fittings",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Solenoid valves, hoses, couplings, clamps, fittings and related water-circuit service parts.",
+      "keywords": [
+        "chiller valve",
+        "laser chiller hose",
+        "water fitting",
+        "solenoid valve",
+        "CG-CS-060"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-valves-hoses-fittings.html",
+      "image_url": "/assets/images/am-example-sparekit-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 380
+    },
+    {
+      "slug": "laser-chiller-compressors-refrigeration",
+      "name": "Laser Chiller Compressors & Refrigeration Spares",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Compressors and selected refrigeration-side service components for industrial laser chillers.",
+      "keywords": [
+        "laser chiller compressor",
+        "refrigeration spare",
+        "compressor",
+        "CG-CS-070"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-compressors-refrigeration.html",
+      "image_url": "/assets/images/prod-spares.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 390
+    },
+    {
+      "slug": "laser-chiller-controllers-displays",
+      "name": "Laser Chiller Controllers & Displays",
+      "family": "chiller-spares",
+      "category": "Chiller Spares",
+      "description": "Controllers, display panels, control boards and temperature-control electronics for compatible chiller models.",
+      "keywords": [
+        "chiller controller",
+        "chiller display",
+        "control board",
+        "temperature controller",
+        "CG-CS-080"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Chiller Spares",
+      "href": "/products/catalog/laser-chiller-controllers-displays.html",
+      "image_url": "/assets/images/prod-automation.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 400
+    },
+    {
+      "slug": "fdm-fff-3d-printing",
+      "name": "FDM / FFF 3D Printing",
+      "family": "3d-printing",
+      "category": "FDM / FFF",
+      "description": "Cost-effective prototypes and functional parts using thermoplastic filament materials with configurable layer height, infill and wall settings.",
+      "keywords": [
+        "FDM printing",
+        "FFF printing",
+        "PLA",
+        "PETG",
+        "ABS",
+        "ASA",
+        "TPU",
+        "Nylon",
+        "CG-3DP-010"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "FDM / FFF",
+      "href": "/products/catalog/fdm-fff-3d-printing.html",
+      "image_url": "/assets/images/service-3d-printing.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 500
+    },
+    {
+      "slug": "sla-dlp-resin-3d-printing",
+      "name": "SLA / DLP Resin 3D Printing",
+      "family": "3d-printing",
+      "category": "Resin Printing",
+      "description": "High-detail resin printing for prototypes, visual models, engineering components and fine-feature parts.",
+      "keywords": [
+        "SLA printing",
+        "DLP printing",
+        "resin printing",
+        "clear resin",
+        "tough resin",
+        "high temperature resin",
+        "CG-3DP-020"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Resin Printing",
+      "href": "/products/catalog/sla-dlp-resin-3d-printing.html",
+      "image_url": "/assets/images/prod-3d-v23.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 510
+    },
+    {
+      "slug": "sls-3d-printing",
+      "name": "SLS 3D Printing",
+      "family": "3d-printing",
+      "category": "SLS",
+      "description": "Powder-bed nylon printing for durable functional parts, complex geometry and low-volume production.",
+      "keywords": [
+        "SLS printing",
+        "PA12",
+        "PA11",
+        "nylon 12",
+        "nylon 11",
+        "TPU",
+        "CG-3DP-030"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "SLS",
+      "href": "/products/catalog/sls-3d-printing.html",
+      "image_url": "/assets/images/advanced-manufacturing-scope-unique.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 520
+    },
+    {
+      "slug": "mjf-3d-printing",
+      "name": "MJF 3D Printing",
+      "family": "3d-printing",
+      "category": "MJF",
+      "description": "Industrial Multi Jet Fusion printing for durable nylon and TPU parts, prototypes and production batches.",
+      "keywords": [
+        "MJF printing",
+        "HP MJF",
+        "PA12",
+        "TPU",
+        "nylon",
+        "CG-3DP-040"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "MJF",
+      "href": "/products/catalog/mjf-3d-printing.html",
+      "image_url": "/assets/images/am-prototype-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 530
+    },
+    {
+      "slug": "metal-3d-printing-rfq",
+      "name": "Metal 3D Printing / DMLS – RFQ",
+      "family": "3d-printing",
+      "category": "Metal Additive",
+      "description": "Metal additive-manufacturing requirements can be reviewed and sourced through the Crecer Grande manufacturing network.",
+      "keywords": [
+        "metal 3d printing",
+        "DMLS",
+        "SLM",
+        "stainless steel printing",
+        "metal additive manufacturing",
+        "CG-3DP-050"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Metal Additive",
+      "href": "/products/catalog/metal-3d-printing-rfq.html",
+      "image_url": "/assets/images/am-approved-machined.webp",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 540
+    },
+    {
+      "slug": "3d-printing-post-processing",
+      "name": "3D Printing Post-Processing & Inserts",
+      "family": "3d-printing",
+      "category": "Post-Processing",
+      "description": "Heat-set brass inserts, tapping, drilling, sanding, painting, assembly, dimensional inspection and FAI support for printed components.",
+      "keywords": [
+        "brass inserts",
+        "heat set inserts",
+        "3d print tapping",
+        "3d print finishing",
+        "FAI",
+        "CG-3DP-060"
+      ],
+      "brand": "",
+      "model": "",
+      "specs": {},
+      "badge": "Post-Processing",
+      "href": "/products/catalog/3d-printing-post-processing.html",
+      "image_url": "/assets/images/am-process-inspection-unique.svg",
+      "stock_status": "unknown",
+      "lead_time_note": "",
+      "sort_order": 550
     }
   ],
-  "version": "2.6-part2",
-  "note": "Static fallback catalogue. Compatibility / availability must be confirmed before quotation."
+  "version": "2.9.2",
+  "note": "Offline fallback cache synchronized from the published Supabase catalogue on 2026-09-22."
 }
