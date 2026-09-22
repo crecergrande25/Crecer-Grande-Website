@@ -170,7 +170,7 @@
         specs:(p.specifications&&typeof p.specifications==='object')?p.specifications:{},
         badge:p.badge||p.subcategory||p.category||cat?.name||'Live product',
         image_url:image,
-        href:text(p.canonical_url)?new URL(p.canonical_url, location.origin).pathname:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
+        href:text(p.canonical_url)?(()=>{const u=new URL(p.canonical_url,location.origin);return u.pathname+u.search})():'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
         sort_order:p.sort_order??i
       };
     });
@@ -204,7 +204,7 @@
       .map((p,i)=>({
         ...p,
         source:'supabase',
-        href:text(p.canonical_url)?new URL(p.canonical_url, location.origin).pathname:'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
+        href:text(p.canonical_url)?(()=>{const u=new URL(p.canonical_url,location.origin);return u.pathname+u.search})():'/products/catalog/'+encodeURIComponent(p.slug||'')+'.html',
         sort_order:p.sort_order??(fallbackRows.length+i)
       }));
     return [...merged,...liveOnly].sort((a,b)=>(Number(a.sort_order??999999)-Number(b.sort_order??999999))||text(a.name||a.title).localeCompare(text(b.name||b.title)));
