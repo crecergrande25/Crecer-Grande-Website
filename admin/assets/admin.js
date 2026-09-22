@@ -68,23 +68,31 @@
   }
   async function logout(){await client.auth.signOut();location.reload()}
   async function count(table){try{const {count,error}=await client.from(table).select('*',{count:'exact',head:true});return error?null:count}catch(_){return null}}
+  async function analyticsSummary(days=30){
+    const {data,error}=await client.rpc('get_analytics_summary',{p_days:days});
+    if(error)throw error;
+    return data||{};
+  }
   async function dashboard(){
     const content=$('#content');content.innerHTML='<div class="notice">Loading dashboard…</div>';
-    const [prod,enq,evt,proj]=await Promise.all([count('products'),count('enquiries'),count('analytics_events'),count('projects')]);
-    let recent=[],topPages=[];
+    const [prod,enq,proj]=await Promise.all([count('products'),count('enquiries'),count('projects')]);
+    let recent=[],summary={};
     try{
-      const {data}=await client.from('enquiries').select('*').limit(8);recent=data||[];
-      const {data:events}=await client.from('analytics_events').select('page_path,event_type').eq('event_type','page_view').limit(800);
-      const map={};(events||[]).forEach(x=>map[x.page_path]=(map[x.page_path]||0)+1);topPages=Object.entries(map).sort((a,b)=>b[1]-a[1]).slice(0,8);
+      const [recentResult,analytics]=await Promise.all([
+        client.from('enquiries').select('*').order('submitted_at',{ascending:false}).limit(8),
+        analyticsSummary(30)
+      ]);
+      recent=recentResult.data||[];summary=analytics||{};
     }catch(_){}
-    const max=Math.max(1,...topPages.map(x=>x[1]));
+    const topPages=Array.isArray(summary.top_pages)?summary.top_pages:[];
+    const max=Math.max(1,...topPages.map(x=>Number(x.count)||0));
     content.innerHTML=`<div class="metric-grid">
       <div class="metric"><span>Products</span><strong>${prod??'—'}</strong><small>Catalogue records</small></div>
-      <div class="metric"><span>Enquiries</span><strong>${enq??'—'}</strong><small>Website requirements</small></div>
-      <div class="metric"><span>Analytics Events</span><strong>${evt??'—'}</strong><small>Tracked events</small></div>
-      <div class="metric"><span>Projects</span><strong>${proj??'—'}</strong><small>CMS project records</small></div></div>
-      <div class="grid2 section-gap"><div class="panel"><h3>Recent Enquiries</h3>${recent.length?`<div class="table-shell"><table><thead><tr><th>Name</th><th>Requirement</th><th>Status</th></tr></thead><tbody>${recent.map(x=>`<tr><td>${escape(x.name||'')}</td><td>${escape(x.requirement_type||'')}</td><td><span class="tag">${escape(x.status||'new')}</span></td></tr>`).join('')}</tbody></table></div>`:'<p>No rows available through current RLS.</p>'}</div>
-      <div class="panel"><h3>Top Page Views (loaded sample)</h3><div class="chart-bars">${topPages.length?topPages.map(([p,n])=>`<div class="chart-row"><span>${escape(p||'/')}</span><div class="chart-track"><div class="chart-fill" style="width:${Math.round(n/max*100)}%"></div></div><b>${n}</b></div>`).join(''):'<p>No page-view rows available through current RLS.</p>'}</div></div></div>`;
+      <div class="metric"><span>Enquiries</span><strong>${summary.enquiries??enq??'—'}</strong><small>Last 30 days</small></div>
+      <div class="metric"><span>Page Views</span><strong>${summary.page_views??'—'}</strong><small>Last 30 days</small></div>
+      <div class="metric"><span>Unique Visitors</span><strong>${summary.unique_visitors??'—'}</strong><small>${summary.sessions??'—'} sessions</small></div></div>
+      <div class="grid2 section-gap"><div class="panel"><h3>Recent Enquiries</h3>${recent.length?`<div class="table-shell"><table><thead><tr><th>Name</th><th>Requirement</th><th>Status</th></tr></thead><tbody>${recent.map(x=>`<tr><td>${escape(x.name||'')}</td><td>${escape(x.requirement_type||'')}</td><td><span class="tag">${escape(x.status||'new')}</span></td></tr>`).join('')}</tbody></table></div>`:'<p>No recent enquiries.</p>'}</div>
+      <div class="panel"><h3>Top Pages · 30 days</h3><div class="chart-bars">${topPages.length?topPages.map(x=>`<div class="chart-row"><span>${escape(x.page||'/')}</span><div class="chart-track"><div class="chart-fill" style="width:${Math.round((Number(x.count)||0)/max*100)}%"></div></div><b>${Number(x.count)||0}</b></div>`).join(''):'<p>No page-view data yet.</p>'}</div></div></div>`;
   }
   function preferredCols(rows,def){
     if(!rows.length)return def.preferred.slice(0,7);
@@ -153,7 +161,26 @@
     const next=prompt('Set enquiry status:',row.status||'new');if(!next||next===row.status)return;
     const {error}=await client.from('enquiries').update({status:next}).eq('id',row.id);if(error)status(error.message,'bad');else{status('Enquiry status updated.','ok');tableView('enquiries')}
   }
-  async function analyticsView(){await tableView('analytics')}
+  async function analyticsView(){
+    const c=$('#content');c.innerHTML='<div class="notice">Loading analytics…</div>';
+    try{
+      const s=await analyticsSummary(30);
+      const pages=Array.isArray(s.top_pages)?s.top_pages:[];
+      const sources=Array.isArray(s.top_sources)?s.top_sources:[];
+      const visitors=Array.isArray(s.recent_visitors)?s.recent_visitors:[];
+      c.innerHTML=`<div class="metric-grid">
+        <div class="metric"><span>Page Views</span><strong>${s.page_views??0}</strong><small>Last 30 days</small></div>
+        <div class="metric"><span>Unique Visitors</span><strong>${s.unique_visitors??0}</strong><small>${s.active_visitors??0} active now</small></div>
+        <div class="metric"><span>Sessions</span><strong>${s.sessions??0}</strong><small>Browser sessions</small></div>
+        <div class="metric"><span>Enquiries</span><strong>${s.enquiries??0}</strong><small>${s.whatsapp_clicks??0} WhatsApp clicks</small></div>
+      </div>
+      <div class="grid2 section-gap">
+        <div class="panel"><h3>Top Pages</h3>${pages.length?`<div class="table-shell"><table><thead><tr><th>Page</th><th>Views</th></tr></thead><tbody>${pages.map(x=>`<tr><td>${escape(x.page||'/')}</td><td>${Number(x.count)||0}</td></tr>`).join('')}</tbody></table></div>`:'<p>No page data yet.</p>'}</div>
+        <div class="panel"><h3>Top Sources</h3>${sources.length?`<div class="table-shell"><table><thead><tr><th>Source</th><th>Events</th></tr></thead><tbody>${sources.map(x=>`<tr><td>${escape(x.source||'Direct / Unknown')}</td><td>${Number(x.count)||0}</td></tr>`).join('')}</tbody></table></div>`:'<p>No source data yet.</p>'}</div>
+      </div>
+      <div class="panel section-gap"><h3>Recent Visitors</h3>${visitors.length?`<div class="table-shell"><table><thead><tr><th>Visitor</th><th>Page Views</th><th>Source</th><th>Last Seen</th></tr></thead><tbody>${visitors.map(x=>`<tr><td>${escape(String(x.visitor_id||'').slice(0,12))}…</td><td>${Number(x.page_views)||0}</td><td>${escape(x.source||'Direct / Unknown')}</td><td>${escape(x.last_seen||'')}</td></tr>`).join('')}</tbody></table></div>`:'<p>No recent visitor data.</p>'}</div>`;
+    }catch(e){c.innerHTML=`<div class="notice bad">${escape(e.message||String(e))}</div>`}
+  }
   async function userView(){
     const c=$('#content');c.innerHTML='<div class="notice">Loading users and roles…</div>';
     const [u,r]=await Promise.all([client.from('user_profiles').select('*').order('display_name'),client.from('app_roles').select('*')]);
@@ -199,11 +226,12 @@
   async function view(key){
     currentView=key;$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===key));
     const label=key==='dashboard'?'Dashboard':key==='users'?'Users & Access':key==='account'?'My Account':(tableDefs[key]?.label||key);
-    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.6';
+    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.9.2';
     status('');
     if(key==='dashboard')return dashboard();
     if(key==='users')return userView();
     if(key==='account')return accountView();
+    if(key==='analytics')return analyticsView();
     if(tableDefs[key])return tableView(key);
   }
   async function boot(){
