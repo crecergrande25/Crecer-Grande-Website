@@ -1,21 +1,20 @@
-# Crecer Grande Website V2.7.0
+# Crecer Grande Website V2.9.2
 
 Production-ready static website for **https://crecergrande.in/**.
 
 ## Current release focus
 
-V2.7.0 adds **Mechanical Design Job Work** as a dedicated commercial service route:
+V2.9.2 is the **Website Completion & Consolidation** release:
 
-- 2D mechanical drafting and drawing conversion
-- 3D part modelling
-- 3D assembly modelling
-- Piping layout / routing and fabrication-oriented drafting
-- Manufacturing, GA and assembly drawings
-- BOM / MTO and technical documentation
-- Sheet-metal / machine-component design
-- Reverse engineering
-- Drawing revision / legacy-document updates
-- Dedicated Design RFQ with multiple CAD / drawing attachments
+- Supabase is the authoritative published product catalogue
+- 141 published products now have complete image, SEO title, SEO description and canonical URL coverage
+- Product Finder and homepage search honor canonical product routes
+- Website Manager supports record creation, protected analytics and media uploads
+- Homepage and division CMS edits can publish into the public website
+- Analytics event naming and browser-session tracking are corrected
+- RFQ attachment ownership, extension controls and server-side abuse limits are hardened
+- The unused legacy Supabase security project is paused, not deleted
+- Sitemap and canonical coverage are normalized for the published catalogue
 
 ## What is included
 
@@ -50,9 +49,9 @@ Crecer Grande Website uses `V<generation>.<feature-release>.<revision>`.
 - Major platform-generation changes increment the first number.
 
 Known stable reference versions: **V1.9.3** and **V2.6.4**.  
-Current release: **V2.7.0**.
+Current release: **V2.9.2**.
 
-See `VERSION_HISTORY.md` and `CHANGELOG_V2.7.0.md`.
+See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.2.md`.
 
 ## Important security rule
 
