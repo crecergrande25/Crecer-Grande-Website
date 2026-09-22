@@ -53,7 +53,14 @@ document.addEventListener('DOMContentLoaded',async()=>{
       ${Object.keys(specs).length?`<section class="section" style="padding-bottom:0"><div class="section-head"><div><div class="subhead">Technical data</div><h2>Specifications</h2></div></div><table class="spec-table">${Object.entries(specs).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(typeof v==='object'?JSON.stringify(v):v)}</td></tr>`).join('')}</table></section>`:''}
       ${compat.length?`<section class="section" style="padding-bottom:0"><div class="section-head"><div><div class="subhead">Compatibility</div><h2>Known catalogue relationships</h2></div></div><div class="compat-grid">${compat.map(x=>`<span>${esc(x.equipment_models?.model_name||'Equipment')}${x.equipment_models?.model_code?' · '+esc(x.equipment_models.model_code):''}</span>`).join('')}</div></section>`:''}`;
     const absoluteImage=image?new URL(image,location.origin).href:undefined;
-    const ld={"@context":"https://schema.org","@type":"Product","name":p.name,"url":canonicalUrl,"description":p.short_description||p.description||undefined,"sku":p.sku||p.cg_product_code||undefined,"mpn":p.mpn||p.manufacturer_part_number||undefined,"image":absoluteImage?[absoluteImage]:undefined,"brand":brand?{"@type":"Brand","name":brand.name}:undefined};
+    const ld={"@context":"https://schema.org","@graph":[
+      {"@type":"ItemPage","@id":canonicalUrl+"#webpage","url":canonicalUrl,"name":metaTitle,"description":metaDescription,"primaryImageOfPage":absoluteImage?{"@type":"ImageObject","url":absoluteImage}:undefined,"about":{"@type":"Thing","name":p.name,"description":p.short_description||p.description||undefined}},
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":location.origin+"/"},
+        {"@type":"ListItem","position":2,"name":"Products","item":location.origin+"/products.html"},
+        {"@type":"ListItem","position":3,"name":p.name,"item":canonicalUrl}
+      ]}
+    ]};
     const oldLd=document.querySelector('script[data-cg-product-schema]');
     if(oldLd)oldLd.remove();
     const s=document.createElement('script');s.type='application/ld+json';s.dataset.cgProductSchema='1';s.textContent=JSON.stringify(ld);document.head.appendChild(s);
