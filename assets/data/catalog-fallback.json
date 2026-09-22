@@ -2562,7 +2562,7 @@
       "badge": "Custom",
       "sprite": "p6-tool-08",
       "href": "/request-quote.html?requirement=Special%20%2F%20Custom%20Tools",
-      "image_url": "/assets/images/am-approved-machined.webp"
+      "image_url": "/assets/images/catalog/press-brake/pb-custom.webp"
     },
     {
       "slug": "pb-crowning",
@@ -2583,7 +2583,7 @@
       "badge": "Support",
       "sprite": "p6-tool-09",
       "href": "/request-quote.html?requirement=Crowning%20%2F%20Support%20Tools",
-      "image_url": "/assets/images/prod-cnc-v23b.webp"
+      "image_url": "/assets/images/catalog/press-brake/pb-crowning.webp"
     },
     {
       "slug": "pb-accessories",
@@ -2604,7 +2604,7 @@
       "badge": "Accessory",
       "sprite": "p6-tool-10",
       "href": "/request-quote.html?requirement=Tooling%20Accessories",
-      "image_url": "/assets/images/prod-spares-v23.webp"
+      "image_url": "/assets/images/catalog/press-brake/pb-accessories.webp"
     },
     {
       "slug": "custom-reverse-engineering",
@@ -2648,7 +2648,7 @@
       "badge": "Machined component",
       "sprite": "p6-custom-02",
       "href": "/request-quote.html?requirement=Custom%20Machined%20Components",
-      "image_url": "/assets/images/am-approved-machined.webp"
+      "image_url": "/assets/images/catalog/custom/custom-machined-components.webp"
     },
     {
       "slug": "custom-legacy-parts",
