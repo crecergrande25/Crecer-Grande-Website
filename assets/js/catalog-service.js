@@ -176,22 +176,47 @@
     });
   }
 
+  function mergeCanonicalProducts(fallbackProducts,liveProducts){
+    const liveBySlug=new Map((liveProducts||[]).filter(p=>text(p.slug)).map(p=>[text(p.slug),p]));
+    return (fallbackProducts||[]).map((fallbackProduct,i)=>{
+      const liveProduct=liveBySlug.get(text(fallbackProduct.slug));
+      if(!liveProduct) return {...fallbackProduct,source:'fallback-cache',sort_order:fallbackProduct.sort_order??i};
+      const liveImage=genericImage(liveProduct.image_url)?'':text(liveProduct.image_url);
+      return {
+        ...fallbackProduct,
+        ...liveProduct,
+        source:'supabase',
+        family:text(liveProduct.family)||text(fallbackProduct.family),
+        image_url:liveImage||text(fallbackProduct.image_url||fallbackProduct.image),
+        tags:Array.isArray(liveProduct.tags)&&liveProduct.tags.length?liveProduct.tags:(fallbackProduct.tags||fallbackProduct.keywords||[]),
+        keywords:Array.isArray(liveProduct.search_keywords)&&liveProduct.search_keywords.length?liveProduct.search_keywords:(fallbackProduct.keywords||fallbackProduct.tags||[]),
+        specifications:(liveProduct.specifications&&Object.keys(liveProduct.specifications).length)?liveProduct.specifications:(fallbackProduct.specifications||fallbackProduct.specs||{}),
+        specs:(liveProduct.specifications&&Object.keys(liveProduct.specifications).length)?liveProduct.specifications:(fallbackProduct.specs||fallbackProduct.specifications||{}),
+        href:'/products/product-detail.html?slug='+encodeURIComponent(liveProduct.slug||fallbackProduct.slug||''),
+        sort_order:fallbackProduct.sort_order??liveProduct.sort_order??i
+      };
+    });
+  }
+
   async function buildSnapshot(){
     const [fallback,live]=await Promise.all([loadFallback(),loadLive()]);
     const liveProducts=normalizeLiveProducts(live.products,live.categories,live.brands,fallback.products);
-    const liveAuthoritative=live.productsOk && liveProducts.length>0;
+    const products=mergeCanonicalProducts(fallback.products,liveProducts);
+    const matchedLiveCount=products.filter(p=>p.source==='supabase').length;
     return {
-      source:liveAuthoritative?'supabase':'fallback-cache',
+      source:live.productsOk&&matchedLiveCount?'hybrid':'fallback-cache',
       categories:live.categories.length?live.categories:fallback.categories,
       brands:live.brands.length?live.brands:fallback.brands,
       models:live.models.length?live.models:fallback.models,
-      products:liveAuthoritative?liveProducts:fallback.products,
+      products,
       live:{...live,products:liveProducts},
       fallback,
       status:{
         liveProductsReadable:live.productsOk,
         liveProductCount:liveProducts.length,
-        fallbackProductCount:fallback.products.length
+        liveCanonicalMatchCount:matchedLiveCount,
+        fallbackProductCount:fallback.products.length,
+        canonicalProductCount:products.length
       }
     };
   }
@@ -205,23 +230,18 @@
   async function getProducts(options={}){
     const snapshot=await getSnapshot();
     const family=text(options.family);
-    if(!family) return {source:snapshot.source,products:snapshot.products,snapshot};
-    const liveMatches=snapshot.live.products.filter(p=>p.family===family);
-    if(snapshot.status.liveProductsReadable && liveMatches.length){
-      return {source:'supabase',products:liveMatches,snapshot};
-    }
-    const fallbackMatches=snapshot.fallback.products.filter(p=>p.family===family);
-    return {source:'fallback-cache',products:fallbackMatches,snapshot};
+    const products=family?snapshot.products.filter(p=>p.family===family):snapshot.products;
+    return {source:snapshot.source,products,snapshot};
   }
 
   async function getProductBySlug(slug){
     const wanted=text(slug);
     if(!wanted) return {source:'none',product:null,snapshot:await getSnapshot()};
     const snapshot=await getSnapshot();
+    const canonical=snapshot.products.find(p=>p.slug===wanted);
+    if(canonical) return {source:canonical.source||snapshot.source,product:canonical,snapshot};
     const live=snapshot.live.products.find(p=>p.slug===wanted);
-    if(live) return {source:'supabase',product:live,snapshot};
-    const fallback=snapshot.fallback.products.find(p=>p.slug===wanted);
-    return {source:fallback?'fallback-cache':'none',product:fallback||null,snapshot};
+    return {source:live?'supabase':'none',product:live||null,snapshot};
   }
 
   window.CG_CATALOG={getSnapshot,getProducts,getProductBySlug,refresh:()=>getSnapshot({force:true})};
