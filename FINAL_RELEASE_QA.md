@@ -1,54 +1,85 @@
-# Crecer Grande Website V2.6 — FINAL RELEASE QA
+# Crecer Grande Website V2.9.3 — FINAL RELEASE QA
 
-Release date: 2026-09-18  
-Target: GitHub Pages + existing Crecer Grande Supabase backend
+Release date: 2026-09-22  
+Target: GitHub Pages + Crecer Grande Supabase production backend
 
-## Package checks
+## Release integrity
 
-- Files in package: 139
-- Indexable public pages: 62
-- Missing required release files: 0
-- Broken local links: 0
-- Missing local assets: 0
-- HTML structural issues: 0
-- Canonical issues on indexable pages: 0
-- JSON-LD parse errors: 0
-- JavaScript syntax failures: 0
-- JSON / manifest parse failures: 0
-- Sitemap XML parse error: None
+- PASS — 212 sitemap URLs are unique and map to repository files.
+- PASS — 141 published products have 141 unique canonical URLs.
+- PASS — all 141 product canonical targets map to repository files.
+- PASS — 141 published products have image URLs.
+- PASS — 141 published products use 141 unique image URLs.
+- PASS — 0 broken local product-image paths.
+- PASS — 141 products have SEO title, SEO description and canonical URL coverage.
+- PASS — fallback catalogue contains all 141 published products with unique slugs and unique images.
+- PASS — fallback metadata includes 50 categories, 10 brands and 31 equipment models.
+- PASS — legacy duplicate routes sampled under /products/products/, /products/divisions/ and old division aliases use noindex,follow and canonical targets.
+- PASS — priority public pages have one H1, canonical URL, page title and image alt coverage with no sampled duplicate IDs.
 
-## Security checks
+## Runtime / CMS
 
-- PASS — no known old admin passwords
-- PASS — no service role value in public files
-- PASS — public runtime has publishable key only
-- PASS — admin route noindex
-- PASS — robots disallows admin
+- PASS — core public pages use V2.9.3 site.js runtime cache keys.
+- PASS — homepage, divisions hub and all eight division pages load the Supabase/CMS runtime where required.
+- PASS — Website Manager can create normal CMS/catalogue records.
+- PASS — Website Manager Media Library uploads to the protected site-assets workflow.
+- PASS — Website Manager Analytics uses the protected get_analytics_summary() RPC.
+- PASS — Website Manager user controls follow effective permissions.
+- PASS — modified JavaScript files passed syntax compilation checks.
 
-## Host-readiness
+## Catalogue / product experience
 
-- PASS — `CNAME` points to `crecergrande.in`
-- PASS — `.nojekyll` included
-- PASS — `robots.txt` included and Admin disallowed
-- PASS — canonical-only sitemap regenerated
-- PASS — PWA manifest included
-- PASS — production 404 page included
-- PASS — public Supabase runtime config retained
-- PASS — server-side `admin-users` Edge Function source included
-- PASS — administrator passwords are not embedded in the release
-- PASS — service-role / secret credential is not embedded in browser runtime config
+- PASS — Product Finder reads the complete published catalogue and honors canonical routes.
+- PASS — homepage search supports the full catalogue and canonical product destinations.
+- PASS — canonical product pages have static first-paint product imagery and matching social-preview imagery for sampled remapped products.
+- PASS — static catalogue and Supabase data remain usable if live catalogue reads temporarily fail.
 
-## Live production checks still required after upload
+## RFQ / upload workflow
 
-Static QA cannot prove live Supabase RLS/Auth/storage behavior. After deployment, perform the checks in `docs/POST_DEPLOYMENT_CHECKLIST.md`, especially:
+- PASS — RFQ file bucket is private.
+- PASS — site-assets media bucket is public-read with authenticated management policies.
+- PASS — attachment paths are bound to the enquiry-specific UUID prefix.
+- PASS — 50 MB maximum file size remains enforced.
+- PASS — maximum 8 registered attachments per enquiry is enforced server-side.
+- PASS — public enquiry submission throttling is enforced.
+- PASS — analytics-event throttling is enforced.
+- PASS — CAD/document extension policy is aligned between frontend and storage.
+- PASS — RFQ / design / 3D quote analytics event names are accepted by the database.
 
-1. RFQ + file upload.
-2. STL/OBJ/3MF viewer in real browsers.
-3. Existing administrator login.
-4. Non-critical CMS edit.
-5. `admin-users` Edge Function using a disposable non-root test account.
-6. Search Console sitemap / URL inspection.
+## Security / database
 
-## Footer visual correction
+- PASS — production Supabase project CG Website Builder v1.0 is ACTIVE_HEALTHY.
+- PASS — unused CG Website Security V1.0 project is paused / INACTIVE, not deleted.
+- PASS — no service-role secret is exposed in browser runtime configuration.
+- PASS — Admin Auth and privileged user operations remain server-side/protected.
+- PASS — missing foreign-key indexes identified during the completion pass were added.
+- PASS — flagged auth.uid() RLS performance patterns were optimized without changing intended access.
+- INFO — analytics_events intentionally has no direct client SELECT policy; analytics reporting uses a protected RPC.
+- INFO — public SECURITY DEFINER warnings remain for the public website endpoints that intentionally require anonymous execution and contain validation/throttling.
+- MANUAL — enable Supabase Auth leaked-password protection in the Supabase dashboard; the connected management API does not expose this account-level toggle.
 
-PASS — Final CSS footer refinement applied across all pages through the shared `assets/css/site.css` footer rules.
+## SEO / deployment
+
+- PASS — CNAME points to crecergrande.in.
+- PASS — .nojekyll is present.
+- PASS — robots.txt allows public crawling and disallows /admin/.
+- PASS — sitemap.xml has no duplicate URLs.
+- PASS — legacy/alternate sampled routes use canonical/noindex handling.
+- PASS — production 404 page is current and no longer advertises an old V2.6 release.
+- PASS — README, VERSION_HISTORY and release changelog identify V2.9.3 as current.
+
+## Verification limitation
+
+Full rendered-browser / pixel-level desktop and mobile QA could not be completed in this session because crecergrande.in is not reachable from the available browser automation/runtime paths. Source-level, repository, Supabase, storage, routing, SEO metadata and Search Console checks were performed instead.
+
+When a browser runtime can reach the public domain, the remaining visual acceptance gate is:
+
+1. Desktop + mobile homepage visual inspection.
+2. Product Finder search/filter interaction.
+3. Sample catalogue detail pages and images.
+4. RFQ form submission with a disposable test enquiry/file.
+5. 3D quote STL/OBJ/3MF viewer interaction.
+6. Admin login, Media upload and a disposable CMS edit.
+7. Browser console/network-error check.
+
+No structural redesign should be performed before that acceptance gate unless a reproducible defect is found.
