@@ -1,334 +1,295 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const $=s=>document.querySelector(s);
-  const q=$('#finder-search'),brand=$('#brand-filter'),model=$('#model-filter'),category=$('#category-filter'),results=$('#finder-results'),count=$('#result-count'),cats=$('#finder-categories');
-  if(!q||!results)return;
+  const els={
+    search:$('#lpf-search'),
+    clearSearch:$('#lpf-clear-search'),
+    families:$('#lpf-families'),
+    brand:$('#lpf-brand'),
+    sort:$('#lpf-sort'),
+    results:$('#lpf-results'),
+    resultCount:$('#lpf-result-count'),
+    resultHint:$('#lpf-result-hint'),
+    active:$('#lpf-active-filters'),
+    reset:$('#lpf-reset'),
+    load:$('#lpf-load-more'),
+    filterToggle:$('#lpf-filter-toggle'),
+    filterPanel:$('#lpf-filter-panel'),
+    source:$('#lpf-source')
+  };
+  if(!els.search||!els.results)return;
 
   const safe=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-  const norm=v=>String(v??'').toLowerCase().replace(/[×x]/g,' x ').replace(/[øØ]/g,' dia ').replace(/[^a-z0-9.+&/-]+/g,' ').replace(/\s+/g,' ').trim();
+  const norm=v=>String(v??'').toLowerCase()
+    .replace(/[×x]/g,' x ')
+    .replace(/[øØ]/g,' dia ')
+    .replace(/[^a-z0-9.+&/-]+/g,' ')
+    .replace(/\s+/g,' ')
+    .trim();
+
+  const FAMILY_DEFS=[
+    {id:'all',label:'All laser products',short:'Everything in the laser ecosystem'},
+    {id:'cutting-heads',label:'Cutting heads',short:'RayTools, Precitec and other head references'},
+    {id:'nozzles',label:'Nozzles',short:'Single, double and application-specific nozzles'},
+    {id:'optics',label:'Optics & lenses',short:'Protective, focus, collimation and CO₂ optics'},
+    {id:'ceramics-sensors',label:'Ceramics & head spares',short:'Ceramics, sensor bodies, drawers, seals and interfaces'},
+    {id:'chillers',label:'Complete chillers',short:'Fiber, CO₂ and handheld laser cooling systems'},
+    {id:'chiller-spares',label:'Chiller spares',short:'Pumps, sensors, filters, controls, valves and refrigeration'},
+    {id:'welding-cleaning',label:'Welding & cleaning',short:'Heads, optics, nozzles and wire-feeder parts'},
+    {id:'co2',label:'CO₂ laser parts',short:'Tubes, PSU, mirrors, lenses, heads and controls'}
+  ];
 
   const aliases={
-    'lens':['window','glass','optic'],
-    'glass':['window','lens','optic'],
-    'window':['lens','glass','optic'],
-    'ceramic':['ceramic ring','ceramic body','nozzle ceramic'],
-    'pump':['circulation pump','water pump','chiller pump'],
-    'chiller':['cooling','water chiller'],
-    'head':['cutting head','laser head'],
-    'nozzle':['cutting nozzle'],
-    'sensor':['flow sensor','height sensor','temperature sensor','level sensor'],
-    'filter':['filtration','strainer'],
-    'controller':['control board','display'],
-    'seal':['o ring','gasket'],
-    'o-ring':['seal','gasket'],
-    'qbh':['fiber interface','connector'],
-    'qcs':['fiber interface','connector']
-  };
-  const termMatch=(hay,t)=>hay.includes(t)||(aliases[t]||[]).some(a=>hay.includes(norm(a)));
-  const termsMatch=(hay,terms)=>terms.every(t=>termMatch(hay,t));
-
-  const isGenericImage=(url='')=>{
-    const u=String(url||'').toLowerCase();
-    if(!u)return false;
-    return [
-      'laser-components.webp','prod-spares-v23.webp','prod-laser-v23.webp','prod-chiller-v23.webp',
-      'prod-pump-v23b.webp','project-co2-v23b.webp','service-laser-marking.webp','prod-cnc-v22.webp','prod-cnc-v23b.webp'
-    ].some(name=>u.includes(name));
+    lens:['window','glass','optic','optics'],
+    window:['lens','glass','optic'],
+    glass:['lens','window','optic'],
+    optic:['lens','window','glass'],
+    ceramic:['ceramic ring','insulator'],
+    pump:['circulation pump','water pump','chiller pump'],
+    chiller:['cooling','cooler','water chiller'],
+    head:['cutting head','laser head'],
+    nozzle:['cutting nozzle','tip'],
+    sensor:['flow sensor','height sensor','temperature sensor','level sensor','probe'],
+    filter:['filtration','strainer','filter element'],
+    controller:['control board','display','pcb'],
+    seal:['o ring','o-ring','gasket'],
+    qbh:['fiber interface','connector'],
+    qcs:['fiber interface','connector'],
+    raytools:['ray tools'],
+    teyu:['s&a','s and a'],
+    licheng:['li cheng','leicheng']
   };
 
-  const familyImage=(p={})=>{
-    const family=norm(p.family||'');
-    const category=norm(p.category||p.subcategory||'');
-    const text=family+' '+category+' '+norm(p.name||p.title||'');
-    if(text.includes('chiller pump')||text.includes('circulation pump')||text.includes('water pump'))return '/assets/images/prod-pump-v23b.webp';
-    if(text.includes('chiller')||text.includes('cooling'))return '/assets/images/prod-chiller-v23.webp';
-    if(text.includes('co2'))return '/assets/images/project-co2-v23b.webp';
-    if(text.includes('welding')||text.includes('cleaning'))return '/assets/images/service-laser-marking.webp';
-    if(text.includes('nozzle')||text.includes('lens')||text.includes('optic')||text.includes('ceramic')||text.includes('consumable')||text.includes('spare'))return '/assets/images/laser-components.webp';
-    if(text.includes('head')||text.includes('cutting'))return '/assets/images/prod-laser-v23.webp';
-    if(text.includes('cnc')||text.includes('vmc')||text.includes('machine spare')||text.includes('spindle')||text.includes('servo'))return '/assets/images/prod-cnc-v22.webp';
-    return '/assets/images/laser-components.webp';
+  const productText=p=>norm([
+    p.name,p.title,p.slug,p.category,p.subcategory,p.family,p.short_description,p.description,
+    p.manufacturer_part_number,p.mpn,p.model,p.model_number,p.cg_product_code,p.sku,p.brand,
+    Array.isArray(p.tags)?p.tags.join(' '):p.tags,
+    Array.isArray(p.keywords)?p.keywords.join(' '):p.keywords,
+    Array.isArray(p.search_keywords)?p.search_keywords.join(' '):p.search_keywords
+  ].filter(Boolean).join(' '));
+
+  const isLaserProduct=p=>{
+    const t=productText(p);
+    return /(laser|chiller|cutting head|nozzle|protective lens|protective window|focus lens|collimation|ceramic ring|sensor body|height sensor|qbh|qcs|raytools|ray tools|precitec|wsx|boci|ospri|au3tech|teyu|s&a|hanli|tongfei|tonfy|licheng|li cheng|leicheng|co2|co₂|welding|cleaning head|znse)/.test(t);
   };
 
-  const productSpriteKey=(p={})=>{
-    const family=norm(p.family||'');
-    const text=norm([p.name,p.title,p.category,p.subcategory,p.family,p.description,Array.isArray(p.tags)?p.tags.join(' '):p.tags].filter(Boolean).join(' '));
-    const slug=String(p.slug||'');
-    const part4={
-      'raytools-bm111':'part4-head-01','raytools-bm110':'part4-head-02','raytools-bm114':'part4-head-03','raytools-bt240s':'part4-head-04',
-      'precitec-procutter-2':'part4-head-05','precitec-procutter-prime':'part4-head-06','precitec-procutter-zoom':'part4-head-07','precitec-procutter-thunder':'part4-head-08',
-      'precitec-minicutter':'part4-head-09','precitec-solidcutter':'part4-head-10','wsx-cutting-head':'part4-head-11','boci-cutting-head':'part4-head-12',
-      'ospri-cutting-head':'part4-head-13','au3tech-cutting-head':'part4-head-14',
-      'co2-laser-tube':'part4-misc-01','co2-psu':'part4-misc-02','znse-focus-lens':'part4-misc-03','co2-mirror':'part4-misc-04',
-      'co2-mirror-mount':'part4-misc-05','co2-head-nozzle':'part4-misc-06','co2-motion':'part4-misc-07','co2-controller':'part4-misc-08',
-      'welding-nozzle':'part4-misc-09','welding-protective-lens':'part4-misc-10','welding-ceramic':'part4-misc-11',
-      'wire-feeder-spare':'part4-misc-12','cleaning-head-consumable':'part4-misc-13'
-    };
-    if(part4[slug])return part4[slug];
-    const part6={
-      'pb-standard-punch':'p6-tool-01','pb-v-die':'p6-tool-02','pb-gooseneck':'p6-tool-03','pb-offset-hemming':'p6-tool-04','pb-radius':'p6-tool-05',
-      'pb-air-bend':'p6-tool-06','pb-holder-clamp':'p6-tool-07','pb-custom':'p6-tool-08','pb-crowning':'p6-tool-09','pb-accessories':'p6-tool-10',
-      'custom-reverse-engineering':'p6-custom-01','custom-machined-components':'p6-custom-02','custom-legacy-parts':'p6-custom-03','custom-prototype-fit':'p6-custom-04'
-    };
-    if(part6[slug])return part6[slug];
-
-    if(family==='chiller-spares'||text.includes('chiller')){
-      if(text.includes('circulation pump')||text.includes('chiller pump')||text.includes('water pump'))return 'sprite-chiller-part-pump';
-      if(text.includes('flow sensor')||text.includes('flow switch'))return 'sprite-chiller-part-flow';
-      if(text.includes('temperature sensor')||text.includes('thermistor')||text.includes('pt100')||text.includes('ntc'))return 'sprite-chiller-part-temp';
-      if(text.includes('level sensor')||text.includes('float switch')||text.includes('water level'))return 'sprite-chiller-part-level';
-      if(text.includes('filter')||text.includes('strainer'))return 'sprite-chiller-part-filter';
-      if(text.includes('fan'))return 'sprite-chiller-part-fan';
-      if(text.includes('compressor')||text.includes('refrigeration'))return 'sprite-chiller-part-compressor';
-      if(text.includes('plate heat exchanger'))return 'sprite-chiller-part-plateheatx';
-      if(text.includes('condenser')||text.includes('evaporator')||text.includes('heat exchanger')||text.includes('coil'))return 'sprite-chiller-part-heatx';
-      if(text.includes('controller')||text.includes('display')||text.includes('control board')||text.includes('pcb'))return 'sprite-chiller-part-controller';
-      if(text.includes('relay')||text.includes('contactor')||text.includes('capacitor')||text.includes('breaker')||text.includes('electrical'))return 'sprite-chiller-part-electrical';
-      if(text.includes('solenoid')||text.includes('expansion valve')||text.includes('service valve')||text.includes(' valve'))return 'sprite-chiller-part-valve';
-      if(text.includes('hose')||text.includes('fitting')||text.includes('quick connector')||text.includes('water pipe'))return 'sprite-chiller-part-hose';
-      if(text.includes('coolant')||text.includes('deionized')||text.includes('distilled')||text.includes('antifreeze')||text.includes('additive')||text.includes('water quality'))return 'sprite-chiller-part-coolant';
-      if(text.includes('pressure sensor')||text.includes('pressure transducer'))return 'sprite-chiller-part-pressure';
+  const familyFor=p=>{
+    const t=productText(p);
+    const cat=norm(p.category+' '+(p.subcategory||''));
+    if(/co2|co₂|znse/.test(t))return 'co2';
+    if(/welding|cleaning head|wire feeder/.test(t))return 'welding-cleaning';
+    if(/chiller|cwfl|hanli|tongfei|tonfy|licheng|leicheng/.test(t)){
+      if(/pump|sensor|switch|probe|filter|strainer|fan|compressor|refriger|controller|display|pcb|relay|contactor|capacitor|valve|hose|fitting|connector|coolant|spare/.test(t) || /chiller spares|chiller pumps/.test(cat))return 'chiller-spares';
+      return 'chillers';
     }
+    if(/nozzle/.test(t) && !/holder|sensor body/.test(t))return 'nozzles';
+    if(/lens|optic|window|glass|mirror|collimation|focus/.test(t))return 'optics';
+    if(/ceramic|sensor body|height sensor|holder|drawer|cartridge|seal|o ring|o-ring|gasket|qbh|qcs|fiber interface/.test(t))return 'ceramics-sensors';
+    if(/cutting head|laser head|raytools|ray tools|precitec|wsx|boci|ospri|au3tech/.test(t))return 'cutting-heads';
+    return 'ceramics-sensors';
+  };
 
-    if(text.includes('qbh')||text.includes('qcs')||text.includes('fiber interface')||text.includes('fiber connector'))return 'sprite-qbh';
-    if(text.includes('seal')||text.includes('o ring')||text.includes('o-ring')||text.includes('gasket'))return 'sprite-seal';
-    if(text.includes('lens drawer')||text.includes('lens cartridge')||text.includes('drawer assembly'))return 'sprite-lens-drawer';
-    if(text.includes('collimation')||text.includes('collimator'))return 'sprite-collimation';
-    if(text.includes('focus lens')||text.includes('focusing lens'))return 'sprite-focus';
-    if(text.includes('sensor body')||text.includes('capacitive sensor')||text.includes('nozzle holder')||text.includes('height sensor'))return 'sprite-sensor';
-    if(text.includes('ceramic'))return 'sprite-ceramic';
-    if(text.includes('double nozzle')||text.includes('double layer nozzle'))return 'sprite-double-nozzle';
-    if(text.includes('nozzle'))return 'sprite-single-nozzle';
-    if(text.includes('protective window')||text.includes('protective lens')||text.includes('cover glass')||text.includes('cover window')||text.includes('optic'))return 'sprite-protective';
+  const brandFor=p=>{
+    if(String(p.brand||'').trim())return String(p.brand).trim();
+    const t=productText(p);
+    if(/raytools|ray tools/.test(t))return 'RayTools';
+    if(/precitec/.test(t))return 'Precitec';
+    if(/teyu|s&a|s and a/.test(t))return 'TEYU / S&A';
+    if(/hanli/.test(t))return 'Hanli';
+    if(/tongfei|tonfy/.test(t))return 'Tongfei / TONFY';
+    if(/licheng|li cheng|leicheng/.test(t))return 'LiCheng';
+    if(/wsx/.test(t))return 'WSX';
+    if(/boci/.test(t))return 'BOCI';
+    if(/ospri/.test(t))return 'OSPRI';
+    if(/au3tech/.test(t))return 'Au3Tech';
     return '';
   };
 
-  const chillerReferenceImage=(p={})=>{
-    const slug=String(p.slug||'');
-    const map={
-      'teyu-cwfl-1000':'/assets/images/chiller.webp',
-      'teyu-cwfl-1500':'/assets/images/prod-chiller.webp',
-      'teyu-cwfl-2000':'/assets/images/prod-chiller-v22.webp',
-      'teyu-cwfl-3000':'/assets/images/project-chiller.webp',
-      'teyu-cwfl-4000':'/assets/images/project-chiller-v23.webp',
-      'teyu-cwfl-6000':'/assets/images/project-chiller-v23b.webp',
-      'fiber-laser-chiller-generic':'/assets/images/prod-chiller-v23.webp'
-    };
-    return map[slug]||'';
+  const termsFor=q=>norm(q).split(/\s+/).filter(Boolean);
+  const termMatch=(hay,t)=>{
+    if(hay.includes(t))return true;
+    return (aliases[t]||[]).some(a=>hay.includes(norm(a)));
+  };
+  const allTermsMatch=(hay,terms)=>terms.every(t=>termMatch(hay,t));
+
+  const scoreFor=(p,query)=>{
+    const terms=termsFor(query);
+    if(!terms.length)return 0;
+    const name=norm(p.name||p.title||'');
+    const model=norm([p.model,p.model_number,p.manufacturer_part_number,p.mpn,p.cg_product_code,p.sku].filter(Boolean).join(' '));
+    const hay=productText(p);
+    let score=0;
+    for(const t of terms){
+      if(model===t)score+=30;
+      else if(model.includes(t))score+=20;
+      if(name===t)score+=20;
+      else if(name.startsWith(t))score+=12;
+      else if(name.includes(t))score+=8;
+      if(hay.includes(t))score+=3;
+      for(const a of aliases[t]||[])if(hay.includes(norm(a)))score+=2;
+    }
+    return score;
   };
 
-  const chillerReferenceSprite=(p={})=>{
-    const slug=String(p.slug||'');
-    const map={
-      'hanli-fiber-chiller':'sprite-chiller-unit-1',
-      'tongfei-chiller':'sprite-chiller-unit-2',
-      'co2-chiller':'sprite-chiller-unit-3',
-      'handheld-laser-chiller':'sprite-chiller-unit-4'
-    };
-    return map[slug]||'';
-  };
+  let products=[];
+  let state={family:'all',brand:'all',sort:'relevance',visible:24};
 
-  let fallback={categories:[],brands:[],models:[],products:[]},live={categories:[],brands:[],models:[],products:[]};
-  let categories=[],brands=[],models=[],catalogProducts=[];
   try{
-    if(!window.CG_CATALOG) throw new Error('Catalogue service unavailable');
+    if(!window.CG_CATALOG)throw new Error('Catalogue service unavailable');
     const snapshot=await window.CG_CATALOG.getSnapshot();
-    categories=snapshot.categories||[];
-    brands=snapshot.brands||[];
-    models=snapshot.models||[];
-    fallback.products=snapshot.fallback?.products||[];
-    live.products=snapshot.live?.products||[];
-    catalogProducts=snapshot.products||fallback.products||[];
-    if(!live.products.length && snapshot.source==='supabase') live.products=snapshot.products||[];
-    if(!fallback.products.length && snapshot.source!=='supabase') fallback.products=snapshot.products||[];
+    products=(snapshot.products||[]).filter(isLaserProduct).map(p=>({
+      ...p,
+      familyKey:familyFor(p),
+      displayBrand:brandFor(p),
+      image:p.image_url||p.image||'',
+      href:p.href||('/products/catalog/'+encodeURIComponent(p.slug||'')+'.html')
+    }));
+    els.source.textContent=`${products.length} laser products & references`;
     document.documentElement.dataset.catalogSource=snapshot.source||'';
-  }catch(_){
-    count.textContent='Catalogue unavailable';
-    results.innerHTML='<div class="empty" style="grid-column:1/-1"><b>Catalogue temporarily unavailable.</b><p>Send a part photo, nameplate, model or requirement and CG can review it directly.</p><a class="btn primary" href="/request-quote.html?requirement=Product%20Identification">Send requirement →</a></div>';
+  }catch(err){
+    els.source.textContent='Catalogue unavailable';
+    els.results.innerHTML=`<div class="lpf-empty"><h3>Catalogue temporarily unavailable</h3><p>Send a part photo, model, nameplate or drawing and Crecer Grande can review it directly.</p><a class="btn primary" href="/request-quote.html?requirement=Laser%20Part%20Identification">Send requirement →</a></div>`;
     return;
   }
 
-  const brandNameById=Object.fromEntries(brands.map(x=>[String(x.id),x.name]));
-  brand.innerHTML='<option value="">All brands</option>'+brands.map(x=>`<option value="${safe(String(x.id))}">${safe(x.name)}</option>`).join('');
-  model.innerHTML='<option value="">All models</option>'+models.map(x=>`<option value="${safe(String(x.id))}">${safe(x.model_name)}</option>`).join('');
-  category.innerHTML='<option value="">All categories</option>'+categories.map(x=>`<option value="${safe(String(x.id))}">${safe(x.name)}</option>`).join('');
+  const brands=[...new Set(products.map(p=>p.displayBrand).filter(Boolean))].sort((a,b)=>a.localeCompare(b));
+  els.brand.innerHTML='<option value="all">All brand references</option>'+brands.map(b=>`<option value="${safe(b)}">${safe(b)}</option>`).join('');
 
-  cats.innerHTML=categories.filter(x=>!x.parent_id).slice(0,24).map(x=>`<button class="finder-cat" data-cat="${safe(String(x.id))}"><b>${safe(x.name)}</b><small>${safe(x.short_description||'Browse compatible requirements')}</small></button>`).join('');
-
-  function modelBrand(m){return brandNameById[String(m?.brand_id)]||(typeof m?.brand_id==='string'?m.brand_id:'')}
-  function categoryIdsUnder(id){
-    if(!id)return new Set();
-    const out=new Set([String(id)]);
-    let changed=true;
-    while(changed){
-      changed=false;
-      categories.forEach(c=>{
-        if(c.parent_id&&out.has(String(c.parent_id))&&!out.has(String(c.id))){
-          out.add(String(c.id)); changed=true;
-        }
-      });
-    }
-    return out;
+  function familyCount(id){
+    return id==='all'?products.length:products.filter(p=>p.familyKey===id).length;
   }
 
-  const topFamilyMap={
-    'laser-cutting-heads':['cutting-heads'],
-    'laser-spares-consumables':['consumables','co2','welding'],
-    'laser-chillers':['chillers'],
-    'laser-chiller-spares':['chiller-spares'],
-    'cnc-vmc-machine-spares':['cnc-vmc'],
-    'press-brake-tooling':['press-brake'],
-    'custom-obsolete-spares':['custom-obsolete'],
-    'automation-control':['automation'],
-    'rapid-prototyping':['3d-printing']
-  };
-  const categoryLabelMap={
-    'manual-focus-cutting-heads':['manual-focus cutting head'],
-    'autofocus-cutting-heads':['autofocus cutting head','autofocus / variable-beam cutting head'],
-    'smart-cutting-heads':['high-power / intelligent cutting head'],
-    'tube-3d-cutting-heads':['3d cutting head','medium-power 2d / 3d cutting head'],
-    'cutting-nozzles':['cutting nozzles'],
-    'protective-lenses':['protective windows'],
-    'focus-collimation-lenses':['focus & collimation optics'],
-    'ceramic-components':['ceramic rings'],
-    'cutting-head-spares':['sensor bodies & holders','sensors & cables','lens drawers & cartridges','seals & service parts','fiber interfaces','cleaning & service'],
-    'nozzle-holders-sensor-bodies':['sensor bodies & holders'],
-    'height-sensors-cables':['sensors & cables'],
-    'lens-cartridges-drawers':['lens drawers & cartridges'],
-    'seals-o-rings':['seals & service parts'],
-    'qbh-qcs-connectors':['fiber interfaces'],
-    'cleaning-consumables':['cleaning & service'],
-    'co2-laser-consumables':['co2'],
-    'laser-welding-consumables':['welding'],
-    'chiller-pumps':['circulation pumps'],
-    'chiller-flow-sensors':['flow sensing'],
-    'chiller-temperature-sensors':['temperature sensing'],
-    'chiller-level-sensors':['level sensing'],
-    'chiller-filters':['filtration'],
-    'chiller-fans':['fans'],
-    'chiller-compressors':['refrigeration'],
-    'chiller-heat-exchangers':['heat exchange'],
-    'chiller-controllers-displays':['controls'],
-    'chiller-electrical-spares':['electrical'],
-    'chiller-valves-fittings':['valves','hoses & fittings'],
-    'chiller-coolant-additives':['coolant & maintenance']
-  };
-
-  function fallbackCategoryMatch(p,catIds){
-    if(!category.value)return true;
-    const selected=categories.filter(c=>catIds.has(String(c.id)));
-    for(const c of selected){
-      if(!c.parent_id && (topFamilyMap[c.slug]||[]).includes(p.family))return true;
-      const labels=categoryLabelMap[c.slug]||[];
-      const pcat=norm(p.category),pfam=norm(p.family);
-      if(labels.some(label=>pcat.includes(norm(label))||pfam===norm(label)))return true;
-      if(norm(c.name)===pcat)return true;
-    }
-    return false;
+  function renderFamilies(){
+    els.families.innerHTML=FAMILY_DEFS.map(f=>`<button class="lpf-family${state.family===f.id?' active':''}" type="button" data-family="${f.id}">
+      <span class="num">${familyCount(f.id)}</span>
+      <b>${safe(f.label)}</b>
+      <small>${safe(f.short)}</small>
+    </button>`).join('');
   }
 
-  const fallbackImageBySlug=new Map((fallback.products||[]).map(p=>[
-    String(p.slug||''),
-    p.image_url||p.image||''
-  ]));
+  function quoteHref(p){
+    const name=p.name||p.title||'Laser product';
+    const model=p.model_number||p.model||p.manufacturer_part_number||'';
+    return '/request-quote.html?requirement='+encodeURIComponent(name)+(model?'&machine_model='+encodeURIComponent(model):'');
+  }
 
-  const resolveProductImage=(p={})=>{
-    const liveCandidate=p.image_url||p.image||'';
-    if(liveCandidate && !isGenericImage(liveCandidate)) return liveCandidate;
-    const fallbackCandidate=fallbackImageBySlug.get(String(p.slug||''))||'';
-    return fallbackCandidate||liveCandidate||'';
-  };
+  function filtered(){
+    const query=els.search.value.trim();
+    const terms=termsFor(query);
+    let rows=products.filter(p=>{
+      if(state.family!=='all'&&p.familyKey!==state.family)return false;
+      if(state.brand!=='all'&&p.displayBrand!==state.brand)return false;
+      return !terms.length||allTermsMatch(productText(p),terms);
+    });
+    if(state.sort==='az')rows.sort((a,b)=>String(a.name||a.title||'').localeCompare(String(b.name||b.title||'')));
+    else if(state.sort==='brand')rows.sort((a,b)=>(a.displayBrand||'ZZZ').localeCompare(b.displayBrand||'ZZZ')||String(a.name||'').localeCompare(String(b.name||'')));
+    else if(terms.length)rows.sort((a,b)=>scoreFor(b,query)-scoreFor(a,query)||String(a.name||'').localeCompare(String(b.name||'')));
+    else rows.sort((a,b)=>(a.familyKey||'').localeCompare(b.familyKey||'')||String(a.name||a.title||'').localeCompare(String(b.name||b.title||'')));
+    return rows;
+  }
+
+  function techBadges(p){
+    const vals=[];
+    [p.model_number,p.model,p.manufacturer_part_number,p.mpn,p.cg_product_code,p.subcategory||p.category].forEach(v=>{
+      const x=String(v||'').trim();
+      if(x&&!vals.includes(x))vals.push(x);
+    });
+    return vals.slice(0,3);
+  }
+
+  function imageHtml(p){
+    if(!p.image)return '<div class="lpf-img-fallback"><span>Image unavailable<br>Send photo/model for identification</span></div>';
+    return `<img src="${safe(p.image)}" alt="${safe(p.name||p.title||'Laser product')}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image unavailable<br>Send photo/model for identification</span>'}))">`;
+  }
+
+  function renderActive(){
+    const chips=[];
+    if(state.family!=='all'){
+      const f=FAMILY_DEFS.find(x=>x.id===state.family);
+      if(f)chips.push(`<span class="lpf-filter-chip">${safe(f.label)} <button type="button" data-remove="family">×</button></span>`);
+    }
+    if(state.brand!=='all')chips.push(`<span class="lpf-filter-chip">${safe(state.brand)} <button type="button" data-remove="brand">×</button></span>`);
+    if(els.search.value.trim())chips.push(`<span class="lpf-filter-chip">“${safe(els.search.value.trim())}” <button type="button" data-remove="search">×</button></span>`);
+    els.active.innerHTML=chips.join('');
+  }
+
+  function syncUrl(){
+    const u=new URL(location.href);
+    const q=els.search.value.trim();
+    q?u.searchParams.set('q',q):u.searchParams.delete('q');
+    state.family!=='all'?u.searchParams.set('family',state.family):u.searchParams.delete('family');
+    history.replaceState(null,'',u.pathname+(u.searchParams.toString()?'?'+u.searchParams.toString():'')+u.hash);
+  }
 
   function render(){
-    const text=norm(q.value),terms=text.split(/\s+/).filter(Boolean),catIds=categoryIdsUnder(category.value);
-    const selectedBrand=brand.value;
-    const selectedBrandName=brands.find(b=>String(b.id)===selectedBrand)?.name||'';
-    const selectedModel=models.find(x=>String(x.id)===model.value);
-    let rows=[];
-
-    rows.push(...catalogProducts.filter(p=>{
-      const categoryMatch=!category.value||
-        (p.category_id&&catIds.has(String(p.category_id)))||
-        fallbackCategoryMatch(p,catIds);
-      if(!categoryMatch)return false;
-      const productBrand=brandNameById[String(p.brand_id)]||p.brand||'';
-      if(selectedBrand&&String(p.brand_id)!==selectedBrand&&norm(productBrand)!==norm(selectedBrandName))return false;
-      const modelText=norm(p.model||p.model_number||'');
-      const modelMatch=!model.value||modelText===norm(selectedModel?.model_name)||
-        termMatch(norm([p.name,p.model,p.model_number,(p.keywords||p.search_keywords||[]).join?.(' ')||''].join(' ')),norm(selectedModel?.model_name));
-      if(!modelMatch)return false;
-      const hay=norm([
-        p.name,p.title,p.short_description,p.description,p.category,p.subcategory,p.family,
-        p.manufacturer_part_number,p.model,p.model_number,p.cg_product_code,p.brand,productBrand,
-        Array.isArray(p.tags)?p.tags.join(' '):p.tags,
-        Array.isArray(p.keywords)?p.keywords.join(' '):p.keywords,
-        Array.isArray(p.search_keywords)?p.search_keywords.join(' '):p.search_keywords
-      ].filter(Boolean).join(' '));
-      return !terms.length||termsMatch(hay,terms);
-    }).map(p=>({
-      kind:'Catalogue product',
-      slug:p.slug||'',
-      name:p.name||p.title||'Product',
-      desc:p.short_description||p.description||p.subcategory||p.category||'',
-      href:p.href||('/products/catalog/'+encodeURIComponent(p.slug||'')+'.html'),
-      brand:brandNameById[String(p.brand_id)]||p.brand||'',
-      meta:[p.manufacturer_part_number,p.model,p.model_number,p.cg_product_code,p.category].filter(Boolean),
-      image:resolveProductImage(p),
-      sprite:''
-    })));
-    if(!rows.length||terms.length){
-      rows.push(...categories.filter(c=>{
-        if(category.value&&!catIds.has(String(c.id)))return false;
-        const hay=norm(c.name+' '+(c.short_description||''));
-        return !terms.length||termsMatch(hay,terms);
-      }).map(c=>({
-        kind:'Product family',
-        name:c.name,
-        desc:c.short_description||'',
-        href:'/request-quote.html?requirement='+encodeURIComponent(c.name),
-        brand:'',
-        meta:[],
-        image:'',
-        sprite:''
-      })));
-
-      rows.push(...models.filter(m=>{
-        if(model.value&&String(m.id)!==model.value)return false;
-        if(selectedBrand&&String(m.brand_id)!==selectedBrand&&norm(modelBrand(m))!==norm(selectedBrandName))return false;
-        const hay=norm([m.model_name,m.model_code,Array.isArray(m.aliases)?m.aliases.join(' '):m.aliases,modelBrand(m)].filter(Boolean).join(' '));
-        return !terms.length||termsMatch(hay,terms);
-      }).map(m=>({
-        kind:'Equipment model',
-        name:m.model_name,
-        desc:'Search compatibility / send requirement',
-        href:'/request-quote.html?requirement='+encodeURIComponent(m.model_name),
-        brand:modelBrand(m),
-        meta:[m.model_code].filter(Boolean),
-        image:'',
-        sprite:''
-      })));
-    }
-
-    const seen=new Set();
-    rows=rows.filter(x=>{const k=(x.slug||'')+'|'+x.kind+'|'+x.name;if(seen.has(k))return false;seen.add(k);return true}).slice(0,120);
-    count.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
-    results.innerHTML=rows.length?rows.map(x=>`<article class="finder-item">
-      <a class="finder-media${x.image?'':' finder-media-pending'}" href="${safe(x.href)}" aria-label="Open ${safe(x.name)}">
-        ${x.image?`<img src="${safe(x.image)}" alt="${safe(x.name)}" loading="lazy" decoding="async" onerror="this.closest('.finder-media').classList.add('finder-media-pending');this.replaceWith(Object.assign(document.createElement('span'),{className:'finder-image-pending',innerHTML:'<b>Image unavailable</b><small>Send the product reference to CG for identification.</small>'}))">`:`<span class="finder-image-pending"><b>Image pending</b><small>Send a clear part photo or model reference for identification.</small></span>`}
-        <span class="finder-kind">${safe(x.kind)}</span>
-      </a>
-      <div class="finder-item-body">
-        <h3>${safe(x.name)}</h3>
-        <p>${safe(x.desc||'Technical details are confirmed before quotation.')}</p>
-        <div class="finder-meta">${x.brand?`<span>${safe(x.brand)}</span>`:''}${(x.meta||[]).map(v=>`<span>${safe(v)}</span>`).join('')}</div>
-        <div class="actions"><a class="btn dark" href="${safe(x.href)}">${x.kind==='Catalogue product'?'View details':'Send requirement'} →</a></div>
-      </div>
-    </article>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>No exact match found.</b><p>Use a photo, nameplate, drawing, dimensions or part number. CG can help identify the requirement.</p><a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(q.value||'Unidentified Laser Part')}">Send for identification →</a></div>`;
+    const rows=filtered();
+    const shown=rows.slice(0,state.visible);
+    els.resultCount.textContent=`${rows.length} match${rows.length===1?'':'es'}`;
+    els.resultHint.textContent=rows.length?(`Showing ${Math.min(shown.length,rows.length)} of ${rows.length}`):'Try another model, part number or family';
+    renderFamilies();
+    renderActive();
+    els.results.innerHTML=shown.length?shown.map(p=>{
+      const badges=techBadges(p);
+      const family=FAMILY_DEFS.find(f=>f.id===p.familyKey)?.label||'Laser product';
+      return `<article class="lpf-card">
+        <a class="lpf-card-media" href="${safe(p.href)}" aria-label="Open ${safe(p.name||p.title||'product')}">
+          ${imageHtml(p)}
+          <span class="lpf-card-badge">${safe(family)}</span>
+        </a>
+        <div class="lpf-card-body">
+          <div class="lpf-brand">${safe(p.displayBrand||'Crecer Grande catalogue')}</div>
+          <h3>${safe(p.name||p.title||'Laser product')}</h3>
+          <p>${safe(p.short_description||p.description||'Technical suitability is confirmed against the actual machine, model and interface before quotation.')}</p>
+          <div class="lpf-tech">${badges.map(v=>`<span>${safe(v)}</span>`).join('')}</div>
+          <div class="lpf-card-actions">
+            <a class="lpf-open" href="${safe(p.href)}">View details</a>
+            <a class="lpf-quote" href="${safe(quoteHref(p))}">Request quote</a>
+          </div>
+        </div>
+      </article>`;
+    }).join(''):`<div class="lpf-empty">
+      <h3>No exact catalogue match</h3>
+      <p>That does not mean the part is unavailable. Send a clear photo, head/chiller model, part number, dimensions or nameplate and we can identify the requirement manually.</p>
+      <a class="btn primary" href="/request-quote.html?requirement=${encodeURIComponent(els.search.value.trim()||'Unidentified Laser Part')}">Send for identification →</a>
+    </div>`;
+    els.load.hidden=rows.length<=shown.length;
+    syncUrl();
   }
 
-  [q,brand,model,category].forEach(x=>x.addEventListener('input',render));
-  $('#finder-clear')?.addEventListener('click',()=>{q.value='';brand.value='';model.value='';category.value='';render()});
-  cats.addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;category.value=b.dataset.cat;render();results.scrollIntoView({behavior:'smooth'})});
-  const qs=new URLSearchParams(location.search);
-  if(qs.get('q'))q.value=qs.get('q');
+  let searchTimer;
+  els.search.addEventListener('input',()=>{
+    clearTimeout(searchTimer);
+    searchTimer=setTimeout(()=>{state.visible=24;render()},120);
+  });
+  els.clearSearch.addEventListener('click',()=>{els.search.value='';state.visible=24;render();els.search.focus()});
+  els.brand.addEventListener('change',()=>{state.brand=els.brand.value;state.visible=24;render()});
+  els.sort.addEventListener('change',()=>{state.sort=els.sort.value;render()});
+  els.reset.addEventListener('click',()=>{state={family:'all',brand:'all',sort:'relevance',visible:24};els.search.value='';els.brand.value='all';els.sort.value='relevance';render()});
+  els.load.addEventListener('click',()=>{state.visible+=24;render()});
+  els.filterToggle?.addEventListener('click',()=>els.filterPanel?.classList.toggle('open'));
+
+  els.families.addEventListener('click',e=>{
+    const b=e.target.closest('[data-family]');if(!b)return;
+    state.family=b.dataset.family||'all';state.visible=24;render();
+    document.querySelector('#lpf-results-anchor')?.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+
+  els.active.addEventListener('click',e=>{
+    const b=e.target.closest('[data-remove]');if(!b)return;
+    const key=b.dataset.remove;
+    if(key==='family')state.family='all';
+    if(key==='brand'){state.brand='all';els.brand.value='all'}
+    if(key==='search')els.search.value='';
+    state.visible=24;render();
+  });
+
+  document.querySelectorAll('[data-lpf-query]').forEach(b=>b.addEventListener('click',()=>{
+    els.search.value=b.dataset.lpfQuery||'';state.family='all';state.visible=24;render();
+    document.querySelector('#lpf-results-anchor')?.scrollIntoView({behavior:'smooth',block:'start'});
+  }));
+
+  const params=new URLSearchParams(location.search);
+  if(params.get('q'))els.search.value=params.get('q');
+  if(params.get('family')&&FAMILY_DEFS.some(f=>f.id===params.get('family')))state.family=params.get('family');
+
   render();
 });
