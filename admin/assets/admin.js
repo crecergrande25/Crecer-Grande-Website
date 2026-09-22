@@ -196,7 +196,7 @@
         if(!Object.keys(patch).length){closeDrawer();return}
         const def=Object.values(tableDefs).find(x=>x.table===currentTable)||{};
         const idKey=def.pk||('id' in editing?'id':null);if(!idKey)throw new Error('This row has no editable primary key.');
-        if(['homepage_content','page_content','page_texts'].includes(currentTable)&&'updated_at' in editing)patch.updated_at=new Date().toISOString();const {error}=await client.from(currentTable).update(patch).eq(idKey,editing[idKey]);if(error)throw error;
+        if('updated_at' in editing)patch.updated_at=new Date().toISOString();const {error}=await client.from(currentTable).update(patch).eq(idKey,editing[idKey]);if(error)throw error;
         try{await client.rpc('log_admin_event',{p_action:'UPDATE',p_module:currentTable,p_record_id:String(editing[idKey]),p_record_label:editing.name||editing.title||editing.slug||String(editing[idKey]),p_metadata:{fields:Object.keys(patch)}})}catch(_){}
         closeDrawer();status('Saved '+currentTable+' record.','ok');
       }
