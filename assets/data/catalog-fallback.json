@@ -1314,7 +1314,7 @@
       },
       "badge": "Reference model",
       "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-2000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/prod-chiller-v22.webp"
+      "image_url": "/assets/images/prod-chiller-v23.webp"
     },
     {
       "slug": "teyu-cwfl-3000",
@@ -1390,7 +1390,7 @@
       },
       "badge": "Reference model",
       "href": "/request-quote.html?requirement=TEYU%20/%20S%26A%20CWFL-6000%20%E2%80%94%20chiller%20reference",
-      "image_url": "/assets/images/project-chiller-v23b.webp"
+      "image_url": "/assets/images/div-products-v23.webp"
     },
     {
       "slug": "fiber-laser-chiller-generic",
@@ -1411,7 +1411,7 @@
       },
       "badge": "Complete chiller",
       "href": "/request-quote.html?requirement=Fiber%20laser%20chiller%20%E2%80%94%20identify%20by%20laser%20power%20%26%20circuits",
-      "image_url": "/assets/images/prod-chiller-v23.webp"
+      "image_url": "/assets/images/project-chiller-v23b.webp"
     },
     {
       "slug": "hanli-fiber-chiller",
@@ -1453,7 +1453,7 @@
       },
       "badge": "Reference brand",
       "href": "/request-quote.html?requirement=Tongfei%20/%20TONFY%20laser%20chiller%20%E2%80%94%20model%20identification",
-      "image_url": "/assets/images/prod-chiller-v23.webp"
+      "image_url": "/assets/images/cg-machine-maintenance.webp"
     },
     {
       "slug": "co2-chiller",
@@ -1494,7 +1494,7 @@
       },
       "badge": "Handheld laser",
       "href": "/request-quote.html?requirement=Handheld%20welding%20/%20cleaning%20laser%20chiller",
-      "image_url": "/assets/images/project-chiller-v23b.webp"
+      "image_url": "/assets/images/div-maintenance.webp"
     },
     {
       "slug": "leicheng-600w-pump",
@@ -2075,8 +2075,9 @@
         "Required": "Machine make/model • part photo/nameplate • dimensions/ratings where applicable"
       },
       "badge": "Machine spare",
-      "image": "/assets/images/prod-cnc.webp",
-      "href": "/request-quote.html?requirement=Spindle%20%26%20spindle%20accessories"
+      "image": "/assets/images/cnc/cnc-spindle-generated.webp",
+      "href": "/request-quote.html?requirement=Spindle%20%26%20spindle%20accessories",
+      "image_url": "/assets/images/cnc/cnc-spindle-generated.webp"
     },
     {
       "slug": "cnc-servo-drives",
@@ -2456,7 +2457,7 @@
       "badge": "Punch",
       "sprite": "p6-tool-03",
       "href": "/request-quote.html?requirement=Gooseneck%20Punches",
-      "image_url": "/assets/images/prod-bending.webp"
+      "image_url": "/assets/images/part6-tooling-sprite.webp"
     },
     {
       "slug": "pb-offset-hemming",
