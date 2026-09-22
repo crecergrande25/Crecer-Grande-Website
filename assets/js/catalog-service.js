@@ -12,7 +12,9 @@
     'laser-welding-consumables':'welding',
     'cnc-vmc-machine-spares':'cnc-vmc',
     'press-brake-tooling':'press-brake',
-    'custom-obsolete-spares':'custom-obsolete'
+    'custom-obsolete-spares':'custom-obsolete',
+    'automation-control':'automation',
+    'rapid-prototyping':'3d-printing'
   };
   const LIVE_QUERY_TIMEOUT_MS = 4500;
   const GENERIC_IMAGES = [
@@ -147,6 +149,8 @@
     if(hay.includes('cnc')||hay.includes('vmc')||hay.includes('machine spare')) return 'cnc-vmc';
     if(hay.includes('press brake')||hay.includes('bending tool')) return 'press-brake';
     if(hay.includes('obsolete')||hay.includes('custom')) return 'custom-obsolete';
+    if(hay.includes('automation')||hay.includes('plc')||hay.includes('industrial iot')) return 'automation';
+    if(hay.includes('3d print')||hay.includes('rapid prototyp')||hay.includes('fdm')||hay.includes('sla')||hay.includes('sls')||hay.includes('mjf')||hay.includes('dmls')) return '3d-printing';
     return '';
   }
 
