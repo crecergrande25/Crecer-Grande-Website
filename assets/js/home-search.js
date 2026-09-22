@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
   const client=window.CG_SUPABASE;
   if(client){
     try{
-      const {data,error}=await client.from('products').select('name,slug,short_description,category,subcategory,mpn,manufacturer_part_number,sku,tags').eq('published',true).limit(750);
-      if(!error)(data||[]).forEach(x=>add(x.name,'Catalogue product',x.short_description||x.subcategory||x.category||'','/products/catalog/'+encodeURIComponent(x.slug)+'.html',[x.category,x.subcategory,x.mpn,x.manufacturer_part_number,x.sku,Array.isArray(x.tags)?x.tags.join(' '):x.tags].filter(Boolean).join(' ')));
+      const {data,error}=await client.from('products').select('name,slug,short_description,category,subcategory,mpn,manufacturer_part_number,sku,tags,canonical_url').eq('published',true).limit(750);
+      if(!error)(data||[]).forEach(x=>add(x.name,'Catalogue product',x.short_description||x.subcategory||x.category||'',(x.canonical_url?new URL(x.canonical_url,location.origin).pathname:'/products/catalog/'+encodeURIComponent(x.slug)+'.html'),[x.category,x.subcategory,x.mpn,x.manufacturer_part_number,x.sku,Array.isArray(x.tags)?x.tags.join(' '):x.tags].filter(Boolean).join(' ')));
     }catch(_){ }
   }
   const esc=s=>String(s||'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
