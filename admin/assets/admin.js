@@ -2,13 +2,13 @@
 (() => {
   const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
   const cfg=window.CG_CONFIG||{};
-  let client=null, profile=null, roles=[], currentView='dashboard', currentTable=null, tableRows=[], editing=null;
+  let client=null, profile=null, roles=[], currentView='dashboard', currentTable=null, tableRows=[], editing=null, creating=false;
 
   const tableDefs={
     settings:{label:'Website Settings',table:'site_settings',icon:'⚙',preferred:['id','company_name','tagline','email_primary','phone_primary','instagram_url','logo_url','website_version']},
     homepage:{label:'Homepage Content',table:'homepage_content',icon:'⌂',preferred:['id','section_key','title','subtitle','body','published','sort_order']},
     pagecontent:{label:'Page Content',table:'page_content',icon:'▤',preferred:['id','page_key','section_key','title','subtitle','body','published','sort_order']},
-    pagetext:{label:'Page Texts',table:'page_texts',icon:'T',preferred:['id','page_key','text_key','content','published']},
+    pagetext:{label:'Page Texts',table:'page_texts',pk:'page_key',icon:'T',preferred:['id','page_key','text_key','content','published']},
     divisions:{label:'Divisions',table:'divisions',icon:'◫',preferred:['id','slug','name','title','published','sort_order']},
     projects:{label:'Projects',table:'projects',icon:'◆',preferred:['id','slug','title','name','published','sort_order']},
     resources:{label:'Resources',table:'resources',icon:'▦',preferred:['id','slug','title','name','published','sort_order']},
@@ -22,6 +22,17 @@
     audit:{label:'Audit Log',table:'audit_log',icon:'✓',preferred:['id','occurred_at','actor_display_name','actor_username','action','module','record_label']}
   };
 
+  const createDefs={
+    products:{slug:'',category:'Industrial Product',title:'',name:'',short_description:'',image_url:'',published:false,featured:false,stock_status:'unknown',rfq_enabled:true,canonical_url:'',seo_title:'',seo_description:''},
+    variants:{product_id:'',name:'',sku:'',price:null,published:false,specifications:{}},
+    categories:{slug:'',name:'',short_description:'',image_url:'',published:true,sort_order:100},
+    brands:{slug:'',name:'',description:'',website_url:'',logo_url:'',published:true,sort_order:100},
+    divisions:{slug:'',title:'',name:'',summary:'',description:'',image_url:'',published:false,sort_order:100,bullets:[]},
+    projects:{slug:'',title:'',summary:'',details:'',image_url:'',published:false,sort_order:100,tags:[],gallery:[]},
+    resources:{title:'',description:'',file_url:'',resource_type:'pdf',published:false,sort_order:100},
+    pagecontent:{page_slug:'',page_name:'',title:'',intro:'',body:{},published:false},
+    pagetext:{page_key:'',title:'',h1:'',intro:'',meta_description:''}
+  };
   const readOnlyTables=new Set(['analytics_events','audit_log']);
   const noEdit=new Set(['id','created_at','updated_at','occurred_at','user_id']);
   const escape=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -110,10 +121,10 @@
   }
   function renderTable(key,rows){
     const def=tableDefs[key],cols=preferredCols(rows,def),readonly=readOnlyTables.has(def.table);
-    $('#content').innerHTML=`<div class="toolbar"><input id="table-search" type="search" placeholder="Search ${escape(def.label.toLowerCase())}…"><span class="tag">${rows.length} loaded</span><div class="spacer"></div><button class="btn outline" id="refresh-table">Refresh</button></div>
+    $('#content').innerHTML=`<div class="toolbar"><input id="table-search" type="search" placeholder="Search ${escape(def.label.toLowerCase())}…"><span class="tag">${rows.length} loaded</span><div class="spacer"></div>${createDefs[key]?`<button class="btn primary" id="new-record">New</button>`:''}<button class="btn outline" id="refresh-table">Refresh</button></div>
     <div class="table-shell"><table><thead><tr>${cols.map(c=>`<th>${escape(c)}</th>`).join('')}<th>Actions</th></tr></thead><tbody id="table-body">${renderRows(rows,cols,readonly)}</tbody></table></div>`;
     $('#table-search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();renderTableBody(rows.filter(x=>JSON.stringify(x).toLowerCase().includes(q)),cols,readonly)});
-    $('#refresh-table').onclick=()=>tableView(key);bindRowActions(readonly);
+    $('#refresh-table').onclick=()=>tableView(key);if($('#new-record'))$('#new-record').onclick=()=>openCreateDrawer(key);bindRowActions(readonly);
   }
   function renderRows(rows,cols,readonly){
     return rows.map((r,i)=>`<tr data-row="${i}">${cols.map(c=>`<td>${escape(fmt(r[c]))}</td>`).join('')}<td><div class="row-actions"><button class="mini" data-viewrow="${i}">View</button>${readonly?'':`<button class="mini" data-editrow="${i}">Edit</button>`}${currentTable==='enquiries'&&'status' in r?`<button class="mini" data-statusrow="${i}">Status</button>`:''}</div></td></tr>`).join('');
@@ -132,34 +143,94 @@
     const wide=isObject||val.length>100||/body|description|notes|metadata|keywords|content/i.test(k);
     return `<div class="edit-field ${wide?'wide':''}"><label>${escape(k)}</label>${wide?`<textarea ${disabled?'disabled class="readonly"':''} data-field="${escape(k)}">${escape(val)}</textarea>`:`<input ${disabled?'disabled class="readonly"':''} data-field="${escape(k)}" value="${escape(val)}">`}</div>`;
   }
+  function openCreateDrawer(key){
+    currentTable=tableDefs[key].table;creating=true;editing=structuredClone(createDefs[key]);
+    $('#drawer-title').textContent='Create '+tableDefs[key].label.replace(/s$/,'');
+    $('#drawer-body').innerHTML='<div class="edit-grid">'+Object.entries(editing).map(([k,v])=>fieldInput(k,v,false)).join('')+'</div>';
+    $('#drawer-save').hidden=false;$('#drawer').classList.add('open');
+  }
   function openDrawer(row,viewOnly){
-    editing=row;$('#drawer-title').textContent=(viewOnly?'View ':'Edit ')+(currentTable||'record');
+    creating=false;editing=row;$('#drawer-title').textContent=(viewOnly?'View ':'Edit ')+(currentTable||'record');
     $('#drawer-body').innerHTML='<div class="edit-grid">'+Object.entries(row).map(([k,v])=>fieldInput(k,v,viewOnly)).join('')+'</div>';
     $('#drawer-save').hidden=viewOnly;$('#drawer').classList.add('open');
   }
-  function closeDrawer(){$('#drawer').classList.remove('open');editing=null}
+  function closeDrawer(){$('#drawer').classList.remove('open');editing=null;creating=false}
   async function saveDrawer(){
     if(!editing)return;const patch={};
     $$('[data-field]',$('#drawer-body')).forEach(el=>{
-      const k=el.dataset.field;if(noEdit.has(k))return;
+      const k=el.dataset.field;if(noEdit.has(k)&&!creating)return;
       const old=editing[k];let v=el.value;
       if(typeof old==='boolean')v=v==='true';
       else if(typeof old==='number'&&v!=='')v=Number(v);
-      else if(old&&typeof old==='object'){try{v=JSON.parse(v)}catch(_){throw new Error(`${k} must be valid JSON`)}} else if(v==='')v=null;
-      if(JSON.stringify(v)!==JSON.stringify(old))patch[k]=v;
+      else if(old&&typeof old==='object'){try{v=JSON.parse(v||(/\[/.test(JSON.stringify(old))?'[]':'{}'))}catch(_){throw new Error(`${k} must be valid JSON`)}} else if(v==='')v=null;
+      if(creating||JSON.stringify(v)!==JSON.stringify(old))patch[k]=v;
     });
-    if(!Object.keys(patch).length){closeDrawer();return}
-    const idKey='id' in editing?'id':null;if(!idKey)throw new Error('This row has no editable primary id.');
+    Object.keys(patch).forEach(k=>{if(patch[k]===null&&creating)delete patch[k]});
+    if(creating&&currentTable==='products'){
+      patch.slug=String(patch.slug||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+      patch.title=String(patch.title||patch.name||'').trim();
+      patch.name=String(patch.name||patch.title||'').trim();
+      if(!patch.slug||!patch.title||!patch.category)throw new Error('Product slug, title/name and category are required.');
+      patch.seo_title=patch.seo_title||patch.title;
+      patch.seo_description=patch.seo_description||String(patch.short_description||'').slice(0,160)||'Industrial product requirement available from Crecer Grande.';
+      patch.canonical_url=patch.canonical_url||`${location.origin.replace('/admin','')}/products/product-detail.html?slug=${encodeURIComponent(patch.slug)}`;
+    }
+    if(creating&&['divisions','projects','product_categories','product_brands'].includes(currentTable)){
+      if(patch.slug)patch.slug=String(patch.slug).trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    }
+    if(creating&&currentTable==='divisions'&&(!patch.slug||!patch.title))throw new Error('Division slug and title are required.');
+    if(creating&&currentTable==='projects'&&(!patch.slug||!patch.title))throw new Error('Project slug and title are required.');
+    if(creating&&currentTable==='product_categories'&&(!patch.slug||!patch.name))throw new Error('Category slug and name are required.');
+    if(creating&&currentTable==='product_brands'&&(!patch.slug||!patch.name))throw new Error('Brand slug and name are required.');
+    if(creating&&currentTable==='product_variants'&&(!patch.product_id||!patch.name))throw new Error('Product ID and variant name are required.');
+    if(creating&&currentTable==='resources'&&!patch.title)throw new Error('Resource title is required.');
+    if(creating&&currentTable==='page_content'&&(!patch.page_slug||!patch.page_name))throw new Error('Page slug and page name are required.');
+    if(creating&&currentTable==='page_texts'&&!patch.page_key)throw new Error('Page key is required.');
     $('#drawer-save').disabled=true;
     try{
-      const {error}=await client.from(currentTable).update(patch).eq(idKey,editing[idKey]);if(error)throw error;
-      try{await client.rpc('log_admin_event',{p_action:'UPDATE',p_module:currentTable,p_record_id:String(editing[idKey]),p_record_label:editing.name||editing.title||editing.slug||String(editing[idKey]),p_metadata:{fields:Object.keys(patch)}})}catch(_){}
-      closeDrawer();status('Saved '+currentTable+' record.','ok');const key=Object.keys(tableDefs).find(k=>tableDefs[k].table===currentTable);if(key)tableView(key);
+      if(creating){
+        const {data,error}=await client.from(currentTable).insert(patch).select().maybeSingle();if(error)throw error;
+        try{await client.rpc('log_admin_event',{p_action:'CREATE',p_module:currentTable,p_record_id:String(data?.id||data?.page_key||''),p_record_label:data?.name||data?.title||data?.slug||data?.page_key||'',p_metadata:{fields:Object.keys(patch)}})}catch(_){}
+        closeDrawer();status('Created '+currentTable+' record.','ok');
+      }else{
+        if(!Object.keys(patch).length){closeDrawer();return}
+        const def=Object.values(tableDefs).find(x=>x.table===currentTable)||{};
+        const idKey=def.pk||('id' in editing?'id':null);if(!idKey)throw new Error('This row has no editable primary key.');
+        const {error}=await client.from(currentTable).update(patch).eq(idKey,editing[idKey]);if(error)throw error;
+        try{await client.rpc('log_admin_event',{p_action:'UPDATE',p_module:currentTable,p_record_id:String(editing[idKey]),p_record_label:editing.name||editing.title||editing.slug||String(editing[idKey]),p_metadata:{fields:Object.keys(patch)}})}catch(_){}
+        closeDrawer();status('Saved '+currentTable+' record.','ok');
+      }
+      const key=Object.keys(tableDefs).find(k=>tableDefs[k].table===currentTable);if(key)tableView(key);
     }finally{$('#drawer-save').disabled=false}
   }
   async function quickStatus(row){
     const next=prompt('Set enquiry status:',row.status||'new');if(!next||next===row.status)return;
     const {error}=await client.from('enquiries').update({status:next}).eq('id',row.id);if(error)status(error.message,'bad');else{status('Enquiry status updated.','ok');tableView('enquiries')}
+  }
+  async function mediaView(){
+    currentTable='media_assets';const c=$('#content');c.innerHTML='<div class="notice">Loading media library…</div>';
+    const {data,error}=await client.from('media_assets').select('*').order('created_at',{ascending:false}).limit(200);
+    if(error){c.innerHTML=`<div class="notice bad">${escape(error.message)}</div>`;return}
+    const rows=data||[];
+    c.innerHTML=`<div class="toolbar"><label class="btn primary" style="cursor:pointer">Upload Media<input id="media-upload" type="file" accept="image/*,.pdf" hidden></label><span class="tag">${rows.length} assets</span><div class="spacer"></div><button class="btn outline" id="refresh-media">Refresh</button></div>
+    <div class="user-grid">${rows.length?rows.map(x=>`<div class="user-card"><h3>${escape(x.title||x.storage_path)}</h3><p>${escape(x.kind||'file')}</p><p><a href="${escape(x.public_url)}" target="_blank" rel="noopener">Open asset ↗</a></p><div class="row-actions"><button class="mini" data-copyurl="${escape(x.public_url)}">Copy URL</button></div></div>`).join(''):'<div class="notice">No media assets yet. Use Upload Media to add the first one.</div>'}</div>`;
+    $('#refresh-media').onclick=mediaView;
+    $('#media-upload').onchange=async(e)=>{
+      const file=e.target.files?.[0];if(!file)return;
+      if(file.size>20*1024*1024){status('Media file exceeds 20 MB.','bad');return}
+      const clean=String(file.name||'file').replace(/[^a-zA-Z0-9._-]+/g,'-').slice(-160);
+      const path=`media/${new Date().toISOString().slice(0,10)}/${crypto.randomUUID?crypto.randomUUID():Date.now()}-${clean}`;
+      status('Uploading media…','warn');
+      const up=await client.storage.from('site-assets').upload(path,file,{upsert:false,contentType:file.type||'application/octet-stream'});
+      if(up.error){status(up.error.message,'bad');return}
+      const pub=client.storage.from('site-assets').getPublicUrl(path).data.publicUrl;
+      const {data:{user}}=await client.auth.getUser();
+      const ins=await client.from('media_assets').insert({title:file.name,kind:file.type?.startsWith('image/')?'image':'document',storage_path:path,public_url:pub,uploaded_by:user?.id||null});
+      if(ins.error){status(ins.error.message,'bad');return}
+      try{await client.rpc('log_admin_event',{p_action:'UPLOAD_MEDIA',p_module:'media_assets',p_record_id:path,p_record_label:file.name,p_metadata:{size:file.size,type:file.type}})}catch(_){}
+      status('Media uploaded.','ok');mediaView();
+    };
+    $('[data-copyurl]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copyurl);status('Media URL copied.','ok')}catch(_){status('Copy unavailable.','bad')}});
   }
   async function analyticsView(){
     const c=$('#content');c.innerHTML='<div class="notice">Loading analytics…</div>';
@@ -232,6 +303,7 @@
     if(key==='users')return userView();
     if(key==='account')return accountView();
     if(key==='analytics')return analyticsView();
+    if(key==='media')return mediaView();
     if(tableDefs[key])return tableView(key);
   }
   async function boot(){
