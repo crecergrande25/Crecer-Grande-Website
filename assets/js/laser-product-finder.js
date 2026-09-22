@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function imageHtml(p){
     if(!p.image)return '<div class="lpf-img-fallback"><span>Image under verification<br>Use model / part number for identification</span></div>';
-    return `<img src="${safe(p.image)}" alt="${safe(p.name||p.title||'Laser product')}" loading="lazy" decoding="async" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image under verification<br>Use model / part number for identification</span>'}))">`;
+    return `<img src="${safe(p.image)}" alt="${safe(p.name||p.title||'Laser product')}" loading="lazy" decoding="async" onload="if(this.naturalWidth<480||this.naturalHeight<320){this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image withheld — low resolution<br>Use model / part number for identification</span>'}))}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'lpf-img-fallback',innerHTML:'<span>Image under verification<br>Use model / part number for identification</span>'}))">`;
   }
 
   function renderActive(){
