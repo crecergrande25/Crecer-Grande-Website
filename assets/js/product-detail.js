@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded',async()=>{
   const host=document.getElementById('product-detail'); if(!host)return;
   const slug=new URLSearchParams(location.search).get('slug');
-  if(!slug){host.innerHTML='<div class="empty">No product selected.</div>';return}
+  const setMeta=(selector,attr,value)=>{const node=document.querySelector(selector);if(node&&value)node.setAttribute(attr,value)};
+  const setRobots=value=>setMeta('meta[name="robots"]','content',value);
+  if(!slug){setRobots('noindex,follow');host.innerHTML='<div class="empty">No product selected.</div>';return}
   const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   const service=window.CG_CATALOG;
   if(!service){host.innerHTML='<div class="empty">Product catalogue is temporarily unavailable. Please send your requirement directly.</div>';return}
   try{
     const resolved=await service.getProductBySlug(slug);
     const p=resolved.product;
-    if(!p){host.innerHTML='<div class="empty">This product is not published or could not be found.</div>';return}
+    if(!p){setRobots('noindex,follow');host.innerHTML='<div class="empty">This product is not published or could not be found.</div>';return}
     const client=window.CG_SUPABASE;
     let brand=p.brand?{name:p.brand}:null,compat=[];
     if(resolved.source==='supabase'&&client&&p.brand_id){
@@ -24,10 +26,11 @@ document.addEventListener('DOMContentLoaded',async()=>{
     document.body.dataset.productSlug=p.slug||slug;
     document.body.dataset.catalogSource=resolved.source||'';
     const metaTitle=(p.seo_title||p.name)+' | Crecer Grande';
-    const metaDescription=p.seo_description||p.short_description||p.description||'Technical catalogue product details and compatibility information from Crecer Grande.';
+    const rawDescription=p.seo_description||p.short_description||p.description||'Technical catalogue product details and compatibility information from Crecer Grande.';
+    const metaDescription=String(rawDescription).replace(/\s+/g,' ').trim().slice(0,160);
     const canonicalUrl=location.origin+'/products/product-detail.html?slug='+encodeURIComponent(p.slug||slug);
     document.title=metaTitle;
-    const setMeta=(selector,attr,value)=>{const node=document.querySelector(selector);if(node&&value)node.setAttribute(attr,value)};
+    setRobots('index,follow,max-image-preview:large');
     setMeta('meta[name="description"]','content',metaDescription);
     setMeta('link[rel="canonical"]','href',canonicalUrl);
     setMeta('meta[property="og:title"]','content',metaTitle);
@@ -46,9 +49,13 @@ document.addEventListener('DOMContentLoaded',async()=>{
       <div class="notice">Model-dependent components are checked against the actual equipment/head/chiller before quotation. Brand references do not imply authorization unless specifically stated.</div></div></div>
       ${Object.keys(specs).length?`<section class="section" style="padding-bottom:0"><div class="section-head"><div><div class="subhead">Technical data</div><h2>Specifications</h2></div></div><table class="spec-table">${Object.entries(specs).map(([k,v])=>`<tr><td>${esc(k)}</td><td>${esc(typeof v==='object'?JSON.stringify(v):v)}</td></tr>`).join('')}</table></section>`:''}
       ${compat.length?`<section class="section" style="padding-bottom:0"><div class="section-head"><div><div class="subhead">Compatibility</div><h2>Known catalogue relationships</h2></div></div><div class="compat-grid">${compat.map(x=>`<span>${esc(x.equipment_models?.model_name||'Equipment')}${x.equipment_models?.model_code?' · '+esc(x.equipment_models.model_code):''}</span>`).join('')}</div></section>`:''}`;
-    const ld={"@context":"https://schema.org","@type":"Product","name":p.name,"description":p.short_description||p.description||undefined,"sku":p.sku||p.cg_product_code||undefined,"mpn":p.mpn||p.manufacturer_part_number||undefined,"image":image?[image]:undefined,"brand":brand?{"@type":"Brand","name":brand.name}:undefined};
-    const s=document.createElement('script');s.type='application/ld+json';s.textContent=JSON.stringify(ld);document.head.appendChild(s);
+    const absoluteImage=image?new URL(image,location.origin).href:undefined;
+    const ld={"@context":"https://schema.org","@type":"Product","name":p.name,"url":canonicalUrl,"description":p.short_description||p.description||undefined,"sku":p.sku||p.cg_product_code||undefined,"mpn":p.mpn||p.manufacturer_part_number||undefined,"image":absoluteImage?[absoluteImage]:undefined,"brand":brand?{"@type":"Brand","name":brand.name}:undefined};
+    const oldLd=document.querySelector('script[data-cg-product-schema]');
+    if(oldLd)oldLd.remove();
+    const s=document.createElement('script');s.type='application/ld+json';s.dataset.cgProductSchema='1';s.textContent=JSON.stringify(ld);document.head.appendChild(s);
   }catch(e){
+    setRobots('noindex,follow');
     host.innerHTML=`<div class="empty">Could not load product details. <a href="/request-quote.html?requirement=${encodeURIComponent(slug)}">Send the requirement to CG →</a></div>`;
   }
 });
