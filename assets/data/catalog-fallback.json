@@ -1,612 +1,1718 @@
 {
   "categories": [
     {
-      "slug": "laser-cutting-heads",
-      "name": "Laser Cutting Heads",
-      "parent": null,
-      "group": "Laser Cutting",
-      "description": "Complete manual-focus, autofocus, intelligent/high-power, tube and 3D laser cutting-head requirements.",
-      "keywords": [
-        "cutting head",
-        "laser head",
-        "autofocus",
-        "manual focus",
-        "smart head"
-      ]
-    },
-    {
-      "slug": "manual-focus-cutting-heads",
-      "name": "Manual-Focus Cutting Heads",
-      "parent": "laser-cutting-heads",
-      "group": "Laser Cutting",
-      "description": "Manual-focus cutting heads and compatibility enquiries.",
-      "keywords": [
-        "manual focus",
-        "bt240s"
-      ]
-    },
-    {
-      "slug": "autofocus-cutting-heads",
-      "name": "Autofocus Cutting Heads",
-      "parent": "laser-cutting-heads",
-      "group": "Laser Cutting",
-      "description": "Motorized autofocus cutting heads and compatibility enquiries.",
-      "keywords": [
-        "autofocus",
-        "bm111",
-        "bm114",
-        "bm110",
-        "procutter"
-      ]
-    },
-    {
-      "slug": "smart-cutting-heads",
-      "name": "Intelligent / High-Power Cutting Heads",
-      "parent": "laser-cutting-heads",
-      "group": "Laser Cutting",
-      "description": "High-power, monitored and intelligent cutting-head systems.",
-      "keywords": [
-        "smart head",
-        "high power",
-        "monitoring",
-        "procutter"
-      ]
-    },
-    {
-      "slug": "tube-3d-cutting-heads",
-      "name": "Tube / Profile / 3D Cutting Heads",
-      "parent": "laser-cutting-heads",
-      "group": "Laser Cutting",
-      "description": "Heads for tube, profile, robot, bevel and 3D laser cutting.",
-      "keywords": [
-        "tube cutting",
-        "profile",
-        "bevel",
-        "3d cutting",
-        "robot"
-      ]
-    },
-    {
-      "slug": "laser-spares-consumables",
-      "name": "Fiber Laser Consumables & Head Spares",
-      "parent": null,
-      "group": "Laser Consumables",
-      "description": "Nozzles, protective windows, focus/collimation optics, ceramics, sensors, holders and service parts.",
-      "keywords": [
-        "consumables",
-        "laser spare",
-        "optics",
-        "nozzle",
-        "ceramic"
-      ]
-    },
-    {
-      "slug": "laser-cutting-nozzles",
-      "name": "Laser Cutting Nozzles",
-      "parent": "laser-spares-consumables",
-      "group": "Laser Consumables",
-      "description": "Single, double and special cutting nozzles.",
-      "keywords": [
-        "nozzle",
-        "single nozzle",
-        "double nozzle",
-        "d28",
-        "d32",
-        "orifice"
-      ]
-    },
-    {
-      "slug": "laser-protective-lenses",
-      "name": "Protective / Cover Windows",
-      "parent": "laser-spares-consumables",
-      "group": "Laser Consumables",
-      "description": "Protective windows / cover glasses for cutting heads.",
-      "keywords": [
-        "protective lens",
-        "cover glass",
-        "window",
-        "27.9x4.1",
-        "24.9x1.5"
-      ]
-    },
-    {
-      "slug": "laser-focus-collimation-lenses",
-      "name": "Focus & Collimation Optics",
-      "parent": "laser-spares-consumables",
-      "group": "Laser Consumables",
-      "description": "Focus and collimation lens groups.",
-      "keywords": [
-        "focus lens",
-        "focusing lens",
-        "collimation",
-        "collimator"
-      ]
-    },
-    {
-      "slug": "laser-ceramic-rings",
-      "name": "Ceramic Rings & Sensor Bodies",
-      "parent": "laser-spares-consumables",
-      "group": "Laser Consumables",
-      "description": "Capacitive ceramics, sensor bodies and nozzle holders.",
-      "keywords": [
-        "ceramic ring",
-        "ceramic body",
-        "capacitive",
-        "sensor body"
-      ]
-    },
-    {
-      "slug": "cutting-head-spares",
-      "name": "Cutting-Head Service Spares",
-      "parent": "laser-spares-consumables",
-      "group": "Laser Consumables",
-      "description": "Drawers, holders, cables, seals, fiber interfaces and service parts.",
-      "keywords": [
-        "lens drawer",
-        "cartridge",
-        "sensor",
-        "holder",
-        "seal",
-        "qbh",
-        "qcs"
-      ]
-    },
-    {
-      "slug": "laser-chillers",
-      "name": "Laser Chillers & Cooling Systems",
-      "parent": null,
-      "group": "Cooling",
-      "description": "Complete cooling systems for fiber, CO₂, welding and cleaning laser equipment.",
-      "keywords": [
-        "laser chiller",
-        "cooling system",
-        "cwfl",
-        "hanli"
-      ]
-    },
-    {
-      "slug": "fiber-laser-chillers",
-      "name": "Fiber Laser Chillers",
-      "parent": "laser-chillers",
-      "group": "Cooling",
-      "description": "Dual-circuit and application-specific fiber-laser cooling systems.",
-      "keywords": [
-        "fiber chiller",
-        "cwfl",
-        "dual circuit"
-      ]
-    },
-    {
-      "slug": "co2-laser-chillers",
-      "name": "CO₂ Laser Chillers",
-      "parent": "laser-chillers",
-      "group": "Cooling",
-      "description": "Cooling systems for CO₂ laser tubes.",
-      "keywords": [
-        "co2 chiller",
-        "laser tube cooling"
-      ]
-    },
-    {
-      "slug": "handheld-laser-chillers",
-      "name": "Welding / Cleaning Laser Chillers",
-      "parent": "laser-chillers",
-      "group": "Cooling",
-      "description": "Cooling systems for handheld laser welding and cleaning systems.",
-      "keywords": [
-        "handheld chiller",
-        "welding chiller",
-        "cleaning chiller"
-      ]
-    },
-    {
-      "slug": "laser-chiller-spares",
-      "name": "Laser Chiller Pumps & Service Spares",
-      "parent": null,
-      "group": "Cooling",
-      "description": "Pumps, sensors, filters, fans, refrigeration, heat-exchange and control components.",
-      "keywords": [
-        "chiller spare",
-        "pump",
-        "flow sensor",
-        "filter",
-        "controller",
-        "compressor"
-      ]
-    },
-    {
+      "id": "39be3dff-5003-45e3-b9e1-4a655052ea85",
+      "icon": null,
+      "name": "Chiller Pumps",
       "slug": "chiller-pumps",
-      "name": "Chiller Circulation Pumps",
-      "parent": "laser-chiller-spares",
-      "group": "Cooling",
-      "description": "Laser-chiller water circulation pumps and replacement-pump matching.",
-      "keywords": [
-        "chiller pump",
-        "water pump",
-        "600w pump",
-        "leicheng"
-      ]
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
     },
     {
-      "slug": "chiller-sensors",
-      "name": "Chiller Sensors & Flow Components",
-      "parent": "laser-chiller-spares",
-      "group": "Cooling",
-      "description": "Flow, temperature, level and related sensing components.",
-      "keywords": [
-        "flow sensor",
-        "temperature sensor",
-        "level sensor"
-      ]
+      "id": "6b20f1d1-4831-428c-ac11-55a3d8e22fce",
+      "icon": null,
+      "name": "Fiber Laser Chillers",
+      "slug": "fiber-laser-chillers",
+      "image_url": null,
+      "parent_id": "b1196893-aa31-4fad-b063-ab8657d44fd1",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Dual-circuit and application-specific chillers for fiber laser cutting systems."
     },
     {
-      "slug": "chiller-filtration",
-      "name": "Chiller Filtration & Plumbing",
-      "parent": "laser-chiller-spares",
-      "group": "Cooling",
-      "description": "Filters, strainers, hoses, fittings and water-path components.",
-      "keywords": [
-        "filter",
-        "strainer",
-        "hose",
-        "fitting"
-      ]
+      "id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "icon": null,
+      "name": "Laser Machine Spares & Consumables",
+      "slug": "laser-spares-consumables",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Optics, nozzles, ceramic parts, cutting-head parts, laser sources and related consumables."
     },
     {
-      "slug": "chiller-refrigeration",
-      "name": "Chiller Refrigeration & Heat Exchange",
-      "parent": "laser-chiller-spares",
-      "group": "Cooling",
-      "description": "Compressors, valves, condensers, evaporators and heat exchangers.",
-      "keywords": [
-        "compressor",
-        "condenser",
-        "evaporator",
-        "valve"
-      ]
+      "id": "52ea4277-7271-4d1e-8fa0-5693791780ba",
+      "icon": null,
+      "name": "Manual-Focus Cutting Heads",
+      "slug": "manual-focus-cutting-heads",
+      "image_url": null,
+      "parent_id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Manual-focus cutting heads for compatible fiber laser systems."
     },
     {
-      "slug": "chiller-controls",
-      "name": "Chiller Controls & Electrical",
-      "parent": "laser-chiller-spares",
-      "group": "Cooling",
-      "description": "Controllers, displays, boards, relays, contactors and electrical spares.",
-      "keywords": [
-        "controller",
-        "display",
-        "board",
-        "relay",
-        "contactor"
-      ]
+      "id": "641d6638-caf3-4074-b2ff-4eddcab7d5bf",
+      "icon": null,
+      "name": "PLC & I/O Modules",
+      "slug": "plc-io",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
     },
     {
-      "slug": "co2-laser-consumables",
-      "name": "CO₂ Laser Spares & Consumables",
-      "parent": null,
-      "group": "CO2 Laser",
-      "description": "CO₂ tubes, power supplies, mirrors, ZnSe lenses, heads, motion and cooling components.",
-      "keywords": [
-        "co2",
-        "laser tube",
-        "znse",
-        "mirror",
-        "power supply",
-        "air assist"
-      ]
+      "id": "79540ad2-0742-48cb-95e4-01002c751f89",
+      "icon": null,
+      "name": "Protective / Cover Lenses",
+      "slug": "protective-lenses",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
     },
     {
-      "slug": "laser-welding-consumables",
-      "name": "Laser Welding & Cleaning Consumables",
-      "parent": null,
-      "group": "Laser Welding",
-      "description": "Nozzles, protective windows, ceramics, wire-feed and cleaning-head wear parts.",
-      "keywords": [
-        "welding nozzle",
-        "welding lens",
-        "handheld welding",
-        "cleaning head"
-      ]
+      "id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "icon": null,
+      "name": "Laser Cutting Heads",
+      "slug": "laser-cutting-heads",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 15,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": "Manual-focus, autofocus and intelligent laser cutting heads. Selection is matched to laser power, source interface, machine configuration and application before quotation.",
+      "short_description": "Complete fiber-laser cutting heads for sheet, tube and 3D applications."
     },
     {
-      "slug": "cnc-vmc-machine-spares",
+      "id": "b1196893-aa31-4fad-b063-ab8657d44fd1",
+      "icon": null,
+      "name": "Laser Chillers & Cooling Systems",
+      "slug": "laser-chillers",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 18,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": "Industrial water chillers and integrated cooling systems selected against laser type, power, required circuits, electrical supply and thermal duty.",
+      "short_description": "Complete laser cooling systems for fiber, CO2 and handheld laser equipment."
+    },
+    {
+      "id": "bd56ca87-fee4-407c-aff9-22b66d1893ed",
+      "icon": null,
+      "name": "Autofocus Cutting Heads",
+      "slug": "autofocus-cutting-heads",
+      "image_url": null,
+      "parent_id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Motorized autofocus cutting heads for industrial sheet and tube cutting."
+    },
+    {
+      "id": "f5a70870-4cdf-46d9-b02d-60261ce3c5ef",
+      "icon": null,
+      "name": "CO2 Laser Chillers",
+      "slug": "co2-laser-chillers",
+      "image_url": null,
+      "parent_id": "b1196893-aa31-4fad-b063-ab8657d44fd1",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Cooling systems for CO2 laser tubes and associated optics."
+    },
+    {
+      "id": "1bb1cbf3-9b8b-43d1-94c2-22ead046f94d",
+      "icon": null,
+      "name": "Flow Sensors & Switches",
+      "slug": "chiller-flow-sensors",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "2312077c-ffa2-4c0d-9b97-2a061f740770",
+      "icon": null,
+      "name": "Focus & Collimation Lenses",
+      "slug": "focus-collimation-lenses",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "dc5243b8-3da4-4b7a-9c21-3f231d61ef5e",
+      "icon": null,
+      "name": "HMI",
+      "slug": "hmi",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "icon": null,
+      "name": "Laser Chiller Spares",
+      "slug": "laser-chiller-spares",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Pumps, sensors, flow devices, filters, fans, valves, hoses and cooling-system service parts."
+    },
+    {
+      "id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "icon": null,
+      "name": "Automation & Control",
+      "slug": "automation-control",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "PLC, HMI, I/O, sensors, drives, Industrial IoT, power and control components."
+    },
+    {
+      "id": "300a8e8b-1d7e-440a-98c6-41eb698fa093",
+      "icon": null,
+      "name": "Cutting Nozzles",
+      "slug": "cutting-nozzles",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "5950c1f4-acba-49f0-acb4-f35af143979d",
+      "icon": null,
+      "name": "Handheld Laser Welding / Cleaning Chillers",
+      "slug": "handheld-laser-chillers",
+      "image_url": null,
+      "parent_id": "b1196893-aa31-4fad-b063-ab8657d44fd1",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Integrated or external chillers for handheld laser welding and cleaning equipment."
+    },
+    {
+      "id": "61cc186f-8560-4ff7-b8d7-3ccc92e21226",
+      "icon": null,
+      "name": "Industrial Sensors",
+      "slug": "industrial-sensors",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "b1e7fada-3ff7-40f2-8b43-e2375357cf58",
+      "icon": null,
+      "name": "Intelligent / Smart Cutting Heads",
+      "slug": "smart-cutting-heads",
+      "image_url": null,
+      "parent_id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "High-power and intelligent cutting heads with monitoring and advanced control features."
+    },
+    {
+      "id": "d842eadb-35d4-488c-b6b7-74d1773f354f",
+      "icon": null,
+      "name": "Temperature Sensors",
+      "slug": "chiller-temperature-sensors",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "be980893-8125-4d28-bfdb-2b4ca86312cc",
+      "icon": null,
+      "name": "Ceramic Rings & Components",
+      "slug": "ceramic-components",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "7c84366f-44ea-4ec2-a668-bc9f9845afd5",
+      "icon": null,
       "name": "CNC / VMC & Machine Spares",
-      "parent": null,
-      "group": "Industrial Machine Spares",
-      "description": "Spindles, controls, sensors, pumps, bearings, lubrication, transmission, cooling and other CNC/VMC machine components.",
-      "keywords": [
-        "cnc",
-        "vmc",
-        "machine spare",
-        "spindle",
-        "servo",
-        "bearing",
-        "sensor",
-        "pump",
-        "lubrication",
-        "belt",
-        "control"
-      ]
+      "slug": "cnc-vmc-machine-spares",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Selected electrical, mechanical, lubrication and maintenance-related machine spares."
     },
     {
+      "id": "3ca057bf-994b-4244-87d0-b2a9f0de3208",
+      "icon": null,
+      "name": "Drives & Servo",
+      "slug": "drives-servo",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "2351f4d4-e4ad-42d2-88db-11a22e019121",
+      "icon": null,
+      "name": "Filters & Strainers",
+      "slug": "chiller-filters",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "dafd2eb1-db30-415a-b409-7a9b5b549073",
+      "icon": null,
+      "name": "Tube & 3D Cutting Heads",
+      "slug": "tube-3d-cutting-heads",
+      "image_url": null,
+      "parent_id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Cutting heads intended for tube, bevel, robot and 3D processing applications."
+    },
+    {
+      "id": "b8eb54c9-c877-4a9d-aca8-bbdd8531c14f",
+      "icon": null,
+      "name": "Cutting Head Spares",
+      "slug": "cutting-head-spares",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "490b8d30-2ec1-44ba-abfe-fdbc143d88be",
+      "icon": null,
+      "name": "Fans & Cooling Components",
+      "slug": "chiller-fans",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "06cda14e-ed1b-4a49-b677-1ccb7c710d4c",
+      "icon": null,
+      "name": "Industrial IoT & Gateways",
+      "slug": "industrial-iot",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "05427f6f-2c39-4998-8369-840cc2d0b966",
+      "icon": null,
+      "name": "Laser Welding & Cleaning Heads",
+      "slug": "laser-welding-cleaning-heads",
+      "image_url": null,
+      "parent_id": "4638d0ea-f25c-4a48-9bf5-5c664cafd83e",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Handheld and automated laser welding / cleaning head assemblies and related systems."
+    },
+    {
+      "id": "709dac78-eb38-4c2b-99b8-7636ff113480",
+      "icon": null,
+      "name": "Press Brake Tooling",
       "slug": "press-brake-tooling",
-      "name": "Press Brake & Bending Tooling",
-      "parent": null,
-      "group": "Forming Tooling",
-      "description": "Punches, V-dies, holders, clamps and special forming tooling.",
-      "keywords": [
-        "press brake",
-        "punch",
-        "v die",
-        "gooseneck",
-        "hemming",
-        "bending tooling"
-      ]
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Punches, V-dies, segmented and special bending tooling."
     },
     {
+      "id": "fd8ae142-6609-42c3-83b1-016686e17e4e",
+      "icon": null,
+      "name": "Custom & Obsolete Spares",
       "slug": "custom-obsolete-spares",
-      "name": "Custom & Obsolete Components",
-      "parent": null,
-      "group": "Custom Components",
-      "description": "Reverse engineering, custom machined parts, legacy replacements and prototype support.",
-      "keywords": [
-        "obsolete spare",
-        "custom part",
-        "reverse engineering",
-        "machined component",
-        "legacy part"
-      ]
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Sourced, reverse-engineered or manufactured replacements for hard-to-find industrial parts."
+    },
+    {
+      "id": "3ea305b8-ed1a-4af9-aa22-7c7de368f46f",
+      "icon": null,
+      "name": "Laser Sources",
+      "slug": "laser-sources",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "8e5836d2-ac3c-497c-844f-4749d174b207",
+      "icon": null,
+      "name": "Power & Control Components",
+      "slug": "control-components",
+      "image_url": null,
+      "parent_id": "cfab8352-ddec-462a-99f4-cceaaf0debf3",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "00ddfcb2-9559-4079-a8ad-5d5fee063794",
+      "icon": null,
+      "name": "Valves, Hoses & Fittings",
+      "slug": "chiller-valves-fittings",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "853f6d5a-fb45-4aae-91b4-d3fe7b0cb619",
+      "icon": null,
+      "name": "3D Printing & Rapid Prototyping",
+      "slug": "rapid-prototyping",
+      "image_url": null,
+      "parent_id": null,
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "FDM/resin prototypes, validation parts and low-volume custom components."
+    },
+    {
+      "id": "235372ee-6559-45f1-972c-4e71c90c26d2",
+      "icon": null,
+      "name": "Coolant, Water & Additives",
+      "slug": "chiller-coolant-additives",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Approved coolant, deionized/distilled water requirements and anti-corrosion / maintenance additives."
+    },
+    {
+      "id": "43e8852d-aea1-4291-b264-6b6bb5dc6c5e",
+      "icon": null,
+      "name": "Optical Cleaning Consumables",
+      "slug": "cleaning-consumables",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T05:43:18.749325+00:00",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T05:43:18.749325+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": null
+    },
+    {
+      "id": "33398e72-a4d0-4421-ab49-131fa1a2e0b5",
+      "icon": null,
+      "name": "Compressors & Refrigeration Components",
+      "slug": "chiller-compressors",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 80,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Compressors and selected refrigeration-side service components for industrial chillers."
+    },
+    {
+      "id": "d0c4a549-ace2-4a8d-b61f-05ba3e9e2997",
+      "icon": null,
+      "name": "Nozzle Holders & Sensor Bodies",
+      "slug": "nozzle-holders-sensor-bodies",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 80,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Nozzle holders, capacitive sensor bodies and related head-end assemblies."
+    },
+    {
+      "id": "a51d6a5e-16c2-40ef-b55f-a20eb51e88a5",
+      "icon": null,
+      "name": "Condensers, Evaporators & Heat Exchangers",
+      "slug": "chiller-heat-exchangers",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 90,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Heat-transfer components including condensers, evaporators and selected coils / exchangers."
+    },
+    {
+      "id": "f658a896-adef-4572-b51a-22ce5dccf137",
+      "icon": null,
+      "name": "Height Sensors & Sensor Cables",
+      "slug": "height-sensors-cables",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 90,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Height-sensing components, breakaway sensors, sensor cables and related accessories."
+    },
+    {
+      "id": "52f681b6-ad81-4cd3-878d-f729e8482746",
+      "icon": null,
+      "name": "Controllers, Displays & Control Boards",
+      "slug": "chiller-controllers-displays",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 100,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Chiller controllers, displays, thermostatic controls and associated control boards."
+    },
+    {
+      "id": "b508bda0-c887-451c-b80e-8ac8dfa03359",
+      "icon": null,
+      "name": "Lens Cartridges & Drawers",
+      "slug": "lens-cartridges-drawers",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 100,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Protective-window drawers, lens cartridges, retainers and optical holders."
+    },
+    {
+      "id": "7a08ae1c-1439-432c-8bd6-ce5e0cc335c8",
+      "icon": null,
+      "name": "Copper, Insulation & Air-Outlet Rings",
+      "slug": "copper-insulation-rings",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 110,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Copper rings, insulating components, air-outlet rings and related cutting-head service parts."
+    },
+    {
+      "id": "e55905f7-ad3a-41d5-a7f4-6da1216077aa",
+      "icon": null,
+      "name": "Level Sensors & Tank Components",
+      "slug": "chiller-level-sensors",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 110,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Water-level sensors, tank accessories and related circulation-system components."
+    },
+    {
+      "id": "2a09f348-ebc8-451c-a6e8-b91d63f234f4",
+      "icon": null,
+      "name": "Electrical & Protection Components",
+      "slug": "chiller-electrical-spares",
+      "image_url": null,
+      "parent_id": "57585f7b-d109-43f6-88ce-80b0ed76610a",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 120,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Contactors, relays, capacitors, breakers and selected electrical service components."
+    },
+    {
+      "id": "ccfac88f-56ed-4bd9-901b-63afcbce5a01",
+      "icon": null,
+      "name": "Seals, O-Rings & Gaskets",
+      "slug": "seals-o-rings",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 120,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Sealing rings, O-rings and gaskets used in cutting-head optical and gas paths."
+    },
+    {
+      "id": "00b94435-b517-43b7-a5a9-732d03652c76",
+      "icon": null,
+      "name": "QBH / QCS Connectors & Adapters",
+      "slug": "qbh-qcs-connectors",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 130,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Fiber delivery connectors, caps, adapters and compatible interface accessories."
+    },
+    {
+      "id": "32e9b38c-d069-4ff1-9d8c-3f567375a1e2",
+      "icon": null,
+      "name": "Laser Welding Consumables",
+      "slug": "laser-welding-consumables",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 140,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "Welding nozzles, ceramic cups, protective windows and other replaceable welding-head parts."
+    },
+    {
+      "id": "a71a56c5-bae3-45ba-b480-0c0b1855a399",
+      "icon": null,
+      "name": "CO2 Laser Spares & Consumables",
+      "slug": "co2-laser-consumables",
+      "image_url": null,
+      "parent_id": "7ad686f3-7862-4ac9-b411-d2596b31c1ce",
+      "published": true,
+      "seo_title": null,
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 150,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "canonical_url": null,
+      "seo_description": null,
+      "full_description": null,
+      "short_description": "CO2 laser tubes, power supplies, mirrors, ZnSe lenses, heads, air-assist and related service items."
     }
   ],
   "brands": [
     {
+      "id": "13d010a7-6362-4d3e-b862-05cd74dce1fd",
+      "name": "LiCheng",
+      "slug": "licheng",
+      "logo_url": null,
+      "published": true,
+      "brand_role": "manufacturer",
+      "created_at": "2026-09-17T09:37:20.892975+00:00",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T09:37:20.892975+00:00",
+      "updated_by": null,
+      "description": "Dongguan LiCheng Pump Industry Co., Ltd.",
+      "website_url": null,
+      "trademark_notice": null,
+      "authorization_note": null,
+      "relationship_status": "supplier"
+    },
+    {
+      "id": "37d41895-4bcb-471a-ba7c-eb1bc4003460",
       "name": "RayTools",
       "slug": "raytools",
-      "role": "reference_only",
-      "keywords": [
-        "bm111",
-        "bm114",
-        "bm110",
-        "bt240s"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser cutting head and laser-processing equipment brand used for compatibility search and requirement matching.",
+      "website_url": "https://raytools.ch/",
+      "trademark_notice": "RayTools is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
+      "id": "e2c19e83-6b32-4d1a-b65b-a505213ad9f8",
       "name": "Precitec",
       "slug": "precitec",
-      "role": "reference_only",
-      "keywords": [
-        "procutter 2.0",
-        "procutter prime",
-        "procutter zoom 2.0",
-        "procutter thunder",
-        "minicutter",
-        "solidcutter"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser cutting and process-monitoring technology brand used for compatibility search and requirement matching.",
+      "website_url": "https://www.precitec.com/",
+      "trademark_notice": "Precitec is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
-      "name": "WSX",
-      "slug": "wsx",
-      "role": "reference_only",
-      "keywords": [
-        "wsx",
-        "nc series"
-      ]
-    },
-    {
-      "name": "BOCI",
-      "slug": "boci",
-      "role": "reference_only",
-      "keywords": [
-        "boci",
-        "blt"
-      ]
-    },
-    {
+      "id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
       "name": "OSPRI",
       "slug": "ospri",
-      "role": "reference_only",
-      "keywords": [
-        "ospri"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser cutting, welding and sensing equipment brand used for compatibility search and requirement matching.",
+      "website_url": "https://en.ospri.cn/",
+      "trademark_notice": "OSPRI is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
+      "id": "0f266d7c-9e79-4f57-bad8-47f10e75f399",
       "name": "Au3Tech",
       "slug": "au3tech",
-      "role": "reference_only",
-      "keywords": [
-        "au3tech"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser head and automation equipment brand used for compatibility search and requirement matching.",
+      "website_url": "https://www.au3tech.com/",
+      "trademark_notice": "Au3Tech is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
+      "id": "bc236889-142e-4e2d-9484-6c1e43bc155b",
+      "name": "WSX",
+      "slug": "wsx",
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser cutting and welding head brand used for compatibility search and requirement matching.",
+      "website_url": "https://www.wsxlaser.com/",
+      "trademark_notice": "WSX is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
+    },
+    {
+      "id": "99ab44d2-ff02-473b-8d22-dcaed6a914f4",
+      "name": "BOCI",
+      "slug": "boci",
+      "logo_url": null,
+      "published": true,
+      "brand_role": "both",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Laser cutting head brand used for compatibility search and requirement matching.",
+      "website_url": null,
+      "trademark_notice": "BOCI / BOCHU names and marks belong to their respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
+    },
+    {
+      "id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
       "name": "TEYU / S&A",
       "slug": "teyu-sa",
-      "role": "reference_only",
-      "keywords": [
-        "cwfl",
-        "cwfl-1000",
-        "cwfl-1500",
-        "cwfl-2000",
-        "cwfl-3000",
-        "cwfl-4000",
-        "cwfl-6000"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "manufacturer",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 80,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Industrial laser chiller manufacturer used for chiller selection and requirement matching.",
+      "website_url": "https://www.teyuchiller.com/",
+      "trademark_notice": "TEYU and S&A marks belong to their respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
+      "id": "5aabc1a2-6513-47ca-9b1c-1f9753f113fc",
       "name": "Hanli",
       "slug": "hanli",
-      "role": "reference_only",
-      "keywords": [
-        "hanli",
-        "fiber laser chiller"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "manufacturer",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 90,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Industrial laser chiller manufacturer used for chiller selection and requirement matching.",
+      "website_url": "https://www.hanlichiller.com/",
+      "trademark_notice": "Hanli is a trademark of its respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     },
     {
+      "id": "f9900f60-b473-4f49-bb95-7f1768d91450",
       "name": "Tongfei / TONFY",
       "slug": "tongfei-tonfy",
-      "role": "reference_only",
-      "keywords": [
-        "tongfei",
-        "tonfy"
-      ]
-    },
-    {
-      "name": "Le Cheng / LiCheng",
-      "slug": "le-cheng",
-      "role": "reference_only",
-      "keywords": [
-        "leicheng",
-        "licheng",
-        "le cheng",
-        "600w pump",
-        "chiller pump"
-      ]
+      "logo_url": null,
+      "published": true,
+      "brand_role": "manufacturer",
+      "created_at": "2026-09-17T11:15:09.672476+00:00",
+      "sort_order": 100,
+      "updated_at": "2026-09-17T11:15:09.672476+00:00",
+      "updated_by": null,
+      "description": "Industrial temperature-control and laser cooling manufacturer used for requirement matching.",
+      "website_url": "https://www.tonfy.com/",
+      "trademark_notice": "Tongfei / TONFY marks belong to their respective owner.",
+      "authorization_note": "Reference for compatibility and sourcing only; no authorization or distributorship is implied.",
+      "relationship_status": "reference_only"
     }
   ],
   "models": [
     {
-      "name": "BM111",
-      "brand": "RayTools",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "bm111",
-        "autofocus"
-      ]
+      "id": "0eba0d60-ab77-4cad-8db5-f8c523ec06e2",
+      "notes": "Compatibility must be verified against exact sub-variant and installed configuration.",
+      "aliases": [
+        "BM111"
+      ],
+      "brand_id": "37d41895-4bcb-471a-ba7c-eb1bc4003460",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "BM111",
+      "model_name": "BM111",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "autofocus cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "BM110",
-      "brand": "RayTools",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "bm110",
-        "autofocus"
-      ]
+      "id": "0c901433-a095-4339-bf08-8b4ebdfb4a0e",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-1000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-1000",
+      "model_name": "CWFL-1000",
+      "sort_order": 10,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 1,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 0.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "BM114 / BM114S",
-      "brand": "RayTools",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "bm114",
-        "bm114s",
-        "autofocus"
-      ]
+      "id": "4520e330-e0ab-4947-b2f5-9e5166ffde69",
+      "notes": "Compatibility must be verified against exact sub-variant and installed configuration.",
+      "aliases": [
+        "BM114"
+      ],
+      "brand_id": "37d41895-4bcb-471a-ba7c-eb1bc4003460",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "BM114",
+      "model_name": "BM114",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "autofocus cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "BT240S",
-      "brand": "RayTools",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "bt240s",
-        "manual focus"
-      ]
+      "id": "f9d814c5-4510-43ee-9838-7acef7a639f0",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-1500"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-1500",
+      "model_name": "CWFL-1500",
+      "sort_order": 20,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 1.5,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 0.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "ProCutter 2.0",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "procutter",
-        "85kw"
-      ]
+      "id": "17b81397-4642-418a-8f68-ae01d8045d1a",
+      "notes": "Manufacturer-listed 30 kW smart cutting head.",
+      "aliases": [
+        "BS30K",
+        "CAT Plus-3D"
+      ],
+      "brand_id": "37d41895-4bcb-471a-ba7c-eb1bc4003460",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "BS30K CAT Plus-3D",
+      "model_name": "BS30K CAT Plus-3D",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "smart cutting head",
+        "rated_power_kw": 30
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "ProCutter Prime",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "procutter prime",
-        "30kw"
-      ]
+      "id": "f5e51dc6-b385-4807-89b8-7fa928cc78ca",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-2000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-2000",
+      "model_name": "CWFL-2000",
+      "sort_order": 30,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 2,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 0.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "ProCutter Zoom 2.0",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "procutter zoom",
-        "12kw"
-      ]
+      "id": "ad2bedd4-a47b-4790-a2e3-b28371e94ba1",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-3000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-3000",
+      "model_name": "CWFL-3000",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 3,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 0.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "ProCutter Thunder",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "procutter thunder",
-        "2d",
-        "3d"
-      ]
+      "id": "a88871eb-ca82-4be7-9694-6447d2de034a",
+      "notes": "Manufacturer-listed 4 kW 5-axis 3D cutting head.",
+      "aliases": [
+        "GF501"
+      ],
+      "brand_id": "37d41895-4bcb-471a-ba7c-eb1bc4003460",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "GF501",
+      "model_name": "GF501",
+      "sort_order": 40,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "5-axis 3D cutting head",
+        "rated_power_kw": 4
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "MiniCutter",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "minicutter",
-        "compact"
-      ]
+      "id": "948117d8-8423-4886-a417-1c2043635131",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-4000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-4000",
+      "model_name": "CWFL-4000",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 4,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "SolidCutter",
-      "brand": "Precitec",
-      "type": "Laser Cutting Head",
-      "keywords": [
-        "solidcutter",
-        "3d cutting"
-      ]
+      "id": "fe43710b-f66e-414f-a58d-788610fb3882",
+      "notes": "Compatibility must be verified against exact ProCutter generation.",
+      "aliases": [
+        "ProCutter 1.0"
+      ],
+      "brand_id": "e2c19e83-6b32-4d1a-b65b-a505213ad9f8",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "ProCutter",
+      "model_name": "ProCutter",
+      "sort_order": 50,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "laser cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "CWFL-1000",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-1000",
-        "1kw"
-      ]
+      "id": "b9d89db6-6057-4dee-a7ad-ddad095893b7",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-6000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-6000",
+      "model_name": "CWFL-6000",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 6,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "CWFL-1500",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-1500",
-        "1.5kw"
-      ]
+      "id": "a27995d9-9bdf-42f1-a010-ee0ccd76c568",
+      "notes": "Manufacturer states operation up to 85 kW.",
+      "aliases": [
+        "ProCutter 2"
+      ],
+      "brand_id": "e2c19e83-6b32-4d1a-b65b-a505213ad9f8",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "ProCutter 2.0",
+      "model_name": "ProCutter 2.0",
+      "sort_order": 60,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "high-power cutting head",
+        "rated_power_kw": 85
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "CWFL-2000",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-2000",
-        "2kw"
-      ]
+      "id": "f3ebdc1e-38f6-4927-9015-9cd514591f5d",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-8000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-8000",
+      "model_name": "CWFL-8000",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 8,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "CWFL-3000",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-3000",
-        "3kw"
-      ]
+      "id": "2aa95a8f-afe2-4bef-b212-fb607624c65e",
+      "notes": "Compatibility must be checked against manual/motorized variant.",
+      "aliases": [
+        "LightCutter motorisch"
+      ],
+      "brand_id": "e2c19e83-6b32-4d1a-b65b-a505213ad9f8",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LightCutter",
+      "model_name": "LightCutter",
+      "sort_order": 70,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "laser cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
     },
     {
-      "name": "CWFL-4000",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-4000",
-        "4kw"
-      ]
+      "id": "55c21017-bb6f-4ce8-bc6a-e891cf6326f0",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-12000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-12000",
+      "model_name": "CWFL-12000",
+      "sort_order": 80,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 12,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     },
     {
-      "name": "CWFL-6000",
-      "brand": "TEYU / S&A",
-      "type": "Laser Chiller",
-      "keywords": [
-        "cwfl-6000",
-        "6kw"
-      ]
+      "id": "2ccf278b-509b-4fa4-8cad-fcff41cf170a",
+      "notes": "WSX manuals list NC30 family and sub-variants.",
+      "aliases": [
+        "NC30A",
+        "NC30B",
+        "NC30C",
+        "NC30E",
+        "NC30G"
+      ],
+      "brand_id": "bc236889-142e-4e2d-9484-6c1e43bc155b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "NC30",
+      "model_name": "NC30",
+      "sort_order": 80,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "autofocus cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "6e41fed0-9dbf-4103-8c23-486be30d988b",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-20000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-20000",
+      "model_name": "CWFL-20000",
+      "sort_order": 90,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 20,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "dbc2952e-19a4-4a17-84f0-78cfbaadac0f",
+      "notes": "WSX manual family reference.",
+      "aliases": [
+        "NC60"
+      ],
+      "brand_id": "bc236889-142e-4e2d-9484-6c1e43bc155b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "NC60",
+      "model_name": "NC60",
+      "sort_order": 90,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "autofocus cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "b7eec727-c3bc-4039-9e08-ab1ce910583c",
+      "notes": "Selection still depends on the exact laser system and installation conditions.",
+      "aliases": [
+        "CWFL-30000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CWFL-30000",
+      "model_name": "CWFL-30000",
+      "sort_order": 100,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "fiber",
+        "laser_power_kw": 30,
+        "cooling_circuits": 2,
+        "temperature_stability_c": 1.5
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "cbeda5ac-0947-427e-a7e2-6354ca903d1c",
+      "notes": "WSX manuals list NC63A/NC63E variants.",
+      "aliases": [
+        "NC63A",
+        "NC63E"
+      ],
+      "brand_id": "bc236889-142e-4e2d-9484-6c1e43bc155b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "NC63",
+      "model_name": "NC63",
+      "sort_order": 100,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "1935eb11-589e-4ff3-9e52-bdb8639ab756",
+      "notes": "CO2 chiller selection depends on tube type, wattage and cooling load.",
+      "aliases": [
+        "CW-5000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CW-5000",
+      "model_name": "CW-5000",
+      "sort_order": 110,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "co2"
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "e98a82ee-cd46-43aa-a707-289c0deec656",
+      "notes": "Manufacturer-listed manual-focus head up to 2 kW.",
+      "aliases": [
+        "LC209"
+      ],
+      "brand_id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LC209",
+      "model_name": "LC209",
+      "sort_order": 110,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "focus_mode": "manual",
+        "rated_power_kw": 2
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "e02db8f9-c05b-4d31-b7b8-bcd8eff9336b",
+      "notes": "CO2 chiller selection depends on tube type, wattage and cooling load.",
+      "aliases": [
+        "CW-5200"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CW-5200",
+      "model_name": "CW-5200",
+      "sort_order": 120,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "co2"
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "53816a2a-84ac-4ce9-8b7e-f3ae919c2a5a",
+      "notes": "Manufacturer lists 2 kW / 4 kW configurations.",
+      "aliases": [
+        "LC20S",
+        "LC208"
+      ],
+      "brand_id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LC20S-LC208",
+      "model_name": "LC20S / LC208",
+      "sort_order": 120,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "focus_mode": "autofocus",
+        "rated_power_kw": 4
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "da99b1c1-eaee-446a-b7b7-4dd95546aa6e",
+      "notes": "CO2 chiller selection depends on tube type, wattage and cooling load.",
+      "aliases": [
+        "CW-6000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "CW-6000",
+      "model_name": "CW-6000",
+      "sort_order": 130,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "co2"
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "834a797e-0d23-45ba-bdd6-951d1c5ef456",
+      "notes": "Manufacturer-listed autofocus cutting head.",
+      "aliases": [
+        "LC40"
+      ],
+      "brand_id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LC40",
+      "model_name": "LC40",
+      "sort_order": 130,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "autofocus cutting head"
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "8db111d3-063e-4f19-b749-21769c963c6c",
+      "notes": "Manufacturer-listed intelligent autofocus head up to 15 kW.",
+      "aliases": [
+        "LC608",
+        "LC808"
+      ],
+      "brand_id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LC608-LC808",
+      "model_name": "LC608 / LC808",
+      "sort_order": 140,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "focus_mode": "intelligent autofocus",
+        "rated_power_kw": 15
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "13b52f59-2998-4728-814e-ae8e77a34aac",
+      "notes": "Rack-mount chiller family for handheld laser equipment.",
+      "aliases": [
+        "RMFL-1500"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "RMFL-1500",
+      "model_name": "RMFL-1500",
+      "sort_order": 140,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "handheld fiber",
+        "laser_power_kw": 1.5,
+        "cooling_circuits": 2
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "97bac137-114f-4f5d-8de6-0356123691be",
+      "notes": "Manufacturer-listed 2 kW 3D / robot cutting head.",
+      "aliases": [
+        "LC201"
+      ],
+      "brand_id": "3ad989bf-7dd2-4150-b598-a42b4b3e677b",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "LC201",
+      "model_name": "LC201",
+      "sort_order": 150,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "family": "3D cutting head",
+        "rated_power_kw": 2
+      },
+      "equipment_type_id": "a57e8179-bf8a-4e4c-9559-c7ed57f4a23f"
+    },
+    {
+      "id": "b9d5690f-3869-4743-9e4c-4db8d117cf13",
+      "notes": "Rack-mount chiller family for handheld laser equipment.",
+      "aliases": [
+        "RMFL-2000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "RMFL-2000",
+      "model_name": "RMFL-2000",
+      "sort_order": 150,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "handheld fiber",
+        "laser_power_kw": 2,
+        "cooling_circuits": 2
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
+    },
+    {
+      "id": "82df1f98-5726-4e45-8218-cd128e85f7af",
+      "notes": "Rack-mount chiller family for handheld laser equipment.",
+      "aliases": [
+        "RMFL-3000"
+      ],
+      "brand_id": "3fbee965-5104-4728-b8c7-034a1b695a4c",
+      "published": true,
+      "created_at": "2026-09-17T11:16:19.202163+00:00",
+      "model_code": "RMFL-3000",
+      "model_name": "RMFL-3000",
+      "sort_order": 160,
+      "updated_at": "2026-09-17T11:16:19.202163+00:00",
+      "updated_by": null,
+      "specifications": {
+        "laser_type": "handheld fiber",
+        "laser_power_kw": 3,
+        "cooling_circuits": 2
+      },
+      "equipment_type_id": "8398af8d-c57b-4170-91f9-5ad4fdfa2829"
     }
   ],
   "products": [
@@ -4166,6 +5272,6 @@
       "sort_order": 550
     }
   ],
-  "version": "2.9.2",
-  "note": "Offline fallback cache synchronized from the published Supabase catalogue on 2026-09-22."
+  "version": "2.9.3",
+  "note": "Offline fallback cache synchronized from the complete published Supabase catalogue on 2026-09-22."
 }
