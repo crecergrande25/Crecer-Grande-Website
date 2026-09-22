@@ -20,5 +20,5 @@ These two versions should be treated as rollback / comparison reference points w
 
 ## Current release
 
-### V2.7.0
-Major feature release introducing Mechanical Design Job Work as a dedicated commercial route, including 2D drafting, 3D modelling, piping layout/drafting, manufacturing drawings, BOM/MTO, revisions and reverse engineering.
+### V2.9.3
+Website Completion & Consolidation final QA revision. Consolidates the 141-product catalogue, enforces unique valid product imagery, expands the offline fallback to all published products, aligns Website Manager controls with effective permissions, and repairs RFQ / 3D quote conversion tracking.
