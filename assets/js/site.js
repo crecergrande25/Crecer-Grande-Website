@@ -39,7 +39,7 @@
 
   function normalizeFooter(){
     injectFooterStyles();
-    $('.cg-heart').forEach(x => x.style.color = '#25D366');
+    document.querySelectorAll('.cg-heart').forEach(x => x.style.color = '#25D366');
   }
 
   function syncCommonHeader(){
