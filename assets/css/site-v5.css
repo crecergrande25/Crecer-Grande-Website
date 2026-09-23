@@ -283,3 +283,186 @@ body.cg-v5 .ask-btn{background:var(--v5-navy)!important;color:#fff!important}
   body.cg-page-services .svc-mini-card{display:block!important}
   body.cg-page-services .svc-mini-thumb{width:100%!important;height:200px!important}
 }
+
+
+/* About V5 image story */
+body.cg-page-about .about-v5-image-grid{
+  display:grid;
+  grid-template-columns:1.35fr .825fr .825fr;
+  gap:14px;
+}
+body.cg-page-about .about-v5-image-grid figure{
+  margin:0;
+  overflow:hidden;
+  border:1px solid var(--v5-line);
+  background:#fff;
+}
+body.cg-page-about .about-v5-image-grid img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+body.cg-page-about .about-v5-image-large img{height:100%}
+body.cg-page-about .about-v5-image-large{grid-row:span 1}
+body.cg-page-about .about-v5-image-grid figcaption{padding:16px 17px 18px}
+body.cg-page-about .about-v5-image-grid figcaption b{
+  display:block;
+  font-family:Georgia,'Times New Roman',serif;
+  color:var(--v5-navy);
+  font-size:18px;
+  font-weight:500;
+}
+body.cg-page-about .about-v5-image-grid figcaption span{
+  display:block;
+  margin-top:5px;
+  color:var(--v5-muted);
+  font-size:10px;
+  line-height:1.55;
+}
+
+/* Product and tool pages */
+body.cg-page-product-area .page-hero.tech-bg{
+  padding:58px 0!important;
+  background:linear-gradient(90deg,#fff 0%,#fff 62%,#f7f2e7 62%,#f7f2e7 100%)!important;
+  color:var(--v5-navy)!important;
+}
+body.cg-page-product-area .page-hero h1{
+  max-width:900px;
+  color:var(--v5-navy)!important;
+  font-size:clamp(42px,4.2vw,62px)!important;
+}
+body.cg-page-product-area .page-hero p{color:#5f7186!important;max-width:760px!important}
+body.cg-page-product-area .product-detail{
+  display:grid!important;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+  gap:42px!important;
+  align-items:start!important;
+}
+body.cg-page-product-area .product-gallery{
+  border:1px solid var(--v5-line)!important;
+  border-radius:2px!important;
+  background:#f5f3ee!important;
+  overflow:hidden!important;
+}
+body.cg-page-product-area .product-gallery img{width:100%!important;height:auto!important;display:block!important}
+body.cg-page-product-area .product-name{
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+  font-size:38px!important;
+  color:var(--v5-navy)!important;
+}
+body.cg-page-product-area .product-lede{color:#617286!important;line-height:1.7!important}
+body.cg-page-product-area .data-list{border-top:1px solid var(--v5-line)!important}
+body.cg-page-product-area .data-row{border-bottom:1px solid var(--v5-line)!important;padding:12px 0!important}
+body.cg-page-product-area .notice{
+  margin-top:18px!important;
+  border:1px solid #e4d7b9!important;
+  border-radius:2px!important;
+  background:#fbf7ed!important;
+  color:#5d5b55!important;
+}
+body.cg-page-product-area .spec-table{border-color:var(--v5-line)!important}
+body.cg-page-product-area .spec-table td{border-color:var(--v5-line)!important}
+
+/* Laser Product Finder aligned to V5 */
+body.cg-page-product-area .lpf-hero{
+  background:linear-gradient(90deg,#fff 0%,#fff 58%,#f4f0e7 58%,#f4f0e7 100%)!important;
+  color:var(--v5-navy)!important;
+}
+body.cg-page-product-area .lpf-hero::before{display:none!important}
+body.cg-page-product-area .lpf-hero h1{
+  color:var(--v5-navy)!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+}
+body.cg-page-product-area .lpf-hero h1 em{color:var(--v5-gold)!important}
+body.cg-page-product-area .lpf-hero p{color:#586b80!important}
+body.cg-page-product-area .lpf-kicker{color:#a8781d!important}
+body.cg-page-product-area .lpf-hero-panel{
+  background:var(--v5-navy)!important;
+  border:0!important;
+  border-radius:2px!important;
+  box-shadow:none!important;
+}
+body.cg-page-product-area .lpf-search-wrap,
+body.cg-page-product-area .lpf-section{background:var(--v5-cream)!important}
+body.cg-page-product-area .lpf-search-card,
+body.cg-page-product-area .lpf-family,
+body.cg-page-product-area .lpf-filter-panel,
+body.cg-page-product-area .lpf-card{
+  border-radius:2px!important;
+  box-shadow:none!important;
+}
+body.cg-page-product-area .lpf-family.active{background:var(--v5-navy)!important}
+body.cg-page-product-area .lpf-identify{border-radius:2px!important;background:var(--v5-navy)!important}
+
+/* 3D printing/product-family hubs */
+body.cg-page-product-area .print3d-hero,
+body.cg-page-product-area .lz-hero{
+  padding:58px 0!important;
+  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f4f0e7 56%,#f4f0e7 100%)!important;
+  color:var(--v5-navy)!important;
+}
+body.cg-page-product-area .print3d-hero h1,
+body.cg-page-product-area .lz-hero h1{
+  color:var(--v5-navy)!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+  font-weight:500!important;
+}
+body.cg-page-product-area .print3d-hero h1 em{color:var(--v5-gold)!important}
+body.cg-page-product-area .print3d-hero p,
+body.cg-page-product-area .lz-hero p{color:#5f7186!important}
+body.cg-page-product-area .print3d-visual{border-radius:2px!important;overflow:hidden!important;border:1px solid var(--v5-line)!important}
+body.cg-page-product-area .process-card,
+body.cg-page-product-area .panel,
+body.cg-page-product-area .q3-card,
+body.cg-page-product-area .quote3d-summary,
+body.cg-page-product-area .lz-selector,
+body.cg-page-product-area .lz-identify{
+  border-radius:2px!important;
+  box-shadow:none!important;
+  border-color:var(--v5-line)!important;
+}
+body.cg-page-product-area .quote3d-shell{background:var(--v5-cream)!important}
+body.cg-page-product-area .quote3d-summary{background:#fff!important}
+
+/* Projects, resources, insights, contact and service details */
+body.cg-page-projects main,
+body.cg-page-resources main,
+body.cg-page-insights main,
+body.cg-page-contact main,
+body.cg-page-industries main,
+body.cg-page-rfq main,
+body.cg-page-service-detail main,
+body.cg-page-project-detail main,
+body.cg-page-insight-detail main{background:#fff}
+body.cg-page-service-detail .page-hero,
+body.cg-page-project-detail .page-hero,
+body.cg-page-insight-detail .page-hero{
+  background:linear-gradient(90deg,#fff 0%,#fff 62%,#f5f1e7 62%,#f5f1e7 100%)!important;
+  color:var(--v5-navy)!important;
+}
+body.cg-page-service-detail .page-hero h1,
+body.cg-page-project-detail .page-hero h1,
+body.cg-page-insight-detail .page-hero h1{
+  color:var(--v5-navy)!important;
+  font-family:Georgia,'Times New Roman',serif!important;
+}
+body.cg-page-service-detail .page-hero p,
+body.cg-page-project-detail .page-hero p,
+body.cg-page-insight-detail .page-hero p{color:#617286!important}
+
+@media(max-width:850px){
+  body.cg-page-about .about-v5-image-grid{grid-template-columns:1fr 1fr}
+  body.cg-page-about .about-v5-image-large{grid-column:1/-1}
+  body.cg-page-product-area .product-detail{grid-template-columns:1fr!important}
+}
+@media(max-width:620px){
+  body.cg-page-about .about-v5-image-grid{grid-template-columns:1fr}
+  body.cg-page-about .about-v5-image-large{grid-column:auto}
+  body.cg-page-product-area .lpf-hero,
+  body.cg-page-product-area .print3d-hero,
+  body.cg-page-product-area .lz-hero,
+  body.cg-page-product-area .page-hero.tech-bg{background:#fff!important}
+}
