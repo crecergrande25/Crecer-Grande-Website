@@ -676,3 +676,15 @@ body.cg-page-insight-detail .page-hero .eyebrow{color:#edc86f!important}
       url('/assets/images/hero-engineering-v23.webp') center/cover no-repeat!important;
   }
 }
+
+
+/* Footer admin access — intentionally discreet */
+body.cg-v5 .cg-footer-bottom{display:grid!important;grid-template-columns:1fr auto auto!important;align-items:center!important;gap:16px!important}
+body.cg-v5 .cg-admin-login{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  width:max-content!important;padding:5px 9px!important;border:1px solid #d8dee6!important;border-radius:999px!important;
+  font-size:9px!important;font-weight:700!important;letter-spacing:.05em!important;text-transform:uppercase!important;
+  color:#8793a2!important;background:#fff!important;opacity:.78!important;
+}
+body.cg-v5 .cg-admin-login:hover{opacity:1!important;color:var(--v5-navy)!important;border-color:#aeb8c4!important;background:#f7f9fb!important}
+@media(max-width:760px){body.cg-v5 .cg-footer-bottom{grid-template-columns:1fr!important;gap:8px!important}body.cg-v5 .cg-admin-login{margin-top:3px!important}}
