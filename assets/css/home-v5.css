@@ -207,3 +207,31 @@ body.home-v5 .cg5-hero-badge span{color:#d6e2ed}
   body.home-v5 .cg5-hero-sidecopy{right:20px;top:20px}
   body.home-v5 .cg5-hero-badge{right:18px;bottom:18px;width:min(300px,calc(100% - 36px))}
 }
+
+
+/* Homepage V5.2 — footer social visibility */
+body.home-v5 .cg-contact-socials{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+body.home-v5 .cg-contact-socials .cg-social-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  min-height:42px;
+  padding:0 14px;
+  border:1px solid #17324e;
+  border-radius:999px;
+  background:#17324e;
+  color:#fff !important;
+  font-weight:800;
+  box-shadow:0 8px 20px rgba(23,50,78,.08);
+}
+body.home-v5 .cg-contact-socials .cg-social-pill .cg-icon{color:#e1b85d}
+body.home-v5 .cg-contact-socials .cg-social-pill:hover{
+  background:#b98a2f;
+  border-color:#b98a2f;
+  color:#fff !important;
+}
