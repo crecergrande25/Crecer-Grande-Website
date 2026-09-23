@@ -7,28 +7,16 @@ document.addEventListener('DOMContentLoaded',async()=>{
   [
     ['Mechanical Design Job Work','Engineering service','2D drafting, 3D part and assembly modelling, piping layouts, manufacturing drawings, BOM, revisions and reverse engineering.','/design-job-work.html','mechanical engineer senior design engineer 2d drafting 3d modelling piping design layout inventor autocad dwg dxf step stp assembly drawing manufacturing drawing bom ga isometric reverse engineering dfm dfa job work outsourced cad'],
     ['Mechanical Design & CAD','Engineering service','Mechanical CAD, manufacturing drawings, BOM, DFM/DFA and reverse engineering.','/mechanical-design-services-kolkata.html','inventor cad drawing design reverse engineering dfm dfa bom'],
-    ['3D Printing & Rapid Prototyping','Manufacturing','STL preliminary estimate, STEP/STP engineering review, FAI, inserts and finishing.','/products/3d-print-quote.html','stl step stp resin fdm pla petg abs nylon inserts prototype'],
+    ['3D Printing & Rapid Prototyping','Manufacturing','FDM/resin routes, file review, FAI-first workflows and low-volume prototyping.','/3d-printing-kolkata.html','stl step stp resin fdm pla petg abs nylon inserts prototype'],
     ['Industrial Machine Maintenance','Machine support','Breakdown, troubleshooting, preventive maintenance and restoration support.','/industrial-machine-maintenance-kolkata.html','breakdown alarm repair cnc vmc laser chiller machine maintenance'],
     ['Inspection / FAI / RCA / CAPA','Quality','Inspection, first article, NCR, root-cause and corrective-action support.','/industrial-inspection-qa-kolkata.html','quality inspection fai ncr rca capa sop audit'],
     ['Tender & GeM Support','Business support','Tender review, technical compliance, GeM and industrial business support.','/gem-tender-support-kolkata.html','gem tender bid procurement vendor compliance registration'],
     ['CG Engineering Desk','Engineering gateway','Start with a drawing, part, machine problem, quality issue or tender.','/engineering-desk.html','problem requirement drawing photo sample machine part issue']
   ].forEach(x=>add(...x));
   try{
-    const data=await (await fetch('/assets/data/catalog-fallback.json',{cache:'no-store'})).json();
-    (data.categories||[]).forEach(x=>add(x.name,'Product family',x.description||'','/products/laser-product-finder.html?q='+encodeURIComponent(x.name),(x.keywords||[]).join(' ')));
-    (data.products||[]).forEach(x=>add(x.name,'Catalogue product',x.description||x.category||'',x.href||('/products/catalog/'+encodeURIComponent(x.slug)+'.html'),[x.category,x.family,x.brand,x.model,Array.isArray(x.keywords)?x.keywords.join(' '):x.keywords].filter(Boolean).join(' ')));
-  }catch(_){ }
-  try{
     const content=await (await fetch('/assets/data/content-index.json',{cache:'no-store'})).json();
     (content||[]).forEach(x=>add(x.name,x.kind||'Resource',x.desc||'',x.href||'/resources.html',x.keywords||''));
   }catch(_){ }
-  const client=window.CG_SUPABASE;
-  if(client){
-    try{
-      const {data,error}=await client.from('products').select('name,slug,short_description,category,subcategory,mpn,manufacturer_part_number,sku,tags,canonical_url').eq('published',true).limit(750);
-      if(!error)(data||[]).forEach(x=>add(x.name,'Catalogue product',x.short_description||x.subcategory||x.category||'',(x.canonical_url?(()=>{const u=new URL(x.canonical_url,location.origin);return u.pathname+u.search})():'/products/catalog/'+encodeURIComponent(x.slug)+'.html'),[x.category,x.subcategory,x.mpn,x.manufacturer_part_number,x.sku,Array.isArray(x.tags)?x.tags.join(' '):x.tags].filter(Boolean).join(' ')));
-    }catch(_){ }
-  }
   const esc=s=>String(s||'').replace(/[&<>'"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[m]));
   function score(row,terms,q){let s=0;const name=row.name.toLowerCase();if(name===q)s+=12;if(name.startsWith(q))s+=7;if(name.includes(q))s+=5;for(const t of terms){if(name.includes(t))s+=4;if(row.hay.includes(t))s+=1}return s}
   function render(){
@@ -37,7 +25,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
     const terms=q.split(/\s+/).filter(Boolean);
     const matches=rows.map(r=>({r,s:score(r,terms,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s||a.r.name.localeCompare(b.r.name)).slice(0,8).map(x=>x.r);
     const fallback=`<article class="search-hit search-hit-fallback"><small>Can’t find it?</small><b>Send the part, drawing or problem to CG.</b><span>Upload a photo, nameplate, CAD file, drawing or description for engineering review.</span><a href="/request-quote.html?requirement=${encodeURIComponent(raw)}">Send requirement →</a></article>`;
-    box.innerHTML=`<div class="search-result-head"><b>${matches.length?`${matches.length} relevant route${matches.length>1?'s':''}`:'No exact match'}</b><span>Search uses service routes, product families and the published catalogue.</span></div><div class="search-results-grid">${matches.map(x=>`<article class="search-hit"><small>${esc(x.kind)}</small><b>${esc(x.name)}</b><span>${esc(x.desc)}</span><a href="${esc(x.href)}">Open →</a></article>`).join('')}${fallback}</div>`;
+    box.innerHTML=`<div class="search-result-head"><b>${matches.length?`${matches.length} relevant route${matches.length>1?'s':''}`:'No exact match'}</b><span>Search uses service routes and engineering resources.</span></div><div class="search-results-grid">${matches.map(x=>`<article class="search-hit"><small>${esc(x.kind)}</small><b>${esc(x.name)}</b><span>${esc(x.desc)}</span><a href="${esc(x.href)}">Open →</a></article>`).join('')}${fallback}</div>`;
     box.classList.add('open');
   }
   input.addEventListener('input',render);
