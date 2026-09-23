@@ -988,3 +988,20 @@ body.cg-page-projects .case-study-card:hover .case-link{color:#8d6724}
 .cg-service-boundary b{color:#8a6524;font-size:9px;letter-spacing:.11em;text-transform:uppercase}
 .cg-service-boundary p{margin:0;color:#5c6876;font-size:10px;line-height:1.65}
 @media(max-width:760px){.cg-division-visual-grid{grid-template-columns:1fr}.cg-division-visual-grid figure{min-height:300px}.cg-service-boundary{grid-template-columns:1fr;gap:7px}}
+
+
+/* Insight detail imagery — V6.5 */
+body.cg-page-insight-detail .content-hero,
+body.cg-page-insight-detail .insight-hero{
+  position:relative!important;
+  background-image:linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.86) 52%,rgba(8,34,60,.58) 100%),var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-position:center!important;background-size:cover!important;color:#fff!important;
+}
+body.cg-page-insight-detail .content-hero h1,
+body.cg-page-insight-detail .insight-hero h1{color:#fff!important;text-shadow:0 7px 30px rgba(0,0,0,.2)!important}
+body.cg-page-insight-detail .content-hero p,
+body.cg-page-insight-detail .insight-hero p{color:#dfe8f1!important}
+body.cg-page-insight-detail .content-hero .eyebrow,
+body.cg-page-insight-detail .insight-hero .eyebrow{color:#efca72!important}
+body.cg-page-insight-detail .insight-hero-grid>img{border:1px solid rgba(255,255,255,.28)!important;border-radius:3px!important;box-shadow:0 24px 64px rgba(0,0,0,.20)!important}
+body.cg-page-insight-detail .insight-aside-card{border-radius:3px!important}

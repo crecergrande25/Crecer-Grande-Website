@@ -6,7 +6,7 @@
     if(!document.querySelector('link[data-cg-v5]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/site-v5.css?v=6.0.0';
+      link.href='/assets/css/site-v5.css?v=6.5.0';
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }
@@ -71,7 +71,16 @@
       '/divisions/tender-business-development.html':'/assets/images/div-tender-v23b.webp',
       '/divisions/business-support-compliance.html':'/assets/images/tender.webp'
     };
-    if(art[path]) document.body.style.setProperty('--cg-page-art',`url("${art[path]}")`);
+    const insightArt=path.includes('/insights/3d-printing')?'/assets/images/service-3d-printing.webp':
+      path.includes('/insights/chiller')?'/assets/images/chiller-components.webp':
+      path.includes('/insights/cnc-vmc')?'/assets/images/process-make-v23.webp':
+      path.includes('/insights/gdt')||path.includes('/insights/metric-tap')||path.includes('/insights/surface-roughness')||path.includes('/insights/vernier')?'/assets/images/resource-inspection-v23.webp':
+      path.includes('/insights/holes-near')||path.includes('/insights/sheet-metal')||path.includes('/insights/stainless-steel')?'/assets/images/div-manufacturing-v23.webp':
+      path.includes('/insights/identify-laser')||path.includes('/insights/laser-cutting')||path.includes('/insights/laser-nozzle')?'/assets/images/laser-components.webp':
+      path.includes('/insights/machine-breakdown')||path.includes('/insights/preventive-maintenance')?'/assets/images/resource-maintenance-v23.webp':
+      path.includes('/insights/ncr-rca-capa')?'/assets/images/resource-quality-v23.webp':null;
+    const selectedArt=art[path]||insightArt;
+    if(selectedArt) document.body.style.setProperty('--cg-page-art',`url("${selectedArt}")`);
   }
 
   function syncCommonFooter(){
