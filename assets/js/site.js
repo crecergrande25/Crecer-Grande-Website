@@ -6,7 +6,7 @@
     if(!document.querySelector('link[data-cg-v5]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/site-v5.css?v=6.5.0';
+      link.href='/assets/css/site-v5.css?v=6.6.0';
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }
@@ -103,30 +103,6 @@
     document.head.appendChild(style);
   }
 
-  function scrubRemovedProductRoutes(){
-    $$('a[href="/products.html"],a[href^="/products/"]').forEach(a=>{
-      const label=(a.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
-      if(label==='3d printing'||label.includes('3d printing / cad quote')){
-        a.href='/3d-printing-kolkata.html';
-        return;
-      }
-      if(label==='find a part'||label.includes('find an industrial part')||label.includes('find a laser part')){
-        a.href='/request-quote.html?requirement=Industrial%20Spare%20Identification';
-        if(a.children.length===0) a.textContent='Identify a Part';
-        return;
-      }
-      a.remove();
-    });
-  }
-
-  function scrubRetiredResourceRoutes(){
-    $('a[href="/resources.html"]').forEach(a=>{
-      if(a.closest('.site-header,.cg-footer')){a.remove();return}
-      a.href='/insights.html';
-      if((a.textContent||'').trim().toLowerCase()==='resources') a.textContent='Insights';
-    });
-  }
-
   function normalizeFooter(){
     injectFooterStyles();
     document.querySelectorAll('.cg-heart').forEach(x => x.style.color = '#25D366');
@@ -166,8 +142,6 @@
     syncCommonHeader();
     syncCommonFooter();
     normalizeFooter();
-    scrubRemovedProductRoutes();
-    scrubRetiredResourceRoutes();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
     const btn=$('.menu-btn'),nav=$('.nav');

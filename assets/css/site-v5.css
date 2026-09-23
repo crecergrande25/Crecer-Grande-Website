@@ -321,115 +321,8 @@ body.cg-page-about .about-v5-image-grid figcaption span{
   line-height:1.55;
 }
 
-/* Product and tool pages */
-body.cg-page-product-area .page-hero.tech-bg,body[data-product-slug] .page-hero.tech-bg{
-  padding:58px 0!important;
-  background:linear-gradient(90deg,#fff 0%,#fff 62%,#f7f2e7 62%,#f7f2e7 100%)!important;
-  color:var(--v5-navy)!important;
-}
-body.cg-page-product-area .page-hero h1,body[data-product-slug] .page-hero h1{
-  max-width:900px;
-  color:var(--v5-navy)!important;
-  font-size:clamp(42px,4.2vw,62px)!important;
-}
-body.cg-page-product-area .page-hero p,body[data-product-slug] .page-hero p{color:#5f7186!important;max-width:760px!important}
-body.cg-page-product-area .product-detail,body[data-product-slug] .product-detail{
-  display:grid!important;
-  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
-  gap:42px!important;
-  align-items:start!important;
-}
-body.cg-page-product-area .product-gallery,body[data-product-slug] .product-gallery{
-  border:1px solid var(--v5-line)!important;
-  border-radius:2px!important;
-  background:#f5f3ee!important;
-  overflow:hidden!important;
-}
-body.cg-page-product-area .product-gallery,body[data-product-slug] .product-gallery img{width:100%!important;height:auto!important;display:block!important}
-body.cg-page-product-area .product-name,body[data-product-slug] .product-name{
-  font-family:Georgia,'Times New Roman',serif!important;
-  font-weight:500!important;
-  font-size:38px!important;
-  color:var(--v5-navy)!important;
-}
-body.cg-page-product-area .product-lede,body[data-product-slug] .product-lede{color:#617286!important;line-height:1.7!important}
-body.cg-page-product-area .data-list,body[data-product-slug] .data-list{border-top:1px solid var(--v5-line)!important}
-body.cg-page-product-area .data-row,body[data-product-slug] .data-row{border-bottom:1px solid var(--v5-line)!important;padding:12px 0!important}
-body.cg-page-product-area .notice,body[data-product-slug] .notice{
-  margin-top:18px!important;
-  border:1px solid #e4d7b9!important;
-  border-radius:2px!important;
-  background:#fbf7ed!important;
-  color:#5d5b55!important;
-}
-body.cg-page-product-area .spec-table,body[data-product-slug] .spec-table{border-color:var(--v5-line)!important}
-body.cg-page-product-area .spec-table,body[data-product-slug] .spec-table td{border-color:var(--v5-line)!important}
-
-/* Laser Product Finder aligned to V5 */
-body.cg-page-product-area .lpf-hero{
-  background:linear-gradient(90deg,#fff 0%,#fff 58%,#f4f0e7 58%,#f4f0e7 100%)!important;
-  color:var(--v5-navy)!important;
-}
-body.cg-page-product-area .lpf-hero::before{display:none!important}
-body.cg-page-product-area .lpf-hero h1{
-  color:var(--v5-navy)!important;
-  font-family:Georgia,'Times New Roman',serif!important;
-  font-weight:500!important;
-}
-body.cg-page-product-area .lpf-hero h1 em{color:var(--v5-gold)!important}
-body.cg-page-product-area .lpf-hero p{color:#586b80!important}
-body.cg-page-product-area .lpf-kicker{color:#a8781d!important}
-body.cg-page-product-area .lpf-hero-panel{
-  background:var(--v5-navy)!important;
-  border:0!important;
-  border-radius:2px!important;
-  box-shadow:none!important;
-}
-body.cg-page-product-area .lpf-search-wrap,
-body.cg-page-product-area .lpf-section{background:var(--v5-cream)!important}
-body.cg-page-product-area .lpf-search-card,
-body.cg-page-product-area .lpf-family,
-body.cg-page-product-area .lpf-filter-panel,
-body.cg-page-product-area .lpf-card{
-  border-radius:2px!important;
-  box-shadow:none!important;
-}
-body.cg-page-product-area .lpf-family.active{background:var(--v5-navy)!important}
-body.cg-page-product-area .lpf-identify{border-radius:2px!important;background:var(--v5-navy)!important}
-
-/* 3D printing/product-family hubs */
-body.cg-page-product-area .print3d-hero,
-body.cg-page-product-area .lz-hero{
-  padding:58px 0!important;
-  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f4f0e7 56%,#f4f0e7 100%)!important;
-  color:var(--v5-navy)!important;
-}
-body.cg-page-product-area .print3d-hero h1,
-body.cg-page-product-area .lz-hero h1{
-  color:var(--v5-navy)!important;
-  font-family:Georgia,'Times New Roman',serif!important;
-  font-weight:500!important;
-}
-body.cg-page-product-area .print3d-hero h1 em{color:var(--v5-gold)!important}
-body.cg-page-product-area .print3d-hero p,
-body.cg-page-product-area .lz-hero p{color:#5f7186!important}
-body.cg-page-product-area .print3d-visual{border-radius:2px!important;overflow:hidden!important;border:1px solid var(--v5-line)!important}
-body.cg-page-product-area .process-card,
-body.cg-page-product-area .panel,
-body.cg-page-product-area .q3-card,
-body.cg-page-product-area .quote3d-summary,
-body.cg-page-product-area .lz-selector,
-body.cg-page-product-area .lz-identify{
-  border-radius:2px!important;
-  box-shadow:none!important;
-  border-color:var(--v5-line)!important;
-}
-body.cg-page-product-area .quote3d-shell{background:var(--v5-cream)!important}
-body.cg-page-product-area .quote3d-summary{background:#fff!important}
-
 /* Projects, resources, insights, contact and service details */
 body.cg-page-projects main,
-body.cg-page-resources main,
 body.cg-page-insights main,
 body.cg-page-contact main,
 body.cg-page-industries main,
@@ -549,28 +442,11 @@ body.cg-page-services .svc-hero-stats>div{border-color:rgba(255,255,255,.18)!imp
 body.cg-page-services .svc-hero-stats small,
 body.cg-page-services .svc-hero-stats b{color:#fff!important}
 
-body.cg-page-products .prod7-hero{
-  background:
-    linear-gradient(90deg,rgba(6,25,45,.95) 0%,rgba(8,32,56,.88) 48%,rgba(8,35,61,.66) 100%),
-    url('/assets/images/manufacturing.webp') center/cover no-repeat!important;
-  color:#fff!important;
-}
-body.cg-page-products .prod7-hero h1{color:#fff!important}
-body.cg-page-products .prod7-hero h1 em{color:#f0c96f!important}
-body.cg-page-products .prod7-hero p{color:#dde7f1!important}
-body.cg-page-products .prod7-hero .eyebrow{color:#edc86f!important}
-body.cg-page-products .prod7-proof span{background:rgba(255,255,255,.12)!important;color:#fff!important;border-color:rgba(255,255,255,.22)!important}
 
 body.cg-page-projects .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.76)),
     url('/assets/images/project-reverse.webp') center/cover no-repeat!important;
-  color:#fff!important;
-}
-body.cg-page-resources .content-hero{
-  background:
-    linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.76)),
-    url('/assets/images/resource-inspection-v23.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-insights .content-hero{
@@ -586,15 +462,12 @@ body.cg-page-industries .content-hero{
   color:#fff!important;
 }
 body.cg-page-projects .content-hero h1,
-body.cg-page-resources .content-hero h1,
 body.cg-page-insights .content-hero h1,
 body.cg-page-industries .content-hero h1{color:#fff!important}
-body.cg-page-projects .content-hero h1 em,
-body.cg-page-resources .content-hero h1 em,
+body.cg-page-projects .content-hero h1 em em,
 body.cg-page-insights .content-hero h1 em,
 body.cg-page-industries .content-hero h1 em{color:#f0c96f!important}
 body.cg-page-projects .content-hero p,
-body.cg-page-resources .content-hero p,
 body.cg-page-insights .content-hero p,
 body.cg-page-industries .content-hero p{color:#dfe8f1!important}
 body.cg-v5 .content-hero .eyebrow{color:#edc86f!important}
@@ -629,12 +502,6 @@ body.cg-page-service-detail .page-hero{
     url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
-body.cg-page-product-area .page-hero{
-  background:
-    linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/manufacturing.webp') center/cover no-repeat!important;
-  color:#fff!important;
-}
 body.cg-page-project-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
@@ -648,15 +515,12 @@ body.cg-page-insight-detail .page-hero{
   color:#fff!important;
 }
 body.cg-page-service-detail .page-hero h1,
-body.cg-page-product-area .page-hero h1,
 body.cg-page-project-detail .page-hero h1,
 body.cg-page-insight-detail .page-hero h1{color:#fff!important}
 body.cg-page-service-detail .page-hero p,
-body.cg-page-product-area .page-hero p,
 body.cg-page-project-detail .page-hero p,
 body.cg-page-insight-detail .page-hero p{color:#dfe8f1!important}
 body.cg-page-service-detail .page-hero .eyebrow,
-body.cg-page-product-area .page-hero .eyebrow,
 body.cg-page-project-detail .page-hero .eyebrow,
 body.cg-page-insight-detail .page-hero .eyebrow{color:#edc86f!important}
 
