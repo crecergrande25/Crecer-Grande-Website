@@ -1,6 +1,7 @@
-Crecer Grande Website V2.9.0
-Release status: WEBSITE COMPLETION PASS — STEP 1
-Release date: 2026-09-20
-Target: GitHub Pages + existing CG Supabase backend
-Feature focus: single global customer shell, navigation/footer normalization, cache-version unification and removal of public build metadata
-Stable reference versions: V1.9.3 and V2.6.4
+Crecer Grande Website
+Current public architecture: streamlined engineering/services site
+Products catalogue: retired
+Resources: consolidating into Engineering Insights
+Hosting: GitHub Pages
+Backend: Supabase
+Updated: 2026-09-23

@@ -16,7 +16,7 @@
       buttons.forEach(b=>b.classList.toggle('active',b.dataset.usecase===key));
       const tags=map[key]||[];
       const ranked=mats.map(m=>({m,score:tags.reduce((s,t)=>s+(m.tags||[]).includes(t)?1:0,0)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||b.m.properties.strength-a.m.properties.strength).slice(0,3);
-      out.innerHTML=ranked.map(({m})=>`<div class="mini"><b>${esc(m.name)}</b><span>${esc(m.use)}</span><a href="/products/3d-print-quote.html?process=${encodeURIComponent(m.process)}&material=${encodeURIComponent(m.id)}">Configure →</a></div>`).join('')||'<div class="mini"><b>Engineering review</b><span>Tell CG the required property and service environment.</span></div>';
+      out.innerHTML=ranked.map(({m})=>`<div class="mini"><b>${esc(m.name)}</b><span>${esc(m.use)}</span><a href="/request-quote.html?requirement=${encodeURIComponent(`3D Printing - ${m.name}`)}">Configure →</a></div>`).join('')||'<div class="mini"><b>Engineering review</b><span>Tell CG the required property and service environment.</span></div>';
     }
     buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.usecase))); show('functional');
   }
@@ -44,7 +44,7 @@
       const rows=filtered();
       grid.innerHTML=rows.map(m=>`<article class="mat-card-v26 ${selected.includes(m.id)?'selected':''}" data-mid="${esc(m.id)}"><span class="badge">${esc(m.process.toUpperCase())} · ${m.availability==='estimate'?'Estimator':'RFQ'}</span><h3>${esc(m.name)}</h3><p>${esc(m.use)}</p>
         <div class="prop-grid"><div class="prop"><span>Strength</span><b>${propertyLabel(m.properties.strength)}</b></div><div class="prop"><span>Heat</span><b>${propertyLabel(m.properties.heat)}</b></div><div class="prop"><span>Finish</span><b>${propertyLabel(m.properties.finish)}</b></div></div>
-        <div class="mat-actions"><button type="button" data-compare="${esc(m.id)}">${selected.includes(m.id)?'Remove compare':'Compare'}</button><a href="/products/3d-print-quote.html?process=${encodeURIComponent(m.process)}&material=${encodeURIComponent(m.id)}">Configure →</a></div></article>`).join('')||'<div class="panel">No material matched these filters. Try a broader requirement or send it for engineering review.</div>';
+        <div class="mat-actions"><button type="button" data-compare="${esc(m.id)}">${selected.includes(m.id)?'Remove compare':'Compare'}</button><a href="/request-quote.html?requirement=${encodeURIComponent(`3D Printing - ${m.name}`)}">Configure →</a></div></article>`).join('')||'<div class="panel">No material matched these filters. Try a broader requirement or send it for engineering review.</div>';
       grid.querySelectorAll('[data-compare]').forEach(b=>b.onclick=()=>{
         const id=b.dataset.compare;
         if(selected.includes(id))selected=selected.filter(x=>x!==id); else if(selected.length<3)selected.push(id); else selected=[selected[1],selected[2],id];

@@ -11,11 +11,7 @@
     pagetext:{label:'Page Texts',table:'page_texts',pk:'page_key',icon:'T',preferred:['id','page_key','text_key','content','published']},
     divisions:{label:'Divisions',table:'divisions',icon:'◫',preferred:['id','slug','name','title','published','sort_order']},
     projects:{label:'Projects',table:'projects',icon:'◆',preferred:['id','slug','title','name','published','sort_order']},
-    resources:{label:'Resources',table:'resources',icon:'▦',preferred:['id','slug','title','name','published','sort_order']},
-    products:{label:'Products',table:'products',icon:'▣',preferred:['id','slug','name','title','product_code','manufacturer_part_no','published','stock_status']},
-    variants:{label:'Product Variants',table:'product_variants',icon:'◇',preferred:['id','product_id','sku','name','price','gst_rate','published','stock_status']},
-    categories:{label:'Product Categories',table:'product_categories',icon:'◈',preferred:['id','slug','name','parent_id','published','sort_order']},
-    brands:{label:'Product Brands',table:'product_brands',icon:'B',preferred:['id','slug','name','brand_role','relationship_status','published']},
+    resources:{label:'Insights & Guides',table:'resources',icon:'▦',preferred:['id','slug','title','name','published','sort_order']},
     media:{label:'Media Assets',table:'media_assets',icon:'▧',preferred:['id','title','name','url','file_url','alt_text','published']},
     enquiries:{label:'Enquiries',table:'enquiries',icon:'✉',preferred:['id','created_at','name','company','phone','email','requirement_type','status']},
     analytics:{label:'Analytics',table:'analytics_events',icon:'↗',preferred:['id','created_at','event_type','page_path','product_slug','division_slug','device_type']},
@@ -23,10 +19,6 @@
   };
 
   const createDefs={
-    products:{slug:'',category:'Industrial Product',title:'',name:'',short_description:'',image_url:'',published:false,featured:false,stock_status:'unknown',rfq_enabled:true,canonical_url:'',seo_title:'',seo_description:''},
-    variants:{product_id:'',name:'',sku:'',price:null,published:false,specifications:{}},
-    categories:{slug:'',name:'',short_description:'',image_url:'',published:true,sort_order:100},
-    brands:{slug:'',name:'',description:'',website_url:'',logo_url:'',published:true,sort_order:100},
     divisions:{slug:'',title:'',name:'',summary:'',description:'',image_url:'',published:false,sort_order:100,bullets:[]},
     projects:{slug:'',title:'',summary:'',details:'',image_url:'',published:false,sort_order:100,tags:[],gallery:[]},
     resources:{title:'',description:'',file_url:'',resource_type:'pdf',published:false,sort_order:100},
@@ -94,7 +86,7 @@
   }
   async function dashboard(){
     const content=$('#content');content.innerHTML='<div class="notice">Loading dashboard…</div>';
-    const [prod,enq,proj]=await Promise.all([count('products'),count('enquiries'),count('projects')]);
+    const [enq,proj,ins]=await Promise.all([count('enquiries'),count('projects'),count('resources')]);
     let recent=[],summary={};
     try{
       const [recentResult,analytics]=await Promise.all([
@@ -106,7 +98,7 @@
     const topPages=Array.isArray(summary.top_pages)?summary.top_pages:[];
     const max=Math.max(1,...topPages.map(x=>Number(x.count)||0));
     content.innerHTML=`<div class="metric-grid">
-      <div class="metric"><span>Products</span><strong>${prod??'—'}</strong><small>Catalogue records</small></div>
+      <div class="metric"><span>Insights &amp; Guides</span><strong>${ins??'—'}</strong><small>Knowledge records</small></div>
       <div class="metric"><span>Enquiries</span><strong>${summary.enquiries??enq??'—'}</strong><small>Last 30 days</small></div>
       <div class="metric"><span>Page Views</span><strong>${summary.page_views??'—'}</strong><small>Last 30 days</small></div>
       <div class="metric"><span>Unique Visitors</span><strong>${summary.unique_visitors??'—'}</strong><small>${summary.sessions??'—'} sessions</small></div></div>
@@ -174,23 +166,11 @@
       if(creating||JSON.stringify(v)!==JSON.stringify(old))patch[k]=v;
     });
     Object.keys(patch).forEach(k=>{if(patch[k]===null&&creating)delete patch[k]});
-    if(creating&&currentTable==='products'){
-      patch.slug=String(patch.slug||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-      patch.title=String(patch.title||patch.name||'').trim();
-      patch.name=String(patch.name||patch.title||'').trim();
-      if(!patch.slug||!patch.title||!patch.category)throw new Error('Product slug, title/name and category are required.');
-      patch.seo_title=patch.seo_title||patch.title;
-      patch.seo_description=patch.seo_description||String(patch.short_description||'').slice(0,160)||'Industrial product requirement available from Crecer Grande.';
-      patch.canonical_url=patch.canonical_url||`${location.origin.replace('/admin','')}/products/product-detail.html?slug=${encodeURIComponent(patch.slug)}`;
-    }
-    if(creating&&['divisions','projects','product_categories','product_brands'].includes(currentTable)){
+    if(creating&&['divisions','projects'].includes(currentTable)){
       if(patch.slug)patch.slug=String(patch.slug).trim().toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
     }
     if(creating&&currentTable==='divisions'&&(!patch.slug||!patch.title))throw new Error('Division slug and title are required.');
     if(creating&&currentTable==='projects'&&(!patch.slug||!patch.title))throw new Error('Project slug and title are required.');
-    if(creating&&currentTable==='product_categories'&&(!patch.slug||!patch.name))throw new Error('Category slug and name are required.');
-    if(creating&&currentTable==='product_brands'&&(!patch.slug||!patch.name))throw new Error('Brand slug and name are required.');
-    if(creating&&currentTable==='product_variants'&&(!patch.product_id||!patch.name))throw new Error('Product ID and variant name are required.');
     if(creating&&currentTable==='resources'&&!patch.title)throw new Error('Resource title is required.');
     if(creating&&currentTable==='page_content'&&(!patch.page_slug||!patch.page_name))throw new Error('Page slug and page name are required.');
     if(creating&&currentTable==='page_texts'&&!patch.page_key)throw new Error('Page key is required.');
@@ -307,7 +287,7 @@
   async function view(key){
     currentView=key;$$('[data-view]').forEach(b=>b.classList.toggle('active',b.dataset.view===key));
     const label=key==='dashboard'?'Dashboard':key==='users'?'Users & Access':key==='account'?'My Account':(tableDefs[key]?.label||key);
-    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager V2.9.3';
+    $('#view-title').textContent=label;$('#view-subtitle').textContent='Crecer Grande Website Manager';
     status('');
     if(key==='dashboard')return dashboard();
     if(key==='users'){if(!(can('users.view')||can('users.manage'))){status('Your role does not have permission to access Users & Access.','bad');return view('dashboard')}return userView();}
