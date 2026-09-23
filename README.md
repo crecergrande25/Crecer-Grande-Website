@@ -1,17 +1,18 @@
-# Crecer Grande Website V2.9.4
+# Crecer Grande Website V2.9.5
 
 Production-ready static website for **https://crecergrande.in/**.
 
 ## Current release focus
 
-V2.9.4 is the **Technical Stabilization** revision:
+V2.9.5 is the **Premium Foundation** revision:
 
-- Fixes the shared footer-normalization JavaScript error that could stop common page initialization
-- Restores reliable initialization for the mobile navigation, Ask iKNOW and common analytics handlers
-- Removes obsolete references to the deleted `part4-visuals.css` stylesheet from laser product-family pages
-- Normalizes the public sitemap pages to the V2.9.4 shared-runtime cache key
-- Corrects the malformed duplicate query-string runtime reference on the 3D printing quote page
-- Preserves the V2.9.3 catalogue, SEO, RFQ and Website Manager functionality without structural redesign
+- Adds a shared premium interaction and visual-polish layer without changing public routes, content or catalogue data
+- Refines header depth, navigation feedback, mega-menu treatment, buttons, cards, image hover treatment and the Ask iKNOW panel
+- Strengthens keyboard focus visibility and reduced-motion support
+- Adds more consistent premium shadows, borders and responsive touch behavior across shared components
+- Enhances footer depth while preserving the existing Crecer Grande navy/gold visual language
+- Normalizes public sitemap pages to the V2.9.5 shared stylesheet cache key
+- Keeps V2.9.4 technical stabilization behavior intact
 
 ## What is included
 
@@ -46,9 +47,9 @@ Crecer Grande Website uses `V<generation>.<feature-release>.<revision>`.
 - Major platform-generation changes increment the first number.
 
 Known stable reference versions: **V1.9.3** and **V2.6.4**.  
-Current release: **V2.9.4**.
+Current release: **V2.9.5**.
 
-See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.4.md`.
+See `VERSION_HISTORY.md` and `CHANGELOG_V2.9.5.md`.
 
 ## Important security rule
 

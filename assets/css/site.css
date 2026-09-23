@@ -555,3 +555,138 @@ url("../images/laser.webp") center/cover;color:#fff}
 
 .contact-premium-method a{display:block;margin-top:4px;color:#fff;font-size:11px;line-height:1.45;font-weight:800;overflow-wrap:anywhere}
 .contact-premium-method a:hover{color:var(--gold-2)}
+
+
+/* =========================================================
+   V2.9.5 — PREMIUM FOUNDATION
+   Shared visual polish only: no structural or data changes.
+   ========================================================= */
+:root{
+  --cg-ease:cubic-bezier(.22,.61,.36,1);
+  --cg-premium-border:rgba(7,26,54,.115);
+  --cg-shadow-soft:0 12px 34px rgba(7,26,54,.075);
+  --cg-shadow-premium:0 24px 64px rgba(7,26,54,.14);
+  --cg-shadow-dark:0 28px 72px rgba(1,12,27,.26);
+}
+::selection{background:rgba(244,176,0,.28);color:#071a36}
+body{text-rendering:optimizeLegibility}
+a,button,input,textarea,select{-webkit-tap-highlight-color:transparent}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:3px solid rgba(244,176,0,.55);
+  outline-offset:3px;
+}
+.site-header{
+  background:rgba(255,255,255,.9);
+  border-bottom:1px solid rgba(7,26,54,.075);
+  box-shadow:0 1px 0 rgba(255,255,255,.75) inset;
+}
+.site-header.scrolled{
+  background:rgba(255,255,255,.965);
+  box-shadow:0 14px 38px rgba(7,26,54,.105);
+}
+.nav>a,.nav-group>button,.mega a,.btn,.quote-nav{
+  transition:transform .24s var(--cg-ease),box-shadow .24s var(--cg-ease),background-color .24s var(--cg-ease),border-color .24s var(--cg-ease),color .24s var(--cg-ease);
+}
+.mega{
+  border-color:rgba(7,26,54,.1);
+  box-shadow:0 28px 70px rgba(2,15,34,.19);
+}
+.mega a{border:1px solid transparent}
+.mega a b{letter-spacing:-.01em}
+.quote-nav{box-shadow:0 10px 26px rgba(244,176,0,.23)!important}
+.btn{
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 8px 22px rgba(7,26,54,.06);
+}
+.btn.primary{box-shadow:0 12px 30px rgba(244,176,0,.22)}
+.btn:active{transform:translateY(0) scale(.985)}
+.page-hero{
+  border-bottom:1px solid rgba(255,255,255,.07);
+  box-shadow:0 18px 48px rgba(3,16,32,.12);
+}
+.page-hero::after{
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  right:-150px;
+  bottom:-230px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(244,176,0,.12),transparent 68%);
+  pointer-events:none;
+}
+.page-hero .container{position:relative;z-index:2}
+.page-hero h1,.section-head h2{text-wrap:balance}
+.section-head>p{line-height:1.82}
+.route-card,.visual-card,.product-card,.case-card,.panel,.form-card,.search-card,.kpi,
+.lz-item,.p6-card,.p6-custom-card,.dv4-cap-grid article,.dv4-io-card,.dv4-router-list a{
+  border-color:var(--cg-premium-border);
+  box-shadow:var(--cg-shadow-soft);
+  transition:transform .3s var(--cg-ease),box-shadow .3s var(--cg-ease),border-color .3s var(--cg-ease),background-color .3s var(--cg-ease);
+}
+.route-media img,.visual-card .media img,.product-card img,.case-photo img,.lz-photo img,
+.p6-media img,.p6-custom-media img{
+  transition:transform .5s var(--cg-ease),filter .4s var(--cg-ease);
+}
+.dv4-hub-card,.dv4-detail-visual,.dv4-story-media,.dv4-process-image,.am3-gallery-card{
+  box-shadow:var(--cg-shadow-premium);
+}
+.dv4-hub-card,.dv4-router-list a,.dv4-cap-grid article,.dv4-io-card{
+  transition:transform .3s var(--cg-ease),box-shadow .3s var(--cg-ease),border-color .3s var(--cg-ease);
+}
+.ask-btn{
+  border:1px solid rgba(112,76,0,.12);
+  box-shadow:0 16px 38px rgba(7,26,54,.2),0 6px 20px rgba(244,176,0,.18);
+  transition:transform .25s var(--cg-ease),box-shadow .25s var(--cg-ease);
+}
+.ask-panel{
+  border-color:rgba(7,26,54,.11);
+  box-shadow:0 28px 70px rgba(2,15,34,.22);
+}
+.ask-panel.open{animation:cg-premium-pop .2s var(--cg-ease) both}
+.cg-footer{
+  background:
+    radial-gradient(circle at 88% 10%,rgba(244,176,0,.075),transparent 25%),
+    linear-gradient(145deg,#020c19,#031326 60%,#061b31);
+}
+.cg-footer-col>a,.cg-contact-line,.cg-social-pill{
+  transition:transform .22s var(--cg-ease),color .22s var(--cg-ease),border-color .22s var(--cg-ease),background-color .22s var(--cg-ease);
+}
+@keyframes cg-premium-pop{
+  from{opacity:0;transform:translateY(8px) scale(.985)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@media(hover:hover){
+  .nav>a:not(.quote-nav):hover,.nav-group>button:hover{transform:translateY(-1px)}
+  .quote-nav:hover{transform:translateY(-2px);box-shadow:0 15px 34px rgba(244,176,0,.31)!important}
+  .mega a:hover{transform:translateY(-2px);border-color:rgba(244,176,0,.22);box-shadow:0 8px 20px rgba(7,26,54,.06)}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(7,26,54,.12)}
+  .btn.primary:hover{box-shadow:0 17px 36px rgba(244,176,0,.3)}
+  .route-card:hover,.visual-card:hover,.product-card:hover,.case-card:hover,.panel:hover,
+  .lz-item:hover,.p6-card:hover,.p6-custom-card:hover,.dv4-cap-grid article:hover,
+  .dv4-io-card:hover,.dv4-router-list a:hover{
+    transform:translateY(-5px);
+    border-color:rgba(190,138,13,.38);
+    box-shadow:var(--cg-shadow-premium);
+  }
+  .route-card:hover .route-media img,.visual-card:hover .media img,.product-card:hover img,
+  .case-card:hover .case-photo img,.lz-item:hover .lz-photo img,.p6-card:hover .p6-media img,
+  .p6-custom-card:hover .p6-custom-media img{transform:scale(1.035);filter:saturate(1.04) contrast(1.015)}
+  .dv4-hub-card:hover,.dv4-cap-grid article:hover,.dv4-io-card:hover{transform:translateY(-5px)}
+  .cg-footer-col>a:hover,.cg-contact-line:hover{transform:translateX(3px)}
+  .ask-btn:hover{transform:translateY(-3px);box-shadow:0 21px 46px rgba(7,26,54,.24),0 9px 24px rgba(244,176,0,.22)}
+}
+@media(max-width:680px){
+  .page-hero::after{width:300px;height:300px;right:-150px;bottom:-180px}
+  .site-header{backdrop-filter:blur(14px)}
+  .btn{min-height:50px}
+  .ask{right:14px;bottom:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav>a,.nav-group>button,.mega,.mega a,.btn,.route-card,.visual-card,.product-card,.case-card,
+  .lz-item,.p6-card,.p6-custom-card,.dv4-hub-card,.dv4-cap-grid article,.dv4-io-card,
+  .dv4-router-list a,.ask-btn,.ask-panel,.cg-footer-col>a,.cg-contact-line,.cg-social-pill,
+  .route-media img,.visual-card .media img,.product-card img,.case-photo img,.lz-photo img,
+  .p6-media img,.p6-custom-media img{transition:none!important;animation:none!important;transform:none!important}
+}
