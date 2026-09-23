@@ -688,3 +688,197 @@ body.cg-v5 .cg-admin-login{
 }
 body.cg-v5 .cg-admin-login:hover{opacity:1!important;color:var(--v5-navy)!important;border-color:#aeb8c4!important;background:#f7f9fb!important}
 @media(max-width:760px){body.cg-v5 .cg-footer-bottom{grid-template-columns:1fr!important;gap:8px!important}body.cg-v5 .cg-admin-login{margin-top:3px!important}}
+
+
+/* Service-first premium completion — V6.0 */
+:root{
+  --cg-ink:#102c4d;
+  --cg-ink-deep:#071b31;
+  --cg-gold:#b28632;
+  --cg-paper:#ffffff;
+  --cg-warm:#f7f3ea;
+  --cg-mist:#f3f6f8;
+  --cg-line:#dfe4e8;
+  --cg-muted:#617286;
+}
+
+/* Service detail pages: relevant hero photography + calm premium structure */
+body.cg-page-service-detail .service-hero{
+  position:relative!important;
+  min-height:560px!important;
+  display:flex!important;
+  align-items:center!important;
+  padding:78px 0!important;
+  background-image:
+    linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.90) 44%,rgba(8,34,60,.68) 68%,rgba(8,34,60,.42) 100%),
+    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-position:center!important;
+  background-size:cover!important;
+  color:#fff!important;
+}
+body.cg-page-service-detail .service-hero:before{
+  content:""!important;position:absolute!important;inset:0!important;
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(0,0,0,.10))!important;
+  pointer-events:none!important;
+}
+body.cg-page-service-detail .service-hero .container{position:relative!important;z-index:1!important}
+body.cg-page-service-detail .service-hero-grid{
+  grid-template-columns:minmax(0,1.02fr) minmax(320px,.72fr)!important;
+  gap:54px!important;align-items:center!important;
+}
+body.cg-page-service-detail .service-hero h1{
+  max-width:850px!important;margin:11px 0 19px!important;
+  color:#fff!important;font-family:Georgia,'Times New Roman',serif!important;
+  font-size:clamp(47px,5.2vw,75px)!important;font-weight:500!important;line-height:.98!important;
+  letter-spacing:-.035em!important;text-shadow:0 8px 36px rgba(0,0,0,.22)!important;
+}
+body.cg-page-service-detail .service-hero p{
+  max-width:760px!important;color:#e2eaf2!important;font-size:14px!important;line-height:1.76!important;
+}
+body.cg-page-service-detail .service-hero .eyebrow{color:#efcc79!important}
+body.cg-page-service-detail .service-hero .btn.outline{
+  background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.44)!important;color:#fff!important;
+  backdrop-filter:blur(8px)!important;
+}
+body.cg-page-service-detail .service-proof{
+  max-width:590px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;margin-top:24px!important;
+}
+body.cg-page-service-detail .service-proof div{
+  padding:13px 14px!important;border:1px solid rgba(255,255,255,.20)!important;
+  background:rgba(5,24,44,.50)!important;border-radius:2px!important;backdrop-filter:blur(10px)!important;
+}
+body.cg-page-service-detail .service-proof small{color:#aebfd0!important}
+body.cg-page-service-detail .service-proof b{color:#fff!important;font-size:11px!important}
+body.cg-page-service-detail .service-visual{
+  border:1px solid rgba(255,255,255,.26)!important;border-radius:3px!important;
+  background:rgba(255,255,255,.08)!important;box-shadow:0 28px 70px rgba(0,0,0,.22)!important;
+}
+body.cg-page-service-detail .service-visual img{
+  height:430px!important;opacity:.93!important;filter:saturate(.94) contrast(1.03)!important;
+}
+body.cg-page-service-detail .section{padding:70px 0!important}
+body.cg-page-service-detail .section.soft{background:var(--cg-mist)!important}
+body.cg-page-service-detail .section.warm{background:var(--cg-warm)!important}
+body.cg-page-service-detail .scope-grid{gap:13px!important}
+body.cg-page-service-detail .scope-card{
+  position:relative!important;min-height:180px!important;padding:23px!important;
+  border:1px solid var(--cg-line)!important;border-radius:3px!important;background:#fff!important;
+  box-shadow:0 7px 24px rgba(16,44,77,.035)!important;
+}
+body.cg-page-service-detail .scope-card:before{
+  content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,var(--cg-gold),#d8bc78);
+}
+body.cg-page-service-detail .scope-card h3{font-family:Georgia,'Times New Roman',serif!important;font-size:19px!important;color:var(--cg-ink)!important}
+body.cg-page-service-detail .scope-card p{font-size:11px!important;line-height:1.65!important}
+body.cg-page-service-detail .method-grid{gap:10px!important}
+body.cg-page-service-detail .method-step{
+  border-radius:3px!important;border-color:var(--cg-line)!important;padding:21px!important;background:#fff!important;
+}
+body.cg-page-service-detail .method-step span{border-radius:2px!important;background:var(--cg-ink)!important;color:#e9c76f!important}
+body.cg-page-service-detail .method-step h3{font-family:Georgia,'Times New Roman',serif!important;color:var(--cg-ink)!important}
+body.cg-page-service-detail .input-grid{gap:14px!important}
+body.cg-page-service-detail .input-box{
+  border-radius:3px!important;border-color:var(--cg-line)!important;padding:26px!important;
+  background:#fff!important;box-shadow:0 7px 22px rgba(16,44,77,.03)!important;
+}
+body.cg-page-service-detail .input-box h3{font-family:Georgia,'Times New Roman',serif!important;font-size:22px!important;color:var(--cg-ink)!important}
+body.cg-page-service-detail .deliver-grid{gap:10px!important}
+body.cg-page-service-detail .deliver-card{
+  border-radius:0 3px 3px 0!important;border-left:3px solid var(--cg-gold)!important;background:#fff!important;
+}
+body.cg-page-service-detail .service-related a{
+  border-radius:3px!important;border-color:#d8dfe5!important;background:#fff!important;
+}
+
+/* Added visual story used across service pages */
+.cg-service-visual-story{background:#fff!important}
+.cg-service-visual-story .cg-service-story-intro{max-width:760px}
+.cg-service-gallery{display:grid;grid-template-columns:1.18fr .91fr .91fr;gap:13px;margin-top:26px}
+.cg-service-gallery figure{
+  position:relative;margin:0;min-height:370px;overflow:hidden;border:1px solid var(--cg-line);border-radius:3px;background:#0b2948;
+}
+.cg-service-gallery figure:first-child{min-height:470px}
+.cg-service-gallery img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+.cg-service-gallery figure:hover img{transform:scale(1.035)}
+.cg-service-gallery figure:after{
+  content:"";position:absolute;inset:35% 0 0;background:linear-gradient(180deg,transparent,rgba(4,18,33,.90));
+}
+.cg-service-gallery figcaption{position:absolute;z-index:2;left:0;right:0;bottom:0;padding:22px;color:#fff}
+.cg-service-gallery figcaption b{display:block;font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:500;line-height:1.15}
+.cg-service-gallery figcaption span{display:block;margin-top:7px;color:#d5e0ea;font-size:10px;line-height:1.55}
+.cg-service-outcome-strip{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:16px;border:1px solid var(--cg-line);background:var(--cg-line);
+}
+.cg-service-outcome-strip div{padding:17px;background:#fff}
+.cg-service-outcome-strip small{display:block;color:#9b762d;font-size:8px;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+.cg-service-outcome-strip b{display:block;margin-top:5px;color:var(--cg-ink);font-size:12px;line-height:1.35}
+
+/* 3D printing and Design Job Work are service routes too */
+body.cg-page-service-detail .print3d-hero,
+body.cg-page-service-detail .design-hero{
+  position:relative!important;min-height:560px!important;padding:78px 0!important;
+  background-image:
+    linear-gradient(90deg,rgba(5,22,40,.96),rgba(8,32,57,.82),rgba(8,34,60,.48)),
+    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-position:center!important;background-size:cover!important;color:#fff!important;
+}
+body.cg-page-service-detail .print3d-hero h1,
+body.cg-page-service-detail .design-hero h1{color:#fff!important;text-shadow:0 8px 36px rgba(0,0,0,.20)!important}
+body.cg-page-service-detail .print3d-hero p,
+body.cg-page-service-detail .design-hero p{color:#dce7f1!important}
+body.cg-page-service-detail .print3d-hero .eyebrow,
+body.cg-page-service-detail .design-hero .eyebrow{color:#efcc79!important}
+body.cg-page-service-detail .design-hero-visual,
+body.cg-page-service-detail .print3d-visual{border-radius:3px!important;border-color:rgba(255,255,255,.28)!important;box-shadow:0 28px 70px rgba(0,0,0,.22)!important}
+
+/* Division detail: make each division feel like a premium service practice */
+body.cg-page-division-detail .dv4-detail-hero{
+  position:relative!important;min-height:570px!important;display:flex!important;align-items:center!important;padding:78px 0!important;
+  background-image:
+    linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.89) 44%,rgba(8,34,60,.66) 70%,rgba(8,34,60,.38) 100%),
+    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-position:center!important;background-size:cover!important;color:#fff!important;
+}
+body.cg-page-division-detail .dv4-detail-copy h1{
+  color:#fff!important;font-family:Georgia,'Times New Roman',serif!important;font-weight:500!important;
+  font-size:clamp(48px,5vw,72px)!important;line-height:.98!important;text-shadow:0 8px 36px rgba(0,0,0,.20)!important;
+}
+body.cg-page-division-detail .dv4-detail-tag{color:#f0cb73!important}
+body.cg-page-division-detail .dv4-detail-intro{color:#dfe8f1!important}
+body.cg-page-division-detail .dv4-detail-mini{border-color:rgba(255,255,255,.20)!important;background:rgba(5,24,44,.46)!important;backdrop-filter:blur(10px)!important}
+body.cg-page-division-detail .dv4-detail-mini span{color:#fff!important}
+body.cg-page-division-detail .dv4-detail-visual{border-radius:3px!important;border:1px solid rgba(255,255,255,.25)!important;box-shadow:0 28px 70px rgba(0,0,0,.22)!important}
+body.cg-page-division-detail .dv4-story-media,
+body.cg-page-division-detail .dv4-process-image{border-radius:3px!important;overflow:hidden!important}
+body.cg-page-division-detail .dv4-cap-grid article,
+body.cg-page-division-detail .dv4-io-card{border-radius:3px!important;box-shadow:none!important}
+body.cg-page-division-detail .dv4-cap-grid article h3{font-family:Georgia,'Times New Roman',serif!important}
+
+/* A little more editorial refinement across hubs */
+body.cg-page-projects .resource-card h3,
+body.cg-page-insights .resource-card h3,
+body.cg-page-industries h3,
+body.cg-page-contact h2,
+body.cg-page-rfq h2{font-family:Georgia,'Times New Roman',serif!important;font-weight:500!important}
+body.cg-v5 .section-head h2{letter-spacing:-.025em!important}
+body.cg-v5 p{line-height:1.68}
+
+/* Mobile */
+@media(max-width:980px){
+  body.cg-page-service-detail .service-hero-grid{grid-template-columns:1fr!important}
+  body.cg-page-service-detail .service-visual img{height:340px!important}
+  .cg-service-gallery{grid-template-columns:1fr 1fr}
+  .cg-service-gallery figure:first-child{grid-column:1/-1;min-height:420px}
+  .cg-service-outcome-strip{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+  body.cg-page-service-detail .service-hero,
+  body.cg-page-service-detail .print3d-hero,
+  body.cg-page-service-detail .design-hero,
+  body.cg-page-division-detail .dv4-detail-hero{min-height:auto!important;padding:54px 0!important}
+  body.cg-page-service-detail .service-hero h1{font-size:41px!important}
+  body.cg-page-service-detail .service-proof{grid-template-columns:1fr!important}
+  .cg-service-gallery{grid-template-columns:1fr}
+  .cg-service-gallery figure,.cg-service-gallery figure:first-child{grid-column:auto;min-height:300px}
+  .cg-service-outcome-strip{grid-template-columns:1fr}
+}
