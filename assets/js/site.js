@@ -68,7 +68,7 @@
 
   function scrubRemovedProductRoutes(){
     $('a[href="/products.html"],a[href^="/products/"]').forEach(a=>{
-      const label=(a.textContent||'').replace(/\\s+/g,' ').trim().toLowerCase();
+      const label=(a.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
       if(label==='3d printing'||label.includes('3d printing / cad quote')){
         a.href='/3d-printing-kolkata.html';
         return;
