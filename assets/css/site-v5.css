@@ -917,3 +917,38 @@ body.cg-v5 p{line-height:1.68}
  .cg-home-journey-grid,.cg-home-service-principles,.cg-services-model-grid,.cg-division-collab-grid{grid-template-columns:1fr}
  .cg-home-journey-grid article{min-height:330px}
 }
+
+
+/* Supporting pages — service-first V6.2 */
+.cg-industries-fit-grid,.cg-contact-route-grid,.cg-rfq-next-grid{display:grid;gap:14px}
+.cg-industries-fit-grid{grid-template-columns:repeat(3,1fr)}
+.cg-industries-fit-grid article,.cg-contact-route-grid a,.cg-rfq-next-grid article{overflow:hidden;border:1px solid var(--v5-line);background:#fff}
+.cg-industries-fit-grid img{width:100%;height:230px;object-fit:cover;display:block}
+.cg-industries-fit-grid article>div{padding:20px}
+.cg-industries-fit-grid small,.cg-contact-route-grid small{color:#9a7227;font-size:8px;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.cg-industries-fit-grid h3,.cg-contact-route-grid h3,.cg-rfq-next-grid h3{font-family:Georgia,'Times New Roman',serif;font-size:20px;font-weight:500;color:var(--v5-navy)}
+.cg-industries-fit-grid p,.cg-rfq-next-grid p{font-size:10px;color:var(--v5-muted);line-height:1.65}
+
+.cg-contact-routes{background:#fff!important}
+.cg-contact-route-grid{grid-template-columns:repeat(4,1fr)}
+.cg-contact-route-grid a{color:inherit;text-decoration:none;transition:transform .2s ease,border-color .2s ease}
+.cg-contact-route-grid a:hover{transform:translateY(-4px);border-color:#c9aa68}
+.cg-contact-route-grid img{width:100%;height:210px;object-fit:cover;display:block}
+.cg-contact-route-grid a>div{padding:18px}
+.cg-contact-route-grid h3{margin:7px 0 11px;font-size:18px}
+.cg-contact-route-grid span{font-size:9px;font-weight:850;color:#8b6725}
+
+.cg-rfq-next{background:#fff!important}
+.cg-rfq-next-grid{grid-template-columns:repeat(4,1fr)}
+.cg-rfq-next-grid article{position:relative}
+.cg-rfq-next-grid article>span{position:absolute;z-index:2;top:12px;left:12px;display:grid;place-items:center;width:31px;height:31px;background:rgba(7,27,49,.92);color:#e8c66f;font-size:9px;font-weight:900}
+.cg-rfq-next-grid img{width:100%;height:190px;object-fit:cover;display:block}
+.cg-rfq-next-grid article>div{padding:18px}
+.cg-rfq-next-grid h3{margin:0 0 7px;font-size:18px}
+
+@media(max-width:980px){
+ .cg-industries-fit-grid,.cg-contact-route-grid,.cg-rfq-next-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+ .cg-industries-fit-grid,.cg-contact-route-grid,.cg-rfq-next-grid{grid-template-columns:1fr}
+}
