@@ -6,7 +6,7 @@
     if(!document.querySelector('link[data-cg-v5]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/site-v5.css?v=6.6.0';
+      link.href='/assets/css/site-v5.css?v=6.6.1';
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }

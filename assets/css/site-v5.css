@@ -862,3 +862,37 @@ body.cg-page-insight-detail .content-hero .eyebrow,
 body.cg-page-insight-detail .insight-hero .eyebrow{color:#efca72!important}
 body.cg-page-insight-detail .insight-hero-grid>img{border:1px solid rgba(255,255,255,.28)!important;border-radius:3px!important;box-shadow:0 24px 64px rgba(0,0,0,.20)!important}
 body.cg-page-insight-detail .insight-aside-card{border-radius:3px!important}
+
+
+/* Engineering Design CTA contrast fix */
+body.cg-v5 .ed5-final-box{
+  color:#fff!important;
+}
+body.cg-v5 .ed5-final h2{
+  color:#ffffff!important;
+  text-shadow:none!important;
+}
+body.cg-v5 .ed5-final p{
+  color:#e3edf5!important;
+}
+body.cg-v5 .ed5-final .subhead{
+  color:#f3c452!important;
+}
+body.cg-v5 .ed5-final .btn.primary{
+  background:#c9962e!important;
+  border-color:#c9962e!important;
+  color:#ffffff!important;
+}
+body.cg-v5 .ed5-final .btn.primary:hover{
+  background:#b68424!important;
+  border-color:#b68424!important;
+}
+body.cg-v5 .ed5-final .btn.outline{
+  background:#ffffff!important;
+  border-color:#ffffff!important;
+  color:#0a3158!important;
+}
+body.cg-v5 .ed5-final .btn.outline:hover{
+  background:#f3f6f8!important;
+  border-color:#f3f6f8!important;
+}
