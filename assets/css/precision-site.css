@@ -385,7 +385,7 @@ body.cg-page-divisions .dv4-hub-hero{
   padding:70px 0!important;
   background:
     linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 47%,rgba(255,255,255,.72) 60%,rgba(255,255,255,.04) 100%),
-    url('/assets/images/hero-engineering-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
   color:var(--ps-ink)!important;
 }
 body.cg-page-divisions .dv4-hub-hero-grid{grid-template-columns:minmax(0,760px)!important;justify-content:start!important}
@@ -455,7 +455,7 @@ body.cg-page-projects .content-hero{
 body.cg-page-insights .content-hero{
   background:
     linear-gradient(90deg,#fff 0%,rgba(255,255,255,.98) 44%,rgba(255,255,255,.75) 61%,rgba(255,255,255,.04) 100%),
-    url('/assets/images/resource-quality-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/quality.webp') center/cover no-repeat!important;
 }
 body.cg-page-industries .content-hero{
   background:
