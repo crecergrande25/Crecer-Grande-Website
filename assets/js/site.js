@@ -3,6 +3,8 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
   function applyV5DesignSystem(){
+    const path=(location.pathname||'/').toLowerCase();
+    const isHome=(path==='/'||path==='/index.html');
     if(!document.querySelector('link[data-cg-v5]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
@@ -10,14 +12,13 @@
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }
-    if(!document.querySelector('link[data-cg-precision]')){
+    if(!isHome && !document.querySelector('link[data-cg-precision]')){
       const precision=document.createElement('link');
       precision.rel='stylesheet';
       precision.href='/assets/css/precision-site.css?v=1.0.0';
       precision.dataset.cgPrecision='1';
       document.head.appendChild(precision);
     }
-    const path=(location.pathname||'/').toLowerCase();
     document.body.classList.add('cg-v5');
     const pageMap={
       '/about.html':'cg-page-about',
@@ -39,7 +40,7 @@
 
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
-  const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a class="brand" href="/" aria-label="Crecer Grande home"><img src="/assets/images/logo.png" data-site-src="logo_url" alt="Crecer Grande" decoding="async" width="740" height="208"></a><button class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" aria-label="Main navigation"><a href="/about.html">About</a><a href="/services.html">Expertise</a><a href="/engineering-desk.html">Approach</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact</a><a class="quote-nav" href="/request-quote.html">Send Requirement</a></nav></div></header>`;
+  const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a class="brand" href="/" aria-label="Crecer Grande home"><img src="/assets/images/logo.png" data-site-src="logo_url" alt="Crecer Grande" decoding="async" width="740" height="208"></a><button class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" aria-label="Main navigation"><div class="nav-group"><button type="button">Solutions</button><div class="mega"><div class="mega-grid"><a href="/divisions/advanced-manufacturing.html"><b>Advanced Manufacturing Services</b><small>3D printing, laser processing, fabrication and machining support</small></a><a href="/divisions/engineering-design.html"><b>Engineering &amp; Design</b><small>CAD, drawings, DFM/DFA and reverse engineering</small></a><a href="/divisions/machine-maintenance.html"><b>Machine Maintenance</b><small>Breakdown, PM and restoration support</small></a><a href="/divisions/automation-solutions.html"><b>Automation Solutions</b><small>PLC, HMI, I/O, sensors and control hardware</small></a><a href="/divisions/quality-management-systems.html"><b>Quality &amp; Management Systems</b><small>QMS, SOPs, RCA/CAPA and audit readiness</small></a><a href="/divisions/inspection-testing.html"><b>Inspection &amp; Testing</b><small>FAI, dimensional / visual verification and follow-up</small></a><a href="/divisions/tender-business-development.html"><b>Tender &amp; Business Development</b><small>GeM, tender review and submission support</small></a><a href="/divisions/business-support-compliance.html"><b>Business Support &amp; Compliance</b><small>Industrial registrations, employer-account and vendor support</small></a></div></div></div><a href="/engineering-desk.html">Engineering Desk</a><a href="/services.html">Services</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/about.html">About</a><a href="/contact.html">Contact</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
 
   const HEADER = `<header class="site-header"><div class="container navrow"><a class="brand" href="/" aria-label="Crecer Grande home"><img src="/assets/images/logo.png" data-site-src="logo_url" alt="Crecer Grande" decoding="async" width="740" height="208"></a><button class="menu-btn" type="button" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav" aria-label="Main navigation"><a href="/about.html">About</a><a href="/services.html">Expertise</a><a href="/engineering-desk.html">Approach</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact</a><a class="quote-nav" href="/request-quote.html">Send Requirement</a></nav></div></header>`;
 
