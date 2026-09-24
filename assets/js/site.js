@@ -55,6 +55,8 @@
   }
 
   const IMAGE_UPGRADES = {
+  "/assets/images/catalog/chiller-spares/temperature-sensor.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/catalog/co2/co2-controller.webp": "/assets/images/prod-automation-v22.webp",
   "/assets/images/am-approved-machined.webp": "/assets/images/manufacturing.webp",
   "/assets/images/am-approved-laser.webp": "/assets/images/laser.webp",
   "/assets/images/am-approved-prototype.webp": "/assets/images/printing.webp",
