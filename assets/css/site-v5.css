@@ -1163,3 +1163,67 @@ body.cg-v5 :is(
   border-color:#ffffff!important;
   color:#0b3158!important;
 }
+
+
+/* Nested dark-card contrast safeguard */
+body.cg-v5 :is(
+  .dv4-hub-card,
+  .elite-flow-visual,
+  .am-material-strip>div,
+  .qms5-readiness-card:nth-child(2),
+  .qms5-readiness-card:nth-child(3),
+  .service-proof div,
+  .content-proof,
+  .ed5-proof div,
+  .mm5-status-grid div
+) :is(h2,h3,h4,b,strong){
+  color:#ffffff!important;
+}
+body.cg-v5 :is(
+  .dv4-hub-card,
+  .elite-flow-visual,
+  .am-material-strip>div,
+  .qms5-readiness-card:nth-child(2),
+  .qms5-readiness-card:nth-child(3),
+  .service-proof div,
+  .content-proof,
+  .ed5-proof div,
+  .mm5-status-grid div
+) :is(p,span,small,li){
+  color:#dce7f1!important;
+}
+body.cg-v5 :is(
+  .dv4-hub-card,
+  .qms5-readiness-card:nth-child(2),
+  .qms5-readiness-card:nth-child(3)
+) :is(.eyebrow,.subhead,small){
+  color:#f3c452!important;
+}
+
+/* White/light cards must always retain dark typography even when nested in a dark section. */
+body.cg-v5 :is(
+  .cg5-capability,
+  .scope-card,
+  .method-step,
+  .input-box,
+  .deliver-card,
+  .svc-feature-card,
+  .svc-mini-card,
+  .resource-card,
+  .case-study-card
+) :is(h2,h3,h4,b,strong){
+  color:#102c4d!important;
+}
+body.cg-v5 :is(
+  .cg5-capability,
+  .scope-card,
+  .method-step,
+  .input-box,
+  .deliver-card,
+  .svc-feature-card,
+  .svc-mini-card,
+  .resource-card,
+  .case-study-card
+) :is(p,span,small,li){
+  color:#5d6f82!important;
+}
