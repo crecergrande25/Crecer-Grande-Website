@@ -20,7 +20,7 @@ body.cg-precision-home .site-header{
   border-bottom:1px solid #eceff1!important;
   box-shadow:none!important;
 }
-body.cg-precision-home .site-header .navrow{
+body.cg-v5.cg-precision-home .site-header .navrow{
   min-height:72px!important;
   max-width:1180px!important;
   margin:auto!important;
@@ -51,7 +51,7 @@ body.cg-precision-home .nav .quote-nav{
   border-radius:3px!important;
 }
 body.cg-precision-home .nav .quote-nav:hover{background:#e94c12!important;color:#fff!important}
-body.cg-precision-home main{
+body.cg-v5.cg-precision-home main{
   width:min(1180px,calc(100% - 48px))!important;
   margin:26px auto 42px!important;
   background:#fff!important;
@@ -357,8 +357,8 @@ body.cg-precision-home .cg-footer-cta{display:none!important}
   body.cg-precision-home .ps-cap-card:nth-child(5){grid-column:span 6}
 }
 @media(max-width:760px){
-  body.cg-precision-home main{width:100%!important;margin:0!important;box-shadow:none!important}
-  body.cg-precision-home .site-header .navrow{padding:0 18px!important}
+  body.cg-v5.cg-precision-home main{width:100%!important;margin:0!important;box-shadow:none!important}
+  body.cg-v5.cg-precision-home .site-header .navrow{padding:0 18px!important}
   body.cg-precision-home .ps-hero-copy,
   body.cg-precision-home .ps-expertise,
   body.cg-precision-home .ps-approach,
@@ -382,11 +382,11 @@ body.cg-precision-home .cg-footer-cta{display:none!important}
 
 /* Homepage refinement v1.1 — stronger image-led composition */
 @media(min-width:981px){
-  body.cg-precision-home .site-header .navrow{
+  body.cg-v5.cg-precision-home .site-header .navrow{
     max-width:1360px!important;
     padding:0 30px!important;
   }
-  body.cg-precision-home main{
+  body.cg-v5.cg-precision-home main{
     width:min(1360px,calc(100% - 72px))!important;
     margin:28px auto 42px!important;
   }
