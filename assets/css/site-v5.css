@@ -184,7 +184,7 @@ body.cg-page-divisions .dv4-hub-system{
   overflow:hidden!important;
   background:
     linear-gradient(180deg,rgba(16,44,77,.05),rgba(16,44,77,.22)),
-    url('/assets/images/hero-engineering-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
   box-shadow:none!important;
 }
 body.cg-page-divisions .dv4-hub-system>:not(.dv4-hub-note){display:none!important}
@@ -224,7 +224,7 @@ body.cg-page-engineering-desk .visual-card-grid{gap:14px!important}
 body.cg-page-engineering-desk .visual-card .media{height:220px!important}
 body.cg-page-engineering-desk .visual-card .media img{width:100%;height:100%;object-fit:cover}
 body.cg-page-engineering-desk .dark-section.tech-bg{
-  background:linear-gradient(90deg,rgba(10,35,61,.97),rgba(17,50,78,.92)),url('/assets/images/resource-quality-v23.webp') center/cover no-repeat!important;
+  background:linear-gradient(90deg,rgba(10,35,61,.97),rgba(17,50,78,.92)),url('/assets/images/quality.webp') center/cover no-repeat!important;
 }
 body.cg-page-engineering-desk .dark-section .section-head h2,
 body.cg-page-engineering-desk .dark-section .section-head p{color:#fff!important}
@@ -361,7 +361,7 @@ body.home-v5 .cg-home-why-section{
   overflow:hidden!important;
   background:
     linear-gradient(90deg,rgba(6,25,45,.96) 0%,rgba(8,31,55,.90) 48%,rgba(10,39,68,.76) 100%),
-    url('/assets/images/hero-engineering-v23.webp') center 46%/cover no-repeat!important;
+    url('/assets/images/hero-engineering.webp') center 46%/cover no-repeat!important;
   color:#fff!important;
 }
 body.home-v5 .cg-home-why-section::before{
@@ -395,7 +395,7 @@ body.cg-page-divisions .dv4-hub-hero{
   padding:76px 0!important;
   background:
     linear-gradient(90deg,rgba(5,23,42,.95) 0%,rgba(8,32,57,.88) 48%,rgba(9,37,65,.58) 76%,rgba(9,37,65,.32) 100%),
-    url('/assets/images/hero-engineering-v23.webp') center 44%/cover no-repeat!important;
+    url('/assets/images/hero-engineering.webp') center 44%/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-divisions .dv4-hub-hero-grid{
@@ -445,7 +445,7 @@ body.cg-page-projects .content-hero{
 body.cg-page-insights .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.74)),
-    url('/assets/images/resource-quality-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/quality.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-industries .content-hero{
@@ -479,7 +479,7 @@ body.cg-page-contact .contact-v27-hero .eyebrow{color:#edc86f!important}
 body.cg-page-rfq .quote-v27-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.70)),
-    url('/assets/images/process-drawing-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/process-drawing.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-rfq .quote-v27-hero h1{color:#fff!important}
@@ -504,7 +504,7 @@ body.cg-page-project-detail .page-hero{
 body.cg-page-insight-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/resource-quality-v23.webp') center/cover no-repeat!important;
+    url('/assets/images/quality.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-service-detail .page-hero h1,
@@ -523,14 +523,14 @@ body.cg-page-insight-detail .page-hero .eyebrow{color:#edc86f!important}
     padding:64px 0!important;
     background:
       linear-gradient(180deg,rgba(5,23,42,.94),rgba(7,30,53,.82)),
-      url('/assets/images/hero-engineering-v23.webp') center/cover no-repeat!important;
+      url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
   }
   body.cg-page-divisions .dv4-hub-copy h1{font-size:44px!important}
   body.cg-page-divisions .dv4-hub-stats{grid-template-columns:1fr!important}
   body.home-v5 .cg-home-why-section{
     background:
       linear-gradient(180deg,rgba(6,25,45,.96),rgba(8,31,55,.86)),
-      url('/assets/images/hero-engineering-v23.webp') center/cover no-repeat!important;
+      url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
   }
 }
 
