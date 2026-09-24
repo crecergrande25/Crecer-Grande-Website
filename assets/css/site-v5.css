@@ -348,17 +348,10 @@ body.cg-page-insight-detail .page-hero p{color:#617286!important}
 
 @media(max-width:850px){
   body.cg-page-about .about-v5-image-grid{grid-template-columns:1fr 1fr}
-  body.cg-page-about .about-v5-image-large{grid-column:1/-1}
-  body.cg-page-product-area .product-detail,body[data-product-slug] .product-detail{grid-template-columns:1fr!important}
-}
+  body.cg-page-about .about-v5-image-large{grid-column:1/-1}}
 @media(max-width:620px){
   body.cg-page-about .about-v5-image-grid{grid-template-columns:1fr}
-  body.cg-page-about .about-v5-image-large{grid-column:auto}
-  body.cg-page-product-area .lpf-hero,
-  body.cg-page-product-area .print3d-hero,
-  body.cg-page-product-area .lz-hero,
-  body.cg-page-product-area .page-hero.tech-bg,body[data-product-slug] .page-hero.tech-bg{background:#fff!important}
-}
+  body.cg-page-about .about-v5-image-large{grid-column:auto}}
 
 /* Task Alpha 0356 correction pass — V5.1 */
 
