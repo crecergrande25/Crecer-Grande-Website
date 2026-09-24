@@ -10,6 +10,13 @@
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }
+    if(!document.querySelector('link[data-cg-pro]')){
+      const pro=document.createElement('link');
+      pro.rel='stylesheet';
+      pro.href='/assets/css/site-pro.css?v=1.0.0';
+      pro.dataset.cgPro='1';
+      document.head.appendChild(pro);
+    }
     const path=(location.pathname||'/').toLowerCase();
     document.body.classList.add('cg-v5');
     const pageMap={
