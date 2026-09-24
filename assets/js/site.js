@@ -5,10 +5,10 @@
   function applyV5DesignSystem(){
     const path=(location.pathname||'/').toLowerCase();
     const isHome=(path==='/'||path==='/index.html');
-    if(!document.querySelector('link[data-cg-v5]')){
+    if(!isHome && !document.querySelector('link[data-cg-v5]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/site-v5.css?v=6.6.2';
+      link.href='/assets/css/site-v5.css?v=6.6.3';
       link.dataset.cgV5='1';
       document.head.appendChild(link);
     }
@@ -19,7 +19,7 @@
       precision.dataset.cgPrecision='1';
       document.head.appendChild(precision);
     }
-    document.body.classList.add('cg-v5');
+    if(!isHome) document.body.classList.add('cg-v5');
     const pageMap={
       '/about.html':'cg-page-about',
       '/services.html':'cg-page-services',
@@ -191,7 +191,7 @@
 
   function syncCommonFooter(){
     const path = location.pathname.toLowerCase();
-    if(path.includes('/admin/')) return;
+    if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
     const oldFooter = $('.cg-footer');
     if(!oldFooter) return;
     const oldCta = $('.cg-footer-cta');
@@ -216,7 +216,7 @@
 
   function syncCommonHeader(){
     const path = location.pathname.toLowerCase();
-    if(path.includes('/admin/')) return;
+    if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
     const oldHeader = $('.site-header');
     if(!oldHeader) return;
     const oldTopbar = $('.topbar');
