@@ -91,7 +91,7 @@ body.home-v5 .nav .admin-nav-top{display:none}
 .cg5-project-card span{display:block;margin-top:3px;color:#778598;font-size:9px;line-height:1.45}
 
 .cg-home-final-cta-box{position:relative;overflow:hidden;background:#0e2b4b;color:#fff}
-.cg-home-final-cta-box::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,31,54,.98),rgba(9,31,54,.85) 46%,rgba(9,31,54,.28)),url('/assets/images/resource-tender-v23.webp') center/cover}
+.cg-home-final-cta-box::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,31,54,.98),rgba(9,31,54,.85) 46%,rgba(9,31,54,.28)),url('/assets/images/tender.webp') center/cover}
 .cg5-cta-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:center;min-height:190px;padding:34px 0}
 .cg-home-final-cta-box .cg5-kicker{color:#d7b266}
 .cg-home-final-cta-box h2{margin:6px 0 8px;color:#fff;font-family:Georgia,'Times New Roman',serif;font-size:44px;font-weight:500;line-height:1.02}
