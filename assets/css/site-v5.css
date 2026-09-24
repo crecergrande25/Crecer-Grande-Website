@@ -896,3 +896,270 @@ body.cg-v5 .ed5-final .btn.outline:hover{
   background:#f3f6f8!important;
   border-color:#f3f6f8!important;
 }
+
+
+/* =========================================================
+   SITE-WIDE DARK SURFACE CONTRAST SAFEGUARD — V6.6.2
+   Keeps shared V5 typography from overriding text on dark
+   photographic heroes, workflow panels and CTA surfaces.
+   ========================================================= */
+body.cg-v5 :is(
+  .cg-home-why-section,
+  .page-hero.tech-bg,
+  .dark-section.tech-bg,
+  .dv4-hub-hero,
+  .service-hero,
+  .print3d-hero,
+  .design-hero,
+  .content-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .elite-hero,
+  .elite-detail-hero,
+  .am-process-section,
+  .am-final-cta-inner,
+  .am2-hero,
+  .am2-final-inner,
+  .am3-hero,
+  .am3-process,
+  .am3-material-panel,
+  .am3-final-inner,
+  .dv4-detail-hero,
+  .dv4-io-dark,
+  .dv4-detail-close-box,
+  .ed5-hero,
+  .ed5-io-dark,
+  .ed5-final-box,
+  .mm5-hero,
+  .mm5-panel-dark,
+  .mm5-final-box,
+  .au5-hero,
+  .au5-process,
+  .au5-io-dark,
+  .au5-final-box,
+  .qms5-hero,
+  .qms5-capa,
+  .qms5-io-dark,
+  .qms5-final-box,
+  .ins5-hero,
+  .ins5-evidence,
+  .ins5-io-dark,
+  .ins5-final-box
+){
+  color:#ffffff!important;
+}
+
+body.cg-v5 :is(
+  .cg-home-why-section,
+  .page-hero.tech-bg,
+  .dark-section.tech-bg,
+  .dv4-hub-hero,
+  .service-hero,
+  .print3d-hero,
+  .design-hero,
+  .content-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .elite-hero,
+  .elite-detail-hero,
+  .am-process-section,
+  .am-final-cta-inner,
+  .am2-hero,
+  .am2-final-inner,
+  .am3-hero,
+  .am3-process,
+  .am3-material-panel,
+  .am3-final-inner,
+  .dv4-detail-hero,
+  .dv4-io-dark,
+  .dv4-detail-close-box,
+  .ed5-hero,
+  .ed5-io-dark,
+  .ed5-final-box,
+  .mm5-hero,
+  .mm5-panel-dark,
+  .mm5-final-box,
+  .au5-hero,
+  .au5-process,
+  .au5-io-dark,
+  .au5-final-box,
+  .qms5-hero,
+  .qms5-capa,
+  .qms5-io-dark,
+  .qms5-final-box,
+  .ins5-hero,
+  .ins5-evidence,
+  .ins5-io-dark,
+  .ins5-final-box
+) :is(h1,h2,h3,h4,h5,h6,strong,b){
+  color:#ffffff!important;
+  text-shadow:none!important;
+}
+
+body.cg-v5 :is(
+  .cg-home-why-section,
+  .page-hero.tech-bg,
+  .dark-section.tech-bg,
+  .dv4-hub-hero,
+  .service-hero,
+  .print3d-hero,
+  .design-hero,
+  .content-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .elite-hero,
+  .elite-detail-hero,
+  .am-process-section,
+  .am-final-cta-inner,
+  .am2-hero,
+  .am2-final-inner,
+  .am3-hero,
+  .am3-process,
+  .am3-material-panel,
+  .am3-final-inner,
+  .dv4-detail-hero,
+  .dv4-io-dark,
+  .dv4-detail-close-box,
+  .ed5-hero,
+  .ed5-io-dark,
+  .ed5-final-box,
+  .mm5-hero,
+  .mm5-panel-dark,
+  .mm5-final-box,
+  .au5-hero,
+  .au5-process,
+  .au5-io-dark,
+  .au5-final-box,
+  .qms5-hero,
+  .qms5-capa,
+  .qms5-io-dark,
+  .qms5-final-box,
+  .ins5-hero,
+  .ins5-evidence,
+  .ins5-io-dark,
+  .ins5-final-box
+) :is(p,li,span){
+  color:#dce7f1!important;
+}
+
+/* Gold labels remain visually distinct on dark surfaces. */
+body.cg-v5 :is(
+  .cg-home-why-section,
+  .page-hero.tech-bg,
+  .dark-section.tech-bg,
+  .dv4-hub-hero,
+  .service-hero,
+  .print3d-hero,
+  .design-hero,
+  .content-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .elite-hero,
+  .elite-detail-hero,
+  .am-process-section,
+  .am-final-cta-inner,
+  .am2-hero,
+  .am2-final-inner,
+  .am3-hero,
+  .am3-process,
+  .am3-material-panel,
+  .am3-final-inner,
+  .dv4-detail-hero,
+  .dv4-io-dark,
+  .dv4-detail-close-box,
+  .ed5-hero,
+  .ed5-io-dark,
+  .ed5-final-box,
+  .mm5-hero,
+  .mm5-panel-dark,
+  .mm5-final-box,
+  .au5-hero,
+  .au5-process,
+  .au5-io-dark,
+  .au5-final-box,
+  .qms5-hero,
+  .qms5-capa,
+  .qms5-io-dark,
+  .qms5-final-box,
+  .ins5-hero,
+  .ins5-evidence,
+  .ins5-io-dark,
+  .ins5-final-box
+) :is(.eyebrow,.subhead,.cg5-kicker,.ed5-hero-note span){
+  color:#f3c452!important;
+}
+
+/* Links placed directly on dark backgrounds. */
+body.cg-v5 :is(
+  .cg-home-why-section,
+  .dark-section.tech-bg,
+  .am-process-section,
+  .am3-process,
+  .qms5-capa,
+  .ins5-evidence
+) a:not(.btn){
+  color:#f3c452!important;
+}
+
+/* Homepage capability cards are light cards on a dark section:
+   force dark readable text inside the card itself. */
+body.home-v5 .cg-home-why-section .cg5-capability{
+  background:rgba(255,255,255,.96)!important;
+}
+body.home-v5 .cg-home-why-section .cg5-capability :is(h3,h4,b,strong){
+  color:#102c4d!important;
+}
+body.home-v5 .cg-home-why-section .cg5-capability :is(p,span){
+  color:#5d6f82!important;
+}
+body.home-v5 .cg-home-why-section .cg5-capability i{
+  color:#a8781d!important;
+}
+
+/* Dark cards nested inside otherwise light sections. */
+body.cg-v5 :is(.dv4-io-dark,.ed5-io-dark,.mm5-panel-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark) :is(h2,h3,h4,b,strong){
+  color:#ffffff!important;
+}
+body.cg-v5 :is(.dv4-io-dark,.ed5-io-dark,.mm5-panel-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark) :is(p,li,span){
+  color:#dce7f1!important;
+}
+
+/* Image-overlay captions always need high contrast. */
+body.cg-v5 :is(
+  .cg-service-gallery figcaption,
+  .cg-case-visual-grid figcaption,
+  .cg-division-visual-grid figcaption,
+  .ed5-showcase-grid figcaption,
+  .mm5-showcase-grid figcaption,
+  .am3-gallery-card figcaption
+) :is(b,strong,h3,h4){
+  color:#ffffff!important;
+}
+body.cg-v5 :is(
+  .cg-service-gallery figcaption,
+  .cg-case-visual-grid figcaption,
+  .cg-division-visual-grid figcaption,
+  .ed5-showcase-grid figcaption,
+  .mm5-showcase-grid figcaption,
+  .am3-gallery-card figcaption
+) :is(span,p){
+  color:#dce7f1!important;
+}
+
+/* Buttons keep their own intentional contrast. */
+body.cg-v5 :is(
+  .ed5-final-box,.mm5-final-box,.au5-final-box,
+  .qms5-final-box,.ins5-final-box,.dv4-detail-close-box,
+  .am-final-cta-inner,.am2-final-inner,.am3-final-inner
+) .btn.primary{
+  color:#ffffff!important;
+}
+body.cg-v5 :is(
+  .ed5-final-box,.mm5-final-box,.au5-final-box,
+  .qms5-final-box,.ins5-final-box,.dv4-detail-close-box,
+  .am-final-cta-inner,.am2-final-inner,.am3-final-inner
+) .btn.outline{
+  background:#ffffff!important;
+  border-color:#ffffff!important;
+  color:#0b3158!important;
+}
