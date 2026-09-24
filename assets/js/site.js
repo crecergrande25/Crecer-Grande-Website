@@ -54,40 +54,134 @@
     document.head.appendChild(style);
   }
 
+  const IMAGE_UPGRADES = {
+  "/assets/images/am-approved-machined.webp": "/assets/images/manufacturing.webp",
+  "/assets/images/am-approved-laser.webp": "/assets/images/laser.webp",
+  "/assets/images/am-approved-prototype.webp": "/assets/images/printing.webp",
+  "/assets/images/am-approved-bracket.webp": "/assets/images/manufacturing.webp",
+  "/assets/images/am-approved-enclosure.webp": "/assets/images/manufacturing.webp",
+  "/assets/images/am-approved-fixture.webp": "/assets/images/design.webp",
+  "/assets/images/am-approved-shaft.webp": "/assets/images/project-reverse.webp",
+  "/assets/images/am-approved-spares.webp": "/assets/images/sourcing.webp",
+  "/assets/images/am-approved-sparekit.webp": "/assets/images/sourcing.webp",
+  "/assets/images/cg-advanced-manufacturing.webp": "/assets/images/div-manufacturing.webp",
+  "/assets/images/advanced-manufacturing-scope-unique.webp": "/assets/images/manufacturing.webp",
+  "/assets/images/home-v5/advanced-manufacturing.webp": "/assets/images/div-manufacturing.webp",
+  "/assets/images/home-v5/engineering-design.webp": "/assets/images/design.webp",
+  "/assets/images/home-v5/industrial-automation.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/home-v5/machine-maintenance.webp": "/assets/images/maintenance.webp",
+  "/assets/images/div-manufacturing-v23.webp": "/assets/images/div-manufacturing.webp",
+  "/assets/images/div-engineering-v23.webp": "/assets/images/design.webp",
+  "/assets/images/div-maintenance-v23.webp": "/assets/images/div-maintenance.webp",
+  "/assets/images/div-automation-v23.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/div-inspection-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/div-inspection-v23b.webp": "/assets/images/quality.webp",
+  "/assets/images/div-quality-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/div-quality-v23b.webp": "/assets/images/quality.webp",
+  "/assets/images/div-tender-v23.webp": "/assets/images/tender.webp",
+  "/assets/images/div-tender-v23b.webp": "/assets/images/tender.webp",
+  "/assets/images/resource-engineering-v23.webp": "/assets/images/design.webp",
+  "/assets/images/resource-maintenance-v23.webp": "/assets/images/maintenance.webp",
+  "/assets/images/resource-manufacturing-v23.webp": "/assets/images/manufacturing.webp",
+  "/assets/images/resource-automation-v23.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/resource-inspection-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/resource-quality-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/resource-tender-v23.webp": "/assets/images/tender.webp",
+  "/assets/images/resource-products-v23.webp": "/assets/images/sourcing.webp",
+  "/assets/images/process-drawing-v23.webp": "/assets/images/process-drawing.webp",
+  "/assets/images/process-cad-v23.webp": "/assets/images/design.webp",
+  "/assets/images/process-cad-v23b.webp": "/assets/images/design.webp",
+  "/assets/images/process-maintain-v23.webp": "/assets/images/process-maintain.webp",
+  "/assets/images/process-make-v23.webp": "/assets/images/process-make.webp",
+  "/assets/images/process-make-v23b.webp": "/assets/images/process-make.webp",
+  "/assets/images/process-supply-v23.webp": "/assets/images/sourcing.webp",
+  "/assets/images/process-validate-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/process-validate-v23b.webp": "/assets/images/quality.webp",
+  "/assets/images/process-verify-v23.webp": "/assets/images/quality.webp",
+  "/assets/images/process-verify-v23b.webp": "/assets/images/quality.webp",
+  "/assets/images/process-followup-v23.webp": "/assets/images/hero-engineering.webp",
+  "/assets/images/project-chiller-v23.webp": "/assets/images/chiller-components.webp",
+  "/assets/images/project-chiller-v23b.webp": "/assets/images/chiller-components.webp",
+  "/assets/images/project-co2-v22.webp": "/assets/images/laser-components.webp",
+  "/assets/images/project-co2-v23.webp": "/assets/images/laser-components.webp",
+  "/assets/images/project-co2-v23b.webp": "/assets/images/laser-components.webp",
+  "/assets/images/project-keychain-v23.webp": "/assets/images/laser.webp",
+  "/assets/images/project-qr-v23.webp": "/assets/images/laser.webp",
+  "/assets/images/project-qr-v23b.webp": "/assets/images/laser.webp",
+  "/assets/images/prod-3d-v23.webp": "/assets/images/printing.webp",
+  "/assets/images/prod-bending-v23.webp": "/assets/images/prod-bending.webp",
+  "/assets/images/prod-chiller-v23.webp": "/assets/images/chiller-components.webp",
+  "/assets/images/prod-cnc-v23.webp": "/assets/images/maintenance.webp",
+  "/assets/images/prod-cnc-v23b.webp": "/assets/images/maintenance.webp",
+  "/assets/images/prod-custom-spares-v23.webp": "/assets/images/sourcing.webp",
+  "/assets/images/prod-laser-v23.webp": "/assets/images/laser-components.webp",
+  "/assets/images/prod-plc-v23.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/prod-plc-v23b.webp": "/assets/images/prod-automation-v22.webp",
+  "/assets/images/prod-pump-v23.webp": "/assets/images/chiller-components.webp",
+  "/assets/images/prod-pump-v23b.webp": "/assets/images/chiller-components.webp",
+  "/assets/images/prod-spares-v23.webp": "/assets/images/sourcing.webp",
+  "/assets/images/service-3d-printing.webp": "/assets/images/printing.webp",
+  "/assets/images/part6-tooling-hero.webp": "/assets/images/prod-bending.webp",
+  "/assets/images/laser-consumables/generated-protective-windows.webp": "/assets/images/laser-components.webp"
+};
+
+  function upgradeRepositoryImages(){
+    const swap=(img)=>{
+      const raw=img.getAttribute('src');
+      if(!raw) return;
+      let path=raw;
+      try{ path=new URL(raw,location.origin).pathname; }catch(_){}
+      const next=IMAGE_UPGRADES[path];
+      if(next && raw!==next){
+        img.removeAttribute('srcset');
+        img.setAttribute('src',next);
+      }
+    };
+    document.querySelectorAll('img[src]').forEach(swap);
+    const observer=new MutationObserver((mutations)=>{
+      mutations.forEach(m=>m.addedNodes.forEach(n=>{
+        if(n.nodeType!==1) return;
+        if(n.matches?.('img[src]')) swap(n);
+        n.querySelectorAll?.('img[src]').forEach(swap);
+      }));
+    });
+    observer.observe(document.documentElement,{childList:true,subtree:true});
+  }
+
   function applyServiceFirstArt(){
     const path=(location.pathname||'/').toLowerCase();
     const art={
       '/3d-printing-kolkata.html':'/assets/images/printing.webp',
       '/mechanical-design-services-kolkata.html':'/assets/images/design.webp',
       '/industrial-machine-maintenance-kolkata.html':'/assets/images/maintenance.webp',
-      '/industrial-automation-kolkata.html':'/assets/images/div-automation-v23.webp',
-      '/industrial-inspection-qa-kolkata.html':'/assets/images/div-inspection-v23b.webp',
-      '/iso-9001-consultant-kolkata.html':'/assets/images/div-quality-v23b.webp',
+      '/industrial-automation-kolkata.html':'/assets/images/prod-automation-v22.webp',
+      '/industrial-inspection-qa-kolkata.html':'/assets/images/quality.webp',
+      '/iso-9001-consultant-kolkata.html':'/assets/images/quality.webp',
       '/laser-cutting-kolkata.html':'/assets/images/service-laser-cutting.webp',
       '/laser-marking-kolkata.html':'/assets/images/service-laser-marking.webp',
       '/reverse-engineering-kolkata.html':'/assets/images/project-reverse.webp',
       '/sheet-metal-bending-kolkata.html':'/assets/images/prod-bending.webp',
-      '/gem-tender-support-kolkata.html':'/assets/images/div-tender-v23b.webp',
+      '/gem-tender-support-kolkata.html':'/assets/images/tender.webp',
       '/business-support-compliance-kolkata.html':'/assets/images/tender.webp',
       '/custom-machine-spares.html':'/assets/images/service-machine-spares.webp',
       '/design-job-work.html':'/assets/images/process-drawing.webp',
       '/divisions/advanced-manufacturing.html':'/assets/images/div-manufacturing.webp',
       '/divisions/engineering-design.html':'/assets/images/div-engineering-v23.webp',
       '/divisions/machine-maintenance.html':'/assets/images/div-maintenance.webp',
-      '/divisions/automation-solutions.html':'/assets/images/div-automation-v23.webp',
-      '/divisions/inspection-testing.html':'/assets/images/div-inspection-v23b.webp',
-      '/divisions/quality-management-systems.html':'/assets/images/div-quality-v23b.webp',
-      '/divisions/tender-business-development.html':'/assets/images/div-tender-v23b.webp',
+      '/divisions/automation-solutions.html':'/assets/images/prod-automation-v22.webp',
+      '/divisions/inspection-testing.html':'/assets/images/quality.webp',
+      '/divisions/quality-management-systems.html':'/assets/images/quality.webp',
+      '/divisions/tender-business-development.html':'/assets/images/tender.webp',
       '/divisions/business-support-compliance.html':'/assets/images/tender.webp'
     };
     const insightArt=path.includes('/insights/3d-printing')?'/assets/images/service-3d-printing.webp':
       path.includes('/insights/chiller')?'/assets/images/chiller-components.webp':
       path.includes('/insights/cnc-vmc')?'/assets/images/process-make-v23.webp':
-      path.includes('/insights/gdt')||path.includes('/insights/metric-tap')||path.includes('/insights/surface-roughness')||path.includes('/insights/vernier')?'/assets/images/resource-inspection-v23.webp':
+      path.includes('/insights/gdt')||path.includes('/insights/metric-tap')||path.includes('/insights/surface-roughness')||path.includes('/insights/vernier')?'/assets/images/quality.webp':
       path.includes('/insights/holes-near')||path.includes('/insights/sheet-metal')||path.includes('/insights/stainless-steel')?'/assets/images/div-manufacturing-v23.webp':
       path.includes('/insights/identify-laser')||path.includes('/insights/laser-cutting')||path.includes('/insights/laser-nozzle')?'/assets/images/laser-components.webp':
-      path.includes('/insights/machine-breakdown')||path.includes('/insights/preventive-maintenance')?'/assets/images/resource-maintenance-v23.webp':
-      path.includes('/insights/ncr-rca-capa')?'/assets/images/resource-quality-v23.webp':null;
+      path.includes('/insights/machine-breakdown')||path.includes('/insights/preventive-maintenance')?'/assets/images/maintenance.webp':
+      path.includes('/insights/ncr-rca-capa')?'/assets/images/quality.webp':null;
     const selectedArt=art[path]||insightArt;
     if(selectedArt) document.body.style.setProperty('--cg-page-art',`url("${selectedArt}")`);
   }
@@ -148,6 +242,7 @@
   function boot(){
     applyV5DesignSystem();
     applyServiceFirstArt();
+    upgradeRepositoryImages();
     syncCommonHeader();
     syncCommonFooter();
     normalizeFooter();
