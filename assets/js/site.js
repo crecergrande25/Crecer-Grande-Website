@@ -3,9 +3,41 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
   function applyV5DesignSystem(){
+    const path=(location.pathname||'/').toLowerCase();
+    const isHome=(path==='/'||path==='/index.html');
+    const isAdmin=path.includes('/admin/');
+
     document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
     document.body.classList.remove('cg-v5');
-    [...document.body.classList].filter(x=>x.startsWith('cg-page-')).forEach(x=>document.body.classList.remove(x));
+    [...document.body.classList].filter(x=>x.startsWith('cg-page-')||x.startsWith('cg-body-')).forEach(x=>document.body.classList.remove(x));
+
+    if(isHome||isAdmin) return;
+
+    if(!document.querySelector('link[data-cg-body-polish]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='/assets/css/body-polish.css?v=1.0.0';
+      link.dataset.cgBodyPolish='1';
+      document.head.appendChild(link);
+    }
+
+    document.body.classList.add('cg-body-polish');
+    const pageMap={
+      '/about.html':'cg-body-about',
+      '/services.html':'cg-body-services',
+      '/divisions.html':'cg-body-divisions',
+      '/engineering-desk.html':'cg-body-engineering',
+      '/projects.html':'cg-body-projects',
+      '/insights.html':'cg-body-insights',
+      '/industries.html':'cg-body-industries',
+      '/contact.html':'cg-body-contact',
+      '/request-quote.html':'cg-body-rfq'
+    };
+    if(pageMap[path]) document.body.classList.add(pageMap[path]);
+    if(path.startsWith('/divisions/')) document.body.classList.add('cg-body-division-detail');
+    if(path.startsWith('/projects/')) document.body.classList.add('cg-body-project-detail');
+    if(path.startsWith('/insights/')) document.body.classList.add('cg-body-insight-detail');
+    if(path.endsWith('-kolkata.html')||path==='/custom-machine-spares.html'||path==='/design-job-work.html') document.body.classList.add('cg-body-service-detail');
   }
 
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
@@ -206,6 +238,10 @@
   function applyServiceFirstArt(){
     const path=(location.pathname||'/').toLowerCase();
     const art={
+      '/engineering-desk.html':'/assets/images/design.webp',
+      '/projects.html':'/assets/images/project-reverse.webp',
+      '/insights.html':'/assets/images/process-drawing.webp',
+      '/industries.html':'/assets/images/manufacturing.webp',
       '/3d-printing-kolkata.html':'/assets/images/printing.webp',
       '/mechanical-design-services-kolkata.html':'/assets/images/design.webp',
       '/industrial-machine-maintenance-kolkata.html':'/assets/images/maintenance.webp',
@@ -221,19 +257,23 @@
       '/custom-machine-spares.html':'/assets/images/service-machine-spares.webp',
       '/design-job-work.html':'/assets/images/process-drawing.webp',
       '/divisions/advanced-manufacturing.html':'/assets/images/div-manufacturing.webp',
-      '/divisions/engineering-design.html':'/assets/images/div-engineering-v23.webp',
+      '/divisions/engineering-design.html':'/assets/images/design.webp',
       '/divisions/machine-maintenance.html':'/assets/images/div-maintenance.webp',
       '/divisions/automation-solutions.html':'/assets/images/prod-automation-v22.webp',
       '/divisions/inspection-testing.html':'/assets/images/quality.webp',
       '/divisions/quality-management-systems.html':'/assets/images/quality.webp',
       '/divisions/tender-business-development.html':'/assets/images/tender.webp',
-      '/divisions/business-support-compliance.html':'/assets/images/tender.webp'
+      '/divisions/business-support-compliance.html':'/assets/images/sourcing.webp',
+      '/projects/laser-machine-rca.html':'/assets/images/laser-components.webp',
+      '/projects/laser-chiller-pump-replacement.html':'/assets/images/chiller-components.webp',
+      '/projects/fit-correction-replacement-component.html':'/assets/images/project-reverse.webp',
+      '/projects/3d-print-fai-batch.html':'/assets/images/printing.webp'
     };
-    const insightArt=path.includes('/insights/3d-printing')?'/assets/images/service-3d-printing.webp':
+    const insightArt=path.includes('/insights/3d-printing')?'/assets/images/printing.webp':
       path.includes('/insights/chiller')?'/assets/images/chiller-components.webp':
-      path.includes('/insights/cnc-vmc')?'/assets/images/process-make-v23.webp':
+      path.includes('/insights/cnc-vmc')?'/assets/images/manufacturing.webp':
       path.includes('/insights/gdt')||path.includes('/insights/metric-tap')||path.includes('/insights/surface-roughness')||path.includes('/insights/vernier')?'/assets/images/quality.webp':
-      path.includes('/insights/holes-near')||path.includes('/insights/sheet-metal')||path.includes('/insights/stainless-steel')?'/assets/images/div-manufacturing-v23.webp':
+      path.includes('/insights/holes-near')||path.includes('/insights/sheet-metal')||path.includes('/insights/stainless-steel')?'/assets/images/div-manufacturing.webp':
       path.includes('/insights/identify-laser')||path.includes('/insights/laser-cutting')||path.includes('/insights/laser-nozzle')?'/assets/images/laser-components.webp':
       path.includes('/insights/machine-breakdown')||path.includes('/insights/preventive-maintenance')?'/assets/images/maintenance.webp':
       path.includes('/insights/ncr-rca-capa')?'/assets/images/quality.webp':null;
