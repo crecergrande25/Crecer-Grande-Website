@@ -186,7 +186,7 @@
   "/assets/images/process-validate-v23b.webp": "/assets/images/quality.webp",
   "/assets/images/process-verify-v23.webp": "/assets/images/quality.webp",
   "/assets/images/process-verify-v23b.webp": "/assets/images/quality.webp",
-  "/assets/images/process-followup-v23.webp": "/assets/images/hero-engineering.webp",
+  "/assets/images/process-followup-v23.webp": "/assets/images/process-drawing.webp",
   "/assets/images/project-chiller-v23.webp": "/assets/images/chiller-components.webp",
   "/assets/images/project-chiller-v23b.webp": "/assets/images/chiller-components.webp",
   "/assets/images/project-co2-v22.webp": "/assets/images/laser-components.webp",
