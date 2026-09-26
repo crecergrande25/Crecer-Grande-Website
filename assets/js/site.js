@@ -3,7 +3,7 @@
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
   function applyV5DesignSystem(){
-    document.querySelectorAll('link[href*="/assets/css/precision-site.css"]').forEach(x=>x.remove());
+    document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
     document.body.classList.remove('cg-v5');
     [...document.body.classList].filter(x=>x.startsWith('cg-page-')).forEach(x=>document.body.classList.remove(x));
   }
