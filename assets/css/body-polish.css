@@ -127,8 +127,8 @@ body.cg-body-polish main :is(
   .about-premium-hero,.svc-premium-hero,.dv4-hub-hero,.contact-v27-hero,
   .quote-v27-hero,.service-hero,.dv4-detail-hero
 ){
-  padding:68px 0;
-  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f6f2e9 56%,#f6f2e9 100%);
+  padding:68px 0!important;
+  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f6f2e9 56%,#f6f2e9 100%)!important;
 }
 body.cg-body-polish main :is(
   .about-premium-hero,.svc-premium-hero,.dv4-hub-hero,.contact-v27-hero,
@@ -163,11 +163,11 @@ body.cg-body-polish main :is(
 
 /* Heroes that do not have a built-in visual column use the assigned page art. */
 body.cg-body-polish main :is(.page-hero,.content-hero){
-  min-height:430px;
-  padding:72px 0;
+  min-height:430px!important;
+  padding:72px 0!important;
   background:
     linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.98) 50%,rgba(255,255,255,.20) 72%,rgba(255,255,255,.04) 100%),
-    var(--cg-page-art,linear-gradient(135deg,#eef1f4,#d8dee5)) center/cover no-repeat;
+    var(--cg-page-art,linear-gradient(135deg,#eef1f4,#d8dee5)) center/cover no-repeat!important;
   color:var(--cg-ink);
 }
 body.cg-body-polish main :is(.page-hero,.content-hero) .container{
@@ -178,8 +178,8 @@ body.cg-body-polish main :is(.page-hero,.content-hero) h1{
   max-width:760px;
   margin:8px 0 16px;
   color:var(--cg-ink);
-  font-size:clamp(46px,5vw,70px);
-  line-height:1;
+  font-size:clamp(46px,5vw,70px)!important;
+  line-height:1!important;
 }
 body.cg-body-polish main :is(.page-hero,.content-hero) p{
   max-width:690px;
@@ -328,6 +328,9 @@ body.cg-body-polish.cg-body-about main .about-next-box{
 }
 
 /* Services */
+body.cg-body-polish.cg-body-services main .svc-premium-hero-grid{
+  grid-template-columns:.95fr 1.05fr!important;
+}
 body.cg-body-polish.cg-body-services main .svc-feature-grid{
   grid-template-columns:repeat(3,minmax(0,1fr))!important;
   gap:16px!important;
@@ -384,10 +387,21 @@ body.cg-body-polish.cg-body-divisions main .dv4-router{
 body.cg-body-polish.cg-body-contact main .contact-v27-hero,
 body.cg-body-polish.cg-body-rfq main .quote-v27-hero{
   color:var(--cg-ink)!important;
+  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f6f2e9 56%,#f6f2e9 100%)!important;
 }
 body.cg-body-polish.cg-body-contact main .contact-v27-hero :is(h1,p),
 body.cg-body-polish.cg-body-rfq main .quote-v27-hero :is(h1,p){
   color:inherit!important;
+}
+body.cg-body-polish.cg-body-contact main .contact-v27-hero h1,
+body.cg-body-polish.cg-body-rfq main .quote-v27-hero h1{
+  font-size:clamp(48px,5vw,72px)!important;
+  line-height:.98!important;
+}
+body.cg-body-polish.cg-body-contact main .contact-v27-hero p,
+body.cg-body-polish.cg-body-rfq main .quote-v27-hero p{
+  color:#53667b!important;
+  font-size:15px!important;
 }
 body.cg-body-polish.cg-body-contact main .contact-v27-wrap,
 body.cg-body-polish.cg-body-rfq main .quote-v27-shell{
@@ -505,4 +519,55 @@ body.cg-body-polish main :is(.scope-card,.method-step,.deliver-card,.input-box,.
   body.cg-body-polish.cg-body-services main .svc-anchor-bar{top:70px}
   body.cg-body-polish.cg-body-insight-detail main .toc,
   body.cg-body-polish.cg-body-project-detail main .case-aside .panel{position:static}
+}
+
+
+/* Cascade locks against legacy V4 !important declarations */
+body.cg-body-polish.cv4-services main .svc-premium-hero,
+body.cg-body-polish.cv4-engineering-desk main .page-hero,
+body.cg-body-polish.cv4-projects main .content-hero,
+body.cg-body-polish.cv4-industries main .content-hero,
+body.cg-body-polish.cv4-insights main .content-hero{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.98) 50%,rgba(255,255,255,.20) 72%,rgba(255,255,255,.04) 100%),
+    var(--cg-page-art,linear-gradient(135deg,#eef1f4,#d8dee5)) center/cover no-repeat!important;
+  color:var(--cg-ink)!important;
+}
+body.cg-body-polish.cv4-services main .svc-premium-hero{
+  background:linear-gradient(90deg,#fff 0%,#fff 56%,#f6f2e9 56%,#f6f2e9 100%)!important;
+  padding:68px 0!important;
+}
+body.cg-body-polish.cv4-services main .svc-premium-hero h1,
+body.cg-body-polish.cv4-engineering-desk main .page-hero h1,
+body.cg-body-polish.cv4-projects main .content-hero h1,
+body.cg-body-polish.cv4-industries main .content-hero h1,
+body.cg-body-polish.cv4-insights main .content-hero h1{
+  color:var(--cg-ink)!important;
+  font-size:clamp(46px,5vw,70px)!important;
+  line-height:1!important;
+  letter-spacing:-.035em!important;
+}
+body.cg-body-polish.cv4-services main .svc-premium-hero p,
+body.cg-body-polish.cv4-engineering-desk main .page-hero p,
+body.cg-body-polish.cv4-projects main .content-hero p,
+body.cg-body-polish.cv4-industries main .content-hero p,
+body.cg-body-polish.cv4-insights main .content-hero p{
+  color:#53667b!important;
+}
+body.cg-body-polish.cv4-services main .svc-hero-visual{
+  border-radius:4px!important;
+}
+body.cg-body-polish.cv4-services main .svc-hero-visual img{
+  height:500px!important;
+}
+body.cg-body-polish.cv4-engineering-desk main .visual-card{
+  border-radius:3px!important;
+}
+body.cg-body-polish.cv4-engineering-desk main .dark-section{
+  background:var(--cg-dark)!important;
+}
+body.cg-body-polish.cv4-projects main .case-study-card,
+body.cg-body-polish.cv4-insights main .resource-card,
+body.cg-body-polish.cv4-industries main .industry-card-v26{
+  border-radius:3px!important;
 }
