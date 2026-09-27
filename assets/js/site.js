@@ -45,6 +45,17 @@
     if(path.endsWith('-kolkata.html')||path==='/custom-machine-spares.html'||path==='/design-job-work.html') document.body.classList.add('cg-body-service-detail');
   }
 
+  function applyContrastFix(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/')) return;
+    if(document.querySelector('link[data-cg-contrast-fix]')) return;
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='/assets/css/contrast-fix.css?v=1.0.0';
+    link.dataset.cgContrastFix='1';
+    document.head.appendChild(link);
+  }
+
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
   const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><img alt="Crecer Grande" data-site-src="logo_url" decoding="async" src="/assets/images/logo.png"/></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Capabilities</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact</a><a class="quote-nav" href="/request-quote.html">Get in Touch →</a></nav></div></header>`;
@@ -344,6 +355,7 @@
 
   function boot(){
     applyV5DesignSystem();
+    applyContrastFix();
     applyServiceFirstArt();
     upgradeRepositoryImages();
     syncCommonHeader();
