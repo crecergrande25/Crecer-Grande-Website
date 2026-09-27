@@ -6,7 +6,7 @@
     const path=(location.pathname||'/').toLowerCase();
     const isHome=(path==='/'||path==='/index.html');
     const isAdmin=path.includes('/admin/');
-    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html']);
+    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/request-quote.html']);
     const isPremium=premiumPages.has(path);
 
     document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
@@ -219,7 +219,7 @@
 
   function upgradeRepositoryImages(){
     const path=(location.pathname||'/').toLowerCase();
-    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html']);
+    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/request-quote.html']);
     if(premiumPages.has(path)) return;
     const swap=(img)=>{
       const raw=img.getAttribute('src');
