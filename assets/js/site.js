@@ -6,12 +6,17 @@
     const path=(location.pathname||'/').toLowerCase();
     const isHome=(path==='/'||path==='/index.html');
     const isAdmin=path.includes('/admin/');
+    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html']);
+    const isPremium=premiumPages.has(path);
 
     document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
     document.body.classList.remove('cg-v5');
     [...document.body.classList].filter(x=>x.startsWith('cg-page-')||x.startsWith('cg-body-')).forEach(x=>document.body.classList.remove(x));
 
-    if(isHome||isAdmin) return;
+    if(isPremium||isAdmin){
+      document.querySelectorAll('link[data-cg-body-polish]').forEach(x=>x.remove());
+      return;
+    }
 
     if(!document.querySelector('link[data-cg-body-polish]')){
       const link=document.createElement('link');
@@ -213,6 +218,9 @@
 };
 
   function upgradeRepositoryImages(){
+    const path=(location.pathname||'/').toLowerCase();
+    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html']);
+    if(premiumPages.has(path)) return;
     const swap=(img)=>{
       const raw=img.getAttribute('src');
       if(!raw) return;
