@@ -300,6 +300,32 @@
     if(selectedArt) document.body.style.setProperty('--cg-page-art',`url("${selectedArt}")`);
   }
 
+  function removeDuplicateTerminalCta(){
+    const sharedCta=document.querySelector('.cg-footer-cta');
+    const main=document.querySelector('main');
+    if(!sharedCta||!main) return;
+    let last=main.lastElementChild;
+    if(!last) return;
+
+    const isTerminalCta=(el)=>{
+      const cls=String(el.className||'');
+      const classLooksLikeCta=/(^|[\s_-])(cta|final|close|band)([\s_-]|$)/i.test(cls) ||
+        /(pr-final|pr-band|ed-home-cta|am-final|am2-final|am3-final|dv4-detail-close|elite-final|service-final)/i.test(cls);
+      if(!classLooksLikeCta) return false;
+      if(el.querySelector('form')) return false;
+      const links=[...el.querySelectorAll('a[href]')];
+      const hasRequirementLink=links.some(a=>/request-quote|contact\.html|engineering-desk/i.test(a.getAttribute('href')||''));
+      const text=(el.textContent||'').replace(/\s+/g,' ').trim();
+      return hasRequirementLink && text.length<900;
+    };
+
+    while(last && isTerminalCta(last)){
+      const prev=last.previousElementSibling;
+      last.remove();
+      last=prev;
+    }
+  }
+
   function syncCommonFooter(){
     const path = location.pathname.toLowerCase();
     if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
@@ -360,6 +386,7 @@
     upgradeRepositoryImages();
     syncCommonHeader();
     syncCommonFooter();
+    removeDuplicateTerminalCta();
     normalizeFooter();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
