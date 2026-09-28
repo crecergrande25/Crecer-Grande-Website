@@ -272,3 +272,298 @@
   .cg-pr .form-grid .wide{grid-column:auto}
   .cg-pr .pr-panel{padding:22px}
 }
+
+
+/* =========================================================
+   Crecer Grande Premium Repair v1.1
+   Final Beta 0714 completion pass
+   - clearer hierarchy and readable copy
+   - stronger page identity
+   - less repetitive card rhythm
+   - contact/RFQ visual alignment
+   - desktop and mobile polish
+   ========================================================= */
+
+.cg-pr{
+  --pr-navy-deep:#071a36;
+  --pr-navy:#0e2a47;
+  --pr-blue:#214c73;
+  --pr-gold:#b98626;
+  --pr-gold-bright:#e7ad2f;
+  --pr-paper:#fbfaf7;
+  --pr-ivory:#f4f0e7;
+  --pr-line:#ddd6c8;
+  --pr-text:#354b61;
+  --pr-muted:#657487;
+}
+.cg-pr p,.cg-pr li{color:var(--pr-text)}
+.cg-pr .pr-section{padding:92px 0}
+.cg-pr .pr-section-head{margin-bottom:42px}
+.cg-pr .pr-section-head>p{font-size:16px;line-height:1.8}
+.cg-pr .pr-eyebrow{letter-spacing:.16em}
+.cg-pr h1{max-width:13ch}
+.cg-pr h2{max-width:18ch}
+.cg-pr .pr-hero{
+  position:relative;
+  padding:74px 0 80px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(185,134,38,.07),transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fbfaf7 100%);
+}
+.cg-pr .pr-hero:after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--pr-gold),transparent);
+  opacity:.45;
+}
+.cg-pr .pr-hero-grid{grid-template-columns:minmax(0,1.06fr) minmax(440px,.94fr);gap:70px}
+.cg-pr .pr-hero-copy{position:relative;z-index:1}
+.cg-pr .pr-hero-copy:before{
+  content:"";
+  display:block;
+  width:54px;height:4px;
+  margin-bottom:22px;
+  background:linear-gradient(90deg,var(--pr-gold-bright),var(--pr-gold));
+}
+.cg-pr .pr-hero-copy .pr-eyebrow{margin-bottom:16px}
+.cg-pr .pr-hero-media{
+  min-height:540px;
+  border:0;
+  border-radius:2px;
+  box-shadow:0 28px 70px rgba(7,26,54,.15);
+}
+.cg-pr .pr-hero-media img{
+  min-height:540px;
+  filter:saturate(.96) contrast(1.04);
+}
+.cg-pr .pr-hero-note{
+  left:22px;right:22px;bottom:22px;
+  padding:18px 20px;
+  background:linear-gradient(135deg,rgba(7,26,54,.97),rgba(14,42,71,.92));
+  border-left:4px solid var(--pr-gold-bright);
+}
+.cg-pr .pr-card{
+  border-radius:2px;
+  border-color:#e2ddd3;
+}
+.cg-pr .pr-card-media img{
+  transition:transform .45s ease,filter .35s ease;
+  filter:saturate(.94) contrast(1.02);
+}
+.cg-pr a.pr-card:hover .pr-card-media img{transform:scale(1.025);filter:saturate(1.03) contrast(1.04)}
+.cg-pr .pr-card-body{padding:24px}
+.cg-pr .pr-card-body p{font-size:14.5px;line-height:1.66}
+.cg-pr .pr-family,.cg-pr .pr-article,.cg-pr .pr-panel,.cg-pr .pr-contact-method,.cg-pr .pr-route,.cg-pr .pr-doc{
+  border-color:#e1dbcf;
+  box-shadow:0 12px 34px rgba(7,26,54,.045);
+}
+.cg-pr .pr-step{background:#fff}
+.cg-pr .pr-step-num{color:var(--pr-gold)}
+.cg-pr .pr-band,.cg-pr .pr-final{
+  background:
+    radial-gradient(circle at 90% 20%,rgba(231,173,47,.10),transparent 28%),
+    linear-gradient(135deg,#071a36,#0c2a4b);
+}
+.cg-pr .pr-btn.pr-primary{background:var(--pr-navy-deep);border-color:var(--pr-navy-deep)}
+.cg-pr .pr-btn.pr-primary:hover{background:#123a62;border-color:#123a62}
+
+/* HOME — broad, editorial capability overview */
+.cg-pr-home .pr-hero{padding-top:82px}
+.cg-pr-home .pr-hero-copy h1{max-width:10ch}
+.cg-pr-home .pr-grid-4 .pr-card:nth-child(2),
+.cg-pr-home .pr-grid-4 .pr-card:nth-child(4){transform:translateY(22px)}
+.cg-pr-home .pr-grid-4{margin-bottom:22px}
+.cg-pr-home .pr-metrics{background:rgba(255,255,255,.72)}
+
+/* ABOUT — narrative rather than catalogue */
+.cg-pr-about .pr-story{grid-template-columns:minmax(0,.92fr) minmax(460px,1.08fr);gap:68px}
+.cg-pr-about .pr-story-media{min-height:520px;border:0;border-radius:2px}
+.cg-pr-about .pr-story-media img{min-height:520px;filter:saturate(.9) contrast(1.04)}
+.cg-pr-about .pr-checks{gap:14px}
+.cg-pr-about .pr-check{padding:22px;border-left:3px solid var(--pr-gold);background:#fbfaf7}
+
+/* DIVISIONS — stronger route architecture */
+.cg-pr-divisions .pr-grid-2{gap:24px}
+.cg-pr-divisions .pr-division-card{
+  grid-template-columns:240px minmax(0,1fr);
+  min-height:214px;
+}
+.cg-pr-divisions .pr-division-card .pr-card-media{min-height:214px}
+.cg-pr-divisions .pr-division-card .pr-card-body{padding:28px}
+.cg-pr-divisions .pr-division-card h3{font-size:28px}
+
+/* SERVICES — technical directory feel */
+.cg-pr-services .pr-family{
+  min-height:100%;
+  border-top:5px solid var(--pr-gold);
+  padding:30px;
+}
+.cg-pr-services .pr-family b{font-size:31px}
+.cg-pr-services .pr-directory-row{
+  grid-template-columns:230px minmax(0,1fr) 120px;
+  padding:23px 0;
+}
+
+/* PROJECTS — image-first case-study rhythm */
+.cg-pr-projects .pr-grid-3{gap:22px}
+.cg-pr-projects .pr-card-media{aspect-ratio:16/9}
+.cg-pr-projects .pr-grid-3 .pr-card:nth-child(3n+2){transform:translateY(18px)}
+.cg-pr-projects .pr-card-body{padding:22px 24px 26px}
+
+/* INSIGHTS — clearer reading hierarchy */
+.cg-pr-insights .pr-feature-grid{gap:22px}
+.cg-pr-insights .pr-feature-grid .pr-card:first-child{grid-row:span 2}
+.cg-pr-insights .pr-feature-grid .pr-card:first-child .pr-card-media{aspect-ratio:16/10}
+.cg-pr-insights .pr-article{
+  min-height:265px;
+  border-top:3px solid #d9c59d;
+  background:linear-gradient(180deg,#fff,#fcfbf8);
+}
+.cg-pr-insights .pr-article h3{font-size:24px}
+
+/* CONTACT — bring legacy contact markup into the same premium system */
+.cg-pr-contact{background:#fff}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero{
+  position:relative;
+  padding:76px 0 82px;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(185,134,38,.07),transparent 28%),
+    linear-gradient(180deg,#fff 0%,#fbfaf7 100%);
+  color:var(--pr-text);
+  border-bottom:1px solid var(--pr-line);
+}
+.cg-pr-contact .tv4-contact-hero-grid{
+  width:min(1280px,calc(100% - 56px));
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1.06fr) minmax(440px,.94fr);
+  gap:70px;
+  align-items:center;
+}
+.cg-pr-contact .tv4-contact-hero-copy{max-width:720px}
+.cg-pr-contact .tv4-contact-hero-copy .eyebrow{
+  color:var(--pr-gold);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.cg-pr-contact .tv4-contact-hero-copy h1{
+  margin:18px 0 22px;
+  max-width:12ch;
+  color:var(--pr-navy);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(52px,5.5vw,80px);
+  line-height:.98;
+  letter-spacing:-.04em;
+  font-weight:500;
+}
+.cg-pr-contact .tv4-contact-hero-copy h1 em{color:var(--pr-gold);font-style:normal}
+.cg-pr-contact .tv4-contact-hero-copy p{
+  max-width:64ch;
+  color:var(--pr-text);
+  font-size:17px;
+  line-height:1.7;
+}
+.cg-pr-contact .tv4-contact-visual{
+  position:relative;
+  min-height:520px;
+  overflow:hidden;
+  border-radius:2px;
+  box-shadow:0 28px 70px rgba(7,26,54,.15);
+}
+.cg-pr-contact .tv4-contact-visual img{
+  width:100%;height:520px;object-fit:cover;
+  filter:saturate(.95) contrast(1.04);
+}
+.cg-pr-contact .tv4-contact-visual>div{
+  position:absolute;left:22px;right:22px;bottom:22px;
+  padding:18px 20px;
+  background:linear-gradient(135deg,rgba(7,26,54,.97),rgba(14,42,71,.92));
+  border-left:4px solid var(--pr-gold-bright);
+  color:#fff;
+}
+.cg-pr-contact .tv4-contact-visual span{
+  display:block;margin-bottom:5px;color:#f4c95c;
+  font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase
+}
+.cg-pr-contact .section{padding:86px 0}
+.cg-pr-contact .section.soft{background:var(--pr-paper)}
+.cg-pr-contact .section>.container{width:min(1280px,calc(100% - 56px))}
+.cg-pr-contact .section-head{
+  display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.65fr);
+  gap:46px;align-items:end;margin-bottom:38px
+}
+.cg-pr-contact .section-head h2{
+  margin:10px 0 0;
+  max-width:18ch;
+  color:var(--pr-navy);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(38px,4.2vw,56px);
+  line-height:1.04;
+  letter-spacing:-.035em;
+  font-weight:500;
+}
+.cg-pr-contact .section-head>p{font-size:16px;line-height:1.8}
+.cg-pr-contact .cg-contact-route-grid{gap:18px}
+.cg-pr-contact .cg-contact-route-grid>a{
+  border-radius:2px!important;
+  border-color:#e1dbcf!important;
+  box-shadow:0 12px 34px rgba(7,26,54,.045)!important;
+}
+.cg-pr-contact .contact-v27-wrap{gap:30px}
+.cg-pr-contact .contact-v27-card{
+  border-radius:2px;
+  border-color:#e1dbcf;
+  box-shadow:0 18px 48px rgba(7,26,54,.08);
+}
+.cg-pr-contact .contact-v27-card h2{
+  color:var(--pr-navy);
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:42px;
+  font-weight:500;
+}
+.cg-pr-contact .contact-v27-premium{border-radius:2px}
+.cg-pr-contact .contact-v27-quick a{border-radius:2px}
+
+/* RFQ — calmer, easier-to-scan form */
+.cg-pr-rfq .pr-rfq-layout{grid-template-columns:minmax(0,1.5fr) minmax(330px,.5fr);gap:30px}
+.cg-pr-rfq .pr-panel{border-radius:2px;padding:34px}
+.cg-pr-rfq .pr-panel h2{max-width:16ch}
+.cg-pr-rfq form input,
+.cg-pr-rfq form select,
+.cg-pr-rfq form textarea{border-radius:2px;background:#fefefe}
+.cg-pr-rfq .pr-evidence-list li{padding-top:12px;padding-bottom:12px}
+.cg-pr-rfq .pr-hero.pr-compact{padding:68px 0 72px}
+.cg-pr-rfq .pr-hero.pr-compact .pr-hero-media,
+.cg-pr-rfq .pr-hero.pr-compact .pr-hero-media img{min-height:470px}
+
+/* accessibility and readability */
+@media(max-width:1050px){
+  .cg-pr .pr-hero-grid,
+  .cg-pr-contact .tv4-contact-hero-grid{grid-template-columns:1fr;gap:36px}
+  .cg-pr .pr-hero-media,.cg-pr .pr-hero-media img,
+  .cg-pr-contact .tv4-contact-visual,
+  .cg-pr-contact .tv4-contact-visual img{min-height:430px;height:430px}
+  .cg-pr-home .pr-grid-4 .pr-card:nth-child(2),
+  .cg-pr-home .pr-grid-4 .pr-card:nth-child(4),
+  .cg-pr-projects .pr-grid-3 .pr-card:nth-child(3n+2){transform:none}
+  .cg-pr-contact .section-head{grid-template-columns:1fr;gap:14px}
+}
+@media(max-width:720px){
+  .cg-pr .pr-section,.cg-pr-contact .section{padding:60px 0}
+  .cg-pr .pr-hero,.cg-pr-contact .contact-v27-hero.tv4-contact-hero{padding:48px 0 54px}
+  .cg-pr-contact .tv4-contact-hero-grid,
+  .cg-pr-contact .section>.container{width:min(100% - 28px,1280px)}
+  .cg-pr-contact .tv4-contact-hero-copy h1{font-size:clamp(42px,12vw,56px)}
+  .cg-pr .pr-hero-media,.cg-pr .pr-hero-media img,
+  .cg-pr-contact .tv4-contact-visual,
+  .cg-pr-contact .tv4-contact-visual img{min-height:330px;height:330px}
+  .cg-pr-divisions .pr-division-card{grid-template-columns:1fr}
+  .cg-pr-divisions .pr-division-card .pr-card-media{min-height:0;aspect-ratio:16/9}
+  .cg-pr-services .pr-directory-row{grid-template-columns:1fr;gap:8px}
+  .cg-pr-insights .pr-feature-grid .pr-card:first-child{grid-row:auto}
+  .cg-pr-rfq .pr-panel{padding:22px}
+}
