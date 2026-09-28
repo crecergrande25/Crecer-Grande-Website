@@ -571,3 +571,61 @@ body.cg-body-polish.cv4-insights main .resource-card,
 body.cg-body-polish.cv4-industries main .industry-card-v26{
   border-radius:3px!important;
 }
+
+
+/* =========================================================
+   DETAIL PAGE CREATIVE PASS V1.1
+   Makes service, division, project and insight detail pages feel
+   intentionally related without forcing one identical template.
+   ========================================================= */
+body.cg-body-polish main .section-head{position:relative}
+body.cg-body-polish main .section-head::before{
+  content:"";position:absolute;left:0;top:-16px;width:54px;height:3px;background:var(--cg-gold);
+}
+body.cg-body-polish.cg-body-service-detail main :is(.page-hero,.service-hero,.content-hero),
+body.cg-body-polish.cg-body-project-detail main :is(.page-hero,.project-hero,.content-hero),
+body.cg-body-polish.cg-body-insight-detail main :is(.page-hero,.insight-hero,.content-hero){
+  min-height:490px!important;
+}
+body.cg-body-polish.cg-body-service-detail main :is(.page-hero,.service-hero,.content-hero)::after,
+body.cg-body-polish.cg-body-project-detail main :is(.page-hero,.project-hero,.content-hero)::after,
+body.cg-body-polish.cg-body-insight-detail main :is(.page-hero,.insight-hero,.content-hero)::after{
+  content:"";position:absolute;right:5%;bottom:0;width:160px;height:6px;background:var(--cg-gold);z-index:2;
+}
+body.cg-body-polish.cg-body-insight-detail main .insight-layout{
+  grid-template-columns:minmax(0,1fr) minmax(260px,320px)!important;
+  gap:54px!important;align-items:start;
+}
+body.cg-body-polish.cg-body-insight-detail main .insight-article{
+  max-width:820px;
+}
+body.cg-body-polish.cg-body-insight-detail main .insight-article>h2{
+  margin-top:46px!important;padding-top:20px;border-top:1px solid var(--cg-line);
+  font-size:clamp(28px,3vw,39px)!important;
+}
+body.cg-body-polish.cg-body-insight-detail main .insight-article>p,
+body.cg-body-polish.cg-body-insight-detail main .insight-article>ul{
+  font-size:16px;line-height:1.82;
+}
+body.cg-body-polish.cg-body-insight-detail main :is(.formula-card,.insight-disclaimer){
+  border-radius:3px!important;border-left:4px solid var(--cg-gold)!important;
+  box-shadow:0 14px 34px rgba(16,44,77,.06);
+}
+body.cg-body-polish.cg-body-insight-detail main .insight-related-card{
+  min-height:170px;padding:24px;border-radius:3px!important;
+  background:linear-gradient(180deg,#fff,#faf8f3);
+}
+body.cg-body-polish.cg-body-project-detail main :is(.case-card,.panel){
+  border-radius:3px!important;
+}
+body.cg-body-polish.cg-body-division-detail main :is(.ed5-showcase-large,.ed5-showcase-grid figure,.dv4-detail-visual){
+  position:relative;overflow:hidden;
+}
+body.cg-body-polish.cg-body-division-detail main :is(.ed5-showcase-large,.ed5-showcase-grid figure)::after{
+  content:"";position:absolute;inset:auto 0 0 0;height:4px;background:linear-gradient(90deg,var(--cg-gold),transparent);
+  pointer-events:none;
+}
+@media(max-width:760px){
+  body.cg-body-polish main .section-head::before{top:-11px}
+  body.cg-body-polish.cg-body-insight-detail main .insight-layout{grid-template-columns:1fr!important;gap:30px!important}
+}
