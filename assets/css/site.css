@@ -1061,3 +1061,175 @@ footer[class*="footer"] .cg-footer-bottom{
   .insight-related-grid{grid-template-columns:1fr}
   .insight-layout{gap:28px}
 }
+
+
+/* ==========================================================================
+   CG UNIVERSAL PHOTOGRAPHIC HERO SYSTEM — 2026-09-28
+   Consistent dark-blue premium hero treatment with a unique page-level image.
+   Page image is supplied through --cg-hero-art on <body>.
+   ========================================================================== */
+body main :is(
+  .pr-hero,
+  .print3d-hero,
+  .design-hero,
+  .service-hero,
+  .page-hero,
+  .content-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .dv4-hub-hero,
+  .dv4-detail-hero,
+  .am2-hero,
+  .am3-hero,
+  .au5-hero,
+  .ed5-hero,
+  .ins5-hero,
+  .mm5-hero,
+  .qms5-hero,
+  .elite-hero,
+  .elite-detail-hero,
+  .project-hero,
+  .insight-hero
+){
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  min-height:clamp(440px,56vh,570px)!important;
+  padding:clamp(58px,6.5vw,82px) 0!important;
+  background-color:#04162c!important;
+  background-image:
+    linear-gradient(90deg,rgba(3,17,34,.985) 0%,rgba(3,22,42,.96) 34%,rgba(5,37,67,.84) 62%,rgba(6,45,81,.54) 100%),
+    var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-position:center,center!important;
+  background-size:cover,cover!important;
+  background-repeat:no-repeat!important;
+  color:#fff!important;
+}
+
+/* Soft technical grid without hiding the photography */
+body main :is(
+  .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+  .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+  .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+  .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+)::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:-1!important;
+  pointer-events:none!important;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px)!important;
+  background-size:46px 46px!important;
+  opacity:1!important;
+}
+
+body main :is(
+  .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+  .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+  .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+  .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+) :is(h1,h2){
+  color:#fff!important;
+  text-shadow:0 8px 30px rgba(0,0,0,.18)!important;
+}
+body main :is(
+  .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+  .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+  .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+  .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+) :is(p,.lead,.intro){
+  color:#dce7f1!important;
+}
+body main :is(
+  .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+  .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+  .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+  .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+) :is(.eyebrow,.subhead,.kicker){
+  color:#efc35a!important;
+}
+body main :is(
+  .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+  .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+  .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+  .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+) h1 em{
+  color:#f4b000!important;
+}
+
+/* Keep hero imagery large enough to feel premium but never larger than the screen. */
+body main :is(
+  .pr-hero-media,
+  .service-visual,
+  .design-hero-visual,
+  .print3d-visual,
+  .dv4-hub-visual,
+  .dv4-detail-visual,
+  .ed5-hero-visual,
+  .mm5-hero-visual,
+  .au5-hero-visual,
+  .qms5-hero-visual,
+  .ins5-hero-visual,
+  .tv4-contact-visual
+){
+  max-height:440px!important;
+  min-height:0!important;
+  overflow:hidden!important;
+}
+body main :is(
+  .pr-hero-media,
+  .service-visual,
+  .design-hero-visual,
+  .print3d-visual,
+  .dv4-hub-visual,
+  .dv4-detail-visual,
+  .ed5-hero-visual,
+  .mm5-hero-visual,
+  .au5-hero-visual,
+  .qms5-hero-visual,
+  .ins5-hero-visual,
+  .tv4-contact-visual
+) img{
+  width:100%!important;
+  height:100%!important;
+  max-height:440px!important;
+  object-fit:cover!important;
+}
+
+/* Compact hub heroes stay slightly shorter. */
+body main .pr-hero.pr-compact{
+  min-height:430px!important;
+  padding:58px 0!important;
+}
+
+@media(max-width:760px){
+  body main :is(
+    .pr-hero,.print3d-hero,.design-hero,.service-hero,.page-hero,.content-hero,
+    .contact-v27-hero,.quote-v27-hero,.dv4-hub-hero,.dv4-detail-hero,
+    .am2-hero,.am3-hero,.au5-hero,.ed5-hero,.ins5-hero,.mm5-hero,.qms5-hero,
+    .elite-hero,.elite-detail-hero,.project-hero,.insight-hero
+  ){
+    min-height:auto!important;
+    padding:50px 0!important;
+    background-image:
+      linear-gradient(180deg,rgba(3,17,34,.95) 0%,rgba(4,28,52,.86) 58%,rgba(5,39,70,.72) 100%),
+      var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+    background-position:center,center!important;
+  }
+  body main :is(
+    .pr-hero-media,.service-visual,.design-hero-visual,.print3d-visual,
+    .dv4-hub-visual,.dv4-detail-visual,.ed5-hero-visual,.mm5-hero-visual,
+    .au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.tv4-contact-visual
+  ){
+    max-height:285px!important;
+  }
+  body main :is(
+    .pr-hero-media,.service-visual,.design-hero-visual,.print3d-visual,
+    .dv4-hub-visual,.dv4-detail-visual,.ed5-hero-visual,.mm5-hero-visual,
+    .au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.tv4-contact-visual
+  ) img{
+    max-height:285px!important;
+  }
+}
