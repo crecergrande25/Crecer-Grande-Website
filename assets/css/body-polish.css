@@ -629,3 +629,74 @@ body.cg-body-polish.cg-body-division-detail main :is(.ed5-showcase-large,.ed5-sh
   body.cg-body-polish main .section-head::before{top:-11px}
   body.cg-body-polish.cg-body-insight-detail main .insight-layout{grid-template-columns:1fr!important;gap:30px!important}
 }
+
+
+/* ==========================================================================
+   CG DETAIL IMAGE BALANCE — 2026-09-28
+   Fixes full-width stacked imagery on service/project/detail pages.
+   ========================================================================== */
+body.cg-body-polish main :is(.cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid){
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin-top:24px!important;
+}
+body.cg-body-polish main :is(.cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure){
+  position:relative!important;
+  height:270px!important;
+  min-height:0!important;
+  overflow:hidden!important;
+}
+body.cg-body-polish main :is(.cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid) img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  max-height:100%!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+}
+body.cg-body-polish main :is(.cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure)::after{
+  content:"";
+  position:absolute;
+  inset:42% 0 0;
+  background:linear-gradient(180deg,transparent,rgba(3,17,31,.9));
+  pointer-events:none;
+}
+body.cg-body-polish main :is(.cg-service-gallery figcaption,.cg-case-visual-grid figcaption,.cg-division-visual-grid figcaption){
+  position:absolute!important;
+  z-index:2!important;
+  left:0;right:0;bottom:0;
+  color:#fff!important;
+}
+body.cg-body-polish main :is(.cg-service-gallery figcaption b,.cg-case-visual-grid figcaption b,.cg-division-visual-grid figcaption b){color:#fff!important}
+body.cg-body-polish main :is(.cg-service-gallery figcaption span,.cg-case-visual-grid figcaption span,.cg-division-visual-grid figcaption span){color:#dce7ef!important}
+
+body.cg-body-polish.cg-body-service-detail main .service-hero{min-height:470px!important}
+body.cg-body-polish.cg-body-service-detail main .service-visual img{height:330px!important;max-height:330px!important;object-fit:cover!important}
+body.cg-body-polish.cg-body-service-detail main :is(.page-hero,.service-hero,.content-hero),
+body.cg-body-polish.cg-body-project-detail main :is(.page-hero,.project-hero,.content-hero),
+body.cg-body-polish.cg-body-insight-detail main :is(.page-hero,.insight-hero,.content-hero){min-height:440px!important}
+
+body.cg-body-polish.cg-body-division-detail main :is(.dv4-detail-visual,.dv4-story-media,.dv4-process-image){
+  min-height:0!important;
+  height:400px!important;
+  max-height:400px!important;
+}
+body.cg-body-polish.cg-body-division-detail main :is(.dv4-detail-visual,.dv4-story-media,.dv4-process-image) img{
+  width:100%!important;height:100%!important;object-fit:cover!important;
+}
+
+@media(max-width:900px){
+  body.cg-body-polish main :is(.cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid){grid-template-columns:1fr 1fr!important}
+  body.cg-body-polish main :is(.cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure){height:245px!important}
+}
+@media(max-width:620px){
+  body.cg-body-polish main :is(.cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid){grid-template-columns:1fr!important}
+  body.cg-body-polish main :is(.cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure){height:220px!important}
+  body.cg-body-polish.cg-body-service-detail main .service-visual img{height:250px!important;max-height:250px!important}
+  body.cg-body-polish.cg-body-service-detail main :is(.page-hero,.service-hero,.content-hero),
+  body.cg-body-polish.cg-body-project-detail main :is(.page-hero,.project-hero,.content-hero),
+  body.cg-body-polish.cg-body-insight-detail main :is(.page-hero,.insight-hero,.content-hero){min-height:auto!important}
+  body.cg-body-polish.cg-body-division-detail main :is(.dv4-detail-visual,.dv4-story-media,.dv4-process-image){height:260px!important;max-height:260px!important}
+}
