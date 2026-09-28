@@ -382,3 +382,16 @@ linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0
   .dv4-system-node,.dv4-system-node.n1,.dv4-system-node.n2,.dv4-system-node.n3,.dv4-system-node.n4,.dv4-system-node.n5,.dv4-system-node.n6,.dv4-system-node.n7,.dv4-system-node.n8{grid-column:auto;grid-row:auto}
   .dv4-hub-system:before,.dv4-hub-system:after{display:none}
 }
+
+
+/* CG DIVISION IMAGE BALANCE — 2026-09-28 */
+.dv4-detail-visual{min-height:0!important;height:430px!important;max-height:430px!important}
+.dv4-story-media{min-height:0!important;height:390px!important;max-height:390px!important}
+.dv4-process-image{min-height:0!important;height:420px!important;max-height:420px!important}
+.dv4-detail-visual img,.dv4-story-media img,.dv4-process-image img{height:100%!important;object-fit:cover!important}
+@media(max-width:1100px){
+  .dv4-detail-visual,.dv4-story-media,.dv4-process-image{height:360px!important;max-height:360px!important}
+}
+@media(max-width:720px){
+  .dv4-detail-visual,.dv4-story-media,.dv4-process-image{height:280px!important;max-height:280px!important;min-height:0!important}
+}
