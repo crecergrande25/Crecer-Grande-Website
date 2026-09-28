@@ -30,3 +30,28 @@ linear-gradient(135deg,#031020,#071a36 55%,#0b3b63)!important}
 
 @media(max-width:1000px){.cv4-services .svc-feature-card,.cv4-services .svc-feature-card:first-child,.cv4-services .svc-feature-card:nth-child(4){grid-column:span 6}.cv4-engineering-desk .visual-card-grid{grid-template-columns:1fr 1fr!important}.cv4-engineering-desk .visual-card:first-child{grid-column:span 2}.cv4-resources .resource-grid,.cv4-insights .resource-grid,.cv4-industries .industry-grid-v26{grid-template-columns:1fr 1fr}.cv4-projects .case-study-card{grid-column:span 6}}
 @media(max-width:680px){.cv4-services .svc-feature-grid{display:grid!important;grid-template-columns:1fr!important}.cv4-services .svc-feature-card,.cv4-services .svc-feature-card:first-child,.cv4-services .svc-feature-card:nth-child(4){grid-column:auto}.cv4-services .svc-mini-grid,.cv4-engineering-desk .visual-card-grid,.cv4-resources .resource-grid,.cv4-insights .resource-grid,.cv4-industries .industry-grid-v26{grid-template-columns:1fr!important}.cv4-engineering-desk .visual-card:first-child,.cv4-resources .resource-card:first-child,.cv4-insights .resource-card:first-child,.cv4-industries .industry-card-v26:first-child,.cv4-industries .industry-card-v26:nth-child(5){grid-column:auto}.cv4-projects .case-study-grid{grid-template-columns:1fr}.cv4-projects .case-study-card,.cv4-projects .case-study-card:first-child,.cv4-projects .case-study-card:nth-child(4){grid-column:auto}}
+
+
+/* CG CONTENT IMAGE BALANCE — 2026-09-28 */
+.cv4-services .svc-hero-visual img{height:420px!important;max-height:420px!important;object-fit:cover!important}
+.cv4-services .svc-feature-media img{height:215px!important;max-height:215px!important;object-fit:cover!important}
+.cv4-services .svc-feature-card:first-child .svc-feature-media img,
+.cv4-services .svc-feature-card:nth-child(4) .svc-feature-media img{height:255px!important;max-height:255px!important}
+.cv4-projects .case-study-image img{height:225px!important;max-height:225px!important}
+.cv4-projects .case-study-card:first-child .case-study-image img,
+.cv4-projects .case-study-card:nth-child(4) .case-study-image img{height:270px!important;max-height:270px!important}
+.cv4-industries .cv4-industry-media{height:205px!important}
+.cv4-industries .industry-card-v26:first-child .cv4-industry-media,
+.cv4-industries .industry-card-v26:nth-child(5) .cv4-industry-media{height:250px!important}
+@media(max-width:680px){
+  .cv4-services .svc-hero-visual img{height:285px!important}
+  .cv4-services .svc-feature-media img,
+  .cv4-services .svc-feature-card:first-child .svc-feature-media img,
+  .cv4-services .svc-feature-card:nth-child(4) .svc-feature-media img,
+  .cv4-projects .case-study-image img,
+  .cv4-projects .case-study-card:first-child .case-study-image img,
+  .cv4-projects .case-study-card:nth-child(4) .case-study-image img,
+  .cv4-industries .cv4-industry-media,
+  .cv4-industries .industry-card-v26:first-child .cv4-industry-media,
+  .cv4-industries .industry-card-v26:nth-child(5) .cv4-industry-media{height:220px!important}
+}
