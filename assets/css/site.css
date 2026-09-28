@@ -1273,3 +1273,169 @@ main,main *,
 .ask-btn:focus-visible *{
   color:#ffd05a!important;
 }
+
+
+/* =========================================================
+   BOTCHA SHARED DESIGN V1
+   One public-page assistant/router design across the site.
+   ========================================================= */
+.ask.cg-botcha{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:120;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
+}
+.cg-botcha .cg-botcha-btn{
+  min-height:54px;
+  padding:8px 18px 8px 9px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(7,26,54,.14);
+  border-radius:999px;
+  background:linear-gradient(135deg,#071a36,#103d68);
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.01em;
+  box-shadow:0 16px 42px rgba(7,26,54,.24);
+  cursor:pointer;
+}
+.cg-botcha .cg-botcha-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 20px 50px rgba(7,26,54,.30);
+}
+.cg-botcha-mark{
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center;
+  flex:0 0 36px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#f2bd42,#c58e22);
+  color:#071a36;
+  font-size:16px;
+  font-weight:900;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.38);
+}
+.cg-botcha .cg-botcha-panel{
+  position:absolute;
+  right:0;
+  bottom:66px;
+  display:none;
+  width:min(390px,calc(100vw - 30px));
+  padding:0;
+  overflow:hidden;
+  border:1px solid rgba(7,26,54,.12);
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 28px 80px rgba(3,18,38,.24);
+}
+.cg-botcha .cg-botcha-panel.open{display:block;animation:cg-premium-pop .2s ease both}
+.cg-botcha-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:18px 18px 15px;
+  background:
+    radial-gradient(circle at 88% 0,rgba(242,189,66,.18),transparent 30%),
+    linear-gradient(135deg,#071a36,#0d3156);
+}
+.cg-botcha-head small{
+  display:block;
+  margin-bottom:2px;
+  color:#e4c77f;
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.14em;
+}
+.cg-botcha-head h3{
+  margin:0;
+  color:#fff!important;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
+  font-size:21px;
+  font-weight:800;
+}
+.cg-botcha-panel>p{
+  margin:0;
+  padding:15px 18px 12px;
+  color:#5e6f82!important;
+  font-size:12px;
+  line-height:1.6;
+}
+.cg-botcha-links{
+  display:grid;
+  gap:7px;
+  padding:0 12px 12px;
+}
+.cg-botcha-links a{
+  display:grid!important;
+  grid-template-columns:1fr auto;
+  gap:4px 12px;
+  margin:0!important;
+  padding:11px 12px!important;
+  border:1px solid #e7e3da;
+  border-radius:9px!important;
+  background:#fbfaf7!important;
+  color:#17324e!important;
+  text-decoration:none;
+  transition:.2s ease;
+}
+.cg-botcha-links a b{
+  color:#102c4d!important;
+  font-size:12px;
+  line-height:1.3;
+}
+.cg-botcha-links a span{
+  grid-column:1/-1;
+  color:#718094!important;
+  font-size:10px;
+  line-height:1.35;
+}
+.cg-botcha-links a:hover{
+  transform:translateX(2px);
+  border-color:#c99a3c;
+  background:#fff!important;
+}
+.cg-botcha-links a.cg-botcha-primary{
+  border-color:#0e2a47;
+  background:#0e2a47!important;
+}
+.cg-botcha-links a.cg-botcha-primary b{color:#fff!important}
+.cg-botcha-links a.cg-botcha-primary span{color:#cbd7e4!important}
+
+/* Footer bottom: Admin Login belongs at the far-right end. */
+.cg-footer-bottom{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto auto!important;
+  align-items:center!important;
+  gap:18px 24px!important;
+}
+.cg-footer-bottom .cg-admin-login{
+  justify-self:end!important;
+  margin-left:auto!important;
+  color:#aebed0!important;
+  font-size:10px!important;
+  font-weight:700!important;
+  text-align:right!important;
+  white-space:nowrap;
+}
+.cg-footer-bottom .cg-admin-login:hover{color:#f0b400!important}
+
+/* Century Gothic is the permanent site-wide typography rule. */
+html,body,body *,
+button,input,select,textarea,option{
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
+}
+
+@media(max-width:760px){
+  .ask.cg-botcha{right:14px;bottom:14px}
+  .cg-botcha .cg-botcha-btn{min-height:50px;padding-right:15px}
+  .cg-botcha .cg-botcha-panel{bottom:60px}
+  .cg-footer-bottom{
+    grid-template-columns:1fr auto!important;
+  }
+  .cg-footer-bottom .cg-made-with-love{grid-column:1}
+  .cg-footer-bottom .cg-admin-login{grid-column:2;grid-row:1 / span 2;align-self:end}
+}
