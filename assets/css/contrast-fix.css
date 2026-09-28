@@ -52,14 +52,14 @@ main :is(.hero,.dark-section,.cta,.ed-hero,.ed-iso-copy,.ed-case,
 }
 
 /* Original dark hero systems should retain light text when not converted to light by body-polish. */
-body:not(.cg-body-polish) main :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero){
+body:not(.cg-body-polish) main:not(.cg-pr) :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero){
   color:#fff!important;
 }
-body:not(.cg-body-polish) main :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero)
+body:not(.cg-body-polish) main:not(.cg-pr) :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero)
 :is(h1,h2,h3,h4,b,strong){
   color:#fff!important;
 }
-body:not(.cg-body-polish) main :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero) p{
+body:not(.cg-body-polish) main:not(.cg-pr) :is(.page-hero,.content-hero,.service-hero,.dv4-hub-hero,.dv4-detail-hero,.quote-v27-hero,.contact-v27-hero) p{
   color:#d7e4ef!important;
 }
 
@@ -180,4 +180,13 @@ main.cg-pr :is(.pr-band,.pr-final) p{color:#d4dfe9!important}
   body.cg-body-polish main .contact-v27-hero.tv4-contact-hero .tv4-contact-visual img{
     min-height:300px!important;
   }
+}
+
+
+/* Premium isolation v1.1 — premium-repair pages own their contrast and hero palette. */
+main.cg-pr .pr-hero,
+main.cg-pr .pr-hero :is(h1,h2,h3,h4,p,b,strong,span,small),
+main.cg-pr-contact .contact-v27-hero,
+main.cg-pr-contact .contact-v27-hero :is(h1,h2,h3,h4,p,b,strong,span,small){
+  text-shadow:none;
 }
