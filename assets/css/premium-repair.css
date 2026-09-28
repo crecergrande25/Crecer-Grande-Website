@@ -16,7 +16,7 @@
   background:#fff;
   color:var(--pr-text);
   overflow:hidden;
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
 }
 .cg-pr *{box-sizing:border-box}
 .cg-pr img{display:block;max-width:100%}
@@ -30,10 +30,10 @@
   font-weight:900;letter-spacing:.18em;text-transform:uppercase
 }
 .cg-pr h1,.cg-pr h2,.cg-pr h3{margin:0;color:var(--pr-ink);text-wrap:balance}
-.cg-pr h1,.cg-pr h2{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.035em}
+.cg-pr h1,.cg-pr h2{font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;font-weight:500;letter-spacing:-.035em}
 .cg-pr h1{font-size:clamp(54px,5.7vw,82px);line-height:.98}
 .cg-pr h2{font-size:clamp(38px,4.2vw,56px);line-height:1.04}
-.cg-pr h3{font-family:Georgia,'Times New Roman',serif;font-size:26px;line-height:1.13;font-weight:500}
+.cg-pr h3{font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;font-size:26px;line-height:1.13;font-weight:500}
 .cg-pr p{margin:0;color:var(--pr-text);font-size:17px;line-height:1.67}
 .cg-pr .pr-lede{max-width:66ch;font-size:18px;line-height:1.7}
 .cg-pr .pr-gold{color:var(--pr-gold)}
@@ -84,7 +84,7 @@
 .cg-pr .pr-metric{padding:20px 18px;border-right:1px solid var(--pr-line)}
 .cg-pr .pr-metric:first-child{padding-left:0}
 .cg-pr .pr-metric:last-child{border-right:0}
-.cg-pr .pr-metric strong{display:block;color:var(--pr-ink);font-family:Georgia,serif;font-size:30px;font-weight:500}
+.cg-pr .pr-metric strong{display:block;color:var(--pr-ink);font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;font-size:30px;font-weight:500}
 .cg-pr .pr-metric span{display:block;margin-top:5px;color:#758395;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.4}
 
 /* cards */
@@ -109,7 +109,7 @@
 .cg-pr .pr-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--pr-line);background:#fff}
 .cg-pr .pr-step{padding:28px 24px;border-right:1px solid var(--pr-line)}
 .cg-pr .pr-step:last-child{border-right:0}
-.cg-pr .pr-step-num{display:block;margin-bottom:18px;color:var(--pr-gold);font-family:Georgia,serif;font-size:31px}
+.cg-pr .pr-step-num{display:block;margin-bottom:18px;color:var(--pr-gold);font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;font-size:31px}
 .cg-pr .pr-step h3{font-size:22px}
 .cg-pr .pr-step p{margin-top:10px;font-size:14px;line-height:1.55}
 
@@ -150,7 +150,7 @@
 
 /* service families */
 .cg-pr .pr-family{padding:28px;border-top:4px solid var(--pr-gold);background:#fff;border-inline:1px solid var(--pr-line);border-bottom:1px solid var(--pr-line)}
-.cg-pr .pr-family b{display:block;color:var(--pr-ink);font-family:Georgia,serif;font-size:29px;font-weight:500}
+.cg-pr .pr-family b{display:block;color:var(--pr-ink);font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;font-size:29px;font-weight:500}
 .cg-pr .pr-family p{margin-top:12px;font-size:14px}
 .cg-pr .pr-family ul{margin:17px 0 0;padding-left:18px;color:#596b7d;font-size:13px;line-height:1.7}
 
@@ -454,7 +454,7 @@
   margin:18px 0 22px;
   max-width:12ch;
   color:var(--pr-navy);
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-size:clamp(52px,5.5vw,80px);
   line-height:.98;
   letter-spacing:-.04em;
@@ -500,7 +500,7 @@
   margin:10px 0 0;
   max-width:18ch;
   color:var(--pr-navy);
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-size:clamp(38px,4.2vw,56px);
   line-height:1.04;
   letter-spacing:-.035em;
@@ -521,7 +521,7 @@
 }
 .cg-pr-contact .contact-v27-card h2{
   color:var(--pr-navy);
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-size:42px;
   font-weight:500;
 }
