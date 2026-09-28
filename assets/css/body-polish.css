@@ -28,7 +28,7 @@ body.cg-body-polish main :is(h1,h2,h3,h4){
   text-wrap:balance;
 }
 body.cg-body-polish main :is(h1,h2){
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-weight:500;
   letter-spacing:-.035em;
 }
@@ -276,7 +276,7 @@ body.cg-body-polish main :is(
   .svc-feature-body h3,.case-study-body h3,.visual-card h3,.resource-card h3,
   .industry-card-v26 h3,.dv4-hub-card h3,.scope-card h3
 ){
-  font-family:Georgia,'Times New Roman',serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-weight:500;
 }
 
@@ -311,7 +311,7 @@ body.cg-body-polish.cg-body-about main .about-principle-grid{gap:14px}
 body.cg-body-polish.cg-body-about main .about-principle-grid article{padding:24px!important}
 body.cg-body-polish.cg-body-about main .about-principle-grid article span{
   color:var(--cg-gold)!important;
-  font-family:Georgia,serif;
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif;
   font-size:25px;
 }
 body.cg-body-polish.cg-body-about main .about-identity-card{
