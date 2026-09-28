@@ -366,6 +366,16 @@
 
 
 
+
+  const CG_FEEDBACK_TAB = `<a class="cg-feedback-tab" href="/feedback.html" aria-label="Give us your feedback"><span>Give us your Feedback!</span></a>`;
+
+  function normalizeFeedbackTab(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/') || path==='/feedback.html') return;
+    document.querySelectorAll('.cg-feedback-tab').forEach(x=>x.remove());
+    document.body.insertAdjacentHTML('beforeend',CG_FEEDBACK_TAB);
+  }
+
   const BOTCHA = `<div class="ask cg-botcha">
     <button class="ask-btn cg-botcha-btn" type="button" aria-expanded="false" aria-controls="cg-botcha-panel">
       <span class="cg-botcha-mark" aria-hidden="true">B</span>
@@ -489,6 +499,7 @@
     removeDuplicateTerminalCta();
     normalizeFooter();
     normalizeAdminLogin();
+    normalizeFeedbackTab();
     normalizeBotcha();
     enhanceCreativeExperience();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
