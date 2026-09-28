@@ -342,7 +342,7 @@
     if($('#cg-footer-compact-style')) return;
     const style = document.createElement('style');
     style.id = 'cg-footer-compact-style';
-    style.textContent = `.cg-footer{padding:36px 0 14px!important}.cg-footer-grid{gap:32px!important}.cg-footer-logo-link img{width:305px!important;max-width:100%!important;margin-bottom:14px!important}.cg-footer-tagline{margin-bottom:10px!important}.cg-footer-desc{margin-bottom:12px!important}.cg-footer-col h4{margin-bottom:12px!important}.cg-footer-col>a{margin-bottom:8px!important}.cg-footer-contact .cg-contact-line{margin-bottom:9px!important}.cg-contact-address{margin-top:2px!important}.cg-footer-socials{margin-top:12px!important}.cg-contact-socials .cg-social-pill[href*="wa.me"]{border-color:#128C7E!important;background:#128C7E!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="wa.me"] .cg-icon{color:#25D366!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"]{border-color:#D44C72!important;background:linear-gradient(135deg,#833AB4,#E1306C,#F77737)!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"] .cg-icon{color:#E1306C!important}.cg-social-pill:hover{filter:brightness(1.08)!important}.cg-heart{color:#25D366!important}.cg-footer-bottom{margin-top:24px!important;padding-top:14px!important}@media(max-width:760px){.cg-footer{padding:30px 0 18px!important}.cg-footer-grid{gap:26px!important}.cg-footer-logo-link img{width:250px!important}.cg-footer-bottom{grid-template-columns:1fr!important;text-align:left!important}.cg-footer-bottom span:nth-child(2),.cg-footer-bottom span:last-child{text-align:left!important}}`;
+    style.textContent = `.cg-footer{padding:36px 0 14px!important}.cg-footer-grid{gap:32px!important}.cg-footer-logo-link img{width:305px!important;max-width:100%!important;margin-bottom:14px!important}.cg-footer-tagline{margin-bottom:10px!important}.cg-footer-desc{margin-bottom:12px!important}.cg-footer-col h4{margin-bottom:12px!important}.cg-footer-col>a{margin-bottom:8px!important}.cg-footer-contact .cg-contact-line{margin-bottom:9px!important}.cg-contact-address{margin-top:2px!important}.cg-footer-socials{margin-top:12px!important}.cg-contact-socials .cg-social-pill[href*="wa.me"]{border-color:#128C7E!important;background:#128C7E!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="wa.me"] .cg-icon{color:#25D366!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"]{border-color:#D44C72!important;background:linear-gradient(135deg,#833AB4,#E1306C,#F77737)!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"] .cg-icon{color:#E1306C!important}.cg-social-pill:hover{filter:brightness(1.08)!important}.cg-heart{color:#25D366!important}.cg-footer-bottom{margin-top:24px!important;padding-top:14px!important;display:grid!important;grid-template-columns:1fr auto auto!important;align-items:center!important;column-gap:24px!important}.cg-footer-bottom .cg-admin-login{justify-self:end!important;margin-left:auto!important;text-align:right!important}@media(max-width:760px){.cg-footer{padding:30px 0 18px!important}.cg-footer-grid{gap:26px!important}.cg-footer-logo-link img{width:250px!important}.cg-footer-bottom{grid-template-columns:1fr!important;text-align:left!important}.cg-footer-bottom span:nth-child(2),.cg-footer-bottom span:last-child{text-align:left!important}}`;
     document.head.appendChild(style);
   }
 
@@ -364,6 +364,53 @@
     injectHeaderStyles();
   }
 
+
+
+  const BOTCHA = `<div class="ask cg-botcha">
+    <button class="ask-btn cg-botcha-btn" type="button" aria-expanded="false" aria-controls="cg-botcha-panel">
+      <span class="cg-botcha-mark" aria-hidden="true">B</span>
+      <span>Botcha !</span>
+    </button>
+    <div class="ask-panel cg-botcha-panel" id="cg-botcha-panel" aria-label="Botcha quick help">
+      <div class="cg-botcha-head">
+        <span class="cg-botcha-mark" aria-hidden="true">B</span>
+        <div><small>CRECER GRANDE QUICK ROUTER</small><h3>Botcha !</h3></div>
+      </div>
+      <p>Tell us what you need to do. Choose the closest route and we’ll take you to the right starting point.</p>
+      <div class="cg-botcha-links">
+        <a href="/request-quote.html?requirement=Industrial%20Spare%20Identification"><b>Identify a Part</b><span>Photos, nameplate or part reference →</span></a>
+        <a href="/request-quote.html?requirement=Upload%20a%20Drawing"><b>Upload a Drawing</b><span>CAD, PDF or engineering sketch →</span></a>
+        <a href="/request-quote.html?requirement=Manufacture%20a%20Component"><b>Make a Component</b><span>Prototype, machining or fabrication →</span></a>
+        <a href="/request-quote.html?requirement=Machine%20Breakdown"><b>Machine Breakdown</b><span>Machine, alarm and symptom →</span></a>
+        <a href="/3d-printing-kolkata.html"><b>3D Printing</b><span>Prototype and production route →</span></a>
+        <a class="cg-botcha-primary" href="/request-quote.html"><b>Send Full Requirement</b><span>Start technical review →</span></a>
+      </div>
+    </div>
+  </div>`;
+
+  function normalizeBotcha(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/')) return;
+    const existing=$('.ask');
+    if(existing) existing.outerHTML=BOTCHA;
+    else document.body.insertAdjacentHTML('beforeend',BOTCHA);
+  }
+
+  function normalizeAdminLogin(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/')) return;
+    const bottom=$('.cg-footer-bottom');
+    if(!bottom) return;
+    let admin=bottom.querySelector('.cg-admin-login');
+    if(!admin){
+      admin=document.createElement('a');
+      admin.className='cg-admin-login';
+      admin.href='/admin/';
+      admin.rel='nofollow';
+      admin.textContent='Admin Login';
+      bottom.appendChild(admin);
+    }
+  }
 
   function enhanceCreativeExperience(){
     const path=(location.pathname||'/').toLowerCase();
@@ -441,6 +488,8 @@
     syncCommonFooter();
     removeDuplicateTerminalCta();
     normalizeFooter();
+    normalizeAdminLogin();
+    normalizeBotcha();
     enhanceCreativeExperience();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
@@ -448,8 +497,8 @@
     btn?.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))});
     $$('.nav-group>button').forEach(b=>b.addEventListener('click',(e)=>{if(innerWidth<=1050){e.preventDefault();b.parentElement.classList.toggle('open')}}));
     const ab=$('.ask-btn'),ap=$('.ask-panel');
-    ab?.addEventListener('click',()=>ap.classList.toggle('open'));
-    document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask'))ap.classList.remove('open')});
+    ab?.addEventListener('click',()=>{const open=ap.classList.toggle('open');ab.setAttribute('aria-expanded',String(open))});
+    document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask')){ap.classList.remove('open');ab?.setAttribute('aria-expanded','false')}});
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
     document.addEventListener('click',(e)=>{const a=e.target.closest('a'); if(!a)return; if(/wa\.me/.test(a.href)) track('click_whatsapp',{href:a.href}); else if(a.href.startsWith('tel:')) track('click_phone',{href:a.href}); else if(a.href.startsWith('mailto:')) track('click_email',{href:a.href}); else if(/instagram\.com/.test(a.href)) track('outbound_instagram',{href:a.href});});
     setTimeout(()=>track('page_view'),300);
