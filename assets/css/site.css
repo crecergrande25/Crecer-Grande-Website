@@ -1233,3 +1233,16 @@ body main .pr-hero.pr-compact{
     max-height:285px!important;
   }
 }
+
+
+/* =========================================================
+   CENTURY GOTHIC TYPOGRAPHY LOCK
+   ========================================================= */
+html,body,
+button,input,select,textarea,
+.site-header,.nav,.topbar,
+main,main *,
+.cg-footer,.cg-footer *,
+.cg-footer-cta,.cg-footer-cta *{
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
+}
