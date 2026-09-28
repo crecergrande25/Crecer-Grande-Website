@@ -1246,3 +1246,30 @@ main,main *,
 .cg-footer-cta,.cg-footer-cta *{
   font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
 }
+
+
+/* ==========================================================================
+   CG ASK iKNOW BUTTON — GLOBAL COLOUR LOCK — 2026-09-28
+   Gold label/icon on Crecer Grande blue, consistent across every page.
+   ========================================================================== */
+.ask-btn{
+  background:#173d63!important;
+  color:#f4b000!important;
+  border:1px solid rgba(244,176,0,.28)!important;
+  box-shadow:0 14px 34px rgba(2,15,34,.28),0 5px 16px rgba(244,176,0,.10)!important;
+}
+.ask-btn,
+.ask-btn *{
+  color:#f4b000!important;
+}
+.ask-btn:hover,
+.ask-btn:focus-visible{
+  background:#0f3154!important;
+  color:#ffd05a!important;
+  border-color:rgba(244,176,0,.55)!important;
+  box-shadow:0 18px 42px rgba(2,15,34,.34),0 7px 20px rgba(244,176,0,.16)!important;
+}
+.ask-btn:hover *,
+.ask-btn:focus-visible *{
+  color:#ffd05a!important;
+}
