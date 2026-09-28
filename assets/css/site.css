@@ -832,3 +832,72 @@ footer[class*="footer"] .cg-footer-bottom{
   border-top-color:#24364d!important;
   color:#9bb0c7!important;
 }
+
+
+/* ==========================================================================
+   CG VISUAL BALANCE FALLBACK — 2026-09-28
+   Keeps rich imagery controlled even before page-specific polish CSS loads.
+   ========================================================================== */
+.cg-service-gallery,
+.cg-case-visual-grid,
+.cg-division-visual-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+  margin-top:24px;
+}
+.cg-service-gallery figure,
+.cg-case-visual-grid figure,
+.cg-division-visual-grid figure{
+  position:relative;
+  margin:0;
+  height:280px;
+  min-height:0!important;
+  overflow:hidden;
+  border:1px solid #dde3e9;
+  border-radius:6px;
+  background:#0b2948;
+}
+.cg-service-gallery img,
+.cg-case-visual-grid img,
+.cg-division-visual-grid img{
+  position:absolute;
+  inset:0;
+  width:100%!important;
+  height:100%!important;
+  max-height:100%!important;
+  object-fit:cover!important;
+}
+.cg-service-gallery figure::after,
+.cg-case-visual-grid figure::after,
+.cg-division-visual-grid figure::after{
+  content:"";
+  position:absolute;
+  inset:42% 0 0;
+  background:linear-gradient(180deg,transparent,rgba(3,17,31,.9));
+  pointer-events:none;
+}
+.cg-service-gallery figcaption,
+.cg-case-visual-grid figcaption,
+.cg-division-visual-grid figcaption{
+  position:absolute;
+  z-index:2;
+  left:0;right:0;bottom:0;
+  padding:17px 18px!important;
+  color:#fff;
+}
+.cg-service-gallery figcaption b,
+.cg-case-visual-grid figcaption b,
+.cg-division-visual-grid figcaption b{display:block;color:#fff!important;font-size:17px}
+.cg-service-gallery figcaption span,
+.cg-case-visual-grid figcaption span,
+.cg-division-visual-grid figcaption span{display:block;margin-top:5px;color:#dbe5ee!important;font-size:10px;line-height:1.5}
+
+@media(max-width:900px){
+  .cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid{grid-template-columns:1fr 1fr}
+  .cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure{height:250px}
+}
+@media(max-width:620px){
+  .cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid{grid-template-columns:1fr}
+  .cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure{height:230px}
+}
