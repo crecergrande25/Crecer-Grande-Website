@@ -647,3 +647,94 @@
   .cg-pr-home .pr-hero-media,.cg-pr-home .pr-hero-media img{min-height:340px}
   .cg-pr-contact .cg-contact-route-grid>a::after{font-size:36px}
 }
+
+
+/* ==========================================================================
+   CG IMAGE SCALE & RHYTHM PASS — 2026-09-28
+   Visual-rich without letting a single image dominate the viewport.
+   ========================================================================== */
+.cg-pr .pr-hero-media{
+  min-height:0!important;
+  height:clamp(340px,46vh,450px)!important;
+  max-height:450px!important;
+}
+.cg-pr .pr-hero-media img{
+  min-height:0!important;
+  height:100%!important;
+  max-height:450px!important;
+  object-fit:cover!important;
+}
+.cg-pr .pr-hero.pr-compact .pr-hero-media,
+.cg-pr .pr-hero.pr-compact .pr-hero-media img{
+  min-height:0!important;
+  height:clamp(310px,40vh,390px)!important;
+  max-height:390px!important;
+}
+.cg-pr-home .pr-hero-media,
+.cg-pr-home .pr-hero-media img{
+  min-height:0!important;
+  height:clamp(360px,48vh,470px)!important;
+  max-height:470px!important;
+}
+.cg-pr .pr-story-media{
+  min-height:0!important;
+  height:390px!important;
+  max-height:390px!important;
+}
+.cg-pr .pr-story-media img{
+  min-height:0!important;
+  height:100%!important;
+  max-height:390px!important;
+  object-fit:cover!important;
+}
+.cg-pr-contact .tv4-contact-visual{
+  min-height:0!important;
+  height:440px!important;
+  max-height:440px!important;
+}
+.cg-pr-contact .tv4-contact-visual img{
+  min-height:0!important;
+  height:100%!important;
+  max-height:440px!important;
+  object-fit:cover!important;
+}
+
+/* Insights: every guide card receives a compact visual instead of a text wall. */
+.cg-pr-insights .pr-article{
+  overflow:hidden;
+}
+.cg-pr-insights .pr-article-media{
+  height:150px;
+  margin:-24px -24px 18px;
+  overflow:hidden;
+  background:#e8ecef;
+}
+.cg-pr-insights .pr-article-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+@media(hover:hover){
+  .cg-pr-insights .pr-article:hover .pr-article-media img{transform:scale(1.04)}
+}
+
+@media(max-width:1050px){
+  .cg-pr .pr-hero-media,.cg-pr .pr-hero-media img,
+  .cg-pr-home .pr-hero-media,.cg-pr-home .pr-hero-media img{
+    height:390px!important;
+    max-height:390px!important;
+  }
+  .cg-pr-contact .tv4-contact-visual,.cg-pr-contact .tv4-contact-visual img{height:390px!important;max-height:390px!important}
+}
+@media(max-width:720px){
+  .cg-pr .pr-hero-media,.cg-pr .pr-hero-media img,
+  .cg-pr .pr-hero.pr-compact .pr-hero-media,.cg-pr .pr-hero.pr-compact .pr-hero-media img,
+  .cg-pr-home .pr-hero-media,.cg-pr-home .pr-hero-media img,
+  .cg-pr-contact .tv4-contact-visual,.cg-pr-contact .tv4-contact-visual img{
+    height:285px!important;
+    max-height:285px!important;
+  }
+  .cg-pr .pr-story-media,.cg-pr .pr-story-media img{height:280px!important;max-height:280px!important}
+  .cg-pr-insights .pr-article-media{height:135px}
+}
