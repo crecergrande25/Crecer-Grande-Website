@@ -901,3 +901,163 @@ footer[class*="footer"] .cg-footer-bottom{
   .cg-service-gallery,.cg-case-visual-grid,.cg-division-visual-grid{grid-template-columns:1fr}
   .cg-service-gallery figure,.cg-case-visual-grid figure,.cg-division-visual-grid figure{height:230px}
 }
+
+
+/* ==========================================================================
+   CG LEGACY DETAIL LAYOUT REPAIR — 2026-09-28
+   Older Insight/Project detail templates now use the same balanced visual logic
+   as the newer site instead of rendering source images at near-natural size.
+   ========================================================================== */
+.insight-hero{
+  position:relative;
+  overflow:hidden;
+  padding:58px 0;
+  background:
+    radial-gradient(circle at 86% 12%,rgba(244,176,0,.14),transparent 24%),
+    linear-gradient(135deg,#041326,#0b3157);
+  color:#fff;
+}
+.insight-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);
+  background-size:44px 44px;
+  pointer-events:none;
+}
+.insight-hero .container{position:relative;z-index:1}
+.insight-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.12fr) minmax(320px,.72fr);
+  gap:42px;
+  align-items:center;
+}
+.insight-hero h1{
+  margin:10px 0 16px;
+  max-width:820px;
+  color:#fff;
+  font-size:clamp(38px,4.7vw,62px);
+  line-height:1.02;
+  letter-spacing:-.035em;
+}
+.insight-hero p{max-width:760px;margin:0;color:#d8e4ef;font-size:15px;line-height:1.72}
+.insight-hero .eyebrow{color:#f0ca70}
+.insight-hero-grid>img{
+  width:100%;
+  height:320px;
+  max-height:320px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:16px;
+  box-shadow:0 24px 58px rgba(0,0,0,.24);
+}
+.insight-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.insight-meta span{
+  padding:7px 9px;
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:#e4edf5;
+  font-size:10px;
+}
+
+.insight-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(250px,310px);
+  gap:48px;
+  align-items:start;
+}
+.insight-article{min-width:0}
+.insight-article h2{margin:38px 0 12px;font-size:clamp(27px,2.8vw,38px);line-height:1.12}
+.insight-article p,.insight-article li{font-size:15px;line-height:1.78;color:#43566d}
+.insight-article ul{padding-left:21px}
+.insight-quick,.formula-card,.insight-disclaimer{
+  margin:0 0 24px;
+  padding:20px 22px;
+  border:1px solid #dfe5ea;
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  background:#fbfaf6;
+}
+.formula-card span,.formula-card em{display:block;margin-top:7px}
+.formula-card em{color:#69788a;font-size:12px}
+.insight-aside{display:grid;gap:14px;position:sticky;top:102px}
+.insight-aside-card{
+  padding:22px;
+  border:1px solid #dfe5ea;
+  border-radius:12px;
+  background:#fff;
+  box-shadow:0 10px 28px rgba(7,26,54,.05);
+}
+.insight-aside-card h3{margin:8px 0 9px;font-size:21px}
+.insight-aside-card p{margin:0 0 14px;color:#65768a;font-size:12px;line-height:1.65}
+.insight-aside-card>a:not(.btn){display:block;padding:9px 0;border-bottom:1px solid #edf1f4;color:#29445f;font-size:12px;font-weight:700}
+.insight-related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.insight-related-card{
+  min-height:145px;
+  padding:20px;
+  border:1px solid #dfe5ea;
+  border-radius:12px;
+  background:#fff;
+}
+.insight-related-card span{display:block;color:#9a6b12;font-size:9px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.insight-related-card b{display:block;margin-top:9px;color:#173553;font-size:16px;line-height:1.35}
+
+.project-hero{
+  position:relative;
+  overflow:hidden;
+  padding:62px 0;
+  background:
+    linear-gradient(90deg,rgba(4,18,35,.95),rgba(7,37,66,.78)),
+    url("/assets/images/project-reverse.webp") center/cover no-repeat;
+  color:#fff;
+}
+.project-hero::after{content:"";position:absolute;right:6%;bottom:0;width:120px;height:5px;background:var(--gold)}
+.project-hero .container{position:relative;z-index:1}
+.project-hero h1{
+  margin:9px 0 14px;
+  max-width:880px;
+  color:#fff;
+  font-size:clamp(39px,4.8vw,64px);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+.project-hero p{max-width:780px;margin:0;color:#dbe6ef;font-size:15px;line-height:1.72}
+.project-hero .eyebrow{color:#efca72}
+
+.project-feature{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.72fr);
+  gap:40px;
+  align-items:center;
+}
+.project-feature>img{
+  width:100%;
+  height:330px;
+  max-height:330px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid #dfe5ea;
+  box-shadow:0 18px 42px rgba(7,26,54,.10);
+}
+.project-feature h2{margin:8px 0 13px;font-size:clamp(30px,3.2vw,44px);line-height:1.08}
+.project-feature p{color:#53667b;line-height:1.72}
+.project-feature .checks{padding-left:20px}
+.project-feature .checks li{margin:8px 0;color:#465b70;font-size:13px;line-height:1.55}
+
+@media(max-width:900px){
+  .insight-hero-grid,.insight-layout,.project-feature{grid-template-columns:1fr}
+  .insight-hero-grid>img{height:280px;max-height:280px}
+  .insight-aside{position:static}
+  .insight-related-grid{grid-template-columns:1fr 1fr}
+  .project-feature>img{height:280px;max-height:280px}
+}
+@media(max-width:620px){
+  .insight-hero,.project-hero{padding:46px 0}
+  .insight-hero h1,.project-hero h1{font-size:38px}
+  .insight-hero-grid>img,.project-feature>img{height:220px;max-height:220px;border-radius:10px}
+  .insight-related-grid{grid-template-columns:1fr}
+  .insight-layout{gap:28px}
+}
