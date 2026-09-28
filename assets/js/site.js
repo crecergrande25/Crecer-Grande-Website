@@ -6,7 +6,7 @@
     const path=(location.pathname||'/').toLowerCase();
     const isHome=(path==='/'||path==='/index.html');
     const isAdmin=path.includes('/admin/');
-    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/request-quote.html']);
+    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html']);
     const isPremium=premiumPages.has(path);
 
     document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
@@ -364,6 +364,59 @@
     injectHeaderStyles();
   }
 
+
+  function enhanceCreativeExperience(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/')) return;
+
+    const nav=$('.site-header .nav');
+    if(nav){
+      const seen=new Set();
+      [...nav.querySelectorAll('a[href]')].forEach(a=>{
+        const href=(a.getAttribute('href')||'').split('#')[0];
+        const key=href+'|'+(a.textContent||'').trim().toLowerCase();
+        if(seen.has(key)){a.remove();return}
+        seen.add(key);
+        const target=href.toLowerCase();
+        const active=(path===target) ||
+          (path==='/' && target==='/') ||
+          (path.startsWith('/divisions/') && target==='/divisions.html') ||
+          (path.startsWith('/projects/') && target==='/projects.html') ||
+          (path.startsWith('/insights/') && target==='/insights.html');
+        if(active){a.classList.add('active');a.setAttribute('aria-current','page')}
+      });
+    }
+
+    const heroSelectors='.pr-hero,.page-hero,.content-hero,.service-hero,.dv4-detail-hero,.ed5-hero,.am3-hero,.elite-detail-hero,.contact-v27-hero,.quote-v27-hero';
+    $(heroSelectors).forEach(hero=>hero.classList.add('cg-creative-hero'));
+
+    const motionTargets=$('main .section,main .pr-section,main .pr-card,main .visual-card,main .case-card,main .case-study-card,main .resource-card,main .insight-related-card,main .dv4-cap-grid article,main .ed5-cap-grid article');
+    motionTargets.forEach((el,i)=>{
+      el.classList.add('cg-reveal');
+      el.style.setProperty('--cg-reveal-delay',Math.min((i%5)*45,180)+'ms');
+    });
+    document.body.classList.add('cg-motion-ready');
+
+    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce && 'IntersectionObserver' in window){
+      const io=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}
+        });
+      },{rootMargin:'0px 0px -7% 0px',threshold:.06});
+      motionTargets.forEach(el=>io.observe(el));
+    }else{
+      motionTargets.forEach(el=>el.classList.add('is-visible'));
+    }
+
+    $('main img:not([loading])').forEach((img,i)=>{
+      const inHero=!!img.closest(heroSelectors);
+      if(!inHero) img.loading='lazy';
+      img.decoding='async';
+      if(i>0 && !img.fetchPriority) img.fetchPriority='low';
+    });
+  }
+
   function id(storageKey,storage){
     try{let v=storage.getItem(storageKey);if(!v){v=crypto.randomUUID?crypto.randomUUID():`${Date.now()}-${Math.random().toString(36).slice(2)}`;storage.setItem(storageKey,v)}return v}catch(_){return ''}
   }
@@ -388,6 +441,7 @@
     syncCommonFooter();
     removeDuplicateTerminalCta();
     normalizeFooter();
+    enhanceCreativeExperience();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
     const btn=$('.menu-btn'),nav=$('.nav');
