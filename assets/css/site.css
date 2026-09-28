@@ -768,3 +768,67 @@ main :is(.media,.pr-card-media,.case-photo,.project-media,.resource-media) img{
 @media(prefers-reduced-motion:reduce){
   .cg-motion-ready .cg-reveal{opacity:1!important;transform:none!important;transition:none!important}
 }
+
+
+/* ==========================================================================
+   CG GLOBAL TYPOGRAPHY + DARK FOOTER — 2026-09-28
+   One common font across every public page. Footer areas intentionally retain
+   the established Crecer Grande footer typography.
+   ========================================================================== */
+:root{
+  --cg-page-font:Arial,Helvetica,sans-serif;
+  --cg-footer-font:"Century Gothic",CenturyGothic,AppleGothic,"Segoe UI",Arial,sans-serif;
+}
+
+/* Common typography for all page content, navigation, forms, cards and headings */
+body,
+body *{
+  font-family:var(--cg-page-font)!important;
+}
+
+/* Keep footer typography independent from the rest of the site */
+footer,
+footer *,
+.cg-footer-cta,
+.cg-footer-cta *{
+  font-family:var(--cg-footer-font)!important;
+}
+
+/* Enforce the same dark footer treatment on legacy and current page templates */
+footer.footer,
+footer.footer-v22,
+footer.cg-footer,
+footer[class*="footer"]{
+  background:#020f20!important;
+  color:#c8d6e7!important;
+  border-top:1px solid rgba(255,255,255,.05)!important;
+}
+
+footer[class*="footer"] h1,
+footer[class*="footer"] h2,
+footer[class*="footer"] h3,
+footer[class*="footer"] h4,
+footer[class*="footer"] h5,
+footer[class*="footer"] h6{
+  color:#ffffff!important;
+}
+
+footer[class*="footer"] p,
+footer[class*="footer"] span,
+footer[class*="footer"] small{
+  color:#9fb1c7!important;
+}
+
+footer[class*="footer"] a{
+  color:#d7e2ef!important;
+}
+
+footer[class*="footer"] a:hover{
+  color:var(--gold)!important;
+}
+
+footer[class*="footer"] .footer-bottom,
+footer[class*="footer"] .cg-footer-bottom{
+  border-top-color:#24364d!important;
+  color:#9bb0c7!important;
+}
