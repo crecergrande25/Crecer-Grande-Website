@@ -21,7 +21,7 @@
     if(!document.querySelector('link[data-cg-body-polish]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/body-polish.css?v=1.0.0';
+      link.href='/assets/css/body-polish.css?v=1.1.0';
       link.dataset.cgBodyPolish='1';
       document.head.appendChild(link);
     }
@@ -51,7 +51,7 @@
     if(document.querySelector('link[data-cg-contrast-fix]')) return;
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='/assets/css/contrast-fix.css?v=1.0.0';
+    link.href='/assets/css/contrast-fix.css?v=1.1.0';
     link.dataset.cgContrastFix='1';
     document.head.appendChild(link);
   }
