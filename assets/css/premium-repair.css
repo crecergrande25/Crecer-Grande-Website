@@ -567,3 +567,83 @@
   .cg-pr-insights .pr-feature-grid .pr-card:first-child{grid-row:auto}
   .cg-pr-rfq .pr-panel{padding:22px}
 }
+
+
+/* =========================================================
+   CREATIVE CORE PASS v1.2 — flagship pages
+   ========================================================= */
+.cg-pr .pr-hero{
+  background:
+    linear-gradient(rgba(7,26,54,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(7,26,54,.022) 1px,transparent 1px),
+    radial-gradient(circle at 12% 18%,rgba(185,134,38,.09),transparent 30%),
+    linear-gradient(180deg,#fff 0%,#fbfaf7 100%);
+  background-size:52px 52px,52px 52px,auto,auto;
+}
+.cg-pr .pr-hero-media{isolation:isolate}
+.cg-pr .pr-hero-media::before{
+  content:"";position:absolute;z-index:3;inset:14px;pointer-events:none;
+  border-top:1px solid rgba(255,255,255,.72);
+  border-right:1px solid rgba(255,255,255,.32);
+}
+.cg-pr .pr-hero-media::after{
+  content:"";position:absolute;z-index:4;right:0;top:0;width:92px;height:7px;
+  background:linear-gradient(90deg,var(--pr-gold-bright),var(--pr-gold));
+}
+.cg-pr .pr-section-head{position:relative}
+.cg-pr .pr-section-head::before{
+  content:"";position:absolute;top:-18px;left:0;width:58px;height:3px;
+  background:linear-gradient(90deg,var(--pr-gold-bright),var(--pr-gold));
+}
+.cg-pr .pr-card{isolation:isolate}
+.cg-pr .pr-card::before{
+  content:"";position:absolute;z-index:3;left:0;top:0;bottom:0;width:0;
+  background:linear-gradient(180deg,var(--pr-gold-bright),var(--pr-gold));
+  transition:width .24s ease;pointer-events:none;
+}
+@media(hover:hover){.cg-pr a.pr-card:hover::before{width:3px}}
+.cg-pr .pr-step{transition:background .25s ease,transform .25s ease}
+@media(hover:hover){
+  .cg-pr .pr-step:hover{background:#fbfaf7;transform:translateY(-3px)}
+}
+.cg-pr-home .pr-hero-copy h1{font-size:clamp(58px,6vw,88px)}
+.cg-pr-home .pr-hero-media{min-height:590px}
+.cg-pr-home .pr-hero-media img{min-height:590px}
+.cg-pr-about .pr-story-media{position:relative}
+.cg-pr-about .pr-story-media::after{
+  content:"";position:absolute;left:18px;bottom:18px;width:110px;height:7px;background:var(--pr-gold-bright)
+}
+.cg-pr-divisions .pr-division-card:nth-child(even) .pr-card-body{background:#fbfaf7}
+.cg-pr-projects .pr-card:nth-child(3n+1) .pr-card-media{aspect-ratio:16/10.4}
+.cg-pr-projects .pr-card:nth-child(3n+2) .pr-card-media{aspect-ratio:16/8.7}
+.cg-pr-insights .pr-feature-grid .pr-card:first-child{box-shadow:0 20px 48px rgba(7,26,54,.10)}
+.cg-pr-insights .pr-article:nth-child(3n+2){background:#f8f5ee}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero{
+  background:
+    linear-gradient(rgba(7,26,54,.022) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(7,26,54,.022) 1px,transparent 1px),
+    radial-gradient(circle at 12% 18%,rgba(185,134,38,.09),transparent 30%),
+    linear-gradient(180deg,#fff 0%,#fbfaf7 100%)!important;
+  background-size:52px 52px,52px 52px,auto,auto!important;
+  color:var(--pr-text)!important;
+}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero h1{color:var(--pr-navy)!important}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero h1 em{color:var(--pr-gold)!important}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero p{color:var(--pr-text)!important}
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero .eyebrow{color:var(--pr-gold)!important}
+.cg-pr-contact .cg-contact-route-grid{counter-reset:cg-route}
+.cg-pr-contact .cg-contact-route-grid>a{position:relative;counter-increment:cg-route;overflow:hidden}
+.cg-pr-contact .cg-contact-route-grid>a::after{
+  content:"0" counter(cg-route);position:absolute;right:16px;top:11px;
+  color:rgba(14,42,71,.09);font:500 46px/1 Georgia,serif;
+}
+.cg-pr-rfq .pr-panel:first-child{border-top:4px solid var(--pr-gold)}
+@media(max-width:1050px){
+  .cg-pr-home .pr-hero-media,.cg-pr-home .pr-hero-media img{min-height:440px}
+}
+@media(max-width:720px){
+  .cg-pr .pr-section-head::before{top:-12px}
+  .cg-pr-home .pr-hero-copy h1{font-size:clamp(44px,12vw,60px)}
+  .cg-pr-home .pr-hero-media,.cg-pr-home .pr-hero-media img{min-height:340px}
+  .cg-pr-contact .cg-contact-route-grid>a::after{font-size:36px}
+}
