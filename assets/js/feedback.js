@@ -38,6 +38,12 @@ document.addEventListener('DOMContentLoaded',()=> {
     });
   });
 
+  form.querySelectorAll('[name="experience_words"]').forEach(input=>{
+    input.addEventListener('change',()=>{
+      if(input.checked) advanceSoon(240);
+    });
+  });
+
   form.querySelectorAll('[name="recommend_score"]').forEach(input=>{
     input.addEventListener('change',()=>{
       if(input.checked) advanceSoon(240);
