@@ -31,3 +31,21 @@
 .seo-note{padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff}.seo-note b{display:block}.seo-note span{display:block;margin-top:4px;color:#68778b;font-size:9px}
 @media(max-width:1050px){.content-hero-grid,.company-grid,.case-layout,.article-layout{grid-template-columns:1fr}.content-proof{grid-template-columns:repeat(4,1fr)}.principle-grid,.capability-map{grid-template-columns:repeat(2,1fr)}.case-study-grid,.resource-grid,.industry-grid-v26{grid-template-columns:repeat(2,1fr)}.case-aside,.article-aside{position:static}.registration-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.content-hero{padding:60px 0}.content-hero h1{font-size:40px}.content-proof,.principle-grid,.capability-map,.case-study-grid,.resource-grid,.industry-grid-v26,.registration-grid,.checklist{grid-template-columns:1fr}.company-visual img{height:300px}.case-meta,.flow-strip{grid-template-columns:1fr 1fr}.case-study-image{height:185px}}
+
+
+/* CG TOOL CARD MEDIA — 2026-09-28 */
+.cg-tool-card-media{
+  height:150px;
+  margin:-19px -19px 17px;
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:#e9eef3;
+}
+.cg-tool-card-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+.resource-card:hover .cg-tool-card-media img{transform:scale(1.04)}
+@media(max-width:680px){.cg-tool-card-media{height:175px}}
