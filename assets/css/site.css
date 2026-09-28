@@ -690,3 +690,81 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
   .route-media img,.visual-card .media img,.product-card img,.case-photo img,.lz-photo img,
   .p6-media img,.p6-custom-media img{transition:none!important;animation:none!important;transform:none!important}
 }
+
+
+/* =========================================================
+   CREATIVE FOUNDATION V3.0 — Industrial Editorial
+   Shared interaction and brand-detail layer.
+   ========================================================= */
+:root{
+  --cg-editorial-navy:#071a36;
+  --cg-editorial-blue:#163c62;
+  --cg-editorial-gold:#c59332;
+  --cg-editorial-paper:#f8f6f1;
+}
+.site-header{position:sticky;isolation:isolate}
+.site-header::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(197,147,50,.62) 22%,rgba(7,26,54,.12) 55%,transparent 100%);
+  pointer-events:none;
+}
+.nav>a:not(.quote-nav){position:relative}
+.nav>a:not(.quote-nav)::after{
+  content:"";position:absolute;left:50%;right:50%;bottom:1px;height:2px;
+  background:var(--cg-editorial-gold);transition:left .24s ease,right .24s ease;
+}
+.nav>a:not(.quote-nav):hover::after,.nav>a.active:not(.quote-nav)::after{left:0;right:0}
+.nav>a.active:not(.quote-nav){color:#8a631d!important}
+
+.cg-creative-hero{isolation:isolate}
+.cg-creative-hero::before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(7,26,54,.028) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(7,26,54,.028) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:linear-gradient(90deg,#000,transparent 74%);
+}
+.cg-motion-ready .cg-reveal{
+  opacity:0;transform:translateY(18px);
+  transition:opacity .58s cubic-bezier(.22,.61,.36,1) var(--cg-reveal-delay,0ms),
+             transform .58s cubic-bezier(.22,.61,.36,1) var(--cg-reveal-delay,0ms);
+}
+.cg-motion-ready .cg-reveal.is-visible{opacity:1;transform:none}
+
+main :is(.visual-card,.case-card,.case-study-card,.resource-card,.project-card,.insight-card,.pr-card){
+  position:relative;
+}
+main :is(.visual-card,.case-card,.case-study-card,.resource-card,.project-card,.insight-card,.pr-card)::after{
+  content:"";position:absolute;left:0;right:100%;bottom:0;height:3px;
+  background:linear-gradient(90deg,#c59332,#edc76f);
+  transition:right .34s ease;pointer-events:none;
+}
+@media(hover:hover){
+  main :is(.visual-card,.case-card,.case-study-card,.resource-card,.project-card,.insight-card,.pr-card):hover::after{right:0}
+}
+main :is(.media,.pr-card-media,.case-photo,.project-media,.resource-media){overflow:hidden}
+main :is(.media,.pr-card-media,.case-photo,.project-media,.resource-media) img{
+  transition:transform .55s cubic-bezier(.22,.61,.36,1),filter .4s ease;
+}
+@media(hover:hover){
+  main :is(.visual-card,.case-card,.case-study-card,.resource-card,.project-card,.insight-card,.pr-card):hover
+  :is(.media,.pr-card-media,.case-photo,.project-media,.resource-media) img{transform:scale(1.035)}
+}
+
+.cg-footer-cta{position:relative;overflow:hidden}
+.cg-footer-cta::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(244,176,0,.22),transparent 24%),
+    repeating-linear-gradient(135deg,rgba(255,255,255,.018) 0 1px,transparent 1px 18px);
+}
+.cg-footer-cta>*{position:relative;z-index:1}
+
+@media(max-width:760px){
+  .nav>a:not(.quote-nav)::after{display:none}
+  .cg-motion-ready .cg-reveal{transform:translateY(10px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .cg-motion-ready .cg-reveal{opacity:1!important;transform:none!important;transition:none!important}
+}
