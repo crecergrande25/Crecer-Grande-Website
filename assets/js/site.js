@@ -458,3 +458,95 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true});
   else boot();
 })();
+
+/* ==========================================================================
+   CG UNIQUE HERO ART MAP — 2026-09-28
+   One relevant, non-repeated hero photograph per active public page.
+   ========================================================================== */
+(() => {
+  const HERO_ART = {
+    "/": "/assets/images/hero-collage.webp",
+    "/index.html": "/assets/images/hero-collage.webp",
+    "/about.html": "/assets/images/resource-engineering-v23.webp",
+    "/services.html": "/assets/images/manufacturing.webp",
+    "/divisions.html": "/assets/images/hero-engineering.webp",
+    "/projects.html": "/assets/images/project-reverse.webp",
+    "/insights.html": "/assets/images/quality.webp",
+    "/industries.html": "/assets/images/div-manufacturing-v23.webp",
+    "/engineering-desk.html": "/assets/images/process-drawing-v23.webp",
+    "/contact.html": "/assets/images/showroom.webp",
+    "/request-quote.html": "/assets/images/process-cad-v23.webp",
+    "/estimate.html": "/assets/images/resource-products-v23.webp",
+    "/404.html": "/assets/images/process-supply-v23.webp",
+    "/privacy.html": "/assets/images/resource-quality-v23.webp",
+    "/disclaimer.html": "/assets/images/process-validate-v23.webp",
+
+    "/3d-printing-kolkata.html": "/assets/images/printing.webp",
+    "/business-support-compliance-kolkata.html": "/assets/images/tender.webp",
+    "/custom-machine-spares.html": "/assets/images/prod-custom-spares-v23.webp",
+    "/design-job-work.html": "/assets/images/design.webp",
+    "/gem-tender-support-kolkata.html": "/assets/images/div-tender-v23b.webp",
+    "/industrial-automation-kolkata.html": "/assets/images/prod-automation-v22.webp",
+    "/industrial-inspection-qa-kolkata.html": "/assets/images/div-inspection-v23.webp",
+    "/industrial-machine-maintenance-kolkata.html": "/assets/images/maintenance.webp",
+    "/iso-9001-consultant-kolkata.html": "/assets/images/div-quality-v23.webp",
+    "/laser-cutting-kolkata.html": "/assets/images/service-laser-cutting.webp",
+    "/laser-marking-kolkata.html": "/assets/images/service-laser-marking.webp",
+    "/mechanical-design-services-kolkata.html": "/assets/images/div-engineering-v23.webp",
+    "/reverse-engineering-kolkata.html": "/assets/images/service-reverse-engineering.webp",
+    "/sheet-metal-bending-kolkata.html": "/assets/images/prod-bending-v23.webp",
+
+    "/divisions/advanced-manufacturing.html": "/assets/images/cg-advanced-manufacturing.webp",
+    "/divisions/automation-solutions.html": "/assets/images/resource-automation-v23.webp",
+    "/divisions/business-support-compliance.html": "/assets/images/sourcing.webp",
+    "/divisions/engineering-design.html": "/assets/images/process-cad-v23b.webp",
+    "/divisions/inspection-testing.html": "/assets/images/resource-inspection-v23.webp",
+    "/divisions/machine-maintenance.html": "/assets/images/div-maintenance-v23.webp",
+    "/divisions/quality-management-systems.html": "/assets/images/div-quality-v23b.webp",
+    "/divisions/tender-business-development.html": "/assets/images/resource-tender-v23.webp",
+
+    "/insights/3d-printing-file-formats.html": "/assets/images/prod-3d.webp",
+    "/insights/3d-printing-tolerances.html": "/assets/images/prod-3d-v23.webp",
+    "/insights/chiller-pump-equivalent-selection.html": "/assets/images/prod-pump-v23b.webp",
+    "/insights/cnc-vmc-speeds-feeds-basics.html": "/assets/images/prod-cnc-v23.webp",
+    "/insights/gdt-datum-basics.html": "/assets/images/process-verify-v23.webp",
+    "/insights/holes-near-sheet-metal-bends.html": "/assets/images/prod-bending.webp",
+    "/insights/identify-laser-consumables.html": "/assets/images/laser-consumables-sprite.webp",
+    "/insights/laser-cutting-defects.html": "/assets/images/laser.webp",
+    "/insights/laser-nozzle-focus-basics.html": "/assets/images/laser-components.webp",
+    "/insights/machine-breakdown-data-checklist.html": "/assets/images/resource-maintenance-v23.webp",
+    "/insights/metric-tap-drill-clearance-hole-chart.html": "/assets/images/am-approved-machined.webp",
+    "/insights/ncr-rca-capa-guide.html": "/assets/images/process-validate-v23b.webp",
+    "/insights/preventive-maintenance-basics.html": "/assets/images/process-maintain-v23.webp",
+    "/insights/sheet-metal-bending-basics.html": "/assets/images/am-approved-bracket.webp",
+    "/insights/stainless-steel-handling.html": "/assets/images/am-approved-enclosure.webp",
+    "/insights/surface-roughness-ra-rz.html": "/assets/images/div-inspection-v23b.webp",
+    "/insights/vernier-caliper-guide.html": "/assets/images/process-verify-v23b.webp",
+
+    "/projects/3d-print-fai-batch.html": "/assets/images/service-3d-printing.webp",
+    "/projects/co2-laser-components-support.html": "/assets/images/project-co2-v23b.webp",
+    "/projects/custom-keychain-laser-marking.html": "/assets/images/project-keychain-v23.webp",
+    "/projects/fit-correction-replacement-component.html": "/assets/images/process-cad.webp",
+    "/projects/laser-chiller-pump-replacement.html": "/assets/images/project-chiller-v23b.webp",
+    "/projects/laser-machine-rca.html": "/assets/images/service-maintenance.webp",
+    "/projects/precision-marked-components.html": "/assets/images/project-qr-v23b.webp",
+    "/projects/qms-audit-readiness.html": "/assets/images/process-followup-v23.webp",
+    "/projects/ss304-qr-code-laser-marking.html": "/assets/images/project-qr.webp"
+  };
+
+  function applyUniqueHeroArt(){
+    if(!document.body) return;
+    let path=(location.pathname||"/").toLowerCase();
+    if(path.length>1 && path.endsWith("/")) path=path.slice(0,-1);
+    const image=HERO_ART[path];
+    if(!image) return;
+    document.body.style.setProperty("--cg-hero-art", `url("${image}")`);
+    document.body.dataset.cgHeroArt=image;
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",applyUniqueHeroArt,{once:true});
+  } else {
+    applyUniqueHeroArt();
+  }
+})();
