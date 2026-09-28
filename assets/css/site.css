@@ -1011,7 +1011,7 @@ footer[class*="footer"] .cg-footer-bottom{
   padding:62px 0;
   background:
     linear-gradient(90deg,rgba(4,18,35,.95),rgba(7,37,66,.78)),
-    url("/assets/images/project-reverse.webp") center/cover no-repeat;
+    var(--cg-project-art,url("/assets/images/project-reverse.webp")) center/cover no-repeat;
   color:#fff;
 }
 .project-hero::after{content:"";position:absolute;right:6%;bottom:0;width:120px;height:5px;background:var(--gold)}
