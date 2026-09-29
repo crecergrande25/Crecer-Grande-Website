@@ -1,0 +1,42 @@
+/* Crecer Grande Botcha Virtual Assistant v2.0 */
+.ask.cg-botcha{position:fixed;right:22px;bottom:22px;z-index:140;font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important}
+.cg-botcha-launcher{display:flex;align-items:center;gap:10px;min-height:58px;padding:7px 14px 7px 8px;border:1px solid rgba(226,177,55,.42);border-radius:999px;background:linear-gradient(135deg,#071a36,#0d355d);color:#fff;box-shadow:0 18px 48px rgba(3,20,42,.30);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.cg-botcha-launcher:hover{transform:translateY(-2px);box-shadow:0 22px 56px rgba(3,20,42,.36)}
+.cg-botcha-launcher .cg-botcha-mark,.cg-botcha-head .cg-botcha-mark{display:grid;place-items:center;flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f4bd37,#c99121);color:#071a36!important;font-size:17px;font-weight:900;box-shadow:inset 0 0 0 1px rgba(255,255,255,.48)}
+.cg-botcha-launch-copy{display:grid;text-align:left;line-height:1.16}.cg-botcha-launch-copy b{color:#fff!important;font-size:13px;font-weight:800}.cg-botcha-launch-copy small{margin-top:3px;color:#cbd8e5!important;font-size:8px;font-weight:700;letter-spacing:.035em}
+.cg-botcha-live-dot{width:8px;height:8px;margin-left:2px;border-radius:50%;background:#70d49d;box-shadow:0 0 0 4px rgba(112,212,157,.12);animation:botchaPulse 2s infinite}
+@keyframes botchaPulse{50%{box-shadow:0 0 0 8px rgba(112,212,157,0)}}
+
+.cg-botcha-chat{position:absolute;right:0;bottom:72px;display:none;flex-direction:column;width:min(440px,calc(100vw - 30px));height:min(680px,calc(100vh - 112px));overflow:hidden;border:1px solid rgba(7,26,54,.13);border-radius:18px;background:#f8f6f1;box-shadow:0 32px 90px rgba(2,15,34,.34);transform-origin:bottom right}
+.cg-botcha-chat.open{display:flex;animation:botchaOpen .22s ease both}
+@keyframes botchaOpen{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:none}}
+.cg-botcha-head{display:flex;align-items:center;gap:11px;min-height:78px;padding:14px 15px;background:radial-gradient(circle at 85% 0,rgba(244,176,0,.18),transparent 28%),linear-gradient(135deg,#06182f,#0d3459);color:#fff}
+.cg-botcha-head-copy{min-width:0;flex:1}.cg-botcha-head-copy h3{margin:0;color:#fff!important;font-size:17px;font-weight:800;letter-spacing:-.01em}.cg-botcha-head-copy p{display:flex;align-items:center;gap:6px;margin:3px 0 0;color:#c9d6e3!important;font-size:9px;font-weight:700}.cg-botcha-head-copy p::before{content:"";width:6px;height:6px;border-radius:50%;background:#70d49d}
+.cg-botcha-ai-badge{padding:5px 7px;border:1px solid rgba(238,190,72,.30);border-radius:999px;background:rgba(238,190,72,.10);color:#f1ca6e!important;font-size:8px;font-weight:900;letter-spacing:.08em}
+.cg-botcha-close{display:grid;place-items:center;width:34px;height:34px;padding:0;border:1px solid rgba(255,255,255,.16);border-radius:50%;background:rgba(255,255,255,.06);color:#fff!important;font-size:18px;line-height:1;cursor:pointer}.cg-botcha-close:hover{background:rgba(255,255,255,.13)}
+.cg-botcha-context{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 14px;border-bottom:1px solid #e3ddd2;background:#fff;color:#69788a!important;font-size:9px}.cg-botcha-context strong{color:#213a55!important}.cg-botcha-status{color:#5f7184!important;font-weight:800}
+
+.cg-botcha-messages{flex:1;min-height:0;overflow:auto;padding:18px 14px 8px;scrollbar-width:thin;overscroll-behavior:contain}
+.cg-botcha-message{display:flex;gap:8px;align-items:flex-start;margin:0 0 13px}.cg-botcha-message.is-user{flex-direction:row-reverse}
+.cg-botcha-avatar{display:grid;place-items:center;flex:0 0 27px;width:27px;height:27px;border-radius:50%;background:#d7a52a;color:#071a36!important;font-size:10px;font-weight:900}.cg-botcha-message.is-user .cg-botcha-avatar{background:#dfe5eb;color:#36506b!important}
+.cg-botcha-bubble{max-width:83%;padding:11px 12px;border:1px solid #e2ddd3;border-radius:3px 14px 14px 14px;background:#fff;color:#20364e!important;box-shadow:0 6px 18px rgba(7,26,54,.045)}
+.cg-botcha-message.is-user .cg-botcha-bubble{border-color:#0d3154;border-radius:14px 3px 14px 14px;background:#0d3154;color:#fff!important}
+.cg-botcha-bubble p{margin:0 0 7px;color:inherit!important;font-size:11px;line-height:1.58}.cg-botcha-bubble p:last-of-type{margin-bottom:0}
+.cg-botcha-answer-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;padding-top:9px;border-top:1px solid #ece7dd}.cg-botcha-answer-links a{display:inline-flex!important;margin:0!important;padding:6px 8px!important;border:1px solid #d9d2c5;border-radius:999px!important;background:#fbfaf7!important;color:#12375b!important;font-size:9px!important;font-weight:800!important}.cg-botcha-answer-links a:hover{border-color:#c5952c;background:#fff7df!important}
+.cg-botcha-answer-meta{display:block;margin-top:8px;color:#8190a0!important;font-size:8px!important;font-weight:700}
+.cg-botcha-typing .cg-botcha-bubble{display:flex;gap:4px;align-items:center;min-width:48px;padding:13px}.cg-botcha-typing span{width:6px;height:6px;border-radius:50%;background:#8c9aa9;animation:botchaDots 1s infinite ease-in-out}.cg-botcha-typing span:nth-child(2){animation-delay:.12s}.cg-botcha-typing span:nth-child(3){animation-delay:.24s}@keyframes botchaDots{0%,70%,100%{transform:translateY(0);opacity:.45}35%{transform:translateY(-4px);opacity:1}}
+
+.cg-botcha-quick{display:flex;gap:6px;overflow-x:auto;padding:8px 14px 10px;scrollbar-width:none}.cg-botcha-quick::-webkit-scrollbar{display:none}.cg-botcha-chip{flex:0 0 auto;max-width:230px;padding:7px 9px;border:1px solid #d9d3c8;border-radius:999px;background:#fff;color:#24405d!important;font-size:9px;font-weight:800;white-space:nowrap;cursor:pointer}.cg-botcha-chip:hover{border-color:#bd8b24;background:#fff9e8}
+.cg-botcha-form{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end;padding:11px 12px;border-top:1px solid #ded8ce;background:#fff}.cg-botcha-input{width:100%;min-height:44px;max-height:104px;padding:12px 12px;border:1px solid #d8d2c7;border-radius:12px;background:#fbfaf7;color:#102c4d!important;font-size:11px;line-height:1.45;resize:none;outline:none}.cg-botcha-input::placeholder{color:#83909d!important;opacity:1}.cg-botcha-input:focus{border-color:#bc8924;box-shadow:0 0 0 3px rgba(188,137,36,.10)}
+.cg-botcha-send{display:grid;place-items:center;width:44px;height:44px;padding:0;border:0;border-radius:12px;background:#e9b22b;color:#071a36!important;font-size:18px;font-weight:900;cursor:pointer}.cg-botcha-send:disabled{opacity:.5;cursor:wait}
+.cg-botcha-foot{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;padding:8px 12px 10px;background:#fff;color:#7a8998!important;font-size:8px;line-height:1.35}.cg-botcha-foot a{color:#0c4f79!important;font-weight:900}.cg-botcha-foot span{text-align:right;color:#7a8998!important}
+
+@media(max-width:760px){
+  .ask.cg-botcha{right:12px;bottom:12px}
+  .cg-botcha-launcher{min-height:52px;padding-right:11px}.cg-botcha-launcher .cg-botcha-mark{width:36px;height:36px}
+  .cg-botcha-launch-copy small{display:none}
+  .cg-botcha-chat{position:fixed;left:10px;right:10px;bottom:72px;width:auto;height:min(72vh,650px);border-radius:15px;transform-origin:bottom center}
+  .cg-botcha-head{min-height:70px}.cg-botcha-ai-badge{display:none}
+  .cg-botcha-bubble{max-width:88%}
+}
+@media(prefers-reduced-motion:reduce){.cg-botcha-chat.open,.cg-botcha-live-dot,.cg-botcha-typing span{animation:none!important}}
