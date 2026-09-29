@@ -38,11 +38,18 @@ document.addEventListener('DOMContentLoaded',()=> {
     });
   });
 
-  form.querySelectorAll('[name="experience_words"]').forEach(input=>{
-    input.addEventListener('change',()=>{
-      if(input.checked) advanceSoon(240);
+  const wordInputs=[...form.querySelectorAll('[name="experience_words"]')];
+  const wordCount=document.getElementById('fb-word-count');
+  const updateWordCount=()=>{
+    const selected=wordInputs.filter(x=>x.checked).length;
+    if(wordCount) wordCount.textContent=selected+' / 3 selected';
+    wordInputs.forEach(x=>{
+      x.disabled=!x.checked && selected>=3;
+      x.closest('label')?.classList.toggle('is-disabled',x.disabled);
     });
-  });
+  };
+  wordInputs.forEach(input=>input.addEventListener('change',updateWordCount));
+  updateWordCount();
 
   form.querySelectorAll('[name="recommend_score"]').forEach(input=>{
     input.addEventListener('change',()=>{
@@ -57,6 +64,11 @@ document.addEventListener('DOMContentLoaded',()=> {
       if(current===0 && !form.querySelector('[name="overall_rating"]:checked')){
         status.className='fb-status error';
         status.textContent='Please choose the face that best matches your experience.';
+        return;
+      }
+      if(current===1 && !form.querySelector('[name="experience_words"]:checked')){
+        status.className='fb-status error';
+        status.textContent='Please choose at least one word before continuing.';
         return;
       }
       show(current+1);
