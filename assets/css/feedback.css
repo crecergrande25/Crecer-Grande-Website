@@ -75,3 +75,37 @@
   font-weight:700;
   text-align:right;
 }
+
+
+/* Feedback multi-select refinements v1.1.1 */
+.cg-feedback-page .fb-multi-meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  margin-top:16px;
+  padding-top:12px;
+  border-top:1px solid #ebe6dc;
+}
+.cg-feedback-page .fb-multi-meta span{
+  color:#102c4d!important;
+  font-size:11px;
+  font-weight:800;
+}
+.cg-feedback-page .fb-multi-meta small{
+  color:#69798b!important;
+  font-size:10px;
+}
+.cg-feedback-page .fb-chip-grid label.is-disabled{
+  opacity:.42;
+}
+.cg-feedback-page .fb-chip-grid label.is-disabled span{
+  cursor:not-allowed!important;
+}
+@media(max-width:600px){
+  .cg-feedback-page .fb-multi-meta{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:4px;
+  }
+}
