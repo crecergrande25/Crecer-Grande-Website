@@ -1,0 +1,310 @@
+/* =========================================================
+   CRECER GRANDE COMPACT LAYOUT v1.0
+   Density correction only — no structural redesign.
+   Loads after legacy/template styles via site.js.
+   ========================================================= */
+
+:root{--max:1360px}
+
+/* Shared desktop canvas */
+@media(min-width:761px){
+  .container{
+    width:min(1360px,calc(100% - 36px))!important;
+    margin-inline:auto!important;
+  }
+
+  .navrow{
+    min-height:70px!important;
+    gap:18px!important;
+  }
+
+  .section{
+    padding:58px 0!important;
+  }
+  .section-head{
+    gap:24px!important;
+    margin-bottom:24px!important;
+  }
+
+  .page-hero,
+  .content-hero,
+  .service-hero,
+  .project-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .ed-hero,
+  .elite-hero,
+  .elite-detail-hero{
+    padding-top:56px!important;
+    padding-bottom:56px!important;
+  }
+
+  .hero{
+    min-height:570px!important;
+  }
+  .hero-inner{
+    padding:64px 0!important;
+  }
+
+  .cta{
+    padding:52px 0!important;
+  }
+
+  /* Premium flagship pages */
+  .cg-pr .pr-container,
+  .cg-pr-contact .tv4-contact-hero-grid,
+  .cg-pr-contact .section>.container{
+    width:min(1360px,calc(100% - 36px))!important;
+    margin-inline:auto!important;
+  }
+  .cg-pr .pr-section,
+  .cg-pr-contact .section{
+    padding:56px 0!important;
+  }
+  .cg-pr .pr-hero{
+    padding:52px 0 58px!important;
+  }
+  .cg-pr .pr-hero.pr-compact{
+    min-height:auto!important;
+    padding:48px 0!important;
+  }
+  .cg-pr .pr-hero-media,
+  .cg-pr .pr-hero-media img,
+  .cg-pr-contact .tv4-contact-visual,
+  .cg-pr-contact .tv4-contact-visual img{
+    min-height:460px!important;
+    height:460px!important;
+  }
+  .cg-pr-home .pr-hero-media,
+  .cg-pr-home .pr-hero-media img{
+    min-height:500px!important;
+    height:500px!important;
+  }
+  .cg-pr-about .pr-story-media,
+  .cg-pr-about .pr-story-media img{
+    min-height:450px!important;
+  }
+
+  /* Current detail-page system */
+  body.cg-body-polish main .container,
+  body.cg-body-polish .breadcrumbs .container{
+    width:min(1320px,calc(100% - 36px))!important;
+  }
+  body.cg-body-polish main .section,
+  body.cg-body-polish.cg-body-division-detail main .dv4-detail-story,
+  body.cg-body-polish.cg-body-division-detail main .dv4-cap-section,
+  body.cg-body-polish.cg-body-division-detail main .dv4-detail-process{
+    padding:54px 0!important;
+  }
+  body.cg-body-polish main :is(
+    .about-premium-hero,.svc-premium-hero,.dv4-hub-hero,.contact-v27-hero,
+    .quote-v27-hero,.service-hero,.dv4-detail-hero
+  ){
+    padding-top:54px!important;
+    padding-bottom:54px!important;
+  }
+  body.cg-body-polish main :is(.page-hero,.content-hero){
+    min-height:390px!important;
+    padding:52px 0!important;
+  }
+  body.cg-body-polish.cg-body-service-detail main :is(.page-hero,.service-hero,.content-hero),
+  body.cg-body-polish.cg-body-project-detail main :is(.page-hero,.project-hero,.content-hero),
+  body.cg-body-polish.cg-body-insight-detail main :is(.page-hero,.insight-hero,.content-hero){
+    min-height:410px!important;
+  }
+  body.cg-body-polish.cg-body-service-detail main .service-hero{
+    min-height:430px!important;
+  }
+
+  /* Older precision/V5 pages — remove the double-width restriction */
+  body.cg-v5 .site-header .navrow,
+  body.cg-v5 .breadcrumbs,
+  body.cg-v5 .cg-footer-cta,
+  body.cg-v5 .cg-footer{
+    width:min(1360px,calc(100% - 32px))!important;
+  }
+  body.cg-v5 main{
+    width:min(1360px,calc(100% - 32px))!important;
+    margin:14px auto 28px!important;
+  }
+  body.cg-v5 .container,
+  body.cg-v5 :is(.page-hero,.content-hero,.project-hero,.resource-hero,.insight-hero,.industries-hero) .container{
+    width:min(1280px,calc(100% - 44px))!important;
+    max-width:none!important;
+  }
+  body.cg-v5 .section,
+  body.cg-v5 .ab6-section,
+  body.cg-page-service-detail .section{
+    padding:52px 0!important;
+  }
+  body.cg-v5 :is(.page-hero,.content-hero,.project-hero,.resource-hero,.insight-hero,.industries-hero){
+    min-height:430px!important;
+    padding:50px 0!important;
+  }
+  body.cg-page-about .ab6-hero,
+  body.cg-page-about .ab6-hero-inner{
+    min-height:500px!important;
+  }
+  body.cg-page-about .ab6-hero-inner{
+    padding-top:42px!important;
+  }
+  body.cg-page-divisions .dv4-hub-hero,
+  body.cg-page-engineering-desk .page-hero.tech-bg,
+  body.cg-page-rfq .quote-v27-hero{
+    min-height:450px!important;
+    padding-top:52px!important;
+    padding-bottom:52px!important;
+  }
+  body.cg-page-service-detail .service-hero,
+  body.cg-page-service-detail .print3d-hero,
+  body.cg-page-service-detail .design-hero,
+  body.cg-page-division-detail .dv4-detail-hero{
+    min-height:470px!important;
+    padding-top:54px!important;
+    padding-bottom:54px!important;
+  }
+
+  /* Division / capability families */
+  .elite-section,
+  .ed-section,
+  .dv4-hub-map,
+  .dv4-detail-story,
+  .dv4-cap-section,
+  .dv4-detail-process{
+    padding-top:54px!important;
+    padding-bottom:54px!important;
+  }
+  .am2-hero,
+  .am2-hero-inner{
+    min-height:500px!important;
+  }
+  .am3-hero,
+  .am3-hero-inner{
+    min-height:530px!important;
+  }
+  .am3-hero-inner{
+    padding-top:54px!important;
+    padding-bottom:48px!important;
+  }
+  .dv4-hub-visual{
+    min-height:450px!important;
+  }
+  .dv4-detail-visual,
+  .dv4-story-media,
+  .dv4-process-image{
+    min-height:450px!important;
+  }
+
+  /* Feedback page: it was one of the narrowest layouts */
+  .fb-shell,
+  .fb-wrap{
+    width:min(1180px,calc(100% - 36px))!important;
+  }
+  .fb-hero{
+    padding:68px 0 60px!important;
+  }
+  .fb-wrap{
+    padding:40px 0 64px!important;
+  }
+  .fb-step{
+    padding:36px!important;
+  }
+  #feedback-form{
+    min-height:470px!important;
+  }
+
+  /* Tighter grids without changing their structure */
+  .route-grid,
+  .visual-card-grid,
+  .case-grid,
+  .product-grid,
+  .family-grid{
+    gap:14px!important;
+  }
+
+  /* Footer density */
+  .cg-footer{
+    padding:44px 0 18px!important;
+  }
+  .cg-footer-grid{
+    gap:30px!important;
+  }
+  .cg-footer-bottom{
+    margin-top:24px!important;
+    padding-top:14px!important;
+  }
+  .footer{
+    padding:44px 0 18px!important;
+  }
+  .footer-bottom{
+    margin-top:24px!important;
+  }
+}
+
+/* Large screens get more usable width without becoming edge-to-edge. */
+@media(min-width:1440px){
+  .container,
+  .cg-pr .pr-container,
+  .cg-pr-contact .tv4-contact-hero-grid,
+  .cg-pr-contact .section>.container{
+    width:min(1400px,calc(100% - 48px))!important;
+  }
+  body.cg-body-polish main .container,
+  body.cg-body-polish .breadcrumbs .container{
+    width:min(1360px,calc(100% - 48px))!important;
+  }
+  body.cg-v5 .site-header .navrow,
+  body.cg-v5 .breadcrumbs,
+  body.cg-v5 main,
+  body.cg-v5 .cg-footer-cta,
+  body.cg-v5 .cg-footer{
+    width:min(1400px,calc(100% - 48px))!important;
+  }
+  body.cg-v5 .container,
+  body.cg-v5 :is(.page-hero,.content-hero,.project-hero,.resource-hero,.insight-hero,.industries-hero) .container{
+    width:min(1320px,calc(100% - 56px))!important;
+  }
+}
+
+/* Tablet/mobile: compact vertically, preserve safe side gutters. */
+@media(max-width:760px){
+  .container,
+  .cg-pr .pr-container,
+  body.cg-body-polish main .container,
+  body.cg-body-polish .breadcrumbs .container{
+    width:min(100% - 28px,1360px)!important;
+  }
+  .section,
+  .cg-pr .pr-section,
+  .cg-pr-contact .section,
+  body.cg-body-polish main .section,
+  .elite-section,
+  .ed-section{
+    padding-top:44px!important;
+    padding-bottom:44px!important;
+  }
+  .section-head{
+    margin-bottom:20px!important;
+  }
+  .page-hero,
+  .content-hero,
+  .service-hero,
+  .project-hero,
+  .contact-v27-hero,
+  .quote-v27-hero,
+  .cg-pr .pr-hero,
+  .fb-hero{
+    padding-top:46px!important;
+    padding-bottom:44px!important;
+  }
+  .fb-wrap{
+    padding-top:32px!important;
+    padding-bottom:50px!important;
+  }
+  .fb-step{
+    padding:24px 18px!important;
+  }
+  .cg-footer{
+    padding-top:38px!important;
+  }
+}
