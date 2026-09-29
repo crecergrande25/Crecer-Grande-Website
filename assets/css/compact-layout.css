@@ -738,3 +738,330 @@
     --cg-radius-xl:18px;
   }
 }
+
+
+/* =========================================================
+   THREE PAGE REPAIR v1.5
+   Industries / Custom Machine Spares / Reverse Engineering
+   Fixes oversized media, uneven grids and contrast conflicts.
+   ========================================================= */
+
+/* ---------- Industries ---------- */
+body.cg-repair-industries main .content-hero{
+  min-height:auto!important;
+  padding:50px 0!important;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.985) 0%,rgba(255,255,255,.95) 52%,rgba(247,244,237,.84) 100%),
+    var(--cg-page-art,linear-gradient(135deg,#eef2f5,#dfe5ea)) center/cover no-repeat!important;
+  color:#102c4d!important;
+}
+body.cg-repair-industries main .content-hero-grid{
+  grid-template-columns:minmax(0,1.15fr) minmax(360px,.85fr)!important;
+  gap:34px!important;
+  align-items:center!important;
+}
+body.cg-repair-industries main .content-hero h1{
+  color:#102c4d!important;
+  max-width:16ch!important;
+  font-size:clamp(44px,4.5vw,64px)!important;
+  line-height:1.01!important;
+}
+body.cg-repair-industries main .content-hero h1 em{
+  color:#b77d13!important;
+}
+body.cg-repair-industries main .content-hero p{
+  color:#52657a!important;
+  max-width:68ch!important;
+}
+body.cg-repair-industries main .content-proof{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:10px!important;
+}
+body.cg-repair-industries main .content-proof>div{
+  min-height:88px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  padding:14px 15px!important;
+  border:1px solid #d6dde5!important;
+  background:rgba(255,255,255,.9)!important;
+  box-shadow:0 8px 20px rgba(7,26,54,.045)!important;
+}
+body.cg-repair-industries main .content-proof small{
+  color:#9a6808!important;
+}
+body.cg-repair-industries main .content-proof b{
+  color:#17324e!important;
+}
+
+/* Uniform card geometry; no oversized feature cards. */
+body.cg-repair-industries main .industry-grid-v26{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+body.cg-repair-industries main .industry-card-v26,
+body.cg-repair-industries main .industry-card-v26:first-child,
+body.cg-repair-industries main .industry-card-v26:nth-child(5){
+  grid-column:auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  min-height:0!important;
+  height:100%!important;
+  padding:0 0 18px!important;
+  background:#fff!important;
+  color:#17324e!important;
+  border:1px solid #dfe4e8!important;
+}
+body.cg-repair-industries main .industry-card-v26 .cv4-industry-media,
+body.cg-repair-industries main .industry-card-v26:first-child .cv4-industry-media,
+body.cg-repair-industries main .industry-card-v26:nth-child(5) .cv4-industry-media{
+  height:178px!important;
+  min-height:178px!important;
+}
+body.cg-repair-industries main .industry-card-v26 .cv4-industry-media img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+}
+body.cg-repair-industries main .industry-card-v26 h3{
+  color:#102c4d!important;
+  min-height:44px!important;
+  margin-top:6px!important;
+}
+body.cg-repair-industries main .industry-card-v26 p{
+  color:#586a7c!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+  flex:1 1 auto!important;
+}
+body.cg-repair-industries main .industry-card-v26 small{
+  color:#9a6808!important;
+}
+body.cg-repair-industries main .section,
+body.cg-repair-industries main .section.soft{
+  color:#17324e!important;
+}
+body.cg-repair-industries main .section h2,
+body.cg-repair-industries main .section h3{
+  color:#102c4d!important;
+}
+body.cg-repair-industries main .section p{
+  color:#586a7c!important;
+}
+
+/* ---------- Shared service-page repair ---------- */
+body.cg-repair-service main .service-hero{
+  min-height:auto!important;
+  padding:48px 0!important;
+  background:linear-gradient(135deg,#fff 0%,#fff 54%,#f5f1e8 54%,#f5f1e8 100%)!important;
+  color:#102c4d!important;
+}
+body.cg-repair-service main .service-hero-grid{
+  grid-template-columns:minmax(0,1fr) minmax(380px,.78fr)!important;
+  gap:34px!important;
+  align-items:center!important;
+}
+body.cg-repair-service main .service-hero h1{
+  color:#102c4d!important;
+  max-width:14ch!important;
+  font-size:clamp(44px,4.5vw,62px)!important;
+  line-height:1.01!important;
+}
+body.cg-repair-service main .service-hero p{
+  color:#52657a!important;
+  max-width:64ch!important;
+}
+body.cg-repair-service main .service-hero .eyebrow{
+  color:#a66f0c!important;
+}
+body.cg-repair-service main .service-visual{
+  width:100%!important;
+  max-width:560px!important;
+  justify-self:end!important;
+  background:#e8edf1!important;
+  border:1px solid #d6dde5!important;
+  box-shadow:0 16px 38px rgba(7,26,54,.09)!important;
+}
+body.cg-repair-service main .service-visual img{
+  display:block!important;
+  width:100%!important;
+  height:300px!important;
+  max-height:300px!important;
+  object-fit:cover!important;
+  opacity:1!important;
+}
+
+/* Original dark proof text was inheriting white into the new light hero. */
+body.cg-repair-service main .service-proof{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:10px!important;
+  max-width:560px!important;
+}
+body.cg-repair-service main .service-proof>div{
+  padding:12px 14px!important;
+  border:1px solid #d8dee4!important;
+  background:#f8f6f1!important;
+}
+body.cg-repair-service main .service-proof small{
+  color:#9a6808!important;
+}
+body.cg-repair-service main .service-proof b{
+  color:#17324e!important;
+}
+
+/* Make all light surfaces unambiguously readable. */
+body.cg-repair-service main .section,
+body.cg-repair-service main .section.soft{
+  color:#17324e!important;
+}
+body.cg-repair-service main .section:not(.dark-section) h2,
+body.cg-repair-service main .section:not(.dark-section) h3,
+body.cg-repair-service main .section:not(.dark-section) h4,
+body.cg-repair-service main :is(.scope-card,.method-step,.input-box){
+  color:#102c4d!important;
+}
+body.cg-repair-service main .section:not(.dark-section) p,
+body.cg-repair-service main :is(.scope-card,.method-step,.input-box) p,
+body.cg-repair-service main .input-box li{
+  color:#586a7c!important;
+}
+body.cg-repair-service main :is(.scope-card,.method-step,.input-box){
+  background:#fff!important;
+  border-color:#dfe4e8!important;
+}
+
+/* Consistent alignment across scope/method/input blocks. */
+body.cg-repair-service main .scope-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  align-items:stretch!important;
+}
+body.cg-repair-service main .scope-card{
+  min-height:150px!important;
+  height:100%!important;
+}
+body.cg-repair-service main .method-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:12px!important;
+  align-items:stretch!important;
+}
+body.cg-repair-service main .method-step{
+  height:100%!important;
+}
+body.cg-repair-service main .input-grid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+body.cg-repair-service main .input-box{
+  height:100%!important;
+}
+
+/* Gallery is supporting evidence, not the dominant content. */
+body.cg-repair-service main .cg-service-gallery{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  margin-top:20px!important;
+}
+body.cg-repair-service main .cg-service-gallery figure{
+  height:218px!important;
+  min-height:218px!important;
+  margin:0!important;
+}
+body.cg-repair-service main .cg-service-gallery figure img{
+  width:100%!important;
+  height:100%!important;
+  max-height:100%!important;
+  object-fit:cover!important;
+}
+body.cg-repair-service main .cg-service-gallery figcaption{
+  color:#fff!important;
+  background:linear-gradient(180deg,transparent 0%,rgba(3,17,31,.94) 48%)!important;
+}
+body.cg-repair-service main .cg-service-gallery figcaption b{
+  color:#fff!important;
+}
+body.cg-repair-service main .cg-service-gallery figcaption span{
+  color:#dce7ef!important;
+}
+
+/* Outcome strip gets an explicit dark surface so its light labels remain readable. */
+body.cg-repair-service main .cg-service-outcome-strip{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  margin-top:16px!important;
+  border-radius:14px!important;
+  overflow:hidden!important;
+  background:#071a36!important;
+  color:#fff!important;
+}
+body.cg-repair-service main .cg-service-outcome-strip>div{
+  min-height:90px!important;
+  padding:14px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  border-right:1px solid rgba(255,255,255,.16)!important;
+}
+body.cg-repair-service main .cg-service-outcome-strip>div:last-child{
+  border-right:0!important;
+}
+body.cg-repair-service main .cg-service-outcome-strip small{
+  color:#e2b344!important;
+}
+body.cg-repair-service main .cg-service-outcome-strip b{
+  color:#fff!important;
+}
+
+/* Buttons remain legible on the light service hero. */
+body.cg-repair-service main .service-hero .btn.primary{
+  background:#0e2a47!important;
+  border-color:#0e2a47!important;
+  color:#fff!important;
+}
+body.cg-repair-service main .service-hero .btn.outline{
+  background:#fff!important;
+  border-color:#bcc7d1!important;
+  color:#17324e!important;
+}
+
+@media(max-width:1000px){
+  body.cg-repair-industries main .content-hero-grid,
+  body.cg-repair-service main .service-hero-grid{
+    grid-template-columns:1fr!important;
+  }
+  body.cg-repair-industries main .industry-grid-v26{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  body.cg-repair-service main .service-visual{
+    justify-self:start!important;
+    max-width:680px!important;
+  }
+  body.cg-repair-service main .method-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
+@media(max-width:680px){
+  body.cg-repair-industries main .industry-grid-v26,
+  body.cg-repair-service main .scope-grid,
+  body.cg-repair-service main .method-grid,
+  body.cg-repair-service main .input-grid,
+  body.cg-repair-service main .cg-service-gallery,
+  body.cg-repair-service main .cg-service-outcome-strip{
+    grid-template-columns:1fr!important;
+  }
+  body.cg-repair-industries main .industry-card-v26 .cv4-industry-media,
+  body.cg-repair-service main .cg-service-gallery figure{
+    height:200px!important;
+    min-height:200px!important;
+  }
+  body.cg-repair-service main .service-visual img{
+    height:240px!important;
+    max-height:240px!important;
+  }
+  body.cg-repair-service main .cg-service-outcome-strip>div{
+    border-right:0!important;
+    border-bottom:1px solid rgba(255,255,255,.16)!important;
+  }
+}
