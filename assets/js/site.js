@@ -511,6 +511,19 @@
   }
   window.CGTrack=track;
 
+  function ensureCompactLayout(){
+    const path=(location.pathname||'/').toLowerCase();
+    if(path.includes('/admin/')) return;
+    let link=document.querySelector('link[data-cg-compact-layout]');
+    if(!link){
+      link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='/assets/css/compact-layout.css?v=1.0.0';
+      link.dataset.cgCompactLayout='1';
+      document.head.appendChild(link);
+    }
+  }
+
   function boot(){
     applyV5DesignSystem();
     applyContrastFix();
@@ -523,6 +536,7 @@
     normalizeAdminLogin();
     normalizeFeedbackTab();
     normalizeBotcha();
+    ensureCompactLayout();
     enhanceCreativeExperience();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
