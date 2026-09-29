@@ -376,34 +376,56 @@
     document.body.insertAdjacentHTML('beforeend',CG_FEEDBACK_TAB);
   }
 
-  const BOTCHA = `<div class="ask cg-botcha">
-    <button class="ask-btn cg-botcha-btn" type="button" aria-expanded="false" aria-controls="cg-botcha-panel">
+  const BOTCHA = `<div class="ask cg-botcha" data-botcha-root>
+    <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Open Botcha virtual assistant">
       <span class="cg-botcha-mark" aria-hidden="true">B</span>
-      <span>Botcha !</span>
+      <span class="cg-botcha-launch-copy"><b>Botcha !</b><small>AI virtual assistant</small></span>
+      <span class="cg-botcha-live-dot" aria-hidden="true"></span>
     </button>
-    <div class="ask-panel cg-botcha-panel" id="cg-botcha-panel" aria-label="Botcha quick help">
-      <div class="cg-botcha-head">
+    <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Botcha virtual assistant" aria-hidden="true">
+      <header class="cg-botcha-head">
         <span class="cg-botcha-mark" aria-hidden="true">B</span>
-        <div><small>CRECER GRANDE QUICK ROUTER</small><h3>Botcha !</h3></div>
-      </div>
-      <p>Tell us what you need to do. Choose the closest route and we’ll take you to the right starting point.</p>
-      <div class="cg-botcha-links">
-        <a href="/request-quote.html?requirement=Industrial%20Spare%20Identification"><b>Identify a Part</b><span>Photos, nameplate or part reference →</span></a>
-        <a href="/request-quote.html?requirement=Upload%20a%20Drawing"><b>Upload a Drawing</b><span>CAD, PDF or engineering sketch →</span></a>
-        <a href="/request-quote.html?requirement=Manufacture%20a%20Component"><b>Make a Component</b><span>Prototype, machining or fabrication →</span></a>
-        <a href="/request-quote.html?requirement=Machine%20Breakdown"><b>Machine Breakdown</b><span>Machine, alarm and symptom →</span></a>
-        <a href="/3d-printing-kolkata.html"><b>3D Printing</b><span>Prototype and production route →</span></a>
-        <a class="cg-botcha-primary" href="/request-quote.html"><b>Send Full Requirement</b><span>Start technical review →</span></a>
-      </div>
-    </div>
+        <div class="cg-botcha-head-copy"><h3>Botcha !</h3><p>Virtual engineering assistant</p></div>
+        <span class="cg-botcha-ai-badge">AI ASSIST</span>
+        <button class="cg-botcha-close" type="button" aria-label="Close Botcha">×</button>
+      </header>
+      <div class="cg-botcha-context"><strong>Ask about CG services, machines, drawings or quotations</strong><span class="cg-botcha-status">Online</span></div>
+      <div class="cg-botcha-messages" aria-live="polite" aria-relevant="additions text"></div>
+      <div class="cg-botcha-quick" aria-label="Suggested questions"></div>
+      <form class="cg-botcha-form">
+        <textarea class="cg-botcha-input" rows="1" maxlength="900" placeholder="Ask Botcha a question…" aria-label="Message Botcha"></textarea>
+        <button class="cg-botcha-send" type="submit" aria-label="Send message">→</button>
+      </form>
+      <footer class="cg-botcha-foot">
+        <a href="https://wa.me/916291001781" target="_blank" rel="noopener">Human help →</a>
+        <span>Guidance only. Final scope and technical commitments are reviewed by the CG team.</span>
+      </footer>
+    </section>
   </div>`;
+
+  function ensureBotchaAssets(){
+    if(!document.querySelector('link[data-cg-botcha-css]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='/assets/css/botcha.css?v=2.0.0';
+      link.dataset.cgBotchaCss='1';
+      document.head.appendChild(link);
+    }
+    if(!document.querySelector('script[data-cg-botcha-js]')){
+      const script=document.createElement('script');
+      script.src='/assets/js/botcha.js?v=2.0.0';
+      script.dataset.cgBotchaJs='1';
+      script.defer=true;
+      document.body.appendChild(script);
+    }
+  }
 
   function normalizeBotcha(){
     const path=(location.pathname||'/').toLowerCase();
     if(path.includes('/admin/')) return;
-    const existing=$('.ask');
-    if(existing) existing.outerHTML=BOTCHA;
-    else document.body.insertAdjacentHTML('beforeend',BOTCHA);
+    document.querySelectorAll('.ask').forEach(x=>x.remove());
+    document.body.insertAdjacentHTML('beforeend',BOTCHA);
+    ensureBotchaAssets();
   }
 
   function normalizeAdminLogin(){
@@ -507,9 +529,6 @@
     const btn=$('.menu-btn'),nav=$('.nav');
     btn?.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))});
     $$('.nav-group>button').forEach(b=>b.addEventListener('click',(e)=>{if(innerWidth<=1050){e.preventDefault();b.parentElement.classList.toggle('open')}}));
-    const ab=$('.ask-btn'),ap=$('.ask-panel');
-    ab?.addEventListener('click',()=>{const open=ap.classList.toggle('open');ab.setAttribute('aria-expanded',String(open))});
-    document.addEventListener('click',(e)=>{if(ap?.classList.contains('open')&&!e.target.closest('.ask')){ap.classList.remove('open');ab?.setAttribute('aria-expanded','false')}});
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
     document.addEventListener('click',(e)=>{const a=e.target.closest('a'); if(!a)return; if(/wa\.me/.test(a.href)) track('click_whatsapp',{href:a.href}); else if(a.href.startsWith('tel:')) track('click_phone',{href:a.href}); else if(a.href.startsWith('mailto:')) track('click_email',{href:a.href}); else if(/instagram\.com/.test(a.href)) track('outbound_instagram',{href:a.href});});
     setTimeout(()=>track('page_view'),300);
