@@ -1,0 +1,732 @@
+/* =========================================================
+   MACHINE MAINTENANCE DIVISION — REPAIR v1.0
+   Dedicated styles for /divisions/machine-maintenance.html
+   ========================================================= */
+
+body[data-division-slug="machine-maintenance"]{
+  background:#f6f4ef!important;
+  color:#17324e!important;
+}
+body[data-division-slug="machine-maintenance"] main{
+  overflow:hidden;
+}
+body[data-division-slug="machine-maintenance"] main .container{
+  width:min(1360px,calc(100% - 36px))!important;
+  margin-inline:auto!important;
+}
+body[data-division-slug="machine-maintenance"] main h1,
+body[data-division-slug="machine-maintenance"] main h2,
+body[data-division-slug="machine-maintenance"] main h3,
+body[data-division-slug="machine-maintenance"] main p,
+body[data-division-slug="machine-maintenance"] main li,
+body[data-division-slug="machine-maintenance"] main span,
+body[data-division-slug="machine-maintenance"] main b,
+body[data-division-slug="machine-maintenance"] main small{
+  font-family:'Century Gothic',CenturyGothic,AppleGothic,'Trebuchet MS',Arial,sans-serif!important;
+}
+body[data-division-slug="machine-maintenance"] .subhead,
+body[data-division-slug="machine-maintenance"] .eyebrow{
+  color:#b77d13!important;
+  font-size:10px!important;
+  font-weight:800!important;
+  letter-spacing:.14em!important;
+  text-transform:uppercase!important;
+}
+
+/* HERO */
+body[data-division-slug="machine-maintenance"] .mm5-hero{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:58px 0!important;
+  background:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),
+    radial-gradient(circle at 88% 12%,rgba(238,179,45,.16),transparent 28%),
+    linear-gradient(135deg,#041426 0%,#082642 58%,#0d365c 100%)!important;
+  background-size:48px 48px,48px 48px,auto,auto!important;
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-hero-grid{
+  position:relative!important;
+  z-index:1!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,.9fr) minmax(520px,1.1fr)!important;
+  gap:42px!important;
+  align-items:center!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-copy{
+  max-width:670px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-copy .eyebrow{
+  color:#f0bb3d!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-copy h1{
+  max-width:14ch!important;
+  margin:10px 0 18px!important;
+  color:#fff!important;
+  font-size:clamp(48px,5.2vw,72px)!important;
+  line-height:.99!important;
+  letter-spacing:-.045em!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-copy h1 em{
+  color:#e5aa28!important;
+  font-style:normal!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-copy>p{
+  max-width:63ch!important;
+  margin:0!important;
+  color:#d9e5ef!important;
+  font-size:15px!important;
+  line-height:1.72!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-actions{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  gap:10px!important;
+  margin-top:24px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-actions .btn{
+  min-height:48px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:0 18px!important;
+  border-radius:10px!important;
+  font-size:11px!important;
+  font-weight:800!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-hero .btn.primary{
+  border-color:#e3aa2d!important;
+  background:#e9b42e!important;
+  color:#071a36!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-hero .btn.outline{
+  border-color:rgba(255,255,255,.36)!important;
+  background:rgba(255,255,255,.08)!important;
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-status-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:1px!important;
+  margin-top:24px!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  border-radius:14px!important;
+  background:rgba(255,255,255,.12)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-status-grid>div{
+  min-height:82px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  padding:13px 14px!important;
+  background:rgba(3,20,38,.68)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-status-grid b{
+  color:#f1bf4c!important;
+  font-size:12px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-status-grid span{
+  margin-top:4px!important;
+  color:#d2e1ed!important;
+  font-size:9px!important;
+  line-height:1.45!important;
+}
+
+body[data-division-slug="machine-maintenance"] .mm5-visual{
+  position:relative!important;
+  min-height:480px!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:20px!important;
+  background:#071a36!important;
+  box-shadow:0 26px 64px rgba(0,0,0,.26)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-main{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  border-radius:0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-visual::after{
+  content:""!important;
+  position:absolute!important;
+  inset:48% 0 0!important;
+  background:linear-gradient(180deg,transparent,rgba(3,16,30,.88))!important;
+  pointer-events:none!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-small{
+  position:absolute!important;
+  z-index:2!important;
+  top:18px!important;
+  right:18px!important;
+  width:38%!important;
+  height:138px!important;
+  overflow:hidden!important;
+  border:1px solid rgba(255,255,255,.5)!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.22)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-small img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  border-radius:0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-caption{
+  position:absolute!important;
+  z-index:3!important;
+  left:20px!important;
+  right:20px!important;
+  bottom:18px!important;
+  padding:14px 16px!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  border-radius:12px!important;
+  background:rgba(3,18,34,.78)!important;
+  backdrop-filter:blur(8px)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-caption span{
+  display:block!important;
+  color:#e7b43f!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  letter-spacing:.11em!important;
+  text-transform:uppercase!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-caption b{
+  display:block!important;
+  margin-top:5px!important;
+  color:#fff!important;
+  font-size:14px!important;
+  line-height:1.4!important;
+}
+
+/* SHARED SECTION TYPOGRAPHY */
+body[data-division-slug="machine-maintenance"] :is(
+  .mm5-story,.mm5-capabilities,.mm5-showcase,.mm5-workflow,.mm5-pm,.mm5-io,.mm5-final
+){
+  position:relative!important;
+  padding:56px 0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-head{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:9px!important;
+  margin-bottom:24px!important;
+  align-items:start!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-head::before{
+  content:""!important;
+  display:block!important;
+  width:52px!important;
+  height:3px!important;
+  margin-bottom:3px!important;
+  background:#d49c24!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-head h2{
+  max-width:1080px!important;
+  margin:5px 0 0!important;
+  color:#102c4d!important;
+  font-size:clamp(32px,3.5vw,48px)!important;
+  line-height:1.05!important;
+  letter-spacing:-.025em!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-head>p{
+  max-width:880px!important;
+  margin:2px 0 0!important;
+  color:#5d6d7d!important;
+  font-size:12px!important;
+  line-height:1.68!important;
+}
+
+/* STORY */
+body[data-division-slug="machine-maintenance"] .mm5-story{
+  background:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)!important;
+  gap:38px!important;
+  align-items:center!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-media{
+  position:relative!important;
+  height:390px!important;
+  overflow:hidden!important;
+  border-radius:18px!important;
+  background:#dfe5ea!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-media>img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  border-radius:0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-media>div{
+  position:absolute!important;
+  left:16px!important;
+  right:16px!important;
+  bottom:16px!important;
+  padding:13px 14px!important;
+  border-radius:12px!important;
+  background:rgba(3,20,38,.82)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-media small{
+  display:block!important;
+  color:#e7b43f!important;
+  font-size:9px!important;
+  font-weight:800!important;
+  text-transform:uppercase!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-media b{
+  display:block!important;
+  margin-top:5px!important;
+  color:#fff!important;
+  font-size:13px!important;
+  line-height:1.45!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-copy{
+  max-width:720px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-copy h2{
+  margin:8px 0 14px!important;
+  color:#102c4d!important;
+  font-size:clamp(34px,3.8vw,52px)!important;
+  line-height:1.04!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-story-copy p{
+  margin:0 0 11px!important;
+  color:#586a7c!important;
+  font-size:13px!important;
+  line-height:1.75!important;
+}
+
+/* CAPABILITIES */
+body[data-division-slug="machine-maintenance"] .mm5-capabilities{
+  background:#f5f2eb!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-cap-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  align-items:stretch!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-cap-grid article{
+  min-height:190px!important;
+  height:100%!important;
+  padding:21px!important;
+  border:1px solid #dde2e6!important;
+  border-radius:15px!important;
+  background:#fff!important;
+  color:#17324e!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-cap-grid article>span{
+  color:#b77d13!important;
+  font-size:10px!important;
+  font-weight:900!important;
+  letter-spacing:.1em!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-cap-grid h3{
+  margin:15px 0 8px!important;
+  color:#102c4d!important;
+  font-size:17px!important;
+  line-height:1.25!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-cap-grid p{
+  margin:0!important;
+  color:#5b6d7f!important;
+  font-size:11px!important;
+  line-height:1.65!important;
+}
+
+/* SHOWCASE */
+body[data-division-slug="machine-maintenance"] .mm5-showcase{
+  background:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figure,
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid .mm5-showcase-main{
+  position:relative!important;
+  grid-column:auto!important;
+  min-height:0!important;
+  height:235px!important;
+  margin:0!important;
+  overflow:hidden!important;
+  border:1px solid #dce2e7!important;
+  border-radius:16px!important;
+  background:#dfe5ea!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid img{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  border-radius:0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figure::after{
+  content:""!important;
+  position:absolute!important;
+  inset:38% 0 0!important;
+  background:linear-gradient(180deg,transparent,rgba(3,18,34,.94))!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figcaption{
+  position:absolute!important;
+  z-index:2!important;
+  left:15px!important;
+  right:15px!important;
+  bottom:14px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid small{
+  display:block!important;
+  color:#efbd4b!important;
+  font-size:8px!important;
+  font-weight:900!important;
+  text-transform:uppercase!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-showcase-grid b{
+  display:block!important;
+  margin-top:5px!important;
+  color:#fff!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+}
+
+/* WORKFLOW */
+body[data-division-slug="machine-maintenance"] .mm5-workflow{
+  background:#071a36!important;
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr)!important;
+  gap:42px!important;
+  align-items:start!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow .subhead{
+  color:#e3b13b!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-copy h2{
+  margin:8px 0 14px!important;
+  color:#fff!important;
+  font-size:clamp(34px,3.6vw,50px)!important;
+  line-height:1.05!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-copy p{
+  margin:0!important;
+  color:#cbd9e6!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-list{
+  display:grid!important;
+  gap:10px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-list article{
+  display:grid!important;
+  grid-template-columns:44px 1fr!important;
+  gap:14px!important;
+  align-items:start!important;
+  padding:16px 17px!important;
+  border:1px solid rgba(255,255,255,.14)!important;
+  border-radius:13px!important;
+  background:rgba(255,255,255,.055)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-list article>b{
+  display:grid!important;
+  place-items:center!important;
+  width:38px!important;
+  height:38px!important;
+  border-radius:50%!important;
+  background:#e6b13a!important;
+  color:#071a36!important;
+  font-size:10px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-list h3{
+  margin:1px 0 4px!important;
+  color:#fff!important;
+  font-size:15px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-workflow-list p{
+  margin:0!important;
+  color:#c9d7e4!important;
+  font-size:10px!important;
+  line-height:1.6!important;
+}
+
+/* PREVENTIVE MAINTENANCE */
+body[data-division-slug="machine-maintenance"] .mm5-pm{
+  background:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr)!important;
+  gap:38px!important;
+  align-items:center!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-media{
+  position:relative!important;
+  height:360px!important;
+  overflow:hidden!important;
+  border-radius:18px!important;
+  background:#dfe5ea!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-media>img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  border-radius:0!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-media>div{
+  position:absolute!important;
+  left:16px!important;
+  right:16px!important;
+  bottom:16px!important;
+  padding:13px 14px!important;
+  border-radius:12px!important;
+  background:rgba(3,20,38,.82)!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-media small{
+  display:block!important;
+  color:#e7b43f!important;
+  font-size:9px!important;
+  text-transform:uppercase!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-media b{
+  display:block!important;
+  margin-top:5px!important;
+  color:#fff!important;
+  font-size:13px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-pm-copy h2{
+  max-width:780px!important;
+  margin:8px 0 18px!important;
+  color:#102c4d!important;
+  font-size:clamp(32px,3.5vw,48px)!important;
+  line-height:1.05!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-checks{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:9px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-checks span{
+  position:relative!important;
+  min-height:58px!important;
+  display:flex!important;
+  align-items:center!important;
+  padding:12px 13px 12px 38px!important;
+  border:1px solid #dce2e7!important;
+  border-radius:12px!important;
+  background:#f8f6f1!important;
+  color:#314a63!important;
+  font-size:10px!important;
+  line-height:1.45!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-checks span::before{
+  content:"✓"!important;
+  position:absolute!important;
+  left:13px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:18px!important;
+  height:18px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:50%!important;
+  background:#e5ad2d!important;
+  color:#071a36!important;
+  font-size:9px!important;
+  font-weight:900!important;
+}
+
+/* INPUT / OUTPUT */
+body[data-division-slug="machine-maintenance"] .mm5-io{
+  background:#f5f2eb!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-io-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  gap:16px!important;
+  align-items:stretch!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel{
+  min-height:360px!important;
+  padding:28px!important;
+  border:1px solid #dce2e7!important;
+  border-radius:16px!important;
+  background:#fff!important;
+  color:#17324e!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel h2{
+  margin:8px 0 18px!important;
+  color:#102c4d!important;
+  font-size:clamp(29px,3vw,40px)!important;
+  line-height:1.06!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel ul{
+  margin:0!important;
+  padding-left:18px!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel li{
+  margin:9px 0!important;
+  color:#52657a!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel-dark{
+  border-color:#071a36!important;
+  background:#071a36!important;
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel-dark .subhead{
+  color:#e7b43f!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel-dark h2{
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-panel-dark li{
+  color:#d2dfeb!important;
+}
+
+/* FINAL CTA */
+body[data-division-slug="machine-maintenance"] .mm5-final{
+  padding-top:42px!important;
+  padding-bottom:64px!important;
+  background:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-final-box{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  gap:30px!important;
+  align-items:center!important;
+  padding:30px!important;
+  border:1px solid #d9e0e5!important;
+  border-radius:18px!important;
+  background:
+    radial-gradient(circle at 90% 10%,rgba(229,173,45,.14),transparent 26%),
+    #f7f4ed!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-final h2{
+  max-width:850px!important;
+  margin:7px 0 10px!important;
+  color:#102c4d!important;
+  font-size:clamp(30px,3vw,43px)!important;
+  line-height:1.06!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-final p{
+  max-width:840px!important;
+  margin:0!important;
+  color:#586a7c!important;
+  font-size:12px!important;
+  line-height:1.65!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-final .btn.primary{
+  background:#0e2a47!important;
+  border-color:#0e2a47!important;
+  color:#fff!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-final .btn.outline{
+  background:#fff!important;
+  border-color:#bec8d1!important;
+  color:#17324e!important;
+}
+
+/* TABLET */
+@media(max-width:1050px){
+  body[data-division-slug="machine-maintenance"] .mm5-hero-grid,
+  body[data-division-slug="machine-maintenance"] .mm5-story-grid,
+  body[data-division-slug="machine-maintenance"] .mm5-workflow-grid,
+  body[data-division-slug="machine-maintenance"] .mm5-pm-grid{
+    grid-template-columns:1fr!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-copy,
+  body[data-division-slug="machine-maintenance"] .mm5-story-copy{
+    max-width:820px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-visual{
+    min-height:430px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-cap-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-showcase-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figure:last-child{
+    grid-column:1/-1!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-final-box{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* MOBILE */
+@media(max-width:700px){
+  body[data-division-slug="machine-maintenance"] main .container{
+    width:min(100% - 28px,1360px)!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-hero{
+    padding:42px 0!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-copy h1{
+    max-width:100%!important;
+    font-size:clamp(40px,11vw,52px)!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-copy>p{
+    font-size:13px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-actions{
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-status-grid{
+    grid-template-columns:1fr!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-status-grid>div{
+    min-height:64px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-visual{
+    min-height:340px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-small{
+    width:44%!important;
+    height:104px!important;
+  }
+  body[data-division-slug="machine-maintenance"] :is(
+    .mm5-story,.mm5-capabilities,.mm5-showcase,.mm5-workflow,.mm5-pm,.mm5-io
+  ){
+    padding:44px 0!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-story-media,
+  body[data-division-slug="machine-maintenance"] .mm5-pm-media{
+    height:275px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-cap-grid,
+  body[data-division-slug="machine-maintenance"] .mm5-showcase-grid,
+  body[data-division-slug="machine-maintenance"] .mm5-checks,
+  body[data-division-slug="machine-maintenance"] .mm5-io-grid{
+    grid-template-columns:1fr!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figure,
+  body[data-division-slug="machine-maintenance"] .mm5-showcase-grid figure:last-child{
+    grid-column:auto!important;
+    height:210px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-panel{
+    min-height:0!important;
+    padding:22px!important;
+  }
+  body[data-division-slug="machine-maintenance"] .mm5-final-box{
+    padding:22px!important;
+  }
+}
