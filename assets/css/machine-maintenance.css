@@ -730,3 +730,50 @@ body[data-division-slug="machine-maintenance"] .mm5-final .btn.outline{
     padding:22px!important;
   }
 }
+
+/* Evidence visuals v1.1 — unique inline technical illustrations; no reused photos. */
+body[data-division-slug="machine-maintenance"] .mm5-evidence-grid .mm5-evidence-card{
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  border:1px solid #dce2e7!important;
+  border-radius:16px!important;
+  background:#071a36!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-grid .mm5-evidence-card::after{
+  display:none!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-art{
+  width:100%!important;
+  aspect-ratio:420/220!important;
+  background:#071a36!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-art svg{
+  display:block!important;
+  width:100%!important;
+  height:100%!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-grid figcaption{
+  position:static!important;
+  min-height:94px!important;
+  padding:14px 16px 16px!important;
+  background:#071a36!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-grid figcaption small{
+  display:block!important;
+  color:#e6b23d!important;
+  font-size:8px!important;
+  font-weight:900!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+body[data-division-slug="machine-maintenance"] .mm5-evidence-grid figcaption b{
+  display:block!important;
+  margin-top:6px!important;
+  color:#fff!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+}
