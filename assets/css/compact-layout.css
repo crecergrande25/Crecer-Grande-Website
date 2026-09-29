@@ -582,3 +582,51 @@
     margin-inline:auto!important;
   }
 }
+
+
+/* =========================================================
+   INTERNAL HERO TYPOGRAPHY v1.3
+   Remove artificial 13ch headline restriction on flagship
+   internal pages. Homepage keeps its own editorial measure.
+   ========================================================= */
+@media(min-width:721px){
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy{
+    width:100%!important;
+    max-width:880px!important;
+  }
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy h1{
+    width:100%!important;
+    max-width:22ch!important;
+    font-size:clamp(48px,5vw,72px)!important;
+    line-height:1.01!important;
+    text-wrap:balance!important;
+  }
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy .pr-lede{
+    max-width:72ch!important;
+  }
+}
+
+/* At compact desktop/tablet widths, use the available row width instead
+   of keeping the headline in a narrow editorial column. */
+@media(min-width:721px) and (max-width:1050px){
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-grid{
+    grid-template-columns:1fr!important;
+  }
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy{
+    max-width:100%!important;
+  }
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy h1{
+    max-width:20ch!important;
+    font-size:clamp(46px,6.4vw,64px)!important;
+  }
+}
+
+/* Mobile still wraps naturally, but no 13ch choke point. */
+@media(max-width:720px){
+  .cg-pr:not(.cg-pr-home):not(.cg-pr-contact) .pr-hero-copy h1{
+    width:100%!important;
+    max-width:100%!important;
+    font-size:clamp(40px,11vw,54px)!important;
+    line-height:1.02!important;
+  }
+}
