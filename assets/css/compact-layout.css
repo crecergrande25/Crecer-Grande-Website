@@ -630,3 +630,111 @@
     line-height:1.02!important;
   }
 }
+
+
+/* =========================================================
+   GLOBAL ROUNDED CORNERS v1.4
+   Consistent soft geometry across every public page.
+   ========================================================= */
+:root{
+  --cg-radius-xs:8px;
+  --cg-radius-sm:10px;
+  --cg-radius-md:14px;
+  --cg-radius-lg:18px;
+  --cg-radius-xl:22px;
+}
+
+/* Buttons, nav CTAs and form controls */
+:where(
+  button,
+  .btn,
+  .button,
+  .quote-nav,
+  .cg-btn,
+  .pr-btn,
+  .hero-actions a,
+  .actions a,
+  .chip,
+  .pill,
+  .badge,
+  input,
+  textarea,
+  select
+){
+  border-radius:var(--cg-radius-sm)!important;
+}
+
+/* Cards / panels / tiles / form shells */
+:where(
+  [class*="-card"],
+  [class*="-panel"],
+  [class*="-tile"],
+  [class*="-box"],
+  .pr-metrics,
+  .pr-metric,
+  .fb-step,
+  form,
+  .contact-form,
+  .quote-form,
+  .cg-footer-cta
+){
+  border-radius:var(--cg-radius-md)!important;
+}
+
+/* Visual media gets slightly larger radii. */
+:where(
+  main figure,
+  main picture,
+  main img,
+  .pr-hero-media,
+  .tv4-contact-visual,
+  .dv4-hub-visual,
+  .dv4-detail-visual,
+  .dv4-story-media,
+  .dv4-process-image,
+  .am2-hero-media,
+  .am3-hero-media
+){
+  border-radius:var(--cg-radius-lg)!important;
+}
+
+/* Keep logos/brand artwork geometrically clean. */
+:where(
+  .brand img,
+  .site-logo,
+  .logo,
+  .cg-footer-logo,
+  img[alt*="logo" i]
+){
+  border-radius:0!important;
+}
+
+/* Overflow clipping only where the element is already a framed visual/surface. */
+:where(
+  .pr-hero-media,
+  .tv4-contact-visual,
+  [class*="-card"],
+  [class*="-panel"],
+  [class*="-tile"],
+  .cg-footer-cta
+){
+  overflow:hidden;
+}
+
+/* Metric bands still read as one connected component. */
+.pr-metrics{
+  overflow:hidden!important;
+}
+.pr-metrics .pr-metric{
+  border-radius:0!important;
+}
+
+/* Mobile stays slightly tighter while preserving the same design language. */
+@media(max-width:760px){
+  :root{
+    --cg-radius-sm:9px;
+    --cg-radius-md:12px;
+    --cg-radius-lg:15px;
+    --cg-radius-xl:18px;
+  }
+}
