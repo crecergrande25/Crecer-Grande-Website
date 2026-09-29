@@ -527,7 +527,7 @@
     if(!link){
       link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/compact-layout.css?v=1.4.0';
+      link.href='/assets/css/compact-layout.css?v=1.5.0';
       link.dataset.cgCompactLayout='1';
       document.head.appendChild(link);
     }
