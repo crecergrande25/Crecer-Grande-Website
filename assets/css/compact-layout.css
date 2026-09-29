@@ -498,3 +498,87 @@
     text-align:center!important;
   }
 }
+
+
+/* =========================================================
+   HERO METRIC CONTRAST + CONTACT HERO v1.2
+   Keep homepage KPI style light; make dark hero KPI bands readable.
+   ========================================================= */
+
+/* Divisions / Projects / Insights hero metrics sit on dark artwork. */
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metrics{
+  background:rgba(3,20,39,.62)!important;
+  border-top:1px solid rgba(255,255,255,.76)!important;
+  border-bottom:1px solid rgba(255,255,255,.76)!important;
+  backdrop-filter:blur(2px);
+}
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metric{
+  border-right:1px solid rgba(255,255,255,.68)!important;
+}
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metric:last-child{
+  border-right:0!important;
+}
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metric strong{
+  color:#ffffff!important;
+  text-shadow:0 2px 16px rgba(0,0,0,.28)!important;
+}
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metric span{
+  color:#d9e8f7!important;
+  text-shadow:0 1px 10px rgba(0,0,0,.28)!important;
+}
+.cg-pr:not(.cg-pr-home) .pr-hero .pr-metric{
+  display:flex!important;
+  min-height:94px!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+
+/* Contact hero: image is a real, prominent hero panel — full image, no crop. */
+.cg-pr-contact .contact-v27-hero.tv4-contact-hero{
+  overflow:hidden!important;
+}
+.cg-pr-contact .tv4-contact-hero-grid{
+  grid-template-columns:minmax(0,.90fr) minmax(560px,1.10fr)!important;
+  gap:38px!important;
+  align-items:center!important;
+}
+.cg-pr-contact .tv4-contact-hero-copy{
+  max-width:690px!important;
+}
+.cg-pr-contact .tv4-contact-visual{
+  width:100%!important;
+  min-height:0!important;
+  height:auto!important;
+  max-height:none!important;
+  overflow:hidden!important;
+  background:#06182f!important;
+  border:1px solid rgba(7,26,54,.16)!important;
+  box-shadow:0 26px 64px rgba(7,26,54,.16)!important;
+}
+.cg-pr-contact .tv4-contact-visual>img{
+  position:relative!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  display:block!important;
+}
+.cg-pr-contact .tv4-contact-visual>div{
+  left:18px!important;
+  right:18px!important;
+  bottom:18px!important;
+}
+
+@media(max-width:1050px){
+  .cg-pr-contact .tv4-contact-hero-grid{
+    grid-template-columns:1fr!important;
+  }
+  .cg-pr-contact .tv4-contact-visual{
+    width:min(760px,100%)!important;
+    margin-inline:auto!important;
+  }
+}
