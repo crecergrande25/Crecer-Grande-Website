@@ -80,4 +80,51 @@
 <script src="/assets/js/cms.js?v=2.9.3"></script>
 <script src="/assets/js/site.js?v=7.1.2"></script>
 <script src="/assets/js/contact.js?v=2.9.3"></script>
-<script defer src="/assets/js/botcha.js?v=1.0.0"></script></body></html>
+<script defer src="/assets/js/botcha.js?v=1.0.0"></script>
+<script>
+/* CG BOTCHA RFQ PREFILL — 2026-09-29 */
+(() => {
+  const form=document.getElementById('rfq-form');
+  if(!form) return;
+  const qs=new URLSearchParams(location.search);
+  if(qs.get('source')!=='botcha') return;
+
+  const map={
+    requirement_type:'requirement_type',
+    message:'message',
+    quantity:'quantity',
+    material:'material',
+    dimensions:'dimensions',
+    machine_model:'machine_model',
+    location:'location'
+  };
+
+  Object.entries(map).forEach(([param,name])=>{
+    const value=(qs.get(param)||'').trim();
+    if(!value) return;
+    const field=form.elements.namedItem(name);
+    if(!field) return;
+
+    if(name==='requirement_type'){
+      const options=[...field.options];
+      const exact=options.find(o=>o.value.toLowerCase()===value.toLowerCase()||o.text.toLowerCase()===value.toLowerCase());
+      if(exact) field.value=exact.value;
+      else field.value='Other';
+    }else if(!field.value){
+      field.value=value;
+    }
+  });
+
+  const note=document.createElement('div');
+  note.className='pr-panel';
+  note.style.cssText='margin:0 0 18px;padding:14px 16px;border-left:3px solid #f4b000;background:#fffaf0;';
+  note.innerHTML='<strong style="color:#0e2a47">Botcha has prepared this draft.</strong><p style="margin:4px 0 0;font-size:12px;color:#607186">Please review the pre-filled details, add your contact information and attach the available technical files before submitting.</p>';
+  form.prepend(note);
+
+  const target=document.getElementById('technical-review');
+  if(target && location.hash!=='#technical-review'){
+    setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),180);
+  }
+})();
+</script>
+</body></html>
