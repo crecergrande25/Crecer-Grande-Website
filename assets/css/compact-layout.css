@@ -308,3 +308,193 @@
     padding-top:38px!important;
   }
 }
+
+
+/* =========================================================
+   ANNOTATION REFINEMENT v1.1
+   Based on owner markup: larger hero visual, aligned metrics,
+   full-width section headings, uncropped Contact image, centered motto.
+   ========================================================= */
+
+@media(min-width:961px){
+  /* Homepage hero: give the engineering collage more visual weight. */
+  .cg-pr-home .pr-hero-grid{
+    grid-template-columns:minmax(0,.86fr) minmax(560px,1.14fr)!important;
+    gap:34px!important;
+  }
+  .cg-pr-home .pr-hero-copy{
+    max-width:620px!important;
+  }
+  .cg-pr-home .pr-hero-media,
+  .cg-pr-home .pr-hero-media img{
+    min-height:545px!important;
+    height:545px!important;
+  }
+
+  /* Homepage KPI row: four equal, vertically + horizontally aligned cells. */
+  .cg-pr-home .pr-metrics{
+    align-items:stretch!important;
+  }
+  .cg-pr-home .pr-metric{
+    min-height:92px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:14px 10px!important;
+    text-align:center!important;
+  }
+  .cg-pr-home .pr-metric strong{
+    margin:0!important;
+    line-height:1!important;
+    text-align:center!important;
+  }
+  .cg-pr-home .pr-metric span{
+    max-width:150px!important;
+    margin:5px auto 0!important;
+    line-height:1.35!important;
+    text-align:center!important;
+  }
+
+  /* Stop wasting half a row on a short supporting paragraph.
+     Section title now owns the width; supporting copy sits below it. */
+  .cg-pr .pr-section-head,
+  .cg-pr-contact .section-head,
+  body.cg-body-polish main .section-head,
+  .am2-section-head,
+  .am3-head,
+  .ab6-head,
+  .elite-head,
+  .ed-section-head{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:10px!important;
+    align-items:start!important;
+    justify-content:stretch!important;
+  }
+
+  .cg-pr .pr-section-head>div,
+  .cg-pr-contact .section-head>div,
+  body.cg-body-polish main .section-head>div,
+  .am2-section-head>div,
+  .am3-head>div,
+  .ab6-head>div,
+  .elite-head>div,
+  .ed-section-head>div{
+    width:100%!important;
+    max-width:1160px!important;
+  }
+
+  .cg-pr .pr-section-head h2,
+  .cg-pr-contact .section-head h2,
+  body.cg-body-polish main .section-head h2,
+  .am2-section-head h2,
+  .am3-head h2,
+  .ab6-head h2,
+  .elite-head h2,
+  .ed-section-head h2{
+    width:100%!important;
+    max-width:1160px!important;
+  }
+
+  .cg-pr .pr-section-head>p,
+  .cg-pr-contact .section-head>p,
+  body.cg-body-polish main .section-head>p,
+  .am2-section-head>p,
+  .am3-head>p,
+  .ab6-head>p,
+  .elite-head>p,
+  .ed-section-head>p{
+    width:100%!important;
+    max-width:940px!important;
+    margin:2px 0 0!important;
+  }
+
+  /* Contact hero: enough copy width for two deliberate headline lines. */
+  .cg-pr-contact .tv4-contact-hero-grid{
+    grid-template-columns:minmax(620px,1.14fr) minmax(430px,.86fr)!important;
+    gap:42px!important;
+    align-items:center!important;
+  }
+  .cg-pr-contact .contact-v27-hero h1{
+    max-width:820px!important;
+    font-size:clamp(46px,4.25vw,64px)!important;
+    line-height:1.02!important;
+  }
+
+  /* Contact hero image: show the actual photograph in full.
+     Natural aspect ratio replaces cover/cropping. */
+  .cg-pr-contact .tv4-contact-visual{
+    min-height:0!important;
+    height:auto!important;
+    max-height:none!important;
+    align-self:center!important;
+    overflow:hidden!important;
+    background:#071a36!important;
+  }
+  .cg-pr-contact .tv4-contact-visual>img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:center!important;
+    display:block!important;
+  }
+
+  /* Footer: real visual center for the statement; Admin stays at far right. */
+  .cg-footer-bottom{
+    grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;
+  }
+  .cg-footer-bottom .cg-footer-motto,
+  .cg-footer-bottom .cg-made-with-love{
+    justify-self:center!important;
+    text-align:center!important;
+    white-space:nowrap!important;
+  }
+  .cg-footer-bottom .cg-admin-login{
+    justify-self:end!important;
+    margin-left:0!important;
+  }
+}
+
+@media(min-width:761px) and (max-width:960px){
+  .cg-pr-home .pr-metric{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .cg-pr-contact .tv4-contact-visual>img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    object-fit:contain!important;
+  }
+}
+
+@media(max-width:760px){
+  .cg-pr-home .pr-metric{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+  .cg-pr-contact .tv4-contact-visual{
+    height:auto!important;
+    max-height:none!important;
+  }
+  .cg-pr-contact .tv4-contact-visual>img{
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    object-fit:contain!important;
+  }
+  .cg-footer-bottom .cg-footer-motto,
+  .cg-footer-bottom .cg-made-with-love{
+    text-align:center!important;
+  }
+}
