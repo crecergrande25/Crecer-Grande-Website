@@ -467,9 +467,9 @@
     }
 
     const heroSelectors='.pr-hero,.page-hero,.content-hero,.service-hero,.dv4-detail-hero,.ed5-hero,.am3-hero,.elite-detail-hero,.contact-v27-hero,.quote-v27-hero';
-    $(heroSelectors).forEach(hero=>hero.classList.add('cg-creative-hero'));
+    $$(heroSelectors).forEach(hero=>hero.classList.add('cg-creative-hero'));
 
-    const motionTargets=$('main .section,main .pr-section,main .pr-card,main .visual-card,main .case-card,main .case-study-card,main .resource-card,main .insight-related-card,main .dv4-cap-grid article,main .ed5-cap-grid article');
+    const motionTargets=$$('main .section,main .pr-section,main .pr-card,main .visual-card,main .case-card,main .case-study-card,main .resource-card,main .insight-related-card,main .dv4-cap-grid article,main .ed5-cap-grid article');
     motionTargets.forEach((el,i)=>{
       el.classList.add('cg-reveal');
       el.style.setProperty('--cg-reveal-delay',Math.min((i%5)*45,180)+'ms');
@@ -488,7 +488,7 @@
       motionTargets.forEach(el=>el.classList.add('is-visible'));
     }
 
-    $('main img:not([loading])').forEach((img,i)=>{
+    $$('main img:not([loading])').forEach((img,i)=>{
       const inHero=!!img.closest(heroSelectors);
       if(!inHero) img.loading='lazy';
       img.decoding='async';
