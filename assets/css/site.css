@@ -1495,3 +1495,66 @@ button,input,select,textarea,option{
   }
   .cg-feedback-tab span{font-size:10px}
 }
+
+
+/* ==========================================================================
+   CG NON-HOME COMPACT TYPE SCALE — 2026-09-29
+   Keep the homepage display scale unchanged. All other public pages use a
+   restrained heading scale so long titles remain readable and do not dominate
+   the viewport.
+   ========================================================================== */
+body:not(.home-v5) h1{
+  font-size:clamp(26px,2.85vw,41px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.025em!important;
+  text-wrap:balance!important;
+  overflow-wrap:anywhere!important;
+}
+
+body:not(.home-v5) main :is(
+  .pr-section-head h2,
+  .section-head h2,
+  .fb-step h2,
+  .fb-thanks h2,
+  .project-feature h2,
+  .insight-article h2,
+  .content-section h2,
+  .service-section h2,
+  .dv4-section h2
+){
+  font-size:clamp(20px,2.1vw,28px)!important;
+  line-height:1.16!important;
+  letter-spacing:-.018em!important;
+  text-wrap:balance!important;
+}
+
+body:not(.home-v5) main :is(
+  .pr-hero-copy,
+  .hero-copy,
+  .content-hero-copy,
+  .service-hero-copy,
+  .insight-hero-copy,
+  .project-hero-copy
+){
+  max-width:760px!important;
+}
+
+@media(max-width:700px){
+  body:not(.home-v5) h1{
+    font-size:clamp(24px,7vw,32px)!important;
+    line-height:1.1!important;
+  }
+  body:not(.home-v5) main :is(
+    .pr-section-head h2,
+    .section-head h2,
+    .fb-step h2,
+    .fb-thanks h2,
+    .project-feature h2,
+    .insight-article h2,
+    .content-section h2,
+    .service-section h2,
+    .dv4-section h2
+  ){
+    font-size:clamp(19px,5.4vw,25px)!important;
+  }
+}
