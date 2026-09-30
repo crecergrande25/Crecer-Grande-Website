@@ -1796,3 +1796,182 @@ body:not(.home-v5) main :is(
   .cg-project-repair .cg-case-depth-grid{grid-template-columns:1fr!important}
   .cg-project-repair .project-feature>img{height:230px!important;max-height:230px!important}
 }
+
+
+/* ==========================================================================
+   CG TARGETED CONTRAST SAFETY PASS — 2026-09-30
+   Scoped readability safeguards for the repaired service, division and
+   project-detail pages. Explicitly separates light-card and dark-panel text.
+   ========================================================================== */
+
+/* Small copy on light cards: keep normal-size text above AA contrast. */
+.p3-deliver-grid small,
+.svc-design-grid small,
+.cg-division-front .cg-front-delivery span,
+.cg-division-front .cg-front-routes-head span,
+.cg-division-front .cg-front-route span,
+.cg-service-front-summary span,
+.cg-case-summary p{
+  color:#52677b!important;
+}
+
+/* Division front: lock the dark services panel to light-on-dark. */
+.cg-division-front .cg-front-panel.cg-front-dark{
+  background:#08233f!important;
+  border-color:#173a5c!important;
+  color:#fff!important;
+}
+.cg-division-front .cg-front-panel.cg-front-dark :is(h2,h3,b,strong){
+  color:#fff!important;
+}
+.cg-division-front .cg-front-panel.cg-front-dark :is(p,li,span){
+  color:#e2ebf4!important;
+}
+.cg-division-front .cg-front-panel.cg-front-dark :is(small,.subhead){
+  color:#f3c453!important;
+}
+
+/* The four bespoke division templates contain paired input/output panels.
+   Make the normal panel explicitly light and the *-dark panel explicitly dark. */
+:is(.ed5-io-panel,.au5-io-panel,.qms5-io-panel,.ins5-io-panel):not(
+  .ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark
+){
+  background:#fff!important;
+  color:#173957!important;
+}
+:is(.ed5-io-panel,.au5-io-panel,.qms5-io-panel,.ins5-io-panel):not(
+  .ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark
+) :is(h2,h3,b,strong){
+  color:#173957!important;
+}
+:is(.ed5-io-panel,.au5-io-panel,.qms5-io-panel,.ins5-io-panel):not(
+  .ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark
+) :is(p,li,span){
+  color:#52677b!important;
+}
+
+:is(.ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark){
+  background:linear-gradient(135deg,#041326,#0b3157)!important;
+  border-color:#173f63!important;
+  color:#fff!important;
+}
+:is(.ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark) :is(h2,h3,b,strong){
+  color:#fff!important;
+}
+:is(.ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark) :is(p,li,span){
+  color:#e2ebf4!important;
+}
+:is(.ed5-io-dark,.au5-io-dark,.qms5-io-dark,.ins5-io-dark) :is(.subhead,small){
+  color:#f3c453!important;
+}
+
+/* Capability/readiness cards are light surfaces even if a parent section
+   inherits a dark foreground from an older template. */
+:is(.ed5-cap-grid,.au5-cap-grid,.qms5-cap-grid,.ins5-cap-grid) article,
+.qms5-readiness-card,
+.ins5-evidence-card{
+  background:#fff!important;
+  color:#173957!important;
+}
+:is(.ed5-cap-grid,.au5-cap-grid,.qms5-cap-grid,.ins5-cap-grid) article :is(h2,h3,b,strong),
+.qms5-readiness-card :is(h2,h3,b,strong),
+.ins5-evidence-card :is(h2,h3,b,strong){
+  color:#173957!important;
+}
+:is(.ed5-cap-grid,.au5-cap-grid,.qms5-cap-grid,.ins5-cap-grid) article :is(p,li,small),
+.qms5-readiness-card p,
+.ins5-evidence-card p{
+  color:#52677b!important;
+}
+
+/* Final division calls-to-action are intentionally dark. Do not let generic
+   heading/link rules make their copy disappear. */
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box){
+  background:
+    radial-gradient(circle at 86% 15%,rgba(244,176,0,.16),transparent 25%),
+    linear-gradient(135deg,#041326,#0b3157)!important;
+  color:#fff!important;
+}
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) :is(h2,h3,b,strong){
+  color:#fff!important;
+}
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) p{
+  color:#dce7f1!important;
+}
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) .subhead{
+  color:#efc35a!important;
+}
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) .btn.outline{
+  color:#fff!important;
+  border-color:rgba(255,255,255,.42)!important;
+  background:transparent!important;
+}
+:is(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) .btn.primary{
+  color:#071a36!important;
+}
+
+/* Project case studies: lock dark hero text and light content-card text
+   independently. This also covers the legacy CO2 case page that loads site.css only. */
+.cg-project-repair :is(.content-hero,.project-hero){
+  color:#fff!important;
+}
+.cg-project-repair :is(.content-hero,.project-hero) :is(h1,h2,h3,b,strong){
+  color:#fff!important;
+}
+.cg-project-repair :is(.content-hero,.project-hero) :is(p,.lead,.intro){
+  color:#dce7f1!important;
+}
+.cg-project-repair :is(.content-hero,.project-hero) :is(.eyebrow,.subhead,small){
+  color:#efc35a!important;
+}
+.cg-project-repair .case-meta b{color:#fff!important;}
+.cg-project-repair .case-meta small{color:#d6e2ee!important;}
+
+.cg-project-repair :is(.case-main,.case-aside .panel,.flow-step,.lesson-box,.cg-case-depth-grid article){
+  color:#173957!important;
+}
+.cg-project-repair :is(.case-main,.case-aside .panel,.flow-step,.lesson-box,.cg-case-depth-grid article) :is(h2,h3,b,strong){
+  color:#173957!important;
+}
+.cg-project-repair .case-main :is(p,li),
+.cg-project-repair .case-aside .panel p,
+.cg-project-repair .lesson-box p,
+.cg-project-repair .cg-case-depth-grid article p{
+  color:#52677b!important;
+}
+.cg-project-repair .flow-step{
+  background:#fff!important;
+}
+.cg-project-repair .lesson-box{
+  background:#fff8e5!important;
+}
+.cg-project-repair .case-aside .panel,
+.cg-project-repair .cg-case-depth-grid article{
+  background:#fff!important;
+}
+.cg-project-repair .evidence-list div{
+  background:#f8fafc!important;
+  color:#52677b!important;
+}
+.cg-project-repair .cta{
+  color:#fff!important;
+}
+.cg-project-repair .cta :is(h2,h3,b,strong){
+  color:#fff!important;
+}
+.cg-project-repair .cta p{
+  color:#dce7f1!important;
+}
+
+/* Preserve intentional light-on-dark strips on the two repaired service pages. */
+.p3-intake-strip,
+.svc-design-strip{
+  color:#fff!important;
+}
+.p3-intake-strip b{color:#fff!important;}
+.p3-intake-strip span{color:#e9bd50!important;}
+.svc-design-strip span{color:#e2ebf4!important;}
+.p3-intake-strip a,
+.svc-design-strip a{
+  color:#092442!important;
+}
