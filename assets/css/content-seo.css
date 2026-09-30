@@ -49,3 +49,177 @@
 }
 .resource-card:hover .cg-tool-card-media img{transform:scale(1.04)}
 @media(max-width:680px){.cg-tool-card-media{height:175px}}
+
+
+/* ==========================================================================
+   CG QMS AUDIT READINESS PROJECT READABILITY PASS — 2026-09-30
+   Scoped only to projects/qms-audit-readiness.html.
+   ========================================================================== */
+body[data-project-slug="qms-audit-readiness"] .content-hero{
+  color:#fff!important;
+}
+body[data-project-slug="qms-audit-readiness"] .content-hero h1{
+  color:#fff!important;
+}
+body[data-project-slug="qms-audit-readiness"] .content-hero> .container > p,
+body[data-project-slug="qms-audit-readiness"] .content-hero .container>p{
+  color:#dce7f1!important;
+  font-size:14px!important;
+  line-height:1.72!important;
+}
+body[data-project-slug="qms-audit-readiness"] .content-hero .eyebrow{
+  color:#efc35a!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-meta div{
+  background:rgba(3,18,38,.68)!important;
+  border-color:rgba(255,255,255,.18)!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-meta small{
+  color:#d4e0ec!important;
+  font-size:9.5px!important;
+  line-height:1.35!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-meta b{
+  color:#fff!important;
+  font-size:12px!important;
+  line-height:1.4!important;
+}
+
+/* Visual case route */
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-band{
+  background:#f5f7fa;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-band .section-head .subhead{
+  color:#8a5d00!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-band .section-head h2{
+  color:#0d2c4b!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-band .section-head>p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.68!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-grid figcaption{
+  color:#fff!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-grid figcaption b{
+  color:#fff!important;
+  font-size:15px!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-case-visual-grid figcaption span{
+  color:#e2ebf4!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+
+/* Main case-study body */
+body[data-project-slug="qms-audit-readiness"] .case-main{
+  color:#173957!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-main .subhead{
+  color:#8a5d00!important;
+  font-size:10.5px!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-main h2,
+body[data-project-slug="qms-audit-readiness"] .case-main h3{
+  color:#173957!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-main p,
+body[data-project-slug="qms-audit-readiness"] .case-main li{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-main ul,
+body[data-project-slug="qms-audit-readiness"] .case-main ol{
+  padding-left:22px!important;
+}
+
+/* Four-stage route */
+body[data-project-slug="qms-audit-readiness"] .flow-step{
+  background:#fff!important;
+  border-color:#dfe5eb!important;
+  color:#173957!important;
+}
+body[data-project-slug="qms-audit-readiness"] .flow-step span{
+  color:#8a5d00!important;
+  font-size:9.5px!important;
+  line-height:1.35!important;
+}
+body[data-project-slug="qms-audit-readiness"] .flow-step b{
+  color:#173957!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+}
+
+/* Takeaway */
+body[data-project-slug="qms-audit-readiness"] .lesson-box{
+  background:#fff8e5!important;
+  color:#173957!important;
+  border-left-color:#f4b000!important;
+}
+body[data-project-slug="qms-audit-readiness"] .lesson-box h3{
+  color:#173957!important;
+  font-size:17px!important;
+}
+body[data-project-slug="qms-audit-readiness"] .lesson-box p{
+  color:#52677b!important;
+  font-size:12.5px!important;
+  line-height:1.68!important;
+}
+
+/* Sidebar */
+body[data-project-slug="qms-audit-readiness"] .case-aside .panel{
+  background:#fff!important;
+  color:#173957!important;
+  border-color:#dfe5eb!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-aside .panel h3{
+  color:#173957!important;
+  font-size:16px!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-aside .panel p{
+  color:#52677b!important;
+  font-size:11.5px!important;
+  line-height:1.62!important;
+}
+body[data-project-slug="qms-audit-readiness"] .case-aside .panel .btn.primary{
+  color:#071a36!important;
+}
+body[data-project-slug="qms-audit-readiness"] .evidence-list div{
+  background:#f8fafc!important;
+  border-color:#dfe5eb!important;
+  color:#52677b!important;
+  font-size:10.5px!important;
+  line-height:1.48!important;
+}
+
+/* Footer call-to-action */
+body[data-project-slug="qms-audit-readiness"] .cg-footer-cta{
+  background:#0f315d!important;
+  color:#fff!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-footer-cta h2{
+  color:#fff!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-footer-cta p{
+  color:#eef4fb!important;
+}
+body[data-project-slug="qms-audit-readiness"] .cg-footer-cta-btn{
+  background:#f4b000!important;
+  color:#071a36!important;
+}
+
+@media(max-width:640px){
+  body[data-project-slug="qms-audit-readiness"] .case-meta small{
+    font-size:9px!important;
+  }
+  body[data-project-slug="qms-audit-readiness"] .case-main p,
+  body[data-project-slug="qms-audit-readiness"] .case-main li{
+    font-size:12.5px!important;
+  }
+  body[data-project-slug="qms-audit-readiness"] .evidence-list div{
+    font-size:10.5px!important;
+  }
+}
