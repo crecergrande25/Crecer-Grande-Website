@@ -24,3 +24,59 @@
 .file-format-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.file-format{padding:15px;border:1px solid var(--line);border-radius:13px;background:#fff}.file-format b{display:block}.file-format span{display:block;margin-top:4px;color:var(--muted);font-size:9px}
 @media(max-width:1050px){.print3d-hero-grid{grid-template-columns:1fr}.print3d-visual{min-height:360px}.process-cards{grid-template-columns:repeat(2,1fr)}.quote3d-layout{grid-template-columns:1fr}.quote3d-summary{position:static}.geo-metrics{grid-template-columns:repeat(3,1fr)}.material-cards-v26{grid-template-columns:repeat(2,1fr)}.file-format-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.print3d-hero{padding:58px 0}.print3d-hero h1{font-size:40px}.print3d-visual{min-height:320px}.print3d-visual .float{grid-template-columns:1fr}.process-cards,.platform-strip,.material-cards-v26,.guide-grid,.file-format-grid{grid-template-columns:1fr}.viewer3d{height:330px}.geo-metrics{grid-template-columns:repeat(2,1fr)}.mesh-controls,.config3-grid,.config3-inline,.contact3-grid,.material-page-toolbar{grid-template-columns:1fr}.config3-grid .wide,.contact3-grid .wide{grid-column:auto}.advisor-result{grid-template-columns:1fr}.quote-action-row{grid-template-columns:1fr}}
+
+
+/* ==========================================================================
+   CG 3D PRINTING REPAIR PASS — 2026-09-30
+   ========================================================================== */
+.print3d-hero{padding:68px 0!important}
+.print3d-hero-grid{gap:34px!important}
+.print3d-hero h1{font-size:clamp(34px,4vw,50px)!important;line-height:1.04!important;max-width:720px}
+.print3d-hero p{font-size:14px!important;line-height:1.68!important}
+.print3d-visual{min-height:0!important;height:400px!important;max-height:400px!important;border-radius:20px!important}
+.print3d-visual img{opacity:.88!important;filter:none!important}
+.print3d-visual .float div{background:rgba(3,14,31,.86)!important;backdrop-filter:none!important}
+
+.p3-front{padding:38px 0 44px;background:linear-gradient(180deg,#fff,#fbfaf6);border-bottom:1px solid #e8e2d7}
+.p3-front-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:end;margin-bottom:18px}
+.p3-front-head span{display:block;margin-bottom:6px;color:#9b6b00;font-size:9px;font-weight:900;letter-spacing:.13em}
+.p3-front-head h2{margin:0;color:#0d2c4b;font-size:clamp(24px,2.5vw,34px)!important;line-height:1.1!important}
+.p3-front-head p{margin:0;color:#607286;font-size:12px;line-height:1.65}
+.p3-deliver-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #dfe5eb;border-radius:14px;overflow:hidden;background:#fff}
+.p3-deliver-grid article{position:relative;min-height:105px;padding:18px 18px 16px 48px;border-right:1px solid #edf0f3;border-bottom:1px solid #edf0f3}
+.p3-deliver-grid article:nth-child(3n){border-right:0}
+.p3-deliver-grid article:nth-last-child(-n+3){border-bottom:0}
+.p3-deliver-grid article:before{content:"";position:absolute;left:18px;top:20px;width:14px;height:14px;border:2px solid #f4b000;transform:rotate(45deg)}
+.p3-deliver-grid b{display:block;color:#173957;font-size:12px}
+.p3-deliver-grid small{display:block;margin-top:5px;color:#738396;font-size:10px;line-height:1.45}
+.p3-intake-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:0;margin-top:14px;border-radius:12px;overflow:hidden;background:#08233f}
+.p3-intake-strip>div{padding:14px 16px;border-right:1px solid rgba(255,255,255,.09)}
+.p3-intake-strip span{display:block;color:#e2b13e;font-size:8px;font-weight:900;letter-spacing:.1em}
+.p3-intake-strip b{display:block;margin-top:4px;color:#fff;font-size:11px}
+.p3-intake-strip a{display:flex;align-items:center;padding:14px 18px;background:#f4b000;color:#092442;font-size:11px;font-weight:900;text-decoration:none}
+.process-cards{gap:12px!important}
+.process-card{border-radius:12px!important;min-height:205px}
+.process-card h3{font-size:17px!important}
+.process-card p{font-size:10.5px!important;line-height:1.55}
+.cg-service-gallery figure{height:245px!important}
+
+@media(max-width:900px){
+  .p3-front-head{grid-template-columns:1fr}
+  .p3-deliver-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p3-deliver-grid article:nth-child(3n){border-right:1px solid #edf0f3}
+  .p3-deliver-grid article:nth-child(2n){border-right:0}
+  .p3-deliver-grid article:nth-last-child(-n+3){border-bottom:1px solid #edf0f3}
+  .p3-deliver-grid article:nth-last-child(-n+2){border-bottom:0}
+  .p3-intake-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .print3d-hero{padding:48px 0!important}
+  .print3d-visual{height:285px!important;max-height:285px!important}
+  .print3d-visual .float{left:10px;right:10px;bottom:10px}
+  .print3d-visual .float div{padding:9px}
+  .p3-deliver-grid{grid-template-columns:1fr}
+  .p3-deliver-grid article{border-right:0!important;border-bottom:1px solid #edf0f3!important}
+  .p3-deliver-grid article:last-child{border-bottom:0!important}
+  .p3-intake-strip{grid-template-columns:1fr}
+  .p3-intake-strip>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
+}
