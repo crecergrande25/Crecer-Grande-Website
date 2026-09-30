@@ -1975,3 +1975,151 @@ body:not(.home-v5) main :is(
 .svc-design-strip a{
   color:#092442!important;
 }
+
+
+/* ==========================================================================
+   CG CO2 LASER COMPONENTS PROJECT READABILITY PASS — 2026-09-30
+   Scoped only to projects/co2-laser-components-support.html.
+   ========================================================================== */
+body[data-project-slug="co2-laser-components-support"] .project-hero{
+  color:#fff!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-hero h1{
+  color:#fff!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-hero p{
+  max-width:820px!important;
+  color:#dce7f1!important;
+  font-size:14px!important;
+  line-height:1.72!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-hero .eyebrow{
+  color:#efc35a!important;
+  font-size:10.5px!important;
+}
+
+/* Visual case route */
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-band{
+  background:#f5f7fa!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-band .section-head .subhead{
+  color:#8a5d00!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-band .section-head h2{
+  color:#0d2c4b!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-band .section-head>p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.68!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-grid figcaption{
+  color:#fff!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-grid figcaption b{
+  color:#fff!important;
+  font-size:15px!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-visual-grid figcaption span{
+  color:#e2ebf4!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+
+/* Requirement-led execution block */
+body[data-project-slug="co2-laser-components-support"] .project-feature{
+  color:#173957!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-feature .subhead{
+  color:#8a5d00!important;
+  font-size:10.5px!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-feature h2{
+  color:#173957!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-feature p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-feature .checks li{
+  color:#52677b!important;
+  font-size:12.5px!important;
+  line-height:1.62!important;
+}
+body[data-project-slug="co2-laser-components-support"] .project-feature>img{
+  border-color:#dfe5eb!important;
+  background:#f8fafc;
+}
+
+/* Four checkpoint depth cards */
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth{
+  background:#f5f7fa!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth .section-head .subhead{
+  color:#8a5d00!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth .section-head h2{
+  color:#0d2c4b!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth-grid article{
+  min-width:0;
+  padding:19px 18px!important;
+  border:1px solid #dfe5eb!important;
+  border-radius:12px!important;
+  background:#fff!important;
+  color:#173957!important;
+  box-shadow:0 10px 28px rgba(7,26,54,.045);
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth-grid article>b{
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#08233f;
+  color:#f4b000!important;
+  font-size:10px!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth-grid h3{
+  margin:13px 0 7px!important;
+  color:#173957!important;
+  font-size:15px!important;
+  line-height:1.3!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cg-case-depth-grid p{
+  margin:0!important;
+  color:#52677b!important;
+  font-size:11.5px!important;
+  line-height:1.58!important;
+}
+
+/* Final CTA */
+body[data-project-slug="co2-laser-components-support"] .cta{
+  background:linear-gradient(135deg,#021027,#0b2c55)!important;
+  color:#fff!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cta h2{
+  color:#fff!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cta p{
+  color:#dce7f1!important;
+  font-size:13px!important;
+  line-height:1.65!important;
+}
+body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
+  background:#f4b000!important;
+  color:#071a36!important;
+}
+
+@media(max-width:640px){
+  body[data-project-slug="co2-laser-components-support"] .project-hero p{
+    font-size:13px!important;
+  }
+  body[data-project-slug="co2-laser-components-support"] .project-feature p{
+    font-size:12.5px!important;
+  }
+  body[data-project-slug="co2-laser-components-support"] .project-feature .checks li{
+    font-size:12px!important;
+  }
+}
