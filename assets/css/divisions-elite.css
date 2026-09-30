@@ -2919,3 +2919,266 @@ linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0
   .ins5-io-panel{padding:21px}
   .ins5-final-box{padding:24px 22px}
 }
+
+
+/* ==========================================================================
+   CG TENDER BUSINESS DEVELOPMENT READABILITY PASS — 2026-09-30
+   Scoped to the Tender & Business Development division page.
+   ========================================================================== */
+body[data-division-slug="tender-business-development"] .dv4-detail-copy{
+  color:#fff;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-copy h1{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-tag{
+  color:#efc35a!important;
+  font-size:18px!important;
+  line-height:1.45!important;
+  font-weight:800!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-intro{
+  color:#dce7f1!important;
+  font-size:14px!important;
+  line-height:1.72!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-mini span{
+  color:#e2ebf4!important;
+  font-size:11.5px!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-note{
+  background:rgba(3,18,38,.88)!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-note small{
+  color:#efc35a!important;
+  font-size:10px!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-note b{
+  color:#fff!important;
+  font-size:14px!important;
+  line-height:1.45!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-hero .btn.outline{
+  background:transparent!important;
+  border-color:rgba(255,255,255,.42)!important;
+  color:#fff!important;
+}
+
+/* Division-front readability */
+body[data-division-slug="tender-business-development"] .cg-front-intro>p,
+body[data-division-slug="tender-business-development"] .cg-front-delivery span,
+body[data-division-slug="tender-business-development"] .cg-front-routes-head span,
+body[data-division-slug="tender-business-development"] .cg-front-route span,
+body[data-division-slug="tender-business-development"] .cg-front-cta p{
+  color:#52677b!important;
+}
+body[data-division-slug="tender-business-development"] .cg-front-delivery span{
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+body[data-division-slug="tender-business-development"] .cg-front-route span{
+  font-size:10.5px!important;
+  line-height:1.45!important;
+}
+body[data-division-slug="tender-business-development"] .cg-front-panel.cg-front-dark{
+  background:#08233f!important;
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .cg-front-panel.cg-front-dark .cg-front-services span{
+  color:#e2ebf4!important;
+  font-size:11.5px!important;
+}
+
+/* Story */
+body[data-division-slug="tender-business-development"] .dv4-detail-story{
+  background:#fff;
+}
+body[data-division-slug="tender-business-development"] .dv4-story-copy .subhead{
+  color:#8a5d00!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-story-copy h2{
+  color:#0d2c4b!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-story-copy p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.72!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-story-copy a{
+  color:#7a5200!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-story-media span{
+  background:rgba(3,18,38,.88)!important;
+  color:#fff!important;
+  font-size:11px!important;
+  line-height:1.45!important;
+}
+
+/* Capability cards */
+body[data-division-slug="tender-business-development"] .dv4-cap-section{
+  background:#f4f7fa!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-head .subhead{
+  color:#8a5d00!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-head h2{
+  color:#0d2c4b!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-head>p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.7!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-cap-grid article{
+  background:#fff!important;
+  color:#173957!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-cap-grid h3{
+  color:#173957!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-cap-grid p{
+  color:#52677b!important;
+  font-size:12px!important;
+  line-height:1.62!important;
+}
+
+/* Visual band and boundary */
+body[data-division-slug="tender-business-development"] .cg-division-visual-band .section-head .subhead{
+  color:#8a5d00!important;
+}
+body[data-division-slug="tender-business-development"] .cg-division-visual-band .section-head h2{
+  color:#0d2c4b!important;
+}
+body[data-division-slug="tender-business-development"] .cg-division-visual-band .section-head>p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.7!important;
+}
+body[data-division-slug="tender-business-development"] .cg-division-visual-grid figcaption{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .cg-division-visual-grid figcaption b{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .cg-division-visual-grid figcaption span{
+  color:#e2ebf4!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+body[data-division-slug="tender-business-development"] .cg-service-boundary{
+  margin-top:18px;
+  padding:16px 18px;
+  border-left:3px solid #f4b000;
+  background:#f3f6f8;
+  color:#173957;
+}
+body[data-division-slug="tender-business-development"] .cg-service-boundary b{
+  display:block;
+  color:#173957!important;
+  font-size:12px;
+}
+body[data-division-slug="tender-business-development"] .cg-service-boundary p{
+  margin:5px 0 0;
+  color:#52677b!important;
+  font-size:11px;
+  line-height:1.58;
+}
+
+/* Process */
+body[data-division-slug="tender-business-development"] .dv4-detail-process{
+  background:#fff;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-copy .subhead{
+  color:#8a5d00!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-copy h2{
+  color:#0d2c4b!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-list h3{
+  color:#173957!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-list p{
+  color:#52677b!important;
+  font-size:11.5px!important;
+  line-height:1.58!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-image>div{
+  background:rgba(3,18,38,.88)!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-image span{
+  color:#efc35a!important;
+  font-size:10px!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-process-image b{
+  color:#fff!important;
+  font-size:14px!important;
+}
+
+/* Inputs / outputs */
+body[data-division-slug="tender-business-development"] .dv4-io-card:not(.dv4-io-dark){
+  background:#fff!important;
+  color:#173957!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card:not(.dv4-io-dark) .subhead{
+  color:#8a5d00!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card:not(.dv4-io-dark) h2{
+  color:#173957!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card:not(.dv4-io-dark) li{
+  background:#f8fafc!important;
+  color:#52677b!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card.dv4-io-dark{
+  background:linear-gradient(135deg,#041326,#0b3157)!important;
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card.dv4-io-dark .subhead{
+  color:#efc35a!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card.dv4-io-dark h2{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-io-card.dv4-io-dark li{
+  background:rgba(255,255,255,.08)!important;
+  border-color:rgba(255,255,255,.14)!important;
+  color:#e2ebf4!important;
+}
+
+/* Final CTA */
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box .subhead{
+  color:#efc35a!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box h2{
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box p{
+  color:#dce7f1!important;
+  font-size:13px!important;
+  line-height:1.65!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box .btn.dark{
+  background:rgba(255,255,255,.08)!important;
+  border-color:rgba(255,255,255,.42)!important;
+  color:#fff!important;
+}
+body[data-division-slug="tender-business-development"] .dv4-detail-close-box .btn.dark:hover{
+  background:#fff!important;
+  border-color:#fff!important;
+  color:#071a36!important;
+}
+
+@media(max-width:640px){
+  body[data-division-slug="tender-business-development"] .dv4-detail-tag{
+    font-size:16px!important;
+  }
+  body[data-division-slug="tender-business-development"] .dv4-detail-intro{
+    font-size:13px!important;
+  }
+  body[data-division-slug="tender-business-development"] .cg-service-boundary{
+    padding:14px 15px;
+  }
+}
