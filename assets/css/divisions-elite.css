@@ -656,3 +656,86 @@ linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));box-shadow:0
   .cg-front-services span:last-child{border-bottom:0!important}
   .cg-front-routes-head,.cg-front-cta{align-items:flex-start;flex-direction:column}
 }
+
+
+/* ==========================================================================
+   CG DIVISION PAGE REPAIR PASS — 2026-09-30
+   Controls hero/visual scale and keeps the six detailed division pages readable.
+   ========================================================================== */
+:where(.ed5-hero,.au5-hero,.qms5-hero,.ins5-hero,.dv4-detail-hero){
+  padding:58px 0!important;
+  min-height:0!important;
+}
+:where(.ed5-hero-grid,.au5-hero-grid,.qms5-hero-grid,.ins5-hero-grid,.dv4-detail-grid){
+  gap:34px!important;
+  align-items:center!important;
+}
+:where(.ed5-hero,.au5-hero,.qms5-hero,.ins5-hero,.dv4-detail-hero) h1{
+  font-size:clamp(31px,3.5vw,44px)!important;
+  line-height:1.06!important;
+  letter-spacing:-.03em!important;
+}
+:where(.ed5-hero,.au5-hero,.qms5-hero,.ins5-hero,.dv4-detail-hero) p{
+  font-size:13px!important;
+  line-height:1.65!important;
+}
+:where(.ed5-hero-visual,.au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.dv4-detail-visual){
+  min-height:0!important;
+  height:380px!important;
+  max-height:380px!important;
+  border-radius:18px!important;
+  overflow:hidden!important;
+}
+:where(.ed5-hero-visual,.au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.dv4-detail-visual) > img,
+:where(.ed5-hero-main,.au5-hero-main,.qms5-hero-main,.ins5-hero-main){
+  width:100%!important;
+  height:100%!important;
+  max-height:380px!important;
+  object-fit:cover!important;
+  filter:none!important;
+}
+:where(.ed5-intro-media,.au5-story-media,.qms5-story-media,.ins5-story-media,.dv4-story-media){
+  min-height:0!important;
+  height:320px!important;
+  max-height:320px!important;
+  overflow:hidden!important;
+  border-radius:14px!important;
+}
+:where(.ed5-intro-media,.au5-story-media,.qms5-story-media,.ins5-story-media,.dv4-story-media) img{
+  width:100%!important;height:100%!important;object-fit:cover!important;filter:none!important;
+}
+:where(.ed5-showcase-grid,.au5-cap-grid,.qms5-cap-grid,.ins5-cap-grid,.dv4-cap-grid) img{
+  max-height:250px!important;
+  object-fit:cover!important;
+}
+:where(.ed5-process,.au5-process,.qms5-process,.ins5-process,.dv4-detail-process) img,
+.dv4-process-image img{
+  max-height:340px!important;
+  object-fit:cover!important;
+}
+.cg-division-front{padding-top:34px!important}
+.cg-front-panel-head h3{font-size:18px!important}
+.cg-front-delivery{min-height:96px!important}
+.cg-front-routes{margin-top:14px!important}
+.cg-front-route{min-height:72px!important}
+:where(.ed5-head,.au5-head,.qms5-head,.ins5-head,.dv4-head) h2{
+  font-size:clamp(23px,2.4vw,31px)!important;
+  line-height:1.12!important;
+}
+:where(.ed5-final-box,.au5-final-box,.qms5-final-box,.ins5-final-box,.dv4-detail-close-box) h2{
+  font-size:clamp(23px,2.4vw,31px)!important;
+  line-height:1.12!important;
+}
+@media(max-width:760px){
+  :where(.ed5-hero,.au5-hero,.qms5-hero,.ins5-hero,.dv4-detail-hero){padding:44px 0!important}
+  :where(.ed5-hero-visual,.au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.dv4-detail-visual){
+    height:270px!important;max-height:270px!important;
+  }
+  :where(.ed5-hero-visual,.au5-hero-visual,.qms5-hero-visual,.ins5-hero-visual,.dv4-detail-visual) > img,
+  :where(.ed5-hero-main,.au5-hero-main,.qms5-hero-main,.ins5-hero-main){
+    max-height:270px!important;
+  }
+  :where(.ed5-intro-media,.au5-story-media,.qms5-story-media,.ins5-story-media,.dv4-story-media){
+    height:250px!important;max-height:250px!important;
+  }
+}
