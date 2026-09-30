@@ -70,3 +70,137 @@ linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-siz
   .svc-design-grid article{border-right:0!important;border-bottom:1px solid #edf0f3!important}
   .svc-design-grid article:last-child{border-bottom:0!important}
 }
+
+
+/* ==========================================================================
+   CG MECHANICAL DESIGN READABILITY PASS — 2026-09-30
+   Explicit foreground/background pairing plus stronger small-copy legibility
+   for mechanical-design-services-kolkata.html.
+   ========================================================================== */
+.service-hero{
+  color:#fff!important;
+}
+.service-hero :is(h1,h2,h3,b,strong){
+  color:#fff!important;
+}
+.service-hero p{
+  color:#dce7f1!important;
+}
+.service-hero :is(.eyebrow,.subhead){
+  color:#efc35a!important;
+}
+.service-proof>div{
+  background:rgba(3,18,38,.72)!important;
+  border-color:rgba(255,255,255,.18)!important;
+}
+.service-proof small{
+  color:#c7d5e4!important;
+  font-size:9px!important;
+  line-height:1.35!important;
+}
+.service-proof b{
+  color:#fff!important;
+  font-size:11px!important;
+}
+
+.svc-design-front{
+  color:#173957!important;
+}
+.svc-design-head span{
+  color:#8a5d00!important;
+  font-size:10px!important;
+}
+.svc-design-head h2{
+  color:#0e2e4d!important;
+}
+.svc-design-head p{
+  color:#52677b!important;
+  font-size:13px!important;
+  line-height:1.66!important;
+}
+.svc-design-grid article{
+  background:#fff!important;
+  color:#173957!important;
+}
+.svc-design-grid b{
+  color:#173957!important;
+  font-size:13px!important;
+}
+.svc-design-grid small{
+  color:#52677b!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+
+.svc-design-strip{
+  background:#08233f!important;
+  color:#fff!important;
+}
+.svc-design-strip span{
+  color:#e2ebf4!important;
+  font-size:11px!important;
+}
+.svc-design-strip a{
+  background:#f4b000!important;
+  color:#092442!important;
+  font-size:11px!important;
+}
+
+/* White service cards must never inherit light hero text. */
+.scope-card,
+.method-step,
+.input-box,
+.deliver-card,
+.service-related a{
+  background:#fff!important;
+  color:#173957!important;
+}
+.scope-card :is(h2,h3,b,strong),
+.method-step :is(h2,h3,b,strong),
+.input-box :is(h2,h3,b,strong),
+.deliver-card :is(h2,h3,b,strong),
+.service-related a :is(h2,h3,b,strong){
+  color:#173957!important;
+}
+.scope-card p,
+.method-step p,
+.input-box li,
+.deliver-card span,
+.service-related span{
+  color:#52677b!important;
+}
+.scope-card p{
+  font-size:11px!important;
+  line-height:1.6!important;
+}
+.method-step p{
+  font-size:10.5px!important;
+  line-height:1.6!important;
+}
+.input-box li{
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+.deliver-card span,
+.service-related span{
+  font-size:10.5px!important;
+  line-height:1.5!important;
+}
+.method-step span{
+  background:#071a36!important;
+  color:#f4b000!important;
+  font-size:10px!important;
+}
+
+/* Captions sit on a dark photo gradient: keep them explicitly light. */
+.cg-service-gallery figcaption{
+  color:#fff!important;
+}
+.cg-service-gallery figcaption b{
+  color:#fff!important;
+}
+.cg-service-gallery figcaption span{
+  color:#e2ebf4!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
