@@ -80,3 +80,86 @@
   .p3-intake-strip{grid-template-columns:1fr}
   .p3-intake-strip>div{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
 }
+
+
+/* ==========================================================================
+   CG 3D PRINTING READABILITY PASS — 2026-09-30
+   Strengthens small-copy legibility and explicitly separates dark hero/strip
+   copy from light process/card copy.
+   ========================================================================== */
+.print3d-hero{
+  color:#fff!important;
+}
+.print3d-hero :is(h1,h2,h3,b,strong){
+  color:#fff!important;
+}
+.print3d-hero p{
+  color:#dce7f1!important;
+}
+.print3d-hero :is(.eyebrow,.subhead){
+  color:#efc35a!important;
+}
+.print3d-visual .float span{
+  color:#c7d5e4!important;
+  font-size:10px!important;
+  line-height:1.35!important;
+}
+.print3d-visual .float b{
+  color:#fff!important;
+  font-size:13px!important;
+}
+
+.p3-front-head span{
+  color:#8a5d00!important;
+  font-size:10px!important;
+}
+.p3-front-head p{
+  color:#52677b!important;
+  font-size:13px!important;
+}
+.p3-deliver-grid b{
+  color:#173957!important;
+  font-size:13px!important;
+}
+.p3-deliver-grid small{
+  color:#52677b!important;
+  font-size:11px!important;
+  line-height:1.55!important;
+}
+
+.process-card{
+  background:#fff!important;
+  color:#173957!important;
+}
+.process-card h3{
+  color:#173957!important;
+}
+.process-card p,
+.process-card li{
+  color:#52677b!important;
+  font-size:11px!important;
+  line-height:1.6!important;
+}
+.process-card .mode{
+  color:#704b00!important;
+  background:#fff3ce!important;
+  font-size:9px!important;
+}
+
+.p3-intake-strip{
+  background:#08233f!important;
+  color:#fff!important;
+}
+.p3-intake-strip span{
+  color:#e9bd50!important;
+  font-size:9px!important;
+}
+.p3-intake-strip b{
+  color:#fff!important;
+  font-size:12px!important;
+}
+.p3-intake-strip a{
+  background:#f4b000!important;
+  color:#092442!important;
+  font-size:11px!important;
+}
