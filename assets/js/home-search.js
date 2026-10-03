@@ -9,9 +9,8 @@ document.addEventListener('DOMContentLoaded',async()=>{
     ['Mechanical Design & CAD','Engineering service','Mechanical CAD, manufacturing drawings, BOM, DFM/DFA and reverse engineering.','/mechanical-design-services-kolkata.html','inventor cad drawing design reverse engineering dfm dfa bom'],
     ['3D Printing & Rapid Prototyping','Manufacturing','FDM/resin routes, file review, FAI-first workflows and low-volume prototyping.','/3d-printing-kolkata.html','stl step stp resin fdm pla petg abs nylon inserts prototype'],
     ['Industrial Machine Maintenance','Machine support','Breakdown, troubleshooting, preventive maintenance and restoration support.','/industrial-machine-maintenance-kolkata.html','breakdown alarm repair cnc vmc laser chiller machine maintenance'],
-    ['Inspection / FAI / RCA / CAPA','Quality','Inspection, first article, NCR, root-cause and corrective-action support.','/industrial-inspection-qa-kolkata.html','quality inspection fai ncr rca capa sop audit'],
-    ['Tender & GeM Support','Business support','Tender review, technical compliance, GeM and industrial business support.','/gem-tender-support-kolkata.html','gem tender bid procurement vendor compliance registration'],
-    ['CG Engineering Desk','Engineering gateway','Start with a drawing, part, machine problem, quality issue or tender.','/engineering-desk.html','problem requirement drawing photo sample machine part issue']
+    ['Inspection / FAI / RCA / CAPA','Quality','Inspection, first article, NCR, root-cause and corrective-action support.','/industrial-inspection-qa-kolkata.html','quality inspection fai ncr rca capa'],
+    ['CG Engineering Desk','Engineering gateway','Start with a drawing, part, machine problem or quality issue.','/engineering-desk.html','problem requirement drawing photo sample machine part issue']
   ].forEach(x=>add(...x));
   try{
     const content=await (await fetch('/assets/data/content-index.json',{cache:'no-store'})).json();

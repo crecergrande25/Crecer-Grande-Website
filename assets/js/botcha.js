@@ -145,16 +145,16 @@
       answer:'Automation support covers PLC, HMI, I/O, sensors and machine controls. Share the machine model, control hardware, wiring/I/O information, alarm or symptom and the operating change you need.',
       links:[{label:'Automation Solutions',url:'/divisions/automation-solutions.html'}]
     };
-    if(/iso|qms|rca|capa|ncr|quality|audit/.test(s))return {
-      answer:'Crecer Grande supports QMS documentation, SOPs, RCA/CAPA and audit-readiness work. For a quality issue, share the requirement, evidence, measured result, containment status and available records.',
-      links:[{label:'Quality & Management Systems',url:'/divisions/quality-management-systems.html'}]
+    if(/rca|capa|ncr|quality|inspection/.test(s))return {
+      answer:'Crecer Grande supports inspection, FAI, NCR and RCA/CAPA work. For a quality issue, share the requirement, evidence, measured result, containment status and available records.',
+      links:[{label:'Inspection & Testing',url:'/divisions/inspection-testing.html'}]
     };
     if(/contact|phone|whatsapp|email|address/.test(s))return {
       answer:'You can call +91 7003301781, WhatsApp +91 6291001781, or email crecergrande@outlook.com. Crecer Grande is based in Rajarhat, West Bengal.',
       links:[{label:'Contact Crecer Grande',url:'/contact.html'}]
     };
     return {
-      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, automation, quality, inspection, tender support and business support. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
+      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, automation, quality, inspection and business support. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
       links:[{label:'Engineering Desk',url:'/engineering-desk.html'},{label:'Request a Quote',url:'/request-quote.html'}]
     };
   }

@@ -2126,3 +2126,6 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 
 /* Keeps images proportional now that width/height attributes reserve space (prevents layout shift). */
 :where(img[width][height]){height:auto}
+
+/* Homepage hero shows three facts, so use three columns on wide screens. */
+@media(min-width:1051px){.cg-pr.cg-pr-home .pr-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
