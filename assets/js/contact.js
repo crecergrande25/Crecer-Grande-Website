@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded',()=>{
   }
 
   f.addEventListener('submit',async(e)=>{
-    e.preventDefault(); const btn=f.querySelector('button[type="submit"]'),old=btn?.textContent; if(btn){btn.disabled=true;btn.textContent='Submitting…'}
+    e.preventDefault();
+    const hp=f.querySelector('[name="hp_contact_ref"]');
+    if(hp&&hp.value){status.className='status';status.textContent='Thank you. Your message has been received.';return}
+    const btn=f.querySelector('button[type="submit"]'),old=btn?.textContent; if(btn){btn.disabled=true;btn.textContent='Submitting…'}
     const fd=new FormData(f),d=Object.fromEntries(fd.entries());
     let files=[];
     try{files=selectedFiles()}catch(err){status.className='status error';status.textContent=err.message||String(err);if(btn){btn.disabled=false;btn.textContent=old||'Submit Requirement'}return}
