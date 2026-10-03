@@ -2123,3 +2123,6 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
     font-size:12px!important;
   }
 }
+
+/* Keeps images proportional now that width/height attributes reserve space (prevents layout shift). */
+:where(img[width][height]){height:auto}
