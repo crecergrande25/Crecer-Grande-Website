@@ -154,7 +154,7 @@
       links:[{label:'Contact Crecer Grande',url:'/contact.html'}]
     };
     return {
-      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, automation, quality, inspection and business support. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
+      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, automation, quality and inspection. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
       links:[{label:'Engineering Desk',url:'/engineering-desk.html'},{label:'Request a Quote',url:'/request-quote.html'}]
     };
   }
