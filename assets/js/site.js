@@ -379,7 +379,7 @@
   const BOTCHA = `<div class="ask cg-botcha" data-botcha-root>
     <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Open Botcha virtual assistant">
       <span class="cg-botcha-mark" aria-hidden="true">B</span>
-      <span class="cg-botcha-launch-copy"><b>Botcha !</b><small>AI virtual assistant</small></span>
+      <span class="cg-botcha-launch-copy"><b>Need help?</b><small>AI virtual assistant</small></span>
       <span class="cg-botcha-live-dot" aria-hidden="true"></span>
     </button>
     <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Botcha virtual assistant" aria-hidden="true">
