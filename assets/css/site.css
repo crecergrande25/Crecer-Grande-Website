@@ -2129,3 +2129,6 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 
 /* Homepage hero shows three facts, so use three columns on wide screens. */
 @media(min-width:1051px){.cg-pr.cg-pr-home .pr-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Keep all raster images crisp; decorative panel blur remains separate via backdrop-filter. */
+img{filter:none!important}
