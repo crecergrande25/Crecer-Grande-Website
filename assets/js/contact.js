@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded',()=>{
     e.preventDefault();
     const hp=f.querySelector('[name="hp_contact_ref"]');
     if(hp&&hp.value){status.className='status';status.textContent='Thank you. Your message has been received.';return}
+    const phone=f.querySelector('[name="phone"]')?.value.trim()||'';
+    const email=f.querySelector('[name="email"]')?.value.trim()||'';
+    if(!phone&&!email){status.className='status error';status.textContent='Please provide a phone number or email address so we can reply.';const field=f.querySelector('[name="email"]');field?.focus();return}
     const btn=f.querySelector('button[type="submit"]'),old=btn?.textContent; if(btn){btn.disabled=true;btn.textContent='Submitting…'}
     const fd=new FormData(f),d=Object.fromEntries(fd.entries());
     let files=[];
@@ -58,7 +61,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     const lines=[`Hello Crecer Grande`,``,`Name: ${d.name||''}`,`Company: ${d.company||''}`,`Phone: ${d.phone||''}`,`Email: ${d.email||''}`,`Requirement: ${requirement}`,d.quantity?`Quantity: ${d.quantity}`:'',...extra,``,`Details:`,d.message||''].filter(Boolean);
     const wa=`https://wa.me/916291001781?text=${encodeURIComponent(lines.join('\n'))}`, mail=`mailto:crecergrande@outlook.com?subject=${encodeURIComponent('Website RFQ - '+requirement)}&body=${encodeURIComponent(lines.join('\n'))}`;
     status.className='status'+(errText?' error':'');
-    status.innerHTML=saved?`<b>Requirement recorded${enquiryId?` — Ref. ${String(enquiryId).slice(0,8).toUpperCase()}`:''}.</b>${attached?` ${attached} reference file${attached>1?'s':''} attached securely.`:''} <a target="_blank" rel="noopener" href="${wa}"><b>Continue on WhatsApp →</b></a>`:`The website backend could not record the enquiry automatically${errText?`: ${errText.replace(/[<>]/g,'')}`:'.'} <a target="_blank" rel="noopener" href="${wa}"><b>Continue on WhatsApp</b></a> or <a href="${mail}"><b>email CG</b></a>.`;
+    const incomplete=!!(saved&&errText);
+    status.innerHTML=saved?`<b>Requirement recorded${enquiryId?` — Ref. ${String(enquiryId).slice(0,8).toUpperCase()}`:''}.</b>${attached?` ${attached} reference file${attached>1?'s':''} attached securely.`:''}${incomplete?` <strong>Some reference files may not have been attached (${attached} of ${files.length} uploaded). Please contact us with the missing files.</strong>`:""} <a target="_blank" rel="noopener" href="${wa}"><b>Continue on WhatsApp →</b></a>`:`The website backend could not record the enquiry automatically${errText?`: ${errText.replace(/[<>]/g,'')}`:'.'} <a target="_blank" rel="noopener" href="${wa}"><b>Continue on WhatsApp</b></a> or <a href="${mail}"><b>email CG</b></a>.`;
     if(btn){btn.disabled=false;btn.textContent=old||'Submit Requirement'}
   });
 });
