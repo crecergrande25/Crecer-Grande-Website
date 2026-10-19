@@ -1,0 +1,24 @@
+name: Website quality
+
+on:
+  push:
+    branches: [main, fix/website-quality-reliability-20261020]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML routes and sitemap
+        run: python3 scripts/check_site_quality.py
+      - name: Check JavaScript syntax
+        run: |
+          for script in assets/js/*.js admin/assets/*.js; do
+            node --check "$script"
+          done
