@@ -22,3 +22,13 @@ jobs:
           for script in assets/js/*.js admin/assets/*.js; do
             node --check "$script"
           done
+
+  live-smoke:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: quality
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test public production website
+        run: python3 scripts/check_live_site.py
