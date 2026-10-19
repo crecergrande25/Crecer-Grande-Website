@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const requirement=type==='general'?'General Enquiry':(d.requirement_type||'Other');
     const labels={material:'Material / Grade',machine_model:'Machine / Model / Part',dimensions:'Dimensions / Specification',target_date:'Target Date',location:'Location',cad_software:'CAD / Input Format',deliverables:'Required Deliverables',piping_scope:'Piping Scope / Standard',revision_scope:'Revision / Existing Drawing Scope'};
     const extra=[]; Object.keys(labels).forEach(k=>{if(d[k])extra.push(`${labels[k]}: ${d[k]}`)});
-    const combined=[d.message||'',...extra].filter(Boolean).join('\n');
+    const combined=[d.subject?`Subject: ${d.subject}`:'',d.message||'',...extra].filter(Boolean).join('\n');
     let saved=false,attached=0,enquiryId=null,errText='';
     const cfg=window.CG_CONFIG||{}; let client=window.CG_SUPABASE;
     if(!client&&window.supabase&&cfg.supabaseUrl&&cfg.supabasePublishableKey){client=window.supabase.createClient(cfg.supabaseUrl,cfg.supabasePublishableKey);window.CG_SUPABASE=client}
