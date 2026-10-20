@@ -1,0 +1,13 @@
+name: Unique image audit
+on:
+  push:
+    branches: [fix/global-unique-content-images-20261020]
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install Pillow --break-system-packages
+      - run: python3 scripts/audit_duplicate_images.py
