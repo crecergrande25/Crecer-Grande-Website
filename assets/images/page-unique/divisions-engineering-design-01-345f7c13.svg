@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+<title id="title">Mechanical CAD design and engineering workstation — engineering illustration</title>
+<desc id="desc">Original, unique technical illustration for this page placement. Concept artwork, not a photograph of specific equipment.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#132746"/><stop offset=".7" stop-color="#325278"/><stop offset="1" stop-color="#132746"/></linearGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#fff" stroke-opacity=".075"/></pattern></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grid)"/>
+<circle cx="916" cy="381" r="305" fill="#f5bf70" opacity=".07"/>
+<path d="M615 90V660" stroke="#fff" opacity=".12" stroke-width="3"/>
+<g transform="translate(697 109) rotate(4 265 225)"><path d="M276 74l174 100v193L276 466 102 367V174z" fill="#2b5470" fill-opacity=".55" stroke="#b9d6e8" stroke-width="7"/>
+        <path d="M102 174l174 103 174-103M276 277v189" fill="none" stroke="#edbd65" stroke-width="6"/>
+        <path d="M184 217l92-55 92 55v112l-92 56-92-56z" fill="#41657e" stroke="#bde0ed" stroke-width="5"/>
+        <path d="M184 217l92 58 92-58m-92 58v110" fill="none" stroke="#edbd65" stroke-width="5"/>
+        <g stroke="#b5d9e9" stroke-width="3" stroke-dasharray="10 10"><path d="M70 160V390M487 160v230M70 418h415"/></g></g>
+<path d="M710 76 v32" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M755 87 v33" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M800 98 v30" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M845 76 v20" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M890 87 v25" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M935 98 v26" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M980 76 v32" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M1025 87 v20" stroke="#edbd65" opacity=".44" stroke-width="4"/>
+<rect x="70" y="92" width="78" height="54" rx="12" fill="#edbd65"/><text x="109" y="129" font-size="27" font-weight="900" fill="#11283f" font-family="Arial,Helvetica,sans-serif" text-anchor="middle">CG</text>
+<text x="166" y="128" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="800" fill="#ffe0a7" letter-spacing="1.1">CRECER GRANDE</text>
+<text x="70" y="249" fill="#edbd65" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="750" letter-spacing="2">ENGINEERING / TECHNICAL VISUAL</text>
+<text x="70" y="315" font-family="Arial,Helvetica,sans-serif" fill="#fff" font-size="40" font-weight="700">Mechanical CAD design and</text><text x="70" y="367" font-family="Arial,Helvetica,sans-serif" fill="#fff" font-size="40" font-weight="700">engineering workstation</text>
+<path d="M70 603h1056" stroke="#fff" stroke-opacity=".27" stroke-width="2"/>
+<text x="70" y="641" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#ccdce7">UNIQUE CONCEPT ILLUSTRATION · NOT A PRODUCT PHOTO</text>
+<text x="1125" y="641" text-anchor="end" font-family="monospace" font-size="20" fill="#edbd65">CG-345F7C13C1</text>
+</svg>

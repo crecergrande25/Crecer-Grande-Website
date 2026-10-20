@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+<title id="title">Industrial automation — engineering illustration</title>
+<desc id="desc">Original, unique technical illustration for this page placement. Concept artwork, not a photograph of specific equipment.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0f2635"/><stop offset=".7" stop-color="#375267"/><stop offset="1" stop-color="#0f2635"/></linearGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#fff" stroke-opacity=".075"/></pattern></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grid)"/>
+<circle cx="931" cy="376" r="305" fill="#f5bf70" opacity=".07"/>
+<path d="M615 90V660" stroke="#fff" opacity=".12" stroke-width="3"/>
+<g transform="translate(690 111) rotate(3 265 225)"><rect x="92" y="52" width="328" height="358" rx="22" fill="#153551" stroke="#b9d6e8" stroke-width="6"/>
+        <rect x="118" y="85" width="272" height="90" rx="10" fill="#0a1c2e" stroke="#e2b468" stroke-width="4"/>
+        <path d="M140 130h72l24-23 26 46 27-24h66" fill="none" stroke="#6dd4da" stroke-width="6"/>
+        <g fill="#e2b468"><rect x="120" y="211" width="105" height="110" rx="12"/><rect x="249" y="211" width="140" height="110" rx="12"/></g>
+        <g stroke="#09253f" stroke-width="9"><path d="M138 240h72m-72 24h72m-72 24h72"/><path d="M270 242h94m-94 25h94m-94 25h94"/></g>
+        <path d="M145 410v45m56-45v45m58-45v45m60-45v45m60-45v45" stroke="#86cbd1" stroke-width="9"/></g>
+<path d="M710 76 v22" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M755 87 v30" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M800 98 v24" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M845 76 v14" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M890 87 v33" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M935 98 v16" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M980 76 v27" stroke="#e2b468" opacity=".44" stroke-width="4"/><path d="M1025 87 v26" stroke="#e2b468" opacity=".44" stroke-width="4"/>
+<rect x="70" y="92" width="78" height="54" rx="12" fill="#e2b468"/><text x="109" y="129" font-size="27" font-weight="900" fill="#11283f" font-family="Arial,Helvetica,sans-serif" text-anchor="middle">CG</text>
+<text x="166" y="128" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="800" fill="#ffe0a7" letter-spacing="1.1">CRECER GRANDE</text>
+<text x="70" y="249" fill="#e2b468" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="750" letter-spacing="2">AUTOMATION / TECHNICAL VISUAL</text>
+<text x="70" y="315" font-family="Arial,Helvetica,sans-serif" fill="#fff" font-size="40" font-weight="700">Industrial automation</text>
+<path d="M70 603h1056" stroke="#fff" stroke-opacity=".27" stroke-width="2"/>
+<text x="70" y="641" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#ccdce7">UNIQUE CONCEPT ILLUSTRATION · NOT A PRODUCT PHOTO</text>
+<text x="1125" y="641" text-anchor="end" font-family="monospace" font-size="20" fill="#e2b468">CG-2D8CC58AE3</text>
+</svg>

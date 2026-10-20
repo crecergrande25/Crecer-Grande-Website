@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-labelledby="title desc">
+<title id="title">Verification — engineering illustration</title>
+<desc id="desc">Original, unique technical illustration for this page placement. Concept artwork, not a photograph of specific equipment.</desc>
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#132746"/><stop offset=".7" stop-color="#325278"/><stop offset="1" stop-color="#132746"/></linearGradient>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#fff" stroke-opacity=".075"/></pattern></defs>
+<rect width="1200" height="750" fill="url(#bg)"/><rect width="1200" height="750" fill="url(#grid)"/>
+<circle cx="960" cy="334" r="305" fill="#f5bf70" opacity=".07"/>
+<path d="M615 90V660" stroke="#fff" opacity=".12" stroke-width="3"/>
+<g transform="translate(691 105) rotate(-2 265 225)"><circle cx="268" cy="242" r="166" fill="#254660" stroke="#b9d6e8" stroke-width="8"/>
+        <circle cx="268" cy="242" r="132" fill="#0c273e" stroke="#edbd65" stroke-width="6"/>
+        <path d="M268 141v93l58 38" stroke="#f1c66f" stroke-width="12" stroke-linecap="round"/>
+        <g stroke="#b9d6e8" stroke-width="5"><path d="M268 100v25m142 117h-26M268 385v-25M126 242h25"/></g>
+        <path d="M137 370l70 63 187-209" stroke="#80dbc2" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+<path d="M710 76 v31" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M755 87 v17" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M800 98 v30" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M845 76 v24" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M890 87 v30" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M935 98 v14" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M980 76 v19" stroke="#edbd65" opacity=".44" stroke-width="4"/><path d="M1025 87 v24" stroke="#edbd65" opacity=".44" stroke-width="4"/>
+<rect x="70" y="92" width="78" height="54" rx="12" fill="#edbd65"/><text x="109" y="129" font-size="27" font-weight="900" fill="#11283f" font-family="Arial,Helvetica,sans-serif" text-anchor="middle">CG</text>
+<text x="166" y="128" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="800" fill="#ffe0a7" letter-spacing="1.1">CRECER GRANDE</text>
+<text x="70" y="249" fill="#edbd65" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="750" letter-spacing="2">INSPECTION / TECHNICAL VISUAL</text>
+<text x="70" y="315" font-family="Arial,Helvetica,sans-serif" fill="#fff" font-size="40" font-weight="700">Verification</text>
+<path d="M70 603h1056" stroke="#fff" stroke-opacity=".27" stroke-width="2"/>
+<text x="70" y="641" font-family="Arial,Helvetica,sans-serif" font-size="20" fill="#ccdce7">UNIQUE CONCEPT ILLUSTRATION · NOT A PRODUCT PHOTO</text>
+<text x="1125" y="641" text-anchor="end" font-family="monospace" font-size="20" fill="#edbd65">CG-14DF0623B8</text>
+</svg>
