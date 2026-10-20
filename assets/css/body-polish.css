@@ -738,7 +738,7 @@ body main :is(
   background-color:#04162c!important;
   background-image:
     linear-gradient(90deg,rgba(3,17,34,.985) 0%,rgba(3,22,42,.96) 34%,rgba(5,37,67,.84) 62%,rgba(6,45,81,.54) 100%),
-    var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+    var(--cg-hero-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center,center!important;
   background-size:cover,cover!important;
   background-repeat:no-repeat!important;
@@ -854,7 +854,7 @@ body main .pr-hero.pr-compact{
     padding:50px 0!important;
     background-image:
       linear-gradient(180deg,rgba(3,17,34,.95) 0%,rgba(4,28,52,.86) 58%,rgba(5,39,70,.72) 100%),
-      var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+      var(--cg-hero-art,linear-gradient(145deg,#0b203a,#23466b))!important;
     background-position:center,center!important;
   }
   body main :is(

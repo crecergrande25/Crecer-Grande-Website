@@ -1,0 +1,27 @@
+name: Unique image guard
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate markup and JavaScript
+        run: |
+          python3 scripts/check_site_quality.py
+          for file in assets/js/*.js; do node --check "$file"; done
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify all images have one unique placement
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/cg-site.log 2>&1 &
+          sleep 3
+          node scripts/check_live_image_uniqueness.cjs
+          AUDIT_VIEWPORT=mobile node scripts/check_live_image_uniqueness.cjs

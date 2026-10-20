@@ -1,0 +1,23 @@
+/* Global image-free alternatives for previously duplicated photography. */
+.cg-art-placeholder{position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;isolation:isolate;overflow:hidden;width:100%;height:100%;min-height:170px;aspect-ratio:16/10;padding:23px;text-align:center;color:#fff;background:radial-gradient(ellipse at 18% 8%,rgba(245,185,65,.34),transparent 48%),linear-gradient(135deg,#0a2340 0%,#1b5070 62%,#103458 100%);font-family:inherit}
+.cg-art-placeholder:before{content:"";position:absolute;z-index:-1;inset:0;background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);background-size:28px 28px;transform:skewY(-9deg) scale(1.25);opacity:.4}
+.cg-art-mark{display:flex;align-items:center;justify-content:center;width:64px;height:64px;border:1px solid rgba(255,208,105,.56);border-radius:17px;background:rgba(255,255,255,.08);color:#ffd67c;font-size:24px;letter-spacing:-.06em;font-weight:950}
+.cg-art-label{font-size:clamp(12px,1.2vw,16px);font-weight:750;line-height:1.4;max-width:34ch;text-wrap:balance}
+.cg-typographic-logo{display:inline-flex;align-items:center;gap:9px;color:#f2be55;font-size:14px;font-weight:800;letter-spacing:.06em;line-height:1.15;white-space:nowrap}
+.cg-type-glyph{display:grid;place-items:center;width:39px;height:39px;border-radius:10px;background:#f8c04f;color:#102b48;font-size:16px;font-weight:950;letter-spacing:-.09em}
+.cg-type-name{display:block;font-size:clamp(12px,1.3vw,18px);letter-spacing:.07em}
+.cg-type-name strong{display:block;color:#fff;font-weight:850}
+.cg-footer .cg-typographic-logo,.cg-footer .cg-typographic-logo strong{color:#f4bd53}
+.cg-footer .cg-type-name strong{color:inherit}
+@media(max-width:600px){.cg-art-placeholder{min-height:145px;padding:16px}.cg-art-mark{width:48px;height:48px;font-size:20px}.cg-art-label{font-size:12px}.cg-type-name{font-size:12px}.cg-type-glyph{width:32px;height:32px;font-size:13px}}
+
+
+/* Catalogue cards with no unique product photo receive a clean technical motif. */
+.product-card .image:empty,.product-card .image:not(:has(img[src])){position:relative;display:grid;place-items:center;background:radial-gradient(circle at 75% 22%,rgba(253,190,74,.24),transparent 48%),linear-gradient(135deg,#102c49,#2a5171)!important}
+.product-card .image:empty:before,.product-card .image:not(:has(img[src])):before{content:"CG";display:grid;place-items:center;width:50px;height:50px;border-radius:12px;border:1px solid rgba(255,214,125,.66);color:#ffe0a2;font-weight:900;font-size:18px;letter-spacing:-.07em}
+
+/* Navigation is white: use high-contrast navy lettering, not white. */
+.site-header .cg-typographic-logo,.site-header .cg-type-name strong{color:#102b48!important}
+.site-header .cg-type-name{color:#7a5a19!important}
+.site-header .cg-type-glyph{background:#e3ab35;color:#102b48}
+.cg-footer .cg-typographic-logo,.cg-footer .cg-type-name,.cg-footer .cg-type-name strong{color:#e7b650!important}

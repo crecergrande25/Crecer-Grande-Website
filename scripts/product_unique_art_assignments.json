@@ -1,0 +1,958 @@
+{
+  "generatedDate": "2026-10-20",
+  "description": "Original vector product identity art; illustrations, not photos",
+  "assigned": [
+    {
+      "id": "007e8738-a816-4da4-826b-69527879e2e5",
+      "slug": "3d-printing-post-processing",
+      "title": "3D Printing Post-Processing & Inserts",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/am-process-inspection-unique.svg",
+      "newUrl": "/assets/images/product-unique/3d-printing-post-processing.svg"
+    },
+    {
+      "id": "c163a2b8-843d-4c19-b02f-6aab7e0491ed",
+      "slug": "au3tech-cutting-head",
+      "title": "Au3Tech laser cutting head — identify / source",
+      "category": "Cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/au3tech-cutting-head.webp",
+      "newUrl": "/assets/images/product-unique/au3tech-cutting-head.svg"
+    },
+    {
+      "id": "ac3ac754-2913-4c81-8f8e-800026a71e3b",
+      "slug": "autofocus-laser-cutting-heads",
+      "title": "Autofocus Laser Cutting Heads",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/prod-laser-v23.webp",
+      "newUrl": "/assets/images/product-unique/autofocus-laser-cutting-heads.svg"
+    },
+    {
+      "id": "ad92874e-b521-471b-956b-73e25fcb9e2d",
+      "slug": "boci-cutting-head",
+      "title": "BOCI laser cutting head — identify / source",
+      "category": "Cutting head",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/boci-cutting-head.svg"
+    },
+    {
+      "id": "97efe18b-36db-476f-9249-b0da59b02c52",
+      "slug": "ceramic-ring",
+      "title": "Laser cutting-head ceramic ring",
+      "category": "Ceramic rings",
+      "previousUrl": "/assets/images/laser-consumables/generated-ceramic-ring.webp",
+      "newUrl": "/assets/images/product-unique/ceramic-ring.svg"
+    },
+    {
+      "id": "b1eae90c-f3a0-46fe-98ad-b5cafa97a01a",
+      "slug": "chiller-compressor",
+      "title": "Chiller compressor / refrigeration component",
+      "category": "Refrigeration",
+      "previousUrl": "/assets/images/chiller-components.webp",
+      "newUrl": "/assets/images/product-unique/chiller-compressor.svg"
+    },
+    {
+      "id": "8c794d8e-e1c4-478c-9a95-c15e529f9955",
+      "slug": "chiller-condenser",
+      "title": "Condenser / heat-exchanger component",
+      "category": "Heat exchange",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/chiller-condenser.svg"
+    },
+    {
+      "id": "460d38b6-18e7-4bd8-83c2-360df74ba803",
+      "slug": "chiller-controller",
+      "title": "Chiller controller / display / control board",
+      "category": "Controls",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/chiller-controller.svg"
+    },
+    {
+      "id": "a9088bd9-1bd3-4658-95ce-bea98056d9f5",
+      "slug": "chiller-electrical",
+      "title": "Chiller relays, contactors, capacitors & electrical spares",
+      "category": "Electrical",
+      "previousUrl": "/assets/images/prod-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/chiller-electrical.svg"
+    },
+    {
+      "id": "4dae7b7c-d92f-48d8-a78f-77aad4f29bc9",
+      "slug": "chiller-fan",
+      "title": "Condenser fan / cooling fan",
+      "category": "Fans",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/chiller-fan.svg"
+    },
+    {
+      "id": "67e7e23d-942d-4fe6-86a6-c60fdc4d3e89",
+      "slug": "chiller-hose-fitting",
+      "title": "Chiller hoses, fittings & quick connectors",
+      "category": "Hoses & fittings",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/chiller-hose-fitting.svg"
+    },
+    {
+      "id": "c07f779e-46be-4044-9478-af56a2401318",
+      "slug": "chiller-pump-other",
+      "title": "Laser-chiller circulation pump — other model",
+      "category": "Circulation pumps",
+      "previousUrl": "/assets/images/chiller-components.webp",
+      "newUrl": "/assets/images/product-unique/chiller-pump-other.svg"
+    },
+    {
+      "id": "e8e86315-06d0-4c6d-9797-328b5ac0f70b",
+      "slug": "cleaning-head-consumable",
+      "title": "Laser cleaning-head protective optics / nozzle requirement",
+      "category": "Cleaning-head consumables",
+      "previousUrl": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp",
+      "newUrl": "/assets/images/product-unique/cleaning-head-consumable.svg"
+    },
+    {
+      "id": "95615a5b-8722-4dc8-8e54-d06203cbfcbb",
+      "slug": "cnc-bearings",
+      "title": "CNC / VMC bearings",
+      "category": "Mechanical",
+      "previousUrl": "/assets/images/div-inspection-v23b.webp",
+      "newUrl": "/assets/images/product-unique/cnc-bearings.svg"
+    },
+    {
+      "id": "49b323b0-2556-4750-90d7-50516337b08e",
+      "slug": "cnc-coolant-pump",
+      "title": "Machine coolant pump",
+      "category": "Fluid",
+      "previousUrl": "/assets/images/prod-cnc-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-coolant-pump.svg"
+    },
+    {
+      "id": "bf8db0e9-346c-459a-994c-aa0580fb17b8",
+      "slug": "cnc-cooling",
+      "title": "Fans & cooling components",
+      "category": "Cooling",
+      "previousUrl": "/assets/images/div-maintenance-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-cooling.svg"
+    },
+    {
+      "id": "0a3a8a9e-e66d-42de-99fd-43fb5992d04b",
+      "slug": "cnc-electrical-panel",
+      "title": "Electrical & panel spares",
+      "category": "Electrical",
+      "previousUrl": "/assets/images/div-automation-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-electrical-panel.svg"
+    },
+    {
+      "id": "36110101-2a4d-4d1d-b95a-864748ed578f",
+      "slug": "cnc-hoses-fittings",
+      "title": "Hoses, fittings & coolant accessories",
+      "category": "Fluid",
+      "previousUrl": "/assets/images/prod-pump-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-hoses-fittings.svg"
+    },
+    {
+      "id": "26b2a6d9-d3c7-4f56-bf3f-321bd77710c2",
+      "slug": "cnc-linear-motion",
+      "title": "Linear motion components",
+      "category": "Mechanical",
+      "previousUrl": "/assets/images/prod-cnc-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-linear-motion.svg"
+    },
+    {
+      "id": "7d6f0dd6-c61e-408d-aeb7-e0c4389869da",
+      "slug": "cnc-lubrication",
+      "title": "Lubrication system & pump",
+      "category": "Maintenance",
+      "previousUrl": "/assets/images/div-maintenance-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-lubrication.svg"
+    },
+    {
+      "id": "a33d7926-79a7-4ec0-8f71-21177ffaa272",
+      "slug": "cnc-other-spares",
+      "title": "Other / obsolete machine spares",
+      "category": "Sourcing",
+      "previousUrl": "/assets/images/resource-maintenance-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-other-spares.svg"
+    },
+    {
+      "id": "22e46c49-6ab6-411a-944d-35eaea74675f",
+      "slug": "cnc-sensors-switches",
+      "title": "Machine sensors & switches",
+      "category": "Electrical",
+      "previousUrl": "/assets/images/div-automation-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-sensors-switches.svg"
+    },
+    {
+      "id": "aab4486b-b754-405f-baae-3d8b484d658d",
+      "slug": "cnc-servo-drives",
+      "title": "Servo motors & drives",
+      "category": "Motion",
+      "previousUrl": "/assets/images/div-automation-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-servo-drives.svg"
+    },
+    {
+      "id": "1c12b59b-3d20-4135-996b-b48dbb9ed1e6",
+      "slug": "cnc-spindle-accessories",
+      "title": "Spindle & spindle accessories",
+      "category": "Mechanical",
+      "previousUrl": "/assets/images/cnc/cnc-spindle-generated.webp",
+      "newUrl": "/assets/images/product-unique/cnc-spindle-accessories.svg"
+    },
+    {
+      "id": "bbfb8a42-10ab-419b-a95a-dd85bdde42bc",
+      "slug": "cnc-tool-turret",
+      "title": "Tool turret & tool holders",
+      "category": "Tooling",
+      "previousUrl": "/assets/images/maintenance.webp",
+      "newUrl": "/assets/images/product-unique/cnc-tool-turret.svg"
+    },
+    {
+      "id": "03ef436f-2dbd-4fc0-a905-f8cc0e5a8ce1",
+      "slug": "cnc-transmission",
+      "title": "Couplings, belts & transmission",
+      "category": "Mechanical",
+      "previousUrl": "/assets/images/prod-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/cnc-transmission.svg"
+    },
+    {
+      "id": "4ee3ff1d-309a-44ae-9966-e0a0dac4948b",
+      "slug": "cnc-vmc-spares",
+      "title": "CNC / VMC & Machine Spares",
+      "category": "Machine Spares",
+      "previousUrl": "assets/images/prod-cnc.webp",
+      "newUrl": "/assets/images/product-unique/cnc-vmc-spares.svg"
+    },
+    {
+      "id": "433e88bd-6e22-41fe-98fd-bb3a5c0a8a3a",
+      "slug": "co2-chiller",
+      "title": "CO₂ laser water chiller / cooling system",
+      "category": "CO₂ laser chiller",
+      "previousUrl": "/assets/images/project-co2-v23.webp",
+      "newUrl": "/assets/images/product-unique/co2-chiller.svg"
+    },
+    {
+      "id": "dc71c2d4-4162-4578-acac-99a61214b6ea",
+      "slug": "co2-controller",
+      "title": "CO₂ laser controller / motion-control requirement",
+      "category": "CO₂ controls",
+      "previousUrl": "/assets/images/div-automation-v23.webp",
+      "newUrl": "/assets/images/product-unique/co2-controller.svg"
+    },
+    {
+      "id": "b6c7ecf3-2906-467b-a346-94cba4c39683",
+      "slug": "co2-head-nozzle",
+      "title": "CO₂ laser head, nozzle & air-assist component",
+      "category": "CO₂ head / air assist",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/co2-head-nozzle.svg"
+    },
+    {
+      "id": "383aa0ed-6a30-489c-b516-a2f8773d6617",
+      "slug": "co2-laser-spares-consumables",
+      "title": "CO2 Laser Spares & Consumables",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/project-co2-v23b.webp",
+      "newUrl": "/assets/images/product-unique/co2-laser-spares-consumables.svg"
+    },
+    {
+      "id": "360a259d-924e-4ea4-bf8c-09143456bca3",
+      "slug": "co2-laser-tube",
+      "title": "CO₂ laser tube",
+      "category": "CO₂ laser source",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/co2-laser-tube.svg"
+    },
+    {
+      "id": "6a1bf4b7-2382-4d40-aeb8-784f1cef6162",
+      "slug": "co2-mirror",
+      "title": "CO₂ laser mirror / reflector",
+      "category": "CO₂ optics",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/co2-mirror.svg"
+    },
+    {
+      "id": "dc9cb3a7-e092-4416-ba5e-f8952c2c682a",
+      "slug": "co2-motion",
+      "title": "CO₂ belts, pulleys, rails, blocks & drag chains",
+      "category": "CO₂ motion spares",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/co2-motion.svg"
+    },
+    {
+      "id": "1b34441d-e7c1-4a0d-9dad-9311c675b15a",
+      "slug": "co2-psu",
+      "title": "CO₂ laser power supply",
+      "category": "CO₂ power supply",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/co2-psu.svg"
+    },
+    {
+      "id": "d916eb5a-c8db-4ffe-b71f-27eb020cac3d",
+      "slug": "collimation-lens-group",
+      "title": "Fiber-laser collimating lens / lens group",
+      "category": "Focus & collimation optics",
+      "previousUrl": "/assets/images/laser-consumables/generated-collimation-optics.webp",
+      "newUrl": "/assets/images/product-unique/collimation-lens-group.svg"
+    },
+    {
+      "id": "4591c84a-dcdd-4067-adde-1ace53d98b6c",
+      "slug": "complete-co2-laser-chillers",
+      "title": "Complete CO2 Laser Chillers",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/project-co2-v23.webp",
+      "newUrl": "/assets/images/product-unique/complete-co2-laser-chillers.svg"
+    },
+    {
+      "id": "1d6d2712-06c6-4a3f-9a3c-6f01b64782cd",
+      "slug": "custom-legacy-parts",
+      "title": "Obsolete / Legacy Parts",
+      "category": "Legacy support",
+      "previousUrl": "/assets/images/am-approved-spares.webp",
+      "newUrl": "/assets/images/product-unique/custom-legacy-parts.svg"
+    },
+    {
+      "id": "816109c6-5404-4c11-b123-0315f02e7a6c",
+      "slug": "custom-obsolete-spares",
+      "title": "Custom / Obsolete Machine Spares",
+      "category": "Custom Spares",
+      "previousUrl": "/assets/images/am-spares-unique.svg",
+      "newUrl": "/assets/images/product-unique/custom-obsolete-spares.svg"
+    },
+    {
+      "id": "a5454818-5bf9-45f1-af08-55ea01f2ac6d",
+      "slug": "custom-reverse-engineering",
+      "title": "Reverse Engineering Support",
+      "category": "Reverse engineering",
+      "previousUrl": "/assets/images/process-cad-v23b.webp",
+      "newUrl": "/assets/images/product-unique/custom-reverse-engineering.svg"
+    },
+    {
+      "id": "e760af89-ceeb-4369-96f5-c9bf97974154",
+      "slug": "double-layer-nozzles",
+      "title": "Double-layer fiber laser cutting nozzles",
+      "category": "Cutting nozzles",
+      "previousUrl": "/assets/images/laser-consumables/generated-double-layer-nozzles.webp",
+      "newUrl": "/assets/images/product-unique/double-layer-nozzles.svg"
+    },
+    {
+      "id": "7ddcb844-77ba-42b9-83bb-f73cda9fb7f3",
+      "slug": "fdm-fff-3d-printing",
+      "title": "FDM / FFF 3D Printing",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/prod-3d-v23.webp",
+      "newUrl": "/assets/images/product-unique/fdm-fff-3d-printing.svg"
+    },
+    {
+      "id": "840957e6-2cac-46c3-9130-e0ece45a1885",
+      "slug": "fiber-laser-chiller-generic",
+      "title": "Fiber laser chiller — identify by laser power & circuits",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/project-chiller-v23b.webp",
+      "newUrl": "/assets/images/product-unique/fiber-laser-chiller-generic.svg"
+    },
+    {
+      "id": "f930d170-ade3-4e23-85aa-460b17317db9",
+      "slug": "fiber-laser-cutting-heads",
+      "title": "Fiber Laser Cutting Heads",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/laser.webp",
+      "newUrl": "/assets/images/product-unique/fiber-laser-cutting-heads.svg"
+    },
+    {
+      "id": "89868711-a639-419f-a56c-ff74e954f750",
+      "slug": "fiber-laser-cutting-nozzles",
+      "title": "Fiber Laser Cutting Nozzles",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/fiber-laser-cutting-nozzles.svg"
+    },
+    {
+      "id": "7006e074-8f97-4e1d-8d7b-05406bd5e150",
+      "slug": "fiber-laser-focus-collimation-lenses",
+      "title": "Fiber Laser Focus & Collimation Lenses",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/fiber-laser-focus-collimation-lenses.svg"
+    },
+    {
+      "id": "bddfc9cf-a0d8-4d5c-b83f-f4e6396aa92b",
+      "slug": "flow-switch",
+      "title": "Chiller flow switch / flow sensor",
+      "category": "Flow sensing",
+      "previousUrl": "/assets/images/chiller-components.webp",
+      "newUrl": "/assets/images/product-unique/flow-switch.svg"
+    },
+    {
+      "id": "090f9a35-a970-47f2-a02b-96c04cbb20a7",
+      "slug": "focus-lens-group",
+      "title": "Fiber-laser focusing lens / lens group",
+      "category": "Focus & collimation optics",
+      "previousUrl": "/assets/images/laser-consumables/generated-focus-optics.webp",
+      "newUrl": "/assets/images/product-unique/focus-lens-group.svg"
+    },
+    {
+      "id": "ee02cc44-584f-448a-8332-be225b21d6a2",
+      "slug": "handheld-laser-chiller",
+      "title": "Handheld welding / cleaning laser chiller",
+      "category": "Handheld laser chiller",
+      "previousUrl": "/assets/images/div-maintenance-v23.webp",
+      "newUrl": "/assets/images/product-unique/handheld-laser-chiller.svg"
+    },
+    {
+      "id": "0eeacde5-26cd-40e4-8e92-8025f47809b9",
+      "slug": "handheld-laser-welding-chillers",
+      "title": "Handheld Laser Welding / Cleaning Chillers",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/resource-products-v23.webp",
+      "newUrl": "/assets/images/product-unique/handheld-laser-welding-chillers.svg"
+    },
+    {
+      "id": "30cfccf2-d601-4831-a2bc-5d9010658ac8",
+      "slug": "hanli-fiber-chiller",
+      "title": "Hanli fiber-laser chiller — model identification",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/chiller.webp",
+      "newUrl": "/assets/images/product-unique/hanli-fiber-chiller.svg"
+    },
+    {
+      "id": "70d43c6f-83c9-4f84-bb15-ff9e25e3c4ad",
+      "slug": "height-sensor-cable",
+      "title": "Height-sensor / capacitive cable",
+      "category": "Sensors & cables",
+      "previousUrl": "/assets/images/prod-laser-v23.webp",
+      "newUrl": "/assets/images/product-unique/height-sensor-cable.svg"
+    },
+    {
+      "id": "a56d6b38-48dd-4c7c-9a04-a697ff2f2c34",
+      "slug": "laser-ceramic-rings",
+      "title": "Laser Ceramic Rings & Components",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/service-laser-cutting.webp",
+      "newUrl": "/assets/images/product-unique/laser-ceramic-rings.svg"
+    },
+    {
+      "id": "b3d3a571-6e04-4c2a-8813-b369e28758a1",
+      "slug": "laser-chiller-compressors-refrigeration",
+      "title": "Laser Chiller Compressors & Refrigeration Spares",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-compressors-refrigeration.svg"
+    },
+    {
+      "id": "21f5fc60-ead4-439f-a575-7fe603a4057e",
+      "slug": "laser-chiller-controllers-displays",
+      "title": "Laser Chiller Controllers & Displays",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-controllers-displays.svg"
+    },
+    {
+      "id": "95a27eb5-1de5-40f5-be7f-959bb238ec46",
+      "slug": "laser-chiller-fans-cooling",
+      "title": "Laser Chiller Fans & Cooling Components",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-fans-cooling.svg"
+    },
+    {
+      "id": "e4923874-c0b7-48aa-8abf-0ad2b9c3f019",
+      "slug": "laser-chiller-filters-strainers",
+      "title": "Laser Chiller Filters & Strainers",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-filters-strainers.svg"
+    },
+    {
+      "id": "65ddccea-2bb8-4364-a727-8fcc6233bd1a",
+      "slug": "laser-chiller-flow-sensors",
+      "title": "Laser Chiller Flow Sensors & Switches",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-plc-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-flow-sensors.svg"
+    },
+    {
+      "id": "ed1d52a2-9ce7-4b4f-ac9c-3819591104ee",
+      "slug": "laser-chiller-pumps-family",
+      "title": "Laser Chiller Pumps & Circulation Pumps",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/sourcing.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-pumps-family.svg"
+    },
+    {
+      "id": "5c2b2cc5-567d-4dea-a470-60091c8ad7dd",
+      "slug": "laser-chiller-spares",
+      "title": "Laser Chiller Service Spares",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-plc-v23b.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-spares.svg"
+    },
+    {
+      "id": "99a04dd2-5048-4dd2-afba-964c86c0238b",
+      "slug": "laser-chiller-temperature-sensors",
+      "title": "Laser Chiller Temperature Sensors",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-chiller-temperature-sensors.svg"
+    },
+    {
+      "id": "59291c2f-545b-4051-9066-3e696b871737",
+      "slug": "laser-consumables",
+      "title": "Laser Cutting, Welding & Marking Components",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/div-manufacturing-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-consumables.svg"
+    },
+    {
+      "id": "a044a60d-8817-4f0f-94ff-3edbc2a436e5",
+      "slug": "laser-nozzle-holders-sensor-bodies",
+      "title": "Nozzle Holders & Sensor Bodies",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/am-approved-laser.webp",
+      "newUrl": "/assets/images/product-unique/laser-nozzle-holders-sensor-bodies.svg"
+    },
+    {
+      "id": "f7ce3cb5-f9e8-476a-8447-eb8593b6fabe",
+      "slug": "laser-optics-cleaning-consumables",
+      "title": "Laser Optics Cleaning Consumables",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/prod-laser-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-optics-cleaning-consumables.svg"
+    },
+    {
+      "id": "240cbd31-dff6-4165-a41c-b1c45fcb3cae",
+      "slug": "laser-qbh-qcs-connectors",
+      "title": "QBH / QCS Connectors & Accessories",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/laser-consumables/generated-qbh-qcs.webp",
+      "newUrl": "/assets/images/product-unique/laser-qbh-qcs-connectors.svg"
+    },
+    {
+      "id": "be3c378c-7295-4423-b6df-7f02ff077b4f",
+      "slug": "laser-seals-o-rings",
+      "title": "Laser Head Seals, O-Rings & Gaskets",
+      "category": "Laser Consumables",
+      "previousUrl": "/assets/images/part6-custom-sprite.webp",
+      "newUrl": "/assets/images/product-unique/laser-seals-o-rings.svg"
+    },
+    {
+      "id": "aee43d44-4cc7-4991-aa41-9fb8e8e09fbd",
+      "slug": "laser-welding-cleaning-heads",
+      "title": "Laser Welding & Cleaning Heads",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/div-manufacturing-v23.webp",
+      "newUrl": "/assets/images/product-unique/laser-welding-cleaning-heads.svg"
+    },
+    {
+      "id": "0c8646dd-3b9b-4805-8ffa-2b5cf83e77db",
+      "slug": "leicheng-600w-pump",
+      "title": "Le Cheng / LiCheng 220 V 600 W laser-chiller pump — identify / source",
+      "category": "Circulation pumps",
+      "previousUrl": "/assets/images/prod-pump-v23.webp",
+      "newUrl": "/assets/images/product-unique/leicheng-600w-pump.svg"
+    },
+    {
+      "id": "7bb30d8c-eb01-441c-a080-d53943a6681e",
+      "slug": "lens-drawer",
+      "title": "Protective-lens drawer / cartridge / holder",
+      "category": "Lens drawers & cartridges",
+      "previousUrl": "/assets/images/laser-consumables/generated-lens-drawer.webp",
+      "newUrl": "/assets/images/product-unique/lens-drawer.svg"
+    },
+    {
+      "id": "3831bac2-5d6a-4eb2-a56d-6a02e2a15ff6",
+      "slug": "level-sensor",
+      "title": "Water-level sensor / float switch",
+      "category": "Level sensing",
+      "previousUrl": "/assets/images/am-approved-sparekit.webp",
+      "newUrl": "/assets/images/product-unique/level-sensor.svg"
+    },
+    {
+      "id": "1184dced-3f12-47c7-aac1-ae7c3df865a8",
+      "slug": "licheng-cg1622403501-180w-laser-chiller-pump",
+      "title": "LiCheng CG1622403501 180W Laser Chiller Circulation Pump – 220V AC",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-pump-v23b.webp",
+      "newUrl": "/assets/images/product-unique/licheng-cg1622403501-180w-laser-chiller-pump.svg"
+    },
+    {
+      "id": "9eab4b0b-5d2e-4c40-b17e-94906dd6914c",
+      "slug": "licheng-cg1622684002-360w-laser-chiller-pump",
+      "title": "LiCheng CG1622684002 360W High-Pressure Laser Chiller Pump – 220V AC",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/cnc/cnc-lubrication-generated.webp",
+      "newUrl": "/assets/images/product-unique/licheng-cg1622684002-360w-laser-chiller-pump.svg"
+    },
+    {
+      "id": "d06e6397-516a-49bd-8f75-b8f4b8daf528",
+      "slug": "licheng-cj0622558828-600w-laser-chiller-pump",
+      "title": "LiCheng CJ0622558828 600W High-Flow Laser Chiller Pump – 220V AC",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/prod-pump-v23.webp",
+      "newUrl": "/assets/images/product-unique/licheng-cj0622558828-600w-laser-chiller-pump.svg"
+    },
+    {
+      "id": "1a677f82-6b54-403e-8d8f-02023c997b8a",
+      "slug": "licheng-cj0622601028-880w-laser-chiller-pump",
+      "title": "LiCheng CJ0622601028 880W High-Flow Laser Chiller Pump – 220V AC",
+      "category": "Laser Chillers",
+      "previousUrl": "/assets/images/process-supply-v23.webp",
+      "newUrl": "/assets/images/product-unique/licheng-cj0622601028-880w-laser-chiller-pump.svg"
+    },
+    {
+      "id": "7bd10e7b-2703-4bd2-ac39-0a3b94fb4981",
+      "slug": "metal-3d-printing-rfq",
+      "title": "Metal 3D Printing / DMLS – RFQ",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/am-approved-machined.webp",
+      "newUrl": "/assets/images/product-unique/metal-3d-printing-rfq.svg"
+    },
+    {
+      "id": "6caff446-02fb-4977-96ab-ef3a91798a65",
+      "slug": "mjf-3d-printing",
+      "title": "MJF 3D Printing",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/am-prototype-unique.svg",
+      "newUrl": "/assets/images/product-unique/mjf-3d-printing.svg"
+    },
+    {
+      "id": "4aa66cec-3279-4c2c-94bc-8cef884fea7b",
+      "slug": "optics-cleaning",
+      "title": "Laser optics cleaning consumables",
+      "category": "Cleaning & service",
+      "previousUrl": "/assets/images/laser-consumables/generated-optics-cleaning.webp",
+      "newUrl": "/assets/images/product-unique/optics-cleaning.svg"
+    },
+    {
+      "id": "26059561-787b-4b69-87f7-6b83bf87f15b",
+      "slug": "pb-accessories",
+      "title": "Tooling Accessories",
+      "category": "Accessory",
+      "previousUrl": "/assets/images/prod-bending-v23.webp",
+      "newUrl": "/assets/images/product-unique/pb-accessories.svg"
+    },
+    {
+      "id": "f459a0d1-eb4a-4d74-bdcc-9f5c72a1f388",
+      "slug": "pb-air-bend",
+      "title": "Air-Bending Tool Sets",
+      "category": "Tool set",
+      "previousUrl": "/assets/images/manufacturing.webp",
+      "newUrl": "/assets/images/product-unique/pb-air-bend.svg"
+    },
+    {
+      "id": "74d28bd3-7b94-4b0d-943c-c93325dd8ebb",
+      "slug": "pb-custom",
+      "title": "Special / Custom Tools",
+      "category": "Custom",
+      "previousUrl": "/assets/images/catalog/press-brake/pb-custom.webp",
+      "newUrl": "/assets/images/product-unique/pb-custom.svg"
+    },
+    {
+      "id": "93743b98-2b26-4db7-94e1-c729b269d2bb",
+      "slug": "pb-gooseneck",
+      "title": "Gooseneck Punches",
+      "category": "Punch",
+      "previousUrl": "/assets/images/prod-bending-v23.webp",
+      "newUrl": "/assets/images/product-unique/pb-gooseneck.svg"
+    },
+    {
+      "id": "cc2b7400-9d3f-4a3c-9fd2-5fad74db533f",
+      "slug": "pb-offset-hemming",
+      "title": "Offset & Hemming Tools",
+      "category": "Forming",
+      "previousUrl": "/assets/images/process-make-v23.webp",
+      "newUrl": "/assets/images/product-unique/pb-offset-hemming.svg"
+    },
+    {
+      "id": "d78811dc-085a-4547-b7f5-3b79a495f5de",
+      "slug": "pb-radius",
+      "title": "Radius Tools",
+      "category": "Forming",
+      "previousUrl": "/assets/images/process-make-v23b.webp",
+      "newUrl": "/assets/images/product-unique/pb-radius.svg"
+    },
+    {
+      "id": "184d3982-9a66-4fe5-9588-48a3849011d2",
+      "slug": "pb-v-die",
+      "title": "V-Dies",
+      "category": "Die",
+      "previousUrl": "/assets/images/prod-bending-v23.webp",
+      "newUrl": "/assets/images/product-unique/pb-v-die.svg"
+    },
+    {
+      "id": "519556fa-ad1d-4360-ace6-d30434c371d7",
+      "slug": "plc-iot-housings",
+      "title": "PLC, I/O, Industrial IoT & Housings",
+      "category": "Automation",
+      "previousUrl": "assets/images/prod-plc.webp",
+      "newUrl": "/assets/images/product-unique/plc-iot-housings.svg"
+    },
+    {
+      "id": "496384f5-d835-46ca-8069-2a5527f1fffc",
+      "slug": "precitec-minicutter",
+      "title": "Precitec MiniCutter — cutting-head requirement",
+      "category": "Compact cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/precitec-minicutter.webp",
+      "newUrl": "/assets/images/product-unique/precitec-minicutter.svg"
+    },
+    {
+      "id": "90420af1-5364-4715-a70e-3ed6531316b1",
+      "slug": "precitec-procutter-2",
+      "title": "Precitec ProCutter 2.0 — cutting-head requirement",
+      "category": "High-power / intelligent cutting head",
+      "previousUrl": "/assets/images/div-manufacturing-v23.webp",
+      "newUrl": "/assets/images/product-unique/precitec-procutter-2.svg"
+    },
+    {
+      "id": "f2ab05ee-bbf4-4f38-950f-eee37793e47d",
+      "slug": "precitec-procutter-prime",
+      "title": "Precitec ProCutter Prime — cutting-head requirement",
+      "category": "Autofocus / variable-beam cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp",
+      "newUrl": "/assets/images/product-unique/precitec-procutter-prime.svg"
+    },
+    {
+      "id": "d1e4ff5c-366a-4a48-98ab-42da09a83453",
+      "slug": "precitec-procutter-thunder",
+      "title": "Precitec ProCutter Thunder — cutting-head requirement",
+      "category": "Medium-power 2D / 3D cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp",
+      "newUrl": "/assets/images/product-unique/precitec-procutter-thunder.svg"
+    },
+    {
+      "id": "550ba0ce-b51d-4221-864b-6a40ee15d065",
+      "slug": "precitec-procutter-zoom",
+      "title": "Precitec ProCutter Zoom 2.0 — cutting-head requirement",
+      "category": "Flexible 2D cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/precitec-procutter-zoom.webp",
+      "newUrl": "/assets/images/product-unique/precitec-procutter-zoom.svg"
+    },
+    {
+      "id": "c58655a5-9b5c-46f3-9cca-7aab53d70fd3",
+      "slug": "precitec-solidcutter",
+      "title": "Precitec SolidCutter — cutting-head requirement",
+      "category": "3D cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp",
+      "newUrl": "/assets/images/product-unique/precitec-solidcutter.svg"
+    },
+    {
+      "id": "3ac75ad4-44b9-4040-8864-ec688fa43503",
+      "slug": "protective-window-249-15",
+      "title": "Protective window Ø24.9 × 1.5 mm — common reference size",
+      "category": "Protective windows",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/protective-window-249-15.svg"
+    },
+    {
+      "id": "5ebdc131-38a2-495d-8e53-ee5e6fac64d7",
+      "slug": "protective-window-279-41",
+      "title": "Protective window Ø27.9 × 4.1 mm — common reference size",
+      "category": "Protective windows",
+      "previousUrl": "/assets/images/laser-consumables/protective-window-279-41.webp",
+      "newUrl": "/assets/images/product-unique/protective-window-279-41.svg"
+    },
+    {
+      "id": "06c6aa59-ec5c-4c2f-a700-27a77ecd8693",
+      "slug": "protective-windows-other",
+      "title": "Protective / cover windows — other sizes",
+      "category": "Protective windows",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/protective-windows-other.svg"
+    },
+    {
+      "id": "0edb14a9-ffb8-4c80-8cdf-c77714d8f816",
+      "slug": "qbh-qcs-interface",
+      "title": "QBH / QCS connector, cap or adapter requirement",
+      "category": "Fiber interfaces",
+      "previousUrl": "/assets/images/laser-consumables/generated-qbh-qcs.webp",
+      "newUrl": "/assets/images/product-unique/qbh-qcs-interface.svg"
+    },
+    {
+      "id": "a589301b-a020-4492-8252-f99f1bcb35bd",
+      "slug": "rapid-prototyping",
+      "title": "3D Printing & Rapid Prototyping",
+      "category": "Manufacturing",
+      "previousUrl": "/assets/images/printing.webp",
+      "newUrl": "/assets/images/product-unique/rapid-prototyping.svg"
+    },
+    {
+      "id": "c9f5d7c5-7b39-4ee9-b7e5-e3504411e0cd",
+      "slug": "raytools-bm110",
+      "title": "RayTools BM110 — cutting-head requirement",
+      "category": "Autofocus cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/raytools-bm110.webp",
+      "newUrl": "/assets/images/product-unique/raytools-bm110.svg"
+    },
+    {
+      "id": "920a8977-ab9a-4e87-87ce-89f81a46784d",
+      "slug": "raytools-bm114",
+      "title": "RayTools BM114 / BM114S — cutting-head requirement",
+      "category": "Autofocus cutting head",
+      "previousUrl": "/assets/images/catalog/cutting-heads/raytools-bm114.webp",
+      "newUrl": "/assets/images/product-unique/raytools-bm114.svg"
+    },
+    {
+      "id": "f2963997-024d-4a13-9053-e60986c2c9cc",
+      "slug": "sensor-body",
+      "title": "Nozzle holder / capacitive sensor body",
+      "category": "Sensor bodies & holders",
+      "previousUrl": "/assets/images/laser-consumables/generated-sensor-body.webp",
+      "newUrl": "/assets/images/product-unique/sensor-body.svg"
+    },
+    {
+      "id": "93398c54-c205-4807-a997-03b87b758d3e",
+      "slug": "sheet-metal-bending-tooling",
+      "title": "Sheet-Metal Bending Tooling",
+      "category": "Sheet Metal",
+      "previousUrl": "assets/images/prod-bending.webp",
+      "newUrl": "/assets/images/product-unique/sheet-metal-bending-tooling.svg"
+    },
+    {
+      "id": "54edd9fc-0356-4c77-8e9b-57133f0eaf83",
+      "slug": "single-layer-nozzles",
+      "title": "Single-layer fiber laser cutting nozzles",
+      "category": "Cutting nozzles",
+      "previousUrl": "/assets/images/laser-consumables/generated-single-layer-nozzles.webp",
+      "newUrl": "/assets/images/product-unique/single-layer-nozzles.svg"
+    },
+    {
+      "id": "51fac5bb-5da1-4741-add7-6a13053095bd",
+      "slug": "sla-dlp-resin-3d-printing",
+      "title": "SLA / DLP Resin 3D Printing",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/prod-3d-v23.webp",
+      "newUrl": "/assets/images/product-unique/sla-dlp-resin-3d-printing.svg"
+    },
+    {
+      "id": "f9f45640-3130-4703-acf0-3c5a8917a8fe",
+      "slug": "sls-3d-printing",
+      "title": "SLS 3D Printing",
+      "category": "3D Printing",
+      "previousUrl": "/assets/images/div-manufacturing-v23.webp",
+      "newUrl": "/assets/images/product-unique/sls-3d-printing.svg"
+    },
+    {
+      "id": "99478d54-b046-40b7-8909-3ca80d22df47",
+      "slug": "smart-high-power-laser-cutting-heads",
+      "title": "Smart / High-Power Laser Cutting Heads",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/smart-high-power-laser-cutting-heads.svg"
+    },
+    {
+      "id": "230e99ab-b03a-4d08-9bfe-6d23f715d784",
+      "slug": "temperature-sensor",
+      "title": "Chiller temperature sensor / probe",
+      "category": "Temperature sensing",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/temperature-sensor.svg"
+    },
+    {
+      "id": "6ebcf156-5c34-4a7b-8333-4e52599b8df9",
+      "slug": "teyu-cwfl-1000",
+      "title": "TEYU / S&A CWFL-1000 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/chiller.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-1000.svg"
+    },
+    {
+      "id": "bb03b59e-7cb6-4d74-b3f1-ae28b38855b2",
+      "slug": "teyu-cwfl-1500",
+      "title": "TEYU / S&A CWFL-1500 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/prod-chiller-v23.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-1500.svg"
+    },
+    {
+      "id": "6b0b5868-5c0e-413f-90f1-4904e599eeeb",
+      "slug": "teyu-cwfl-2000",
+      "title": "TEYU / S&A CWFL-2000 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/prod-chiller-v23.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-2000.svg"
+    },
+    {
+      "id": "6d72401d-3c57-4965-bde5-31e9fa6cbb58",
+      "slug": "teyu-cwfl-3000",
+      "title": "TEYU / S&A CWFL-3000 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/project-chiller-v23.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-3000.svg"
+    },
+    {
+      "id": "853349a4-e74a-4d50-902e-ef3669608e69",
+      "slug": "teyu-cwfl-4000",
+      "title": "TEYU / S&A CWFL-4000 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/project-chiller-v23.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-4000.svg"
+    },
+    {
+      "id": "7d3d020d-35c8-4f66-9f1b-9be658864d8b",
+      "slug": "teyu-cwfl-6000",
+      "title": "TEYU / S&A CWFL-6000 — chiller reference",
+      "category": "Fiber laser chiller",
+      "previousUrl": "/assets/images/div-products-v23.webp",
+      "newUrl": "/assets/images/product-unique/teyu-cwfl-6000.svg"
+    },
+    {
+      "id": "68d05d18-663b-4f33-b12f-47a93cd072d0",
+      "slug": "tongfei-chiller",
+      "title": "Tongfei / TONFY laser chiller — model identification",
+      "category": "Laser chiller",
+      "previousUrl": "/assets/images/chiller.webp",
+      "newUrl": "/assets/images/product-unique/tongfei-chiller.svg"
+    },
+    {
+      "id": "54f4f1a3-2639-42de-8976-01d2f429a83f",
+      "slug": "tube-3d-laser-cutting-heads",
+      "title": "Tube & 3D Laser Cutting Heads",
+      "category": "Laser Equipment",
+      "previousUrl": "/assets/images/resource-manufacturing-v23.webp",
+      "newUrl": "/assets/images/product-unique/tube-3d-laser-cutting-heads.svg"
+    },
+    {
+      "id": "5fc27b4c-cf87-4bfb-a9ca-6d4c5442c226",
+      "slug": "water-filter",
+      "title": "Chiller filter / strainer / filter element",
+      "category": "Filtration",
+      "previousUrl": "/assets/images/prod-chiller-spares-v23.webp",
+      "newUrl": "/assets/images/product-unique/water-filter.svg"
+    },
+    {
+      "id": "2b76dd04-3161-4a7a-9ded-d9837ac88e67",
+      "slug": "welding-ceramic",
+      "title": "Laser welding ceramic / insulator component",
+      "category": "Welding ceramics",
+      "previousUrl": "/assets/images/catalog/welding-cleaning/welding-ceramic.webp",
+      "newUrl": "/assets/images/product-unique/welding-ceramic.svg"
+    },
+    {
+      "id": "90932ebe-4558-4b31-be89-22d3206d1a8a",
+      "slug": "welding-nozzle",
+      "title": "Handheld laser welding nozzle / copper tip",
+      "category": "Welding nozzles",
+      "previousUrl": "/assets/images/catalog/welding-cleaning/welding-nozzle.webp",
+      "newUrl": "/assets/images/product-unique/welding-nozzle.svg"
+    },
+    {
+      "id": "53afb766-e0c7-4565-93f4-67c19ef00dd6",
+      "slug": "wire-feeder-spare",
+      "title": "Laser welding wire-feeder consumables / guide requirement",
+      "category": "Wire feeding",
+      "previousUrl": "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp",
+      "newUrl": "/assets/images/product-unique/wire-feeder-spare.svg"
+    },
+    {
+      "id": "6aa6700e-1890-4b2b-bf56-b8b09c711fe5",
+      "slug": "wsx-cutting-head",
+      "title": "WSX laser cutting head — identify / source",
+      "category": "Cutting head",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/wsx-cutting-head.svg"
+    },
+    {
+      "id": "7fdb68f4-c347-4f10-85da-3c4e731836e7",
+      "slug": "znse-focus-lens",
+      "title": "ZnSe CO₂ focus lens",
+      "category": "CO₂ optics",
+      "previousUrl": "/assets/images/laser-components.webp",
+      "newUrl": "/assets/images/product-unique/znse-focus-lens.svg"
+    }
+  ]
+}

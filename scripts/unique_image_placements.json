@@ -1,0 +1,994 @@
+{
+  "kept": [
+    {
+      "page": "index.html",
+      "image": "/assets/images/hero-engineering.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/design.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/div-manufacturing-v23.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/div-automation-v23.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/maintenance.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/chiller-components.webp"
+    },
+    {
+      "page": "index.html",
+      "image": "/assets/images/laser-components.webp"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/am-approved-machined.webp"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/catalog/press-brake/pb-custom.webp"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/am-prototype-unique.svg"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/prod-bending-v23.webp"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/chiller.webp"
+    },
+    {
+      "page": "services.html",
+      "image": "/assets/images/am-process-inspection-unique.svg"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/manufacturing.webp"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/div-engineering-v23.webp"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/div-maintenance-v23.webp"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/div-inspection-v23b.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/project-chiller-v23.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/project-qr-v23.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/prod-laser-v23.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/process-followup-v23.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/project-keychain-v23.webp"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/project-qr-v23b.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/process-drawing-v23.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/printing.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-chiller-v23.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/process-verify-v23b.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-3d-v23.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/service-laser-cutting.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/quality.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/process-maintain-v23.webp"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/resource-inspection-v23.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-consumables/generated-sensor-body.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-consumables/generated-qbh-qcs.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-consumables/generated-collimation-optics.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-consumables/generated-focus-optics.webp"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-consumables/protective-window-279-41.webp"
+    },
+    {
+      "page": "about.html",
+      "image": "/assets/images/hero-collage.webp"
+    },
+    {
+      "page": "about.html",
+      "image": "/assets/images/am-approved-bracket.webp"
+    },
+    {
+      "page": "contact.html",
+      "image": "/assets/images/whatsapp-qr.svg"
+    },
+    {
+      "page": "request-quote.html",
+      "image": "/assets/images/sourcing.webp"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/laser-consumables/generated-single-layer-nozzles.webp"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/laser-consumables/generated-double-layer-nozzles.webp"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/catalog/welding-cleaning/welding-nozzle.webp"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/catalog/welding-cleaning/welding-ceramic.webp"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/laser-consumables/generated-ceramic-ring.webp"
+    },
+    {
+      "page": "custom-machine-spares.html",
+      "image": "/assets/images/am-approved-sparekit.webp"
+    },
+    {
+      "page": "custom-machine-spares.html",
+      "image": "/assets/images/part6-custom-sprite.webp"
+    },
+    {
+      "page": "custom-machine-spares.html",
+      "image": "/assets/images/am-machining-unique.svg"
+    },
+    {
+      "page": "design-job-work.html",
+      "image": "/assets/images/process-cad-v23b.webp"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/prod-spares-v23.webp"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/process-validate-v23.webp"
+    },
+    {
+      "page": "industrial-machine-maintenance-kolkata.html",
+      "image": "/assets/images/cnc/cnc-spindle-generated.webp"
+    },
+    {
+      "page": "industrial-machine-maintenance-kolkata.html",
+      "image": "/assets/images/cnc/cnc-lubrication-generated.webp"
+    },
+    {
+      "page": "laser-cutting-kolkata.html",
+      "image": "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp"
+    },
+    {
+      "page": "laser-cutting-kolkata.html",
+      "image": "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp"
+    },
+    {
+      "page": "laser-welding-kolkata.html",
+      "image": "/assets/images/am-approved-laser.webp"
+    },
+    {
+      "page": "laser-welding-kolkata.html",
+      "image": "/assets/images/laser.webp"
+    },
+    {
+      "page": "laser-welding-kolkata.html",
+      "image": "/assets/images/process-make-v23.webp"
+    },
+    {
+      "page": "mechanical-design-services-kolkata.html",
+      "image": "/assets/images/am-approved-enclosure.webp"
+    },
+    {
+      "page": "mechanical-design-services-kolkata.html",
+      "image": "/assets/images/am-example-shaft-unique.svg"
+    },
+    {
+      "page": "mechanical-design-services-kolkata.html",
+      "image": "/assets/images/advanced-manufacturing-capability-illustration.svg"
+    },
+    {
+      "page": "mechanical-design-services-kolkata.html",
+      "image": "/assets/images/am-approved-shaft.webp"
+    },
+    {
+      "page": "projects/laser-machine-rca.html",
+      "image": "/assets/images/catalog/cutting-heads/raytools-bm114.webp"
+    },
+    {
+      "page": "projects/laser-machine-rca.html",
+      "image": "/assets/images/laser-consumables/generated-optics-cleaning.webp"
+    },
+    {
+      "page": "projects/laser-machine-rca.html",
+      "image": "/assets/images/laser-consumables/generated-lens-drawer.webp"
+    },
+    {
+      "page": "reverse-engineering-kolkata.html",
+      "image": "/assets/images/am-approved-spares.webp"
+    },
+    {
+      "page": "reverse-engineering-kolkata.html",
+      "image": "/assets/images/am-spares-unique.svg"
+    },
+    {
+      "page": "reverse-engineering-kolkata.html",
+      "image": "/assets/images/am-example-enclosure-unique.svg"
+    },
+    {
+      "page": "reverse-engineering-kolkata.html",
+      "image": "/assets/images/am-example-fixture-unique.svg"
+    }
+  ],
+  "replaced": [
+    {
+      "page": "services.html",
+      "image": "/assets/images/div-automation-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/div-manufacturing-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions.html",
+      "image": "/assets/images/div-automation-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "projects.html",
+      "image": "/assets/images/project-co2-v23.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-cnc-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-laser-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/maintenance.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/am-approved-machined.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/manufacturing.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "insights.html",
+      "image": "/assets/images/div-inspection-v23b.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/prod-cnc-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/prod-cnc-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "industries.html",
+      "image": "/assets/images/catalog/press-brake/pb-custom.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "contact.html",
+      "image": "/assets/images/hero-engineering.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "engineering-desk.html",
+      "image": "/assets/images/prod-chiller-spares-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "3d-printing-kolkata.html",
+      "image": "/assets/images/printing.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "3d-printing-kolkata.html",
+      "image": "/assets/images/prod-3d-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "3d-printing-kolkata.html",
+      "image": "/assets/images/process-cad-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "3d-printing-kolkata.html",
+      "image": "/assets/images/prod-3d-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "custom-machine-spares.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "design-job-work.html",
+      "image": "/assets/images/design.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "design-job-work.html",
+      "image": "/assets/images/process-drawing-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "design-job-work.html",
+      "image": "/assets/images/div-engineering-v23.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/div-manufacturing-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/printing.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/prod-cnc-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/manufacturing.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/am-approved-machined.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/process-verify-v23.webp",
+      "firstPage": "design-job-work.html"
+    },
+    {
+      "page": "divisions/advanced-manufacturing.html",
+      "image": "/assets/images/sourcing.webp",
+      "firstPage": "request-quote.html"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/div-engineering-v23.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/process-cad-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/design.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/process-drawing-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "divisions/engineering-design.html",
+      "image": "/assets/images/process-cad-v23b.webp",
+      "firstPage": "design-job-work.html"
+    },
+    {
+      "page": "divisions/inspection-testing.html",
+      "image": "/assets/images/div-inspection-v23b.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "divisions/inspection-testing.html",
+      "image": "/assets/images/resource-inspection-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "divisions/machine-maintenance.html",
+      "image": "/assets/images/div-maintenance-v23.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "divisions/machine-maintenance.html",
+      "image": "/assets/images/process-maintain-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "divisions/machine-maintenance.html",
+      "image": "/assets/images/maintenance.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "divisions/machine-maintenance.html",
+      "image": "/assets/images/process-maintain-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "estimate.html",
+      "image": "/assets/images/prod-3d-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "estimate.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "estimate.html",
+      "image": "/assets/images/process-drawing-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "industrial-inspection-qa-kolkata.html",
+      "image": "/assets/images/div-inspection-v23b.webp",
+      "firstPage": "divisions.html"
+    },
+    {
+      "page": "industrial-inspection-qa-kolkata.html",
+      "image": "/assets/images/resource-inspection-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "industrial-inspection-qa-kolkata.html",
+      "image": "/assets/images/process-verify-v23b.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "industrial-inspection-qa-kolkata.html",
+      "image": "/assets/images/process-validate-v23.webp",
+      "firstPage": "divisions/engineering-design.html"
+    },
+    {
+      "page": "industrial-machine-maintenance-kolkata.html",
+      "image": "/assets/images/prod-chiller-spares-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "industrial-machine-maintenance-kolkata.html",
+      "image": "/assets/images/prod-chiller-spares-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "laser-cutting-kolkata.html",
+      "image": "/assets/images/div-manufacturing-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "laser-cutting-kolkata.html",
+      "image": "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp",
+      "firstPage": "laser-cutting-kolkata.html"
+    },
+    {
+      "page": "laser-marking-kolkata.html",
+      "image": "/assets/images/prod-laser-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "laser-marking-kolkata.html",
+      "image": "/assets/images/project-qr-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "laser-marking-kolkata.html",
+      "image": "/assets/images/project-keychain-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "laser-marking-kolkata.html",
+      "image": "/assets/images/project-qr-v23b.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "laser-welding-kolkata.html",
+      "image": "/assets/images/process-verify-v23.webp",
+      "firstPage": "design-job-work.html"
+    },
+    {
+      "page": "projects/3d-print-fai-batch.html",
+      "image": "/assets/images/prod-3d-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/3d-print-fai-batch.html",
+      "image": "/assets/images/process-cad-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/3d-print-fai-batch.html",
+      "image": "/assets/images/prod-3d-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/3d-print-fai-batch.html",
+      "image": "/assets/images/printing.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/co2-laser-components-support.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/co2-laser-components-support.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/co2-laser-components-support.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/co2-laser-components-support.html",
+      "image": "/assets/images/laser-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/custom-keychain-laser-marking.html",
+      "image": "/assets/images/project-keychain-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/custom-keychain-laser-marking.html",
+      "image": "/assets/images/prod-laser-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/custom-keychain-laser-marking.html",
+      "image": "/assets/images/project-qr-v23b.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/fit-correction-replacement-component.html",
+      "image": "/assets/images/process-cad-v23b.webp",
+      "firstPage": "design-job-work.html"
+    },
+    {
+      "page": "projects/fit-correction-replacement-component.html",
+      "image": "/assets/images/design.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/fit-correction-replacement-component.html",
+      "image": "/assets/images/process-verify-v23b.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/fit-correction-replacement-component.html",
+      "image": "/assets/images/process-cad-v23b.webp",
+      "firstPage": "design-job-work.html"
+    },
+    {
+      "page": "projects/laser-chiller-pump-replacement.html",
+      "image": "/assets/images/project-chiller-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/laser-chiller-pump-replacement.html",
+      "image": "/assets/images/chiller-components.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "projects/laser-chiller-pump-replacement.html",
+      "image": "/assets/images/quality.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/laser-chiller-pump-replacement.html",
+      "image": "/assets/images/chiller.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "projects/laser-machine-rca.html",
+      "image": "/assets/images/catalog/cutting-heads/raytools-bm110.webp",
+      "firstPage": "laser-cutting-kolkata.html"
+    },
+    {
+      "page": "projects/precision-marked-components.html",
+      "image": "/assets/images/project-qr-v23b.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/precision-marked-components.html",
+      "image": "/assets/images/prod-laser-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/precision-marked-components.html",
+      "image": "/assets/images/resource-inspection-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/precision-marked-components.html",
+      "image": "/assets/images/quality.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "projects/ss304-qr-code-laser-marking.html",
+      "image": "/assets/images/project-qr-v23.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/ss304-qr-code-laser-marking.html",
+      "image": "/assets/images/project-qr-v23b.webp",
+      "firstPage": "projects.html"
+    },
+    {
+      "page": "projects/ss304-qr-code-laser-marking.html",
+      "image": "/assets/images/resource-inspection-v23.webp",
+      "firstPage": "insights.html"
+    },
+    {
+      "page": "sheet-metal-bending-kolkata.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "sheet-metal-bending-kolkata.html",
+      "image": "/assets/images/prod-bending-v23.webp",
+      "firstPage": "services.html"
+    },
+    {
+      "page": "sheet-metal-bending-kolkata.html",
+      "image": "/assets/images/div-manufacturing-v23.webp",
+      "firstPage": "index.html"
+    },
+    {
+      "page": "sheet-metal-bending-kolkata.html",
+      "image": "/assets/images/process-make-v23b.webp",
+      "firstPage": "projects.html"
+    }
+  ],
+  "logoReplacements": 45,
+  "filesChanged": [
+    "index.html",
+    "services.html",
+    "divisions.html",
+    "projects.html",
+    "insights.html",
+    "industries.html",
+    "about.html",
+    "contact.html",
+    "request-quote.html",
+    "engineering-desk.html",
+    "3d-printing-kolkata.html",
+    "404.html",
+    "admin/index.html",
+    "custom-machine-spares.html",
+    "design-job-work.html",
+    "disclaimer.html",
+    "divisions/advanced-manufacturing.html",
+    "divisions/automation-solutions.html",
+    "divisions/engineering-design.html",
+    "divisions/inspection-testing.html",
+    "divisions/machine-maintenance.html",
+    "estimate.html",
+    "feedback.html",
+    "industrial-inspection-qa-kolkata.html",
+    "industrial-machine-maintenance-kolkata.html",
+    "insights/3d-printing-file-formats.html",
+    "insights/3d-printing-tolerances.html",
+    "insights/chiller-pump-equivalent-selection.html",
+    "insights/cnc-vmc-speeds-feeds-basics.html",
+    "insights/gdt-datum-basics.html",
+    "insights/holes-near-sheet-metal-bends.html",
+    "insights/identify-laser-consumables.html",
+    "insights/laser-cutting-defects.html",
+    "insights/laser-nozzle-focus-basics.html",
+    "insights/machine-breakdown-data-checklist.html",
+    "insights/metric-tap-drill-clearance-hole-chart.html",
+    "insights/ncr-rca-capa-guide.html",
+    "insights/preventive-maintenance-basics.html",
+    "insights/sheet-metal-bending-basics.html",
+    "insights/stainless-steel-handling.html",
+    "insights/surface-roughness-ra-rz.html",
+    "insights/vernier-caliper-guide.html",
+    "laser-cutting-kolkata.html",
+    "laser-marking-kolkata.html",
+    "laser-welding-kolkata.html",
+    "mechanical-design-services-kolkata.html",
+    "privacy.html",
+    "projects/3d-print-fai-batch.html",
+    "projects/co2-laser-components-support.html",
+    "projects/custom-keychain-laser-marking.html",
+    "projects/fit-correction-replacement-component.html",
+    "projects/laser-chiller-pump-replacement.html",
+    "projects/laser-machine-rca.html",
+    "projects/precision-marked-components.html",
+    "projects/ss304-qr-code-laser-marking.html",
+    "reverse-engineering-kolkata.html",
+    "sheet-metal-bending-kolkata.html",
+    "assets/css/site.css",
+    "assets/css/body-polish.css",
+    "assets/css/site-v5.css",
+    "assets/css/precision-site.css",
+    "assets/css/premium-repair.css",
+    "assets/css/home-v5.css",
+    "assets/js/cms.js",
+    "assets/js/site.js",
+    "assets/css/unique-media.css",
+    "admin/reset-password.html",
+    "business-support-compliance-kolkata.html",
+    "divisions/business-support-compliance.html",
+    "divisions/inspection-qa.html",
+    "divisions/maintenance.html",
+    "divisions/quality-compliance.html",
+    "divisions/quality-management-systems.html",
+    "divisions/tender-business-development.html",
+    "divisions/tender-gem.html",
+    "gem-tender-support-kolkata.html",
+    "industrial-automation-kolkata.html",
+    "insights/ncr-rca-capa.html",
+    "iso-9001-consultant-kolkata.html",
+    "projects/qms-audit-readiness.html"
+  ],
+  "pixelGroups": {
+    "/assets/images/Logo-R01.png": "0",
+    "/assets/images/am-approved-bracket.webp": "1",
+    "/assets/images/am-approved-enclosure.webp": "2",
+    "/assets/images/am-approved-fixture.webp": "3",
+    "/assets/images/am-approved-laser.webp": "4",
+    "/assets/images/am-approved-machined.webp": "5",
+    "/assets/images/am-approved-prototype.webp": "6",
+    "/assets/images/am-approved-shaft.webp": "7",
+    "/assets/images/am-approved-sparekit.webp": "8",
+    "/assets/images/am-approved-spares.webp": "9",
+    "/assets/images/apple-touch-icon.png": "10",
+    "/assets/images/catalog/co2/co2-mirror-mount.webp": "11",
+    "/assets/images/catalog/custom/custom-machined-components.webp": "12",
+    "/assets/images/catalog/cutting-heads/au3tech-cutting-head.webp": "13",
+    "/assets/images/catalog/cutting-heads/ospri-cutting-head.webp": "14",
+    "/assets/images/catalog/cutting-heads/precitec-minicutter.webp": "14",
+    "/assets/images/catalog/cutting-heads/precitec-procutter-prime.webp": "16",
+    "/assets/images/catalog/cutting-heads/precitec-procutter-thunder.webp": "13",
+    "/assets/images/catalog/cutting-heads/precitec-procutter-zoom.webp": "16",
+    "/assets/images/catalog/cutting-heads/precitec-solidcutter.webp": "13",
+    "/assets/images/catalog/cutting-heads/raytools-bm110.webp": "16",
+    "/assets/images/catalog/cutting-heads/raytools-bm111.webp": "21",
+    "/assets/images/catalog/cutting-heads/raytools-bm114.webp": "22",
+    "/assets/images/catalog/cutting-heads/raytools-bt240s.webp": "23",
+    "/assets/images/catalog/press-brake/pb-crowning.webp": "24",
+    "/assets/images/catalog/press-brake/pb-custom.webp": "25",
+    "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp": "26",
+    "/assets/images/catalog/welding-cleaning/welding-ceramic.webp": "27",
+    "/assets/images/catalog/welding-cleaning/welding-nozzle.webp": "28",
+    "/assets/images/catalog/welding-cleaning/welding-protective-lens.webp": "29",
+    "/assets/images/catalog/welding-cleaning/wire-feeder-spare.webp": "30",
+    "/assets/images/chiller-components.webp": "31",
+    "/assets/images/chiller.webp": "32",
+    "/assets/images/cnc/cnc-lubrication-generated.webp": "33",
+    "/assets/images/cnc/cnc-spindle-generated.webp": "34",
+    "/assets/images/design.webp": "35",
+    "/assets/images/div-automation-v23.webp": "36",
+    "/assets/images/div-engineering-v23.webp": "37",
+    "/assets/images/div-inspection-v23.webp": "38",
+    "/assets/images/div-inspection-v23b.webp": "39",
+    "/assets/images/div-maintenance-v23.webp": "40",
+    "/assets/images/div-manufacturing-v23.webp": "41",
+    "/assets/images/div-products-v23.webp": "42",
+    "/assets/images/div-quality-v23.webp": "43",
+    "/assets/images/div-quality-v23b.webp": "44",
+    "/assets/images/div-tender-v23.webp": "45",
+    "/assets/images/div-tender-v23b.webp": "46",
+    "/assets/images/favicon.png": "10",
+    "/assets/images/hero-collage.webp": "48",
+    "/assets/images/hero-engineering.webp": "49",
+    "/assets/images/laser-components.webp": "50",
+    "/assets/images/laser-consumables/generated-ceramic-ring.webp": "51",
+    "/assets/images/laser-consumables/generated-collimation-optics.webp": "52",
+    "/assets/images/laser-consumables/generated-double-layer-nozzles.webp": "53",
+    "/assets/images/laser-consumables/generated-focus-optics.webp": "54",
+    "/assets/images/laser-consumables/generated-high-speed-nozzles.webp": "55",
+    "/assets/images/laser-consumables/generated-lens-drawer.webp": "56",
+    "/assets/images/laser-consumables/generated-optics-cleaning.webp": "57",
+    "/assets/images/laser-consumables/generated-protective-windows.webp": "58",
+    "/assets/images/laser-consumables/generated-qbh-qcs.webp": "59",
+    "/assets/images/laser-consumables/generated-seals.webp": "60",
+    "/assets/images/laser-consumables/generated-sensor-body.webp": "61",
+    "/assets/images/laser-consumables/generated-single-layer-nozzles.webp": "62",
+    "/assets/images/laser-consumables/protective-window-279-41.webp": "63",
+    "/assets/images/laser.webp": "64",
+    "/assets/images/logo-icon.png": "10",
+    "/assets/images/logo.png": "0",
+    "/assets/images/maintenance.webp": "67",
+    "/assets/images/manufacturing.webp": "68",
+    "/assets/images/part6-custom-sprite.webp": "69",
+    "/assets/images/part6-tooling-hero.webp": "70",
+    "/assets/images/printing.webp": "71",
+    "/assets/images/process-cad-v23.webp": "72",
+    "/assets/images/process-cad-v23b.webp": "73",
+    "/assets/images/process-drawing-v23.webp": "74",
+    "/assets/images/process-followup-v23.webp": "75",
+    "/assets/images/process-maintain-v23.webp": "76",
+    "/assets/images/process-make-v23.webp": "77",
+    "/assets/images/process-make-v23b.webp": "75",
+    "/assets/images/process-supply-v23.webp": "79",
+    "/assets/images/process-validate-v23.webp": "80",
+    "/assets/images/process-validate-v23b.webp": "79",
+    "/assets/images/process-verify-v23.webp": "73",
+    "/assets/images/process-verify-v23b.webp": "83",
+    "/assets/images/prod-3d-v23.webp": "84",
+    "/assets/images/prod-bending-v23.webp": "85",
+    "/assets/images/prod-chiller-spares-v23.webp": "36",
+    "/assets/images/prod-chiller-v23.webp": "87",
+    "/assets/images/prod-cnc-v23.webp": "83",
+    "/assets/images/prod-cnc-v23b.webp": "43",
+    "/assets/images/prod-custom-spares-v23.webp": "45",
+    "/assets/images/prod-laser-v23.webp": "91",
+    "/assets/images/prod-plc-v23.webp": "92",
+    "/assets/images/prod-plc-v23b.webp": "92",
+    "/assets/images/prod-pump-v23.webp": "94",
+    "/assets/images/prod-pump-v23b.webp": "94",
+    "/assets/images/prod-spares-v23.webp": "96",
+    "/assets/images/project-chiller-v23.webp": "46",
+    "/assets/images/project-chiller-v23b.webp": "80",
+    "/assets/images/project-co2-v23.webp": "39",
+    "/assets/images/project-co2-v23b.webp": "77",
+    "/assets/images/project-keychain-v23.webp": "101",
+    "/assets/images/project-qr-v23.webp": "44",
+    "/assets/images/project-qr-v23b.webp": "72",
+    "/assets/images/quality.webp": "104",
+    "/assets/images/resource-automation-v23.webp": "92",
+    "/assets/images/resource-engineering-v23.webp": "74",
+    "/assets/images/resource-inspection-v23.webp": "38",
+    "/assets/images/resource-maintenance-v23.webp": "76",
+    "/assets/images/resource-manufacturing-v23.webp": "77",
+    "/assets/images/resource-products-v23.webp": "96",
+    "/assets/images/resource-quality-v23.webp": "43",
+    "/assets/images/resource-tender-v23.webp": "45",
+    "/assets/images/service-laser-cutting.webp": "113",
+    "/assets/images/showroom.webp": "114",
+    "/assets/images/social-preview.jpg": "115",
+    "/assets/images/sourcing.webp": "116",
+    "/assets/images/tender.webp": "117",
+    "/assets/images/website-qr.png": "118",
+    "/assets/images/advanced-manufacturing-capability-illustration.svg": "svg:advanced-manufacturing-capability-illustration.svg",
+    "/assets/images/am-example-bracket-unique.svg": "svg:am-example-bracket-unique.svg",
+    "/assets/images/am-example-enclosure-unique.svg": "svg:am-example-enclosure-unique.svg",
+    "/assets/images/am-example-fixture-unique.svg": "svg:am-example-fixture-unique.svg",
+    "/assets/images/am-example-shaft-unique.svg": "svg:am-example-shaft-unique.svg",
+    "/assets/images/am-example-sparekit-unique.svg": "svg:am-example-sparekit-unique.svg",
+    "/assets/images/am-hero-manufacturing-unique.svg": "svg:am-hero-manufacturing-unique.svg",
+    "/assets/images/am-laser-fabrication-unique.svg": "svg:am-laser-fabrication-unique.svg",
+    "/assets/images/am-machining-unique.svg": "svg:am-machining-unique.svg",
+    "/assets/images/am-process-inspection-unique.svg": "svg:am-process-inspection-unique.svg",
+    "/assets/images/am-prototype-unique.svg": "svg:am-prototype-unique.svg",
+    "/assets/images/am-spares-unique.svg": "svg:am-spares-unique.svg",
+    "/assets/images/automation.svg": "svg:automation.svg",
+    "/assets/images/engineering.svg": "svg:engineering.svg",
+    "/assets/images/inspection.svg": "svg:inspection.svg",
+    "/assets/images/maintenance.svg": "svg:maintenance.svg",
+    "/assets/images/manufacturing.svg": "svg:manufacturing.svg",
+    "/assets/images/products.svg": "svg:products.svg",
+    "/assets/images/quality.svg": "svg:quality.svg",
+    "/assets/images/tender.svg": "svg:tender.svg",
+    "/assets/images/whatsapp-qr.svg": "svg:whatsapp-qr.svg"
+  }
+}
