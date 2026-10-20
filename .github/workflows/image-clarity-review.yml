@@ -15,3 +15,5 @@ jobs:
         run: python3 -m pip install Pillow --break-system-packages
       - name: Audit raster files and emit contact sheets
         run: python3 scripts/audit_raster_quality.py
+      - name: Show image references
+        run: python3 scripts/scan_image_refs.py
