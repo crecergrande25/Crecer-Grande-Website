@@ -1,0 +1,146 @@
+-- Crecer Grande: permanent one-use content image assignment for the product catalogue.
+-- Reference migration documenting the production change applied on 2026-10-21.
+-- Every product receives its own content illustration unless it already has a
+-- distinct, suitable picture. Logos and functional icons are reusable.
+-- Artwork in assets/images/product-unique is illustrative, not a product photo.
+-- Safe to re-run on a synchronized product catalogue.
+BEGIN;
+
+WITH assignments(product_slug, image_path) AS (
+  VALUES
+    ('3d-printing-post-processing', '/assets/images/product-unique/3d-printing-post-processing.svg'),
+    ('au3tech-cutting-head', '/assets/images/product-unique/au3tech-cutting-head.svg'),
+    ('autofocus-laser-cutting-heads', '/assets/images/product-unique/autofocus-laser-cutting-heads.svg'),
+    ('boci-cutting-head', '/assets/images/product-unique/boci-cutting-head.svg'),
+    ('ceramic-ring', '/assets/images/product-unique/ceramic-ring.svg'),
+    ('chiller-compressor', '/assets/images/product-unique/chiller-compressor.svg'),
+    ('chiller-condenser', '/assets/images/product-unique/chiller-condenser.svg'),
+    ('chiller-controller', '/assets/images/product-unique/chiller-controller.svg'),
+    ('chiller-electrical', '/assets/images/product-unique/chiller-electrical.svg'),
+    ('chiller-fan', '/assets/images/product-unique/chiller-fan.svg'),
+    ('chiller-hose-fitting', '/assets/images/product-unique/chiller-hose-fitting.svg'),
+    ('chiller-pump-other', '/assets/images/product-unique/chiller-pump-other.svg'),
+    ('cleaning-head-consumable', '/assets/images/product-unique/cleaning-head-consumable.svg'),
+    ('cnc-bearings', '/assets/images/product-unique/cnc-bearings.svg'),
+    ('cnc-coolant-pump', '/assets/images/product-unique/cnc-coolant-pump.svg'),
+    ('cnc-cooling', '/assets/images/product-unique/cnc-cooling.svg'),
+    ('cnc-electrical-panel', '/assets/images/product-unique/cnc-electrical-panel.svg'),
+    ('cnc-hoses-fittings', '/assets/images/product-unique/cnc-hoses-fittings.svg'),
+    ('cnc-linear-motion', '/assets/images/product-unique/cnc-linear-motion.svg'),
+    ('cnc-lubrication', '/assets/images/product-unique/cnc-lubrication.svg'),
+    ('cnc-other-spares', '/assets/images/product-unique/cnc-other-spares.svg'),
+    ('cnc-sensors-switches', '/assets/images/product-unique/cnc-sensors-switches.svg'),
+    ('cnc-servo-drives', '/assets/images/product-unique/cnc-servo-drives.svg'),
+    ('cnc-spindle-accessories', '/assets/images/product-unique/cnc-spindle-accessories.svg'),
+    ('cnc-tool-turret', '/assets/images/product-unique/cnc-tool-turret.svg'),
+    ('cnc-transmission', '/assets/images/product-unique/cnc-transmission.svg'),
+    ('cnc-vmc-spares', '/assets/images/product-unique/cnc-vmc-spares.svg'),
+    ('co2-chiller', '/assets/images/product-unique/co2-chiller.svg'),
+    ('co2-controller', '/assets/images/product-unique/co2-controller.svg'),
+    ('co2-head-nozzle', '/assets/images/product-unique/co2-head-nozzle.svg'),
+    ('co2-laser-spares-consumables', '/assets/images/product-unique/co2-laser-spares-consumables.svg'),
+    ('co2-laser-tube', '/assets/images/product-unique/co2-laser-tube.svg'),
+    ('co2-mirror', '/assets/images/product-unique/co2-mirror.svg'),
+    ('co2-motion', '/assets/images/product-unique/co2-motion.svg'),
+    ('co2-psu', '/assets/images/product-unique/co2-psu.svg'),
+    ('collimation-lens-group', '/assets/images/product-unique/collimation-lens-group.svg'),
+    ('complete-co2-laser-chillers', '/assets/images/product-unique/complete-co2-laser-chillers.svg'),
+    ('custom-legacy-parts', '/assets/images/product-unique/custom-legacy-parts.svg'),
+    ('custom-obsolete-spares', '/assets/images/product-unique/custom-obsolete-spares.svg'),
+    ('custom-reverse-engineering', '/assets/images/product-unique/custom-reverse-engineering.svg'),
+    ('double-layer-nozzles', '/assets/images/product-unique/double-layer-nozzles.svg'),
+    ('fdm-fff-3d-printing', '/assets/images/product-unique/fdm-fff-3d-printing.svg'),
+    ('fiber-laser-chiller-generic', '/assets/images/product-unique/fiber-laser-chiller-generic.svg'),
+    ('fiber-laser-cutting-heads', '/assets/images/product-unique/fiber-laser-cutting-heads.svg'),
+    ('fiber-laser-cutting-nozzles', '/assets/images/product-unique/fiber-laser-cutting-nozzles.svg'),
+    ('fiber-laser-focus-collimation-lenses', '/assets/images/product-unique/fiber-laser-focus-collimation-lenses.svg'),
+    ('flow-switch', '/assets/images/product-unique/flow-switch.svg'),
+    ('focus-lens-group', '/assets/images/product-unique/focus-lens-group.svg'),
+    ('handheld-laser-chiller', '/assets/images/product-unique/handheld-laser-chiller.svg'),
+    ('handheld-laser-welding-chillers', '/assets/images/product-unique/handheld-laser-welding-chillers.svg'),
+    ('hanli-fiber-chiller', '/assets/images/product-unique/hanli-fiber-chiller.svg'),
+    ('height-sensor-cable', '/assets/images/product-unique/height-sensor-cable.svg'),
+    ('laser-ceramic-rings', '/assets/images/product-unique/laser-ceramic-rings.svg'),
+    ('laser-chiller-compressors-refrigeration', '/assets/images/product-unique/laser-chiller-compressors-refrigeration.svg'),
+    ('laser-chiller-controllers-displays', '/assets/images/product-unique/laser-chiller-controllers-displays.svg'),
+    ('laser-chiller-fans-cooling', '/assets/images/product-unique/laser-chiller-fans-cooling.svg'),
+    ('laser-chiller-filters-strainers', '/assets/images/product-unique/laser-chiller-filters-strainers.svg'),
+    ('laser-chiller-flow-sensors', '/assets/images/product-unique/laser-chiller-flow-sensors.svg'),
+    ('laser-chiller-pumps-family', '/assets/images/product-unique/laser-chiller-pumps-family.svg'),
+    ('laser-chiller-spares', '/assets/images/product-unique/laser-chiller-spares.svg'),
+    ('laser-chiller-temperature-sensors', '/assets/images/product-unique/laser-chiller-temperature-sensors.svg'),
+    ('laser-consumables', '/assets/images/product-unique/laser-consumables.svg'),
+    ('laser-nozzle-holders-sensor-bodies', '/assets/images/product-unique/laser-nozzle-holders-sensor-bodies.svg'),
+    ('laser-optics-cleaning-consumables', '/assets/images/product-unique/laser-optics-cleaning-consumables.svg'),
+    ('laser-qbh-qcs-connectors', '/assets/images/product-unique/laser-qbh-qcs-connectors.svg'),
+    ('laser-seals-o-rings', '/assets/images/product-unique/laser-seals-o-rings.svg'),
+    ('laser-welding-cleaning-heads', '/assets/images/product-unique/laser-welding-cleaning-heads.svg'),
+    ('leicheng-600w-pump', '/assets/images/product-unique/leicheng-600w-pump.svg'),
+    ('lens-drawer', '/assets/images/product-unique/lens-drawer.svg'),
+    ('level-sensor', '/assets/images/product-unique/level-sensor.svg'),
+    ('licheng-cg1622403501-180w-laser-chiller-pump', '/assets/images/product-unique/licheng-cg1622403501-180w-laser-chiller-pump.svg'),
+    ('licheng-cg1622684002-360w-laser-chiller-pump', '/assets/images/product-unique/licheng-cg1622684002-360w-laser-chiller-pump.svg'),
+    ('licheng-cj0622558828-600w-laser-chiller-pump', '/assets/images/product-unique/licheng-cj0622558828-600w-laser-chiller-pump.svg'),
+    ('licheng-cj0622601028-880w-laser-chiller-pump', '/assets/images/product-unique/licheng-cj0622601028-880w-laser-chiller-pump.svg'),
+    ('metal-3d-printing-rfq', '/assets/images/product-unique/metal-3d-printing-rfq.svg'),
+    ('mjf-3d-printing', '/assets/images/product-unique/mjf-3d-printing.svg'),
+    ('optics-cleaning', '/assets/images/product-unique/optics-cleaning.svg'),
+    ('pb-accessories', '/assets/images/product-unique/pb-accessories.svg'),
+    ('pb-air-bend', '/assets/images/product-unique/pb-air-bend.svg'),
+    ('pb-custom', '/assets/images/product-unique/pb-custom.svg'),
+    ('pb-gooseneck', '/assets/images/product-unique/pb-gooseneck.svg'),
+    ('pb-offset-hemming', '/assets/images/product-unique/pb-offset-hemming.svg'),
+    ('pb-radius', '/assets/images/product-unique/pb-radius.svg'),
+    ('pb-v-die', '/assets/images/product-unique/pb-v-die.svg'),
+    ('plc-iot-housings', '/assets/images/product-unique/plc-iot-housings.svg'),
+    ('precitec-minicutter', '/assets/images/product-unique/precitec-minicutter.svg'),
+    ('precitec-procutter-2', '/assets/images/product-unique/precitec-procutter-2.svg'),
+    ('precitec-procutter-prime', '/assets/images/product-unique/precitec-procutter-prime.svg'),
+    ('precitec-procutter-thunder', '/assets/images/product-unique/precitec-procutter-thunder.svg'),
+    ('precitec-procutter-zoom', '/assets/images/product-unique/precitec-procutter-zoom.svg'),
+    ('precitec-solidcutter', '/assets/images/product-unique/precitec-solidcutter.svg'),
+    ('protective-window-249-15', '/assets/images/product-unique/protective-window-249-15.svg'),
+    ('protective-window-279-41', '/assets/images/product-unique/protective-window-279-41.svg'),
+    ('protective-windows-other', '/assets/images/product-unique/protective-windows-other.svg'),
+    ('qbh-qcs-interface', '/assets/images/product-unique/qbh-qcs-interface.svg'),
+    ('rapid-prototyping', '/assets/images/product-unique/rapid-prototyping.svg'),
+    ('raytools-bm110', '/assets/images/product-unique/raytools-bm110.svg'),
+    ('raytools-bm114', '/assets/images/product-unique/raytools-bm114.svg'),
+    ('sensor-body', '/assets/images/product-unique/sensor-body.svg'),
+    ('sheet-metal-bending-tooling', '/assets/images/product-unique/sheet-metal-bending-tooling.svg'),
+    ('single-layer-nozzles', '/assets/images/product-unique/single-layer-nozzles.svg'),
+    ('sla-dlp-resin-3d-printing', '/assets/images/product-unique/sla-dlp-resin-3d-printing.svg'),
+    ('sls-3d-printing', '/assets/images/product-unique/sls-3d-printing.svg'),
+    ('smart-high-power-laser-cutting-heads', '/assets/images/product-unique/smart-high-power-laser-cutting-heads.svg'),
+    ('temperature-sensor', '/assets/images/product-unique/temperature-sensor.svg'),
+    ('teyu-cwfl-1000', '/assets/images/product-unique/teyu-cwfl-1000.svg'),
+    ('teyu-cwfl-1500', '/assets/images/product-unique/teyu-cwfl-1500.svg'),
+    ('teyu-cwfl-2000', '/assets/images/product-unique/teyu-cwfl-2000.svg'),
+    ('teyu-cwfl-3000', '/assets/images/product-unique/teyu-cwfl-3000.svg'),
+    ('teyu-cwfl-4000', '/assets/images/product-unique/teyu-cwfl-4000.svg'),
+    ('teyu-cwfl-6000', '/assets/images/product-unique/teyu-cwfl-6000.svg'),
+    ('tongfei-chiller', '/assets/images/product-unique/tongfei-chiller.svg'),
+    ('tube-3d-laser-cutting-heads', '/assets/images/product-unique/tube-3d-laser-cutting-heads.svg'),
+    ('water-filter', '/assets/images/product-unique/water-filter.svg'),
+    ('welding-ceramic', '/assets/images/product-unique/welding-ceramic.svg'),
+    ('welding-nozzle', '/assets/images/product-unique/welding-nozzle.svg'),
+    ('wire-feeder-spare', '/assets/images/product-unique/wire-feeder-spare.svg'),
+    ('wsx-cutting-head', '/assets/images/product-unique/wsx-cutting-head.svg'),
+    ('znse-focus-lens', '/assets/images/product-unique/znse-focus-lens.svg')
+)
+UPDATE public.products AS product
+SET image_url = assignments.image_path
+FROM assignments
+WHERE product.slug = assignments.product_slug
+  AND product.image_url IS DISTINCT FROM assignments.image_path;
+
+-- Prevent a later CMS edit from assigning one image URL to two products.
+CREATE UNIQUE INDEX IF NOT EXISTS products_unique_content_image_url
+ON public.products (image_url)
+WHERE image_url IS NOT NULL AND image_url <> '';
+
+COMMIT;
+
+-- Post-deployment verification:
+-- SELECT count(*) AS products, count(distinct image_url) AS image_urls FROM public.products;
+-- SELECT image_url,count(*) FROM public.products GROUP BY image_url HAVING count(*)>1;
