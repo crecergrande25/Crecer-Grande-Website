@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 
 const origin = process.env.SITE_BASE || 'https://crecergrande.in';
+const mobile = process.env.AUDIT_VIEWPORT === 'mobile';
 const root = path.resolve(__dirname, '..');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const paths = new Set(['/']);
@@ -44,7 +45,7 @@ function mark(url, reason, page) {
 
 async function main() {
   const browser = await chromium.launch({ headless: true, args: ['--disable-dev-shm-usage', '--no-sandbox'] });
-  const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, ignoreHTTPSErrors: false });
+  const context = await browser.newContext({ viewport: mobile ? { width: 390, height: 844 } : { width: 1440, height: 900 }, isMobile: mobile, deviceScaleFactor: mobile ? 2 : 1, ignoreHTTPSErrors: false });
   let next = 0;
   const seenBackgrounds = new Map();
 
@@ -151,8 +152,33 @@ async function main() {
       }
     }
   }));
+  // Probe every committed image endpoint, even assets not used on a public page.
+  const trackedAssets = [];
+  function collect(dir) {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) collect(full);
+      else if (/\.(?:webp|jpg|jpeg|png|svg)$/i.test(entry.name)) trackedAssets.push('/' + path.relative(root, full).replace(/\\/g, '/'));
+    }
+  }
+  collect(path.join(root, 'assets', 'images'));
+  let assetIndex = 0;
+  await Promise.all(Array.from({ length: 8 }, async () => {
+    while (assetIndex < trackedAssets.length) {
+      const asset = trackedAssets[assetIndex++];
+      try {
+        const res = await context.request.get(origin + asset, { timeout: 20000, maxRedirects: 5 });
+        if (res.status() >= 400) mark(origin + asset, 'repository image HTTP ' + res.status(), 'repository assets');
+        else if (!(res.headers()['content-type'] || '').startsWith('image/')) {
+          mark(origin + asset, 'repository image returned unexpected content type ' + res.headers()['content-type'], 'repository assets');
+        }
+      } catch (e) {
+        mark(origin + asset, 'repository image request failed: ' + String(e.message || e).slice(0, 110), 'repository assets');
+      }
+    }
+  }));
   await browser.close();
-  console.log('SUMMARY|' + JSON.stringify({ pages: pages.length, visited: imageDetails.length, failedRoutes: routeFailures.length, brokenImageUrls: brokenByUrl.size, cssBackgroundUrls: backgrounds.length, imgInstances: imageDetails.reduce((n,p)=>n+p.imgs,0) }));
+  console.log('SUMMARY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, visited: imageDetails.length, failedRoutes: routeFailures.length, brokenImageUrls: brokenByUrl.size, cssBackgroundUrls: backgrounds.length, imgInstances: imageDetails.reduce((n,p)=>n+p.imgs,0), repositoryImageUrls: trackedAssets.length }));
   for (const p of imageDetails) console.log('PAGE|' + JSON.stringify(p));
   for (const r of routeFailures) console.log('ROUTE_FAIL|' + JSON.stringify(r));
   for (const item of brokenByUrl.values()) {
