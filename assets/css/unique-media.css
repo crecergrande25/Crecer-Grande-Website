@@ -10,3 +10,8 @@
 .cg-footer .cg-typographic-logo,.cg-footer .cg-typographic-logo strong{color:#f4bd53}
 .cg-footer .cg-type-name strong{color:inherit}
 @media(max-width:600px){.cg-art-placeholder{min-height:145px;padding:16px}.cg-art-mark{width:48px;height:48px;font-size:20px}.cg-art-label{font-size:12px}.cg-type-name{font-size:12px}.cg-type-glyph{width:32px;height:32px;font-size:13px}}
+
+
+/* Catalogue cards with no unique product photo receive a clean technical motif. */
+.product-card .image:empty,.product-card .image:not(:has(img[src])){position:relative;display:grid;place-items:center;background:radial-gradient(circle at 75% 22%,rgba(253,190,74,.24),transparent 48%),linear-gradient(135deg,#102c49,#2a5171)!important}
+.product-card .image:empty:before,.product-card .image:not(:has(img[src])):before{content:"CG";display:grid;place-items:center;width:50px;height:50px;border-radius:12px;border:1px solid rgba(255,214,125,.66);color:#ffe0a2;font-weight:900;font-size:18px;letter-spacing:-.07em}
