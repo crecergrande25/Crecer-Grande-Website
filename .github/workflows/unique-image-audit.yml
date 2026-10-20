@@ -1,27 +1,39 @@
-name: Unique image cleanup
+name: Unique image verification
 on:
   push:
     branches: [fix/global-unique-content-images-20261020]
+  workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  transform:
-    if: "!contains(github.event.head_commit.message, '[unique-cleanup]')"
+  verify:
+    if: "!contains(github.event.head_commit.message, '[unique-finalized]')"
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
-      - run: python3 -m pip install Pillow --break-system-packages
-      - name: Make marketing images one-use only
-        run: python3 scripts/make_images_unique.py
-      - name: Test image files and HTML
+      - name: Finish header branding replacements
+        run: python3 scripts/finalize_unique_images.py
+      - name: Static site and JavaScript checks
         run: |
           python3 scripts/check_site_quality.py
-          python3 scripts/check_image_assets.py
           for script in assets/js/*.js; do node --check "$script"; done
-      - name: Commit changed pages and assets
+      - name: Install browser
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Inspect local website on desktop and mobile
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/cg-site-server.log 2>&1 &
+          sleep 3
+          node scripts/check_live_image_uniqueness.cjs
+          AUDIT_VIEWPORT=mobile node scripts/check_live_image_uniqueness.cjs
+      - name: Commit final logo fixes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          git commit -m 'Use each content image once [unique-cleanup]'
-          git push origin HEAD:fix/global-unique-content-images-20261020
+          if ! git diff --cached --quiet; then
+            git commit -m 'Finish unique content-image rollout [unique-finalized]'
+            git push origin HEAD:fix/global-unique-content-images-20261020
+          fi
