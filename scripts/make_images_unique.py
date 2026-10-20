@@ -116,6 +116,15 @@ for path in ROOT.rglob("*.css"):
         path.write_text(new,encoding="utf8")
         changed.append(path.relative_to(ROOT).as_posix())
 
+# Prevent live CMS content from replacing a unique page photo with a reused or
+# outdated legacy image URL. Editorial text updates continue to work.
+cms=ROOT/"assets/js/cms.js"
+cms_text=cms.read_text(encoding="utf8")
+cms_new=re.sub(r"if\(text\(data\.image_url\)\)\s*\{\s*const img=hero\?\.querySelector\('img'\);\s*if\(img\)img\.src=data\.image_url;\s*\}", "/* Keep the individually assigned page image rather than a reused CMS image. */",cms_text)
+if cms_new==cms_text:raise RuntimeError("CMS image override pattern changed")
+cms.write_text(cms_new,encoding="utf8")
+changed.append("assets/js/cms.js")
+
 # Remove both page-art routines. They were re-introducing the same photographs
 # behind dozens of pages via --cg-hero-art and --cg-page-art.
 js=ROOT/"assets/js/site.js"
