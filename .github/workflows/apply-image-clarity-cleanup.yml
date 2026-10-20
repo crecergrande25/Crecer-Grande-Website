@@ -1,0 +1,31 @@
+name: Apply image clarity cleanup
+on:
+  push:
+    branches: [audit/remove-hazy-images-20261020]
+permissions:
+  contents: write
+jobs:
+  cleanup:
+    if: "!contains(github.event.head_commit.message, '[image-cleanup]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install Pillow
+        run: python3 -m pip install Pillow --break-system-packages
+      - name: Remove unusable images and rewrite references
+        run: python3 scripts/prune_blurry_images.py
+      - name: Verify pages and scripts
+        run: |
+          python3 scripts/check_site_quality.py
+          node --check assets/js/site.js
+          find assets/images -type f \( -name '*.webp' -o -name '*.png' -o -name '*.jpg' \) -print0 | xargs -0 -r python3 -c 'import sys; from PIL import Image; im=Image.open(sys.argv[1]); im.load()' 
+      - name: Commit and push branch changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Remove hazy, low-resolution and unreadable image assets [image-cleanup]'
+          git push origin HEAD:audit/remove-hazy-images-20261020
