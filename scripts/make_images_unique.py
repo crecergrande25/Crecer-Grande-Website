@@ -138,7 +138,7 @@ i=txt.find("/* =================================================================
 if i==-1:raise RuntimeError("Unable to locate legacy hero image map")
 txt=txt[:i]
 # Replace the injected shared-header and footer image tags with text branding.
-txt=re.sub(r'<img\b[^>]*?\bsrc=\\?["\x27]/assets/images/logo\.png\\?["\x27][^>]*>',WORDMARK,txt,flags=re.I)
+txt=re.sub(r'<img\b[^>]*?\bsrc=\\?["\x27]/assets/images/logo\.png\\?["\x27][^>]*>',lambda m: WORDMARK.replace('"',r'\"') if r'\"' in m.group(0) else WORDMARK,txt,flags=re.I)
 txt=url_re.sub(ART,txt)
 if txt!=old:
     js.write_text(txt,encoding="utf8")
