@@ -58,12 +58,12 @@
 
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
-  const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><img alt="Crecer Grande" data-site-src="logo_url" decoding="async" src="/assets/images/logo.png"/></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Capabilities</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
+  const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><span class="cg-typographic-logo" aria-label="Crecer Grande"><span class="cg-type-glyph" aria-hidden="true">CG</span><span class="cg-type-name">CRECER <strong>GRANDE</strong></span></span></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Capabilities</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
 
-  const HEADER = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><img alt="Crecer Grande" data-site-src="logo_url" decoding="async" src="/assets/images/logo.png"/></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Capabilities</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
+  const HEADER = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><span class="cg-typographic-logo" aria-label="Crecer Grande"><span class="cg-type-glyph" aria-hidden="true">CG</span><span class="cg-type-name">CRECER <strong>GRANDE</strong></span></span></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Capabilities</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
 
   const FOOTER_CTA = "<section class=\"cg-footer-cta\">\n<div class=\"container cg-footer-cta-inner\">\n<div>\n<h2>Have an engineering, manufacturing or operational requirement?</h2>\n<p>Send a drawing, sample, photograph, machine model, part number, document or problem statement. We will structure the most practical service route.</p>\n</div>\n<a class=\"cg-footer-cta-btn\" href=\"/request-quote.html\">Send Requirement</a>\n</div>\n</section>";
-  const FOOTER = "<footer class=\"cg-footer\">\n<div class=\"container cg-footer-grid\">\n<div class=\"cg-footer-brand\">\n<a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><img alt=\"Crecer Grande\" src=\"/assets/images/logo.png\"/></a>\n<p class=\"cg-footer-tagline\">Engineering Services • Fabrication • Industrial Support</p>\n<p class=\"cg-footer-desc\">A coordinated service network for design, manufacturing support, maintenance, quality, inspection and business workflows.</p>\n</div>\n<div class=\"cg-footer-col\"><h4>Service Routes</h4><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Service Directory</a><a href=\"/divisions.html\">Capability Divisions</a><a href=\"/3d-printing-kolkata.html\">3D Printing Service</a><a href=\"/laser-cutting-kolkata.html\">Laser Cutting</a><a href=\"/laser-welding-kolkata.html\">Laser Welding</a><a href=\"/laser-marking-kolkata.html\">Laser Marking</a><a href=\"/sheet-metal-bending-kolkata.html\">Sheet Metal Bending</a><a href=\"/reverse-engineering-kolkata.html\">Reverse Engineering</a><a href=\"/mechanical-design-services-kolkata.html\">Mechanical Design</a></div>\n<div class=\"cg-footer-col\"><h4>Company</h4><a href=\"/about.html\">About</a><a href=\"/projects.html\">Projects &amp; Case Studies</a><a href=\"/industries.html\">Industries</a><a href=\"/insights.html\">Insights</a><a href=\"/contact.html\">Contact</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div>\n<div class=\"cg-footer-col cg-footer-contact\"><h4>Contact Us</h4><a class=\"cg-contact-line\" href=\"tel:+917003301781\"><span>+91 7003301781</span></a><a class=\"cg-contact-line\" href=\"mailto:crecergrande@outlook.com\"><span>crecergrande@outlook.com</span></a><p class=\"cg-contact-address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal - 700135</p><div class=\"cg-footer-socials cg-contact-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7h-.1c-1.7 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z\"></path></svg></span><span>WhatsApp</span></a><a aria-label=\"Instagram @crecer_grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M7.5 0h9A7.5 7.5 0 0 1 24 7.5v9a7.5 7.5 0 0 1-7.5 7.5h-9A7.5 7.5 0 0 1 0 16.5v-9A7.5 7.5 0 0 1 7.5 0Zm0 2.3a5.2 5.2 0 0 0-5.2 5.2v9a5.2 5.2 0 0 0 5.2 5.2h9a5.2 5.2 0 0 0 5.2-5.2v-9a5.2 5.2 0 0 0-5.2-5.2h-9Zm10.8 1.8a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2ZM12 5.8a6.2 6.2 0 1 1 0 12.4A6.2 6.2 0 0 1 12 5.8Zm0 2.3A3.9 3.9 0 1 0 12 16a3.9 3.9 0 0 0 0-7.8Z\"></path></svg></span><span>@crecer_grande</span></a></div></div>\n</div>\n<div class=\"container cg-footer-bottom\"><span>© 2026 Crecer Grande. All rights reserved.</span><span class=\"cg-footer-motto\">Engineering, manufacturing and industrial support from Kolkata.</span><a class=\"cg-admin-login\" href=\"/admin/\" rel=\"nofollow\">Admin Login</a></div>\n</footer>";
+  const FOOTER = "<footer class=\"cg-footer\">\n<div class=\"container cg-footer-grid\">\n<div class=\"cg-footer-brand\">\n<a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><span class=\"cg-typographic-logo\" aria-label=\"Crecer Grande\"><span class=\"cg-type-glyph\" aria-hidden=\"true\">CG</span><span class=\"cg-type-name\">CRECER <strong>GRANDE</strong></span></span></a>\n<p class=\"cg-footer-tagline\">Engineering Services • Fabrication • Industrial Support</p>\n<p class=\"cg-footer-desc\">A coordinated service network for design, manufacturing support, maintenance, quality, inspection and business workflows.</p>\n</div>\n<div class=\"cg-footer-col\"><h4>Service Routes</h4><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Service Directory</a><a href=\"/divisions.html\">Capability Divisions</a><a href=\"/3d-printing-kolkata.html\">3D Printing Service</a><a href=\"/laser-cutting-kolkata.html\">Laser Cutting</a><a href=\"/laser-welding-kolkata.html\">Laser Welding</a><a href=\"/laser-marking-kolkata.html\">Laser Marking</a><a href=\"/sheet-metal-bending-kolkata.html\">Sheet Metal Bending</a><a href=\"/reverse-engineering-kolkata.html\">Reverse Engineering</a><a href=\"/mechanical-design-services-kolkata.html\">Mechanical Design</a></div>\n<div class=\"cg-footer-col\"><h4>Company</h4><a href=\"/about.html\">About</a><a href=\"/projects.html\">Projects &amp; Case Studies</a><a href=\"/industries.html\">Industries</a><a href=\"/insights.html\">Insights</a><a href=\"/contact.html\">Contact</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div>\n<div class=\"cg-footer-col cg-footer-contact\"><h4>Contact Us</h4><a class=\"cg-contact-line\" href=\"tel:+917003301781\"><span>+91 7003301781</span></a><a class=\"cg-contact-line\" href=\"mailto:crecergrande@outlook.com\"><span>crecergrande@outlook.com</span></a><p class=\"cg-contact-address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal - 700135</p><div class=\"cg-footer-socials cg-contact-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7h-.1c-1.7 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z\"></path></svg></span><span>WhatsApp</span></a><a aria-label=\"Instagram @crecer_grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M7.5 0h9A7.5 7.5 0 0 1 24 7.5v9a7.5 7.5 0 0 1-7.5 7.5h-9A7.5 7.5 0 0 1 0 16.5v-9A7.5 7.5 0 0 1 7.5 0Zm0 2.3a5.2 5.2 0 0 0-5.2 5.2v9a5.2 5.2 0 0 0 5.2 5.2h9a5.2 5.2 0 0 0 5.2-5.2v-9a5.2 5.2 0 0 0-5.2-5.2h-9Zm10.8 1.8a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2ZM12 5.8a6.2 6.2 0 1 1 0 12.4A6.2 6.2 0 0 1 12 5.8Zm0 2.3A3.9 3.9 0 1 0 12 16a3.9 3.9 0 0 0 0-7.8Z\"></path></svg></span><span>@crecer_grande</span></a></div></div>\n</div>\n<div class=\"container cg-footer-bottom\"><span>© 2026 Crecer Grande. All rights reserved.</span><span class=\"cg-footer-motto\">Engineering, manufacturing and industrial support from Kolkata.</span><a class=\"cg-admin-login\" href=\"/admin/\" rel=\"nofollow\">Admin Login</a></div>\n</footer>";
 
   function injectHeaderStyles(){
     if($('#cg-common-header-style')) return;
@@ -156,49 +156,7 @@
   }
 
   // Page markup now references validated image assets directly.
-  function applyServiceFirstArt(){
-    const path=(location.pathname||'/').toLowerCase();
-    const art={
-      '/engineering-desk.html':'/assets/images/design.webp',
-      '/projects.html':'/assets/images/process-cad-v23b.webp',
-      '/insights.html':'/assets/images/process-drawing-v23.webp',
-      '/industries.html':'/assets/images/manufacturing.webp',
-      '/3d-printing-kolkata.html':'/assets/images/printing.webp',
-      '/mechanical-design-services-kolkata.html':'/assets/images/design.webp',
-      '/industrial-machine-maintenance-kolkata.html':'/assets/images/maintenance.webp',
-      '/industrial-inspection-qa-kolkata.html':'/assets/images/quality.webp',
-      '/iso-9001-consultant-kolkata.html':'/assets/images/quality.webp',
-      '/laser-cutting-kolkata.html':'/assets/images/service-laser-cutting.webp',
-      '/laser-marking-kolkata.html':'/assets/images/prod-laser-v23.webp',
-      '/reverse-engineering-kolkata.html':'/assets/images/process-cad-v23b.webp',
-      '/sheet-metal-bending-kolkata.html':'/assets/images/prod-bending-v23.webp',
-      '/gem-tender-support-kolkata.html':'/assets/images/tender.webp',
-      '/business-support-compliance-kolkata.html':'/assets/images/tender.webp',
-      '/custom-machine-spares.html':'/assets/images/prod-spares-v23.webp',
-      '/design-job-work.html':'/assets/images/process-drawing-v23.webp',
-      '/divisions/advanced-manufacturing.html':'/assets/images/div-manufacturing-v23.webp',
-      '/divisions/engineering-design.html':'/assets/images/design.webp',
-      '/divisions/machine-maintenance.html':'/assets/images/div-maintenance-v23.webp',
-      '/divisions/inspection-testing.html':'/assets/images/quality.webp',
-      '/divisions/quality-management-systems.html':'/assets/images/quality.webp',
-      '/divisions/tender-business-development.html':'/assets/images/tender.webp',
-      '/divisions/business-support-compliance.html':'/assets/images/sourcing.webp',
-      '/projects/laser-machine-rca.html':'/assets/images/laser-components.webp',
-      '/projects/laser-chiller-pump-replacement.html':'/assets/images/chiller-components.webp',
-      '/projects/fit-correction-replacement-component.html':'/assets/images/process-cad-v23b.webp',
-      '/projects/3d-print-fai-batch.html':'/assets/images/printing.webp'
-    };
-    const insightArt=path.includes('/insights/3d-printing')?'/assets/images/printing.webp':
-      path.includes('/insights/chiller')?'/assets/images/chiller-components.webp':
-      path.includes('/insights/cnc-vmc')?'/assets/images/manufacturing.webp':
-      path.includes('/insights/gdt')||path.includes('/insights/metric-tap')||path.includes('/insights/surface-roughness')||path.includes('/insights/vernier')?'/assets/images/quality.webp':
-      path.includes('/insights/holes-near')||path.includes('/insights/sheet-metal')||path.includes('/insights/stainless-steel')?'/assets/images/div-manufacturing-v23.webp':
-      path.includes('/insights/identify-laser')||path.includes('/insights/laser-cutting')||path.includes('/insights/laser-nozzle')?'/assets/images/laser-components.webp':
-      path.includes('/insights/machine-breakdown')||path.includes('/insights/preventive-maintenance')?'/assets/images/maintenance.webp':
-      path.includes('/insights/ncr-rca-capa')?'/assets/images/quality.webp':null;
-    const selectedArt=art[path]||insightArt;
-    if(selectedArt) document.body.style.setProperty('--cg-page-art',`url("${selectedArt}")`);
-  }
+  function applyServiceFirstArt(){ /* Keep page hero artwork image-free. */ }
 
   function removeDuplicateTerminalCta(){
     const sharedCta=document.querySelector('.cg-footer-cta');
@@ -461,94 +419,3 @@
   else boot();
 })();
 
-/* ==========================================================================
-   CG UNIQUE HERO ART MAP — 2026-09-28
-   One relevant, non-repeated hero photograph per active public page.
-   ========================================================================== */
-(() => {
-  const HERO_ART = {
-    "/": "/assets/images/hero-collage.webp",
-    "/index.html": "/assets/images/hero-collage.webp",
-    "/about.html": "/assets/images/resource-engineering-v23.webp",
-    "/services.html": "/assets/images/manufacturing.webp",
-    "/divisions.html": "/assets/images/hero-engineering.webp",
-    "/projects.html": "/assets/images/process-cad-v23b.webp",
-    "/insights.html": "/assets/images/cnc/cnc-spindle-generated.webp",
-    "/industries.html": "/assets/images/div-manufacturing-v23.webp",
-    "/engineering-desk.html": "/assets/images/process-drawing-v23.webp",
-    "/contact.html": "/assets/images/catalog/custom/custom-machined-components.webp",
-    "/request-quote.html": "/assets/images/process-cad-v23.webp",
-    "/estimate.html": "/assets/images/resource-products-v23.webp",
-    "/404.html": "/assets/images/process-supply-v23.webp",
-    "/privacy.html": "/assets/images/resource-quality-v23.webp",
-    "/disclaimer.html": "/assets/images/process-validate-v23.webp",
-
-    "/3d-printing-kolkata.html": "/assets/images/am-approved-prototype.webp",
-    "/business-support-compliance-kolkata.html": "/assets/images/div-tender-v23.webp",
-    "/custom-machine-spares.html": "/assets/images/am-approved-spares.webp",
-    "/design-job-work.html": "/assets/images/part6-tooling-hero.webp",
-    "/gem-tender-support-kolkata.html": "/assets/images/process-supply-v23.webp",
-    "/industrial-automation-kolkata.html": "/assets/images/prod-plc-v23b.webp",
-    "/industrial-inspection-qa-kolkata.html": "/assets/images/div-inspection-v23.webp",
-    "/industrial-machine-maintenance-kolkata.html": "/assets/images/prod-cnc-v23.webp",
-    "/iso-9001-consultant-kolkata.html": "/assets/images/div-quality-v23.webp",
-    "/laser-cutting-kolkata.html": "/assets/images/catalog/cutting-heads/raytools-bm114.webp",
-    "/laser-marking-kolkata.html": "/assets/images/catalog/welding-cleaning/cleaning-head-consumable.webp",
-    "/mechanical-design-services-kolkata.html": "/assets/images/div-engineering-v23.webp",
-    "/reverse-engineering-kolkata.html": "/assets/images/am-approved-shaft.webp",
-    "/sheet-metal-bending-kolkata.html": "/assets/images/catalog/press-brake/pb-custom.webp",
-
-    "/divisions/advanced-manufacturing.html": "/assets/images/div-manufacturing-v23.webp",
-    "/divisions/automation-solutions.html": "/assets/images/div-automation-v23.webp",
-    "/divisions/business-support-compliance.html": "/assets/images/div-products-v23.webp",
-    "/divisions/engineering-design.html": "/assets/images/div-engineering-v23.webp",
-    "/divisions/inspection-testing.html": "/assets/images/process-verify-v23.webp",
-    "/divisions/machine-maintenance.html": "/assets/images/cnc/cnc-lubrication-generated.webp",
-    "/divisions/quality-management-systems.html": "/assets/images/process-validate-v23.webp",
-    "/divisions/tender-business-development.html": "/assets/images/sourcing.webp",
-
-    "/insights/3d-printing-file-formats.html": "/assets/images/prod-3d-v23.webp",
-    "/insights/3d-printing-tolerances.html": "/assets/images/am-approved-fixture.webp",
-    "/insights/chiller-pump-equivalent-selection.html": "/assets/images/prod-pump-v23b.webp",
-    "/insights/cnc-vmc-speeds-feeds-basics.html": "/assets/images/prod-cnc-v23.webp",
-    "/insights/gdt-datum-basics.html": "/assets/images/process-verify-v23.webp",
-    "/insights/holes-near-sheet-metal-bends.html": "/assets/images/prod-bending-v23.webp",
-    "/insights/identify-laser-consumables.html": "/assets/images/laser-components.webp",
-    "/insights/laser-cutting-defects.html": "/assets/images/laser.webp",
-    "/insights/laser-nozzle-focus-basics.html": "/assets/images/laser-components.webp",
-    "/insights/machine-breakdown-data-checklist.html": "/assets/images/resource-maintenance-v23.webp",
-    "/insights/metric-tap-drill-clearance-hole-chart.html": "/assets/images/am-approved-machined.webp",
-    "/insights/ncr-rca-capa-guide.html": "/assets/images/process-validate-v23b.webp",
-    "/insights/preventive-maintenance-basics.html": "/assets/images/process-maintain-v23.webp",
-    "/insights/sheet-metal-bending-basics.html": "/assets/images/am-approved-bracket.webp",
-    "/insights/stainless-steel-handling.html": "/assets/images/am-approved-enclosure.webp",
-    "/insights/surface-roughness-ra-rz.html": "/assets/images/div-inspection-v23b.webp",
-    "/insights/vernier-caliper-guide.html": "/assets/images/process-verify-v23b.webp",
-
-    "/projects/3d-print-fai-batch.html": "/assets/images/prod-bending-v23.webp",
-    "/projects/co2-laser-components-support.html": "/assets/images/laser-components.webp",
-    "/projects/custom-keychain-laser-marking.html": "/assets/images/laser-consumables/generated-focus-optics.webp",
-    "/projects/fit-correction-replacement-component.html": "/assets/images/process-cad-v23.webp",
-    "/projects/laser-chiller-pump-replacement.html": "/assets/images/project-chiller-v23b.webp",
-    "/projects/laser-machine-rca.html": "/assets/images/div-maintenance-v23.webp",
-    "/projects/precision-marked-components.html": "/assets/images/project-qr-v23.webp",
-    "/projects/qms-audit-readiness.html": "/assets/images/resource-manufacturing-v23.webp",
-    "/projects/ss304-qr-code-laser-marking.html": "/assets/images/am-approved-laser.webp"
-  };
-
-  function applyUniqueHeroArt(){
-    if(!document.body) return;
-    let path=(location.pathname||"/").toLowerCase();
-    if(path.length>1 && path.endsWith("/")) path=path.slice(0,-1);
-    const image=HERO_ART[path];
-    if(!image) return;
-    document.body.style.setProperty("--cg-hero-art", `url("${image}")`);
-    document.body.dataset.cgHeroArt=image;
-  }
-
-  if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",applyUniqueHeroArt,{once:true});
-  } else {
-    applyUniqueHeroArt();
-  }
-})();

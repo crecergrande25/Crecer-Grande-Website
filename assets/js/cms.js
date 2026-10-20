@@ -85,10 +85,7 @@
       if(h1&&text(data.title||data.name))h1.textContent=data.title||data.name;
       if(p&&text(data.short_description||data.summary||data.description))p.textContent=data.short_description||data.summary||data.description;
     }
-    if(text(data.image_url)){
-      const img=hero?.querySelector('img');
-      if(img)img.src=data.image_url;
-    }
+    /* Keep the individually assigned page image rather than a reused CMS image. */
   }
 
   async function boot(){

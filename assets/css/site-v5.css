@@ -184,7 +184,7 @@ body.cg-page-divisions .dv4-hub-system{
   overflow:hidden!important;
   background:
     linear-gradient(180deg,rgba(16,44,77,.05),rgba(16,44,77,.22)),
-    url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   box-shadow:none!important;
 }
 body.cg-page-divisions .dv4-hub-system>:not(.dv4-hub-note){display:none!important}
@@ -213,7 +213,7 @@ body.cg-page-engineering-desk .page-hero.tech-bg{
   padding:92px 0!important;
   background:
     linear-gradient(90deg,rgba(5,24,44,.94) 0%,rgba(8,35,62,.84) 47%,rgba(8,35,62,.42) 73%,rgba(8,35,62,.26) 100%),
-    url('/assets/images/hero-engineering.webp') center 48%/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center 48%/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-engineering-desk .page-hero h1{max-width:790px!important;font-size:clamp(52px,5.4vw,78px)!important;line-height:.98!important;color:#fff!important}
@@ -224,7 +224,7 @@ body.cg-page-engineering-desk .visual-card-grid{gap:14px!important}
 body.cg-page-engineering-desk .visual-card .media{height:220px!important}
 body.cg-page-engineering-desk .visual-card .media img{width:100%;height:100%;object-fit:cover}
 body.cg-page-engineering-desk .dark-section.tech-bg{
-  background:linear-gradient(90deg,rgba(10,35,61,.97),rgba(17,50,78,.92)),url('/assets/images/quality.webp') center/cover no-repeat!important;
+  background:linear-gradient(90deg,rgba(10,35,61,.97),rgba(17,50,78,.92)),linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
 }
 body.cg-page-engineering-desk .dark-section .section-head h2,
 body.cg-page-engineering-desk .dark-section .section-head p{color:#fff!important}
@@ -361,7 +361,7 @@ body.home-v5 .cg-home-why-section{
   overflow:hidden!important;
   background:
     linear-gradient(90deg,rgba(6,25,45,.96) 0%,rgba(8,31,55,.90) 48%,rgba(10,39,68,.76) 100%),
-    url('/assets/images/hero-engineering.webp') center 46%/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center 46%/cover no-repeat!important;
   color:#fff!important;
 }
 body.home-v5 .cg-home-why-section::before{
@@ -395,7 +395,7 @@ body.cg-page-divisions .dv4-hub-hero{
   padding:76px 0!important;
   background:
     linear-gradient(90deg,rgba(5,23,42,.95) 0%,rgba(8,32,57,.88) 48%,rgba(9,37,65,.58) 76%,rgba(9,37,65,.32) 100%),
-    url('/assets/images/hero-engineering.webp') center 44%/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center 44%/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-divisions .dv4-hub-hero-grid{
@@ -423,7 +423,7 @@ body.cg-page-divisions .dv4-hub-stats span{color:#e2ebf4!important}
 body.cg-page-services .svc-premium-hero{
   background:
     linear-gradient(90deg,rgba(6,26,47,.94) 0%,rgba(9,34,60,.86) 49%,rgba(9,37,65,.62) 100%),
-    url('/assets/images/process-make-v23.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-services .svc-premium-hero h1{color:#fff!important}
@@ -439,19 +439,19 @@ body.cg-page-services .svc-hero-stats b{color:#fff!important}
 body.cg-page-projects .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.76)),
-    url('/assets/images/process-cad-v23b.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-insights .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.74)),
-    url('/assets/images/quality.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-industries .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.76)),
-    url('/assets/images/manufacturing.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-projects .content-hero h1,
@@ -468,7 +468,7 @@ body.cg-v5 .content-hero .eyebrow{color:#edc86f!important}
 body.cg-page-contact .contact-v27-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.94),rgba(8,34,59,.70)),
-    url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-contact .contact-v27-hero h1{color:#fff!important}
@@ -479,7 +479,7 @@ body.cg-page-contact .contact-v27-hero .eyebrow{color:#edc86f!important}
 body.cg-page-rfq .quote-v27-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.70)),
-    url('/assets/images/process-drawing-v23.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-rfq .quote-v27-hero h1{color:#fff!important}
@@ -492,19 +492,19 @@ body.cg-page-rfq .quote-v27-proof span{color:#fff!important;border-color:rgba(25
 body.cg-page-service-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-project-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/process-cad-v23b.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-insight-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/quality.webp') center/cover no-repeat!important;
+    linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-service-detail .page-hero h1,
@@ -523,14 +523,14 @@ body.cg-page-insight-detail .page-hero .eyebrow{color:#edc86f!important}
     padding:64px 0!important;
     background:
       linear-gradient(180deg,rgba(5,23,42,.94),rgba(7,30,53,.82)),
-      url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
+      linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   }
   body.cg-page-divisions .dv4-hub-copy h1{font-size:44px!important}
   body.cg-page-divisions .dv4-hub-stats{grid-template-columns:1fr!important}
   body.home-v5 .cg-home-why-section{
     background:
       linear-gradient(180deg,rgba(6,25,45,.96),rgba(8,31,55,.86)),
-      url('/assets/images/hero-engineering.webp') center/cover no-repeat!important;
+      linear-gradient(145deg,#0b203a,#23466b) center/cover no-repeat!important;
   }
 }
 
@@ -568,7 +568,7 @@ body.cg-page-service-detail .service-hero{
   padding:78px 0!important;
   background-image:
     linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.90) 44%,rgba(8,34,60,.68) 68%,rgba(8,34,60,.42) 100%),
-    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+    var(--cg-page-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center!important;
   background-size:cover!important;
   color:#fff!important;
@@ -676,7 +676,7 @@ body.cg-page-service-detail .design-hero{
   position:relative!important;min-height:560px!important;padding:78px 0!important;
   background-image:
     linear-gradient(90deg,rgba(5,22,40,.96),rgba(8,32,57,.82),rgba(8,34,60,.48)),
-    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+    var(--cg-page-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center!important;background-size:cover!important;color:#fff!important;
 }
 body.cg-page-service-detail .print3d-hero h1,
@@ -693,7 +693,7 @@ body.cg-page-division-detail .dv4-detail-hero{
   position:relative!important;min-height:570px!important;display:flex!important;align-items:center!important;padding:78px 0!important;
   background-image:
     linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.89) 44%,rgba(8,34,60,.66) 70%,rgba(8,34,60,.38) 100%),
-    var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+    var(--cg-page-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center!important;background-size:cover!important;color:#fff!important;
 }
 body.cg-page-division-detail .dv4-detail-copy h1{
@@ -851,7 +851,7 @@ body.cg-page-projects .case-study-card:hover .case-link{color:#8d6724}
 body.cg-page-insight-detail .content-hero,
 body.cg-page-insight-detail .insight-hero{
   position:relative!important;
-  background-image:linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.86) 52%,rgba(8,34,60,.58) 100%),var(--cg-page-art,url('/assets/images/hero-engineering.webp'))!important;
+  background-image:linear-gradient(90deg,rgba(5,22,40,.96) 0%,rgba(8,32,57,.86) 52%,rgba(8,34,60,.58) 100%),var(--cg-page-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center!important;background-size:cover!important;color:#fff!important;
 }
 body.cg-page-insight-detail .content-hero h1,
@@ -1329,7 +1329,7 @@ body main :is(
   background-color:#04162c!important;
   background-image:
     linear-gradient(90deg,rgba(3,17,34,.985) 0%,rgba(3,22,42,.96) 34%,rgba(5,37,67,.84) 62%,rgba(6,45,81,.54) 100%),
-    var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+    var(--cg-hero-art,linear-gradient(145deg,#0b203a,#23466b))!important;
   background-position:center,center!important;
   background-size:cover,cover!important;
   background-repeat:no-repeat!important;
@@ -1445,7 +1445,7 @@ body main .pr-hero.pr-compact{
     padding:50px 0!important;
     background-image:
       linear-gradient(180deg,rgba(3,17,34,.95) 0%,rgba(4,28,52,.86) 58%,rgba(5,39,70,.72) 100%),
-      var(--cg-hero-art,url('/assets/images/hero-engineering.webp'))!important;
+      var(--cg-hero-art,linear-gradient(145deg,#0b203a,#23466b))!important;
     background-position:center,center!important;
   }
   body main :is(
