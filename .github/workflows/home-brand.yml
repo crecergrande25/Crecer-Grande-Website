@@ -2,7 +2,7 @@ name: Homepage headline and original logo
 
 on:
   push:
-    branches: [fix/home-headline-logo-20261021, main]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -25,3 +25,30 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/crecer-home-test.log 2>&1 &
           sleep 3
           node scripts/check_home_brand.cjs
+
+  live:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Wait for updated homepage assets
+        run: |
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent --location --max-time 12 https://crecergrande.in/ | grep -Fq 'site.css?v=3.1.2' && curl --fail --silent --location --max-time 12 https://crecergrande.in/assets/css/site.css | grep -Fq 'Crecer Grande original-brand restoration'; then
+              echo "Production homepage and styles have updated."
+              exit 0
+            fi
+            sleep 6
+          done
+          echo "Timed out waiting for the updated public website."
+          exit 1
+      - name: Verify published logo and headline on desktop and mobile
+        env:
+          SITE_BASE: https://crecergrande.in
+        run: node scripts/check_home_brand.cjs
