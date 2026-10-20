@@ -46,7 +46,14 @@ async function main(){
       if(pageSet.has(canonical))continue;
       pageSet.add(canonical);
       await page.evaluate(()=>{document.querySelectorAll('img[loading="lazy"]').forEach(im=>im.loading='eager')});
-      await page.waitForTimeout(350);
+      // Live sites may load SVG images slower than the 350ms local-test delay.
+      // Decode all images before judging naturalWidth, but keep a bounded timeout.
+      await page.evaluate(async()=>{
+        await Promise.race([
+          Promise.allSettled(Array.from(document.images, img => img.decode())),
+          new Promise(resolve=>setTimeout(resolve, 12000))
+        ]);
+      });
       const snap=await page.evaluate(()=>{
         const urls=[];
         const take=(url,role)=>{
