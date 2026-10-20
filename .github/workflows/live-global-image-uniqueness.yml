@@ -2,7 +2,7 @@ name: Live global image uniqueness
 
 on:
   push:
-    branches: [verify/global-image-single-use-20261021]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -18,6 +18,17 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
+      - name: Wait for the new illustrated site to be visible
+        run: |
+          for i in $(seq 1 24); do
+            if curl --fail --silent --show-error --location --max-time 15 https://crecergrande.in/services.html | grep -q '/assets/images/page-unique/services-01-77e61e9c.svg'; then
+              echo 'New unique artwork is published on the production domain.'
+              exit 0
+            fi
+            sleep 5
+          done
+          echo 'Timed out waiting for deployed content illustrations.'
+          exit 1
       - name: Check every live desktop page for duplicated content imagery
         env:
           SITE_BASE: https://crecergrande.in
