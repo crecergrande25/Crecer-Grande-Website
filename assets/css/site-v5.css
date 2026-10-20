@@ -423,7 +423,7 @@ body.cg-page-divisions .dv4-hub-stats span{color:#e2ebf4!important}
 body.cg-page-services .svc-premium-hero{
   background:
     linear-gradient(90deg,rgba(6,26,47,.94) 0%,rgba(9,34,60,.86) 49%,rgba(9,37,65,.62) 100%),
-    url('/assets/images/process-make.webp') center/cover no-repeat!important;
+    url('/assets/images/process-make-v23.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-services .svc-premium-hero h1{color:#fff!important}
@@ -439,7 +439,7 @@ body.cg-page-services .svc-hero-stats b{color:#fff!important}
 body.cg-page-projects .content-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.76)),
-    url('/assets/images/project-reverse.webp') center/cover no-repeat!important;
+    url('/assets/images/process-cad-v23b.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-insights .content-hero{
@@ -479,7 +479,7 @@ body.cg-page-contact .contact-v27-hero .eyebrow{color:#edc86f!important}
 body.cg-page-rfq .quote-v27-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.70)),
-    url('/assets/images/process-drawing.webp') center/cover no-repeat!important;
+    url('/assets/images/process-drawing-v23.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-rfq .quote-v27-hero h1{color:#fff!important}
@@ -498,7 +498,7 @@ body.cg-page-service-detail .page-hero{
 body.cg-page-project-detail .page-hero{
   background:
     linear-gradient(90deg,rgba(6,25,45,.95),rgba(8,34,59,.72)),
-    url('/assets/images/project-reverse.webp') center/cover no-repeat!important;
+    url('/assets/images/process-cad-v23b.webp') center/cover no-repeat!important;
   color:#fff!important;
 }
 body.cg-page-insight-detail .page-hero{
