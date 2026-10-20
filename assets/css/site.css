@@ -2129,3 +2129,50 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 
 /* Homepage hero shows three facts, so use three columns on wide screens. */
 @media(min-width:1051px){.cg-pr.cg-pr-home .pr-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+
+/* Crecer Grande original-brand restoration and homepage title sizing — 2026-10-21.
+   The main headline is half the former desktop/mobile clamp values.
+   The official transparent gold artwork is reused only as a brand logo. */
+.cg-pr-home .pr-hero-copy h1 {
+  font-size: clamp(29px, 3vw, 44px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -0.035em !important;
+  max-width: none !important;
+}
+body .site-header .brand {
+  background: #071a36;
+  border-radius: 7px;
+  padding: 5px 12px;
+}
+body .site-header .brand img.cg-original-brand-logo {
+  display: block;
+  width: 184px !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+body .cg-footer-logo-link img.cg-original-brand-logo {
+  display: block;
+  width: 258px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+@media (max-width: 720px) {
+  .cg-pr-home .pr-hero-copy h1 {
+    font-size: clamp(22px, 6vw, 30px) !important;
+  }
+  body .site-header .brand {
+    padding: 4px 9px;
+  }
+  body .site-header .brand img.cg-original-brand-logo {
+    width: 148px !important;
+  }
+  body .cg-footer-logo-link img.cg-original-brand-logo {
+    width: 220px !important;
+  }
+}
