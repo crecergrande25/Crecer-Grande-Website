@@ -17,5 +17,9 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Audit live website images
+      - name: Audit live images on desktop
+        run: node scripts/audit_live_images.cjs
+      - name: Audit live images on mobile
+        env:
+          AUDIT_VIEWPORT: mobile
         run: node scripts/audit_live_images.cjs
