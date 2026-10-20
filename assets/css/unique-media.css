@@ -15,3 +15,9 @@
 /* Catalogue cards with no unique product photo receive a clean technical motif. */
 .product-card .image:empty,.product-card .image:not(:has(img[src])){position:relative;display:grid;place-items:center;background:radial-gradient(circle at 75% 22%,rgba(253,190,74,.24),transparent 48%),linear-gradient(135deg,#102c49,#2a5171)!important}
 .product-card .image:empty:before,.product-card .image:not(:has(img[src])):before{content:"CG";display:grid;place-items:center;width:50px;height:50px;border-radius:12px;border:1px solid rgba(255,214,125,.66);color:#ffe0a2;font-weight:900;font-size:18px;letter-spacing:-.07em}
+
+/* Navigation is white: use high-contrast navy lettering, not white. */
+.site-header .cg-typographic-logo,.site-header .cg-type-name strong{color:#102b48!important}
+.site-header .cg-type-name{color:#7a5a19!important}
+.site-header .cg-type-glyph{background:#e3ab35;color:#102b48}
+.cg-footer .cg-typographic-logo,.cg-footer .cg-type-name,.cg-footer .cg-type-name strong{color:#e7b650!important}
