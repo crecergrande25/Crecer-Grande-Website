@@ -12,7 +12,7 @@ const mobile = process.env.AUDIT_VIEWPORT === 'mobile';
 const manifest = JSON.parse(fs.readFileSync(path.join(root,'scripts/unique_image_placements.json'),'utf8'));
 const groups=manifest.pixelGroups || {};
 const pages=['/'];
-const excluded = new Set(['/admin/index.html','/admin/reset-password.html']);
+const excluded = new Set();
 function walk(dir) {
   for (const item of fs.readdirSync(dir,{withFileTypes:true})) {
     if(item.name.startsWith('.') || ['assets','scripts','node_modules'].includes(item.name))continue;
