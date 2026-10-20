@@ -1,13 +1,27 @@
-name: Unique image audit
+name: Unique image cleanup
 on:
   push:
     branches: [fix/global-unique-content-images-20261020]
 permissions:
-  contents: read
+  contents: write
 jobs:
-  inspect:
+  transform:
+    if: "!contains(github.event.head_commit.message, '[unique-cleanup]')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: python3 -m pip install Pillow --break-system-packages
-      - run: python3 scripts/audit_duplicate_images.py
+      - name: Make marketing images one-use only
+        run: python3 scripts/make_images_unique.py
+      - name: Test image files and HTML
+        run: |
+          python3 scripts/check_site_quality.py
+          python3 scripts/check_image_assets.py
+          for script in assets/js/*.js; do node --check "$script"; done
+      - name: Commit changed pages and assets
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Use each content image once [unique-cleanup]'
+          git push origin HEAD:fix/global-unique-content-images-20261020
