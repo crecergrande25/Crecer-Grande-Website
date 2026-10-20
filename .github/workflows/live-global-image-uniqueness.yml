@@ -1,0 +1,29 @@
+name: Live global image uniqueness
+
+on:
+  push:
+    branches: [verify/global-image-single-use-20261021]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-live-placements:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install headless Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Check every live desktop page for duplicated content imagery
+        env:
+          SITE_BASE: https://crecergrande.in
+        run: node scripts/check_live_image_uniqueness.cjs
+      - name: Check every live mobile page for duplicated content imagery
+        env:
+          SITE_BASE: https://crecergrande.in
+          AUDIT_VIEWPORT: mobile
+        run: node scripts/check_live_image_uniqueness.cjs

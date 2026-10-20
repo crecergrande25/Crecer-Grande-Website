@@ -21,3 +21,6 @@
 .site-header .cg-type-name{color:#7a5a19!important}
 .site-header .cg-type-glyph{background:#e3ab35;color:#102b48}
 .cg-footer .cg-typographic-logo,.cg-footer .cg-type-name,.cg-footer .cg-type-name strong{color:#e7b650!important}
+
+/* Original, individually illustrated content images preserve the original media frame. */
+.cg-unique-illustration{display:block;inline-size:100%;block-size:100%;min-height:0;object-fit:cover;max-inline-size:100%}

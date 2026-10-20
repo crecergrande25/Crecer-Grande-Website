@@ -11,6 +11,14 @@ const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 const mobile = process.env.AUDIT_VIEWPORT === 'mobile';
 const manifest = JSON.parse(fs.readFileSync(path.join(root,'scripts/unique_image_placements.json'),'utf8'));
 const groups=manifest.pixelGroups || {};
+// Branding and functional app icons are intentionally reusable across pages.
+const REUSABLE_BRANDING = new Set([
+  '/assets/images/Logo-R01.png',
+  '/assets/images/logo.png',
+  '/assets/images/logo-icon.png',
+  '/assets/images/favicon.png',
+  '/assets/images/apple-touch-icon.png'
+]);
 const pages=['/'];
 const excluded = new Set();
 function walk(dir) {
@@ -72,6 +80,7 @@ async function main(){
       for(const info of snap){
         const key=info.url.startsWith('/')? info.url:'/'+info.url;
         if(info.role==='BROKEN'){broken.push({route,image:key});continue}
+        if(REUSABLE_BRANDING.has(key))continue;
         const id=groups[key]===undefined?key:String(groups[key]);
         const entry={route,image:key,role:info.role};
         if(seen.has(id))duplicate.push({first:seen.get(id),repeat:entry,group:id});
