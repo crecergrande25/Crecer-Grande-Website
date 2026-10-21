@@ -2131,6 +2131,23 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 @media(min-width:1051px){.cg-pr.cg-pr-home .pr-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 
+/* Laptop/tablet hero must stack before the image can squeeze or overflow the text.
+   A late premium-repair rule accidentally restored two columns below 1050px. */
+@media (min-width: 721px) and (max-width: 1050px) {
+  .cg-pr-home .pr-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 34px !important;
+  }
+  .cg-pr-home .pr-hero-copy {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .cg-pr-home .pr-hero-media {
+    width: 100%;
+    min-width: 0 !important;
+  }
+}
+
 /* Homepage editorial typography and original transparent logo — 2026-10-21.
    The authentic Crecer Grande artwork must never sit on a colored tile.
    Headline uses the left column without returning to the oversized 88px style. */
