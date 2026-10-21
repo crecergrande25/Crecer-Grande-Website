@@ -72,7 +72,7 @@ walk(root);
             const background = getComputedStyle(hero).backgroundImage;
             {
               const entry=expectedImages[hero.dataset.backgroundImage];
-              if(!entry||!background.includes(entry.src.replace('.webp','-1200.webp')))issues.push('Matching hero background is missing');
+              if(!entry||![entry.src,...[480,800,1200].map(w=>entry.src.replace('.webp','-'+w+'.webp'))].some(src=>background.includes(src)))issues.push('Matching hero background is missing');
             }
             if (/\.svg/i.test(background)) issues.push('SVG hero background remains');
             if(!window.__cgHeroBackgroundDecoded?.length||window.__cgHeroBackgroundDecoded.some(ok=>!ok))issues.push('Hero background image did not decode');
@@ -90,7 +90,7 @@ walk(root);
               if(foreground.loading!=='eager')issues.push('Hero image is not loaded eagerly');
             }
           }
-          return { issues, images: document.images.length, hero: !!hero, ids:[...document.querySelectorAll('[data-generated-image]')].map(i=>i.dataset.generatedImage) };
+          return { issues, images: document.images.length, hero: !!hero, ids:[...[...document.querySelectorAll('[data-generated-image]')].map(i=>i.dataset.generatedImage),...[...document.querySelectorAll('[data-background-image]')].map(i=>i.dataset.backgroundImage)] };
         },expectedImages);
         images += state.images;
         state.ids.forEach(id=>seen.add(id));

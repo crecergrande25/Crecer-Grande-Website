@@ -36,7 +36,7 @@ for a in records:
  for selector in ['header.site-header','footer.cg-footer']:
   current=s.select_one(selector)
   if current:current.replace_with(copy.deepcopy(contact.select_one(selector)))
- s.body['data-site-release']='11.0.0'
+ s.body['data-site-release']='12.0.0'
  s.body['data-content-updated-at']='2026-10-21T16:57:20Z'
  (ROOT/a['href'].lstrip('/')).write_text(str(s))
 # Rebuild the directory, preserving the established hero while replacing all library cards.

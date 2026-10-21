@@ -834,6 +834,17 @@
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
       "disclosure": "AI-generated illustration",
       "sha256": "252b89d295e569f18cd3d3b7bdb4e4a9cb1e3ca9bd091f38a06f8d6d42cf5839"
+    },
+    {
+      "id": "71",
+      "title": "Homepage engineering studio background",
+      "src": "/assets/images/generated/71-homepage-engineering-studio.webp",
+      "alt": "Daylit engineering studio with a flange and fixture on a drawing bench, assembly tables and a welding enclosure",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request; exclusive homepage background",
+      "disclosure": "AI-generated illustration",
+      "sha256": "1203e10e8b8182e0e004673dd42fffc1a0f519beb9ab0b925d2bfb42b6522b08"
     }
   ],
   "placements": [
@@ -1209,7 +1220,7 @@
     },
     {
       "page": "/",
-      "image": "56",
+      "image": "71",
       "area": "Hero background"
     },
     {

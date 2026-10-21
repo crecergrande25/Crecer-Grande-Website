@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('reset');
   const status = document.getElementById('reset-status');
-  const button = form.querySelector('button');
+  const button = form.querySelector('button[type="submit"]');
   const config = window.CG_CONFIG || {};
   const client = window.supabase && config.supabaseUrl && config.supabasePublishableKey ? window.supabase.createClient(config.supabaseUrl,config.supabasePublishableKey) : null;
   let pending = false;
