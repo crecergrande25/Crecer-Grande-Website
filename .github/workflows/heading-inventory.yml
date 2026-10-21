@@ -1,0 +1,12 @@
+name: Heading hierarchy inventory
+on:
+  push:
+    branches: [fix/heading-hierarchy-sitewide-20261021]
+permissions:
+  contents: read
+jobs:
+  headings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/audit_heading_hierarchy.py
