@@ -36,3 +36,30 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/crecer-weld.log 2>&1 &
           sleep 3
           node scripts/check_welding_media.cjs
+
+  live:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: review
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for updated public welding page
+        run: |
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent --location --max-time 15 https://crecergrande.in/laser-welding-kolkata.html | grep -Fq '/assets/images/welding-illustrations/laser-welding-hero-schematic.svg'; then
+              echo "Published welding page with process schematics is now visible."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Timed out waiting for welding page changes to appear on live domain."
+          exit 1
+      - name: Install Chromium for live test
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Validate deployed welding illustrations on desktop and mobile
+        env:
+          SITE_BASE: https://crecergrande.in
+        run: node scripts/check_welding_media.cjs
