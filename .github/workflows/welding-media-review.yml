@@ -1,0 +1,38 @@
+name: Welding imagery accuracy
+on:
+  push:
+    branches: [main, fix/welding-visual-accuracy-20261021]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate welding SVGs and site integrity
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          assets=sorted(Path("assets/images/welding-illustrations").glob("*.svg"))
+          assert len(assets)==3, f"Expected 3 illustration assets, got {len(assets)}"
+          for file in assets:
+              root=ET.parse(file).getroot()
+              assert root.tag.endswith('svg'), str(file)
+              print("VALID SVG",file)
+          PY
+          python3 scripts/check_site_quality.py
+          node --check assets/js/site.js
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Verify welding page illustrations on desktop and mobile
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/crecer-weld.log 2>&1 &
+          sleep 3
+          node scripts/check_welding_media.cjs
