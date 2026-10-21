@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Butt-joint preparation and fit-up diagram</title>
+<desc id="desc">Concept illustration showing two metal sheets, joint gap and alignment checks. Not an actual customer component.</desc>
+<defs><linearGradient id="a" x2="1" y2="1"><stop stop-color="#0c2841"/><stop offset="1" stop-color="#1f506b"/></linearGradient><linearGradient id="m"><stop stop-color="#8eb0c5"/><stop offset="1" stop-color="#557890"/></linearGradient><pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#fff" opacity=".11"/></pattern></defs>
+<rect width="1200" height="800" fill="url(#a)"/><rect width="1200" height="800" fill="url(#grid)"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="72" y="97" font-size="28" font-weight="700" fill="#f0bc55" letter-spacing="2">JOINT PREPARATION</text>
+<text x="72" y="141" font-size="25" fill="#d0e2ef">Illustrative butt-joint cross section</text>
+</g>
+<rect x="104" y="290" width="464" height="221" rx="4" fill="url(#m)" stroke="#d0e1ea" stroke-width="7"/>
+<rect x="636" y="290" width="464" height="221" rx="4" fill="url(#m)" stroke="#d0e1ea" stroke-width="7"/>
+<path d="M567 279v252M635 279v252" stroke="#f0bf56" stroke-dasharray="14 10" stroke-width="4"/>
+<path d="M567 248v-30m68 30v-30M567 230h68" stroke="#f1cc78" stroke-width="6"/>
+<path d="M577 216l-10 14 10 14m48-28l10 14-10 14" stroke="#f1cc78" stroke-width="5" fill="none"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#eaf4fa" font-weight="700" font-size="24"><text x="488" y="190">JOINT GAP</text><text x="152" y="580">PART A</text><text x="890" y="580">PART B</text></g>
+<path d="M112 590h977" stroke="#85bcd2" stroke-width="3" stroke-dasharray="15 12"/>
+<path d="M160 645h875" stroke="#b6d3de" stroke-width="6"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#d7eaf1"><text x="165" y="692" font-size="23">Review: material · thickness · cleanliness · gap · clamping · access</text><text x="72" y="754" font-size="18" letter-spacing="1.5" fill="#b9d5e2">TECHNICAL CONCEPT — NOT AN IMAGE OF A COMPLETED JOB</text></g></svg>
