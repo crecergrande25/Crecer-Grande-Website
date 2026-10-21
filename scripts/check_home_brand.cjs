@@ -33,12 +33,13 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
             try{
               const c=document.createElement('canvas');c.width=1;c.height=1;
               const ctx=c.getContext('2d',{willReadFrequently:true});
-              ctx.drawImage(header,0,0,1,1);
+              ctx.drawImage(header,0,0,1,1,0,0,1,1);
               return ctx.getImageData(0,0,1,1).data[3];
             }catch(e){return -1;}
           })(),
           headlineWidth:Math.round(h.getBoundingClientRect().width),
-          copyWidth:Math.round(col.getBoundingClientRect().width)
+          copyWidth:Math.round(col.getBoundingClientRect().width),
+          hasHorizontalOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+3
         };
       });
       const okay=state.px>=t.minHeadlinePx && state.px<=t.maxHeadlinePx && state.brandHeader==='/assets/images/Logo-R01.png'
@@ -46,7 +47,8 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
         && state.headerPixels>0 && state.footerPixels>0
         && ['rgba(0, 0, 0, 0)','transparent'].includes(state.headerBackground)
         && state.headerPadding==='0px'
-        && state.logoCornerAlpha===0;
+        && state.logoCornerAlpha===0
+        && (!['laptop','tablet'].includes(t.name) || (state.copyWidth>=600 && !state.hasHorizontalOverflow));
       console.log('HOME_BRAND|'+JSON.stringify({viewport:t.name,okay,...state}));
       if(!okay)failures.push({viewport:t.name,state});
       if(t.name==='desktop'){
