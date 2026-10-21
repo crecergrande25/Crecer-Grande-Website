@@ -102,7 +102,10 @@ for p in sorted(ROOT.rglob("*.html")):
     end=section_end(s,match.start())
     hero=s[match.start():end]
     # Keep the page's own actual hero picture, never reuse an image on another page.
-    image=IM.search(hero)
+    # Case-study imagery is often part of the evidence section, not a
+    # standalone hero panel. Keep it visible only in the case study and
+    # allocate the hero a separate original background illustration.
+    image=None if path.startswith('projects/') else IM.search(hero)
     bg_src=None
     if image:
         src=image.group(1)
