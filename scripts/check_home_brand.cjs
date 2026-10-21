@@ -4,9 +4,10 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 (async () => {
   const browser = await chromium.launch({ headless:true, args:['--no-sandbox'] });
   const tests=[
-    {name:'desktop',width:1440,height:900,maxHeadlinePx:44.5},
-    {name:'tablet',width:820,height:950,maxHeadlinePx:29},
-    {name:'mobile',width:390,height:844,maxHeadlinePx:24}
+    {name:'desktop',width:1440,height:900,minHeadlinePx:60,maxHeadlinePx:62.5},
+    {name:'laptop',width:992,height:820,minHeadlinePx:48,maxHeadlinePx:51},
+    {name:'tablet',width:820,height:950,minHeadlinePx:41,maxHeadlinePx:43},
+    {name:'mobile',width:390,height:844,minHeadlinePx:30,maxHeadlinePx:33}
   ];
   const failures=[];
   for (const t of tests){
@@ -27,14 +28,27 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
           headerPixels:header?.naturalWidth,
           footerPixels:footer?.naturalWidth,
           headerBackground:getComputedStyle(header.closest('a')).backgroundColor,
+          headerPadding:getComputedStyle(header.closest('a')).padding,
+          logoCornerAlpha:(()=>{
+            try{
+              const c=document.createElement('canvas');c.width=1;c.height=1;
+              const ctx=c.getContext('2d',{willReadFrequently:true});
+              ctx.drawImage(header,0,0,1,1,0,0,1,1);
+              return ctx.getImageData(0,0,1,1).data[3];
+            }catch(e){return -1;}
+          })(),
           headlineWidth:Math.round(h.getBoundingClientRect().width),
-          copyWidth:Math.round(col.getBoundingClientRect().width)
+          copyWidth:Math.round(col.getBoundingClientRect().width),
+          hasHorizontalOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth+3
         };
       });
-      const okay=state.px<=t.maxHeadlinePx && state.brandHeader==='/assets/images/Logo-R01.png'
+      const okay=state.px>=t.minHeadlinePx && state.px<=t.maxHeadlinePx && state.brandHeader==='/assets/images/Logo-R01.png'
         && state.brandFooter==='/assets/images/Logo-R01.png'
         && state.headerPixels>0 && state.footerPixels>0
-        && state.headerBackground==='rgb(7, 26, 54)';
+        && ['rgba(0, 0, 0, 0)','transparent'].includes(state.headerBackground)
+        && state.headerPadding==='0px'
+        && state.logoCornerAlpha===0
+        && (!['laptop','tablet'].includes(t.name) || (state.copyWidth>=600 && !state.hasHorizontalOverflow));
       console.log('HOME_BRAND|'+JSON.stringify({viewport:t.name,okay,...state}));
       if(!okay)failures.push({viewport:t.name,state});
       if(t.name==='desktop'){

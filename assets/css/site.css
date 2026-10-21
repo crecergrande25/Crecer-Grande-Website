@@ -2131,19 +2131,40 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 @media(min-width:1051px){.cg-pr.cg-pr-home .pr-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 
-/* Crecer Grande original-brand restoration and homepage title sizing — 2026-10-21.
-   The main headline is half the former desktop/mobile clamp values.
-   The official transparent gold artwork is reused only as a brand logo. */
+/* Laptop/tablet hero must stack before the image can squeeze or overflow the text.
+   A late premium-repair rule accidentally restored two columns below 1050px. */
+@media (min-width: 721px) and (max-width: 1050px) {
+  body .cg-pr-home .pr-hero-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 34px !important;
+  }
+  .cg-pr-home .pr-hero-copy {
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+  .cg-pr-home .pr-hero-media {
+    width: 100%;
+    min-width: 0 !important;
+  }
+}
+
+/* Homepage editorial typography and original transparent logo — 2026-10-21.
+   The authentic Crecer Grande artwork must never sit on a colored tile.
+   Headline uses the left column without returning to the oversized 88px style. */
 .cg-pr-home .pr-hero-copy h1 {
-  font-size: clamp(29px, 3vw, 44px) !important;
-  line-height: 1.12 !important;
+  font-size: clamp(42px, 5vw, 62px) !important;
+  line-height: 1.1 !important;
   letter-spacing: -0.035em !important;
   max-width: none !important;
 }
 body .site-header .brand {
-  background: #071a36;
-  border-radius: 7px;
-  padding: 5px 12px;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
 }
 body .site-header .brand img.cg-original-brand-logo {
   display: block;
@@ -2164,10 +2185,10 @@ body .cg-footer-logo-link img.cg-original-brand-logo {
 }
 @media (max-width: 720px) {
   .cg-pr-home .pr-hero-copy h1 {
-    font-size: clamp(22px, 6vw, 30px) !important;
+    font-size: clamp(28px, 8vw, 39px) !important;
   }
   body .site-header .brand {
-    padding: 4px 9px;
+    padding: 0 !important;
   }
   body .site-header .brand img.cg-original-brand-logo {
     width: 148px !important;
