@@ -2134,7 +2134,8 @@ body[data-project-slug="co2-laser-components-support"] .cta .btn.primary{
 /* Laptop/tablet hero must stack before the image can squeeze or overflow the text.
    A late premium-repair rule accidentally restored two columns below 1050px. */
 @media (min-width: 721px) and (max-width: 1050px) {
-  .cg-pr-home .pr-hero-grid {
+  body .cg-pr-home .pr-hero-grid {
+    display: grid !important;
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 34px !important;
   }
