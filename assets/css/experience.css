@@ -373,3 +373,43 @@ body main#main #rfq-form .form-grid{grid-template-columns:repeat(2,minmax(0,1fr)
 body main#main #rfq-form :is(input,select,textarea){max-width:100%!important;min-width:0!important}
 @media(max-width:1000px){body main#main .pr-rfq-layout{grid-template-columns:minmax(0,1fr)!important}body main#main .pr-rfq-layout>.pr-sticky{position:static!important}}
 @media(max-width:700px){body main#main #rfq-form .form-grid{grid-template-columns:minmax(0,1fr)!important}body main#main #rfq-form .form-grid .wide{grid-column:auto!important}}
+/* Release 9: visible foreground imagery on every public-page hero. */
+body main#main section.cg-image-backed-hero.cg-foreground-hero{display:block!important;position:relative!important;isolation:isolate!important;min-height:0!important;padding:48px 0!important;overflow:hidden!important;background:#0b2637!important}
+body main#main section.cg-foreground-hero::before,body main#main section.cg-foreground-hero::after{display:none!important}
+body main#main section.cg-foreground-hero>.cg-foreground-grid{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)!important;align-items:center!important;gap:40px!important;width:min(1320px,calc(100% - 64px))!important;max-width:1320px!important;padding:0!important;margin:0 auto!important;position:relative!important;z-index:1!important}
+body main#main section.cg-foreground-hero .cg-foreground-copy{min-width:0!important;width:100%!important;max-width:none!important;position:relative!important;z-index:1!important}
+body main#main section.cg-foreground-hero .cg-foreground-copy>div{width:100%!important;max-width:none!important}
+body main#main section.cg-foreground-hero h1{font-size:clamp(32px,3.1vw,48px)!important;line-height:1.12!important;max-width:24ch!important;text-wrap:balance!important;margin:16px 0 20px!important;color:#fff!important}
+body main#main section.cg-foreground-hero h1 br{display:none!important}
+body main#main section.cg-foreground-hero :is(p,.pr-lede){font-size:16px!important;line-height:1.65!important;max-width:65ch!important;margin:0 0 24px!important;color:#e7eef2!important}
+body main#main section.cg-foreground-hero :is(.pr-actions,.actions,.ed5-actions,.mm5-actions,.ins5-actions,.am3-hero-actions){display:flex!important;flex-wrap:wrap!important;gap:12px!important;margin:24px 0 0!important}
+body main#main section.cg-foreground-hero :is(.btn,.pr-btn){min-height:46px!important;white-space:normal!important;display:inline-flex!important;align-items:center!important;justify-content:center!important}
+body main#main section.cg-foreground-hero figure.cg-hero-foreground{position:relative!important;inset:auto!important;display:block!important;width:100%!important;min-width:0!important;max-width:none!important;margin:0!important;padding:0!important;border:1px solid #52717e!important;border-radius:16px!important;overflow:hidden!important;background:#183743!important;box-shadow:0 20px 50px #0003!important;align-self:center!important}
+body main#main section.cg-foreground-hero figure.cg-hero-foreground>img{display:block!important;position:static!important;inset:auto!important;width:100%!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;transform:none!important;opacity:1!important;visibility:visible!important}
+body main#main section.cg-foreground-hero figure.cg-hero-foreground figcaption{display:block!important;position:static!important;padding:9px 15px!important;color:#d7e4e9!important;background:#163544!important;font-size:11px!important;line-height:1.4!important;letter-spacing:.03em!important}
+body main#main .pr-directory-row:has(.cg-service-row-image){display:grid!important;grid-template-columns:160px minmax(0,1fr) minmax(0,1.4fr) auto!important;gap:24px!important;align-items:center!important;padding:20px 0!important}
+body main#main .pr-directory-row .cg-service-row-image{display:block!important;width:160px!important;height:auto!important;aspect-ratio:3/2!important;object-fit:contain!important;border-radius:8px!important;background:#183743!important}
+body main#main figure.cg-reference-visual{max-width:680px!important;margin:0 auto 32px!important}
+@media(max-width:1000px){
+ body main#main section.cg-foreground-hero>.cg-foreground-grid{gap:28px!important;width:calc(100% - 40px)!important}
+ body main#main section.cg-foreground-hero h1{font-size:clamp(30px,3.9vw,42px)!important}
+ body main#main .pr-directory-row:has(.cg-service-row-image){grid-template-columns:120px minmax(0,1fr) auto!important;gap:18px!important}
+ body main#main .pr-directory-row .cg-service-row-image{width:120px!important;grid-row:span 2!important}
+ body main#main .pr-directory-row:has(.cg-service-row-image)>p{grid-column:2!important}
+ body main#main .pr-directory-row:has(.cg-service-row-image)>a{grid-column:3!important;grid-row:1/3!important}
+}
+@media(max-width:800px){
+ body main#main section.cg-image-backed-hero.cg-foreground-hero{padding:32px 0!important}
+ body main#main section.cg-foreground-hero>.cg-foreground-grid{grid-template-columns:minmax(0,1fr)!important;gap:28px!important;width:calc(100% - 40px)!important}
+ body main#main section.cg-foreground-hero h1{font-size:clamp(30px,7.5vw,42px)!important;max-width:none!important;margin:12px 0 16px!important}
+ body main#main section.cg-foreground-hero :is(p,.pr-lede){font-size:15px!important;line-height:1.6!important;margin-bottom:18px!important}
+ body main#main section.cg-foreground-hero figure.cg-hero-foreground{border-radius:12px!important;max-width:680px!important;justify-self:center!important}
+ body main#main section.cg-foreground-hero :is(.am3-trust-row,.ed5-proof,.mm5-status-grid,.ins5-proof,.service-proof,.design-proof,.content-proof,.cg-hero-path,.fb-trust){display:none!important}
+}
+@media(max-width:500px){
+ body main#main .pr-directory-row:has(.cg-service-row-image){grid-template-columns:90px minmax(0,1fr)!important;gap:10px 16px!important}
+ body main#main .pr-directory-row .cg-service-row-image{width:90px!important;grid-row:1/3!important}
+ body main#main .pr-directory-row:has(.cg-service-row-image)>a{grid-column:2!important;grid-row:3!important;min-height:44px!important;display:flex!important;align-items:center!important}
+}
+body main#main section.cg-foreground-hero h1 em{color:#fff!important;font-style:normal!important}
+@media(max-width:800px){body main#main section.cg-foreground-hero h1{font-size:clamp(32px,7.5vw,42px)!important}}

@@ -1,8 +1,1 @@
-Crecer Grande Website
-Release: 8.0.0
-Four service divisions; six project guides
-50 owner-requested generated illustrations, contextually placed
-Raster WebP assets; no SVG imagery
-Hosting: GitHub Pages
-Backend: existing Supabase (unchanged)
-Updated: 2026-10-21
+9.0.0

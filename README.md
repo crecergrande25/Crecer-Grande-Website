@@ -42,11 +42,11 @@ Browser scripts default to the local server on port 8765; `SITE_BASE` selects an
 
 ## Website illustrations
 
-Release 8 integrates the 50 generated images requested by the website owner. They are AI-generated illustrations, identified as such in captions and page notices; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
+Release 9 integrates 60 generated images requested by the website owner, including a visible foreground hero image on each of the 52 public content pages. They are AI-generated illustrations, identified as such in captions and page notices; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
 
 The new raster assets are in `assets/images/generated/`. Responsive WebP copies at four widths retain the original 3:2 composition. Original PNGs remain outside the checkout. Lazy loading and appropriate source sizes keep page downloads small.
 
-Read [the placement guide](docs/RELEASE_8_IMAGE_PLACEMENT.md) and [the exact image-to-page inventory](docs/IMAGE_PLACEMENTS.csv). `assets/data/photography.json` records every approved image, descriptive alternative text and its placements. [The original-photo brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) still applies if replacing these illustrations with genuine company photography later.
+Read [the placement guide](docs/RELEASE_9_FOREGROUND_IMAGES.md) and [the exact image-to-page inventory](docs/IMAGE_PLACEMENTS.csv). `assets/data/photography.json` records every approved image, descriptive alternative text and its placements. [The original-photo brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) still applies if replacing these illustrations with genuine company photography later.
 
 ## Earlier architectural repairs
 
@@ -54,7 +54,7 @@ The service directory is `/services.html`, with four divisions. `/divisions.html
 
 The static HTML carries a `data-content-updated-at` timestamp. CMS content older than that timestamp does not overwrite the release's copy; newer CMS edits can still apply. Public company settings remain dynamic. Review fresh CMS edits against the four-division scope.
 
-See [the current image integration notes](docs/RELEASE_8_IMAGE_PLACEMENT.md), [earlier release notes and acceptance checks](docs/RELEASE_7_HANDOFF.md) and [owner account actions](docs/OWNER_ACCOUNT_ACTIONS.md). No production deployment or Google account setup is claimed.
+See [the current image integration notes](docs/RELEASE_9_FOREGROUND_IMAGES.md), [earlier release notes and acceptance checks](docs/RELEASE_7_HANDOFF.md) and [owner account actions](docs/OWNER_ACCOUNT_ACTIONS.md). No production deployment or Google account setup is claimed.
 
 ## Security
 

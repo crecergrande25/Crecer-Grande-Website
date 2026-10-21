@@ -6,9 +6,9 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
   const browser = await chromium.launch({ headless:true, args:['--no-sandbox'] });
   const context = await readOnlyContext(browser);
   const tests=[
-    {name:'desktop',width:1440,height:900,minHeadlinePx:56,maxHeadlinePx:80},
-    {name:'laptop',width:992,height:820,minHeadlinePx:42,maxHeadlinePx:64},
-    {name:'tablet',width:820,height:950,minHeadlinePx:40,maxHeadlinePx:56},
+    {name:'desktop',width:1440,height:900,minHeadlinePx:44,maxHeadlinePx:56},
+    {name:'laptop',width:992,height:820,minHeadlinePx:36,maxHeadlinePx:48},
+    {name:'tablet',width:820,height:950,minHeadlinePx:30,maxHeadlinePx:56},
     {name:'mobile',width:390,height:844,minHeadlinePx:32,maxHeadlinePx:48}
   ];
   const failures=[];
@@ -52,7 +52,7 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
         && ['rgba(0, 0, 0, 0)','transparent'].includes(state.headerBackground)
         && state.headerPadding==='0px'
         && state.logoCornerAlpha===0
-        && (!['laptop','tablet'].includes(t.name) || (state.copyWidth>=600 && !state.hasHorizontalOverflow));
+        && (!['laptop','tablet'].includes(t.name) || (state.copyWidth>=300 && !state.hasHorizontalOverflow));
       console.log('HOME_BRAND|'+JSON.stringify({viewport:t.name,okay,...state}));
       if(!okay)failures.push({viewport:t.name,state});
       if(t.name==='desktop'){

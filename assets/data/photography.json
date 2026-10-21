@@ -1,7 +1,7 @@
 {
   "status": "owner-requested-generated-illustrations",
   "format": "responsive WebP",
-  "source": "Image Gen, generated at the owner’s explicit request",
+  "source": "Image Gen, generated at the owner\u2019s explicit request",
   "real_company_photographs": false,
   "render_legacy_photos": false,
   "entries": [
@@ -604,614 +604,129 @@
       "disclosure": "AI-generated illustration",
       "original_filename": "50-drawing-to-inspected-component.png",
       "sha256": "883d4a8f2540db3a95b7bd96ad046f903dd364e00b678f37c738d608a00eca29"
+    },
+    {
+      "id": "51",
+      "title": "Services overview",
+      "src": "/assets/images/generated/51-services-overview.webp",
+      "alt": "Machined housing, sheet-metal bracket, printed prototype and caliper arranged on an engineering bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "51-services-overview.png",
+      "sha256": "a774d078cdc7e4b0e59b47d35bba16281570f57c79773cfe87ebc396dd7fea1a"
+    },
+    {
+      "id": "52",
+      "title": "Engineering planning",
+      "src": "/assets/images/generated/52-engineering-planning.webp",
+      "alt": "Illustrated engineers reviewing an assembly drawing and a metal prototype at a workshop table",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "52-engineering-planning.png",
+      "sha256": "55e5ce8fd300aa0d2b948a92affb0cf56248d2d6f8247ce1d8e38689a3b5b6bc"
+    },
+    {
+      "id": "53",
+      "title": "Engineering enquiries",
+      "src": "/assets/images/generated/53-contact-workbench.webp",
+      "alt": "Engineering enquiry desk with a laptop, telephone, drawing folder and sample component",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "53-contact-workbench.png",
+      "sha256": "8da76f4f56610ca894c5716d7c76e89371c233ae999e58336c9aec454381360d"
+    },
+    {
+      "id": "54",
+      "title": "Quotation preparation",
+      "src": "/assets/images/generated/54-quotation-review.webp",
+      "alt": "Hands measuring a machined bracket beside a drawing, notebook and calculator",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "54-quotation-review.png",
+      "sha256": "4aa480423aa12ef276f8683673d0cb337f73e0eff160e2a0df95c571a4db8932"
+    },
+    {
+      "id": "55",
+      "title": "Engineering calculations",
+      "src": "/assets/images/generated/55-engineering-calculations.webp",
+      "alt": "Scientific calculator, micrometer, steel ruler and machined block on an engineering desk",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "55-engineering-calculations.png",
+      "sha256": "9fcb9e1bc68e7199f33e1eadc5eb5e18f696d4b31b2b0aec9e006276c8dccc51"
+    },
+    {
+      "id": "56",
+      "title": "Industrial applications",
+      "src": "/assets/images/generated/56-industrial-applications.webp",
+      "alt": "Illustrated production floor with enclosed machines, stainless pipework and parts racks",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "56-industrial-applications.png",
+      "sha256": "11e82eed480305be0a586c2bdda0d12fc267635b4708974a06288901ba8382af"
+    },
+    {
+      "id": "57",
+      "title": "Quality review",
+      "src": "/assets/images/generated/57-quality-feedback.webp",
+      "alt": "Hands exchanging a finished bracket over an inspection bench with measuring tools",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "57-quality-feedback.png",
+      "sha256": "5aba2344a12264bf7485c044cf8964ca038763d358bfcb55ca317a5fc689d1ff"
+    },
+    {
+      "id": "58",
+      "title": "Tap and drill selection",
+      "src": "/assets/images/generated/58-tap-drill-tools.webp",
+      "alt": "Thread tap, twist drill and countersink beside a threaded hole in an aluminum block",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "58-tap-drill-tools.png",
+      "sha256": "18c8ec90cb63f8e91f07d5495b744aece88840b8b75651e539ea86d5176c866f"
+    },
+    {
+      "id": "59",
+      "title": "Vernier measurement",
+      "src": "/assets/images/generated/59-vernier-measurement.webp",
+      "alt": "Hands measuring the outside diameter of a cylindrical steel component with a vernier caliper",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "59-vernier-measurement.png",
+      "sha256": "674e5d0e7a5a41dce5e5008113d87feda394af126fb243b751bff0c6f04d6ff7"
+    },
+    {
+      "id": "60",
+      "title": "Engineering documents",
+      "src": "/assets/images/generated/60-document-review.webp",
+      "alt": "Organized document folder, paper sheets, notebook and pen beside a machined part",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "60-document-review.png",
+      "sha256": "bd05dfc224570c31946378421c07dccaba8e639e0c6873c6fcd72058f99c919c"
     }
   ],
   "placements": [
-    {
-      "page": "/",
-      "image": "01",
-      "area": "Homepage hero"
-    },
-    {
-      "page": "/",
-      "image": "02",
-      "area": "Service division card"
-    },
-    {
-      "page": "/",
-      "image": "03",
-      "area": "Service division card"
-    },
-    {
-      "page": "/",
-      "image": "04",
-      "area": "Service division card"
-    },
-    {
-      "page": "/",
-      "image": "05",
-      "area": "Service division card"
-    },
-    {
-      "page": "/",
-      "image": "18",
-      "area": "Project guide card"
-    },
-    {
-      "page": "/",
-      "image": "21",
-      "area": "Project guide card"
-    },
-    {
-      "page": "/services.html",
-      "image": "02",
-      "area": "Service division card"
-    },
-    {
-      "page": "/services.html",
-      "image": "03",
-      "area": "Service division card"
-    },
-    {
-      "page": "/services.html",
-      "image": "04",
-      "area": "Service division card"
-    },
-    {
-      "page": "/services.html",
-      "image": "05",
-      "area": "Service division card"
-    },
-    {
-      "page": "/3d-printing-kolkata.html",
-      "image": "09",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/3d-printing-kolkata.html",
-      "image": "31",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/3d-printing-kolkata.html",
-      "image": "35",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/custom-machine-spares.html",
-      "image": "17",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/custom-machine-spares.html",
-      "image": "23",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/custom-machine-spares.html",
-      "image": "34",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/design-job-work.html",
-      "image": "16",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/design-job-work.html",
-      "image": "15",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/design-job-work.html",
-      "image": "50",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-inspection-qa-kolkata.html",
-      "image": "05",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-inspection-qa-kolkata.html",
-      "image": "41",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-inspection-qa-kolkata.html",
-      "image": "42",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-machine-maintenance-kolkata.html",
-      "image": "04",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-machine-maintenance-kolkata.html",
-      "image": "19",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/industrial-machine-maintenance-kolkata.html",
-      "image": "48",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-cutting-kolkata.html",
-      "image": "06",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-cutting-kolkata.html",
-      "image": "22",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-cutting-kolkata.html",
-      "image": "38",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-marking-kolkata.html",
-      "image": "08",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-marking-kolkata.html",
-      "image": "21",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-marking-kolkata.html",
-      "image": "24",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-welding-kolkata.html",
-      "image": "07",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-welding-kolkata.html",
-      "image": "29",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/laser-welding-kolkata.html",
-      "image": "39",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/mechanical-design-services-kolkata.html",
-      "image": "02",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/mechanical-design-services-kolkata.html",
-      "image": "14",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/mechanical-design-services-kolkata.html",
-      "image": "16",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/reverse-engineering-kolkata.html",
-      "image": "10",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/reverse-engineering-kolkata.html",
-      "image": "23",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/reverse-engineering-kolkata.html",
-      "image": "46",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/sheet-metal-bending-kolkata.html",
-      "image": "11",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/sheet-metal-bending-kolkata.html",
-      "image": "27",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/sheet-metal-bending-kolkata.html",
-      "image": "47",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/3d-print-fai-batch.html",
-      "image": "20",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/3d-print-fai-batch.html",
-      "image": "30",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/fit-correction-replacement-component.html",
-      "image": "46",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/fit-correction-replacement-component.html",
-      "image": "23",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/laser-chiller-pump-replacement.html",
-      "image": "18",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/laser-chiller-pump-replacement.html",
-      "image": "17",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "26",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "25",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "06",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "21",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "24",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "40",
-      "area": "Process or project guide gallery"
-    },
-    {
-      "page": "/3d-printing-kolkata.html",
-      "image": "32",
-      "area": "Resin printing and threaded inserts"
-    },
-    {
-      "page": "/3d-printing-kolkata.html",
-      "image": "36",
-      "area": "Resin printing and threaded inserts"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "10",
-      "area": "Samples, drawings and replacement geometry"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "16",
-      "area": "Samples, drawings and replacement geometry"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "23",
-      "area": "Samples, drawings and replacement geometry"
-    },
-    {
-      "page": "/insights/3d-printing-file-formats.html",
-      "image": "37",
-      "area": "Print settings and internal geometry"
-    },
-    {
-      "page": "/insights/3d-printing-tolerances.html",
-      "image": "33",
-      "area": "Feature detail and first-piece measurement"
-    },
-    {
-      "page": "/insights/3d-printing-tolerances.html",
-      "image": "20",
-      "area": "Feature detail and first-piece measurement"
-    },
-    {
-      "page": "/insights/chiller-pump-equivalent-selection.html",
-      "image": "18",
-      "area": "Ports, mounting and electrical connections"
-    },
-    {
-      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
-      "image": "12",
-      "area": "Milling and turning processes"
-    },
-    {
-      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
-      "image": "13",
-      "area": "Milling and turning processes"
-    },
-    {
-      "page": "/insights/gdt-datum-basics.html",
-      "image": "28",
-      "area": "Locating the part and measuring from a reference"
-    },
-    {
-      "page": "/insights/gdt-datum-basics.html",
-      "image": "41",
-      "area": "Locating the part and measuring from a reference"
-    },
-    {
-      "page": "/insights/holes-near-sheet-metal-bends.html",
-      "image": "11",
-      "area": "Bend tooling and enclosure geometry"
-    },
-    {
-      "page": "/insights/holes-near-sheet-metal-bends.html",
-      "image": "27",
-      "area": "Bend tooling and enclosure geometry"
-    },
-    {
-      "page": "/insights/identify-laser-consumables.html",
-      "image": "25",
-      "area": "Nozzle, optical window and ceramic ring"
-    },
-    {
-      "page": "/insights/laser-cutting-defects.html",
-      "image": "26",
-      "area": "Illustrative cut-edge comparison"
-    },
-    {
-      "page": "/insights/laser-nozzle-focus-basics.html",
-      "image": "06",
-      "area": "Cutting head and consumables"
-    },
-    {
-      "page": "/insights/laser-nozzle-focus-basics.html",
-      "image": "25",
-      "area": "Cutting head and consumables"
-    },
-    {
-      "page": "/insights/machine-breakdown-data-checklist.html",
-      "image": "04",
-      "area": "Inspecting a stationary drive assembly"
-    },
-    {
-      "page": "/insights/ncr-rca-capa-guide.html",
-      "image": "05",
-      "area": "Measurement evidence for a quality review"
-    },
-    {
-      "page": "/insights/preventive-maintenance-basics.html",
-      "image": "49",
-      "area": "Inspecting a removed machine filter"
-    },
-    {
-      "page": "/insights/sheet-metal-bending-basics.html",
-      "image": "11",
-      "area": "Bending and sheet-thickness checks"
-    },
-    {
-      "page": "/insights/sheet-metal-bending-basics.html",
-      "image": "47",
-      "area": "Bending and sheet-thickness checks"
-    },
-    {
-      "page": "/insights/stainless-steel-handling.html",
-      "image": "39",
-      "area": "Surface finish and protective packing"
-    },
-    {
-      "page": "/insights/stainless-steel-handling.html",
-      "image": "40",
-      "area": "Surface finish and protective packing"
-    },
-    {
-      "page": "/insights/surface-roughness-ra-rz.html",
-      "image": "39",
-      "area": "Illustrative surface-finish comparison"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "09",
-      "area": "Manufacturing process card"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "06",
-      "area": "Manufacturing process card"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "12",
-      "area": "Manufacturing process card"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "17",
-      "area": "Manufacturing process card"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "03",
-      "area": "Component family"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "27",
-      "area": "Component family"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "28",
-      "area": "Component family"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "17",
-      "area": "Component family"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "16",
-      "area": "Design outputs gallery"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "02",
-      "area": "Design outputs gallery"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "15",
-      "area": "Design outputs gallery"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "18",
-      "area": "Maintenance evidence gallery"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "19",
-      "area": "Maintenance evidence gallery"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "17",
-      "area": "Maintenance evidence gallery"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "49",
-      "area": "Preventive maintenance checks"
-    },
-    {
-      "page": "/divisions/inspection-testing.html",
-      "image": "41",
-      "area": "Dimensional inspection methods"
-    },
-    {
-      "page": "/divisions/inspection-testing.html",
-      "image": "42",
-      "area": "Dimensional inspection methods"
-    },
-    {
-      "page": "/about.html",
-      "image": "44",
-      "area": "Workshop and engineering-review illustrations"
-    },
-    {
-      "page": "/about.html",
-      "image": "43",
-      "area": "Workshop and engineering-review illustrations"
-    },
-    {
-      "page": "/projects.html",
-      "image": "18",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/projects.html",
-      "image": "21",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/projects.html",
-      "image": "26",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/projects.html",
-      "image": "46",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/projects.html",
-      "image": "20",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/projects.html",
-      "image": "10",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "33",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "12",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "11",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "25",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "26",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "06",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "04",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "05",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "49",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "11",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "39",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/insights.html",
-      "image": "39",
-      "area": "Guide preview"
-    },
-    {
-      "page": "/request-quote.html",
-      "image": "45",
-      "area": "Quote guidance sidebar"
-    },
     {
       "page": "/engineering-desk.html",
       "image": "02",
@@ -1236,6 +751,916 @@
       "page": "/engineering-desk.html",
       "image": "05",
       "area": "Dynamic quality route"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "09",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "09",
+      "area": "Page content"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "31",
+      "area": "Page content"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "35",
+      "area": "Page content"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "32",
+      "area": "Page content"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "36",
+      "area": "Page content"
+    },
+    {
+      "page": "/404.html",
+      "image": "44",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/about.html",
+      "image": "52",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/about.html",
+      "image": "44",
+      "area": "Page content"
+    },
+    {
+      "page": "/about.html",
+      "image": "43",
+      "area": "Page content"
+    },
+    {
+      "page": "/contact.html",
+      "image": "53",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "17",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "23",
+      "area": "Page content"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "34",
+      "area": "Page content"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "16",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "16",
+      "area": "Page content"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "15",
+      "area": "Page content"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "50",
+      "area": "Page content"
+    },
+    {
+      "page": "/disclaimer.html",
+      "image": "60",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "43",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/estimate.html",
+      "image": "55",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/feedback.html",
+      "image": "57",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/",
+      "image": "01",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/",
+      "image": "03",
+      "area": "Page content"
+    },
+    {
+      "page": "/",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/",
+      "image": "21",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "42",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "41",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "42",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "48",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "19",
+      "area": "Page content"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "48",
+      "area": "Page content"
+    },
+    {
+      "page": "/industries.html",
+      "image": "56",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights.html",
+      "image": "50",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights.html",
+      "image": "33",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "12",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "26",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "49",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "06",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "22",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "38",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "08",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "08",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "21",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "24",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "07",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "07",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "29",
+      "area": "Page content"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "14",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "14",
+      "area": "Page content"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "16",
+      "area": "Page content"
+    },
+    {
+      "page": "/privacy.html",
+      "image": "60",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects.html",
+      "image": "46",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects.html",
+      "image": "21",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects.html",
+      "image": "26",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects.html",
+      "image": "46",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects.html",
+      "image": "20",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects.html",
+      "image": "10",
+      "area": "Page content"
+    },
+    {
+      "page": "/request-quote.html",
+      "image": "54",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/request-quote.html",
+      "image": "45",
+      "area": "Page content"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "10",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "10",
+      "area": "Page content"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "23",
+      "area": "Page content"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "46",
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "51",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/services.html",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "03",
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "14",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "10",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "06",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "07",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "08",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "11",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "09",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "48",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "42",
+      "area": "Service directory"
+    },
+    {
+      "page": "/services.html",
+      "image": "17",
+      "area": "Service directory"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "11",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "27",
+      "area": "Page content"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "47",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "09",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "12",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "27",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "28",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "16",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "15",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "05",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "41",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "42",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "04",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "19",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "49",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "30",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "37",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "33",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "13",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "28",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/metric-tap-drill-clearance-hole-chart.html",
+      "image": "58",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "47",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "40",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "13",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/vernier-caliper-guide.html",
+      "image": "59",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/3d-print-fai-batch.html",
+      "image": "09",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/3d-print-fai-batch.html",
+      "image": "20",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/3d-print-fai-batch.html",
+      "image": "30",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/fit-correction-replacement-component.html",
+      "image": "23",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/fit-correction-replacement-component.html",
+      "image": "46",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/fit-correction-replacement-component.html",
+      "image": "23",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/laser-chiller-pump-replacement.html",
+      "image": "18",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/laser-chiller-pump-replacement.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/laser-chiller-pump-replacement.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "26",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "26",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "21",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "21",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "24",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "40",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "10",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "10",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "16",
+      "area": "Page content"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "23",
+      "area": "Page content"
     }
   ],
   "legacy_assets": {

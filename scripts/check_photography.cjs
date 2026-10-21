@@ -13,6 +13,7 @@ const expectedImages=Object.fromEntries(approved.map(e=>[e.id,{src:e.src,alt:e.a
 const seen=new Set();
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 const mobile = (process.env.AUDIT_VIEWPORT || process.env.HERO_VIEWPORT) === 'mobile';
+const viewportWidth = Number(process.env.AUDIT_WIDTH) || (mobile ? 390 : 1440);
 const pages = [];
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -28,7 +29,7 @@ function walk(directory) {
 walk(root);
 (async () => {
   const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
-  const context = await readOnlyContext(browser, { viewport: { width: mobile ? 390 : 1440, height: 900 }, reducedMotion: 'reduce' });
+  const context = await readOnlyContext(browser, { viewport: { width: viewportWidth, height: 900 }, reducedMotion: 'reduce' });
   const failures = [];
   let images = 0, heroes = 0;
   try {
@@ -69,6 +70,16 @@ walk(root);
             const heading = hero.querySelector('h1');
             if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');
             if (hero.getBoundingClientRect().height < 180) issues.push('Hero has collapsed');
+            const foreground=hero.querySelector('figure.cg-hero-foreground img');
+            if(!foreground) issues.push('Hero has no foreground image');
+            else {
+              const box=foreground.getBoundingClientRect(),title=heading.getBoundingClientRect();
+              if(box.width<240||box.height<150)issues.push('Hero foreground image is too small');
+              if(!foreground.complete||!foreground.naturalWidth)issues.push('Hero foreground image failed to load');
+              if(innerWidth>800&&box.left<title.right-2)issues.push('Desktop hero image overlaps headline');
+              if(innerWidth<=800&&box.top<title.bottom)issues.push('Mobile hero image overlaps headline');
+              if(foreground.loading!=='eager')issues.push('Hero image is not loaded eagerly');
+            }
           }
           return { issues, images: document.images.length, hero: !!hero, ids:[...document.querySelectorAll('[data-generated-image]')].map(i=>i.dataset.generatedImage) };
         },expectedImages);
@@ -80,8 +91,8 @@ walk(root);
       finally { await page.close(); }
     }
   } finally { await browser.close(); }
-  if(seen.size!==50)failures.push({issue:'Expected all 50 generated images across the site',actual:seen.size});
-  console.log('MEDIA_INTEGRITY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, uniqueGenerated:seen.size, failures: failures.length }));
+  if(seen.size!==approved.length)failures.push({issue:'Expected every approved generated image across the site',expected:approved.length,actual:seen.size});
+  console.log('MEDIA_INTEGRITY|' + JSON.stringify({ viewport: viewportWidth, pages: pages.length, images, heroes, uniqueGenerated:seen.size, failures: failures.length }));
   for (const failure of failures) console.error(JSON.stringify(failure));
   if (failures.length) process.exitCode = 1;
 })().catch(error => { console.error(error); process.exitCode = 1; });
