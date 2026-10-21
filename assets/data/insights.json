@@ -6,7 +6,8 @@
     "category": "design",
     "image": "30",
     "href": "/insights/3d-printing-file-formats.html",
-    "new": false
+    "new": false,
+    "background_image": "09"
   },
   {
     "slug": "3d-printing-tolerances",
@@ -15,7 +16,8 @@
     "category": "design",
     "image": "20",
     "href": "/insights/3d-printing-tolerances.html",
-    "new": false
+    "new": false,
+    "background_image": "05"
   },
   {
     "slug": "chiller-pump-equivalent-selection",
@@ -24,7 +26,8 @@
     "category": "maintenance",
     "image": "18",
     "href": "/insights/chiller-pump-equivalent-selection.html",
-    "new": false
+    "new": false,
+    "background_image": "19"
   },
   {
     "slug": "cnc-vmc-speeds-feeds-basics",
@@ -33,7 +36,8 @@
     "category": "manufacturing",
     "image": "12",
     "href": "/insights/cnc-vmc-speeds-feeds-basics.html",
-    "new": false
+    "new": false,
+    "background_image": "03"
   },
   {
     "slug": "gdt-datum-basics",
@@ -42,7 +46,8 @@
     "category": "design",
     "image": "41",
     "href": "/insights/gdt-datum-basics.html",
-    "new": false
+    "new": false,
+    "background_image": "42"
   },
   {
     "slug": "holes-near-sheet-metal-bends",
@@ -51,7 +56,8 @@
     "category": "design",
     "image": "27",
     "href": "/insights/holes-near-sheet-metal-bends.html",
-    "new": false
+    "new": false,
+    "background_image": "11"
   },
   {
     "slug": "identify-laser-consumables",
@@ -60,7 +66,8 @@
     "category": "maintenance",
     "image": "25",
     "href": "/insights/identify-laser-consumables.html",
-    "new": false
+    "new": false,
+    "background_image": "06"
   },
   {
     "slug": "laser-cutting-defects",
@@ -69,7 +76,8 @@
     "category": "maintenance",
     "image": "26",
     "href": "/insights/laser-cutting-defects.html",
-    "new": false
+    "new": false,
+    "background_image": "06"
   },
   {
     "slug": "laser-nozzle-focus-basics",
@@ -78,7 +86,8 @@
     "category": "maintenance",
     "image": "06",
     "href": "/insights/laser-nozzle-focus-basics.html",
-    "new": false
+    "new": false,
+    "background_image": "22"
   },
   {
     "slug": "machine-breakdown-data-checklist",
@@ -87,7 +96,8 @@
     "category": "maintenance",
     "image": "04",
     "href": "/insights/machine-breakdown-data-checklist.html",
-    "new": false
+    "new": false,
+    "background_image": "49"
   },
   {
     "slug": "metric-tap-drill-clearance-hole-chart",
@@ -96,7 +106,8 @@
     "category": "manufacturing",
     "image": "58",
     "href": "/insights/metric-tap-drill-clearance-hole-chart.html",
-    "new": false
+    "new": false,
+    "background_image": "63"
   },
   {
     "slug": "ncr-rca-capa-guide",
@@ -105,7 +116,8 @@
     "category": "quality",
     "image": "05",
     "href": "/insights/ncr-rca-capa-guide.html",
-    "new": false
+    "new": false,
+    "background_image": "41"
   },
   {
     "slug": "preventive-maintenance-basics",
@@ -114,7 +126,8 @@
     "category": "maintenance",
     "image": "49",
     "href": "/insights/preventive-maintenance-basics.html",
-    "new": false
+    "new": false,
+    "background_image": "04"
   },
   {
     "slug": "sheet-metal-bending-basics",
@@ -123,7 +136,8 @@
     "category": "manufacturing",
     "image": "11",
     "href": "/insights/sheet-metal-bending-basics.html",
-    "new": false
+    "new": false,
+    "background_image": "27"
   },
   {
     "slug": "stainless-steel-handling",
@@ -132,7 +146,8 @@
     "category": "quality",
     "image": "39",
     "href": "/insights/stainless-steel-handling.html",
-    "new": false
+    "new": false,
+    "background_image": "66"
   },
   {
     "slug": "surface-roughness-ra-rz",
@@ -141,7 +156,8 @@
     "category": "quality",
     "image": "13",
     "href": "/insights/surface-roughness-ra-rz.html",
-    "new": false
+    "new": false,
+    "background_image": "65"
   },
   {
     "slug": "vernier-caliper-guide",
@@ -150,7 +166,8 @@
     "category": "quality",
     "image": "59",
     "href": "/insights/vernier-caliper-guide.html",
-    "new": false
+    "new": false,
+    "background_image": "41"
   },
   {
     "slug": "drawing-revision-control",
@@ -176,7 +193,8 @@
     ],
     "decision": "Release one traceable package after the responsible reviewer approves it. If the revision relationship is unclear, clarify it before buying material or cutting the part.",
     "new": true,
-    "href": "/insights/drawing-revision-control.html"
+    "href": "/insights/drawing-revision-control.html",
+    "background_image": "02"
   },
   {
     "slug": "engineering-material-grade-selection",
@@ -202,7 +220,8 @@
     ],
     "decision": "Confirm a specific grade and condition against the application. For an unknown critical part, material testing and an engineering review may be needed before a replacement can be quoted responsibly.",
     "new": true,
-    "href": "/insights/engineering-material-grade-selection.html"
+    "href": "/insights/engineering-material-grade-selection.html",
+    "background_image": "39"
   },
   {
     "slug": "shaft-bearing-bushing-fits",
@@ -228,7 +247,8 @@
     ],
     "decision": "Choose the fit from the functional requirement, then check the assembled condition. Precision and safety-critical assemblies need an agreed calculation and inspection plan rather than a rule of thumb.",
     "new": true,
-    "href": "/insights/shaft-bearing-bushing-fits.html"
+    "href": "/insights/shaft-bearing-bushing-fits.html",
+    "background_image": "13"
   },
   {
     "slug": "reverse-engineering-measurement-plan",
@@ -254,7 +274,8 @@
     ],
     "decision": "Create a measurement plan and a list of unresolved features before modelling. Agree how the missing information will be verified before releasing a replacement for manufacture.",
     "new": true,
-    "href": "/insights/reverse-engineering-measurement-plan.html"
+    "href": "/insights/reverse-engineering-measurement-plan.html",
+    "background_image": "23"
   },
   {
     "slug": "identify-unknown-threads",
@@ -280,7 +301,8 @@
     ],
     "decision": "Confirm the full designation and sealing method before sourcing or machining. Pressure connections require the rated fitting and a defined verification procedure.",
     "new": true,
-    "href": "/insights/identify-unknown-threads.html"
+    "href": "/insights/identify-unknown-threads.html",
+    "background_image": "63"
   },
   {
     "slug": "fastener-torque-and-joint-review",
@@ -306,7 +328,8 @@
     ],
     "decision": "Use the documented joint requirement. If it is absent, review the joint before selecting torque, particularly for pressure equipment, lifting assemblies or other consequential connections.",
     "new": true,
-    "href": "/insights/fastener-torque-and-joint-review.html"
+    "href": "/insights/fastener-torque-and-joint-review.html",
+    "background_image": "14"
   },
   {
     "slug": "bearing-failure-evidence",
@@ -332,7 +355,8 @@
     ],
     "decision": "Build a cause assessment from the component and its operating context. Agree corrective checks before installing another bearing, and follow the equipment maker\u2019s mounting instructions.",
     "new": true,
-    "href": "/insights/bearing-failure-evidence.html"
+    "href": "/insights/bearing-failure-evidence.html",
+    "background_image": "48"
   },
   {
     "slug": "lubrication-plan-basics",
@@ -358,7 +382,8 @@
     ],
     "decision": "Agree a point-by-point plan, then review evidence from inspections and lubricant condition. Where specifications conflict or the current lubricant is unknown, resolve compatibility before changing products.",
     "new": true,
-    "href": "/insights/lubrication-plan-basics.html"
+    "href": "/insights/lubrication-plan-basics.html",
+    "background_image": "49"
   },
   {
     "slug": "coupling-alignment-preparation",
@@ -384,7 +409,8 @@
     ],
     "decision": "Correct installation issues before final alignment. Qualified personnel should perform adjustments and the return-to-service checks required by the equipment procedure.",
     "new": true,
-    "href": "/insights/coupling-alignment-preparation.html"
+    "href": "/insights/coupling-alignment-preparation.html",
+    "background_image": "04"
   },
   {
     "slug": "pump-noise-cavitation-checklist",
@@ -410,7 +436,8 @@
     ],
     "decision": "Use the evidence to separate hydraulic, mechanical and installation causes. Any assessment of available suction head or process changes needs the actual installation data and competent review.",
     "new": true,
-    "href": "/insights/pump-noise-cavitation-checklist.html"
+    "href": "/insights/pump-noise-cavitation-checklist.html",
+    "background_image": "19"
   },
   {
     "slug": "hydraulic-hose-identification",
@@ -436,7 +463,8 @@
     ],
     "decision": "Have the assembly made and verified through an appropriate rated hose system. Installation and testing must follow the equipment procedure; a visual match is not an acceptance test.",
     "new": true,
-    "href": "/insights/hydraulic-hose-identification.html"
+    "href": "/insights/hydraulic-hose-identification.html",
+    "background_image": "18"
   },
   {
     "slug": "gasket-flange-selection",
@@ -462,7 +490,8 @@
     ],
     "decision": "Select the gasket as part of the complete rated joint. Hazardous fluids and pressure-containing equipment require the responsible engineering authority\u2019s specification and test procedure.",
     "new": true,
-    "href": "/insights/gasket-flange-selection.html"
+    "href": "/insights/gasket-flange-selection.html",
+    "background_image": "15"
   },
   {
     "slug": "corrosion-versus-surface-staining",
@@ -488,7 +517,8 @@
     ],
     "decision": "Decide whether cleaning, a material change, a design change or further inspection is needed. Critical components need an acceptance decision based on measured condition and applicable requirements.",
     "new": true,
-    "href": "/insights/corrosion-versus-surface-staining.html"
+    "href": "/insights/corrosion-versus-surface-staining.html",
+    "background_image": "39"
   },
   {
     "slug": "weld-joint-fitup-checklist",
@@ -514,7 +544,8 @@
     ],
     "decision": "Agree the joint preparation and inspection scope before work begins. Code-governed or consequential welds require the applicable qualified procedure, personnel and acceptance criteria.",
     "new": true,
-    "href": "/insights/weld-joint-fitup-checklist.html"
+    "href": "/insights/weld-joint-fitup-checklist.html",
+    "background_image": "07"
   },
   {
     "slug": "weld-distortion-planning",
@@ -540,7 +571,8 @@
     ],
     "decision": "Use a first-off review where distortion could affect fit. Any correction method should be agreed for the material and service rather than improvised after fabrication.",
     "new": true,
-    "href": "/insights/weld-distortion-planning.html"
+    "href": "/insights/weld-distortion-planning.html",
+    "background_image": "69"
   },
   {
     "slug": "laser-marking-artwork-preparation",
@@ -566,7 +598,8 @@
     ],
     "decision": "Agree sample approval before repeat marking. If a code must be machine-readable, define how it will be checked on the actual substrate after marking.",
     "new": true,
-    "href": "/insights/laser-marking-artwork-preparation.html"
+    "href": "/insights/laser-marking-artwork-preparation.html",
+    "background_image": "08"
   },
   {
     "slug": "laser-cutting-kerf-and-small-features",
@@ -592,7 +625,8 @@
     ],
     "decision": "Agree process capability with the actual supplier and material. Use the first-off part to confirm fit before committing to a batch of interdependent features.",
     "new": true,
-    "href": "/insights/laser-cutting-kerf-and-small-features.html"
+    "href": "/insights/laser-cutting-kerf-and-small-features.html",
+    "background_image": "06"
   },
   {
     "slug": "deburring-edge-requirements",
@@ -618,7 +652,8 @@
     ],
     "decision": "Agree an edge condition that is measurable and appropriate to the part. If deburring changes a fit, flow path or sealing feature, include that effect in the manufacturing review.",
     "new": true,
-    "href": "/insights/deburring-edge-requirements.html"
+    "href": "/insights/deburring-edge-requirements.html",
+    "background_image": "22"
   },
   {
     "slug": "press-brake-tooling-review",
@@ -644,7 +679,8 @@
     ],
     "decision": "Review the actual tool and bend sequence before cutting the blank. Where fit matters, approve the first formed part rather than relying only on the flat dimensions.",
     "new": true,
-    "href": "/insights/press-brake-tooling-review.html"
+    "href": "/insights/press-brake-tooling-review.html",
+    "background_image": "11"
   },
   {
     "slug": "jig-fixture-design-basics",
@@ -670,7 +706,8 @@
     ],
     "decision": "Trial the fixture with representative parts and inspect the output after unclamping. Repeated loading should produce the required result without relying on operator improvisation.",
     "new": true,
-    "href": "/insights/jig-fixture-design-basics.html"
+    "href": "/insights/jig-fixture-design-basics.html",
+    "background_image": "03"
   },
   {
     "slug": "3d-print-orientation-planning",
@@ -696,7 +733,8 @@
     ],
     "decision": "Choose orientation with the service requirement in view. Use prototypes to verify the assumptions before treating a printed component as a production substitute.",
     "new": true,
-    "href": "/insights/3d-print-orientation-planning.html"
+    "href": "/insights/3d-print-orientation-planning.html",
+    "background_image": "09"
   },
   {
     "slug": "threaded-inserts-in-printed-parts",
@@ -722,7 +760,8 @@
     ],
     "decision": "Approve a representative installation and define the permitted fastening load. Critical or repeated-duty joints need testing appropriate to the application.",
     "new": true,
-    "href": "/insights/threaded-inserts-in-printed-parts.html"
+    "href": "/insights/threaded-inserts-in-printed-parts.html",
+    "background_image": "09"
   },
   {
     "slug": "prototype-validation-checklist",
@@ -748,7 +787,8 @@
     ],
     "decision": "Use the result to approve, revise or stop the next step. Keep prototype limitations visible when discussing production cost, material or service performance.",
     "new": true,
-    "href": "/insights/prototype-validation-checklist.html"
+    "href": "/insights/prototype-validation-checklist.html",
+    "background_image": "09"
   },
   {
     "slug": "first-article-inspection-planning",
@@ -774,7 +814,8 @@
     ],
     "decision": "Review deviations and agree disposition before repeat production. A first-article result is evidence for the defined sample and process; it does not remove the need for production control.",
     "new": true,
-    "href": "/insights/first-article-inspection-planning.html"
+    "href": "/insights/first-article-inspection-planning.html",
+    "background_image": "05"
   },
   {
     "slug": "measurement-uncertainty-practical-guide",
@@ -800,7 +841,8 @@
     ],
     "decision": "Use an uncertainty assessment proportionate to the decision. Borderline or consequential results may require a more capable method and a formally agreed acceptance approach.",
     "new": true,
-    "href": "/insights/measurement-uncertainty-practical-guide.html"
+    "href": "/insights/measurement-uncertainty-practical-guide.html",
+    "background_image": "42"
   },
   {
     "slug": "inspection-plan-from-drawing",
@@ -826,7 +868,8 @@
     ],
     "decision": "Agree the plan before production, then keep results linked to the part or lot. Changes to the drawing, process or inspection method should trigger a review of the plan.",
     "new": true,
-    "href": "/insights/inspection-plan-from-drawing.html"
+    "href": "/insights/inspection-plan-from-drawing.html",
+    "background_image": "41"
   },
   {
     "slug": "surface-finish-selection",
@@ -852,7 +895,8 @@
     ],
     "decision": "Choose the process and inspection method together. If coating or polishing changes a critical size, include the final finished dimension in the acceptance plan.",
     "new": true,
-    "href": "/insights/surface-finish-selection.html"
+    "href": "/insights/surface-finish-selection.html",
+    "background_image": "66"
   },
   {
     "slug": "replacement-part-trial-fit",
@@ -878,7 +922,8 @@
     ],
     "decision": "Agree the trial outcome and any final inspection before release. Service testing should follow the equipment procedure and account for the consequences of a failed replacement.",
     "new": true,
-    "href": "/insights/replacement-part-trial-fit.html"
+    "href": "/insights/replacement-part-trial-fit.html",
+    "background_image": "65"
   },
   {
     "slug": "packing-precision-components",
@@ -904,7 +949,8 @@
     ],
     "decision": "Agree the packing method before dispatch, especially for finished or inspected components. Photograph the protected condition and record any special unpacking instructions.",
     "new": true,
-    "href": "/insights/packing-precision-components.html"
+    "href": "/insights/packing-precision-components.html",
+    "background_image": "44"
   },
   {
     "slug": "maintenance-handover-record",
@@ -930,7 +976,8 @@
     ],
     "decision": "Have the responsible personnel accept the handover and service status. Any temporary measure should have explicit limits and a follow-up plan rather than an informal verbal agreement.",
     "new": true,
-    "href": "/insights/maintenance-handover-record.html"
+    "href": "/insights/maintenance-handover-record.html",
+    "background_image": "04"
   },
   {
     "slug": "critical-spares-planning",
@@ -956,7 +1003,8 @@
     ],
     "decision": "Prioritize the stock and documentation that reduce the most consequential downtime. Review the plan after equipment changes, failures and supplier obsolescence notices.",
     "new": true,
-    "href": "/insights/critical-spares-planning.html"
+    "href": "/insights/critical-spares-planning.html",
+    "background_image": "44"
   },
   {
     "slug": "bill-of-materials-release",
@@ -982,7 +1030,8 @@
     ],
     "decision": "Release the BOM with the drawing package and control later changes. Resolve duplicate identifiers, missing specifications and configuration differences before procurement begins.",
     "new": true,
-    "href": "/insights/bill-of-materials-release.html"
+    "href": "/insights/bill-of-materials-release.html",
+    "background_image": "02"
   },
   {
     "slug": "piping-layout-review-checklist",
@@ -1008,6 +1057,7 @@
     ],
     "decision": "Close the layout issues with the relevant disciplines before fabrication. Pressure-containing and hazardous systems require the applicable design authority, calculations and approval process.",
     "new": true,
-    "href": "/insights/piping-layout-review-checklist.html"
+    "href": "/insights/piping-layout-review-checklist.html",
+    "background_image": "64"
   }
 ]

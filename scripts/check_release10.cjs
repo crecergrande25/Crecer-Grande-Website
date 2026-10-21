@@ -17,11 +17,11 @@ const root=path.resolve(__dirname,'..');
   for(const file of ['assets/data/content-index.json','sitemap.xml'])assert.doesNotMatch(fs.readFileSync(path.join(root,file),'utf8'),/\/projects(?:\.html|\/)/);
   await go('/');assert.equal(await page.locator('a[href^="/projects"]').count(),0);
  });
- await check('Home keeps its hero treatment; other heroes retain foreground and add backgrounds',async()=>{
+ await check('Every hero including Home retains foreground and adds a relevant background',async()=>{
   for(const route of ['/','/contact.html','/services.html','/insights/bearing-failure-evidence.html']){
    await go(route);assert.equal(await page.locator('.cg-hero-foreground img').count(),1);
    const bg=await page.locator('section.cg-foreground-hero').evaluate(e=>getComputedStyle(e).backgroundImage);
-   if(route==='/')assert.doesNotMatch(bg,/url\(/);else assert.match(bg,/generated\/.+\.webp/);
+   assert.match(bg,/generated\/.+\.webp/);
   }
  });
  await check('Contact routes have three aligned image cards with working enquiry destinations',async()=>{

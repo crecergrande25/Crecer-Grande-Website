@@ -499,3 +499,7 @@ body .cg-footer .cg-footer-logo-link img.cg-original-brand-logo{width:170px!impo
  body .cg-footer :is(.cg-footer-tagline,.cg-footer-desc,.cg-contact-address){font-size:12px!important;line-height:1.5!important}
  body .cg-footer-grid{gap:18px!important}
 }
+/* Release 11: every hero, including Home, has a visible photographic backdrop. */
+body main#main section.cg-image-backed-hero.cg-foreground-hero.cg-layered-hero{background-color:#0b2637!important;background-image:linear-gradient(90deg,rgba(3,20,31,.70) 0%,rgba(3,20,31,.66) 52%,rgba(3,20,31,.40) 100%),var(--cg-page-hero-bg)!important;background-size:cover!important;background-position:center!important;background-repeat:no-repeat!important}
+body main#main section.cg-layered-hero .cg-foreground-copy :is(h1,p){text-shadow:0 2px 8px #00121c80!important}
+body main#main section.cg-layered-hero figure.cg-hero-foreground{box-shadow:0 18px 48px #0006!important}

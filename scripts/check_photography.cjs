@@ -43,6 +43,11 @@ walk(root);
           document.querySelectorAll('img').forEach(image => image.loading = 'eager');
           await Promise.race([Promise.allSettled([...document.images].map(image => image.decode())), new Promise(resolve => setTimeout(resolve, 8000))]);
         });
+        await page.evaluate(async () => {
+          const hero=document.querySelector('main section.cg-foreground-hero');
+          const urls=hero?[...getComputedStyle(hero).backgroundImage.matchAll(/url\(["']?([^"')]+)["']?\)/g)].map(m=>m[1]):[];
+          window.__cgHeroBackgroundDecoded=await Promise.all(urls.map(async src=>{const image=new Image();image.src=src;try{await image.decode();return image.naturalWidth>0}catch{return false}}));
+        });
         const state = await page.evaluate(expectedImages => {
           const issues = [];
           if (document.querySelector('svg,img[src*=".svg"],object[type="image/svg+xml"]')) issues.push('SVG image or inline artwork remains');
@@ -65,12 +70,12 @@ walk(root);
           const hero = document.querySelector('main section.cg-image-backed-hero');
           if (hero) {
             const background = getComputedStyle(hero).backgroundImage;
-            if(hero.classList.contains('cg-home-hero')){if(/url\(/i.test(background))issues.push('Homepage background was changed');}
-            else {
+            {
               const entry=expectedImages[hero.dataset.backgroundImage];
               if(!entry||!background.includes(entry.src.replace('.webp','-1200.webp')))issues.push('Matching hero background is missing');
             }
             if (/\.svg/i.test(background)) issues.push('SVG hero background remains');
+            if(!window.__cgHeroBackgroundDecoded?.length||window.__cgHeroBackgroundDecoded.some(ok=>!ok))issues.push('Hero background image did not decode');
             const heading = hero.querySelector('h1');
             if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');
             if (hero.getBoundingClientRect().height < 180) issues.push('Hero has collapsed');
