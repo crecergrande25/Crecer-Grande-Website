@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Illustrative welding process and inspection workflow</title>
+<desc id="desc">Four-stage process diagram from drawing review through weld feasibility to agreed inspection and documentation. Not a customer-job photograph.</desc>
+<defs><linearGradient id="base" x2="1" y2=".4"><stop stop-color="#08233d"/><stop offset="1" stop-color="#214e68"/></linearGradient></defs><rect width="1200" height="800" fill="url(#base)"/>
+<g font-family="Arial,Helvetica,sans-serif">
+<text x="70" y="91" font-weight="700" font-size="29" letter-spacing="2" fill="#f2bd59">A DEFINED WELDING ROUTE</text>
+<text x="70" y="132" font-size="24" fill="#cee4ed">Illustrative process — final steps depend on the approved scope</text>
+</g>
+<g stroke="#d0e4ed" stroke-width="4" fill="#284f6b">
+<rect x="70" y="225" width="245" height="340" rx="18"/>
+<rect x="342" y="225" width="245" height="340" rx="18"/>
+<rect x="614" y="225" width="245" height="340" rx="18"/>
+<rect x="886" y="225" width="245" height="340" rx="18"/>
+</g>
+<g stroke="#f2bf5b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M142 325h85l25 24-25 26h-85zM162 401h77M162 431h54"/>
+<path d="M409 440l70-135 50 135M437 382h75M462 292v-27"/>
+<path d="M685 445h102M736 313v112M684 362h101M725 303l13-28 13 28"/>
+<circle cx="1009" cy="372" r="72"/><path d="M966 373l29 27 55-62"/>
+</g>
+<g fill="#f1c467" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700">
+<text x="110" y="501">01 / INPUT</text><text x="374" y="501">02 / REVIEW</text><text x="647" y="501">03 / WELD</text><text x="905" y="501">04 / CHECK</text>
+</g>
+<g fill="#d6e8ef" font-family="Arial,Helvetica,sans-serif" font-size="20">
+<text x="107" y="609">Drawing / sample</text><text x="374" y="609">Fit-up / material</text><text x="645" y="609">Approved scope</text><text x="920" y="609">Agreed checks</text>
+<text x="73" y="730" font-size="18" letter-spacing="1.2" fill="#b4cdda">PROCESS ILLUSTRATION — NO COMPLETED WORK OR CERTIFICATION IS IMPLIED</text>
+</g>
+</svg>
