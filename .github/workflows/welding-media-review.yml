@@ -13,7 +13,7 @@ jobs:
     timeout-minutes: 14
     steps:
       - uses: actions/checkout@v4
-      - name: Validate photographic assets and site integrity
+      - name: Validate raster assets and site integrity
         run: |
           python3 -m pip install Pillow --break-system-packages
           python3 scripts/check_image_assets.py
@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Verify welding preparation photography on desktop and mobile
+      - name: Verify welding preparation media accuracy on desktop and mobile
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/crecer-weld.log 2>&1 &
           sleep 3
@@ -39,8 +39,8 @@ jobs:
       - name: Wait for updated public welding page
         run: |
           for attempt in $(seq 1 60); do
-            if curl --fail --silent --location --max-time 15 https://crecergrande.in/laser-welding-kolkata.html | grep -Fq 'Representative engineering-review imagery'; then
-              echo "Published welding page with representative photography is now visible."
+            if curl --fail --silent --location --max-time 15 https://crecergrande.in/laser-welding-kolkata.html | grep -Fq 'Confirm the material, joint design, fit-up and inspection scope before welding.'; then
+              echo "Published welding page with the current media policy is now visible."
               exit 0
             fi
             sleep 5
@@ -51,7 +51,7 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Validate deployed welding preparation photography on desktop and mobile
+      - name: Validate deployed welding preparation media accuracy on desktop and mobile
         env:
           SITE_BASE: https://crecergrande.in
         run: node scripts/check_welding_media.cjs

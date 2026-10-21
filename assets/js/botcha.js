@@ -15,7 +15,7 @@
   const messages=$('.cg-botcha-messages',root);
   const quick=$('.cg-botcha-quick',root);
   const status=$('.cg-botcha-status',root);
-  const STORAGE='cg_botcha_history_v2';
+  const STORAGE='cg_service_guide_history_v7';
   const MAX_HISTORY=10;
 
   const starter=[
@@ -48,7 +48,7 @@
     row.className='cg-botcha-message '+(role==='user'?'is-user':'is-bot');
     const avatar=document.createElement('div');
     avatar.className='cg-botcha-avatar';
-    avatar.textContent=role==='user'?'You':'B';
+    avatar.textContent=role==='user'?'You':'CG';
     const bubble=document.createElement('div');
     bubble.className='cg-botcha-bubble';
 
@@ -87,7 +87,7 @@
     messages.innerHTML='';
     if(!history.length){
       addMessage('assistant',
-        'Hi — I’m Botcha, Crecer Grande’s virtual engineering assistant. Tell me what you need to make, fix, design, verify or submit. I can explain the right service route and what information will help our team review it.',
+        'Hi — I’m Crecer Grande’s service guide. Tell me what you need to make, fix, design, verify or submit. I can explain the right service route and what information will help our team review it.',
         [{label:'Engineering Desk',url:'/engineering-desk.html'}],
         'CG knowledge assistant'
       );
@@ -115,7 +115,7 @@
     const row=document.createElement('div');
     row.className='cg-botcha-message is-bot cg-botcha-typing';
     const avatar=document.createElement('div');
-    avatar.className='cg-botcha-avatar';avatar.textContent='B';
+    avatar.className='cg-botcha-avatar';avatar.textContent='CG';
     const bubble=document.createElement('div');
     bubble.className='cg-botcha-bubble';
     bubble.innerHTML='<span></span><span></span><span></span>';
@@ -143,8 +143,8 @@
       links:[{label:'3D Printing',url:'/3d-printing-kolkata.html'}]
     };
     if(/plc|hmi|sensor|automation|control/.test(s))return {
-      answer:'Automation support covers PLC, HMI, I/O, sensors and machine controls. Share the machine model, control hardware, wiring/I/O information, alarm or symptom and the operating change you need.',
-      links:[{label:'Automation Solutions',url:'/divisions/automation-solutions.html'}]
+      answer:'Automation is not currently listed as an offered service. For an existing machine fault, send the make, model and symptoms so the team can review the maintenance requirement.',
+      links:[{label:'Machine maintenance',url:'/industrial-machine-maintenance-kolkata.html'}]
     };
     if(/rca|capa|ncr|quality|inspection/.test(s))return {
       answer:'Crecer Grande supports inspection, FAI, NCR and RCA/CAPA work. For a quality issue, share the requirement, evidence, measured result, containment status and available records.',
@@ -155,7 +155,7 @@
       links:[{label:'Contact Crecer Grande',url:'/contact.html'}]
     };
     return {
-      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, automation, quality and inspection. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
+      answer:'I can help route Crecer Grande enquiries across design, manufacturing, machine maintenance, quality and inspection. Tell me what you are trying to make, fix, verify or submit and what evidence you already have.',
       links:[{label:'Engineering Desk',url:'/engineering-desk.html'},{label:'Request a Quote',url:'/request-quote.html'}]
     };
   }
@@ -178,39 +178,7 @@
     typing(true);
     window.CGTrack?.('botcha_question',{length:question.length});
 
-    let result=null;
-    const cfg=window.CG_CONFIG||{};
-    if(cfg.supabaseUrl&&cfg.supabasePublishableKey){
-      const controller=new AbortController();
-      const timer=setTimeout(()=>controller.abort(),22000);
-      try{
-        const ids=window.CGVisitorIds?window.CGVisitorIds():['',''];
-        const res=await fetch(cfg.supabaseUrl+'/functions/v1/botcha-assistant',{
-          method:'POST',
-          signal:controller.signal,
-          headers:{
-            'Content-Type':'application/json',
-            'apikey':cfg.supabasePublishableKey
-          },
-          body:JSON.stringify({
-            message:question,
-            history:prior,
-            visitor_id:ids[0]||null,
-            session_id:ids[1]||null,
-            source_page:location.pathname
-          })
-        });
-        const data=await res.json().catch(()=>({}));
-        if(res.ok&&data?.answer)result=data;
-        else if(res.status===429)result={answer:data?.error||'I have reached the message limit for this connection. Please use Request a Quote or contact Crecer Grande directly.',links:[{label:'Request a Quote',url:'/request-quote.html'},{label:'Contact',url:'/contact.html'}],suggestions:[]};
-      }catch(_){}
-      clearTimeout(timer);
-    }
-
-    if(!result){
-      const fallback=localFallback(question);
-      result={...fallback,suggestions:starter,engine:'local'};
-    }
+    const result={...localFallback(question),suggestions:starter,engine:'local'};
 
     typing(false);
     const meta=result.engine==='ai'?'AI-assisted • grounded in CG information':result.engine==='semantic'?'Matched from CG knowledge':'CG quick guidance';

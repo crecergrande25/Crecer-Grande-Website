@@ -1,5 +1,5 @@
 (() => {
-  const RELEASE_CUTOFF = new Date('2026-09-22T07:00:00Z').getTime();
+  const RELEASE_CUTOFF = new Date(document.body.dataset.contentUpdatedAt||'2026-10-21T13:03:09Z').getTime();
   const text = v => String(v ?? '').trim();
   const setMeta = (selector, attr, value) => {
     const node=document.querySelector(selector);
@@ -28,7 +28,7 @@
   }
 
   function applyHomepage(data){
-    if(!data)return;
+    if(!data || new Date(data.updated_at||0).getTime()<RELEASE_CUTOFF || !data.updated_at)return;
     document.querySelectorAll('[data-home-field]').forEach(node=>{
       const value=data[node.dataset.homeField];
       if(text(value))node.textContent=value;

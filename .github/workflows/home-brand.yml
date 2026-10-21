@@ -26,6 +26,7 @@ jobs:
           sleep 3
           node scripts/check_home_brand.cjs
           node scripts/check_functional_flows.cjs
+          node scripts/check_release7.cjs
 
   live:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -41,7 +42,7 @@ jobs:
       - name: Wait for updated homepage assets
         run: |
           for attempt in $(seq 1 30); do
-            if curl --fail --silent --location --max-time 12 https://crecergrande.in/ | grep -Fq 'experience.css?v=1.0.0' && curl --fail --silent --location --max-time 12 https://crecergrande.in/assets/css/experience.css | grep -Fq 'Shared, responsive photographic design'; then
+            if curl --fail --silent --location --max-time 12 https://crecergrande.in/ | grep -Fq 'experience.css?v=7.0.0' && curl --fail --silent --location --max-time 12 https://crecergrande.in/assets/css/experience.css | grep -Fq 'Shared, responsive photographic design'; then
               echo "Production homepage and styles have updated."
               exit 0
             fi

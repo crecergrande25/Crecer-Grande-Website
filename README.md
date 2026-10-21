@@ -6,12 +6,12 @@ Production website for **https://crecergrande.in/**.
 
 - Engineering-focused homepage
 - Engineering Desk
-- Services and eight capability divisions
-- Projects and case-study patterns
+- One Services directory and four service divisions
+- Six engineering project guides
 - Engineering Insights, guides and downloadable division profiles
 - Industries, About, Contact, Privacy and Disclaimer
 - Request-for-Quote and enquiry workflows
-- Secure Website Manager under `/admin/`
+- Authenticated Website Manager under `/admin/`
 - Supabase-backed authentication, CMS data, enquiries and analytics
 - GitHub Pages deployment with the custom domain in `CNAME`
 
@@ -33,6 +33,7 @@ node --test scripts/check_calculators.cjs
 node scripts/check_home_brand.cjs
 node scripts/check_welding_media.cjs
 node scripts/check_functional_flows.cjs
+node scripts/check_release7.cjs
 node scripts/check_photography.cjs
 AUDIT_VIEWPORT=mobile node scripts/check_photography.cjs
 ```
@@ -41,11 +42,17 @@ Browser scripts default to the local server on port 8765; `SITE_BASE` selects an
 
 ## Photography
 
-Content imagery uses raster files; SVG artwork and inline SVG are excluded. Relevant images may be reused rather than forcing unrelated imagery or synthetic fillers into each placement. The asset guard prevents SVG artwork from being reintroduced. Retired SVG generation scripts have been removed.
+Unverified legacy images have been withdrawn from public layouts. The site currently uses text-led cards and solid hero backgrounds. This does not satisfy the requirement for original workshop photography; do not describe legacy or generated images as completed customer work.
 
-`assets/data/photography.json` records the existing assets selected for reuse. Their original photographic provenance was not supplied; the refresh does not establish that they are original photographs of Crecer Grande's premises or customer work. Representative imagery must not be presented as evidence of a specific customer project. Use properly sourced photographs or company-supplied originals for future replacements.
+`assets/data/photography.json` records the withdrawn library and the original photos still needed. Follow [the media brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) for capture, consent, captions and before/after pairs. Brand logos and functional QR images remain raster assets. SVG image assets are not permitted.
 
-Engineering calculators provide planning figures with explicit assumptions, not commercial quotations or substitutes for manufacturing review. Homepage search, Engineering Desk routes, project/article filters, forms and chat each have local functional coverage.
+## Release 7 handoff
+
+The service directory is `/services.html`, with four divisions. `/divisions.html` and retired Automation routes redirect there. The project library has six distinct guides; three overlapping legacy URLs redirect to related sections. These guides describe methods, not verified completed customer jobs.
+
+The static HTML carries a `data-content-updated-at` timestamp. CMS content older than that timestamp does not overwrite the release's copy; newer CMS edits can still apply. Public company settings remain dynamic. Review fresh CMS edits against the four-division scope.
+
+See [release notes and acceptance checks](docs/RELEASE_7_HANDOFF.md) and [owner account actions](docs/OWNER_ACCOUNT_ACTIONS.md). No production deployment or Google account setup is claimed.
 
 ## Security
 

@@ -1,6 +1,6 @@
-/** Check every page for usable photography, loaded assets and responsive layout.
- * Relevant photos may be reused: forced sitewide uniqueness caused unrelated
- * part imagery and synthetic SVG fillers in earlier versions of the website.
+/** Compatibility command: validate rendered media and layout.
+ * Legacy illustrations are withdrawn until original photographs are supplied.
+ * Do not enforce image counts or substitute synthetic artwork for missing photos.
  */
 const { chromium } = require('playwright');
 const { readOnlyContext } = require('./browser-test-helpers.cjs');
@@ -47,10 +47,13 @@ walk(root);
             if (!image.complete || !image.naturalWidth) issues.push('Image did not decode: ' + image.getAttribute('src'));
             if (!image.alt.trim()) issues.push('Image has no useful alternative text: ' + image.getAttribute('src'));
           }
+          for (const image of document.querySelectorAll('main img')) {
+            if (!/logo|qr-code|website-qr/i.test(image.getAttribute('src')||'')) issues.push('Unverified content image is rendered: '+image.getAttribute('src'));
+          }
           const hero = document.querySelector('main section.cg-image-backed-hero');
           if (hero) {
             const background = getComputedStyle(hero).backgroundImage;
-            if (!/url\(.+\.(webp|jpe?g|png)/i.test(background)) issues.push('Hero is missing raster photography');
+            if (/url\(/i.test(background)) issues.push('Unverified hero image is rendered');
             if (/\.svg/i.test(background)) issues.push('SVG hero background remains');
             const heading = hero.querySelector('h1');
             if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');
@@ -65,7 +68,7 @@ walk(root);
       finally { await page.close(); }
     }
   } finally { await browser.close(); }
-  console.log('PHOTOGRAPHY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, failures: failures.length }));
+  console.log('MEDIA_INTEGRITY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, failures: failures.length }));
   for (const failure of failures) console.error(JSON.stringify(failure));
   if (failures.length) process.exitCode = 1;
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -8,15 +8,17 @@ import sys
 
 BASE = "https://crecergrande.in"
 PAGES = {
-    "/": ['id="cg-global-search"', "experience.css?v=1.0.0"],
-    "/about.html": ["Five divisions connected by one Engineering Desk", "04 · Automation Solutions"],
-    "/services.html": ["Engineering Capabilities & Industrial Services", "Industrial Automation"],
-    "/divisions/automation-solutions.html": ["Industrial automation and PLC support", "PLC and HMI assessment"],
+    "/": ['id="cg-global-search"', "experience.css?v=7.0.0", "Four service divisions"],
+    "/about.html": ["Engineering design and machine support from Kolkata."],
+    "/services.html": ["Engineering Services Kolkata", "Four service divisions"],
+    "/divisions.html": ['http-equiv="refresh"', '/services.html'],
+    "/divisions/automation-solutions.html": ['http-equiv="refresh"', '/services.html'],
+    "/projects.html": ["Six engineering problems, explained.", "reverse-engineering-sample-to-drawing.html"],
     "/contact.html": ["Please provide at least one contact method", 'id="rfq-form"'],
     "/request-quote.html": ["Submit Requirement", 'id="rfq-form"'],
     "/assets/js/contact.js": ["Some reference files may not have been attached", "Please provide a phone number or email address"],
     "/robots.txt": ["Sitemap: https://crecergrande.in/sitemap.xml"],
-    "/sitemap.xml": ["https://crecergrande.in/divisions/automation-solutions.html"]
+    "/sitemap.xml": ["https://crecergrande.in/services.html"]
 }
 
 def fetch(path):

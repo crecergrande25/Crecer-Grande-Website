@@ -24,7 +24,7 @@ svgs=list(images.rglob('*.svg'))
 for svg in svgs:
     bad.append(f'SVG artwork is not permitted: {svg.relative_to(root)}')
 
-# Repeated content must be illustrated rather than replaced by plain-text cards.
+# Reject synthetic visual placeholders. Text-led cards are intentional until original photos are supplied.
 leftovers=[]
 for page in root.rglob('*.html'):
     html=page.read_text(encoding='utf8',errors='replace')
@@ -33,7 +33,7 @@ for page in root.rglob('*.html'):
     if 'cg-art-placeholder' in html:
         leftovers.append(str(page.relative_to(root)))
 if leftovers:
-    bad.append('Text-only content artwork placeholders remain: '+', '.join(leftovers))
+    bad.append('Synthetic content artwork placeholders remain: '+', '.join(leftovers))
 
 pat=re.compile(r'(?<![\w/-])/?assets/images/[\w./-]+\.(?:webp|png|jpg|jpeg|svg)\b',re.I)
 checked=0

@@ -7,14 +7,13 @@
     document.body.classList.remove('cg-v5','cg-body-polish');
   }
 
-  const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
   const HEADER_HOME = "<header class=\"site-header\"><div class=\"container navrow\"><a class=\"brand\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><button class=\"menu-btn\" type=\"button\" aria-label=\"Toggle navigation\" aria-expanded=\"false\" aria-controls=\"site-navigation\"><span></span><span></span><span></span></button><nav class=\"nav\" id=\"site-navigation\" aria-label=\"Main navigation\"><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/projects.html\">Projects</a><a href=\"/insights.html\">Insights</a><a href=\"/about.html\">About</a><a href=\"/contact.html\">Contact Us</a><a class=\"quote-nav\" href=\"/request-quote.html\">Request a Quote \u2192</a></nav></div></header>";
 
   const HEADER = "<header class=\"site-header\"><div class=\"container navrow\"><a class=\"brand\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><button class=\"menu-btn\" type=\"button\" aria-label=\"Toggle navigation\" aria-expanded=\"false\" aria-controls=\"site-navigation\"><span></span><span></span><span></span></button><nav class=\"nav\" id=\"site-navigation\" aria-label=\"Main navigation\"><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/projects.html\">Projects</a><a href=\"/insights.html\">Insights</a><a href=\"/about.html\">About</a><a href=\"/contact.html\">Contact Us</a><a class=\"quote-nav\" href=\"/request-quote.html\">Request a Quote \u2192</a></nav></div></header>";
 
-  const FOOTER_CTA = "<section class=\"cg-footer-cta\">\n<div class=\"container cg-footer-cta-inner\">\n<div>\n<h2>Have an engineering, manufacturing or operational requirement?</h2>\n<p>Send a drawing, sample, photograph, machine model, part number, document or problem statement. We will structure the most practical service route.</p>\n</div>\n<a class=\"cg-footer-cta-btn\" href=\"/request-quote.html\">Send Requirement</a>\n</div>\n</section>";
-  const FOOTER = "<footer class=\"cg-footer\"><div class=\"container cg-footer-grid\"><div class=\"cg-footer-brand\"><a class=\"cg-footer-logo-link\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><p class=\"cg-footer-tagline\">Engineering ideas. Practical outcomes.</p><p class=\"cg-footer-desc\">Design, manufacturing and industrial support from Kolkata, West Bengal.</p></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Explore</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/divisions.html\">Capability divisions</a><a href=\"/projects.html\">Projects &amp; approaches</a><a href=\"/estimate.html\">Engineering tools</a><a href=\"/insights.html\">Insights &amp; guides</a></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Company</h2><a href=\"/about.html\">About Crecer Grande</a><a href=\"/industries.html\">Industries</a><a href=\"/contact.html\">Contact Us</a><a href=\"/feedback.html\">Give feedback</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div><div class=\"cg-footer-col cg-footer-contact\"><h2 class=\"cg-footer-heading\">Let\u2019s talk about your requirement.</h2><a class=\"cg-contact-line\" data-site-field=\"phone_primary\" data-site-link=\"tel\" href=\"tel:+917003301781\">+91 7003301781</a><a class=\"cg-contact-line\" data-site-field=\"email_primary\" data-site-link=\"mailto\" href=\"mailto:crecergrande@outlook.com\">crecergrande@outlook.com</a><p class=\"cg-contact-address\" data-site-field=\"address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal \u2013 700135</p><div class=\"cg-footer-socials\"><a class=\"cg-social-pill\" aria-label=\"WhatsApp Crecer Grande\" href=\"https://wa.me/916291001781\" target=\"_blank\" rel=\"noopener\">WhatsApp \u2192</a><a class=\"cg-social-pill\" aria-label=\"Instagram Crecer Grande\" href=\"https://www.instagram.com/crecer_grande/\" target=\"_blank\" rel=\"noopener\">Instagram \u2192</a></div></div></div><div class=\"container cg-footer-bottom\"><span>\u00a9 2026 Crecer Grande. All rights reserved.</span><span>From the first question to the next practical step.</span><a class=\"cg-admin-login\" href=\"/admin/\" rel=\"nofollow\">Admin login</a></div></footer>";
+  const FOOTER_CTA = "<section class=\"cg-footer-cta\">\n<div class=\"container cg-footer-cta-inner\">\n<div>\n<h2>Have an engineering or industrial requirement?</h2>\n<p>Send a drawing, sample, photograph, machine model, part number or problem statement. We will identify the most practical next step.</p>\n</div>\n<a class=\"cg-footer-cta-btn\" href=\"/request-quote.html\">Send Requirement</a>\n</div>\n</section>";
+  const FOOTER = "<footer class=\"cg-footer\"><div class=\"container cg-footer-grid\"><div class=\"cg-footer-brand\"><a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><img alt=\"Crecer Grande\" class=\"cg-original-brand-logo\" decoding=\"async\" height=\"786\" src=\"/assets/images/Logo-R01.png\" width=\"2048\"/></a><p class=\"cg-footer-tagline\">CAD design, custom parts and machine support.</p><p class=\"cg-footer-desc\">Design, manufacturing and industrial support from Kolkata, West Bengal.</p></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Explore</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/projects.html\">Project guides</a><a href=\"/estimate.html\">Engineering tools</a><a href=\"/insights.html\">Insights &amp; guides</a></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Company</h2><a href=\"/about.html\">About Crecer Grande</a><a href=\"/industries.html\">Industries</a><a href=\"/contact.html\">Contact Us</a><a href=\"/feedback.html\">Give feedback</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div><div class=\"cg-footer-col cg-footer-contact\"><h2 class=\"cg-footer-heading\">Let\u2019s talk about your requirement.</h2><a class=\"cg-contact-line\" data-site-field=\"phone_primary\" data-site-link=\"tel\" href=\"tel:+917003301781\">+91 7003301781</a><a class=\"cg-contact-line\" data-site-field=\"email_primary\" data-site-link=\"mailto\" href=\"mailto:crecergrande@outlook.com\">crecergrande@outlook.com</a><p class=\"cg-contact-address\" data-site-field=\"address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal \u2013 700135</p><div class=\"cg-footer-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\">WhatsApp \u2192</a><a aria-label=\"Instagram Crecer Grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\">Instagram \u2192</a></div><p class=\"cg-registration\"><span data-site-field=\"gstin\" data-site-prefix=\"GSTIN: \">GSTIN: 19BBJPB4158H1ZM</span><br/><span data-site-field=\"udyam\" data-site-prefix=\"Udyam: \">Udyam: UDYAM-WB-14-0231207</span></p></div></div><div class=\"container cg-footer-bottom\"><span>\u00a9 2026 Crecer Grande. All rights reserved.</span><span>Kolkata, West Bengal, India.</span></div></footer>";
 
   function injectHeaderStyles(){
     if($('#cg-common-header-style')) return;
@@ -137,7 +136,7 @@
 
   function syncCommonFooter(){
     const path = location.pathname.toLowerCase();
-    if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
+    if(path.includes('/admin/')) return;
     const oldFooter = $('.cg-footer');
     if(!oldFooter) return;
     const oldCta = $('.cg-footer-cta');
@@ -149,12 +148,11 @@
 
   function syncCommonHeader(){
     const path = location.pathname.toLowerCase();
-    if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
+    if(path.includes('/admin/')) return;
     const oldHeader = $('.site-header');
     if(!oldHeader) return;
     const oldTopbar = $('.topbar');
-    if(oldTopbar) oldTopbar.outerHTML = TOPBAR;
-    else oldHeader.insertAdjacentHTML('beforebegin', TOPBAR);
+    if(oldTopbar) oldTopbar.remove();
     $('.site-header').outerHTML = (path==='/'||path==='/index.html') ? HEADER_HOME : HEADER;
     document.body.classList.add('cg-common-header-applied');
     injectHeaderStyles();
@@ -172,23 +170,23 @@
   }
 
   const BOTCHA = `<div class="ask cg-botcha" data-botcha-root>
-    <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Open Botcha virtual assistant">
-      <span class="cg-botcha-mark" aria-hidden="true">B</span>
-      <span class="cg-botcha-launch-copy"><b>Ask Botcha</b><small>Engineering service guide</small></span>
+    <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Ask us a question">
+      <span class="cg-botcha-mark" aria-hidden="true">?</span>
+      <span class="cg-botcha-launch-copy"><b>Ask us a question</b><small>Engineering service guide</small></span>
       <span class="cg-botcha-live-dot" aria-hidden="true"></span>
     </button>
-    <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Botcha virtual assistant" aria-hidden="true">
+    <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Service guide" aria-hidden="true">
       <header class="cg-botcha-head">
-        <span class="cg-botcha-mark" aria-hidden="true">B</span>
-        <div class="cg-botcha-head-copy"><h2 class="cg-botcha-title">Botcha !</h2><p>Virtual engineering assistant</p></div>
-        <span class="cg-botcha-ai-badge">AI ASSIST</span>
-        <button class="cg-botcha-close" type="button" aria-label="Close Botcha">×</button>
+        <span class="cg-botcha-mark" aria-hidden="true">?</span>
+        <div class="cg-botcha-head-copy"><h2 class="cg-botcha-title">Ask us a question</h2><p>Quick service guide</p></div>
+        <span class="cg-botcha-ai-badge">SERVICE GUIDE</span>
+        <button class="cg-botcha-close" type="button" aria-label="Close service guide">×</button>
       </header>
       <div class="cg-botcha-context"><strong>Ask about CG services, machines, drawings or quotations</strong><span class="cg-botcha-status">Service guide</span></div>
       <div class="cg-botcha-messages" aria-live="polite" aria-relevant="additions text"></div>
       <div class="cg-botcha-quick" aria-label="Suggested questions"></div>
       <form class="cg-botcha-form">
-        <textarea class="cg-botcha-input" rows="1" maxlength="900" placeholder="Ask Botcha a question…" aria-label="Message Botcha"></textarea>
+        <textarea class="cg-botcha-input" rows="1" maxlength="900" placeholder="Type your question…" aria-label="Your question"></textarea>
         <button class="cg-botcha-send" type="submit" aria-label="Send message">→</button>
       </form>
       <footer class="cg-botcha-foot">
@@ -202,13 +200,13 @@
     if(!document.querySelector('link[data-cg-botcha-css]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/botcha.css?v=2.0.0';
+      link.href='/assets/css/botcha.css?v=7.0.0';
       link.dataset.cgBotchaCss='1';
       document.head.appendChild(link);
     }
     if(!document.querySelector('script[src^="/assets/js/botcha.js"]')){
       const script=document.createElement('script');
-      script.src='/assets/js/botcha.js?v=2.0.0';
+      script.src='/assets/js/botcha.js?v=7.0.0';
       script.dataset.cgBotchaJs='1';
       script.defer=true;
       document.body.appendChild(script);
@@ -222,22 +220,6 @@
     document.body.insertAdjacentHTML('beforeend',BOTCHA);
     ensureBotchaAssets();
     document.dispatchEvent(new Event('cg:botcha-ready'));
-  }
-
-  function normalizeAdminLogin(){
-    const path=(location.pathname||'/').toLowerCase();
-    if(path.includes('/admin/')) return;
-    const bottom=$('.cg-footer-bottom');
-    if(!bottom) return;
-    let admin=bottom.querySelector('.cg-admin-login');
-    if(!admin){
-      admin=document.createElement('a');
-      admin.className='cg-admin-login';
-      admin.href='/admin/';
-      admin.rel='nofollow';
-      admin.textContent='Admin Login';
-      bottom.appendChild(admin);
-    }
   }
 
   function enhanceCreativeExperience(){
@@ -255,7 +237,7 @@
         const target=href.toLowerCase();
         const active=(path===target) ||
           (path==='/' && target==='/') ||
-          (path.startsWith('/divisions/') && target==='/divisions.html') ||
+          (path.startsWith('/divisions/') && target==='/services.html') ||
           (path.startsWith('/projects/') && target==='/projects.html') ||
           (path.startsWith('/insights/') && target==='/insights.html');
         if(active){a.classList.add('active');a.setAttribute('aria-current','page')}
@@ -265,24 +247,8 @@
     const heroSelectors='.pr-hero,.page-hero,.content-hero,.service-hero,.dv4-detail-hero,.ed5-hero,.am3-hero,.elite-detail-hero,.contact-v27-hero,.quote-v27-hero';
     $$(heroSelectors).forEach(hero=>hero.classList.add('cg-creative-hero'));
 
-    const motionTargets=$$('main .section,main .pr-section,main .pr-card,main .visual-card,main .case-card,main .case-study-card,main .resource-card,main .insight-related-card,main .dv4-cap-grid article,main .ed5-cap-grid article');
-    motionTargets.forEach((el,i)=>{
-      el.classList.add('cg-reveal');
-      el.style.setProperty('--cg-reveal-delay',Math.min((i%5)*45,180)+'ms');
-    });
-    document.body.classList.add('cg-motion-ready');
-
-    const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if(!reduce && 'IntersectionObserver' in window){
-      const io=new IntersectionObserver(entries=>{
-        entries.forEach(entry=>{
-          if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}
-        });
-      },{rootMargin:'0px 0px -7% 0px',threshold:.06});
-      motionTargets.forEach(el=>io.observe(el));
-    }else{
-      motionTargets.forEach(el=>el.classList.add('is-visible'));
-    }
+    // Content stays visible, including below the fold and when scripts fail.
+    $$('.cg-reveal').forEach(el=>el.classList.add('is-visible'));
 
     $$('main img:not([loading])').forEach((img,i)=>{
       const inHero=!!img.closest(heroSelectors);
@@ -323,7 +289,7 @@
     if(!link){
       link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/experience.css?v=1.0.0';
+      link.href='/assets/css/experience.css?v=7.0.0';
       link.dataset.cgExperience='1';
     }
     document.head.appendChild(link);
@@ -335,7 +301,6 @@
     syncCommonHeader();
     syncCommonFooter();
     removeDuplicateTerminalCta();
-    normalizeAdminLogin();
     normalizeFeedbackTab();
     normalizeBotcha();
     normalizeContactLabels();

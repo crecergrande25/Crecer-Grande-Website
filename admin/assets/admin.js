@@ -48,7 +48,8 @@
     window.CG_SUPABASE=client;
   }
   async function loadProfile(){
-    const {data:{user}}=await client.auth.getUser(); if(!user)return null;
+    const {data:{user},error:authError}=await client.auth.getUser();
+    if(authError||!user)throw new Error('An authenticated administrator session is required.');
     const {data,error}=await client.from('user_profiles').select('*').eq('user_id',user.id).maybeSingle();
     if(error)throw error;if(!data?.is_active)throw new Error('This administrator profile is inactive.');
     return data;
@@ -65,10 +66,23 @@
       const email=aliasToEmail($('#login-alias').value),password=$('#login-password').value;
       const {error}=await client.auth.signInWithPassword({email,password}); if(error)throw error;
       profile=await loadProfile(); await loadPermissions(); showApp();
-    }catch(err){$('#login-status').textContent=err.message||String(err)}
+    }catch(err){
+      clearWorkspace('Sign-in failed. Check your credentials and administrator access.');
+      try{await client.auth.signOut()}catch(_){}
+    }
     finally{b.disabled=false}
   }
+  function clearWorkspace(message='Your session has ended. Sign in again.'){
+    profile=null;permissions=new Set();
+    const app=$('#admin-app');app.hidden=true;app.inert=true;app.classList.remove('open');
+    $('#content').replaceChildren();
+    $('#login-shell').classList.remove('hidden');
+    $('#login-status').textContent=message;
+    closeDrawer();closeUserModal();
+  }
   function showApp(){
+    if(!profile?.is_active)throw new Error('An active administrator profile is required.');
+    $('#admin-app').hidden=false;$('#admin-app').inert=false;
     $('#login-shell').classList.add('hidden');$('#admin-app').classList.add('open');
     $('#profile-name').textContent=profile.display_name||profile.login_slug||'Administrator';
     $('#profile-role').textContent=(profile.role_key||'administrator')+(profile.is_root?' • Root':'');
@@ -299,6 +313,9 @@
   async function boot(){
     try{
       await initClient();
+      client.auth.onAuthStateChange(event=>{
+        if(event==='SIGNED_OUT'||event==='USER_DELETED')clearWorkspace();
+      });
       $('#login-form').addEventListener('submit',login);
       $('#logout-btn').onclick=logout;$('#refresh-btn').onclick=()=>view(currentView);$('#drawer-close').onclick=closeDrawer;$('#drawer-cancel').onclick=closeDrawer;$('#drawer-save').onclick=()=>saveDrawer().catch(e=>status(e.message,'bad'));
       $('#user-modal-cancel').onclick=closeUserModal;

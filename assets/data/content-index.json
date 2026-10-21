@@ -1,338 +1,317 @@
 [
   {
-    "name": "3D Printing & Rapid Prototyping",
-    "kind": "Service & capability",
+    "name": "FROM CAD TO PHYSICAL PART.",
+    "kind": "Service",
     "desc": "3D printing and rapid prototyping support from Kolkata with CAD upload, FDM, resin, SLS/MJF RFQ, material selection, brass inserts, finishing and FAI.",
     "href": "/3d-printing-kolkata.html",
     "keywords": "3d printing kolkata"
   },
   {
+    "name": "An engineering business built around understanding the requirement first.",
+    "kind": "Service",
+    "desc": "Crecer Grande, Kolkata: 3D design, drafting, piping design, reverse engineering, laser cutting, laser welding and marking, with machine, and inspection support.",
+    "href": "/about.html",
+    "keywords": "about"
+  },
+  {
     "name": "CUSTOM & OBSOLETE MACHINE SPARES",
-    "kind": "Service & capability",
+    "kind": "Service",
     "desc": "Identify, source, reverse engineer or manufacture difficult-to-obtain industrial machine components.",
     "href": "/custom-machine-spares.html",
     "keywords": "custom machine spares"
   },
   {
-    "name": "Mechanical Design Job Work",
-    "kind": "Service & capability",
+    "name": "2D. 3D. PIPING. ENGINEERING DRAWINGS.",
+    "kind": "Service",
     "desc": "Outsource mechanical design job work to Crecer Grande for 2D drafting, 3D CAD, piping layouts, manufacturing drawings, BOM and revisions.",
     "href": "/design-job-work.html",
     "keywords": "design job work"
   },
   {
-    "name": "From engineering idea to production-ready part.",
-    "kind": "Service & capability",
-    "desc": "Advanced manufacturing, rapid prototyping, laser, fabrication, machining and custom component support by Crecer Grande.",
-    "href": "/divisions/advanced-manufacturing.html",
-    "keywords": "advanced manufacturing"
-  },
-  {
-    "name": "Industrial automation and PLC support in Kolkata",
-    "kind": "Service & capability",
-    "desc": "Crecer Grande supports industrial automation requirements in Kolkata including PLC and HMI assessment, sensors, control panels, machine troubleshooting and retrofit planning.",
-    "href": "/divisions/automation-solutions.html",
-    "keywords": "automation solutions"
-  },
-  {
-    "name": "Turn incomplete inputs into clear engineering output.",
-    "kind": "Service & capability",
-    "desc": "Mechanical CAD, production drawings, BOM support, DFM/DFA and reverse engineering for industrial parts, assemblies and documentation.",
-    "href": "/divisions/engineering-design.html",
-    "keywords": "engineering design"
-  },
-  {
-    "name": "Turn acceptance criteria into objective evidence.",
-    "kind": "Service & capability",
-    "desc": "First Article Inspection, dimensional and visual verification, acceptance checks and structured reporting against drawings and defined criteria.",
-    "href": "/divisions/inspection-testing.html",
-    "keywords": "inspection testing"
-  },
-  {
-    "name": "Fix the failure mechanism , not only the symptom.",
-    "kind": "Service & capability",
-    "desc": "Industrial machine breakdown assessment, restoration planning, preventive maintenance and consumable monitoring by Crecer Grande.",
-    "href": "/divisions/machine-maintenance.html",
-    "keywords": "machine maintenance"
-  },
-  {
-    "name": "Five service divisions. One coordinated industrial route.",
-    "kind": "Service & capability",
-    "desc": "Explore Crecer Grande divisions across manufacturing, design, maintenance, quality, automation, and inspection.",
-    "href": "/divisions.html",
-    "keywords": "divisions"
-  },
-  {
-    "name": "CG Engineering Desk",
-    "kind": "Service & capability",
+    "name": "Bring the problem. We’ll help structure the solution.",
+    "kind": "Service",
     "desc": "Route design, manufacturing, machine troubleshooting, inspection and quality requirements through Crecer Grande's Engineering Desk.",
     "href": "/engineering-desk.html",
     "keywords": "engineering desk"
   },
   {
-    "name": "Engineering Calculators & Planning Tools",
-    "kind": "Service & capability",
+    "name": "Get a clearer picture. Start with the numbers.",
+    "kind": "Service",
     "desc": "Choose Crecer Grande tools for 3D printing estimates, laser product identification and engineering requirement intake.",
     "href": "/estimate.html",
     "keywords": "estimate"
   },
   {
-    "name": "Inspection / FAI / RCA / CAPA",
-    "kind": "Service & capability",
+    "name": "INDUSTRIAL INSPECTION & QA SUPPORT",
+    "kind": "Service",
     "desc": "Dimensional/visual inspection, first article review, pre-dispatch checks, NCR/CAPA and vendor-quality follow-up.",
     "href": "/industrial-inspection-qa-kolkata.html",
     "keywords": "industrial inspection qa kolkata"
   },
   {
-    "name": "Industrial Machine Maintenance",
-    "kind": "Service & capability",
+    "name": "INDUSTRIAL MACHINE MAINTENANCE",
+    "kind": "Service",
     "desc": "Industrial machine troubleshooting, breakdown, preventive maintenance and restoration support using structured technical evidence.",
     "href": "/industrial-machine-maintenance-kolkata.html",
     "keywords": "industrial machine maintenance kolkata"
   },
   {
     "name": "INDUSTRIAL SERVICES THAT FLEX AROUND THE PROCESS.",
-    "kind": "Service & capability",
-    "desc": "Crecer Grande supports manufacturers, machine builders, fabrication shops, automation integrators, maintenance teams and industrial supply chains.",
+    "kind": "Service",
+    "desc": "Crecer Grande supports manufacturers, machine builders, fabrication shops, integrators, maintenance teams and industrial supply chains.",
     "href": "/industries.html",
     "keywords": "industries"
   },
   {
-    "name": "STEP vs STL vs 3MF for 3D Printing: What Should You Send?",
-    "kind": "Engineering guide",
-    "desc": "Understand when STEP/STP solid CAD is better than STL or 3MF mesh data, and why mesh units and resolution matter to additive manufacturing quotations.",
-    "href": "/insights/3d-printing-file-formats.html",
-    "keywords": "3d printing file formats"
-  },
-  {
-    "name": "3D Printing Tolerances: What Designers Should Expect",
-    "kind": "Engineering guide",
-    "desc": "A practical overview of why FDM and resin parts do not reproduce CAD perfectly and how orientation, geometry, process and post-processing affect fit.",
-    "href": "/insights/3d-printing-tolerances.html",
-    "keywords": "3d printing tolerances"
-  },
-  {
-    "name": "How to Select an Equivalent Laser Chiller Pump",
-    "kind": "Engineering guide",
-    "desc": "A practical guide to matching a replacement laser chiller pump by voltage, flow, head, ports, mounting, fluid duty and control rather than wattage alone.",
-    "href": "/insights/chiller-pump-equivalent-selection.html",
-    "keywords": "chiller pump equivalent selection"
-  },
-  {
-    "name": "CNC / VMC Speeds & Feeds: The Basic Relationships",
-    "kind": "Engineering guide",
-    "desc": "A practical explanation of cutting speed, spindle RPM, feed per tooth and table feed for milling operations.",
-    "href": "/insights/cnc-vmc-speeds-feeds-basics.html",
-    "keywords": "cnc vmc speeds feeds basics"
-  },
-  {
-    "name": "GD&T Basics: Datums, Position, Orientation & Why They Matter",
-    "kind": "Engineering guide",
-    "desc": "Learn how datum references and geometric tolerances communicate functional requirements more clearly than plus/minus dimensions alone.",
-    "href": "/insights/gdt-datum-basics.html",
-    "keywords": "gdt datum basics"
-  },
-  {
-    "name": "Holes Near Sheet-Metal Bends: How to Avoid Distortion",
-    "kind": "Engineering guide",
-    "desc": "A practical design guide for placing holes, slots and hardware features near bends so they do not stretch, ovalize or tear during forming.",
-    "href": "/insights/holes-near-sheet-metal-bends.html",
-    "keywords": "holes near sheet metal bends"
-  },
-  {
-    "name": "How to Identify an Unknown Laser Consumable",
-    "kind": "Engineering guide",
-    "desc": "A practical checklist for identifying laser nozzles, protective windows, ceramic rings and head spares using model, dimensions, location and photographs.",
-    "href": "/insights/identify-laser-consumables.html",
-    "keywords": "identify laser consumables"
-  },
-  {
-    "name": "Laser Cutting Defects: A Practical Troubleshooting Guide",
-    "kind": "Engineering guide",
-    "desc": "A structured way to investigate burr, wide kerf, incomplete cuts, rough edges, piercing problems and unstable cutting without guessing at parameters.",
-    "href": "/insights/laser-cutting-defects.html",
-    "keywords": "laser cutting defects"
-  },
-  {
-    "name": "Laser Cutting Nozzle, Centering & Focus: What Each One Changes",
-    "kind": "Engineering guide",
-    "desc": "Understand laser nozzle geometry, centering, standoff and focus position, and the controlled checks needed after changing cutting consumables.",
-    "href": "/insights/laser-nozzle-focus-basics.html",
-    "keywords": "laser nozzle focus basics"
-  },
-  {
-    "name": "Machine Breakdown Data Checklist: What to Capture Before Troubleshooting",
-    "kind": "Engineering guide",
-    "desc": "Use this checklist to collect alarms, symptoms, recent changes, operating conditions and evidence before troubleshooting an industrial machine breakdown.",
-    "href": "/insights/machine-breakdown-data-checklist.html",
-    "keywords": "machine breakdown data checklist"
-  },
-  {
-    "name": "Metric Tap Drill & Clearance Hole Guide — M3 to M24",
-    "kind": "Engineering guide",
-    "desc": "Metric coarse tap-drill and clearance-hole reference with practical guidance on tapping holes, bolt clearance and common shop-floor sizes.",
-    "href": "/insights/metric-tap-drill-clearance-hole-chart.html",
-    "keywords": "metric tap drill clearance hole chart"
-  },
-  {
-    "name": "NCR vs RCA vs CAPA: How the Quality Tools Fit Together",
-    "kind": "Engineering guide",
-    "desc": "A practical explanation of nonconformance, root-cause analysis, corrective action and effectiveness verification for manufacturing quality systems.",
-    "href": "/insights/ncr-rca-capa-guide.html",
-    "keywords": "ncr rca capa guide"
-  },
-  {
-    "name": "Preventive Maintenance Basics for CNC, VMC & Industrial Machines",
-    "kind": "Engineering guide",
-    "desc": "A practical framework for daily, weekly, monthly and scheduled machine checks without replacing the OEM maintenance manual.",
-    "href": "/insights/preventive-maintenance-basics.html",
-    "keywords": "preventive maintenance basics"
-  },
-  {
-    "name": "Sheet-Metal Bending Basics: V-Die, Radius, K-Factor & Bend Allowance",
-    "kind": "Engineering guide",
-    "desc": "A practical introduction to air bending, V-die selection, inside radius, bend allowance and the information required before bending sheet metal.",
-    "href": "/insights/sheet-metal-bending-basics.html",
-    "keywords": "sheet metal bending basics"
-  },
-  {
-    "name": "Correct Handling of Stainless-Steel Sheet & Components",
-    "kind": "Engineering guide",
-    "desc": "Practical handling, storage and contamination-control guidance to protect stainless-steel surfaces before fabrication and delivery.",
-    "href": "/insights/stainless-steel-handling.html",
-    "keywords": "stainless steel handling"
-  },
-  {
-    "name": "Surface Roughness Basics: Ra, Rz & What a Drawing Is Asking For",
-    "kind": "Engineering guide",
-    "desc": "A practical introduction to common surface-roughness parameters and why the same Ra value can hide very different surface profiles.",
-    "href": "/insights/surface-roughness-ra-rz.html",
-    "keywords": "surface roughness ra rz"
-  },
-  {
-    "name": "How to Use a Vernier Caliper Correctly",
-    "kind": "Engineering guide",
-    "desc": "A practical guide to external, internal and depth measurement with a vernier or digital caliper, including zero checks, alignment and repeatability.",
-    "href": "/insights/vernier-caliper-guide.html",
-    "keywords": "vernier caliper guide"
-  },
-  {
     "name": "Practical knowledge for better industrial decisions.",
-    "kind": "Service & capability",
+    "kind": "Service",
     "desc": "Practical Crecer Grande engineering articles, troubleshooting checklists, quality guides and downloadable division profiles for industrial requirements.",
     "href": "/insights.html",
     "keywords": "insights"
   },
   {
-    "name": "Laser Cutting",
-    "kind": "Service & capability",
+    "name": "LASER CUTTING SERVICES",
+    "kind": "Service",
     "desc": "Drawing-led laser cutting support for sheet-metal components, prototypes and production quantities with material and tolerance review.",
     "href": "/laser-cutting-kolkata.html",
     "keywords": "laser cutting kolkata"
   },
   {
-    "name": "Laser Marking",
-    "kind": "Service & capability",
+    "name": "INDUSTRIAL LASER MARKING SERVICES",
+    "kind": "Service",
     "desc": "Industrial marking for part numbers, serials, logos, QR/Data Matrix and traceability requirements subject to material and readability review.",
     "href": "/laser-marking-kolkata.html",
     "keywords": "laser marking kolkata"
   },
   {
-    "name": "Laser Welding",
-    "kind": "Service & capability",
+    "name": "LASER WELDING SERVICES",
+    "kind": "Service",
     "desc": "Laser welding support for stainless steel and other metal parts, sheet-metal assemblies and repairs, with joint, material and finish review before work starts.",
     "href": "/laser-welding-kolkata.html",
     "keywords": "laser welding kolkata"
   },
   {
-    "name": "Mechanical Design & CAD",
-    "kind": "Service & capability",
+    "name": "MECHANICAL DESIGN & CAD SERVICES",
+    "kind": "Service",
     "desc": "Mechanical design services covering 3D CAD, 2D drafting, piping layouts, manufacturing drawings, BOM, DFM/DFA and reverse engineering.",
     "href": "/mechanical-design-services-kolkata.html",
     "keywords": "mechanical design services kolkata"
   },
   {
-    "name": "3D Printing: First Article Before Releasing the Batch",
-    "kind": "Project approach",
-    "desc": "See how first-article inspection helps control dimensional variation in 3D printed parts before repeat production and batch release.",
-    "href": "/projects/3d-print-fai-batch.html",
-    "keywords": "3d print fai batch"
-  },
-  {
-    "name": "CO₂ Laser Component Support: Model-Specific Identification",
-    "kind": "Project approach",
-    "desc": "CO2 laser component identification and maintenance-spare support based on actual machine details, dimensions, photos and compatibility review.",
-    "href": "/projects/co2-laser-components-support.html",
-    "keywords": "co2 laser components support"
-  },
-  {
-    "name": "Custom Marked Component: Artwork to Repeatable Process",
-    "kind": "Project approach",
-    "desc": "Laser-marked metal keychains and custom branded marking by Crecer Grande in Kolkata for names, logos, identifiers and small-batch requirements.",
-    "href": "/projects/custom-keychain-laser-marking.html",
-    "keywords": "custom keychain laser marking"
-  },
-  {
-    "name": "Replacement Component Fit: Verifying Interfaces Before Installation",
-    "kind": "Project approach",
-    "desc": "Field measurement error, drawing mismatch and tolerance stack can all look like a “part too tight / too loose” problem.",
-    "href": "/projects/fit-correction-replacement-component.html",
-    "keywords": "fit correction replacement component"
-  },
-  {
-    "name": "Laser Chiller Pump Replacement: Matching Duty Over Appearance",
-    "kind": "Project approach",
-    "desc": "A replacement pump can fit physically and still fail hydraulically. This project pattern shows the evidence needed before selecting an equivalent.",
-    "href": "/projects/laser-chiller-pump-replacement.html",
-    "keywords": "laser chiller pump replacement"
-  },
-  {
-    "name": "Laser Cutting Quality Deterioration: Evidence-Based Root Cause Analysis",
-    "kind": "Project approach",
-    "desc": "Structured RCA for laser cutting quality issues covering optics, nozzle centering, focus, gas, contamination, settings and maintenance evidence.",
-    "href": "/projects/laser-machine-rca.html",
-    "keywords": "laser machine rca"
-  },
-  {
-    "name": "Precision Marked Components: Cutting, Edge Quality and Traceability",
-    "kind": "Project approach",
-    "desc": "A small marked component can involve material, cutting, edge quality, code readability and inspection — not just engraving a QR image.",
-    "href": "/projects/precision-marked-components.html",
-    "keywords": "precision marked components"
-  },
-  {
-    "name": "SS304 QR-Code Laser Marking: Cutting, Finishing and Readable Marking",
-    "kind": "Project approach",
-    "desc": "Case study: SS304 laser-cut identification plates with individual QR code marking, company name and readability verification.",
-    "href": "/projects/ss304-qr-code-laser-marking.html",
-    "keywords": "ss304 qr code laser marking"
-  },
-  {
-    "name": "Engineering work in practice. Problems, evidence and practical paths.",
-    "kind": "Service & capability",
+    "name": "Six engineering problems, explained.",
+    "kind": "Service",
     "desc": "Explore Crecer Grande engineering, manufacturing, maintenance, 3D printing and quality case-study patterns.",
     "href": "/projects.html",
     "keywords": "projects"
   },
   {
     "name": "REVERSE ENGINEERING SERVICES",
-    "kind": "Service & capability",
+    "kind": "Service",
     "desc": "Reverse engineering for industrial components using samples, field measurements, drawings and functional interface data.",
     "href": "/reverse-engineering-kolkata.html",
     "keywords": "reverse engineering kolkata"
   },
   {
-    "name": "Industrial services organized around the work you need done.",
-    "kind": "Service & capability",
-    "desc": "Engineering design, manufacturing, maintenance, automation, inspection and quality support from Crecer Grande.",
+    "name": "Services",
+    "kind": "Service",
+    "desc": "Engineering design, manufacturing, maintenance, inspection and quality support from Crecer Grande.",
     "href": "/services.html",
     "keywords": "services"
   },
   {
-    "name": "Sheet Metal Bending",
-    "kind": "Service & capability",
+    "name": "SHEET METAL BENDING & PRESS BRAKE SUPPORT",
+    "kind": "Service",
     "desc": "Sheet-metal bending support with tooling, bend geometry, material/thickness and dimensional review.",
     "href": "/sheet-metal-bending-kolkata.html",
     "keywords": "sheet metal bending kolkata"
+  },
+  {
+    "name": "From engineering idea to production-ready part.",
+    "kind": "Service",
+    "desc": "Advanced manufacturing, rapid prototyping, laser, fabrication, machining and custom component support by Crecer Grande.",
+    "href": "/divisions/advanced-manufacturing.html",
+    "keywords": "divisions/advanced manufacturing"
+  },
+  {
+    "name": "Turn incomplete inputs into clear engineering output.",
+    "kind": "Service",
+    "desc": "Mechanical CAD, production drawings, BOM support, DFM/DFA and reverse engineering for industrial parts, assemblies and documentation.",
+    "href": "/divisions/engineering-design.html",
+    "keywords": "divisions/engineering design"
+  },
+  {
+    "name": "Turn acceptance criteria into objective evidence.",
+    "kind": "Service",
+    "desc": "First Article Inspection, dimensional and visual verification, acceptance checks and structured reporting against drawings and defined criteria.",
+    "href": "/divisions/inspection-testing.html",
+    "keywords": "divisions/inspection testing"
+  },
+  {
+    "name": "Fix the failure mechanism , not only the symptom.",
+    "kind": "Service",
+    "desc": "Industrial machine breakdown assessment, restoration planning, preventive maintenance and consumable monitoring by Crecer Grande.",
+    "href": "/divisions/machine-maintenance.html",
+    "keywords": "divisions/machine maintenance"
+  },
+  {
+    "name": "STEP vs STL vs 3MF for 3D Printing: What Should You Send?",
+    "kind": "Engineering guide",
+    "desc": "Understand when STEP/STP solid CAD is better than STL or 3MF mesh data, and why mesh units and resolution matter to additive manufacturing quotations.",
+    "href": "/insights/3d-printing-file-formats.html",
+    "keywords": "insights/3d printing file formats"
+  },
+  {
+    "name": "3D Printing Tolerances: What Designers Should Expect",
+    "kind": "Engineering guide",
+    "desc": "A practical overview of why FDM and resin parts do not reproduce CAD perfectly and how orientation, geometry, process and post-processing affect fit.",
+    "href": "/insights/3d-printing-tolerances.html",
+    "keywords": "insights/3d printing tolerances"
+  },
+  {
+    "name": "How to Select an Equivalent Laser Chiller Pump",
+    "kind": "Engineering guide",
+    "desc": "A practical guide to matching a replacement laser chiller pump by voltage, flow, head, ports, mounting, fluid duty and control rather than wattage alone.",
+    "href": "/insights/chiller-pump-equivalent-selection.html",
+    "keywords": "insights/chiller pump equivalent selection"
+  },
+  {
+    "name": "CNC / VMC Speeds & Feeds: The Basic Relationships",
+    "kind": "Engineering guide",
+    "desc": "A practical explanation of cutting speed, spindle RPM, feed per tooth and table feed for milling operations.",
+    "href": "/insights/cnc-vmc-speeds-feeds-basics.html",
+    "keywords": "insights/cnc vmc speeds feeds basics"
+  },
+  {
+    "name": "GD&T Basics: Datums, Position, Orientation & Why They Matter",
+    "kind": "Engineering guide",
+    "desc": "Learn how datum references and geometric tolerances communicate functional requirements more clearly than plus/minus dimensions alone.",
+    "href": "/insights/gdt-datum-basics.html",
+    "keywords": "insights/gdt datum basics"
+  },
+  {
+    "name": "Holes Near Sheet-Metal Bends: How to Avoid Distortion",
+    "kind": "Engineering guide",
+    "desc": "A practical design guide for placing holes, slots and hardware features near bends so they do not stretch, ovalize or tear during forming.",
+    "href": "/insights/holes-near-sheet-metal-bends.html",
+    "keywords": "insights/holes near sheet metal bends"
+  },
+  {
+    "name": "How to Identify an Unknown Laser Consumable",
+    "kind": "Engineering guide",
+    "desc": "A practical checklist for identifying laser nozzles, protective windows, ceramic rings and head spares using model, dimensions, location and photographs.",
+    "href": "/insights/identify-laser-consumables.html",
+    "keywords": "insights/identify laser consumables"
+  },
+  {
+    "name": "Laser Cutting Defects: A Practical Troubleshooting Guide",
+    "kind": "Engineering guide",
+    "desc": "A structured way to investigate burr, wide kerf, incomplete cuts, rough edges, piercing problems and unstable cutting without guessing at parameters.",
+    "href": "/insights/laser-cutting-defects.html",
+    "keywords": "insights/laser cutting defects"
+  },
+  {
+    "name": "Laser Cutting Nozzle, Centering & Focus: What Each One Changes",
+    "kind": "Engineering guide",
+    "desc": "Understand laser nozzle geometry, centering, standoff and focus position, and the controlled checks needed after changing cutting consumables.",
+    "href": "/insights/laser-nozzle-focus-basics.html",
+    "keywords": "insights/laser nozzle focus basics"
+  },
+  {
+    "name": "Machine Breakdown Data Checklist: What to Capture Before Troubleshooting",
+    "kind": "Engineering guide",
+    "desc": "Use this checklist to collect alarms, symptoms, recent changes, operating conditions and evidence before troubleshooting an industrial machine breakdown.",
+    "href": "/insights/machine-breakdown-data-checklist.html",
+    "keywords": "insights/machine breakdown data checklist"
+  },
+  {
+    "name": "Metric Tap Drill & Clearance Hole Guide — M3 to M24",
+    "kind": "Engineering guide",
+    "desc": "Metric coarse tap-drill and clearance-hole reference with practical guidance on tapping holes, bolt clearance and common shop-floor sizes.",
+    "href": "/insights/metric-tap-drill-clearance-hole-chart.html",
+    "keywords": "insights/metric tap drill clearance hole chart"
+  },
+  {
+    "name": "NCR vs RCA vs CAPA: How the Quality Tools Fit Together",
+    "kind": "Engineering guide",
+    "desc": "A practical explanation of nonconformance, root-cause analysis, corrective action and effectiveness verification for manufacturing quality systems.",
+    "href": "/insights/ncr-rca-capa-guide.html",
+    "keywords": "insights/ncr rca capa guide"
+  },
+  {
+    "name": "Preventive Maintenance Basics for CNC, VMC & Industrial Machines",
+    "kind": "Engineering guide",
+    "desc": "A practical framework for daily, weekly, monthly and scheduled machine checks without replacing the OEM maintenance manual.",
+    "href": "/insights/preventive-maintenance-basics.html",
+    "keywords": "insights/preventive maintenance basics"
+  },
+  {
+    "name": "Sheet-Metal Bending Basics: V-Die, Radius, K-Factor & Bend Allowance",
+    "kind": "Engineering guide",
+    "desc": "A practical introduction to air bending, V-die selection, inside radius, bend allowance and the information required before bending sheet metal.",
+    "href": "/insights/sheet-metal-bending-basics.html",
+    "keywords": "insights/sheet metal bending basics"
+  },
+  {
+    "name": "Correct Handling of Stainless-Steel Sheet & Components",
+    "kind": "Engineering guide",
+    "desc": "Practical handling, storage and contamination-control guidance to protect stainless-steel surfaces before fabrication and delivery.",
+    "href": "/insights/stainless-steel-handling.html",
+    "keywords": "insights/stainless steel handling"
+  },
+  {
+    "name": "Surface Roughness Basics: Ra, Rz & What a Drawing Is Asking For",
+    "kind": "Engineering guide",
+    "desc": "A practical introduction to common surface-roughness parameters and why the same Ra value can hide very different surface profiles.",
+    "href": "/insights/surface-roughness-ra-rz.html",
+    "keywords": "insights/surface roughness ra rz"
+  },
+  {
+    "name": "How to Use a Vernier Caliper Correctly",
+    "kind": "Engineering guide",
+    "desc": "A practical guide to external, internal and depth measurement with a vernier or digital caliper, including zero checks, alignment and repeatability.",
+    "href": "/insights/vernier-caliper-guide.html",
+    "keywords": "insights/vernier caliper guide"
+  },
+  {
+    "name": "3D Printing: First Article Before Releasing the Batch",
+    "kind": "Engineering guide",
+    "desc": "See how first-article inspection helps control dimensional variation in 3D printed parts before repeat production and batch release.",
+    "href": "/projects/3d-print-fai-batch.html",
+    "keywords": "projects/3d print fai batch"
+  },
+  {
+    "name": "Replacement Component Fit: Verifying Interfaces Before Installation",
+    "kind": "Engineering guide",
+    "desc": "Field measurement error, drawing mismatch and tolerance stack can all look like a “part too tight / too loose” problem.",
+    "href": "/projects/fit-correction-replacement-component.html",
+    "keywords": "projects/fit correction replacement component"
+  },
+  {
+    "name": "Laser Chiller Pump Replacement: Matching Duty Over Appearance",
+    "kind": "Engineering guide",
+    "desc": "A replacement pump can fit physically and still fail hydraulically. This guide explains the evidence needed before selecting an equivalent.",
+    "href": "/projects/laser-chiller-pump-replacement.html",
+    "keywords": "projects/laser chiller pump replacement"
+  },
+  {
+    "name": "Laser Cutting Quality Deterioration: Evidence-Based Root Cause Analysis",
+    "kind": "Engineering guide",
+    "desc": "Structured RCA for laser cutting quality issues covering optics, nozzle centering, focus, gas, contamination, settings and maintenance evidence.",
+    "href": "/projects/laser-machine-rca.html",
+    "keywords": "projects/laser machine rca"
+  },
+  {
+    "name": "Precision Marked Components: Cutting, Edge Quality and Traceability",
+    "kind": "Engineering guide",
+    "desc": "A small marked component can involve material, cutting, edge quality, code readability and inspection — not just engraving a QR image.",
+    "href": "/projects/precision-marked-components.html",
+    "keywords": "projects/precision marked components"
+  },
+  {
+    "name": "From a worn sample to a usable drawing.",
+    "kind": "Engineering guide",
+    "desc": "Separate wear from intended geometry, measure the working interfaces and agree a drawing before manufacturing a replacement part.",
+    "href": "/projects/reverse-engineering-sample-to-drawing.html",
+    "keywords": "reverse engineering sample worn part manufacturing drawing"
   }
 ]

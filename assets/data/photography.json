@@ -1,67 +1,82 @@
 {
-  "design": {
-    "src": "/assets/images/process-cad-v23.webp",
-    "alt": "Engineer reviewing a mechanical CAD model at a workstation",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "drawing": {
-    "src": "/assets/images/process-drawing-v23.webp",
-    "alt": "Engineers reviewing a component and its technical drawing",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "manufacturing": {
-    "src": "/assets/images/service-laser-cutting.webp",
-    "alt": "Laser processing a metal sheet in a workshop",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "inspection": {
-    "src": "/assets/images/process-cad-v23b.webp",
-    "alt": "Dimensional inspection of a machined component",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "maintenance": {
-    "src": "/assets/images/process-maintain-v23.webp",
-    "alt": "Technician checking an industrial machine control cabinet",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "automation": {
-    "src": "/assets/images/resource-automation-v23.webp",
-    "alt": "Industrial automation hardware in an electrical control cabinet",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "quality": {
-    "src": "/assets/images/resource-quality-v23.webp",
-    "alt": "Engineering inspection notes and dimensional measurement tools",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "business": {
-    "src": "/assets/images/resource-tender-v23.webp",
-    "alt": "Technical documents and a laptop prepared for business review",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "pump": {
-    "src": "/assets/images/project-chiller-v23b.webp",
-    "alt": "Inspection of a mechanical pump assembly",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "marking": {
-    "src": "/assets/images/project-keychain-v23.webp",
-    "alt": "Metal components with permanent markings",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "printing": {
-    "src": "/assets/images/prod-3d-v23.webp",
-    "alt": "Additive manufacturing equipment and sample parts",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "logistics": {
-    "src": "/assets/images/process-supply-v23.webp",
-    "alt": "Industrial material handling and workshop logistics",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
-  },
-  "spares": {
-    "src": "/assets/images/project-co2-v23.webp",
-    "alt": "Laser optics and machine-component identification references",
-    "source": "Existing repository asset; original photographic provenance was not supplied."
+  "status": "awaiting-original-photographs",
+  "render_legacy_photos": false,
+  "required": [
+    "Workshop hero",
+    "CAD bench",
+    "Laser cutting",
+    "Laser welding",
+    "Machine maintenance",
+    "Inspection bench",
+    "Reverse-engineering before and after",
+    "Laser marking before and after",
+    "Laser cutting before and after"
+  ],
+  "legacy_assets": {
+    "design": {
+      "src": "/assets/images/process-cad-v23.webp",
+      "alt": "Engineer reviewing a mechanical CAD model at a workstation",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "drawing": {
+      "src": "/assets/images/process-drawing-v23.webp",
+      "alt": "Engineers reviewing a component and its technical drawing",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "manufacturing": {
+      "src": "/assets/images/service-laser-cutting.webp",
+      "alt": "Laser processing a metal sheet in a workshop",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "inspection": {
+      "src": "/assets/images/process-cad-v23b.webp",
+      "alt": "Dimensional inspection of a machined component",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "maintenance": {
+      "src": "/assets/images/process-maintain-v23.webp",
+      "alt": "Technician checking an industrial machine control cabinet",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "automation": {
+      "src": "/assets/images/resource-automation-v23.webp",
+      "alt": "Industrial automation hardware in an electrical control cabinet",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "quality": {
+      "src": "/assets/images/resource-quality-v23.webp",
+      "alt": "Engineering inspection notes and dimensional measurement tools",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "business": {
+      "src": "/assets/images/resource-tender-v23.webp",
+      "alt": "Technical documents and a laptop prepared for business review",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "pump": {
+      "src": "/assets/images/project-chiller-v23b.webp",
+      "alt": "Inspection of a mechanical pump assembly",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "marking": {
+      "src": "/assets/images/project-keychain-v23.webp",
+      "alt": "Metal components with permanent markings",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "printing": {
+      "src": "/assets/images/prod-3d-v23.webp",
+      "alt": "Additive manufacturing equipment and sample parts",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "logistics": {
+      "src": "/assets/images/process-supply-v23.webp",
+      "alt": "Industrial material handling and workshop logistics",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    },
+    "spares": {
+      "src": "/assets/images/project-co2-v23.webp",
+      "alt": "Laser optics and machine-component identification references",
+      "source": "Existing repository asset; original photographic provenance was not supplied."
+    }
   }
 }

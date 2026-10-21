@@ -26,7 +26,7 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
 .eyebrow,.subhead{text-transform:uppercase;letter-spacing:.17em;font-weight:900;font-size:11px;color:#a97000}
 .hero{position:relative;min-height:690px;color:#fff;display:flex;align-items:center;overflow:hidden;background:
  linear-gradient(90deg,rgba(2,14,32,.98) 0%,rgba(6,26,55,.96) 41%,rgba(7,26,54,.64) 72%,rgba(7,26,54,.25) 100%),
- url("../images/hero-engineering.webp") center/cover}
+ none center/cover}
 .hero::before,.tech-bg::before{content:"";position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:48px 48px}
 .hero-inner{position:relative;z-index:2;padding:88px 0;max-width:760px}.hero .eyebrow{color:var(--gold-2)}.hero h1{margin:15px 0 22px;font-size:clamp(44px,6vw,80px);line-height:.98;letter-spacing:-.055em}.hero h1 em{font-style:normal;color:var(--gold)}.hero p{max-width:675px;margin:0;color:#d9e4f2;font-size:18px;line-height:1.8}
 .actions{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin-top:27px}.btn{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:11px 18px;border:1px solid transparent;border-radius:12px;font-weight:900;font-size:13px;transition:.2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--gold);color:#17120a;box-shadow:0 12px 30px rgba(244,176,0,.21)}.btn.dark{background:var(--navy);color:#fff}.btn.outline{background:#fff;border-color:#cdd7e4;color:var(--navy)}.hero .btn.outline,.dark-section .btn.outline,.cta .btn.outline{background:transparent;border-color:rgba(255,255,255,.38);color:#fff}
@@ -503,7 +503,7 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
 .contact-premium-visual{position:relative;overflow:hidden;padding:26px;background:
 linear-gradient(180deg,rgba(3,17,36,.20),rgba(3,17,36,.95)),
 linear-gradient(90deg,rgba(3,17,36,.76),rgba(3,17,36,.34)),
-url("../images/laser.webp") center/cover;color:#fff}
+none center/cover;color:#fff}
 .contact-premium-visual::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;pointer-events:none}
 .contact-premium-visual>*{position:relative;z-index:2}
 .contact-premium-brandrow{display:flex;align-items:center;justify-content:space-between;gap:14px}
