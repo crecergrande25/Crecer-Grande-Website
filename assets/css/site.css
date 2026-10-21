@@ -209,7 +209,7 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
   height:100%;
   fill:currentColor;
 }
-.cg-footer-col h4{
+.cg-footer-col :is(h4,h2.cg-footer-heading){
   margin:0 0 17px;
   color:#fff;
   font-size:15px;
@@ -263,7 +263,7 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
     gap:20px;
     align-items:start;
   }
-  .cg-footer-contact h4{grid-column:1/-1;margin-bottom:0}
+  .cg-footer-contact :is(h4,h2.cg-footer-heading){grid-column:1/-1;margin-bottom:0}
   .cg-contact-address{margin:0}
 }
 @media(max-width:760px){
@@ -277,7 +277,7 @@ button{cursor:pointer}.container{width:min(var(--max),calc(100% - 44px));margin-
     grid-column:1/-1;
     display:block;
   }
-  .cg-footer-contact h4{margin-bottom:17px}
+  .cg-footer-contact :is(h4,h2.cg-footer-heading){margin-bottom:17px}
   .cg-footer-bottom{
     grid-template-columns:1fr;
     gap:7px;
@@ -2197,3 +2197,6 @@ body .cg-footer-logo-link img.cg-original-brand-logo {
     width: 220px !important;
   }
 }
+
+/* Heading accessibility: estimate cards remain visually equivalent to former h3 titles. */
+main .resource-card h2.cg-estimate-tool-title{font-size:1.17em;font-weight:700;margin-block:1em;line-height:normal}
