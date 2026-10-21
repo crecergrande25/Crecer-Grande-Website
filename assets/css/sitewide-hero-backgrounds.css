@@ -1,0 +1,170 @@
+/*
+ * CRECER GRANDE — image-backed, full-width hero system
+ * Applied only to public pages with .cg-image-backed-hero.
+ * Each page sets --cg-hero-background-art to its own image.
+ * Original brand logo, content cards, forms and nonhero imagery are untouched.
+ */
+body main section.cg-image-backed-hero {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden;
+  color: #f6f8fb !important;
+  background-color: #071b32 !important;
+  background-image:
+    linear-gradient(90deg, rgba(3,13,27,.94) 0%, rgba(5,23,43,.87) 39%, rgba(8,33,55,.63) 71%, rgba(7,28,48,.47) 100%),
+    var(--cg-hero-background-art) !important;
+  background-size: cover, cover !important;
+  background-position: center, center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  border: 0 !important;
+  box-shadow: none;
+  min-height: 330px;
+  padding-top: clamp(56px, 6vw, 95px) !important;
+  padding-bottom: clamp(58px, 6vw, 95px) !important;
+}
+
+/* Give the hero one coherent visual canvas, not a small right-hand image card. */
+body main section.cg-image-backed-hero :is(
+  .pr-hero-grid, .service-hero-grid, .design-hero-grid,
+  .print3d-hero-grid, .ed5-hero-grid, .ins5-hero-grid,
+  .mm5-hero-grid, .tv4-contact-hero-grid, .au5-hero-grid,
+  .insight-hero-grid
+) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  min-width: 0;
+  align-items: center;
+  gap: 0 !important;
+}
+
+body main section.cg-image-backed-hero :is(
+  .pr-hero-media, .service-visual, .design-hero-visual,
+  .print3d-visual, .ed5-hero-visual, .ins5-hero-visual,
+  .mm5-visual, .tv4-contact-visual, .am3-hero-media,
+  .am3-hero-shade, .au5-hero-visual, .insight-hero-grid > img,
+  .insight-hero-grid > picture, .insight-hero-grid > figure
+) {
+  display: none !important;
+}
+
+body main section.cg-image-backed-hero :is(
+  .pr-hero-copy, .service-hero-copy, .design-hero-copy,
+  .print3d-hero-copy, .ed5-hero-copy, .ins5-hero-copy,
+  .mm5-hero-copy, .am3-hero-copy, .tv4-contact-hero-copy,
+  .insight-hero-grid > div:first-child
+) {
+  position: relative !important;
+  z-index: 2;
+  min-width: 0 !important;
+  width: min(100%, 880px) !important;
+  max-width: 880px !important;
+}
+
+/* Custom division modules frequently have their own oversized split widths. */
+body main section.cg-image-backed-hero :is(
+  .pr-container, .container, .am3-hero-inner
+) {
+  position: relative;
+  z-index: 2;
+}
+body main section.cg-image-backed-hero .pr-hero-grid {
+  display: block !important;
+}
+body main section.cg-image-backed-hero .pr-hero-copy {
+  max-width: 880px !important;
+}
+body main section.cg-image-backed-hero .pr-hero-copy h1 {
+  max-width: 19ch !important;
+}
+body main section.cg-image-backed-hero h1,
+body main section.cg-image-backed-hero h2,
+body main section.cg-image-backed-hero h3 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 19px rgba(0,8,23,.3) !important;
+}
+body main section.cg-image-backed-hero p,
+body main section.cg-image-backed-hero :is(.pr-lede,.insight-meta,.case-meta,small) {
+  color: #e9f0f8 !important;
+}
+body main section.cg-image-backed-hero :is(.pr-gold,.pr-eyebrow,.eyebrow,.subhead,.pr-card-kicker) {
+  color: #efbb54 !important;
+}
+body main section.cg-image-backed-hero h1 em,
+body main section.cg-image-backed-hero h1 .pr-gold {
+  color: #e3ae43 !important;
+}
+
+/* Stats and metadata stay legible over photography and linework. */
+body main section.cg-image-backed-hero :is(
+  .pr-metrics,.pr-metric,.insight-meta,.case-meta,.ed5-proof,.am3-trust-row,
+  .content-proof,.mm5-proof,.ins5-proof
+) {
+  color: #ffffff !important;
+}
+body main section.cg-image-backed-hero .pr-metrics {
+  max-width: 790px;
+  background: rgba(6,25,44,.68) !important;
+  border: 1px solid rgba(240,230,205,.22) !important;
+  backdrop-filter: blur(8px);
+}
+body main section.cg-image-backed-hero .pr-metric strong,
+body main section.cg-image-backed-hero .pr-metric span {
+  color: #ffffff !important;
+}
+body main section.cg-image-backed-hero :is(.pr-actions,.actions,.ed5-actions,.am3-hero-actions) {
+  position: relative;
+  z-index: 3;
+}
+
+/* Hero variants that previously filled the complete viewport need compact padding. */
+body main section.cg-image-backed-hero:is(.content-hero,.insight-hero,.project-hero,.fb-hero,.page-hero) {
+  min-height: 290px;
+  padding-top: clamp(52px, 5vw, 78px) !important;
+  padding-bottom: clamp(52px, 5vw, 78px) !important;
+}
+body main section.cg-image-backed-hero.pr-hero {
+  min-height: 460px;
+}
+body main section.cg-image-backed-hero .content-hero-grid {
+  gap: 30px !important;
+}
+body main section.cg-image-backed-hero .content-proof {
+  background: rgba(4,22,42,.42);
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 12px;
+}
+body main section.cg-image-backed-hero .content-proof b,
+body main section.cg-image-backed-hero .content-proof small {
+  color: #fff !important;
+}
+
+/* Browser / motion comfort: no parallax; mobile darkening stays strong enough. */
+@media (max-width: 1050px) {
+  body main section.cg-image-backed-hero {
+    background-image:
+      linear-gradient(90deg, rgba(3,13,27,.95),rgba(4,20,38,.86) 64%,rgba(7,28,48,.73)),
+      var(--cg-hero-background-art) !important;
+    background-position: center, 65% center !important;
+    min-height: auto;
+  }
+  body main section.cg-image-backed-hero .pr-hero-copy h1 {
+    max-width: 20ch !important;
+  }
+}
+@media (max-width: 640px) {
+  body main section.cg-image-backed-hero {
+    background-image:
+      linear-gradient(90deg, rgba(3,13,27,.96),rgba(5,19,38,.88)),
+      var(--cg-hero-background-art) !important;
+    padding-top: 53px !important;
+    padding-bottom: 56px !important;
+    background-position: center, 67% center !important;
+  }
+  body main section.cg-image-backed-hero h1 {
+    overflow-wrap: break-word;
+  }
+  body main section.cg-image-backed-hero .pr-hero-copy h1 {
+    max-width: none !important;
+  }
+}
