@@ -18,16 +18,16 @@ jobs:
         run: |
           npm install --no-save playwright@1.56.1
           npx playwright install --with-deps chromium
-      - name: Wait for the new illustrated site to be visible
+      - name: Wait for the latest sitewide background release
         run: |
           for i in $(seq 1 24); do
-            if curl --fail --silent --show-error --location --max-time 15 https://crecergrande.in/services.html | grep -q '/assets/images/page-unique/services-01-77e61e9c.svg'; then
-              echo 'New unique artwork is published on the production domain.'
+            if curl --fail --silent --show-error --location --max-time 15 https://crecergrande.in/services.html | grep -q 'sitewide-hero-backgrounds.css?v=1.0.0'; then
+              echo 'Sitewide image hero stylesheet is linked on the production domain.'
               exit 0
             fi
             sleep 5
           done
-          echo 'Timed out waiting for deployed content illustrations.'
+          echo 'Timed out waiting for sitewide hero styling.'
           exit 1
       - name: Check every live desktop page for duplicated content imagery
         env:
@@ -38,3 +38,13 @@ jobs:
           SITE_BASE: https://crecergrande.in
           AUDIT_VIEWPORT: mobile
         run: node scripts/check_live_image_uniqueness.cjs
+
+      - name: Verify live full-width image heroes on desktop
+        env:
+          SITE_BASE: https://crecergrande.in
+        run: node scripts/check_sitewide_hero_backgrounds.cjs
+      - name: Verify live full-width image heroes on mobile
+        env:
+          SITE_BASE: https://crecergrande.in
+          HERO_VIEWPORT: mobile
+        run: node scripts/check_sitewide_hero_backgrounds.cjs
