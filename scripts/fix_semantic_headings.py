@@ -47,9 +47,9 @@ for file in sorted(ROOT.rglob('*.html')):
 # Shared nav/footer are built again in site.js on some routes.
 js=ROOT/"assets/js/site.js"
 old=js.read_text(encoding="utf8")
-new=old.replace('<h4>Service Routes</h4>','<h2 class="cg-footer-heading">Service Routes</h2>')
-new=new.replace('<h4>Company</h4>','<h2 class="cg-footer-heading">Company</h2>')
-new=new.replace('<h4>Contact Us</h4>','<h2 class="cg-footer-heading">Contact Us</h2>')
+new=old.replace('<h4>Service Routes</h4>','<h2 class=cg-footer-heading>Service Routes</h2>')
+new=new.replace('<h4>Company</h4>','<h2 class=cg-footer-heading>Company</h2>')
+new=new.replace('<h4>Contact Us</h4>','<h2 class=cg-footer-heading>Contact Us</h2>')
 new=new.replace('<h3>Botcha !</h3>','<h2 class="cg-botcha-title">Botcha !</h2>')
 if new==old:raise RuntimeError("Shared footer / Botcha headings not found")
 js.write_text(new,encoding="utf8")
