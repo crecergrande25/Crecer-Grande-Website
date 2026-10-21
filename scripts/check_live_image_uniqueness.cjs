@@ -65,6 +65,9 @@ async function main(){
           }catch{}
         };
         for(const el of document.querySelectorAll('img')){
+          // A picture moved to the hero's CSS background is hidden on purpose;
+          // count what is actually displayed, not a hidden HTML fallback image.
+          if(!el.getClientRects().length)continue;
           if(el.src && el.naturalWidth===0)urls.push({url:el.getAttribute('src'),role:'BROKEN'});
           else take(el.currentSrc||el.src,'img');
         }
