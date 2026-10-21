@@ -200,13 +200,13 @@
     if(!document.querySelector('link[data-cg-botcha-css]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/botcha.css?v=7.0.0';
+      link.href='/assets/css/botcha.css?v=8.0.0';
       link.dataset.cgBotchaCss='1';
       document.head.appendChild(link);
     }
     if(!document.querySelector('script[src^="/assets/js/botcha.js"]')){
       const script=document.createElement('script');
-      script.src='/assets/js/botcha.js?v=7.0.0';
+      script.src='/assets/js/botcha.js?v=8.0.0';
       script.dataset.cgBotchaJs='1';
       script.defer=true;
       document.body.appendChild(script);
@@ -289,7 +289,7 @@
     if(!link){
       link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/experience.css?v=7.0.0';
+      link.href='/assets/css/experience.css?v=8.0.0';
       link.dataset.cgExperience='1';
     }
     document.head.appendChild(link);

@@ -8,7 +8,7 @@ import sys
 
 BASE = "https://crecergrande.in"
 PAGES = {
-    "/": ['id="cg-global-search"', "experience.css?v=7.0.0", "Four service divisions"],
+    "/": ['id="cg-global-search"', "experience.css?v=8.0.0", "Four service divisions"],
     "/about.html": ["Engineering design and machine support from Kolkata."],
     "/services.html": ["Engineering Services Kolkata", "Four service divisions"],
     "/divisions.html": ['http-equiv="refresh"', '/services.html'],

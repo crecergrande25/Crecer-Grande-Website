@@ -17,15 +17,24 @@ const base=process.env.SITE_BASE||'http://127.0.0.1:8765';
     assert.equal(await page.locator('a[href*="automation"]').count(),0);
     assert.equal(await page.locator('.topbar').count(),0);
     assert.equal(await page.locator('.nav a[href="/services.html"]').innerText(),'Services');
-    assert.equal(await page.locator('main img').count(),0);
+    assert.ok(await page.locator('main [data-generated-image]').count()>=4);
    }
    await go('/');assert.equal(await page.locator('.cg-botcha-launch-copy b').innerText(),'Ask us a question');
    assert.equal(await page.locator('main a[href="/services.html"]').innerText(),'Explore Services');
   });
-  await check('Six unique project guides load with real headings and no invented photos',async()=>{
+  await check('Six unique project guides load with headings and disclosed generated illustrations',async()=>{
    await go('/projects.html');const links=await page.locator('[data-filter-item]').evaluateAll(a=>a.map(e=>e.getAttribute('href')));
    assert.equal(links.length,6);assert.equal(new Set(links).size,6);
-   for(const href of links){await go(href);assert.equal(new URL(page.url()).pathname,href,'Project link must open its own guide');assert.equal(await page.locator('main h1').count(),1);assert.equal(await page.locator('main img').count(),0)}
+   for(const href of links){await go(href);assert.equal(new URL(page.url()).pathname,href,'Project link must open its own guide');assert.equal(await page.locator('main h1').count(),1);assert.ok(await page.locator('main [data-generated-image]').count()>=2);assert.ok(await page.locator('.cg-media-disclosure').isVisible())}
+  });
+  await check('Mobile quote form keeps usable fields before its illustration sidebar',async()=>{
+   await page.setViewportSize({width:320,height:844});await go('/request-quote.html');
+   const form=await page.locator('#rfq-form').boundingBox(),aside=await page.locator('main aside').boundingBox();
+   const field=await page.locator('#rfq-form [name="name"]').boundingBox();
+   assert.ok(form.width>=270,'RFQ form must not collapse into a narrow grid column');
+   assert.ok(field.width>=210,'Reply fields must remain wide enough to enter text');
+   assert.ok(aside.y>=form.y+form.height-2,'Sidebar must follow the form on mobile');
+   await page.setViewportSize({width:390,height:844});
   });
   await check('Retired directory, Automation and duplicate project routes redirect correctly',async()=>{
    const redirects=[['/divisions.html','/services.html'],['/industrial-automation-kolkata.html','/services.html'],['/divisions/automation-solutions.html','/services.html'],['/projects/co2-laser-components-support.html','/projects/laser-machine-rca.html#component-identification'],['/projects/custom-keychain-laser-marking.html','/projects/precision-marked-components.html#artwork'],['/projects/ss304-qr-code-laser-marking.html','/projects/precision-marked-components.html#qr-plates']];

@@ -1,16 +1,1242 @@
 {
-  "status": "awaiting-original-photographs",
+  "status": "owner-requested-generated-illustrations",
+  "format": "responsive WebP",
+  "source": "Image Gen, generated at the owner’s explicit request",
+  "real_company_photographs": false,
   "render_legacy_photos": false,
-  "required": [
-    "Workshop hero",
-    "CAD bench",
-    "Laser cutting",
-    "Laser welding",
-    "Machine maintenance",
-    "Inspection bench",
-    "Reverse-engineering before and after",
-    "Laser marking before and after",
-    "Laser cutting before and after"
+  "entries": [
+    {
+      "id": "01",
+      "title": "Workshop hero",
+      "src": "/assets/images/generated/01-workshop-hero.webp",
+      "alt": "Illustrated workshop with a machined housing on a bench and an enclosed CNC machine",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "01-workshop-hero.png",
+      "sha256": "365a9305f84dd6a2dfeed9cb52723839f324552cfdb37e1381c6e27fc83ad010"
+    },
+    {
+      "id": "02",
+      "title": "Engineering and CAD",
+      "src": "/assets/images/generated/02-engineering-and-cad.webp",
+      "alt": "Engineer reviewing a bracket model and manufacturing drawing at a CAD workstation",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "02-engineering-and-cad.png",
+      "sha256": "18cd1eb80eceb50ab1f2ca07df6a6522f7c232cc9f816e7c7aaef0211cef3731"
+    },
+    {
+      "id": "03",
+      "title": "Manufacturing division",
+      "src": "/assets/images/generated/03-manufacturing-division.webp",
+      "alt": "Machined bracket, cut steel plate, printed prototype and turned spacer on a bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "03-manufacturing-division.png",
+      "sha256": "3fbf65c1f6130575e34f74a71209c84769017898ba8046eed22fbfc356ed9b98"
+    },
+    {
+      "id": "04",
+      "title": "Machine maintenance",
+      "src": "/assets/images/generated/04-machine-maintenance.webp",
+      "alt": "Technician inspecting a stationary motor coupling and bearing housing",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "04-machine-maintenance.png",
+      "sha256": "be49b0890586fc8101ccaee5a6bd74b4df74d4657131e4803fc037c19bccc698"
+    },
+    {
+      "id": "05",
+      "title": "Inspection and quality",
+      "src": "/assets/images/generated/05-inspection-and-quality.webp",
+      "alt": "Micrometer positioned around a stepped steel shaft during dimensional inspection",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "05-inspection-and-quality.png",
+      "sha256": "fddf00b0f878a04b51f302e826db90c8177839f43da8187456dc816c3e563245"
+    },
+    {
+      "id": "06",
+      "title": "Laser cutting",
+      "src": "/assets/images/generated/06-laser-cutting.webp",
+      "alt": "Laser cutting head processing sheet metal inside an enclosed machine",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "06-laser-cutting.png",
+      "sha256": "c7993708439063530da234eb2b123b80acfe61e976187e16b0a0202541fe0335"
+    },
+    {
+      "id": "07",
+      "title": "Laser welding",
+      "src": "/assets/images/generated/07-laser-welding.webp",
+      "alt": "Laser welding head joining two clamped stainless-steel sheets along a straight seam",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "07-laser-welding.png",
+      "sha256": "a69de829ffcba4366c53bdd4e0754cb11964f2a15ec982e08a9bdcd8132f7873"
+    },
+    {
+      "id": "08",
+      "title": "Laser marking",
+      "src": "/assets/images/generated/08-laser-marking.webp",
+      "alt": "Laser marking head above a stainless plate held in a locating fixture",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "08-laser-marking.png",
+      "sha256": "fb8b4268b2c31c9e4bbb5be80d6769942bf2e1aae06db747945c9bec85a510f7"
+    },
+    {
+      "id": "09",
+      "title": "3D printing",
+      "src": "/assets/images/generated/09-3d-printing.webp",
+      "alt": "Enclosed FDM printer producing a gray polymer bracket",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "09-3d-printing.png",
+      "sha256": "c490f8bca321dee93b69f6d8390ab951c59336a82a71146382863b0baf0523d5"
+    },
+    {
+      "id": "10",
+      "title": "Reverse engineering",
+      "src": "/assets/images/generated/10-reverse-engineering.webp",
+      "alt": "Worn mechanical bracket beside a matching illustrated replacement",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "10-reverse-engineering.png",
+      "sha256": "ea4bcc3c2f047692c066a88284dc6eb31aaa20aa389aa97e29642dc1d288c90b"
+    },
+    {
+      "id": "11",
+      "title": "Sheet metal bending",
+      "src": "/assets/images/generated/11-sheet-metal-bending.webp",
+      "alt": "Sheet metal supported between a press-brake punch and V die",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "11-sheet-metal-bending.png",
+      "sha256": "0fc1cf04cb34029ca6d053a7b5bf5f7cc70b6aa39776ff1807e7353f337dcd41"
+    },
+    {
+      "id": "12",
+      "title": "CNC milling",
+      "src": "/assets/images/generated/12-cnc-milling.webp",
+      "alt": "End mill machining a pocketed aluminum housing held in a vise",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "12-cnc-milling.png",
+      "sha256": "5319d8a7b73198cd09b77a7f13ad61bf8ef6237917462dc327c07ca356ccf1cd"
+    },
+    {
+      "id": "13",
+      "title": "CNC turning",
+      "src": "/assets/images/generated/13-cnc-turning.webp",
+      "alt": "Turning tool beside a stepped shaft secured in a lathe chuck",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "13-cnc-turning.png",
+      "sha256": "8e42f66fe1d1e513b13dc9b4ba47081f3d43a23f4dd840bf69d3719cea6769af"
+    },
+    {
+      "id": "14",
+      "title": "Mechanical assembly planning",
+      "src": "/assets/images/generated/14-mechanical-assembly-planning.webp",
+      "alt": "Bearing housing, shaft, bearings, spacer and fasteners arranged for assembly",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "14-mechanical-assembly-planning.png",
+      "sha256": "e0b05d8394745750a7436294666a7ef596b4431cfb0669a2012297368ea6c23b"
+    },
+    {
+      "id": "15",
+      "title": "Piping layout design",
+      "src": "/assets/images/generated/15-piping-layout-design.webp",
+      "alt": "Engineer reviewing a piping layout beside an elbow and flange",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "15-piping-layout-design.png",
+      "sha256": "11173c9ab9e3ec8c4c32f1268732e262459cd6f7ab31d41c6c9c19d95ecd057c"
+    },
+    {
+      "id": "16",
+      "title": "Production drawing review",
+      "src": "/assets/images/generated/16-production-drawing-review.webp",
+      "alt": "Hands reviewing a shaft drawing beside a corresponding stepped shaft",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "16-production-drawing-review.png",
+      "sha256": "0d5a0ec30d1cd8b89a5dadd60eed89de4d0798ec1559f8a4e010b1f490050658"
+    },
+    {
+      "id": "17",
+      "title": "Industrial spare identification",
+      "src": "/assets/images/generated/17-industrial-spare-identification.webp",
+      "alt": "Worn bushing, gear and coupling arranged with a caliper for identification",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "17-industrial-spare-identification.png",
+      "sha256": "d6080a1e33a85da9f8eeaa4cb1dc336cc4457e7f385d8a49797e63fc8772d0a0"
+    },
+    {
+      "id": "18",
+      "title": "Chiller pump compatibility",
+      "src": "/assets/images/generated/18-chiller-pump-compatibility.webp",
+      "alt": "Unbranded circulation pump showing ports, mounting feet and electrical cable",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "18-chiller-pump-compatibility.png",
+      "sha256": "888be1fd57e15eb1df4da5f008c30ce5c3ded5e0d5ca08ea8ad0fe0d9186f6e5"
+    },
+    {
+      "id": "19",
+      "title": "Coupling alignment inspection",
+      "src": "/assets/images/generated/19-coupling-alignment-inspection.webp",
+      "alt": "Technician checking a stationary shaft coupling with a dial indicator",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "19-coupling-alignment-inspection.png",
+      "sha256": "48e864d561040c846006f43c133a077bc1558faa3567bed2d3c4842ffb946364"
+    },
+    {
+      "id": "20",
+      "title": "First article inspection",
+      "src": "/assets/images/generated/20-first-article-inspection.webp",
+      "alt": "Inspector using calipers to check a printed enclosure",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "20-first-article-inspection.png",
+      "sha256": "c6a365f3470455d5d592372ac864fb97555351c992fdbda0321dc01628bf3ef7"
+    },
+    {
+      "id": "21",
+      "title": "Marking process comparison",
+      "src": "/assets/images/generated/21-marking-process-comparison.webp",
+      "alt": "Blank and geometrically marked stainless plates shown as an illustrative comparison",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "21-marking-process-comparison.png",
+      "sha256": "e2c0cae2f0527eefaa8f9c40147bef13d471c0b829f92592b286d53ae19d8ad5"
+    },
+    {
+      "id": "22",
+      "title": "Sheet-to-part cutting comparison",
+      "src": "/assets/images/generated/22-sheet-to-part-cutting-comparison.webp",
+      "alt": "Sheet blank beside a cut mounting plate with slots and holes",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "22-sheet-to-part-cutting-comparison.png",
+      "sha256": "ea336319664f947d07db806aacc361ace2351028a643cec488278e4c2863a729"
+    },
+    {
+      "id": "23",
+      "title": "Replacement bushing comparison",
+      "src": "/assets/images/generated/23-replacement-bushing-comparison.webp",
+      "alt": "Worn and newly machined bronze bushings shown as an illustrative comparison",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "23-replacement-bushing-comparison.png",
+      "sha256": "c5e839d14d489a8b1b3d7f4549515c8e6ae695fd1f97bcdd2e74da999b2633d5"
+    },
+    {
+      "id": "24",
+      "title": "Custom keychain marking",
+      "src": "/assets/images/generated/24-custom-keychain-marking.webp",
+      "alt": "Blank and patterned stainless keychains on a workshop bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "24-custom-keychain-marking.png",
+      "sha256": "ed52e17cc2117d3a5330e91127ff71faf2fe4b241708ca24b31663d9b6bf70ff"
+    },
+    {
+      "id": "25",
+      "title": "Laser component identification",
+      "src": "/assets/images/generated/25-laser-component-identification.webp",
+      "alt": "Copper cutting nozzle, protective optical window and ceramic nozzle ring",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "25-laser-component-identification.png",
+      "sha256": "d8803a1f48d9a9524ddeddb9bda5cc5054627ed22dc92554063bd6c9742d16f1"
+    },
+    {
+      "id": "26",
+      "title": "Laser cut-quality investigation",
+      "src": "/assets/images/generated/26-laser-cut-quality-investigation.webp",
+      "alt": "Three cut coupons showing dross, striations and a cleaner edge",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "26-laser-cut-quality-investigation.png",
+      "sha256": "288904bd0019f71ada6be8aa10f9174d9d46abdc795feaf5e3c56aaec80110d4"
+    },
+    {
+      "id": "27",
+      "title": "Sheet-metal enclosure",
+      "src": "/assets/images/generated/27-sheet-metal-enclosure.webp",
+      "alt": "Folded metal enclosure with its removable lid beside it",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "27-sheet-metal-enclosure.png",
+      "sha256": "b78d4f86bb5aeac4ae01b169fce49c00e80b77adef43e2ee426e23cddbe0aea5"
+    },
+    {
+      "id": "28",
+      "title": "Jig and fixture",
+      "src": "/assets/images/generated/28-jig-and-fixture.webp",
+      "alt": "Workpiece located with dowels and held by toggle clamps in a fixture",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "28-jig-and-fixture.png",
+      "sha256": "c4e6aacacef6d76f06b7869bb478e7dfd905dd00903222a2fdd439292b00a316"
+    },
+    {
+      "id": "29",
+      "title": "Stainless weld detail",
+      "src": "/assets/images/generated/29-stainless-weld-detail.webp",
+      "alt": "Close view of a narrow welded seam between stainless-steel sheets",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "29-stainless-weld-detail.png",
+      "sha256": "ad12fb07fd1bf1d510d4b15735c6db8a0585a9ebfc4174b8c04b76da8c614e4c"
+    },
+    {
+      "id": "30",
+      "title": "Prototype design iterations",
+      "src": "/assets/images/generated/30-prototype-design-iterations.webp",
+      "alt": "Three printed enclosure concepts with different mounting and cable-access features",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "30-prototype-design-iterations.png",
+      "sha256": "ca7003df00768c476dc19448c6685228e45d178fb236221ca723c0d60bba1509"
+    },
+    {
+      "id": "31",
+      "title": "Printing material samples",
+      "src": "/assets/images/generated/31-printing-material-samples.webp",
+      "alt": "Charcoal, white and navy filament spools with matching printed samples",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "31-printing-material-samples.png",
+      "sha256": "d810b7c57f226288a4ff6eba547cf5fa49b3e06c7ccd8846b13b420966c45b3d"
+    },
+    {
+      "id": "32",
+      "title": "Resin printing process",
+      "src": "/assets/images/generated/32-resin-printing-process.webp",
+      "alt": "Enclosed resin printer with its amber protective cover in place",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "32-resin-printing-process.png",
+      "sha256": "c62c23f827dc07d18f8dcf7639221f874eaeb8ed99a4d5da67e45cd9842fe278"
+    },
+    {
+      "id": "33",
+      "title": "Detailed resin prototype",
+      "src": "/assets/images/generated/33-detailed-resin-prototype.webp",
+      "alt": "Gray resin impeller prototype with curved blades and a central hub",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "33-detailed-resin-prototype.png",
+      "sha256": "baaebd24d0172c17145527e51a1aebaff2add38d32ee82ca22c06ae9f188e9cf"
+    },
+    {
+      "id": "34",
+      "title": "Nylon engineering components",
+      "src": "/assets/images/generated/34-nylon-engineering-components.webp",
+      "alt": "White nylon gear and dark polymer guide on a bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "34-nylon-engineering-components.png",
+      "sha256": "42c1f3b5611b483da17de554c27cfda632c44ea33b1fba1cf97b4f3d6cf595fc"
+    },
+    {
+      "id": "35",
+      "title": "Flexible TPU component",
+      "src": "/assets/images/generated/35-flexible-tpu-component.webp",
+      "alt": "Hands gently compressing a flexible printed bellows",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "35-flexible-tpu-component.png",
+      "sha256": "f844bc79b313983e1dea6d3ac42330d58eaf10199edf6e11f214981a93f3273e"
+    },
+    {
+      "id": "36",
+      "title": "Brass inserts in printed parts",
+      "src": "/assets/images/generated/36-brass-inserts-in-printed-parts.webp",
+      "alt": "Brass threaded insert seated in a printed enclosure mounting boss",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "36-brass-inserts-in-printed-parts.png",
+      "sha256": "f54c07f9fd5873527a6f8d474a3f8427925e00a6734fd16e1ee230eb418c7364"
+    },
+    {
+      "id": "37",
+      "title": "Infill planning samples",
+      "src": "/assets/images/generated/37-infill-planning-samples.webp",
+      "alt": "Cutaway printed cubes illustrating coarse, denser and near-solid infill",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "37-infill-planning-samples.png",
+      "sha256": "c9a13cce8b3cbb70941885490e9ff23df49307b44a3dcf6517a531683d577d17"
+    },
+    {
+      "id": "38",
+      "title": "Deburring a cut edge",
+      "src": "/assets/images/generated/38-deburring-a-cut-edge.webp",
+      "alt": "Gloved hands deburring a cut metal plate held in a bench vise",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "38-deburring-a-cut-edge.png",
+      "sha256": "0bd26ef968e8c00d2b06cd21f875d7dda57f818f08122b4a5b484904a704975e"
+    },
+    {
+      "id": "39",
+      "title": "Stainless surface finishes",
+      "src": "/assets/images/generated/39-stainless-surface-finishes.webp",
+      "alt": "Stainless coupons illustrating matte, brushed and polished surfaces",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "39-stainless-surface-finishes.png",
+      "sha256": "2908e2f45bc9dffc0c10c3a6a276bf19b1ba5ff60c2779e76c0fa7eb695d11cd"
+    },
+    {
+      "id": "40",
+      "title": "Protective packing",
+      "src": "/assets/images/generated/40-protective-packing.webp",
+      "alt": "Hands placing a machined component in protective foam inside a carton",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "40-protective-packing.png",
+      "sha256": "6dd9233935cbe6f350f461e443c9ed76e07461de9592db23d9a4cfa0c26bd202"
+    },
+    {
+      "id": "41",
+      "title": "Surface plate measurement",
+      "src": "/assets/images/generated/41-surface-plate-measurement.webp",
+      "alt": "Height-gauge probe contacting a machined housing on an inspection plate",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "41-surface-plate-measurement.png",
+      "sha256": "59d399f4a10efcafbabee1cc7ede7dee1b2cf865d67ac03286f32a7625f699da"
+    },
+    {
+      "id": "42",
+      "title": "Coordinate measurement",
+      "src": "/assets/images/generated/42-coordinate-measurement.webp",
+      "alt": "Coordinate-measuring probe above a fixtured machined housing",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "42-coordinate-measurement.png",
+      "sha256": "cce9ced485f771b4a8fe4deb82a5bac51284469f29df6082e10160713d5bff65"
+    },
+    {
+      "id": "43",
+      "title": "Engineering review discussion",
+      "src": "/assets/images/generated/43-engineering-review-discussion.webp",
+      "alt": "Fictional engineers reviewing a drawing and an unbranded sample component",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "43-engineering-review-discussion.png",
+      "sha256": "1812ba2481f0edd435f5c4d9c1c8614d0c5d683e2cb404548547e33a20de6181"
+    },
+    {
+      "id": "44",
+      "title": "Workshop overview",
+      "src": "/assets/images/generated/44-workshop-overview.webp",
+      "alt": "Illustrated workshop with benches, tool storage, drill press and an enclosed machine",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "44-workshop-overview.png",
+      "sha256": "674ebb187ec495a247b2437e15a4ccf7745d20375ab5678a0e6fa5ac4177b6dc"
+    },
+    {
+      "id": "45",
+      "title": "Quote inputs",
+      "src": "/assets/images/generated/45-quote-inputs.webp",
+      "alt": "Drawing, worn shaft, caliper and phone arranged as example enquiry inputs",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "45-quote-inputs.png",
+      "sha256": "33d7c5b28f57b420dbb15d41d635630c41178aa9176587f7db30736d48e08b66"
+    },
+    {
+      "id": "46",
+      "title": "Replacement part trial fit",
+      "src": "/assets/images/generated/46-replacement-part-trial-fit.webp",
+      "alt": "Hands checking the fit of a shaft in a bronze-lined housing",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "46-replacement-part-trial-fit.png",
+      "sha256": "7d389707654b7b24292f630c332cf64f50d983952f54774a55394427a0f8c721"
+    },
+    {
+      "id": "47",
+      "title": "Sheet thickness inspection",
+      "src": "/assets/images/generated/47-sheet-thickness-inspection.webp",
+      "alt": "Micrometer anvils contacting opposite faces of a metal sheet coupon",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "47-sheet-thickness-inspection.png",
+      "sha256": "5a8a6b426f35e4f17b83369e73e5cf0ca2538a52c7faf1d58a2847b41003f2d3"
+    },
+    {
+      "id": "48",
+      "title": "Bearing condition review",
+      "src": "/assets/images/generated/48-bearing-condition-review.webp",
+      "alt": "Open and shielded bearings illustrating a condition review",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "48-bearing-condition-review.png",
+      "sha256": "7b83347be61c65ff38e650cbde9717997c6fa7abdb6da7fda97aca6dd5bf3dc7"
+    },
+    {
+      "id": "49",
+      "title": "Maintenance cleanliness check",
+      "src": "/assets/images/generated/49-maintenance-cleanliness-check.webp",
+      "alt": "Technician inspecting a removed mesh cooling-air filter",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "49-maintenance-cleanliness-check.png",
+      "sha256": "df4c0d1bf1eb0a6fef7458af2207fc36fcef51049f05e8e597aca3c047e291d6"
+    },
+    {
+      "id": "50",
+      "title": "Drawing to inspected component",
+      "src": "/assets/images/generated/50-drawing-to-inspected-component.webp",
+      "alt": "Flange drawing, corresponding machined flange, mating ring and caliper on a bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen; requested by the website owner",
+      "disclosure": "AI-generated illustration",
+      "original_filename": "50-drawing-to-inspected-component.png",
+      "sha256": "883d4a8f2540db3a95b7bd96ad046f903dd364e00b678f37c738d608a00eca29"
+    }
+  ],
+  "placements": [
+    {
+      "page": "/",
+      "image": "01",
+      "area": "Homepage hero"
+    },
+    {
+      "page": "/",
+      "image": "02",
+      "area": "Service division card"
+    },
+    {
+      "page": "/",
+      "image": "03",
+      "area": "Service division card"
+    },
+    {
+      "page": "/",
+      "image": "04",
+      "area": "Service division card"
+    },
+    {
+      "page": "/",
+      "image": "05",
+      "area": "Service division card"
+    },
+    {
+      "page": "/",
+      "image": "18",
+      "area": "Project guide card"
+    },
+    {
+      "page": "/",
+      "image": "21",
+      "area": "Project guide card"
+    },
+    {
+      "page": "/services.html",
+      "image": "02",
+      "area": "Service division card"
+    },
+    {
+      "page": "/services.html",
+      "image": "03",
+      "area": "Service division card"
+    },
+    {
+      "page": "/services.html",
+      "image": "04",
+      "area": "Service division card"
+    },
+    {
+      "page": "/services.html",
+      "image": "05",
+      "area": "Service division card"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "09",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "31",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "35",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "17",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "23",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/custom-machine-spares.html",
+      "image": "34",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "16",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "15",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/design-job-work.html",
+      "image": "50",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "05",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "41",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "42",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "04",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "19",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "48",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "06",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "22",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "38",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "08",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "21",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "24",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "07",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "29",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/laser-welding-kolkata.html",
+      "image": "39",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "02",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "14",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "16",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "10",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "23",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "46",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "11",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "27",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/sheet-metal-bending-kolkata.html",
+      "image": "47",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/3d-print-fai-batch.html",
+      "image": "20",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/3d-print-fai-batch.html",
+      "image": "30",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/fit-correction-replacement-component.html",
+      "image": "46",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/fit-correction-replacement-component.html",
+      "image": "23",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/laser-chiller-pump-replacement.html",
+      "image": "18",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/laser-chiller-pump-replacement.html",
+      "image": "17",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "26",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "25",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/laser-machine-rca.html",
+      "image": "06",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "21",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "24",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/projects/precision-marked-components.html",
+      "image": "40",
+      "area": "Process or project guide gallery"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "32",
+      "area": "Resin printing and threaded inserts"
+    },
+    {
+      "page": "/3d-printing-kolkata.html",
+      "image": "36",
+      "area": "Resin printing and threaded inserts"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "10",
+      "area": "Samples, drawings and replacement geometry"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "16",
+      "area": "Samples, drawings and replacement geometry"
+    },
+    {
+      "page": "/projects/reverse-engineering-sample-to-drawing.html",
+      "image": "23",
+      "area": "Samples, drawings and replacement geometry"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "37",
+      "area": "Print settings and internal geometry"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "33",
+      "area": "Feature detail and first-piece measurement"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Feature detail and first-piece measurement"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Ports, mounting and electrical connections"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Milling and turning processes"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "13",
+      "area": "Milling and turning processes"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "28",
+      "area": "Locating the part and measuring from a reference"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Locating the part and measuring from a reference"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "11",
+      "area": "Bend tooling and enclosure geometry"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Bend tooling and enclosure geometry"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Nozzle, optical window and ceramic ring"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Illustrative cut-edge comparison"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Cutting head and consumables"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "25",
+      "area": "Cutting head and consumables"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Inspecting a stationary drive assembly"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Measurement evidence for a quality review"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Inspecting a removed machine filter"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Bending and sheet-thickness checks"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "47",
+      "area": "Bending and sheet-thickness checks"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Surface finish and protective packing"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "40",
+      "area": "Surface finish and protective packing"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "39",
+      "area": "Illustrative surface-finish comparison"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "09",
+      "area": "Manufacturing process card"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "06",
+      "area": "Manufacturing process card"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "12",
+      "area": "Manufacturing process card"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Manufacturing process card"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Component family"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "27",
+      "area": "Component family"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "28",
+      "area": "Component family"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Component family"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "16",
+      "area": "Design outputs gallery"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Design outputs gallery"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "15",
+      "area": "Design outputs gallery"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "18",
+      "area": "Maintenance evidence gallery"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "19",
+      "area": "Maintenance evidence gallery"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "17",
+      "area": "Maintenance evidence gallery"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "49",
+      "area": "Preventive maintenance checks"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "41",
+      "area": "Dimensional inspection methods"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "42",
+      "area": "Dimensional inspection methods"
+    },
+    {
+      "page": "/about.html",
+      "image": "44",
+      "area": "Workshop and engineering-review illustrations"
+    },
+    {
+      "page": "/about.html",
+      "image": "43",
+      "area": "Workshop and engineering-review illustrations"
+    },
+    {
+      "page": "/projects.html",
+      "image": "18",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/projects.html",
+      "image": "21",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/projects.html",
+      "image": "26",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/projects.html",
+      "image": "46",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/projects.html",
+      "image": "20",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/projects.html",
+      "image": "10",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "33",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "12",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "11",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "25",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "26",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "06",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "04",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "05",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "49",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "11",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "39",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/insights.html",
+      "image": "39",
+      "area": "Guide preview"
+    },
+    {
+      "page": "/request-quote.html",
+      "image": "45",
+      "area": "Quote guidance sidebar"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "02",
+      "area": "Dynamic design route"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "03",
+      "area": "Dynamic manufacture route"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "17",
+      "area": "Dynamic source route"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "04",
+      "area": "Dynamic machine route"
+    },
+    {
+      "page": "/engineering-desk.html",
+      "image": "05",
+      "area": "Dynamic quality route"
+    }
   ],
   "legacy_assets": {
     "design": {

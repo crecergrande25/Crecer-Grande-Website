@@ -1,0 +1,127 @@
+image,title,page,area,src
+01,Workshop hero,/,Homepage hero,/assets/images/generated/01-workshop-hero.webp
+02,Engineering and CAD,/,Service division card,/assets/images/generated/02-engineering-and-cad.webp
+03,Manufacturing division,/,Service division card,/assets/images/generated/03-manufacturing-division.webp
+04,Machine maintenance,/,Service division card,/assets/images/generated/04-machine-maintenance.webp
+05,Inspection and quality,/,Service division card,/assets/images/generated/05-inspection-and-quality.webp
+18,Chiller pump compatibility,/,Project guide card,/assets/images/generated/18-chiller-pump-compatibility.webp
+21,Marking process comparison,/,Project guide card,/assets/images/generated/21-marking-process-comparison.webp
+02,Engineering and CAD,/services.html,Service division card,/assets/images/generated/02-engineering-and-cad.webp
+03,Manufacturing division,/services.html,Service division card,/assets/images/generated/03-manufacturing-division.webp
+04,Machine maintenance,/services.html,Service division card,/assets/images/generated/04-machine-maintenance.webp
+05,Inspection and quality,/services.html,Service division card,/assets/images/generated/05-inspection-and-quality.webp
+09,3D printing,/3d-printing-kolkata.html,Process or project guide gallery,/assets/images/generated/09-3d-printing.webp
+31,Printing material samples,/3d-printing-kolkata.html,Process or project guide gallery,/assets/images/generated/31-printing-material-samples.webp
+35,Flexible TPU component,/3d-printing-kolkata.html,Process or project guide gallery,/assets/images/generated/35-flexible-tpu-component.webp
+17,Industrial spare identification,/custom-machine-spares.html,Process or project guide gallery,/assets/images/generated/17-industrial-spare-identification.webp
+23,Replacement bushing comparison,/custom-machine-spares.html,Process or project guide gallery,/assets/images/generated/23-replacement-bushing-comparison.webp
+34,Nylon engineering components,/custom-machine-spares.html,Process or project guide gallery,/assets/images/generated/34-nylon-engineering-components.webp
+16,Production drawing review,/design-job-work.html,Process or project guide gallery,/assets/images/generated/16-production-drawing-review.webp
+15,Piping layout design,/design-job-work.html,Process or project guide gallery,/assets/images/generated/15-piping-layout-design.webp
+50,Drawing to inspected component,/design-job-work.html,Process or project guide gallery,/assets/images/generated/50-drawing-to-inspected-component.webp
+05,Inspection and quality,/industrial-inspection-qa-kolkata.html,Process or project guide gallery,/assets/images/generated/05-inspection-and-quality.webp
+41,Surface plate measurement,/industrial-inspection-qa-kolkata.html,Process or project guide gallery,/assets/images/generated/41-surface-plate-measurement.webp
+42,Coordinate measurement,/industrial-inspection-qa-kolkata.html,Process or project guide gallery,/assets/images/generated/42-coordinate-measurement.webp
+04,Machine maintenance,/industrial-machine-maintenance-kolkata.html,Process or project guide gallery,/assets/images/generated/04-machine-maintenance.webp
+19,Coupling alignment inspection,/industrial-machine-maintenance-kolkata.html,Process or project guide gallery,/assets/images/generated/19-coupling-alignment-inspection.webp
+48,Bearing condition review,/industrial-machine-maintenance-kolkata.html,Process or project guide gallery,/assets/images/generated/48-bearing-condition-review.webp
+06,Laser cutting,/laser-cutting-kolkata.html,Process or project guide gallery,/assets/images/generated/06-laser-cutting.webp
+22,Sheet-to-part cutting comparison,/laser-cutting-kolkata.html,Process or project guide gallery,/assets/images/generated/22-sheet-to-part-cutting-comparison.webp
+38,Deburring a cut edge,/laser-cutting-kolkata.html,Process or project guide gallery,/assets/images/generated/38-deburring-a-cut-edge.webp
+08,Laser marking,/laser-marking-kolkata.html,Process or project guide gallery,/assets/images/generated/08-laser-marking.webp
+21,Marking process comparison,/laser-marking-kolkata.html,Process or project guide gallery,/assets/images/generated/21-marking-process-comparison.webp
+24,Custom keychain marking,/laser-marking-kolkata.html,Process or project guide gallery,/assets/images/generated/24-custom-keychain-marking.webp
+07,Laser welding,/laser-welding-kolkata.html,Process or project guide gallery,/assets/images/generated/07-laser-welding.webp
+29,Stainless weld detail,/laser-welding-kolkata.html,Process or project guide gallery,/assets/images/generated/29-stainless-weld-detail.webp
+39,Stainless surface finishes,/laser-welding-kolkata.html,Process or project guide gallery,/assets/images/generated/39-stainless-surface-finishes.webp
+02,Engineering and CAD,/mechanical-design-services-kolkata.html,Process or project guide gallery,/assets/images/generated/02-engineering-and-cad.webp
+14,Mechanical assembly planning,/mechanical-design-services-kolkata.html,Process or project guide gallery,/assets/images/generated/14-mechanical-assembly-planning.webp
+16,Production drawing review,/mechanical-design-services-kolkata.html,Process or project guide gallery,/assets/images/generated/16-production-drawing-review.webp
+10,Reverse engineering,/reverse-engineering-kolkata.html,Process or project guide gallery,/assets/images/generated/10-reverse-engineering.webp
+23,Replacement bushing comparison,/reverse-engineering-kolkata.html,Process or project guide gallery,/assets/images/generated/23-replacement-bushing-comparison.webp
+46,Replacement part trial fit,/reverse-engineering-kolkata.html,Process or project guide gallery,/assets/images/generated/46-replacement-part-trial-fit.webp
+11,Sheet metal bending,/sheet-metal-bending-kolkata.html,Process or project guide gallery,/assets/images/generated/11-sheet-metal-bending.webp
+27,Sheet-metal enclosure,/sheet-metal-bending-kolkata.html,Process or project guide gallery,/assets/images/generated/27-sheet-metal-enclosure.webp
+47,Sheet thickness inspection,/sheet-metal-bending-kolkata.html,Process or project guide gallery,/assets/images/generated/47-sheet-thickness-inspection.webp
+20,First article inspection,/projects/3d-print-fai-batch.html,Process or project guide gallery,/assets/images/generated/20-first-article-inspection.webp
+30,Prototype design iterations,/projects/3d-print-fai-batch.html,Process or project guide gallery,/assets/images/generated/30-prototype-design-iterations.webp
+46,Replacement part trial fit,/projects/fit-correction-replacement-component.html,Process or project guide gallery,/assets/images/generated/46-replacement-part-trial-fit.webp
+23,Replacement bushing comparison,/projects/fit-correction-replacement-component.html,Process or project guide gallery,/assets/images/generated/23-replacement-bushing-comparison.webp
+18,Chiller pump compatibility,/projects/laser-chiller-pump-replacement.html,Process or project guide gallery,/assets/images/generated/18-chiller-pump-compatibility.webp
+17,Industrial spare identification,/projects/laser-chiller-pump-replacement.html,Process or project guide gallery,/assets/images/generated/17-industrial-spare-identification.webp
+26,Laser cut-quality investigation,/projects/laser-machine-rca.html,Process or project guide gallery,/assets/images/generated/26-laser-cut-quality-investigation.webp
+25,Laser component identification,/projects/laser-machine-rca.html,Process or project guide gallery,/assets/images/generated/25-laser-component-identification.webp
+06,Laser cutting,/projects/laser-machine-rca.html,Process or project guide gallery,/assets/images/generated/06-laser-cutting.webp
+21,Marking process comparison,/projects/precision-marked-components.html,Process or project guide gallery,/assets/images/generated/21-marking-process-comparison.webp
+24,Custom keychain marking,/projects/precision-marked-components.html,Process or project guide gallery,/assets/images/generated/24-custom-keychain-marking.webp
+40,Protective packing,/projects/precision-marked-components.html,Process or project guide gallery,/assets/images/generated/40-protective-packing.webp
+32,Resin printing process,/3d-printing-kolkata.html,Resin printing and threaded inserts,/assets/images/generated/32-resin-printing-process.webp
+36,Brass inserts in printed parts,/3d-printing-kolkata.html,Resin printing and threaded inserts,/assets/images/generated/36-brass-inserts-in-printed-parts.webp
+10,Reverse engineering,/projects/reverse-engineering-sample-to-drawing.html,"Samples, drawings and replacement geometry",/assets/images/generated/10-reverse-engineering.webp
+16,Production drawing review,/projects/reverse-engineering-sample-to-drawing.html,"Samples, drawings and replacement geometry",/assets/images/generated/16-production-drawing-review.webp
+23,Replacement bushing comparison,/projects/reverse-engineering-sample-to-drawing.html,"Samples, drawings and replacement geometry",/assets/images/generated/23-replacement-bushing-comparison.webp
+37,Infill planning samples,/insights/3d-printing-file-formats.html,Print settings and internal geometry,/assets/images/generated/37-infill-planning-samples.webp
+33,Detailed resin prototype,/insights/3d-printing-tolerances.html,Feature detail and first-piece measurement,/assets/images/generated/33-detailed-resin-prototype.webp
+20,First article inspection,/insights/3d-printing-tolerances.html,Feature detail and first-piece measurement,/assets/images/generated/20-first-article-inspection.webp
+18,Chiller pump compatibility,/insights/chiller-pump-equivalent-selection.html,"Ports, mounting and electrical connections",/assets/images/generated/18-chiller-pump-compatibility.webp
+12,CNC milling,/insights/cnc-vmc-speeds-feeds-basics.html,Milling and turning processes,/assets/images/generated/12-cnc-milling.webp
+13,CNC turning,/insights/cnc-vmc-speeds-feeds-basics.html,Milling and turning processes,/assets/images/generated/13-cnc-turning.webp
+28,Jig and fixture,/insights/gdt-datum-basics.html,Locating the part and measuring from a reference,/assets/images/generated/28-jig-and-fixture.webp
+41,Surface plate measurement,/insights/gdt-datum-basics.html,Locating the part and measuring from a reference,/assets/images/generated/41-surface-plate-measurement.webp
+11,Sheet metal bending,/insights/holes-near-sheet-metal-bends.html,Bend tooling and enclosure geometry,/assets/images/generated/11-sheet-metal-bending.webp
+27,Sheet-metal enclosure,/insights/holes-near-sheet-metal-bends.html,Bend tooling and enclosure geometry,/assets/images/generated/27-sheet-metal-enclosure.webp
+25,Laser component identification,/insights/identify-laser-consumables.html,"Nozzle, optical window and ceramic ring",/assets/images/generated/25-laser-component-identification.webp
+26,Laser cut-quality investigation,/insights/laser-cutting-defects.html,Illustrative cut-edge comparison,/assets/images/generated/26-laser-cut-quality-investigation.webp
+06,Laser cutting,/insights/laser-nozzle-focus-basics.html,Cutting head and consumables,/assets/images/generated/06-laser-cutting.webp
+25,Laser component identification,/insights/laser-nozzle-focus-basics.html,Cutting head and consumables,/assets/images/generated/25-laser-component-identification.webp
+04,Machine maintenance,/insights/machine-breakdown-data-checklist.html,Inspecting a stationary drive assembly,/assets/images/generated/04-machine-maintenance.webp
+05,Inspection and quality,/insights/ncr-rca-capa-guide.html,Measurement evidence for a quality review,/assets/images/generated/05-inspection-and-quality.webp
+49,Maintenance cleanliness check,/insights/preventive-maintenance-basics.html,Inspecting a removed machine filter,/assets/images/generated/49-maintenance-cleanliness-check.webp
+11,Sheet metal bending,/insights/sheet-metal-bending-basics.html,Bending and sheet-thickness checks,/assets/images/generated/11-sheet-metal-bending.webp
+47,Sheet thickness inspection,/insights/sheet-metal-bending-basics.html,Bending and sheet-thickness checks,/assets/images/generated/47-sheet-thickness-inspection.webp
+39,Stainless surface finishes,/insights/stainless-steel-handling.html,Surface finish and protective packing,/assets/images/generated/39-stainless-surface-finishes.webp
+40,Protective packing,/insights/stainless-steel-handling.html,Surface finish and protective packing,/assets/images/generated/40-protective-packing.webp
+39,Stainless surface finishes,/insights/surface-roughness-ra-rz.html,Illustrative surface-finish comparison,/assets/images/generated/39-stainless-surface-finishes.webp
+09,3D printing,/divisions/advanced-manufacturing.html,Manufacturing process card,/assets/images/generated/09-3d-printing.webp
+06,Laser cutting,/divisions/advanced-manufacturing.html,Manufacturing process card,/assets/images/generated/06-laser-cutting.webp
+12,CNC milling,/divisions/advanced-manufacturing.html,Manufacturing process card,/assets/images/generated/12-cnc-milling.webp
+17,Industrial spare identification,/divisions/advanced-manufacturing.html,Manufacturing process card,/assets/images/generated/17-industrial-spare-identification.webp
+03,Manufacturing division,/divisions/advanced-manufacturing.html,Component family,/assets/images/generated/03-manufacturing-division.webp
+27,Sheet-metal enclosure,/divisions/advanced-manufacturing.html,Component family,/assets/images/generated/27-sheet-metal-enclosure.webp
+28,Jig and fixture,/divisions/advanced-manufacturing.html,Component family,/assets/images/generated/28-jig-and-fixture.webp
+17,Industrial spare identification,/divisions/advanced-manufacturing.html,Component family,/assets/images/generated/17-industrial-spare-identification.webp
+16,Production drawing review,/divisions/engineering-design.html,Design outputs gallery,/assets/images/generated/16-production-drawing-review.webp
+02,Engineering and CAD,/divisions/engineering-design.html,Design outputs gallery,/assets/images/generated/02-engineering-and-cad.webp
+15,Piping layout design,/divisions/engineering-design.html,Design outputs gallery,/assets/images/generated/15-piping-layout-design.webp
+18,Chiller pump compatibility,/divisions/machine-maintenance.html,Maintenance evidence gallery,/assets/images/generated/18-chiller-pump-compatibility.webp
+19,Coupling alignment inspection,/divisions/machine-maintenance.html,Maintenance evidence gallery,/assets/images/generated/19-coupling-alignment-inspection.webp
+17,Industrial spare identification,/divisions/machine-maintenance.html,Maintenance evidence gallery,/assets/images/generated/17-industrial-spare-identification.webp
+49,Maintenance cleanliness check,/divisions/machine-maintenance.html,Preventive maintenance checks,/assets/images/generated/49-maintenance-cleanliness-check.webp
+41,Surface plate measurement,/divisions/inspection-testing.html,Dimensional inspection methods,/assets/images/generated/41-surface-plate-measurement.webp
+42,Coordinate measurement,/divisions/inspection-testing.html,Dimensional inspection methods,/assets/images/generated/42-coordinate-measurement.webp
+44,Workshop overview,/about.html,Workshop and engineering-review illustrations,/assets/images/generated/44-workshop-overview.webp
+43,Engineering review discussion,/about.html,Workshop and engineering-review illustrations,/assets/images/generated/43-engineering-review-discussion.webp
+18,Chiller pump compatibility,/projects.html,Guide preview,/assets/images/generated/18-chiller-pump-compatibility.webp
+21,Marking process comparison,/projects.html,Guide preview,/assets/images/generated/21-marking-process-comparison.webp
+26,Laser cut-quality investigation,/projects.html,Guide preview,/assets/images/generated/26-laser-cut-quality-investigation.webp
+46,Replacement part trial fit,/projects.html,Guide preview,/assets/images/generated/46-replacement-part-trial-fit.webp
+20,First article inspection,/projects.html,Guide preview,/assets/images/generated/20-first-article-inspection.webp
+10,Reverse engineering,/projects.html,Guide preview,/assets/images/generated/10-reverse-engineering.webp
+33,Detailed resin prototype,/insights.html,Guide preview,/assets/images/generated/33-detailed-resin-prototype.webp
+12,CNC milling,/insights.html,Guide preview,/assets/images/generated/12-cnc-milling.webp
+11,Sheet metal bending,/insights.html,Guide preview,/assets/images/generated/11-sheet-metal-bending.webp
+25,Laser component identification,/insights.html,Guide preview,/assets/images/generated/25-laser-component-identification.webp
+26,Laser cut-quality investigation,/insights.html,Guide preview,/assets/images/generated/26-laser-cut-quality-investigation.webp
+06,Laser cutting,/insights.html,Guide preview,/assets/images/generated/06-laser-cutting.webp
+04,Machine maintenance,/insights.html,Guide preview,/assets/images/generated/04-machine-maintenance.webp
+05,Inspection and quality,/insights.html,Guide preview,/assets/images/generated/05-inspection-and-quality.webp
+49,Maintenance cleanliness check,/insights.html,Guide preview,/assets/images/generated/49-maintenance-cleanliness-check.webp
+11,Sheet metal bending,/insights.html,Guide preview,/assets/images/generated/11-sheet-metal-bending.webp
+39,Stainless surface finishes,/insights.html,Guide preview,/assets/images/generated/39-stainless-surface-finishes.webp
+39,Stainless surface finishes,/insights.html,Guide preview,/assets/images/generated/39-stainless-surface-finishes.webp
+45,Quote inputs,/request-quote.html,Quote guidance sidebar,/assets/images/generated/45-quote-inputs.webp
+02,Engineering and CAD,/engineering-desk.html,Dynamic design route,/assets/images/generated/02-engineering-and-cad.webp
+03,Manufacturing division,/engineering-desk.html,Dynamic manufacture route,/assets/images/generated/03-manufacturing-division.webp
+17,Industrial spare identification,/engineering-desk.html,Dynamic source route,/assets/images/generated/17-industrial-spare-identification.webp
+04,Machine maintenance,/engineering-desk.html,Dynamic machine route,/assets/images/generated/04-machine-maintenance.webp
+05,Inspection and quality,/engineering-desk.html,Dynamic quality route,/assets/images/generated/05-inspection-and-quality.webp

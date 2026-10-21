@@ -1,5 +1,7 @@
 # Release 7: review and upload checklist
 
+> Historical release notes. Release 8 now adds the owner-requested generated illustrations; see RELEASE_8_IMAGE_PLACEMENT.md for current image behavior. The earlier text-led description below records the state before that integration.
+
 This release extends the earlier local repairs. No commit, push, Google account configuration or production deployment was performed.
 
 ## Implemented

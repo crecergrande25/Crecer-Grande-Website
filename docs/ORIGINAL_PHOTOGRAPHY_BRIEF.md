@@ -1,5 +1,7 @@
 # Original photo and video brief
 
+Release 8 uses a new, explicitly labelled generated illustration set at the owner’s request. This brief is for future replacement with actual company photographs; the old unverified library remains retired.
+
 The legacy illustration library is withdrawn from public layouts. Do not restore it under captions that suggest real completed company work. The site is intentionally text-led until approved photographs are supplied. This is an unfinished requirement, not a claim that text replaces photography.
 
 ## Capture one consistent set

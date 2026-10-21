@@ -1,5 +1,6 @@
 /** Compatibility command: validate rendered media and layout.
- * Legacy illustrations are withdrawn until original photographs are supplied.
+ * Only the owner-requested generated set is permitted as content imagery.
+ * Generated images must be disclosed; retired legacy assets remain blocked.
  * Do not enforce image counts or substitute synthetic artwork for missing photos.
  */
 const { chromium } = require('playwright');
@@ -7,6 +8,9 @@ const { readOnlyContext } = require('./browser-test-helpers.cjs');
 const fs = require('node:fs');
 const path = require('node:path');
 const root = path.resolve(__dirname, '..');
+const approved = JSON.parse(fs.readFileSync(path.join(root,'assets/data/photography.json'),'utf8')).entries;
+const expectedImages=Object.fromEntries(approved.map(e=>[e.id,{src:e.src,alt:e.alt}]));
+const seen=new Set();
 const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 const mobile = (process.env.AUDIT_VIEWPORT || process.env.HERO_VIEWPORT) === 'mobile';
 const pages = [];
@@ -38,7 +42,7 @@ walk(root);
           document.querySelectorAll('img').forEach(image => image.loading = 'eager');
           await Promise.race([Promise.allSettled([...document.images].map(image => image.decode())), new Promise(resolve => setTimeout(resolve, 8000))]);
         });
-        const state = await page.evaluate(() => {
+        const state = await page.evaluate(expectedImages => {
           const issues = [];
           if (document.querySelector('svg,img[src*=".svg"],object[type="image/svg+xml"]')) issues.push('SVG image or inline artwork remains');
           if (document.querySelector('.cg-art-placeholder')) issues.push('Synthetic image placeholder remains');
@@ -48,7 +52,14 @@ walk(root);
             if (!image.alt.trim()) issues.push('Image has no useful alternative text: ' + image.getAttribute('src'));
           }
           for (const image of document.querySelectorAll('main img')) {
-            if (!/logo|qr-code|website-qr/i.test(image.getAttribute('src')||'')) issues.push('Unverified content image is rendered: '+image.getAttribute('src'));
+            const id=image.dataset.generatedImage;
+            if(!id){if(!/logo|qr-code|website-qr/i.test(image.getAttribute('src')||''))issues.push('Unregistered image: '+image.getAttribute('src'));continue;}
+            const expected=expectedImages[id];
+            if(!expected||expected.src!==image.getAttribute('src'))issues.push('Image not in the approved generated set: '+id);
+            if(expected&&expected.alt!==image.alt)issues.push('Generated image has mismatched alternative text: '+id);
+            if(!image.getClientRects().length||!image.clientWidth)issues.push('Placed image is hidden: '+id);
+            if(getComputedStyle(image).objectFit==='fill'&&Math.abs(image.clientWidth/image.clientHeight-1.5)>.03)issues.push('Image is stretched: '+id);
+            if(!document.querySelector('.cg-media-disclosure,.cg-generated-note'))issues.push('Generated-image disclosure is missing');
           }
           const hero = document.querySelector('main section.cg-image-backed-hero');
           if (hero) {
@@ -59,16 +70,18 @@ walk(root);
             if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');
             if (hero.getBoundingClientRect().height < 180) issues.push('Hero has collapsed');
           }
-          return { issues, images: document.images.length, hero: !!hero };
-        });
+          return { issues, images: document.images.length, hero: !!hero, ids:[...document.querySelectorAll('[data-generated-image]')].map(i=>i.dataset.generatedImage) };
+        },expectedImages);
         images += state.images;
+        state.ids.forEach(id=>seen.add(id));
         if (state.hero) heroes++;
         failures.push(...state.issues.map(issue => ({ route, issue })));
       } catch (error) { failures.push({ route, issue: error.message }); }
       finally { await page.close(); }
     }
   } finally { await browser.close(); }
-  console.log('MEDIA_INTEGRITY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, failures: failures.length }));
+  if(seen.size!==50)failures.push({issue:'Expected all 50 generated images across the site',actual:seen.size});
+  console.log('MEDIA_INTEGRITY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, uniqueGenerated:seen.size, failures: failures.length }));
   for (const failure of failures) console.error(JSON.stringify(failure));
   if (failures.length) process.exitCode = 1;
 })().catch(error => { console.error(error); process.exitCode = 1; });
