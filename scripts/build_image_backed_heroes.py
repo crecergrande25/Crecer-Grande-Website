@@ -125,11 +125,33 @@ for p in sorted(ROOT.rglob("*.html")):
     # the stylesheet controls contrast/position at every responsive width.
     replacement=opening.replace('class=', 'class=',1)
     replacement=re.sub(r'class=(["\x27])([^"\x27]+)\1',lambda m:'class='+m.group(1)+m.group(2)+' cg-image-backed-hero'+m.group(1),replacement,count=1)
-    rule='--cg-hero-background-art:url('+bg_src+');'
+    # Legacy theme scripts inject late !important hero backgrounds.
+    # Place the final image-backed background on the hero itself so that
+    # a page cannot silently fall back to its previous blank/white design.
+    rule=('--cg-hero-background-art:url('+bg_src+');'
+          'background-color:#081b2f!important;'
+          'background-image:linear-gradient(90deg,rgba(3,13,27,.94) 0%,rgba(5,23,43,.87) 39%,rgba(8,33,55,.63) 71%,rgba(7,28,48,.47) 100%),url('+bg_src+')!important;'
+          'background-position:center,center!important;'
+          'background-size:cover,cover!important;'
+          'background-repeat:no-repeat!important;')
     if re.search(r'\bstyle=(["\x27])',replacement):
         replacement=re.sub(r'\bstyle=(["\x27])([^"\x27]*)\1',lambda m:'style='+m.group(1)+m.group(2).rstrip(';')+';'+rule+m.group(1),replacement,count=1)
     else:replacement=replacement[:-1]+' style="'+rule+'">'
     s=s[:match.start()]+replacement+s[match.end():]
+    # Some older page-specific scripts set dark hero text with !important.
+    # Ensure every hero headline and introductory paragraph stays readable
+    # against its now-dark, image-backed canvas.
+    start_hero=match.start()
+    end_hero=section_end(s,start_hero)
+    hero_updated=s[start_hero:end_hero]
+    def force_light(m):
+        tag=m.group(0)
+        style=re.search(r'\bstyle=(["\x27])([^"\x27]*)\1',tag,re.I)
+        if style:
+            return tag[:style.start(2)]+style.group(2).rstrip(';')+';color:#fff!important;'+tag[style.end(2):]
+        return tag[:-1]+' style="color:#fff!important">'
+    hero_updated=re.sub(r'<(?:h1|h2|h3|p)\b[^>]*>',force_light,hero_updated,flags=re.I)
+    s=s[:start_hero]+hero_updated+s[end_hero:]
     if '/assets/css/sitewide-hero-backgrounds.css' not in s:
         tag='<link rel="stylesheet" href="/assets/css/sitewide-hero-backgrounds.css?v=1.0.0">'
         s=s.replace('</head>',tag+'</head>',1)
