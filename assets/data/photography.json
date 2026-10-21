@@ -9,11 +9,10 @@
       "id": "01",
       "title": "Workshop hero",
       "src": "/assets/images/generated/01-workshop-hero.webp",
-      "alt": "Illustrated workshop with a machined housing on a bench and an enclosed CNC machine",
+      "alt": "Workshop with a machined housing on a bench and an enclosed CNC machine",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "01-workshop-hero.png",
       "sha256": "365a9305f84dd6a2dfeed9cb52723839f324552cfdb37e1381c6e27fc83ad010"
     },
@@ -25,7 +24,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "02-engineering-and-cad.png",
       "sha256": "18cd1eb80eceb50ab1f2ca07df6a6522f7c232cc9f816e7c7aaef0211cef3731"
     },
@@ -37,7 +35,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "03-manufacturing-division.png",
       "sha256": "3fbf65c1f6130575e34f74a71209c84769017898ba8046eed22fbfc356ed9b98"
     },
@@ -49,7 +46,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "04-machine-maintenance.png",
       "sha256": "be49b0890586fc8101ccaee5a6bd74b4df74d4657131e4803fc037c19bccc698"
     },
@@ -61,7 +57,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "05-inspection-and-quality.png",
       "sha256": "fddf00b0f878a04b51f302e826db90c8177839f43da8187456dc816c3e563245"
     },
@@ -73,7 +68,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "06-laser-cutting.png",
       "sha256": "c7993708439063530da234eb2b123b80acfe61e976187e16b0a0202541fe0335"
     },
@@ -85,7 +79,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "07-laser-welding.png",
       "sha256": "a69de829ffcba4366c53bdd4e0754cb11964f2a15ec982e08a9bdcd8132f7873"
     },
@@ -97,7 +90,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "08-laser-marking.png",
       "sha256": "fb8b4268b2c31c9e4bbb5be80d6769942bf2e1aae06db747945c9bec85a510f7"
     },
@@ -109,7 +101,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "09-3d-printing.png",
       "sha256": "c490f8bca321dee93b69f6d8390ab951c59336a82a71146382863b0baf0523d5"
     },
@@ -117,11 +108,10 @@
       "id": "10",
       "title": "Reverse engineering",
       "src": "/assets/images/generated/10-reverse-engineering.webp",
-      "alt": "Worn mechanical bracket beside a matching illustrated replacement",
+      "alt": "Worn mechanical bracket beside a matching replacement",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "10-reverse-engineering.png",
       "sha256": "ea4bcc3c2f047692c066a88284dc6eb31aaa20aa389aa97e29642dc1d288c90b"
     },
@@ -133,7 +123,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "11-sheet-metal-bending.png",
       "sha256": "0fc1cf04cb34029ca6d053a7b5bf5f7cc70b6aa39776ff1807e7353f337dcd41"
     },
@@ -145,7 +134,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "12-cnc-milling.png",
       "sha256": "5319d8a7b73198cd09b77a7f13ad61bf8ef6237917462dc327c07ca356ccf1cd"
     },
@@ -157,7 +145,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "13-cnc-turning.png",
       "sha256": "8e42f66fe1d1e513b13dc9b4ba47081f3d43a23f4dd840bf69d3719cea6769af"
     },
@@ -169,7 +156,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "14-mechanical-assembly-planning.png",
       "sha256": "e0b05d8394745750a7436294666a7ef596b4431cfb0669a2012297368ea6c23b"
     },
@@ -181,7 +167,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "15-piping-layout-design.png",
       "sha256": "11173c9ab9e3ec8c4c32f1268732e262459cd6f7ab31d41c6c9c19d95ecd057c"
     },
@@ -193,7 +178,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "16-production-drawing-review.png",
       "sha256": "0d5a0ec30d1cd8b89a5dadd60eed89de4d0798ec1559f8a4e010b1f490050658"
     },
@@ -205,7 +189,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "17-industrial-spare-identification.png",
       "sha256": "d6080a1e33a85da9f8eeaa4cb1dc336cc4457e7f385d8a49797e63fc8772d0a0"
     },
@@ -217,7 +200,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "18-chiller-pump-compatibility.png",
       "sha256": "888be1fd57e15eb1df4da5f008c30ce5c3ded5e0d5ca08ea8ad0fe0d9186f6e5"
     },
@@ -229,7 +211,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "19-coupling-alignment-inspection.png",
       "sha256": "48e864d561040c846006f43c133a077bc1558faa3567bed2d3c4842ffb946364"
     },
@@ -241,7 +222,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "20-first-article-inspection.png",
       "sha256": "c6a365f3470455d5d592372ac864fb97555351c992fdbda0321dc01628bf3ef7"
     },
@@ -249,11 +229,10 @@
       "id": "21",
       "title": "Marking process comparison",
       "src": "/assets/images/generated/21-marking-process-comparison.webp",
-      "alt": "Blank and geometrically marked stainless plates shown as an illustrative comparison",
+      "alt": "Blank and geometrically marked stainless plates shown side by side",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "21-marking-process-comparison.png",
       "sha256": "e2c0cae2f0527eefaa8f9c40147bef13d471c0b829f92592b286d53ae19d8ad5"
     },
@@ -265,7 +244,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "22-sheet-to-part-cutting-comparison.png",
       "sha256": "ea336319664f947d07db806aacc361ace2351028a643cec488278e4c2863a729"
     },
@@ -273,11 +251,10 @@
       "id": "23",
       "title": "Replacement bushing comparison",
       "src": "/assets/images/generated/23-replacement-bushing-comparison.webp",
-      "alt": "Worn and newly machined bronze bushings shown as an illustrative comparison",
+      "alt": "Worn and newly machined bronze bushings shown side by side",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "23-replacement-bushing-comparison.png",
       "sha256": "c5e839d14d489a8b1b3d7f4549515c8e6ae695fd1f97bcdd2e74da999b2633d5"
     },
@@ -289,7 +266,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "24-custom-keychain-marking.png",
       "sha256": "ed52e17cc2117d3a5330e91127ff71faf2fe4b241708ca24b31663d9b6bf70ff"
     },
@@ -301,7 +277,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "25-laser-component-identification.png",
       "sha256": "d8803a1f48d9a9524ddeddb9bda5cc5054627ed22dc92554063bd6c9742d16f1"
     },
@@ -313,7 +288,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "26-laser-cut-quality-investigation.png",
       "sha256": "288904bd0019f71ada6be8aa10f9174d9d46abdc795feaf5e3c56aaec80110d4"
     },
@@ -325,7 +299,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "27-sheet-metal-enclosure.png",
       "sha256": "b78d4f86bb5aeac4ae01b169fce49c00e80b77adef43e2ee426e23cddbe0aea5"
     },
@@ -337,7 +310,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "28-jig-and-fixture.png",
       "sha256": "c4e6aacacef6d76f06b7869bb478e7dfd905dd00903222a2fdd439292b00a316"
     },
@@ -349,7 +321,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "29-stainless-weld-detail.png",
       "sha256": "ad12fb07fd1bf1d510d4b15735c6db8a0585a9ebfc4174b8c04b76da8c614e4c"
     },
@@ -361,7 +332,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "30-prototype-design-iterations.png",
       "sha256": "ca7003df00768c476dc19448c6685228e45d178fb236221ca723c0d60bba1509"
     },
@@ -373,7 +343,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "31-printing-material-samples.png",
       "sha256": "d810b7c57f226288a4ff6eba547cf5fa49b3e06c7ccd8846b13b420966c45b3d"
     },
@@ -385,7 +354,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "32-resin-printing-process.png",
       "sha256": "c62c23f827dc07d18f8dcf7639221f874eaeb8ed99a4d5da67e45cd9842fe278"
     },
@@ -397,7 +365,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "33-detailed-resin-prototype.png",
       "sha256": "baaebd24d0172c17145527e51a1aebaff2add38d32ee82ca22c06ae9f188e9cf"
     },
@@ -409,7 +376,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "34-nylon-engineering-components.png",
       "sha256": "42c1f3b5611b483da17de554c27cfda632c44ea33b1fba1cf97b4f3d6cf595fc"
     },
@@ -421,7 +387,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "35-flexible-tpu-component.png",
       "sha256": "f844bc79b313983e1dea6d3ac42330d58eaf10199edf6e11f214981a93f3273e"
     },
@@ -433,7 +398,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "36-brass-inserts-in-printed-parts.png",
       "sha256": "f54c07f9fd5873527a6f8d474a3f8427925e00a6734fd16e1ee230eb418c7364"
     },
@@ -445,7 +409,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "37-infill-planning-samples.png",
       "sha256": "c9a13cce8b3cbb70941885490e9ff23df49307b44a3dcf6517a531683d577d17"
     },
@@ -457,7 +420,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "38-deburring-a-cut-edge.png",
       "sha256": "0bd26ef968e8c00d2b06cd21f875d7dda57f818f08122b4a5b484904a704975e"
     },
@@ -469,7 +431,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "39-stainless-surface-finishes.png",
       "sha256": "2908e2f45bc9dffc0c10c3a6a276bf19b1ba5ff60c2779e76c0fa7eb695d11cd"
     },
@@ -481,7 +442,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "40-protective-packing.png",
       "sha256": "6dd9233935cbe6f350f461e443c9ed76e07461de9592db23d9a4cfa0c26bd202"
     },
@@ -493,7 +453,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "41-surface-plate-measurement.png",
       "sha256": "59d399f4a10efcafbabee1cc7ede7dee1b2cf865d67ac03286f32a7625f699da"
     },
@@ -505,7 +464,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "42-coordinate-measurement.png",
       "sha256": "cce9ced485f771b4a8fe4deb82a5bac51284469f29df6082e10160713d5bff65"
     },
@@ -513,11 +471,10 @@
       "id": "43",
       "title": "Engineering review discussion",
       "src": "/assets/images/generated/43-engineering-review-discussion.webp",
-      "alt": "Fictional engineers reviewing a drawing and an unbranded sample component",
+      "alt": "Engineers reviewing a drawing and an unbranded sample component",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "43-engineering-review-discussion.png",
       "sha256": "1812ba2481f0edd435f5c4d9c1c8614d0c5d683e2cb404548547e33a20de6181"
     },
@@ -525,11 +482,10 @@
       "id": "44",
       "title": "Workshop overview",
       "src": "/assets/images/generated/44-workshop-overview.webp",
-      "alt": "Illustrated workshop with benches, tool storage, drill press and an enclosed machine",
+      "alt": "Workshop with benches, tool storage, drill press and an enclosed machine",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "44-workshop-overview.png",
       "sha256": "674ebb187ec495a247b2437e15a4ccf7745d20375ab5678a0e6fa5ac4177b6dc"
     },
@@ -541,7 +497,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "45-quote-inputs.png",
       "sha256": "33d7c5b28f57b420dbb15d41d635630c41178aa9176587f7db30736d48e08b66"
     },
@@ -553,7 +508,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "46-replacement-part-trial-fit.png",
       "sha256": "7d389707654b7b24292f630c332cf64f50d983952f54774a55394427a0f8c721"
     },
@@ -565,7 +519,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "47-sheet-thickness-inspection.png",
       "sha256": "5a8a6b426f35e4f17b83369e73e5cf0ca2538a52c7faf1d58a2847b41003f2d3"
     },
@@ -577,7 +530,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "48-bearing-condition-review.png",
       "sha256": "7b83347be61c65ff38e650cbde9717997c6fa7abdb6da7fda97aca6dd5bf3dc7"
     },
@@ -589,7 +541,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "49-maintenance-cleanliness-check.png",
       "sha256": "df4c0d1bf1eb0a6fef7458af2207fc36fcef51049f05e8e597aca3c047e291d6"
     },
@@ -601,7 +552,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "50-drawing-to-inspected-component.png",
       "sha256": "883d4a8f2540db3a95b7bd96ad046f903dd364e00b678f37c738d608a00eca29"
     },
@@ -613,7 +563,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "51-services-overview.png",
       "sha256": "a774d078cdc7e4b0e59b47d35bba16281570f57c79773cfe87ebc396dd7fea1a"
     },
@@ -621,11 +570,10 @@
       "id": "52",
       "title": "Engineering planning",
       "src": "/assets/images/generated/52-engineering-planning.webp",
-      "alt": "Illustrated engineers reviewing an assembly drawing and a metal prototype at a workshop table",
+      "alt": "Engineers reviewing an assembly drawing and a metal prototype at a workshop table",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "52-engineering-planning.png",
       "sha256": "55e5ce8fd300aa0d2b948a92affb0cf56248d2d6f8247ce1d8e38689a3b5b6bc"
     },
@@ -637,7 +585,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "53-contact-workbench.png",
       "sha256": "8da76f4f56610ca894c5716d7c76e89371c233ae999e58336c9aec454381360d"
     },
@@ -649,7 +596,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "54-quotation-review.png",
       "sha256": "4aa480423aa12ef276f8683673d0cb337f73e0eff160e2a0df95c571a4db8932"
     },
@@ -661,7 +607,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "55-engineering-calculations.png",
       "sha256": "9fcb9e1bc68e7199f33e1eadc5eb5e18f696d4b31b2b0aec9e006276c8dccc51"
     },
@@ -669,11 +614,10 @@
       "id": "56",
       "title": "Industrial applications",
       "src": "/assets/images/generated/56-industrial-applications.webp",
-      "alt": "Illustrated production floor with enclosed machines, stainless pipework and parts racks",
+      "alt": "Production floor with enclosed machines, stainless pipework and parts racks",
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "56-industrial-applications.png",
       "sha256": "11e82eed480305be0a586c2bdda0d12fc267635b4708974a06288901ba8382af"
     },
@@ -685,7 +629,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "57-quality-feedback.png",
       "sha256": "5aba2344a12264bf7485c044cf8964ca038763d358bfcb55ca317a5fc689d1ff"
     },
@@ -697,7 +640,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "58-tap-drill-tools.png",
       "sha256": "18c8ec90cb63f8e91f07d5495b744aece88840b8b75651e539ea86d5176c866f"
     },
@@ -709,7 +651,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "59-vernier-measurement.png",
       "sha256": "674e5d0e7a5a41dce5e5008113d87feda394af126fb243b751bff0c6f04d6ff7"
     },
@@ -721,7 +662,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen; requested by the website owner",
-      "disclosure": "AI-generated illustration",
       "original_filename": "60-document-review.png",
       "sha256": "bd05dfc224570c31946378421c07dccaba8e639e0c6873c6fcd72058f99c919c"
     },
@@ -733,7 +673,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "e5b96ce3518897db589ff38f3212557f93bdf7915b3482598a095abbc134a44a"
     },
     {
@@ -744,7 +683,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "bea4a732c70e9f2d3babb1b9fbebd6b48056a7d328b7fc5276b16940abebd06a"
     },
     {
@@ -755,7 +693,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "55e80ecdcafbcdbf16b64d3ae4dc5e15170c45672fb9185f2a2accf13648c6b1"
     },
     {
@@ -766,7 +703,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "9acf49585114eb88e4982b9c8964774d076584b62ecfb9696be0ee137edd2710"
     },
     {
@@ -777,7 +713,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "f513c7472c90b7a0b715db3c9644c39c798f49d8d35ec1d0901e05d4c18dcd54"
     },
     {
@@ -788,7 +723,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "2fbfb955dfb3934d2a4358a820d0ba5d8b6186ed4e778020470e00ea1eb68c20"
     },
     {
@@ -799,7 +733,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "a27583f51d3ae168e62d8c03e1d458613ec0d9e02d74fd4ade5445d2126cb011"
     },
     {
@@ -810,7 +743,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "ff941c89225ceee8c034ba225ca2af8477e23960684054aa88cbff2e621810e1"
     },
     {
@@ -821,7 +753,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "d2db5ed729a4e3ce0a7977929e26dd1ff451fe6ceeab2c656e42c9df5bc41af7"
     },
     {
@@ -832,7 +763,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request",
-      "disclosure": "AI-generated illustration",
       "sha256": "252b89d295e569f18cd3d3b7bdb4e4a9cb1e3ca9bd091f38a06f8d6d42cf5839"
     },
     {
@@ -843,7 +773,6 @@
       "width": 1536,
       "height": 1024,
       "source": "AI-generated with Image Gen at the website owner\u2019s request; exclusive homepage background",
-      "disclosure": "AI-generated illustration",
       "sha256": "1203e10e8b8182e0e004673dd42fffc1a0f519beb9ab0b925d2bfb42b6522b08"
     }
   ],
@@ -2490,5 +2419,6 @@
       "alt": "Laser optics and machine-component identification references",
       "source": "Existing repository asset; original photographic provenance was not supplied."
     }
-  }
+  },
+  "disclosure_url": "/privacy.html#website-imagery"
 }

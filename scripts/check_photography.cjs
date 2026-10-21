@@ -1,6 +1,6 @@
 /** Compatibility command: validate rendered media and layout.
  * Only the owner-requested generated set is permitted as content imagery.
- * Generated images must be disclosed; retired legacy assets remain blocked.
+ * Image provenance is disclosed in Privacy; retired legacy assets remain blocked.
  * Do not enforce image counts or substitute synthetic artwork for missing photos.
  */
 const { chromium } = require('playwright');
@@ -33,6 +33,11 @@ walk(root);
   const failures = [];
   let images = 0, heroes = 0;
   try {
+    const privacy = await context.request.get(base + '/privacy.html');
+    const policy = await privacy.text();
+    if (privacy.status() !== 200 || !/id="website-imagery"/.test(policy) || !/AI-generated images/.test(policy)) {
+      failures.push({ route: '/privacy.html', issue: 'The central image disclosure is missing' });
+    }
     for (const route of pages.sort()) {
       const page = await context.newPage();
       page.on('pageerror', error => failures.push({ route, issue: 'Uncaught JavaScript error', detail: error.message }));
@@ -50,6 +55,9 @@ walk(root);
         });
         const state = await page.evaluate(expectedImages => {
           const issues = [];
+          if (location.pathname !== '/privacy.html' && /AI[\s\u2010-\u2015-]*generated/i.test(document.body.innerText)) issues.push('An image-origin label remains outside Privacy');
+          if (document.querySelector('.cg-generated-note')) issues.push('An old image-origin caption remains');
+          if (document.querySelector('main#main') && !document.querySelector('footer a[href="/privacy.html"]')) issues.push('The Privacy link is missing');
           if (document.querySelector('svg,img[src*=".svg"],object[type="image/svg+xml"]')) issues.push('SVG image or inline artwork remains');
           if (document.querySelector('.cg-art-placeholder')) issues.push('Synthetic image placeholder remains');
           if (document.documentElement.scrollWidth > innerWidth + 3) issues.push('Horizontal page overflow');
@@ -65,7 +73,6 @@ walk(root);
             if(expected&&expected.alt!==image.alt&&image.getAttribute('aria-hidden')!=='true')issues.push('Generated image has mismatched alternative text: '+id);
             if(!image.getClientRects().length||!image.clientWidth)issues.push('Placed image is hidden: '+id);
             if(getComputedStyle(image).objectFit==='fill'&&Math.abs(image.clientWidth/image.clientHeight-1.5)>.03)issues.push('Image is stretched: '+id);
-            if(!document.querySelector('.cg-media-disclosure,.cg-generated-note'))issues.push('Generated-image disclosure is missing');
           }
           const hero = document.querySelector('main section.cg-image-backed-hero');
           if (hero) {

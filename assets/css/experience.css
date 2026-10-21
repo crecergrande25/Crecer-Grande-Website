@@ -313,7 +313,7 @@ body main#main figure.cg-illustration .cg-generated-note{color:#536b79!important
 body main#main .cg-image-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;grid-template-rows:none!important;grid-auto-rows:auto!important;align-items:stretch!important}
 body main#main .cg-image-gallery[data-image-count="2"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 body main#main .cg-image-gallery[data-image-count="1"]{grid-template-columns:minmax(0,820px)!important;justify-content:center!important}
-body main#main .cg-media-disclosure{font-size:12px!important;line-height:1.6!important;color:#536b79!important;max-width:90ch!important;margin:18px 0 0!important}
+body main#main .cg-guide-note{font-size:12px!important;line-height:1.6!important;color:#536b79!important;max-width:90ch!important;margin:18px 0 0!important}
 body main#main .cg-illustration-section .section-head{margin-bottom:28px!important}
 /* Thumbnail frames show the complete generated composition, including technical edges. */
 body main#main .cg-card-media{display:block!important;width:100%!important;overflow:hidden!important;flex-shrink:0!important;aspect-ratio:3/2!important;background:#182b33!important}
@@ -368,7 +368,7 @@ body main#main img[data-generated-image]{transform:none!important}
 /* RFQ: the guidance image must not squeeze the form on narrow screens. */
 body main#main .pr-rfq-layout{grid-template-columns:minmax(0,1.5fr) minmax(280px,.65fr)!important;gap:24px!important;align-items:start!important}
 body main#main .pr-rfq-layout>.pr-panel{width:100%!important;min-width:0!important}
-body main#main .pr-rfq-layout>.cg-media-disclosure{grid-column:1/-1!important}
+body main#main .pr-rfq-layout>.cg-guide-note{grid-column:1/-1!important}
 body main#main #rfq-form .form-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 body main#main #rfq-form :is(input,select,textarea){max-width:100%!important;min-width:0!important}
 @media(max-width:1000px){body main#main .pr-rfq-layout{grid-template-columns:minmax(0,1fr)!important}body main#main .pr-rfq-layout>.pr-sticky{position:static!important}}

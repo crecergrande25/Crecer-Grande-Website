@@ -49,9 +49,11 @@ Read [the admin release and verification notes](docs/RELEASE_13_ADMIN_WORKSPACE.
 
 ## Website illustrations
 
-Release 12 integrates 71 generated images requested by the website owner. All 78 public content pages have foreground hero imagery; every hero, including Home, also has a related background. Insights has 50 articles with image backgrounds on the cards. They are AI-generated illustrations, identified as such in captions and page notices; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
+Release 12 integrates 71 generated images requested by the website owner. All 78 public content pages have foreground hero imagery; every hero, including Home, also has a related background. Insights has 50 articles with image backgrounds on the cards. They are AI-generated illustrations, disclosed in the Privacy Policy under Website imagery; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
 
 The new raster assets are in `assets/images/generated/`. Responsive WebP copies at four widths retain the original 3:2 composition. Original PNGs remain outside the checkout. Lazy loading and appropriate source sizes keep page downloads small.
+
+Release 14 moves visible image-origin labels into the [Privacy Policy](https://crecergrande.in/privacy.html#website-imagery), including the admin sign-in and Engineering Desk panels. See [the release notes](docs/RELEASE_14_IMAGE_DISCLOSURE.md).
 
 Read [the placement guide](docs/RELEASE_12_UNIQUE_HOMEPAGE_BACKGROUND.md) and [the exact image-to-page inventory](docs/IMAGE_PLACEMENTS.csv). `assets/data/photography.json` records every approved image, descriptive alternative text and its placements. [The original-photo brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) still applies if replacing these illustrations with genuine company photography later.
 

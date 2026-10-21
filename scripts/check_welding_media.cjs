@@ -12,7 +12,7 @@ const {readOnlyContext} = require('./browser-test-helpers.cjs');
    await page.waitForFunction(()=>[...document.querySelectorAll('link[rel="stylesheet"]')].every(l=>!!l.sheet));
    assert.match(await page.locator('main h1').innerText(),/LASER WELDING/i);
    assert.deepEqual(await page.locator('.cg-service-gallery [data-generated-image]').evaluateAll(images=>images.map(i=>i.dataset.generatedImage)),['07','29','39']);
-   assert.ok(await page.locator('.cg-media-disclosure').isVisible());
+   assert.ok(await page.locator('footer a[href="/privacy.html"]').isVisible());
    for(const image of await page.locator('.cg-service-gallery img').all()){await image.evaluate(e=>{e.loading='eager'});await image.evaluate(e=>e.decode());assert.ok(await image.isVisible())}
    assert.ok(await page.locator('main').getByText('Joint Review',{exact:true}).isVisible());
    assert.ok(await page.locator('main a[href*="request-quote"]').first().isVisible());
