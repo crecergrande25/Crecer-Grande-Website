@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+<title id="title">Laser welding joint concept schematic</title>
+<desc id="desc">Technical blueprint illustration of a laser directed at a metal butt joint. Concept diagram, not a photograph of actual welding at Crecer Grande.</desc>
+<defs>
+<linearGradient id="base" x2="1" y2=".5"><stop stop-color="#061b31"/><stop offset=".55" stop-color="#10334f"/><stop offset="1" stop-color="#20536b"/></linearGradient>
+<linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a3becb"/><stop offset=".4" stop-color="#5d849a"/><stop offset="1" stop-color="#183b57"/></linearGradient>
+<linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#68e4ef" stop-opacity=".16"/><stop offset=".7" stop-color="#73d9ea" stop-opacity=".75"/><stop offset="1" stop-color="#ffcb5b"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#f9c863" stop-opacity=".7"/><stop offset="1" stop-color="#f9c863" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M64 0H0V64" fill="none" stroke="#c4deeb" stroke-opacity=".11" stroke-width="1"/></pattern>
+<filter id="soft"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#base)"/><rect width="1920" height="1080" fill="url(#grid)"/>
+<path d="M730 0V1080" stroke="#a4cad9" stroke-opacity=".18" stroke-width="3"/>
+<g opacity=".2" fill="none" stroke="#bfdce8" stroke-width="3"><circle cx="1460" cy="500" r="335"/><circle cx="1460" cy="500" r="420" stroke-dasharray="15 22"/><path d="M1030 500h880M1460 50v940"/></g>
+<g transform="translate(925 210)">
+<path d="M15 510L350 305 774 484 443 702Z" fill="url(#steel)" stroke="#b4d0de" stroke-width="7"/>
+<path d="M15 510v100l428 194V702z" fill="#173852" stroke="#85a9ba" stroke-width="6"/>
+<path d="M443 702v102l331-218V484z" fill="#08233b" stroke="#85a9ba" stroke-width="6"/>
+<path d="M214 388l426 184" fill="none" stroke="#e8bd65" stroke-width="12" stroke-dasharray="24 13"/>
+<path d="M220 380l422 181" fill="none" stroke="#fbe2a3" stroke-width="4"/>
+<path d="M635 60v205" stroke="#bcd3e0" stroke-width="40" stroke-linecap="round"/>
+<path d="M605 128h61v84h-61z" fill="#395b73" stroke="#bbd2de" stroke-width="5"/>
+<path d="M620 255l-48 190 103 42z" fill="url(#beam)" opacity=".68"/>
+<circle cx="641" cy="465" r="122" fill="url(#glow)" filter="url(#soft)"/>
+<path d="M638 444l-32 44m35-30l32 47m-28-49l2 72" stroke="#ffcf70" stroke-width="6" stroke-linecap="round"/>
+<path d="M634 59V12m-35 28h70" stroke="#e4b94f" stroke-width="4"/>
+<circle cx="638" cy="460" r="9" fill="#ffe9a8"/>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" fill="#d7e8ef">
+<text x="1030" y="114" font-size="22" letter-spacing="5" fill="#efc16a">WELDING • JOINT CONCEPT</text>
+<path d="M1385 214l150 -90h224" fill="none" stroke="#79cfe0" stroke-width="4"/>
+<text x="1530" y="112" font-size="24" font-weight="bold">BEAM ACCESS</text>
+<path d="M1162 798l-130 110H855" fill="none" stroke="#8ed5e1" stroke-width="4"/>
+<text x="857" y="940" font-size="24" font-weight="bold">FIT-UP / ALIGNMENT</text>
+<text x="1070" y="1024" font-size="19" letter-spacing="2" fill="#bbccd9">ILLUSTRATION ONLY — NOT A WORKSHOP PHOTOGRAPH</text>
+</g></svg>
