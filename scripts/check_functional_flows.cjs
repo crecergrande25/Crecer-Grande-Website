@@ -54,7 +54,7 @@ const reference = '12345678-1234-4234-8234-123456789abc';
       assert.equal(new URL(page.url()).searchParams.get('route'),'machine');
       assert.ok((await page.locator('#engineering-route-detail a').getAttribute('href')).startsWith('/request-quote.html?'));
     });
-    for (const [route,category] of [['/projects.html','engineering'],['/insights.html','quality']]) {
+    for (const [route,category] of [['/insights.html','quality']]) {
       await check(route + ' category, search and empty state work together', async () => {
         await go(route);
         const all = await page.locator('[data-filter-item]:visible').count();

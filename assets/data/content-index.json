@@ -28,7 +28,7 @@
     "keywords": "design job work"
   },
   {
-    "name": "Bring the problem. We’ll help structure the solution.",
+    "name": "Bring the problem. We\u2019ll help structure the solution.",
     "kind": "Service",
     "desc": "Route design, manufacturing, machine troubleshooting, inspection and quality requirements through Crecer Grande's Engineering Desk.",
     "href": "/engineering-desk.html",
@@ -63,9 +63,9 @@
     "keywords": "industries"
   },
   {
-    "name": "Practical knowledge for better industrial decisions.",
+    "name": "50 Engineering Insights & Practical Guides",
     "kind": "Service",
-    "desc": "Practical Crecer Grande engineering articles, troubleshooting checklists, quality guides and downloadable division profiles for industrial requirements.",
+    "desc": "Search engineering guides for CAD, manufacturing, maintenance and inspection.",
     "href": "/insights.html",
     "keywords": "insights"
   },
@@ -96,13 +96,6 @@
     "desc": "Mechanical design services covering 3D CAD, 2D drafting, piping layouts, manufacturing drawings, BOM, DFM/DFA and reverse engineering.",
     "href": "/mechanical-design-services-kolkata.html",
     "keywords": "mechanical design services kolkata"
-  },
-  {
-    "name": "Six engineering problems, explained.",
-    "kind": "Service",
-    "desc": "Explore Crecer Grande engineering, manufacturing, maintenance, 3D printing and quality case-study patterns.",
-    "href": "/projects.html",
-    "keywords": "projects"
   },
   {
     "name": "REVERSE ENGINEERING SERVICES",
@@ -155,163 +148,352 @@
   },
   {
     "name": "STEP vs STL vs 3MF for 3D Printing: What Should You Send?",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "Understand when STEP/STP solid CAD is better than STL or 3MF mesh data, and why mesh units and resolution matter to additive manufacturing quotations.",
     "href": "/insights/3d-printing-file-formats.html",
-    "keywords": "insights/3d printing file formats"
+    "keywords": "design 3d printing file formats"
   },
   {
     "name": "3D Printing Tolerances: What Designers Should Expect",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical overview of why FDM and resin parts do not reproduce CAD perfectly and how orientation, geometry, process and post-processing affect fit.",
     "href": "/insights/3d-printing-tolerances.html",
-    "keywords": "insights/3d printing tolerances"
+    "keywords": "design 3d printing tolerances"
   },
   {
     "name": "How to Select an Equivalent Laser Chiller Pump",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical guide to matching a replacement laser chiller pump by voltage, flow, head, ports, mounting, fluid duty and control rather than wattage alone.",
     "href": "/insights/chiller-pump-equivalent-selection.html",
-    "keywords": "insights/chiller pump equivalent selection"
+    "keywords": "maintenance chiller pump equivalent selection"
   },
   {
     "name": "CNC / VMC Speeds & Feeds: The Basic Relationships",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical explanation of cutting speed, spindle RPM, feed per tooth and table feed for milling operations.",
     "href": "/insights/cnc-vmc-speeds-feeds-basics.html",
-    "keywords": "insights/cnc vmc speeds feeds basics"
+    "keywords": "manufacturing cnc vmc speeds feeds basics"
   },
   {
     "name": "GD&T Basics: Datums, Position, Orientation & Why They Matter",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "Learn how datum references and geometric tolerances communicate functional requirements more clearly than plus/minus dimensions alone.",
     "href": "/insights/gdt-datum-basics.html",
-    "keywords": "insights/gdt datum basics"
+    "keywords": "design gdt datum basics"
   },
   {
     "name": "Holes Near Sheet-Metal Bends: How to Avoid Distortion",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical design guide for placing holes, slots and hardware features near bends so they do not stretch, ovalize or tear during forming.",
     "href": "/insights/holes-near-sheet-metal-bends.html",
-    "keywords": "insights/holes near sheet metal bends"
+    "keywords": "design holes near sheet metal bends"
   },
   {
     "name": "How to Identify an Unknown Laser Consumable",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical checklist for identifying laser nozzles, protective windows, ceramic rings and head spares using model, dimensions, location and photographs.",
     "href": "/insights/identify-laser-consumables.html",
-    "keywords": "insights/identify laser consumables"
+    "keywords": "maintenance identify laser consumables"
   },
   {
     "name": "Laser Cutting Defects: A Practical Troubleshooting Guide",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A structured way to investigate burr, wide kerf, incomplete cuts, rough edges, piercing problems and unstable cutting without guessing at parameters.",
     "href": "/insights/laser-cutting-defects.html",
-    "keywords": "insights/laser cutting defects"
+    "keywords": "maintenance laser cutting defects"
   },
   {
     "name": "Laser Cutting Nozzle, Centering & Focus: What Each One Changes",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "Understand laser nozzle geometry, centering, standoff and focus position, and the controlled checks needed after changing cutting consumables.",
     "href": "/insights/laser-nozzle-focus-basics.html",
-    "keywords": "insights/laser nozzle focus basics"
+    "keywords": "maintenance laser nozzle focus basics"
   },
   {
     "name": "Machine Breakdown Data Checklist: What to Capture Before Troubleshooting",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "Use this checklist to collect alarms, symptoms, recent changes, operating conditions and evidence before troubleshooting an industrial machine breakdown.",
     "href": "/insights/machine-breakdown-data-checklist.html",
-    "keywords": "insights/machine breakdown data checklist"
+    "keywords": "maintenance machine breakdown data checklist"
   },
   {
-    "name": "Metric Tap Drill & Clearance Hole Guide — M3 to M24",
-    "kind": "Engineering guide",
+    "name": "Metric Tap Drill & Clearance Hole Guide \u2014 M3 to M24",
+    "kind": "Guide",
     "desc": "Metric coarse tap-drill and clearance-hole reference with practical guidance on tapping holes, bolt clearance and common shop-floor sizes.",
     "href": "/insights/metric-tap-drill-clearance-hole-chart.html",
-    "keywords": "insights/metric tap drill clearance hole chart"
+    "keywords": "manufacturing metric tap drill clearance hole chart"
   },
   {
     "name": "NCR vs RCA vs CAPA: How the Quality Tools Fit Together",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical explanation of nonconformance, root-cause analysis, corrective action and effectiveness verification for manufacturing quality systems.",
     "href": "/insights/ncr-rca-capa-guide.html",
-    "keywords": "insights/ncr rca capa guide"
+    "keywords": "quality ncr rca capa guide"
   },
   {
     "name": "Preventive Maintenance Basics for CNC, VMC & Industrial Machines",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical framework for daily, weekly, monthly and scheduled machine checks without replacing the OEM maintenance manual.",
     "href": "/insights/preventive-maintenance-basics.html",
-    "keywords": "insights/preventive maintenance basics"
+    "keywords": "maintenance preventive maintenance basics"
   },
   {
     "name": "Sheet-Metal Bending Basics: V-Die, Radius, K-Factor & Bend Allowance",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical introduction to air bending, V-die selection, inside radius, bend allowance and the information required before bending sheet metal.",
     "href": "/insights/sheet-metal-bending-basics.html",
-    "keywords": "insights/sheet metal bending basics"
+    "keywords": "manufacturing sheet metal bending basics"
   },
   {
     "name": "Correct Handling of Stainless-Steel Sheet & Components",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "Practical handling, storage and contamination-control guidance to protect stainless-steel surfaces before fabrication and delivery.",
     "href": "/insights/stainless-steel-handling.html",
-    "keywords": "insights/stainless steel handling"
+    "keywords": "quality stainless steel handling"
   },
   {
     "name": "Surface Roughness Basics: Ra, Rz & What a Drawing Is Asking For",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical introduction to common surface-roughness parameters and why the same Ra value can hide very different surface profiles.",
     "href": "/insights/surface-roughness-ra-rz.html",
-    "keywords": "insights/surface roughness ra rz"
+    "keywords": "quality surface roughness ra rz"
   },
   {
     "name": "How to Use a Vernier Caliper Correctly",
-    "kind": "Engineering guide",
+    "kind": "Guide",
     "desc": "A practical guide to external, internal and depth measurement with a vernier or digital caliper, including zero checks, alignment and repeatability.",
     "href": "/insights/vernier-caliper-guide.html",
-    "keywords": "insights/vernier caliper guide"
+    "keywords": "quality vernier caliper guide"
   },
   {
-    "name": "3D Printing: First Article Before Releasing the Batch",
-    "kind": "Engineering guide",
-    "desc": "See how first-article inspection helps control dimensional variation in 3D printed parts before repeat production and batch release.",
-    "href": "/projects/3d-print-fai-batch.html",
-    "keywords": "projects/3d print fai batch"
+    "name": "Drawing Revisions: Which Version Goes to the Shop?",
+    "kind": "Guide",
+    "desc": "A drawing can be dimensionally correct and still be the wrong document. A simple release process keeps quotations, machining, inspection and repeat orders tied to the same approved revision.",
+    "href": "/insights/drawing-revision-control.html",
+    "keywords": "design drawing revision control"
   },
   {
-    "name": "Replacement Component Fit: Verifying Interfaces Before Installation",
-    "kind": "Engineering guide",
-    "desc": "Field measurement error, drawing mismatch and tolerance stack can all look like a “part too tight / too loose” problem.",
-    "href": "/projects/fit-correction-replacement-component.html",
-    "keywords": "projects/fit correction replacement component"
+    "name": "Choosing a Material Grade for a Replacement Part",
+    "kind": "Guide",
+    "desc": "Appearance, magnetism and colour can narrow a material search, but they cannot establish a grade. Start with what the part must withstand before choosing a manufacturing route.",
+    "href": "/insights/engineering-material-grade-selection.html",
+    "keywords": "design engineering material grade selection"
   },
   {
-    "name": "Laser Chiller Pump Replacement: Matching Duty Over Appearance",
-    "kind": "Engineering guide",
-    "desc": "A replacement pump can fit physically and still fail hydraulically. This guide explains the evidence needed before selecting an equivalent.",
-    "href": "/projects/laser-chiller-pump-replacement.html",
-    "keywords": "projects/laser chiller pump replacement"
+    "name": "Shaft, Bearing and Bushing Fits: What to Specify",
+    "kind": "Guide",
+    "desc": "A fit describes the relationship between two mating sizes. It affects assembly force, running clearance, load transfer and whether a component can be removed for maintenance.",
+    "href": "/insights/shaft-bearing-bushing-fits.html",
+    "keywords": "design shaft bearing bushing fits"
   },
   {
-    "name": "Laser Cutting Quality Deterioration: Evidence-Based Root Cause Analysis",
-    "kind": "Engineering guide",
-    "desc": "Structured RCA for laser cutting quality issues covering optics, nozzle centering, focus, gas, contamination, settings and maintenance evidence.",
-    "href": "/projects/laser-machine-rca.html",
-    "keywords": "projects/laser machine rca"
+    "name": "Plan the Measurements Before Reverse Engineering",
+    "kind": "Guide",
+    "desc": "Reverse engineering starts by deciding which features locate, seal, rotate or carry load. Measuring every visible surface with equal priority often misses the relationships that make the part work.",
+    "href": "/insights/reverse-engineering-measurement-plan.html",
+    "keywords": "design reverse engineering measurement plan"
   },
   {
-    "name": "Precision Marked Components: Cutting, Edge Quality and Traceability",
-    "kind": "Engineering guide",
-    "desc": "A small marked component can involve material, cutting, edge quality, code readability and inspection — not just engraving a QR image.",
-    "href": "/projects/precision-marked-components.html",
-    "keywords": "projects/precision marked components"
+    "name": "Identifying an Unknown Thread Without Guesswork",
+    "kind": "Guide",
+    "desc": "Thread identification needs more than an approximate outside diameter. Pitch, thread form, taper, handedness and sealing method must agree before two components are considered compatible.",
+    "href": "/insights/identify-unknown-threads.html",
+    "keywords": "manufacturing identify unknown threads"
   },
   {
-    "name": "From a worn sample to a usable drawing.",
-    "kind": "Engineering guide",
-    "desc": "Separate wear from intended geometry, measure the working interfaces and agree a drawing before manufacturing a replacement part.",
-    "href": "/projects/reverse-engineering-sample-to-drawing.html",
-    "keywords": "reverse engineering sample worn part manufacturing drawing"
+    "name": "Fastener Torque Starts with the Joint",
+    "kind": "Guide",
+    "desc": "Tightening torque is an indirect way of controlling bolt preload. The joint design, fastener grade, thread condition and friction all affect the result, so one torque value cannot cover every bolt of a given diameter.",
+    "href": "/insights/fastener-torque-and-joint-review.html",
+    "keywords": "manufacturing fastener torque and joint review"
+  },
+  {
+    "name": "Bearing Failure: Preserve the Evidence First",
+    "kind": "Guide",
+    "desc": "Noise or heat can suggest a bearing problem, but the removed bearing often contains the strongest evidence. Handle it so contamination, wear patterns and lubrication condition remain available for review.",
+    "href": "/insights/bearing-failure-evidence.html",
+    "keywords": "maintenance bearing failure evidence"
+  },
+  {
+    "name": "Build a Lubrication Plan That Can Be Followed",
+    "kind": "Guide",
+    "desc": "A useful lubrication plan names the right lubricant, the point of application, the quantity, the interval and the responsible person. \u201cGrease regularly\u201d leaves too much to interpretation.",
+    "href": "/insights/lubrication-plan-basics.html",
+    "keywords": "maintenance lubrication plan basics"
+  },
+  {
+    "name": "Prepare for Coupling Alignment Before Measuring",
+    "kind": "Guide",
+    "desc": "Alignment measurements are useful only when the assembly is ready for them. Loose foundations, soft foot, pipe strain or a damaged coupling can undermine a carefully recorded alignment result.",
+    "href": "/insights/coupling-alignment-preparation.html",
+    "keywords": "maintenance coupling alignment preparation"
+  },
+  {
+    "name": "Pump Noise: Separate Cavitation from Other Causes",
+    "kind": "Guide",
+    "desc": "A noisy pump may have suction problems, air ingress, rubbing, bearing damage or an unsuitable duty point. Sound alone cannot confirm cavitation or justify choosing a larger replacement.",
+    "href": "/insights/pump-noise-cavitation-checklist.html",
+    "keywords": "maintenance pump noise cavitation checklist"
+  },
+  {
+    "name": "Hydraulic Hose Replacement: Identify the Whole Assembly",
+    "kind": "Guide",
+    "desc": "A replacement hose must suit the pressure, fluid, temperature, routing and end connections. Matching its outside appearance leaves important compatibility questions unanswered.",
+    "href": "/insights/hydraulic-hose-identification.html",
+    "keywords": "maintenance hydraulic hose identification"
+  },
+  {
+    "name": "Gaskets and Flanges: Specify the Sealing Conditions",
+    "kind": "Guide",
+    "desc": "A gasket must suit the fluid, temperature, pressure, flange geometry and joint loading. Choosing by outside diameter alone can leave the sealing surface or material unsuitable.",
+    "href": "/insights/gasket-flange-selection.html",
+    "keywords": "maintenance gasket flange selection"
+  },
+  {
+    "name": "Surface Staining or Corrosion? What to Record",
+    "kind": "Guide",
+    "desc": "Discolouration can come from contamination, surface deposits or active corrosion. Record its location and service conditions before cleaning so that the investigation does not lose useful evidence.",
+    "href": "/insights/corrosion-versus-surface-staining.html",
+    "keywords": "quality corrosion versus surface staining"
+  },
+  {
+    "name": "Weld Fit-Up: Check the Joint Before Welding",
+    "kind": "Guide",
+    "desc": "Consistent welding starts with suitable fit-up. Joint access, edge condition, gaps, alignment and fixturing affect whether the planned welding process can produce the required result.",
+    "href": "/insights/weld-joint-fitup-checklist.html",
+    "keywords": "manufacturing weld joint fitup checklist"
+  },
+  {
+    "name": "Plan for Weld Distortion Before Fabrication",
+    "kind": "Guide",
+    "desc": "Welding introduces local heating and contraction. A part that looks square in a fixture can move after release, so distortion should be considered while the drawing and assembly sequence can still change.",
+    "href": "/insights/weld-distortion-planning.html",
+    "keywords": "manufacturing weld distortion planning"
+  },
+  {
+    "name": "Prepare Artwork for Readable Laser Marking",
+    "kind": "Guide",
+    "desc": "Good marking starts with a clear artwork file and an agreed marking area. Text height, line width, contrast and the substrate all affect how the final result can be read.",
+    "href": "/insights/laser-marking-artwork-preparation.html",
+    "keywords": "manufacturing laser marking artwork preparation"
+  },
+  {
+    "name": "Laser Kerf and Small Features: What to Review",
+    "kind": "Guide",
+    "desc": "The cut has a width, and the material around a small feature must survive the process. Slots, thin webs and tiny holes deserve a review before a drawing is released for laser cutting.",
+    "href": "/insights/laser-cutting-kerf-and-small-features.html",
+    "keywords": "manufacturing laser cutting kerf and small features"
+  },
+  {
+    "name": "Specify the Edge, Not Just \u201cDeburr\u201d",
+    "kind": "Guide",
+    "desc": "Deburring can mean removing loose material, breaking a sharp edge or producing a controlled radius. The drawing should say which outcome matters without allowing critical geometry to disappear.",
+    "href": "/insights/deburring-edge-requirements.html",
+    "keywords": "manufacturing deburring edge requirements"
+  },
+  {
+    "name": "Press-Brake Tooling: Questions Before Bending",
+    "kind": "Guide",
+    "desc": "A bend drawing must work with the material and the available tooling. The intended inside radius, flange length and bend sequence can determine whether a part is practical to form.",
+    "href": "/insights/press-brake-tooling-review.html",
+    "keywords": "manufacturing press brake tooling review"
+  },
+  {
+    "name": "A Fixture Should Locate Before It Clamps",
+    "kind": "Guide",
+    "desc": "A useful fixture positions the work consistently and holds it without creating avoidable distortion. Start by separating the locating features from the clamping forces.",
+    "href": "/insights/jig-fixture-design-basics.html",
+    "keywords": "design jig fixture design basics"
+  },
+  {
+    "name": "3D Print Orientation Is a Design Decision",
+    "kind": "Guide",
+    "desc": "Print orientation affects support marks, surface quality, dimensional behaviour and strength direction. The flattest orientation is not always the best choice for the way a part will be used.",
+    "href": "/insights/3d-print-orientation-planning.html",
+    "keywords": "design 3d print orientation planning"
+  },
+  {
+    "name": "Threaded Inserts in Printed Parts: Plan the Boss",
+    "kind": "Guide",
+    "desc": "Threaded inserts can improve repeated fastening in suitable printed polymers, but the surrounding boss and installation process still control the result.",
+    "href": "/insights/threaded-inserts-in-printed-parts.html",
+    "keywords": "design threaded inserts in printed parts"
+  },
+  {
+    "name": "Prototype Validation: Decide What You Are Testing",
+    "kind": "Guide",
+    "desc": "A prototype is most useful when it answers a specific question. Appearance, assembly fit, ergonomics and load performance may require different materials, processes and inspection methods.",
+    "href": "/insights/prototype-validation-checklist.html",
+    "keywords": "quality prototype validation checklist"
+  },
+  {
+    "name": "First Article Inspection: Agree the Plan First",
+    "kind": "Guide",
+    "desc": "First Article Inspection checks whether the first representative output meets the agreed requirements. It works best when the drawing, characteristics, methods and evidence are defined before the part arrives.",
+    "href": "/insights/first-article-inspection-planning.html",
+    "keywords": "quality first article inspection planning"
+  },
+  {
+    "name": "Measurement Uncertainty: Leave Room for Doubt",
+    "kind": "Guide",
+    "desc": "A measurement is an estimate made with an instrument and a method. Resolution, calibration, temperature, contact and repeatability influence how confidently a result can be compared with a tolerance.",
+    "href": "/insights/measurement-uncertainty-practical-guide.html",
+    "keywords": "quality measurement uncertainty practical guide"
+  },
+  {
+    "name": "Turn a Drawing into an Inspection Plan",
+    "kind": "Guide",
+    "desc": "An inspection plan connects each requirement with a method, a frequency, a record and an acceptance decision. It makes the drawing usable by the people checking the output.",
+    "href": "/insights/inspection-plan-from-drawing.html",
+    "keywords": "quality inspection plan from drawing"
+  },
+  {
+    "name": "Choose a Surface Finish for Its Job",
+    "kind": "Guide",
+    "desc": "A finish can serve appearance, sliding contact, corrosion control, cleaning or sealing. These needs should be separated before a supplier is asked for a polished or premium surface.",
+    "href": "/insights/surface-finish-selection.html",
+    "keywords": "design surface finish selection"
+  },
+  {
+    "name": "Replacement Parts: Plan the Trial Fit",
+    "kind": "Guide",
+    "desc": "A replacement should be checked in its assembly context, particularly when the original geometry or tolerance was uncertain. A planned trial fit is more informative than discovering interference during urgent commissioning.",
+    "href": "/insights/replacement-part-trial-fit.html",
+    "keywords": "quality replacement part trial fit"
+  },
+  {
+    "name": "Packing Precision Parts for Transport",
+    "kind": "Guide",
+    "desc": "A part can pass inspection and arrive damaged. Packaging should protect the features that control fit, appearance and cleanliness, while preserving the records needed to identify the shipment.",
+    "href": "/insights/packing-precision-components.html",
+    "keywords": "manufacturing packing precision components"
+  },
+  {
+    "name": "Maintenance Handover: What Must Be Recorded",
+    "kind": "Guide",
+    "desc": "A maintenance job is not complete when the tools are removed. The receiving team needs to know what was found, what changed, what was verified and which restrictions or follow-up actions remain.",
+    "href": "/insights/maintenance-handover-record.html",
+    "keywords": "maintenance maintenance handover record"
+  },
+  {
+    "name": "Critical Spares: Stock the Risk, Not Every Part",
+    "kind": "Guide",
+    "desc": "A useful spares plan considers failure consequence, replacement lead time, interchangeability and storage life. Stocking everything is expensive, while stocking familiar low-risk parts can leave the real bottleneck uncovered.",
+    "href": "/insights/critical-spares-planning.html",
+    "keywords": "maintenance critical spares planning"
+  },
+  {
+    "name": "A Bill of Materials That Matches the Assembly",
+    "kind": "Guide",
+    "desc": "A bill of materials links an assembly to the parts, quantities, specifications and revisions needed to build it. It should describe the released configuration rather than a convenient list copied from an old quotation.",
+    "href": "/insights/bill-of-materials-release.html",
+    "keywords": "design bill of materials release"
+  },
+  {
+    "name": "Piping Layout Review Beyond the Centreline",
+    "kind": "Guide",
+    "desc": "A piping layout must accommodate operation, support, drainage, maintenance and installation as well as the nominal route. The centreline alone does not show whether a system can be built and serviced.",
+    "href": "/insights/piping-layout-review-checklist.html",
+    "keywords": "design piping layout review checklist"
   }
 ]

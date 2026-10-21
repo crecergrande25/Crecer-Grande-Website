@@ -22,10 +22,12 @@ const base=process.env.SITE_BASE||'http://127.0.0.1:8765';
    await go('/');assert.equal(await page.locator('.cg-botcha-launch-copy b').innerText(),'Ask us a question');
    assert.equal(await page.locator('main a[href="/services.html"]').innerText(),'Explore Services');
   });
-  await check('Six unique project guides load with headings and disclosed generated illustrations',async()=>{
-   await go('/projects.html');const links=await page.locator('[data-filter-item]').evaluateAll(a=>a.map(e=>e.getAttribute('href')));
-   assert.equal(links.length,6);assert.equal(new Set(links).size,6);
-   for(const href of links){await go(href);assert.equal(new URL(page.url()).pathname,href,'Project link must open its own guide');assert.equal(await page.locator('main h1').count(),1);assert.ok(await page.locator('main [data-generated-image]').count()>=2);assert.ok(await page.locator('.cg-media-disclosure').isVisible())}
+  await check('Projects is removed from the website and its navigation',async()=>{
+   await go('/insights.html');assert.equal(await page.locator('[data-filter-item]').count(),50);
+   assert.equal(await page.locator('a[href^="/projects"]').count(),0);
+   for(const route of ['/projects.html','/projects/fit-correction-replacement-component.html']){
+    assert.equal((await context.request.get(base+route)).status(),404);
+   }
   });
   await check('Mobile quote form keeps usable fields before its illustration sidebar',async()=>{
    await page.setViewportSize({width:320,height:844});await go('/request-quote.html');
@@ -36,8 +38,8 @@ const base=process.env.SITE_BASE||'http://127.0.0.1:8765';
    assert.ok(aside.y>=form.y+form.height-2,'Sidebar must follow the form on mobile');
    await page.setViewportSize({width:390,height:844});
   });
-  await check('Retired directory, Automation and duplicate project routes redirect correctly',async()=>{
-   const redirects=[['/divisions.html','/services.html'],['/industrial-automation-kolkata.html','/services.html'],['/divisions/automation-solutions.html','/services.html'],['/projects/co2-laser-components-support.html','/projects/laser-machine-rca.html#component-identification'],['/projects/custom-keychain-laser-marking.html','/projects/precision-marked-components.html#artwork'],['/projects/ss304-qr-code-laser-marking.html','/projects/precision-marked-components.html#qr-plates']];
+  await check('Retired directory and Automation routes redirect correctly',async()=>{
+   const redirects=[['/divisions.html','/services.html'],['/industrial-automation-kolkata.html','/services.html'],['/divisions/automation-solutions.html','/services.html']];
    for(const [from,to] of redirects){await page.goto(base+from,{waitUntil:'domcontentloaded'});await page.waitForURL(base+to);if(to.includes('#'))assert.ok(await page.locator(to.slice(to.indexOf('#'))).isVisible())}
   });
   await check('Removed Automation download returns 404',async()=>{

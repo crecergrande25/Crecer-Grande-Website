@@ -50,14 +50,14 @@ walk(root);
           if (document.documentElement.scrollWidth > innerWidth + 3) issues.push('Horizontal page overflow');
           for (const image of document.images) {
             if (!image.complete || !image.naturalWidth) issues.push('Image did not decode: ' + image.getAttribute('src'));
-            if (!image.alt.trim()) issues.push('Image has no useful alternative text: ' + image.getAttribute('src'));
+            if (!image.alt.trim() && image.getAttribute('aria-hidden') !== 'true') issues.push('Image has no useful alternative text: ' + image.getAttribute('src'));
           }
           for (const image of document.querySelectorAll('main img')) {
             const id=image.dataset.generatedImage;
-            if(!id){if(!/logo|qr-code|website-qr/i.test(image.getAttribute('src')||''))issues.push('Unregistered image: '+image.getAttribute('src'));continue;}
+            if(!id){if(!/logo|qr-code|website-qr|whatsapp-qr|\/brands\//i.test(image.getAttribute('src')||''))issues.push('Unregistered image: '+image.getAttribute('src'));continue;}
             const expected=expectedImages[id];
             if(!expected||expected.src!==image.getAttribute('src'))issues.push('Image not in the approved generated set: '+id);
-            if(expected&&expected.alt!==image.alt)issues.push('Generated image has mismatched alternative text: '+id);
+            if(expected&&expected.alt!==image.alt&&image.getAttribute('aria-hidden')!=='true')issues.push('Generated image has mismatched alternative text: '+id);
             if(!image.getClientRects().length||!image.clientWidth)issues.push('Placed image is hidden: '+id);
             if(getComputedStyle(image).objectFit==='fill'&&Math.abs(image.clientWidth/image.clientHeight-1.5)>.03)issues.push('Image is stretched: '+id);
             if(!document.querySelector('.cg-media-disclosure,.cg-generated-note'))issues.push('Generated-image disclosure is missing');
@@ -65,7 +65,11 @@ walk(root);
           const hero = document.querySelector('main section.cg-image-backed-hero');
           if (hero) {
             const background = getComputedStyle(hero).backgroundImage;
-            if (/url\(/i.test(background)) issues.push('Unverified hero image is rendered');
+            if(hero.classList.contains('cg-home-hero')){if(/url\(/i.test(background))issues.push('Homepage background was changed');}
+            else {
+              const entry=expectedImages[hero.dataset.backgroundImage];
+              if(!entry||!background.includes(entry.src.replace('.webp','-1200.webp')))issues.push('Matching hero background is missing');
+            }
             if (/\.svg/i.test(background)) issues.push('SVG hero background remains');
             const heading = hero.querySelector('h1');
             if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');

@@ -1,0 +1,1013 @@
+[
+  {
+    "slug": "3d-printing-file-formats",
+    "title": "STEP vs STL vs 3MF for 3D Printing: What Should You Send?",
+    "summary": "Understand when STEP/STP solid CAD is better than STL or 3MF mesh data, and why mesh units and resolution matter to additive manufacturing quotations.",
+    "category": "design",
+    "image": "30",
+    "href": "/insights/3d-printing-file-formats.html",
+    "new": false
+  },
+  {
+    "slug": "3d-printing-tolerances",
+    "title": "3D Printing Tolerances: What Designers Should Expect",
+    "summary": "A practical overview of why FDM and resin parts do not reproduce CAD perfectly and how orientation, geometry, process and post-processing affect fit.",
+    "category": "design",
+    "image": "20",
+    "href": "/insights/3d-printing-tolerances.html",
+    "new": false
+  },
+  {
+    "slug": "chiller-pump-equivalent-selection",
+    "title": "How to Select an Equivalent Laser Chiller Pump",
+    "summary": "A practical guide to matching a replacement laser chiller pump by voltage, flow, head, ports, mounting, fluid duty and control rather than wattage alone.",
+    "category": "maintenance",
+    "image": "18",
+    "href": "/insights/chiller-pump-equivalent-selection.html",
+    "new": false
+  },
+  {
+    "slug": "cnc-vmc-speeds-feeds-basics",
+    "title": "CNC / VMC Speeds & Feeds: The Basic Relationships",
+    "summary": "A practical explanation of cutting speed, spindle RPM, feed per tooth and table feed for milling operations.",
+    "category": "manufacturing",
+    "image": "12",
+    "href": "/insights/cnc-vmc-speeds-feeds-basics.html",
+    "new": false
+  },
+  {
+    "slug": "gdt-datum-basics",
+    "title": "GD&T Basics: Datums, Position, Orientation & Why They Matter",
+    "summary": "Learn how datum references and geometric tolerances communicate functional requirements more clearly than plus/minus dimensions alone.",
+    "category": "design",
+    "image": "41",
+    "href": "/insights/gdt-datum-basics.html",
+    "new": false
+  },
+  {
+    "slug": "holes-near-sheet-metal-bends",
+    "title": "Holes Near Sheet-Metal Bends: How to Avoid Distortion",
+    "summary": "A practical design guide for placing holes, slots and hardware features near bends so they do not stretch, ovalize or tear during forming.",
+    "category": "design",
+    "image": "27",
+    "href": "/insights/holes-near-sheet-metal-bends.html",
+    "new": false
+  },
+  {
+    "slug": "identify-laser-consumables",
+    "title": "How to Identify an Unknown Laser Consumable",
+    "summary": "A practical checklist for identifying laser nozzles, protective windows, ceramic rings and head spares using model, dimensions, location and photographs.",
+    "category": "maintenance",
+    "image": "25",
+    "href": "/insights/identify-laser-consumables.html",
+    "new": false
+  },
+  {
+    "slug": "laser-cutting-defects",
+    "title": "Laser Cutting Defects: A Practical Troubleshooting Guide",
+    "summary": "A structured way to investigate burr, wide kerf, incomplete cuts, rough edges, piercing problems and unstable cutting without guessing at parameters.",
+    "category": "maintenance",
+    "image": "26",
+    "href": "/insights/laser-cutting-defects.html",
+    "new": false
+  },
+  {
+    "slug": "laser-nozzle-focus-basics",
+    "title": "Laser Cutting Nozzle, Centering & Focus: What Each One Changes",
+    "summary": "Understand laser nozzle geometry, centering, standoff and focus position, and the controlled checks needed after changing cutting consumables.",
+    "category": "maintenance",
+    "image": "06",
+    "href": "/insights/laser-nozzle-focus-basics.html",
+    "new": false
+  },
+  {
+    "slug": "machine-breakdown-data-checklist",
+    "title": "Machine Breakdown Data Checklist: What to Capture Before Troubleshooting",
+    "summary": "Use this checklist to collect alarms, symptoms, recent changes, operating conditions and evidence before troubleshooting an industrial machine breakdown.",
+    "category": "maintenance",
+    "image": "04",
+    "href": "/insights/machine-breakdown-data-checklist.html",
+    "new": false
+  },
+  {
+    "slug": "metric-tap-drill-clearance-hole-chart",
+    "title": "Metric Tap Drill & Clearance Hole Guide \u2014 M3 to M24",
+    "summary": "Metric coarse tap-drill and clearance-hole reference with practical guidance on tapping holes, bolt clearance and common shop-floor sizes.",
+    "category": "manufacturing",
+    "image": "58",
+    "href": "/insights/metric-tap-drill-clearance-hole-chart.html",
+    "new": false
+  },
+  {
+    "slug": "ncr-rca-capa-guide",
+    "title": "NCR vs RCA vs CAPA: How the Quality Tools Fit Together",
+    "summary": "A practical explanation of nonconformance, root-cause analysis, corrective action and effectiveness verification for manufacturing quality systems.",
+    "category": "quality",
+    "image": "05",
+    "href": "/insights/ncr-rca-capa-guide.html",
+    "new": false
+  },
+  {
+    "slug": "preventive-maintenance-basics",
+    "title": "Preventive Maintenance Basics for CNC, VMC & Industrial Machines",
+    "summary": "A practical framework for daily, weekly, monthly and scheduled machine checks without replacing the OEM maintenance manual.",
+    "category": "maintenance",
+    "image": "49",
+    "href": "/insights/preventive-maintenance-basics.html",
+    "new": false
+  },
+  {
+    "slug": "sheet-metal-bending-basics",
+    "title": "Sheet-Metal Bending Basics: V-Die, Radius, K-Factor & Bend Allowance",
+    "summary": "A practical introduction to air bending, V-die selection, inside radius, bend allowance and the information required before bending sheet metal.",
+    "category": "manufacturing",
+    "image": "11",
+    "href": "/insights/sheet-metal-bending-basics.html",
+    "new": false
+  },
+  {
+    "slug": "stainless-steel-handling",
+    "title": "Correct Handling of Stainless-Steel Sheet & Components",
+    "summary": "Practical handling, storage and contamination-control guidance to protect stainless-steel surfaces before fabrication and delivery.",
+    "category": "quality",
+    "image": "39",
+    "href": "/insights/stainless-steel-handling.html",
+    "new": false
+  },
+  {
+    "slug": "surface-roughness-ra-rz",
+    "title": "Surface Roughness Basics: Ra, Rz & What a Drawing Is Asking For",
+    "summary": "A practical introduction to common surface-roughness parameters and why the same Ra value can hide very different surface profiles.",
+    "category": "quality",
+    "image": "13",
+    "href": "/insights/surface-roughness-ra-rz.html",
+    "new": false
+  },
+  {
+    "slug": "vernier-caliper-guide",
+    "title": "How to Use a Vernier Caliper Correctly",
+    "summary": "A practical guide to external, internal and depth measurement with a vernier or digital caliper, including zero checks, alignment and repeatability.",
+    "category": "quality",
+    "image": "59",
+    "href": "/insights/vernier-caliper-guide.html",
+    "new": false
+  },
+  {
+    "slug": "drawing-revision-control",
+    "title": "Drawing Revisions: Which Version Goes to the Shop?",
+    "category": "design",
+    "image": "16",
+    "summary": "A drawing can be dimensionally correct and still be the wrong document. A simple release process keeps quotations, machining, inspection and repeat orders tied to the same approved revision.",
+    "why": "Changing a hole position without changing the revision can leave a supplier manufacturing the previous part while inspection uses the new geometry. A filename alone is not a reliable release record, especially when PDFs and CAD models travel separately.",
+    "checks": [
+      "Put the part number and revision on the drawing, model export and purchase reference.",
+      "Record what changed and whether existing stock may still be used.",
+      "Check that the PDF, native model and neutral export describe the same configuration.",
+      "Withdraw superseded files from the working folder and retain them in a clearly marked archive."
+    ],
+    "mistakes": [
+      "Do not treat an emailed screenshot as authority to machine an unapproved change.",
+      "Avoid naming files final, final2 and latest; these names do not establish release order."
+    ],
+    "inputs": [
+      "Current drawing and revision",
+      "Relevant model exports",
+      "Change description and existing stock status"
+    ],
+    "decision": "Release one traceable package after the responsible reviewer approves it. If the revision relationship is unclear, clarify it before buying material or cutting the part.",
+    "new": true,
+    "href": "/insights/drawing-revision-control.html"
+  },
+  {
+    "slug": "engineering-material-grade-selection",
+    "title": "Choosing a Material Grade for a Replacement Part",
+    "category": "design",
+    "image": "68",
+    "summary": "Appearance, magnetism and colour can narrow a material search, but they cannot establish a grade. Start with what the part must withstand before choosing a manufacturing route.",
+    "why": "Two materials with similar strength can behave differently in corrosion, wear, welding or heat treatment. A replacement must also work with the mating component and the process fluid, rather than simply being harder or more expensive.",
+    "checks": [
+      "List load, temperature, chemicals, sliding contact and expected wear.",
+      "Find the original drawing, certificate or material designation where available.",
+      "Check whether heat treatment, coating or hardness is part of the requirement.",
+      "Agree which material evidence the supplier must provide before accepting a substitute."
+    ],
+    "mistakes": [
+      "Do not identify stainless grades from surface appearance alone.",
+      "A higher-strength alloy may reduce toughness, machinability or compatibility in the application."
+    ],
+    "inputs": [
+      "Part drawing or sample photographs",
+      "Operating environment",
+      "Original material evidence and failure history"
+    ],
+    "decision": "Confirm a specific grade and condition against the application. For an unknown critical part, material testing and an engineering review may be needed before a replacement can be quoted responsibly.",
+    "new": true,
+    "href": "/insights/engineering-material-grade-selection.html"
+  },
+  {
+    "slug": "shaft-bearing-bushing-fits",
+    "title": "Shaft, Bearing and Bushing Fits: What to Specify",
+    "category": "design",
+    "image": "65",
+    "summary": "A fit describes the relationship between two mating sizes. It affects assembly force, running clearance, load transfer and whether a component can be removed for maintenance.",
+    "why": "A shaft diameter without a tolerance does not define a fit. Rotation, load direction, temperature and the stiffness of the surrounding housing can all change the correct choice. Bearing manufacturer instructions take precedence over a convenient workshop habit.",
+    "checks": [
+      "Identify which ring or component rotates relative to the load.",
+      "Record shaft and bore sizes at several positions, checking taper and ovality.",
+      "Define the tolerance system and both mating limits on the drawing.",
+      "Review thermal expansion, lubrication and the intended assembly method."
+    ],
+    "mistakes": [
+      "Do not select an interference fit solely because the old part felt tight.",
+      "Measuring a worn bore once can hide the original size and lead to another poor fit."
+    ],
+    "inputs": [
+      "Mating-part drawings",
+      "Measured sizes and measurement method",
+      "Load, temperature and assembly details"
+    ],
+    "decision": "Choose the fit from the functional requirement, then check the assembled condition. Precision and safety-critical assemblies need an agreed calculation and inspection plan rather than a rule of thumb.",
+    "new": true,
+    "href": "/insights/shaft-bearing-bushing-fits.html"
+  },
+  {
+    "slug": "reverse-engineering-measurement-plan",
+    "title": "Plan the Measurements Before Reverse Engineering",
+    "category": "design",
+    "image": "10",
+    "summary": "Reverse engineering starts by deciding which features locate, seal, rotate or carry load. Measuring every visible surface with equal priority often misses the relationships that make the part work.",
+    "why": "A worn or damaged sample records its current condition, not necessarily the design intent. The mating assembly and service history can explain dimensions that the sample alone cannot. Capture uncertainty instead of inventing missing tolerances.",
+    "checks": [
+      "Mark functional datums and identify critical mating interfaces.",
+      "Separate accessible dimensions from features needing another measurement method.",
+      "Measure repeated features in several locations to reveal wear or distortion.",
+      "Record photographs, instrument type and any assumptions beside the dimension notes."
+    ],
+    "mistakes": [
+      "Do not copy corrosion, wear grooves or accidental deformation into the new model.",
+      "A visually complete CAD model is not proof that its tolerances suit the assembly."
+    ],
+    "inputs": [
+      "Sample photographs with scale",
+      "Mating parts or assembly information",
+      "Failure history and accessible dimensions"
+    ],
+    "decision": "Create a measurement plan and a list of unresolved features before modelling. Agree how the missing information will be verified before releasing a replacement for manufacture.",
+    "new": true,
+    "href": "/insights/reverse-engineering-measurement-plan.html"
+  },
+  {
+    "slug": "identify-unknown-threads",
+    "title": "Identifying an Unknown Thread Without Guesswork",
+    "category": "manufacturing",
+    "image": "58",
+    "summary": "Thread identification needs more than an approximate outside diameter. Pitch, thread form, taper, handedness and sealing method must agree before two components are considered compatible.",
+    "why": "Pipe and fastening threads can look similar while having different profiles or sealing arrangements. A part that turns in for a few threads may still damage the connection or fail in service. Gauging should be appropriate to the thread type.",
+    "checks": [
+      "Measure the major diameter and compare more than one position if taper is possible.",
+      "Use a pitch gauge or count threads over a measured length.",
+      "Record male or female form, handedness and the presence of a sealing face.",
+      "Compare the evidence with the relevant thread specification and confirm with suitable gauges."
+    ],
+    "mistakes": [
+      "Do not force a near-match fitting into an expensive port.",
+      "Avoid converting an approximate diameter directly into a thread designation."
+    ],
+    "inputs": [
+      "Clear side and end photographs",
+      "Diameter and pitch measurements",
+      "Machine model and connection purpose"
+    ],
+    "decision": "Confirm the full designation and sealing method before sourcing or machining. Pressure connections require the rated fitting and a defined verification procedure.",
+    "new": true,
+    "href": "/insights/identify-unknown-threads.html"
+  },
+  {
+    "slug": "fastener-torque-and-joint-review",
+    "title": "Fastener Torque Starts with the Joint",
+    "category": "manufacturing",
+    "image": "63",
+    "summary": "Tightening torque is an indirect way of controlling bolt preload. The joint design, fastener grade, thread condition and friction all affect the result, so one torque value cannot cover every bolt of a given diameter.",
+    "why": "Lubrication and coatings change friction. Reusing a value intended for dry threads on lubricated fasteners can change preload substantially. A calibrated wrench does not compensate for an unsuitable value or a damaged joint.",
+    "checks": [
+      "Confirm thread size, fastener grade, washer and mating material.",
+      "Use the equipment or joint designer\u2019s approved tightening procedure.",
+      "Check lubrication, coatings, reused hardware and thread condition.",
+      "Record the required sequence, tightening stages and tool calibration status."
+    ],
+    "mistakes": [
+      "Do not copy a generic internet torque table into a critical assembly without checking its assumptions.",
+      "Do not keep tightening a joint that will not seat correctly; investigate alignment, debris or damaged threads."
+    ],
+    "inputs": [
+      "Joint drawing or photographs",
+      "Fastener specification",
+      "Approved torque procedure and surface condition"
+    ],
+    "decision": "Use the documented joint requirement. If it is absent, review the joint before selecting torque, particularly for pressure equipment, lifting assemblies or other consequential connections.",
+    "new": true,
+    "href": "/insights/fastener-torque-and-joint-review.html"
+  },
+  {
+    "slug": "bearing-failure-evidence",
+    "title": "Bearing Failure: Preserve the Evidence First",
+    "category": "maintenance",
+    "image": "61",
+    "summary": "Noise or heat can suggest a bearing problem, but the removed bearing often contains the strongest evidence. Handle it so contamination, wear patterns and lubrication condition remain available for review.",
+    "why": "Spalling, electrical marking, misalignment and contamination can leave different patterns, yet several mechanisms may act together. Replacing the bearing without examining the shaft, housing, seals and operating conditions can repeat the failure.",
+    "checks": [
+      "Record operating speed, load, temperature and symptoms before dismantling.",
+      "Mark orientation and photograph both races, rolling elements and seals.",
+      "Keep the lubricant and debris separate if analysis may be required.",
+      "Check shaft and housing fits, mounting practice and lubrication history."
+    ],
+    "mistakes": [
+      "Do not clean away all deposits before documenting their position.",
+      "A damaged bearing does not by itself establish which condition started the failure."
+    ],
+    "inputs": [
+      "Bearing designation",
+      "Clear photographs before cleaning",
+      "Operating history and fit measurements"
+    ],
+    "decision": "Build a cause assessment from the component and its operating context. Agree corrective checks before installing another bearing, and follow the equipment maker\u2019s mounting instructions.",
+    "new": true,
+    "href": "/insights/bearing-failure-evidence.html"
+  },
+  {
+    "slug": "lubrication-plan-basics",
+    "title": "Build a Lubrication Plan That Can Be Followed",
+    "category": "maintenance",
+    "image": "62",
+    "summary": "A useful lubrication plan names the right lubricant, the point of application, the quantity, the interval and the responsible person. \u201cGrease regularly\u201d leaves too much to interpretation.",
+    "why": "Over-lubrication, incompatible grease and contamination can all shorten service life. A good plan follows the equipment requirements and changes when operating speed, temperature, duty or the environment changes.",
+    "checks": [
+      "List each lubrication point with an unambiguous machine reference.",
+      "Record the specified lubricant and approved substitutions, if any.",
+      "Define quantity and interval using equipment guidance and actual duty.",
+      "Keep dispensing tools clean and log completion alongside abnormal observations."
+    ],
+    "mistakes": [
+      "Do not mix greases just because their colour is similar.",
+      "Do not increase the quantity repeatedly to hide a seal leak or rising temperature."
+    ],
+    "inputs": [
+      "Equipment lubrication instructions",
+      "Current product and usage records",
+      "Duty cycle and environmental conditions"
+    ],
+    "decision": "Agree a point-by-point plan, then review evidence from inspections and lubricant condition. Where specifications conflict or the current lubricant is unknown, resolve compatibility before changing products.",
+    "new": true,
+    "href": "/insights/lubrication-plan-basics.html"
+  },
+  {
+    "slug": "coupling-alignment-preparation",
+    "title": "Prepare for Coupling Alignment Before Measuring",
+    "category": "maintenance",
+    "image": "19",
+    "summary": "Alignment measurements are useful only when the assembly is ready for them. Loose foundations, soft foot, pipe strain or a damaged coupling can undermine a carefully recorded alignment result.",
+    "why": "The target condition may account for thermal growth or manufacturer tolerances. Record how the machine sits and operates rather than assuming that cold, unloaded alignment is the complete answer.",
+    "checks": [
+      "Isolate the equipment and confirm it is safe to access.",
+      "Check fasteners, foundation condition, coupling condition and soft foot.",
+      "Inspect connected pipework for strain before adjusting machine position.",
+      "Use the specified method, target values and measurement positions, recording the final state."
+    ],
+    "mistakes": [
+      "Do not use coupling flexibility as a substitute for correct alignment.",
+      "Do not move a pump against constrained pipework without reviewing the installation."
+    ],
+    "inputs": [
+      "Equipment and coupling models",
+      "Base and piping photographs",
+      "Approved alignment targets and operating temperature"
+    ],
+    "decision": "Correct installation issues before final alignment. Qualified personnel should perform adjustments and the return-to-service checks required by the equipment procedure.",
+    "new": true,
+    "href": "/insights/coupling-alignment-preparation.html"
+  },
+  {
+    "slug": "pump-noise-cavitation-checklist",
+    "title": "Pump Noise: Separate Cavitation from Other Causes",
+    "category": "maintenance",
+    "image": "18",
+    "summary": "A noisy pump may have suction problems, air ingress, rubbing, bearing damage or an unsuitable duty point. Sound alone cannot confirm cavitation or justify choosing a larger replacement.",
+    "why": "Cavitation depends on pressure conditions at the pump inlet and the liquid properties. Changes in fluid temperature, tank level, suction restriction or operating flow can matter as much as the pump itself.",
+    "checks": [
+      "Record flow, pressure, fluid temperature and when the noise occurs.",
+      "Check suction levels, strainers, valve positions and visible leaks using safe procedures.",
+      "Compare the operating point with the pump curve and installation requirements.",
+      "Review vibration, bearing condition and recent changes before choosing a corrective action."
+    ],
+    "mistakes": [
+      "Do not run repeated uncontrolled tests on a distressed pump.",
+      "A larger motor or higher-flow pump does not automatically solve a suction-side problem."
+    ],
+    "inputs": [
+      "Pump model and curve",
+      "Operating readings",
+      "Suction arrangement and fluid information"
+    ],
+    "decision": "Use the evidence to separate hydraulic, mechanical and installation causes. Any assessment of available suction head or process changes needs the actual installation data and competent review.",
+    "new": true,
+    "href": "/insights/pump-noise-cavitation-checklist.html"
+  },
+  {
+    "slug": "hydraulic-hose-identification",
+    "title": "Hydraulic Hose Replacement: Identify the Whole Assembly",
+    "category": "maintenance",
+    "image": "70",
+    "summary": "A replacement hose must suit the pressure, fluid, temperature, routing and end connections. Matching its outside appearance leaves important compatibility questions unanswered.",
+    "why": "End fittings that look similar may use different threads or sealing seats. Hose bend radius, abrasion and movement also affect service life. Pressure equipment must be safely isolated and depressurized before inspection or removal.",
+    "checks": [
+      "Record the hose marking, length, bore and both end connections.",
+      "Identify the sealing form and fitting orientation, not only thread size.",
+      "Check pressure rating, fluid compatibility, temperature and impulse duty.",
+      "Record routing, bend radius, movement and abrasion protection."
+    ],
+    "mistakes": [
+      "Never check a suspected high-pressure leak with a hand.",
+      "Do not mix hose and coupling systems unless the manufacturer approves the combination."
+    ],
+    "inputs": [
+      "Legible hose markings",
+      "Photographs of both disconnected ends taken safely",
+      "Pressure, fluid and routing details"
+    ],
+    "decision": "Have the assembly made and verified through an appropriate rated hose system. Installation and testing must follow the equipment procedure; a visual match is not an acceptance test.",
+    "new": true,
+    "href": "/insights/hydraulic-hose-identification.html"
+  },
+  {
+    "slug": "gasket-flange-selection",
+    "title": "Gaskets and Flanges: Specify the Sealing Conditions",
+    "category": "maintenance",
+    "image": "64",
+    "summary": "A gasket must suit the fluid, temperature, pressure, flange geometry and joint loading. Choosing by outside diameter alone can leave the sealing surface or material unsuitable.",
+    "why": "Flange facing condition and bolt loading are part of the seal. Replacing a gasket repeatedly will not correct a distorted flange, incompatible material or incorrect tightening practice.",
+    "checks": [
+      "Identify the flange standard, facing type and relevant dimensions.",
+      "Confirm fluid, normal duty and credible temperature or pressure variations.",
+      "Inspect accessible sealing faces for damage under a safe isolation procedure.",
+      "Specify gasket material, thickness and the approved assembly sequence."
+    ],
+    "mistakes": [
+      "Do not reuse a compressed gasket unless its manufacturer explicitly permits it.",
+      "Do not add sealant or extra gaskets to compensate for an unexplained joint problem."
+    ],
+    "inputs": [
+      "Flange designation and dimensions",
+      "Fluid and duty information",
+      "Original gasket specification and leak history"
+    ],
+    "decision": "Select the gasket as part of the complete rated joint. Hazardous fluids and pressure-containing equipment require the responsible engineering authority\u2019s specification and test procedure.",
+    "new": true,
+    "href": "/insights/gasket-flange-selection.html"
+  },
+  {
+    "slug": "corrosion-versus-surface-staining",
+    "title": "Surface Staining or Corrosion? What to Record",
+    "category": "quality",
+    "image": "66",
+    "summary": "Discolouration can come from contamination, surface deposits or active corrosion. Record its location and service conditions before cleaning so that the investigation does not lose useful evidence.",
+    "why": "Stainless steel is not immune to corrosion. Grade, finish, chlorides, trapped moisture, contact with other materials and cleaning products can all matter. A photograph cannot establish remaining strength or the depth of damage.",
+    "checks": [
+      "Photograph the whole component and the affected area with a scale.",
+      "Record material evidence, process exposure and cleaning history.",
+      "Look for deposits, crevices, dissimilar-metal contact and water retention.",
+      "Agree inspection or material testing where the consequence of material loss is significant."
+    ],
+    "mistakes": [
+      "Do not polish away the evidence before documenting it.",
+      "Do not infer structural acceptability from the colour or apparent size of a stain."
+    ],
+    "inputs": [
+      "Material designation",
+      "Location and close photographs",
+      "Exposure, cleaning and operating history"
+    ],
+    "decision": "Decide whether cleaning, a material change, a design change or further inspection is needed. Critical components need an acceptance decision based on measured condition and applicable requirements.",
+    "new": true,
+    "href": "/insights/corrosion-versus-surface-staining.html"
+  },
+  {
+    "slug": "weld-joint-fitup-checklist",
+    "title": "Weld Fit-Up: Check the Joint Before Welding",
+    "category": "manufacturing",
+    "image": "69",
+    "summary": "Consistent welding starts with suitable fit-up. Joint access, edge condition, gaps, alignment and fixturing affect whether the planned welding process can produce the required result.",
+    "why": "A neat-looking bead cannot compensate for an unsuitable joint design or inaccessible surface. The allowed preparation and gap depend on the material, thickness, process and qualified procedure where one applies.",
+    "checks": [
+      "Confirm material grade, thickness and the approved joint detail.",
+      "Check cleanliness, edge preparation and access along the full weld path.",
+      "Measure fit-up against the specified tolerances before clamping.",
+      "Review tack positions and how the fixture allows the part to contract."
+    ],
+    "mistakes": [
+      "Do not assume that more weld metal will correct an excessive joint gap.",
+      "Do not treat a visual sample as qualification for a pressure or safety-critical weld."
+    ],
+    "inputs": [
+      "Joint drawing",
+      "Material and thickness",
+      "Weld length, finish and inspection requirements"
+    ],
+    "decision": "Agree the joint preparation and inspection scope before work begins. Code-governed or consequential welds require the applicable qualified procedure, personnel and acceptance criteria.",
+    "new": true,
+    "href": "/insights/weld-joint-fitup-checklist.html"
+  },
+  {
+    "slug": "weld-distortion-planning",
+    "title": "Plan for Weld Distortion Before Fabrication",
+    "category": "manufacturing",
+    "image": "29",
+    "summary": "Welding introduces local heating and contraction. A part that looks square in a fixture can move after release, so distortion should be considered while the drawing and assembly sequence can still change.",
+    "why": "Thickness, joint restraint, heat input, weld location and sequence influence movement. The best approach depends on the actual assembly; forcing every part rigidly into place can create other problems.",
+    "checks": [
+      "Mark the dimensions that must remain controlled after welding.",
+      "Review joint layout, weld size and access with the intended process.",
+      "Discuss sequence, tack plan and fixture release with the fabricator.",
+      "Measure the first assembly after cooling and use it to refine repeat work."
+    ],
+    "mistakes": [
+      "Do not specify larger welds than the design requires merely for appearance.",
+      "Do not accept dimensions measured only while the part is restrained."
+    ],
+    "inputs": [
+      "Assembly drawing",
+      "Material and thickness",
+      "Critical final dimensions and acceptance method"
+    ],
+    "decision": "Use a first-off review where distortion could affect fit. Any correction method should be agreed for the material and service rather than improvised after fabrication.",
+    "new": true,
+    "href": "/insights/weld-distortion-planning.html"
+  },
+  {
+    "slug": "laser-marking-artwork-preparation",
+    "title": "Prepare Artwork for Readable Laser Marking",
+    "category": "manufacturing",
+    "image": "24",
+    "summary": "Good marking starts with a clear artwork file and an agreed marking area. Text height, line width, contrast and the substrate all affect how the final result can be read.",
+    "why": "A graphic that looks clear on screen may lose detail when scaled onto a small part. Variable serial data, QR content and repeat positioning also need to be specified before production.",
+    "checks": [
+      "Send vector artwork where available and identify the true marking size.",
+      "Confirm material, finish and the allowed marking location.",
+      "Provide exact text or variable data in a controlled format.",
+      "Approve a representative sample for contrast, position and readability."
+    ],
+    "mistakes": [
+      "Do not assume a decorative QR pattern contains a valid destination.",
+      "Do not approve a mark from an enlarged screen image alone when it must be read at actual size."
+    ],
+    "inputs": [
+      "Artwork or exact text",
+      "Material and finish",
+      "Marking dimensions, quantity and readability needs"
+    ],
+    "decision": "Agree sample approval before repeat marking. If a code must be machine-readable, define how it will be checked on the actual substrate after marking.",
+    "new": true,
+    "href": "/insights/laser-marking-artwork-preparation.html"
+  },
+  {
+    "slug": "laser-cutting-kerf-and-small-features",
+    "title": "Laser Kerf and Small Features: What to Review",
+    "category": "manufacturing",
+    "image": "22",
+    "summary": "The cut has a width, and the material around a small feature must survive the process. Slots, thin webs and tiny holes deserve a review before a drawing is released for laser cutting.",
+    "why": "Feasible feature sizes depend on material, thickness, machine, process settings and the intended result. A single universal minimum can create false confidence. CAM compensation should not be confused with changing the nominal drawing.",
+    "checks": [
+      "Identify the smallest holes, slots and remaining webs.",
+      "State material grade, thickness and dimensions that control assembly.",
+      "Discuss which features can be cut directly and which need a secondary operation.",
+      "Approve a sample where fit, appearance or repeatability is important."
+    ],
+    "mistakes": [
+      "Do not alter nominal CAD dimensions blindly to compensate for an assumed kerf.",
+      "Do not judge a fine feature from a wide-angle photograph without checking its dimensions."
+    ],
+    "inputs": [
+      "DXF or drawing with units",
+      "Material and thickness",
+      "Critical feature sizes and finish expectations"
+    ],
+    "decision": "Agree process capability with the actual supplier and material. Use the first-off part to confirm fit before committing to a batch of interdependent features.",
+    "new": true,
+    "href": "/insights/laser-cutting-kerf-and-small-features.html"
+  },
+  {
+    "slug": "deburring-edge-requirements",
+    "title": "Specify the Edge, Not Just \u201cDeburr\u201d",
+    "category": "manufacturing",
+    "image": "38",
+    "summary": "Deburring can mean removing loose material, breaking a sharp edge or producing a controlled radius. The drawing should say which outcome matters without allowing critical geometry to disappear.",
+    "why": "Cutting, drilling and machining leave different edge conditions. A sealing face, locating edge or thin web may need careful treatment, while a hand-contact edge may need a different finish.",
+    "checks": [
+      "Identify touch points, sealing edges and features that must retain their shape.",
+      "State whether a controlled chamfer or radius is required.",
+      "Review internal intersections and edges that are hard to access.",
+      "Choose an inspection method that can confirm the specified result."
+    ],
+    "mistakes": [
+      "Do not apply a large edge break to every surface by default.",
+      "Do not use surface appearance as the only check where a burr could detach inside an assembly."
+    ],
+    "inputs": [
+      "Part drawing",
+      "Critical edges and application",
+      "Material, finish and inspection requirements"
+    ],
+    "decision": "Agree an edge condition that is measurable and appropriate to the part. If deburring changes a fit, flow path or sealing feature, include that effect in the manufacturing review.",
+    "new": true,
+    "href": "/insights/deburring-edge-requirements.html"
+  },
+  {
+    "slug": "press-brake-tooling-review",
+    "title": "Press-Brake Tooling: Questions Before Bending",
+    "category": "manufacturing",
+    "image": "27",
+    "summary": "A bend drawing must work with the material and the available tooling. The intended inside radius, flange length and bend sequence can determine whether a part is practical to form.",
+    "why": "Punch and die geometry affect bend radius, access and the finished profile. Tooling suitability also depends on the machine limits and the process; it should be confirmed by the fabricator, not assumed from a generic sketch.",
+    "checks": [
+      "Send the material grade, thickness and formed dimensions.",
+      "Identify inside radii and short or obstructed flanges.",
+      "Review the unfolding convention and which dimensions control acceptance.",
+      "Check the proposed bend order for interference with previous bends."
+    ],
+    "mistakes": [
+      "Do not specify a sharp internal corner without discussing the forming process.",
+      "Do not assume that a flat pattern from one setup will suit another machine unchanged."
+    ],
+    "inputs": [
+      "Formed drawing and model",
+      "Material specification",
+      "Critical dimensions and available flat pattern"
+    ],
+    "decision": "Review the actual tool and bend sequence before cutting the blank. Where fit matters, approve the first formed part rather than relying only on the flat dimensions.",
+    "new": true,
+    "href": "/insights/press-brake-tooling-review.html"
+  },
+  {
+    "slug": "jig-fixture-design-basics",
+    "title": "A Fixture Should Locate Before It Clamps",
+    "category": "design",
+    "image": "28",
+    "summary": "A useful fixture positions the work consistently and holds it without creating avoidable distortion. Start by separating the locating features from the clamping forces.",
+    "why": "Clamps can hold a part in the wrong place just as firmly as the right one. A fixture also needs safe loading, tool access, chip clearance and a way to confirm that the part is seated correctly.",
+    "checks": [
+      "Choose datums that represent the function and manufacturing operation.",
+      "Check that the workpiece cannot rock or be loaded in the wrong orientation.",
+      "Place clamps so they support the operation without bending weak sections.",
+      "Review tool paths, clearance, cleaning and operator access."
+    ],
+    "mistakes": [
+      "Do not use excessive clamp force to compensate for poor location.",
+      "Do not make the fixture so constrained that normal part variation prevents loading."
+    ],
+    "inputs": [
+      "Part model and drawing",
+      "Operation and expected forces",
+      "Batch size and critical dimensions"
+    ],
+    "decision": "Trial the fixture with representative parts and inspect the output after unclamping. Repeated loading should produce the required result without relying on operator improvisation.",
+    "new": true,
+    "href": "/insights/jig-fixture-design-basics.html"
+  },
+  {
+    "slug": "3d-print-orientation-planning",
+    "title": "3D Print Orientation Is a Design Decision",
+    "category": "design",
+    "image": "37",
+    "summary": "Print orientation affects support marks, surface quality, dimensional behaviour and strength direction. The flattest orientation is not always the best choice for the way a part will be used.",
+    "why": "Layer-based processes can respond differently to loads in different directions. Removing supports may also change a functional surface. Orientation should be agreed alongside material and process rather than left as an invisible production assumption.",
+    "checks": [
+      "Mark the functional faces and important dimensions on the model or drawing.",
+      "Describe the direction and type of loading rather than only requesting a strong part.",
+      "Review support access, trapped material and surfaces that need finishing.",
+      "Plan a trial or test where assembly or service performance is uncertain."
+    ],
+    "mistakes": [
+      "Do not assume that a printed material behaves like its moulded counterpart.",
+      "Do not place a critical mating face on heavy supports without reviewing the finish."
+    ],
+    "inputs": [
+      "CAD model",
+      "Application and load direction",
+      "Critical faces, quantity and process preference"
+    ],
+    "decision": "Choose orientation with the service requirement in view. Use prototypes to verify the assumptions before treating a printed component as a production substitute.",
+    "new": true,
+    "href": "/insights/3d-print-orientation-planning.html"
+  },
+  {
+    "slug": "threaded-inserts-in-printed-parts",
+    "title": "Threaded Inserts in Printed Parts: Plan the Boss",
+    "category": "design",
+    "image": "36",
+    "summary": "Threaded inserts can improve repeated fastening in suitable printed polymers, but the surrounding boss and installation process still control the result.",
+    "why": "Insert style, polymer, wall thickness and print orientation interact. A hole sized for one insert or process can split, deform or provide poor retention with another. Manufacturer dimensions are a starting point for verification, not a guarantee in every print.",
+    "checks": [
+      "Identify the insert type and the compatible polymer.",
+      "Check boss diameter, nearby walls and access for installation.",
+      "Use the insert supplier\u2019s hole guidance for the actual manufacturing process.",
+      "Trial installation and loading on a representative coupon before a batch."
+    ],
+    "mistakes": [
+      "Do not drive an insert into an unverified undersized hole.",
+      "Do not assume metal threads make the surrounding printed feature suitable for any preload."
+    ],
+    "inputs": [
+      "Model and insert designation",
+      "Polymer and printing process",
+      "Fastening duty and installation method"
+    ],
+    "decision": "Approve a representative installation and define the permitted fastening load. Critical or repeated-duty joints need testing appropriate to the application.",
+    "new": true,
+    "href": "/insights/threaded-inserts-in-printed-parts.html"
+  },
+  {
+    "slug": "prototype-validation-checklist",
+    "title": "Prototype Validation: Decide What You Are Testing",
+    "category": "quality",
+    "image": "30",
+    "summary": "A prototype is most useful when it answers a specific question. Appearance, assembly fit, ergonomics and load performance may require different materials, processes and inspection methods.",
+    "why": "An attractive sample can pass a visual review while leaving important risks unresolved. Set acceptance criteria before ordering it so that the result supports a decision rather than another round of guesswork.",
+    "checks": [
+      "Write down the question and the measurable pass condition.",
+      "Separate geometry checks from material and life-performance checks.",
+      "Choose a prototype process that represents the property being assessed.",
+      "Record the result, revision and remaining limitations before the next iteration."
+    ],
+    "mistakes": [
+      "Do not use an appearance model as evidence of production strength.",
+      "Do not change several features without recording which change answered the original problem."
+    ],
+    "inputs": [
+      "Current design revision",
+      "Test objective and acceptance criteria",
+      "Assembly context and expected use"
+    ],
+    "decision": "Use the result to approve, revise or stop the next step. Keep prototype limitations visible when discussing production cost, material or service performance.",
+    "new": true,
+    "href": "/insights/prototype-validation-checklist.html"
+  },
+  {
+    "slug": "first-article-inspection-planning",
+    "title": "First Article Inspection: Agree the Plan First",
+    "category": "quality",
+    "image": "20",
+    "summary": "First Article Inspection checks whether the first representative output meets the agreed requirements. It works best when the drawing, characteristics, methods and evidence are defined before the part arrives.",
+    "why": "A first piece produced through a different route may not represent the intended batch. The inspection plan should identify which process, material condition and drawing revision the evidence covers.",
+    "checks": [
+      "Freeze the drawing revision and identify the characteristics to report.",
+      "Agree instruments, methods and any external tests required.",
+      "Link the inspected sample to material and production records.",
+      "Record actual results and deviations rather than a blanket OK against every feature."
+    ],
+    "mistakes": [
+      "Do not approve a full batch from a sample with unresolved critical deviations.",
+      "Do not confuse an attractive inspection report with traceable measurement evidence."
+    ],
+    "inputs": [
+      "Released drawing",
+      "Required report format",
+      "Material, process and acceptance requirements"
+    ],
+    "decision": "Review deviations and agree disposition before repeat production. A first-article result is evidence for the defined sample and process; it does not remove the need for production control.",
+    "new": true,
+    "href": "/insights/first-article-inspection-planning.html"
+  },
+  {
+    "slug": "measurement-uncertainty-practical-guide",
+    "title": "Measurement Uncertainty: Leave Room for Doubt",
+    "category": "quality",
+    "image": "41",
+    "summary": "A measurement is an estimate made with an instrument and a method. Resolution, calibration, temperature, contact and repeatability influence how confidently a result can be compared with a tolerance.",
+    "why": "A digital display with extra decimal places does not establish accuracy. When a result is close to a limit, the measurement method and the agreed decision rule become particularly important.",
+    "checks": [
+      "Choose an instrument and setup appropriate to the tolerance and feature.",
+      "Check calibration status, contact surfaces and temperature conditions.",
+      "Repeat measurements where variation or setup sensitivity is a concern.",
+      "Record the method and agree how borderline results will be handled."
+    ],
+    "mistakes": [
+      "Do not report more certainty than the method supports.",
+      "Do not average away systematic setup errors or use repeated readings as a substitute for calibration."
+    ],
+    "inputs": [
+      "Feature and tolerance",
+      "Instrument and calibration information",
+      "Measurement setup and acceptance rule"
+    ],
+    "decision": "Use an uncertainty assessment proportionate to the decision. Borderline or consequential results may require a more capable method and a formally agreed acceptance approach.",
+    "new": true,
+    "href": "/insights/measurement-uncertainty-practical-guide.html"
+  },
+  {
+    "slug": "inspection-plan-from-drawing",
+    "title": "Turn a Drawing into an Inspection Plan",
+    "category": "quality",
+    "image": "42",
+    "summary": "An inspection plan connects each requirement with a method, a frequency, a record and an acceptance decision. It makes the drawing usable by the people checking the output.",
+    "why": "Some features can be verified with simple tools; others need fixtures, specialist instruments or tests. Planning early avoids reaching the end of manufacture with a requirement that cannot be checked in the available setup.",
+    "checks": [
+      "Identify the drawing revision and list characteristics without losing notes or general tolerances.",
+      "Choose suitable methods and define the reference or datum setup.",
+      "Agree sample size or frequency according to risk and the customer requirement.",
+      "Record who reviews deviations and how the lot is identified."
+    ],
+    "mistakes": [
+      "Do not inspect only the dimensions that are easy to measure.",
+      "Do not assume a supplier\u2019s standard report covers every requirement on the drawing."
+    ],
+    "inputs": [
+      "Released drawing",
+      "Quantity and risk information",
+      "Customer reporting and acceptance requirements"
+    ],
+    "decision": "Agree the plan before production, then keep results linked to the part or lot. Changes to the drawing, process or inspection method should trigger a review of the plan.",
+    "new": true,
+    "href": "/insights/inspection-plan-from-drawing.html"
+  },
+  {
+    "slug": "surface-finish-selection",
+    "title": "Choose a Surface Finish for Its Job",
+    "category": "design",
+    "image": "39",
+    "summary": "A finish can serve appearance, sliding contact, corrosion control, cleaning or sealing. These needs should be separated before a supplier is asked for a polished or premium surface.",
+    "why": "Roughness, lay, coating and visual texture describe different properties. A low roughness value alone does not guarantee a suitable sealing face or an acceptable cosmetic appearance.",
+    "checks": [
+      "Identify the function of each controlled surface.",
+      "Specify measurable roughness or coating requirements where needed.",
+      "Use an agreed sample or viewing condition for cosmetic expectations.",
+      "Review how finishing affects dimensions, edges and material compatibility."
+    ],
+    "mistakes": [
+      "Do not use a photograph as the only specification for a functional surface.",
+      "Do not apply a finish requirement to every surface when only a few features need it."
+    ],
+    "inputs": [
+      "Drawing with controlled surfaces",
+      "Service environment",
+      "Functional and cosmetic acceptance needs"
+    ],
+    "decision": "Choose the process and inspection method together. If coating or polishing changes a critical size, include the final finished dimension in the acceptance plan.",
+    "new": true,
+    "href": "/insights/surface-finish-selection.html"
+  },
+  {
+    "slug": "replacement-part-trial-fit",
+    "title": "Replacement Parts: Plan the Trial Fit",
+    "category": "quality",
+    "image": "46",
+    "summary": "A replacement should be checked in its assembly context, particularly when the original geometry or tolerance was uncertain. A planned trial fit is more informative than discovering interference during urgent commissioning.",
+    "why": "Dimensional inspection and assembly checks answer different questions. A part can match an incomplete drawing yet still interfere with adjacent features, movement or service access.",
+    "checks": [
+      "Identify the mating parts, movement range and installation sequence.",
+      "Inspect the critical interfaces before the trial.",
+      "Define what can be checked while the equipment is safely isolated.",
+      "Record fit, clearance and any adjustment without masking an unresolved design issue."
+    ],
+    "mistakes": [
+      "Do not force assembly to make an unverified replacement appear to fit.",
+      "Do not approve final service solely because the part can be inserted into the housing."
+    ],
+    "inputs": [
+      "Replacement and mating drawings",
+      "Assembly photographs",
+      "Required clearances and trial acceptance criteria"
+    ],
+    "decision": "Agree the trial outcome and any final inspection before release. Service testing should follow the equipment procedure and account for the consequences of a failed replacement.",
+    "new": true,
+    "href": "/insights/replacement-part-trial-fit.html"
+  },
+  {
+    "slug": "packing-precision-components",
+    "title": "Packing Precision Parts for Transport",
+    "category": "manufacturing",
+    "image": "40",
+    "summary": "A part can pass inspection and arrive damaged. Packaging should protect the features that control fit, appearance and cleanliness, while preserving the records needed to identify the shipment.",
+    "why": "Movement, moisture and contact between parts can create damage that a generic outer box does not prevent. Materials used for protection should also suit the surface treatment and storage conditions.",
+    "checks": [
+      "Identify exposed threads, sealing faces, sharp edges and delicate features.",
+      "Prevent parts moving or contacting one another inside the package.",
+      "Review moisture protection and compatibility with the surface finish.",
+      "Keep part numbers, quantities, handling instructions and inspection records traceable."
+    ],
+    "mistakes": [
+      "Do not place adhesive directly on a critical optical or sealing surface.",
+      "Do not seal moisture inside packaging and assume an outer wrap prevents corrosion."
+    ],
+    "inputs": [
+      "Part dimensions and weight",
+      "Surface protection needs",
+      "Transport, storage and identification requirements"
+    ],
+    "decision": "Agree the packing method before dispatch, especially for finished or inspected components. Photograph the protected condition and record any special unpacking instructions.",
+    "new": true,
+    "href": "/insights/packing-precision-components.html"
+  },
+  {
+    "slug": "maintenance-handover-record",
+    "title": "Maintenance Handover: What Must Be Recorded",
+    "category": "maintenance",
+    "image": "67",
+    "summary": "A maintenance job is not complete when the tools are removed. The receiving team needs to know what was found, what changed, what was verified and which restrictions or follow-up actions remain.",
+    "why": "An incomplete handover can allow a temporary repair or unverified adjustment to become the assumed normal state. Clear records preserve the distinction between restored function and confirmed root-cause correction.",
+    "checks": [
+      "Identify the equipment, work order and isolated systems involved.",
+      "Record replaced parts, adjustments and test results.",
+      "List unresolved issues, restrictions and the person responsible for each action.",
+      "Use the site procedure for restoring guards, clearing isolation and authorizing service."
+    ],
+    "mistakes": [
+      "Do not treat a successful brief run as proof of long-term reliability.",
+      "Do not remove another person\u2019s isolation or bypass the site release procedure."
+    ],
+    "inputs": [
+      "Job scope and findings",
+      "Parts and adjustment records",
+      "Verification results and outstanding actions"
+    ],
+    "decision": "Have the responsible personnel accept the handover and service status. Any temporary measure should have explicit limits and a follow-up plan rather than an informal verbal agreement.",
+    "new": true,
+    "href": "/insights/maintenance-handover-record.html"
+  },
+  {
+    "slug": "critical-spares-planning",
+    "title": "Critical Spares: Stock the Risk, Not Every Part",
+    "category": "maintenance",
+    "image": "17",
+    "summary": "A useful spares plan considers failure consequence, replacement lead time, interchangeability and storage life. Stocking everything is expensive, while stocking familiar low-risk parts can leave the real bottleneck uncovered.",
+    "why": "An obsolete seal, controller interface or custom shaft can cause a long stoppage even when it rarely fails. Good records and verified alternatives may reduce risk without requiring a large store of every component.",
+    "checks": [
+      "List the functions whose loss stops production or creates a consequential risk.",
+      "Record exact part numbers, interfaces and supplier lead times.",
+      "Check whether an alternative is technically approved or only visually similar.",
+      "Plan storage, shelf-life checks and replenishment responsibility."
+    ],
+    "mistakes": [
+      "Do not treat a quotation for a similar part as approval of interchangeability.",
+      "Do not ignore seals, batteries or other stored items that can deteriorate before use."
+    ],
+    "inputs": [
+      "Equipment list and downtime history",
+      "Existing spare identifiers",
+      "Lead times and approved alternatives"
+    ],
+    "decision": "Prioritize the stock and documentation that reduce the most consequential downtime. Review the plan after equipment changes, failures and supplier obsolescence notices.",
+    "new": true,
+    "href": "/insights/critical-spares-planning.html"
+  },
+  {
+    "slug": "bill-of-materials-release",
+    "title": "A Bill of Materials That Matches the Assembly",
+    "category": "design",
+    "image": "14",
+    "summary": "A bill of materials links an assembly to the parts, quantities, specifications and revisions needed to build it. It should describe the released configuration rather than a convenient list copied from an old quotation.",
+    "why": "Purchased parts, consumables and alternate configurations can be easy to miss. A mismatch between the model, drawing balloons and BOM can propagate into procurement, stores and inspection.",
+    "checks": [
+      "Use unique item references and check quantities against the assembly.",
+      "Include material or purchase specifications and relevant revisions.",
+      "Identify approved alternatives and when they are allowed.",
+      "Check units, make-or-buy status and any items excluded from supply."
+    ],
+    "mistakes": [
+      "Do not let an informal substitute silently change the released assembly.",
+      "Do not use a vague description where a supplier needs a specific rated component."
+    ],
+    "inputs": [
+      "Assembly model and drawing",
+      "Current parts list",
+      "Configuration, quantity and procurement requirements"
+    ],
+    "decision": "Release the BOM with the drawing package and control later changes. Resolve duplicate identifiers, missing specifications and configuration differences before procurement begins.",
+    "new": true,
+    "href": "/insights/bill-of-materials-release.html"
+  },
+  {
+    "slug": "piping-layout-review-checklist",
+    "title": "Piping Layout Review Beyond the Centreline",
+    "category": "design",
+    "image": "15",
+    "summary": "A piping layout must accommodate operation, support, drainage, maintenance and installation as well as the nominal route. The centreline alone does not show whether a system can be built and serviced.",
+    "why": "Flange clearance, valve access, equipment removal and thermal movement can compete for the same space. Pressure class, fluid compatibility and code requirements are engineering inputs, not details to add after routing.",
+    "checks": [
+      "Confirm equipment connection data, line specification and service conditions.",
+      "Review operating access, vents, drains and removal space.",
+      "Identify support assumptions and interfaces that need stress or flexibility review.",
+      "Coordinate the route with structure, cables, platforms and maintenance activities."
+    ],
+    "mistakes": [
+      "Do not use a neat 3D route as proof of pressure or mechanical adequacy.",
+      "Do not constrain equipment nozzles with unreviewed pipe loads."
+    ],
+    "inputs": [
+      "Equipment layout and connection drawings",
+      "Line list and service conditions",
+      "Site constraints and applicable design requirements"
+    ],
+    "decision": "Close the layout issues with the relevant disciplines before fabrication. Pressure-containing and hazardous systems require the applicable design authority, calculations and approval process.",
+    "new": true,
+    "href": "/insights/piping-layout-review-checklist.html"
+  }
+]

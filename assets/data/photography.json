@@ -724,6 +724,116 @@
       "disclosure": "AI-generated illustration",
       "original_filename": "60-document-review.png",
       "sha256": "bd05dfc224570c31946378421c07dccaba8e639e0c6873c6fcd72058f99c919c"
+    },
+    {
+      "id": "61",
+      "title": "Bearing Inspection",
+      "src": "/assets/images/generated/61-bearing-inspection.webp",
+      "alt": "Opened rolling bearing and outer race on an inspection tray beside a magnifying glass",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "e5b96ce3518897db589ff38f3212557f93bdf7915b3482598a095abbc134a44a"
+    },
+    {
+      "id": "62",
+      "title": "Lubrication Planning",
+      "src": "/assets/images/generated/62-lubrication-planning.webp",
+      "alt": "Grease cartridge, oil sample bottle and lubrication fitting on a maintenance bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "bea4a732c70e9f2d3babb1b9fbebd6b48056a7d328b7fc5276b16940abebd06a"
+    },
+    {
+      "id": "63",
+      "title": "Fastener Selection",
+      "src": "/assets/images/generated/63-fastener-selection.webp",
+      "alt": "Hex bolts, nuts, plain washers and torque wrench arranged on a workbench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "55e80ecdcafbcdbf16b64d3ae4dc5e15170c45672fb9185f2a2accf13648c6b1"
+    },
+    {
+      "id": "64",
+      "title": "Gasket Sealing",
+      "src": "/assets/images/generated/64-gasket-sealing.webp",
+      "alt": "Unpressurized pipe flange, separate ring gasket and bolts on an assembly bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "9acf49585114eb88e4982b9c8964774d076584b62ecfb9696be0ee137edd2710"
+    },
+    {
+      "id": "65",
+      "title": "Shaft Fits",
+      "src": "/assets/images/generated/65-shaft-fits.webp",
+      "alt": "Machined shaft, bronze bushing and bearing beside a micrometer",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "f513c7472c90b7a0b715db3c9644c39c798f49d8d35ec1d0901e05d4c18dcd54"
+    },
+    {
+      "id": "66",
+      "title": "Corrosion Materials",
+      "src": "/assets/images/generated/66-corrosion-materials.webp",
+      "alt": "Metal coupons showing different surface conditions beside a stainless component",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "2fbfb955dfb3934d2a4358a820d0ba5d8b6186ed4e778020470e00ea1eb68c20"
+    },
+    {
+      "id": "67",
+      "title": "Safe Maintenance",
+      "src": "/assets/images/generated/67-safe-maintenance.webp",
+      "alt": "Disconnected industrial motor beside a safety padlock and isolation hasp",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "a27583f51d3ae168e62d8c03e1d458613ec0d9e02d74fd4ade5445d2126cb011"
+    },
+    {
+      "id": "68",
+      "title": "Material Selection",
+      "src": "/assets/images/generated/68-material-selection.webp",
+      "alt": "Aluminum, stainless steel, brass and polymer material sample blocks",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "ff941c89225ceee8c034ba225ca2af8477e23960684054aa88cbff2e621810e1"
+    },
+    {
+      "id": "69",
+      "title": "Weld Fitup",
+      "src": "/assets/images/generated/69-weld-fitup.webp",
+      "alt": "Two stainless steel plates held in a right-angle fixture before welding",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "d2db5ed729a4e3ce0a7977929e26dd1ff451fe6ceeab2c656e42c9df5bc41af7"
+    },
+    {
+      "id": "70",
+      "title": "Hydraulic Hose",
+      "src": "/assets/images/generated/70-hydraulic-hose.webp",
+      "alt": "Depressurized hydraulic hose and matching threaded fittings on a service bench",
+      "width": 1536,
+      "height": 1024,
+      "source": "AI-generated with Image Gen at the website owner\u2019s request",
+      "disclosure": "AI-generated illustration",
+      "sha256": "252b89d295e569f18cd3d3b7bdb4e4a9cb1e3ca9bd091f38a06f8d6d42cf5839"
     }
   ],
   "placements": [
@@ -783,9 +893,19 @@
       "area": "Page content"
     },
     {
+      "page": "/3d-printing-kolkata.html",
+      "image": "09",
+      "area": "Hero background"
+    },
+    {
       "page": "/404.html",
       "image": "44",
       "area": "Foreground hero"
+    },
+    {
+      "page": "/404.html",
+      "image": "44",
+      "area": "Hero background"
     },
     {
       "page": "/about.html",
@@ -803,9 +923,34 @@
       "area": "Page content"
     },
     {
+      "page": "/about.html",
+      "image": "52",
+      "area": "Hero background"
+    },
+    {
       "page": "/contact.html",
       "image": "53",
       "area": "Foreground hero"
+    },
+    {
+      "page": "/contact.html",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/contact.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/contact.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/contact.html",
+      "image": "53",
+      "area": "Hero background"
     },
     {
       "page": "/custom-machine-spares.html",
@@ -828,6 +973,11 @@
       "area": "Page content"
     },
     {
+      "page": "/custom-machine-spares.html",
+      "image": "17",
+      "area": "Hero background"
+    },
+    {
       "page": "/design-job-work.html",
       "image": "16",
       "area": "Foreground hero"
@@ -848,9 +998,144 @@
       "area": "Page content"
     },
     {
+      "page": "/design-job-work.html",
+      "image": "16",
+      "area": "Hero background"
+    },
+    {
       "page": "/disclaimer.html",
       "image": "60",
       "area": "Foreground hero"
+    },
+    {
+      "page": "/disclaimer.html",
+      "image": "60",
+      "area": "Hero background"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "09",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "12",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "27",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "28",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/advanced-manufacturing.html",
+      "image": "03",
+      "area": "Hero background"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "16",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "15",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/engineering-design.html",
+      "image": "02",
+      "area": "Hero background"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "05",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "41",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "42",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/inspection-testing.html",
+      "image": "05",
+      "area": "Hero background"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "04",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "19",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "17",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "49",
+      "area": "Page content"
+    },
+    {
+      "page": "/divisions/machine-maintenance.html",
+      "image": "04",
+      "area": "Hero background"
     },
     {
       "page": "/engineering-desk.html",
@@ -858,14 +1143,29 @@
       "area": "Foreground hero"
     },
     {
+      "page": "/engineering-desk.html",
+      "image": "43",
+      "area": "Hero background"
+    },
+    {
       "page": "/estimate.html",
       "image": "55",
       "area": "Foreground hero"
     },
     {
+      "page": "/estimate.html",
+      "image": "55",
+      "area": "Hero background"
+    },
+    {
       "page": "/feedback.html",
       "image": "57",
       "area": "Foreground hero"
+    },
+    {
+      "page": "/feedback.html",
+      "image": "57",
+      "area": "Hero background"
     },
     {
       "page": "/",
@@ -894,13 +1194,18 @@
     },
     {
       "page": "/",
-      "image": "18",
-      "area": "Page content"
+      "image": "68",
+      "area": "Insight card background"
     },
     {
       "page": "/",
-      "image": "21",
-      "area": "Page content"
+      "image": "61",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/",
+      "image": "20",
+      "area": "Insight card background"
     },
     {
       "page": "/industrial-inspection-qa-kolkata.html",
@@ -923,6 +1228,11 @@
       "area": "Page content"
     },
     {
+      "page": "/industrial-inspection-qa-kolkata.html",
+      "image": "42",
+      "area": "Hero background"
+    },
+    {
       "page": "/industrial-machine-maintenance-kolkata.html",
       "image": "48",
       "area": "Foreground hero"
@@ -943,9 +1253,629 @@
       "area": "Page content"
     },
     {
+      "page": "/industrial-machine-maintenance-kolkata.html",
+      "image": "48",
+      "area": "Hero background"
+    },
+    {
       "page": "/industries.html",
       "image": "56",
       "area": "Foreground hero"
+    },
+    {
+      "page": "/industries.html",
+      "image": "56",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/3d-print-orientation-planning.html",
+      "image": "37",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/3d-print-orientation-planning.html",
+      "image": "37",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "30",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "37",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-file-formats.html",
+      "image": "30",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "33",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/3d-printing-tolerances.html",
+      "image": "20",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/bearing-failure-evidence.html",
+      "image": "61",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/bearing-failure-evidence.html",
+      "image": "61",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/bill-of-materials-release.html",
+      "image": "14",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/bill-of-materials-release.html",
+      "image": "14",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/chiller-pump-equivalent-selection.html",
+      "image": "18",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "13",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
+      "image": "12",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/corrosion-versus-surface-staining.html",
+      "image": "66",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/corrosion-versus-surface-staining.html",
+      "image": "66",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/coupling-alignment-preparation.html",
+      "image": "19",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/coupling-alignment-preparation.html",
+      "image": "19",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/critical-spares-planning.html",
+      "image": "17",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/critical-spares-planning.html",
+      "image": "17",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/deburring-edge-requirements.html",
+      "image": "38",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/deburring-edge-requirements.html",
+      "image": "38",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/drawing-revision-control.html",
+      "image": "16",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/drawing-revision-control.html",
+      "image": "16",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/engineering-material-grade-selection.html",
+      "image": "68",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/engineering-material-grade-selection.html",
+      "image": "68",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/fastener-torque-and-joint-review.html",
+      "image": "63",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/fastener-torque-and-joint-review.html",
+      "image": "63",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/first-article-inspection-planning.html",
+      "image": "20",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/first-article-inspection-planning.html",
+      "image": "20",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/gasket-flange-selection.html",
+      "image": "64",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/gasket-flange-selection.html",
+      "image": "64",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "28",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/gdt-datum-basics.html",
+      "image": "41",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "image": "27",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/hydraulic-hose-identification.html",
+      "image": "70",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/hydraulic-hose-identification.html",
+      "image": "70",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/identify-laser-consumables.html",
+      "image": "25",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/identify-unknown-threads.html",
+      "image": "58",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/identify-unknown-threads.html",
+      "image": "58",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/inspection-plan-from-drawing.html",
+      "image": "42",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/inspection-plan-from-drawing.html",
+      "image": "42",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/jig-fixture-design-basics.html",
+      "image": "28",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/jig-fixture-design-basics.html",
+      "image": "28",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-cutting-defects.html",
+      "image": "26",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/laser-cutting-kerf-and-small-features.html",
+      "image": "22",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-cutting-kerf-and-small-features.html",
+      "image": "22",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/laser-marking-artwork-preparation.html",
+      "image": "24",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-marking-artwork-preparation.html",
+      "image": "24",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "25",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/laser-nozzle-focus-basics.html",
+      "image": "06",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/lubrication-plan-basics.html",
+      "image": "62",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/lubrication-plan-basics.html",
+      "image": "62",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/machine-breakdown-data-checklist.html",
+      "image": "04",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/maintenance-handover-record.html",
+      "image": "67",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/maintenance-handover-record.html",
+      "image": "67",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/measurement-uncertainty-practical-guide.html",
+      "image": "41",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/measurement-uncertainty-practical-guide.html",
+      "image": "41",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/metric-tap-drill-clearance-hole-chart.html",
+      "image": "58",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/metric-tap-drill-clearance-hole-chart.html",
+      "image": "58",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/ncr-rca-capa-guide.html",
+      "image": "05",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/packing-precision-components.html",
+      "image": "40",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/packing-precision-components.html",
+      "image": "40",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/piping-layout-review-checklist.html",
+      "image": "15",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/piping-layout-review-checklist.html",
+      "image": "15",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/press-brake-tooling-review.html",
+      "image": "27",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/press-brake-tooling-review.html",
+      "image": "27",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/preventive-maintenance-basics.html",
+      "image": "49",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/prototype-validation-checklist.html",
+      "image": "30",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/prototype-validation-checklist.html",
+      "image": "30",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/pump-noise-cavitation-checklist.html",
+      "image": "18",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/pump-noise-cavitation-checklist.html",
+      "image": "18",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/replacement-part-trial-fit.html",
+      "image": "46",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/replacement-part-trial-fit.html",
+      "image": "46",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/reverse-engineering-measurement-plan.html",
+      "image": "10",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/reverse-engineering-measurement-plan.html",
+      "image": "10",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/shaft-bearing-bushing-fits.html",
+      "image": "65",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/shaft-bearing-bushing-fits.html",
+      "image": "65",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "47",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/sheet-metal-bending-basics.html",
+      "image": "11",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "40",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/stainless-steel-handling.html",
+      "image": "39",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/surface-finish-selection.html",
+      "image": "39",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/surface-finish-selection.html",
+      "image": "39",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "13",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "39",
+      "area": "Page content"
+    },
+    {
+      "page": "/insights/surface-roughness-ra-rz.html",
+      "image": "13",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/threaded-inserts-in-printed-parts.html",
+      "image": "36",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/threaded-inserts-in-printed-parts.html",
+      "image": "36",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/vernier-caliper-guide.html",
+      "image": "59",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/vernier-caliper-guide.html",
+      "image": "59",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/weld-distortion-planning.html",
+      "image": "29",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/weld-distortion-planning.html",
+      "image": "29",
+      "area": "Hero background"
+    },
+    {
+      "page": "/insights/weld-joint-fitup-checklist.html",
+      "image": "69",
+      "area": "Foreground hero"
+    },
+    {
+      "page": "/insights/weld-joint-fitup-checklist.html",
+      "image": "69",
+      "area": "Hero background"
     },
     {
       "page": "/insights.html",
@@ -954,63 +1884,273 @@
     },
     {
       "page": "/insights.html",
-      "image": "33",
-      "area": "Page content"
+      "image": "30",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "18",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "41",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "30",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "20",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "18",
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "12",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
-      "image": "11",
-      "area": "Page content"
+      "image": "41",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "27",
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "25",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "26",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "06",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "04",
-      "area": "Page content"
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "58",
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "05",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "49",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "11",
-      "area": "Page content"
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "39",
-      "area": "Page content"
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "13",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "59",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "16",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "68",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "65",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "10",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "58",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "63",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "61",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "62",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "19",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "18",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "70",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "64",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "66",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "69",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "29",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "24",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "22",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "38",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "27",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "28",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "37",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "36",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "30",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "20",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "41",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "42",
+      "area": "Insight card background"
     },
     {
       "page": "/insights.html",
       "image": "39",
-      "area": "Page content"
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "46",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "40",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "67",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "17",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "14",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "15",
+      "area": "Insight card background"
+    },
+    {
+      "page": "/insights.html",
+      "image": "50",
+      "area": "Hero background"
     },
     {
       "page": "/laser-cutting-kolkata.html",
@@ -1033,6 +2173,11 @@
       "area": "Page content"
     },
     {
+      "page": "/laser-cutting-kolkata.html",
+      "image": "06",
+      "area": "Hero background"
+    },
+    {
       "page": "/laser-marking-kolkata.html",
       "image": "08",
       "area": "Foreground hero"
@@ -1051,6 +2196,11 @@
       "page": "/laser-marking-kolkata.html",
       "image": "24",
       "area": "Page content"
+    },
+    {
+      "page": "/laser-marking-kolkata.html",
+      "image": "08",
+      "area": "Hero background"
     },
     {
       "page": "/laser-welding-kolkata.html",
@@ -1073,6 +2223,11 @@
       "area": "Page content"
     },
     {
+      "page": "/laser-welding-kolkata.html",
+      "image": "07",
+      "area": "Hero background"
+    },
+    {
       "page": "/mechanical-design-services-kolkata.html",
       "image": "14",
       "area": "Foreground hero"
@@ -1093,44 +2248,19 @@
       "area": "Page content"
     },
     {
+      "page": "/mechanical-design-services-kolkata.html",
+      "image": "14",
+      "area": "Hero background"
+    },
+    {
       "page": "/privacy.html",
       "image": "60",
       "area": "Foreground hero"
     },
     {
-      "page": "/projects.html",
-      "image": "46",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects.html",
-      "image": "18",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects.html",
-      "image": "21",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects.html",
-      "image": "26",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects.html",
-      "image": "46",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects.html",
-      "image": "20",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects.html",
-      "image": "10",
-      "area": "Page content"
+      "page": "/privacy.html",
+      "image": "60",
+      "area": "Hero background"
     },
     {
       "page": "/request-quote.html",
@@ -1141,6 +2271,11 @@
       "page": "/request-quote.html",
       "image": "45",
       "area": "Page content"
+    },
+    {
+      "page": "/request-quote.html",
+      "image": "54",
+      "area": "Hero background"
     },
     {
       "page": "/reverse-engineering-kolkata.html",
@@ -1161,6 +2296,11 @@
       "page": "/reverse-engineering-kolkata.html",
       "image": "46",
       "area": "Page content"
+    },
+    {
+      "page": "/reverse-engineering-kolkata.html",
+      "image": "10",
+      "area": "Hero background"
     },
     {
       "page": "/services.html",
@@ -1190,52 +2330,57 @@
     {
       "page": "/services.html",
       "image": "14",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "10",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "06",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "07",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "08",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "11",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "09",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "48",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "42",
-      "area": "Service directory"
+      "area": "Page content"
     },
     {
       "page": "/services.html",
       "image": "17",
-      "area": "Service directory"
+      "area": "Page content"
+    },
+    {
+      "page": "/services.html",
+      "image": "51",
+      "area": "Hero background"
     },
     {
       "page": "/sheet-metal-bending-kolkata.html",
@@ -1258,409 +2403,9 @@
       "area": "Page content"
     },
     {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "03",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "09",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "06",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "12",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "17",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "03",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "27",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "28",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/advanced-manufacturing.html",
-      "image": "17",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "02",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "16",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "02",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/engineering-design.html",
-      "image": "15",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/inspection-testing.html",
-      "image": "05",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/divisions/inspection-testing.html",
-      "image": "41",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/inspection-testing.html",
-      "image": "42",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "04",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "18",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "19",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "17",
-      "area": "Page content"
-    },
-    {
-      "page": "/divisions/machine-maintenance.html",
-      "image": "49",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/3d-printing-file-formats.html",
-      "image": "30",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/3d-printing-file-formats.html",
-      "image": "37",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/3d-printing-tolerances.html",
-      "image": "20",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/3d-printing-tolerances.html",
-      "image": "33",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/3d-printing-tolerances.html",
-      "image": "20",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/chiller-pump-equivalent-selection.html",
-      "image": "18",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/chiller-pump-equivalent-selection.html",
-      "image": "18",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
-      "image": "12",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
-      "image": "12",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/cnc-vmc-speeds-feeds-basics.html",
-      "image": "13",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/gdt-datum-basics.html",
-      "image": "41",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/gdt-datum-basics.html",
-      "image": "28",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/gdt-datum-basics.html",
-      "image": "41",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/holes-near-sheet-metal-bends.html",
-      "image": "27",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/holes-near-sheet-metal-bends.html",
+      "page": "/sheet-metal-bending-kolkata.html",
       "image": "11",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/holes-near-sheet-metal-bends.html",
-      "image": "27",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/identify-laser-consumables.html",
-      "image": "25",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/identify-laser-consumables.html",
-      "image": "25",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/laser-cutting-defects.html",
-      "image": "26",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/laser-cutting-defects.html",
-      "image": "26",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/laser-nozzle-focus-basics.html",
-      "image": "06",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/laser-nozzle-focus-basics.html",
-      "image": "06",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/laser-nozzle-focus-basics.html",
-      "image": "25",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/machine-breakdown-data-checklist.html",
-      "image": "04",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/machine-breakdown-data-checklist.html",
-      "image": "04",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/metric-tap-drill-clearance-hole-chart.html",
-      "image": "58",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/ncr-rca-capa-guide.html",
-      "image": "05",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/ncr-rca-capa-guide.html",
-      "image": "05",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/preventive-maintenance-basics.html",
-      "image": "49",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/preventive-maintenance-basics.html",
-      "image": "49",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/sheet-metal-bending-basics.html",
-      "image": "11",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/sheet-metal-bending-basics.html",
-      "image": "11",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/sheet-metal-bending-basics.html",
-      "image": "47",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/stainless-steel-handling.html",
-      "image": "39",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/stainless-steel-handling.html",
-      "image": "39",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/stainless-steel-handling.html",
-      "image": "40",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/surface-roughness-ra-rz.html",
-      "image": "13",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/insights/surface-roughness-ra-rz.html",
-      "image": "39",
-      "area": "Page content"
-    },
-    {
-      "page": "/insights/vernier-caliper-guide.html",
-      "image": "59",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/3d-print-fai-batch.html",
-      "image": "09",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/3d-print-fai-batch.html",
-      "image": "20",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/3d-print-fai-batch.html",
-      "image": "30",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/fit-correction-replacement-component.html",
-      "image": "23",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/fit-correction-replacement-component.html",
-      "image": "46",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/fit-correction-replacement-component.html",
-      "image": "23",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/laser-chiller-pump-replacement.html",
-      "image": "18",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/laser-chiller-pump-replacement.html",
-      "image": "18",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/laser-chiller-pump-replacement.html",
-      "image": "17",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "26",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "26",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "25",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/laser-machine-rca.html",
-      "image": "06",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "21",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "21",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "24",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/precision-marked-components.html",
-      "image": "40",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "10",
-      "area": "Foreground hero"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "10",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "16",
-      "area": "Page content"
-    },
-    {
-      "page": "/projects/reverse-engineering-sample-to-drawing.html",
-      "image": "23",
-      "area": "Page content"
+      "area": "Hero background"
     }
   ],
   "legacy_assets": {

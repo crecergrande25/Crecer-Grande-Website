@@ -7,8 +7,7 @@ Production website for **https://crecergrande.in/**.
 - Engineering-focused homepage
 - Engineering Desk
 - One Services directory and four service divisions
-- Six engineering project guides
-- Engineering Insights, guides and downloadable division profiles
+- 50 searchable engineering Insights in four topic groups
 - Industries, About, Contact, Privacy and Disclaimer
 - Request-for-Quote and enquiry workflows
 - Authenticated Website Manager under `/admin/`
@@ -34,6 +33,7 @@ node scripts/check_home_brand.cjs
 node scripts/check_welding_media.cjs
 node scripts/check_functional_flows.cjs
 node scripts/check_release7.cjs
+node scripts/check_release10.cjs
 node scripts/check_photography.cjs
 AUDIT_VIEWPORT=mobile node scripts/check_photography.cjs
 ```
@@ -42,19 +42,19 @@ Browser scripts default to the local server on port 8765; `SITE_BASE` selects an
 
 ## Website illustrations
 
-Release 9 integrates 60 generated images requested by the website owner, including a visible foreground hero image on each of the 52 public content pages. They are AI-generated illustrations, identified as such in captions and page notices; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
+Release 10 integrates 70 generated images requested by the website owner. All 78 public content pages have foreground hero imagery; every hero except Home also has a matching background. Insights has 50 articles with image backgrounds on the cards. They are AI-generated illustrations, identified as such in captions and page notices; they do not document actual company facilities, staff or completed projects. The legacy unverified image library remains retired. No SVG images are allowed.
 
 The new raster assets are in `assets/images/generated/`. Responsive WebP copies at four widths retain the original 3:2 composition. Original PNGs remain outside the checkout. Lazy loading and appropriate source sizes keep page downloads small.
 
-Read [the placement guide](docs/RELEASE_9_FOREGROUND_IMAGES.md) and [the exact image-to-page inventory](docs/IMAGE_PLACEMENTS.csv). `assets/data/photography.json` records every approved image, descriptive alternative text and its placements. [The original-photo brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) still applies if replacing these illustrations with genuine company photography later.
+Read [the placement guide](docs/RELEASE_10_REQUESTED_CHANGES.md) and [the exact image-to-page inventory](docs/IMAGE_PLACEMENTS.csv). `assets/data/photography.json` records every approved image, descriptive alternative text and its placements. [The original-photo brief](docs/ORIGINAL_PHOTOGRAPHY_BRIEF.md) still applies if replacing these illustrations with genuine company photography later.
 
 ## Earlier architectural repairs
 
-The service directory is `/services.html`, with four divisions. `/divisions.html` and retired Automation routes redirect there. The project library has six distinct guides; three overlapping legacy URLs redirect to related sections. These guides describe methods, not verified completed customer jobs.
+The service directory is `/services.html`, with four divisions. `/divisions.html` and retired Automation routes redirect there. The Projects section has been removed at the owner’s request, including its pages, navigation, search entries and sitemap URLs. Delete the old Projects files when uploading the replacement website.
 
 The static HTML carries a `data-content-updated-at` timestamp. CMS content older than that timestamp does not overwrite the release's copy; newer CMS edits can still apply. Public company settings remain dynamic. Review fresh CMS edits against the four-division scope.
 
-See [the current image integration notes](docs/RELEASE_9_FOREGROUND_IMAGES.md), [earlier release notes and acceptance checks](docs/RELEASE_7_HANDOFF.md) and [owner account actions](docs/OWNER_ACCOUNT_ACTIONS.md). No production deployment or Google account setup is claimed.
+See [the current image integration notes](docs/RELEASE_10_REQUESTED_CHANGES.md), [earlier release notes and acceptance checks](docs/RELEASE_7_HANDOFF.md) and [owner account actions](docs/OWNER_ACCOUNT_ACTIONS.md). No production deployment or Google account setup is claimed.
 
 ## Security
 
