@@ -1,0 +1,71 @@
+/** Check every page for usable photography, loaded assets and responsive layout.
+ * Relevant photos may be reused: forced sitewide uniqueness caused unrelated
+ * part imagery and synthetic SVG fillers in earlier versions of the website.
+ */
+const { chromium } = require('playwright');
+const { readOnlyContext } = require('./browser-test-helpers.cjs');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.resolve(__dirname, '..');
+const base = process.env.SITE_BASE || 'http://127.0.0.1:8765';
+const mobile = (process.env.AUDIT_VIEWPORT || process.env.HERO_VIEWPORT) === 'mobile';
+const pages = [];
+function walk(directory) {
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    if (entry.name.startsWith('.') || ['assets', 'scripts', 'node_modules', 'docs', 'supabase'].includes(entry.name)) continue;
+    const file = path.join(directory, entry.name);
+    if (entry.isDirectory()) walk(file);
+    else if (entry.name.endsWith('.html')) {
+      const html = fs.readFileSync(file, 'utf8');
+      if (!/<meta\b[^>]*http-equiv=["']refresh/i.test(html)) pages.push('/' + path.relative(root, file).replaceAll('\\', '/'));
+    }
+  }
+}
+walk(root);
+(async () => {
+  const browser = await chromium.launch({ headless: true, args: ['--no-sandbox'] });
+  const context = await readOnlyContext(browser, { viewport: { width: mobile ? 390 : 1440, height: 900 }, reducedMotion: 'reduce' });
+  const failures = [];
+  let images = 0, heroes = 0;
+  try {
+    for (const route of pages.sort()) {
+      const page = await context.newPage();
+      page.on('pageerror', error => failures.push({ route, issue: 'Uncaught JavaScript error', detail: error.message }));
+      try {
+        const response = await page.goto(base + route, { waitUntil: 'domcontentloaded', timeout: 30000 });
+        if (response?.status() !== 200) throw new Error('Page HTTP ' + response?.status());
+        await page.evaluate(async () => {
+          document.querySelectorAll('img').forEach(image => image.loading = 'eager');
+          await Promise.race([Promise.allSettled([...document.images].map(image => image.decode())), new Promise(resolve => setTimeout(resolve, 8000))]);
+        });
+        const state = await page.evaluate(() => {
+          const issues = [];
+          if (document.querySelector('svg,img[src*=".svg"],object[type="image/svg+xml"]')) issues.push('SVG image or inline artwork remains');
+          if (document.querySelector('.cg-art-placeholder')) issues.push('Synthetic image placeholder remains');
+          if (document.documentElement.scrollWidth > innerWidth + 3) issues.push('Horizontal page overflow');
+          for (const image of document.images) {
+            if (!image.complete || !image.naturalWidth) issues.push('Image did not decode: ' + image.getAttribute('src'));
+            if (!image.alt.trim()) issues.push('Image has no useful alternative text: ' + image.getAttribute('src'));
+          }
+          const hero = document.querySelector('main section.cg-image-backed-hero');
+          if (hero) {
+            const background = getComputedStyle(hero).backgroundImage;
+            if (!/url\(.+\.(webp|jpe?g|png)/i.test(background)) issues.push('Hero is missing raster photography');
+            if (/\.svg/i.test(background)) issues.push('SVG hero background remains');
+            const heading = hero.querySelector('h1');
+            if (!heading || !heading.getClientRects().length || getComputedStyle(heading).color !== 'rgb(255, 255, 255)') issues.push('Hero heading is not visible and legible');
+            if (hero.getBoundingClientRect().height < 180) issues.push('Hero has collapsed');
+          }
+          return { issues, images: document.images.length, hero: !!hero };
+        });
+        images += state.images;
+        if (state.hero) heroes++;
+        failures.push(...state.issues.map(issue => ({ route, issue })));
+      } catch (error) { failures.push({ route, issue: error.message }); }
+      finally { await page.close(); }
+    }
+  } finally { await browser.close(); }
+  console.log('PHOTOGRAPHY|' + JSON.stringify({ viewport: mobile ? 'mobile' : 'desktop', pages: pages.length, images, heroes, failures: failures.length }));
+  for (const failure of failures) console.error(JSON.stringify(failure));
+  if (failures.length) process.exitCode = 1;
+})().catch(error => { console.error(error); process.exitCode = 1; });

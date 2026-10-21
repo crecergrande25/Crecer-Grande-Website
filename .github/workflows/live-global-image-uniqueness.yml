@@ -1,4 +1,4 @@
-name: Live global image uniqueness
+name: Live photography and responsive layout
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       - name: Wait for the latest sitewide background release
         run: |
           for i in $(seq 1 24); do
-            if curl --fail --silent --show-error --location --max-time 15 https://crecergrande.in/services.html | grep -q 'sitewide-hero-backgrounds.css?v=1.0.0'; then
+            if curl --fail --silent --show-error --location --max-time 15 https://crecergrande.in/services.html | grep -q 'experience.css?v=1.0.0'; then
               echo 'Sitewide image hero stylesheet is linked on the production domain.'
               exit 0
             fi
@@ -29,22 +29,12 @@ jobs:
           done
           echo 'Timed out waiting for sitewide hero styling.'
           exit 1
-      - name: Check every live desktop page for duplicated content imagery
+      - name: Check every live desktop page for loaded photographic imagery
         env:
           SITE_BASE: https://crecergrande.in
-        run: node scripts/check_live_image_uniqueness.cjs
-      - name: Check every live mobile page for duplicated content imagery
+        run: node scripts/check_photography.cjs
+      - name: Check every live mobile page for loaded photographic imagery
         env:
           SITE_BASE: https://crecergrande.in
           AUDIT_VIEWPORT: mobile
-        run: node scripts/check_live_image_uniqueness.cjs
-
-      - name: Verify live full-width image heroes on desktop
-        env:
-          SITE_BASE: https://crecergrande.in
-        run: node scripts/check_sitewide_hero_backgrounds.cjs
-      - name: Verify live full-width image heroes on mobile
-        env:
-          SITE_BASE: https://crecergrande.in
-          HERO_VIEWPORT: mobile
-        run: node scripts/check_sitewide_hero_backgrounds.cjs
+        run: node scripts/check_photography.cjs

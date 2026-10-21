@@ -1,4 +1,5 @@
 (() => {
+  function initBotcha(){
   const $=(s,c=document)=>c.querySelector(s);
   const $$=(s,c=document)=>[...c.querySelectorAll(s)];
   const root=$('[data-botcha-root]');
@@ -221,7 +222,7 @@
     busy=false;
     send.disabled=false;
     input.disabled=false;
-    status.textContent='Online';
+    status.textContent=result.engine==='local'?'Quick guidance':'Service guide';
     input.focus();
     window.CGTrack?.('botcha_answer',{engine:result.engine||'fallback'});
   }
@@ -255,4 +256,8 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))closePanel()});
 
   renderHistory();
+  }
+  document.addEventListener('cg:botcha-ready',initBotcha);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initBotcha,{once:true});
+  else initBotcha();
 })();

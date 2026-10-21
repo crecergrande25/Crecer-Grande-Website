@@ -2,68 +2,19 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 
-  function applyV5DesignSystem(){
-    const path=(location.pathname||'/').toLowerCase();
-    const isHome=(path==='/'||path==='/index.html');
-    const isAdmin=path.includes('/admin/');
-    const premiumPages=new Set(['/','/index.html','/about.html','/divisions.html','/services.html','/projects.html','/insights.html','/contact.html','/request-quote.html','/feedback.html']);
-    const isPremium=premiumPages.has(path);
-
-    document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(x=>x.remove());
-    document.body.classList.remove('cg-v5');
-    [...document.body.classList].filter(x=>x.startsWith('cg-page-')||x.startsWith('cg-body-')).forEach(x=>document.body.classList.remove(x));
-
-    if(isPremium||isAdmin){
-      document.querySelectorAll('link[data-cg-body-polish]').forEach(x=>x.remove());
-      return;
-    }
-
-    if(!document.querySelector('link[data-cg-body-polish]')){
-      const link=document.createElement('link');
-      link.rel='stylesheet';
-      link.href='/assets/css/body-polish.css?v=1.1.0';
-      link.dataset.cgBodyPolish='1';
-      document.head.appendChild(link);
-    }
-
-    document.body.classList.add('cg-body-polish');
-    const pageMap={
-      '/about.html':'cg-body-about',
-      '/services.html':'cg-body-services',
-      '/divisions.html':'cg-body-divisions',
-      '/engineering-desk.html':'cg-body-engineering',
-      '/projects.html':'cg-body-projects',
-      '/insights.html':'cg-body-insights',
-      '/industries.html':'cg-body-industries',
-      '/contact.html':'cg-body-contact',
-      '/request-quote.html':'cg-body-rfq'
-    };
-    if(pageMap[path]) document.body.classList.add(pageMap[path]);
-    if(path.startsWith('/divisions/')) document.body.classList.add('cg-body-division-detail');
-    if(path.startsWith('/projects/')) document.body.classList.add('cg-body-project-detail');
-    if(path.startsWith('/insights/')) document.body.classList.add('cg-body-insight-detail');
-    if(path.endsWith('-kolkata.html')||path==='/custom-machine-spares.html'||path==='/design-job-work.html') document.body.classList.add('cg-body-service-detail');
-  }
-
-  function applyContrastFix(){
-    const path=(location.pathname||'/').toLowerCase();
-    if(path.includes('/admin/')) return;
-    if(document.querySelector('link[data-cg-contrast-fix]')) return;
-    const link=document.createElement('link');
-    link.rel='stylesheet';
-    link.href='/assets/css/contrast-fix.css?v=1.1.0';
-    link.dataset.cgContrastFix='1';
-    document.head.appendChild(link);
+  function removeLegacyStyleOverrides(){
+    document.querySelectorAll('link[href*="/assets/css/precision-site.css"],link[href*="/assets/css/site-v5.css"]').forEach(node=>node.remove());
+    document.body.classList.remove('cg-v5','cg-body-polish');
   }
 
   const TOPBAR = `<div class="topbar"><div class="container topbar-in"><div class="topbar-meta"><span data-site-field="gstin" data-site-prefix="GSTIN: ">GSTIN: 19BBJPB4158H1ZM</span><span data-site-field="udyam" data-site-prefix="Udyam: ">Udyam: UDYAM-WB-14-0231207</span><span>West Bengal, India</span></div><a data-site-field="instagram_handle" data-site-link="instagram" href="https://www.instagram.com/crecer_grande/" target="_blank" rel="noopener">@crecer_grande</a></div></div>`;
 
-  const HEADER_HOME = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><img class="cg-original-brand-logo" src="/assets/images/Logo-R01.png" alt="Crecer Grande" width="2048" height="786" decoding="async"></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Services</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
+  const HEADER_HOME = "<header class=\"site-header\"><div class=\"container navrow\"><a class=\"brand\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><button class=\"menu-btn\" type=\"button\" aria-label=\"Toggle navigation\" aria-expanded=\"false\" aria-controls=\"site-navigation\"><span></span><span></span><span></span></button><nav class=\"nav\" id=\"site-navigation\" aria-label=\"Main navigation\"><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/projects.html\">Projects</a><a href=\"/insights.html\">Insights</a><a href=\"/about.html\">About</a><a href=\"/contact.html\">Contact Us</a><a class=\"quote-nav\" href=\"/request-quote.html\">Request a Quote \u2192</a></nav></div></header>";
 
-  const HEADER = `<header class="site-header"><div class="container navrow"><a aria-label="Crecer Grande home" class="brand" href="/"><img class="cg-original-brand-logo" src="/assets/images/Logo-R01.png" alt="Crecer Grande" width="2048" height="786" decoding="async"></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu-btn" type="button"><span></span><span></span><span></span></button><nav aria-label="Main navigation" class="nav"><a href="/about.html">About</a><a href="/divisions.html">Divisions</a><a href="/services.html">Services</a><a href="/projects.html">Projects</a><a href="/insights.html">Insights</a><a href="/contact.html">Contact Us</a><a class="quote-nav" href="/request-quote.html">Request a Quote</a></nav></div></header>`;
+  const HEADER = "<header class=\"site-header\"><div class=\"container navrow\"><a class=\"brand\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><button class=\"menu-btn\" type=\"button\" aria-label=\"Toggle navigation\" aria-expanded=\"false\" aria-controls=\"site-navigation\"><span></span><span></span><span></span></button><nav class=\"nav\" id=\"site-navigation\" aria-label=\"Main navigation\"><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/projects.html\">Projects</a><a href=\"/insights.html\">Insights</a><a href=\"/about.html\">About</a><a href=\"/contact.html\">Contact Us</a><a class=\"quote-nav\" href=\"/request-quote.html\">Request a Quote \u2192</a></nav></div></header>";
 
   const FOOTER_CTA = "<section class=\"cg-footer-cta\">\n<div class=\"container cg-footer-cta-inner\">\n<div>\n<h2>Have an engineering, manufacturing or operational requirement?</h2>\n<p>Send a drawing, sample, photograph, machine model, part number, document or problem statement. We will structure the most practical service route.</p>\n</div>\n<a class=\"cg-footer-cta-btn\" href=\"/request-quote.html\">Send Requirement</a>\n</div>\n</section>";
-  const FOOTER = "<footer class=\"cg-footer\">\n<div class=\"container cg-footer-grid\">\n<div class=\"cg-footer-brand\">\n<a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a>\n<p class=\"cg-footer-tagline\">Engineering Services • Fabrication • Industrial Support</p>\n<p class=\"cg-footer-desc\">A coordinated service network for design, manufacturing support, maintenance, quality, inspection and business workflows.</p>\n</div>\n<div class=\"cg-footer-col\"><h2 class=cg-footer-heading>Service Routes</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Service Directory</a><a href=\"/divisions.html\">Capability Divisions</a><a href=\"/3d-printing-kolkata.html\">3D Printing Service</a><a href=\"/laser-cutting-kolkata.html\">Laser Cutting</a><a href=\"/laser-welding-kolkata.html\">Laser Welding</a><a href=\"/laser-marking-kolkata.html\">Laser Marking</a><a href=\"/sheet-metal-bending-kolkata.html\">Sheet Metal Bending</a><a href=\"/reverse-engineering-kolkata.html\">Reverse Engineering</a><a href=\"/mechanical-design-services-kolkata.html\">Mechanical Design</a></div>\n<div class=\"cg-footer-col\"><h2 class=cg-footer-heading>Company</h2><a href=\"/about.html\">About</a><a href=\"/projects.html\">Projects &amp; Case Studies</a><a href=\"/industries.html\">Industries</a><a href=\"/insights.html\">Insights</a><a href=\"/contact.html\">Contact</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div>\n<div class=\"cg-footer-col cg-footer-contact\"><h2 class=cg-footer-heading>Contact Us</h2><a class=\"cg-contact-line\" href=\"tel:+917003301781\"><span>+91 7003301781</span></a><a class=\"cg-contact-line\" href=\"mailto:crecergrande@outlook.com\"><span>crecergrande@outlook.com</span></a><p class=\"cg-contact-address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal - 700135</p><div class=\"cg-footer-socials cg-contact-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M20.5 3.5A11.7 11.7 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L.2 24l6.4-1.7a11.8 11.8 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4ZM12.1 21.7h-.1c-1.7 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2.1-.4 0-.5-.1-.1-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z\"></path></svg></span><span>WhatsApp</span></a><a aria-label=\"Instagram @crecer_grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\"><span class=\"cg-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\"><path d=\"M7.5 0h9A7.5 7.5 0 0 1 24 7.5v9a7.5 7.5 0 0 1-7.5 7.5h-9A7.5 7.5 0 0 1 0 16.5v-9A7.5 7.5 0 0 1 7.5 0Zm0 2.3a5.2 5.2 0 0 0-5.2 5.2v9a5.2 5.2 0 0 0 5.2 5.2h9a5.2 5.2 0 0 0 5.2-5.2v-9a5.2 5.2 0 0 0-5.2-5.2h-9Zm10.8 1.8a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2ZM12 5.8a6.2 6.2 0 1 1 0 12.4A6.2 6.2 0 0 1 12 5.8Zm0 2.3A3.9 3.9 0 1 0 12 16a3.9 3.9 0 0 0 0-7.8Z\"></path></svg></span><span>@crecer_grande</span></a></div></div>\n</div>\n<div class=\"container cg-footer-bottom\"><span>© 2026 Crecer Grande. All rights reserved.</span><span class=\"cg-footer-motto\">Engineering, manufacturing and industrial support from Kolkata.</span><a class=\"cg-admin-login\" href=\"/admin/\" rel=\"nofollow\">Admin Login</a></div>\n</footer>";
+  const FOOTER = "<footer class=\"cg-footer\"><div class=\"container cg-footer-grid\"><div class=\"cg-footer-brand\"><a class=\"cg-footer-logo-link\" href=\"/\" aria-label=\"Crecer Grande home\"><img class=\"cg-original-brand-logo\" src=\"/assets/images/Logo-R01.png\" alt=\"Crecer Grande\" width=\"2048\" height=\"786\" decoding=\"async\"></a><p class=\"cg-footer-tagline\">Engineering ideas. Practical outcomes.</p><p class=\"cg-footer-desc\">Design, manufacturing and industrial support from Kolkata, West Bengal.</p></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Explore</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/divisions.html\">Capability divisions</a><a href=\"/projects.html\">Projects &amp; approaches</a><a href=\"/estimate.html\">Engineering tools</a><a href=\"/insights.html\">Insights &amp; guides</a></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Company</h2><a href=\"/about.html\">About Crecer Grande</a><a href=\"/industries.html\">Industries</a><a href=\"/contact.html\">Contact Us</a><a href=\"/feedback.html\">Give feedback</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div><div class=\"cg-footer-col cg-footer-contact\"><h2 class=\"cg-footer-heading\">Let\u2019s talk about your requirement.</h2><a class=\"cg-contact-line\" data-site-field=\"phone_primary\" data-site-link=\"tel\" href=\"tel:+917003301781\">+91 7003301781</a><a class=\"cg-contact-line\" data-site-field=\"email_primary\" data-site-link=\"mailto\" href=\"mailto:crecergrande@outlook.com\">crecergrande@outlook.com</a><p class=\"cg-contact-address\" data-site-field=\"address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal \u2013 700135</p><div class=\"cg-footer-socials\"><a class=\"cg-social-pill\" aria-label=\"WhatsApp Crecer Grande\" href=\"https://wa.me/916291001781\" target=\"_blank\" rel=\"noopener\">WhatsApp \u2192</a><a class=\"cg-social-pill\" aria-label=\"Instagram Crecer Grande\" href=\"https://www.instagram.com/crecer_grande/\" target=\"_blank\" rel=\"noopener\">Instagram \u2192</a></div></div></div><div class=\"container cg-footer-bottom\"><span>\u00a9 2026 Crecer Grande. All rights reserved.</span><span>From the first question to the next practical step.</span><a class=\"cg-admin-login\" href=\"/admin/\" rel=\"nofollow\">Admin login</a></div></footer>";
 
   function injectHeaderStyles(){
     if($('#cg-common-header-style')) return;
@@ -196,19 +147,6 @@
     document.body.classList.add('cg-common-footer-applied');
   }
 
-  function injectFooterStyles(){
-    if($('#cg-footer-compact-style')) return;
-    const style = document.createElement('style');
-    style.id = 'cg-footer-compact-style';
-    style.textContent = `.cg-footer{padding:36px 0 14px!important}.cg-footer-grid{gap:32px!important}.cg-footer-logo-link img{width:305px!important;max-width:100%!important;margin-bottom:14px!important}.cg-footer-tagline{margin-bottom:10px!important}.cg-footer-desc{margin-bottom:12px!important}.cg-footer-col h4{margin-bottom:12px!important}.cg-footer-col>a{margin-bottom:8px!important}.cg-footer-contact .cg-contact-line{margin-bottom:9px!important}.cg-contact-address{margin-top:2px!important}.cg-footer-socials{margin-top:12px!important}.cg-contact-socials .cg-social-pill[href*="wa.me"]{border-color:#128C7E!important;background:#128C7E!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="wa.me"] .cg-icon{color:#25D366!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"]{border-color:#D44C72!important;background:linear-gradient(135deg,#833AB4,#E1306C,#F77737)!important;color:#fff!important}.cg-contact-socials .cg-social-pill[href*="instagram.com"] .cg-icon{color:#E1306C!important}.cg-social-pill:hover{filter:brightness(1.08)!important}.cg-heart{color:#25D366!important}.cg-footer-bottom{margin-top:24px!important;padding-top:14px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr)!important;align-items:center!important;column-gap:24px!important}.cg-footer-bottom .cg-footer-motto{justify-self:center!important;text-align:center!important;white-space:nowrap!important}.cg-footer-bottom .cg-admin-login{justify-self:end!important;margin-left:0!important;text-align:right!important}@media(max-width:760px){.cg-footer{padding:30px 0 18px!important}.cg-footer-grid{gap:26px!important}.cg-footer-logo-link img{width:250px!important}.cg-footer-bottom{grid-template-columns:1fr!important;text-align:left!important}.cg-footer-bottom span:nth-child(2),.cg-footer-bottom span:last-child{text-align:left!important}}`;
-    document.head.appendChild(style);
-  }
-
-  function normalizeFooter(){
-    injectFooterStyles();
-    document.querySelectorAll('.cg-heart').forEach(x => x.style.color = '#25D366');
-  }
-
   function syncCommonHeader(){
     const path = location.pathname.toLowerCase();
     if(path.includes('/admin/')||path==='/'||path==='/index.html') return;
@@ -231,13 +169,12 @@
     const path=(location.pathname||'/').toLowerCase();
     if(path.includes('/admin/') || path==='/feedback.html') return;
     document.querySelectorAll('.cg-feedback-tab').forEach(x=>x.remove());
-    document.body.insertAdjacentHTML('beforeend',CG_FEEDBACK_TAB);
   }
 
   const BOTCHA = `<div class="ask cg-botcha" data-botcha-root>
     <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Open Botcha virtual assistant">
       <span class="cg-botcha-mark" aria-hidden="true">B</span>
-      <span class="cg-botcha-launch-copy"><b>Botcha !</b><small>AI virtual assistant</small></span>
+      <span class="cg-botcha-launch-copy"><b>Ask Botcha</b><small>Engineering service guide</small></span>
       <span class="cg-botcha-live-dot" aria-hidden="true"></span>
     </button>
     <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Botcha virtual assistant" aria-hidden="true">
@@ -247,7 +184,7 @@
         <span class="cg-botcha-ai-badge">AI ASSIST</span>
         <button class="cg-botcha-close" type="button" aria-label="Close Botcha">×</button>
       </header>
-      <div class="cg-botcha-context"><strong>Ask about CG services, machines, drawings or quotations</strong><span class="cg-botcha-status">Online</span></div>
+      <div class="cg-botcha-context"><strong>Ask about CG services, machines, drawings or quotations</strong><span class="cg-botcha-status">Service guide</span></div>
       <div class="cg-botcha-messages" aria-live="polite" aria-relevant="additions text"></div>
       <div class="cg-botcha-quick" aria-label="Suggested questions"></div>
       <form class="cg-botcha-form">
@@ -269,7 +206,7 @@
       link.dataset.cgBotchaCss='1';
       document.head.appendChild(link);
     }
-    if(!document.querySelector('script[data-cg-botcha-js]')){
+    if(!document.querySelector('script[src^="/assets/js/botcha.js"]')){
       const script=document.createElement('script');
       script.src='/assets/js/botcha.js?v=2.0.0';
       script.dataset.cgBotchaJs='1';
@@ -284,6 +221,7 @@
     document.querySelectorAll('.ask').forEach(x=>x.remove());
     document.body.insertAdjacentHTML('beforeend',BOTCHA);
     ensureBotchaAssets();
+    document.dispatchEvent(new Event('cg:botcha-ready'));
   }
 
   function normalizeAdminLogin(){
@@ -378,37 +316,44 @@
     });
   }
 
-  function ensureCompactLayout(){
+  function ensureExperienceStyles(){
     const path=(location.pathname||'/').toLowerCase();
     if(path.includes('/admin/')) return;
-    let link=document.querySelector('link[data-cg-compact-layout]');
+    let link=document.querySelector('link[data-cg-experience]');
     if(!link){
       link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/compact-layout.css?v=1.5.0';
-      link.dataset.cgCompactLayout='1';
-      document.head.appendChild(link);
+      link.href='/assets/css/experience.css?v=1.0.0';
+      link.dataset.cgExperience='1';
     }
+    document.head.appendChild(link);
   }
 
   function boot(){
-    applyV5DesignSystem();
-    applyContrastFix();
+    removeLegacyStyleOverrides();
     applyServiceFirstArt();
     syncCommonHeader();
     syncCommonFooter();
     removeDuplicateTerminalCta();
-    normalizeFooter();
     normalizeAdminLogin();
     normalizeFeedbackTab();
     normalizeBotcha();
     normalizeContactLabels();
-    ensureCompactLayout();
+    ensureExperienceStyles();
     enhanceCreativeExperience();
     const header=$('.site-header'); const scroll=()=>header?.classList.toggle('scrolled',scrollY>8);
     scroll(); addEventListener('scroll',scroll,{passive:true});
     const btn=$('.menu-btn'),nav=$('.nav');
-    btn?.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))});
+    if(btn&&nav){
+      nav.id='site-navigation';
+      btn.setAttribute('aria-controls',nav.id);
+      const closeMenu=()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded','false')};
+      btn.addEventListener('click',()=>{const open=nav.classList.toggle('open');btn.setAttribute('aria-expanded',String(open))});
+      document.addEventListener('keydown',event=>{if(event.key==='Escape'&&nav.classList.contains('open')){closeMenu();btn.focus()}});
+      document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu()});
+      nav.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
+      matchMedia('(min-width:1051px)').addEventListener('change',closeMenu);
+    }
     $$('.nav-group>button').forEach(b=>b.addEventListener('click',(e)=>{if(innerWidth<=1050){e.preventDefault();b.parentElement.classList.toggle('open')}}));
     $$('[data-copy-search]').forEach(x=>x.addEventListener('click',()=>{const q=$('#cg-global-search');if(q){q.value=x.dataset.copySearch||x.textContent.trim();q.dispatchEvent(new Event('input',{bubbles:true}));q.focus()}}));
     document.addEventListener('click',(e)=>{const a=e.target.closest('a'); if(!a)return; if(/wa\.me/.test(a.href)) track('click_whatsapp',{href:a.href}); else if(a.href.startsWith('tel:')) track('click_phone',{href:a.href}); else if(a.href.startsWith('mailto:')) track('click_email',{href:a.href}); else if(/instagram\.com/.test(a.href)) track('outbound_instagram',{href:a.href});});

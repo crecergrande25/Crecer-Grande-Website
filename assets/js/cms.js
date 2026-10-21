@@ -24,22 +24,28 @@
       if(el.dataset.siteLink==='instagram')el.href=data.instagram_url||String(value);
       if(el.dataset.siteLink==='whatsapp')el.href='https://wa.me/'+String(value).replace(/\D/g,'');
     });
-    if(data.logo_url)document.querySelectorAll('[data-site-src="logo_url"]').forEach(img=>img.src=data.logo_url);
+    if(data.logo_url&&/\.(png|jpe?g|webp)(?:[?#]|$)/i.test(data.logo_url))document.querySelectorAll('[data-site-src="logo_url"]').forEach(img=>img.src=data.logo_url);
   }
 
   function applyHomepage(data){
     if(!data)return;
+    document.querySelectorAll('[data-home-field]').forEach(node=>{
+      const value=data[node.dataset.homeField];
+      if(text(value))node.textContent=value;
+    });
     setText('.cg-home-copy .eyebrow',data.hero_eyebrow);
-    const h1=document.querySelector('.cg-home-copy h1');
+    const h1=document.querySelector('.cg-pr-home .pr-hero-copy h1, .cg-home-copy h1');
     if(h1&&(text(data.hero_line1)||text(data.hero_line2)||text(data.hero_line3))){
       h1.textContent='';
-      const prefix=document.createTextNode([data.hero_line1,data.hero_line3].filter(Boolean).join(' ')+(data.hero_line2?' ':''));
+      const prefix=document.createTextNode((data.hero_line1||'')+(data.hero_line2?' ':''));
       h1.appendChild(prefix);
       if(data.hero_line2){
         const em=document.createElement('em');
+        em.className='pr-gold';
         em.textContent=data.hero_line2;
         h1.appendChild(em);
       }
+      if(text(data.hero_line3))h1.appendChild(document.createTextNode(' '+data.hero_line3));
     }
     setText('.cg-home-copy > p',data.hero_description);
     setText('.cg-home-quick-links-section .section-head h2',data.start_heading);
@@ -61,7 +67,7 @@
     if(text(data.seo_title))document.title=data.seo_title;
     setMeta('meta[name="description"]','content',data.seo_description);
     setMeta('link[rel="canonical"]','href',data.canonical_url);
-    const hero=document.querySelector('main .page-hero, main .cg-premium-hero');
+    const hero=document.querySelector('main .cg-image-backed-hero, main .page-hero, main .cg-premium-hero');
     if(hero){
       const h1=hero.querySelector('h1');
       const p=hero.querySelector('p');
@@ -103,7 +109,7 @@
         if(home)applyHomepage(home);
       }
 
-      const canonical=location.origin+location.pathname;
+      const canonical=document.querySelector('link[rel="canonical"]')?.href||location.origin+location.pathname;
       const {data:page}=await client.from('page_content')
         .select('*')
         .eq('published',true)

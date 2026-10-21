@@ -8,24 +8,31 @@ document.addEventListener('DOMContentLoaded',()=> {
   const status=document.getElementById('feedback-status');
   const thanks=document.getElementById('fb-thanks');
   const contactFields=document.getElementById('fb-contact-fields');
+  status.setAttribute('role','status');
+  status.setAttribute('aria-live','polite');
   let current=0;
   let advancing=false;
+  let advanceTimer;
 
   const show=(i)=>{
+    clearTimeout(advanceTimer);
+    advancing=false;
     current=Math.max(0,Math.min(steps.length-1,i));
     steps.forEach((s,n)=>s.classList.toggle('active',n===current));
     bar.style.width=((current+1)/steps.length*100)+'%';
     label.textContent=(current+1)+' of '+steps.length;
     status.textContent='';
     requestAnimationFrame(()=>{
-      window.scrollTo({top:Math.max(0,form.offsetTop-105),behavior:'smooth'});
+      const title=steps[current].querySelector('h2,h3');
+      if(title){title.tabIndex=-1;title.focus({preventScroll:true})}
+      window.scrollTo({top:Math.max(0,form.offsetTop-105),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
     });
   };
 
   const advanceSoon=(delay=260)=>{
     if(advancing)return;
     advancing=true;
-    setTimeout(()=>{
+    advanceTimer=setTimeout(()=>{
       advancing=false;
       show(current+1);
     },delay);
@@ -78,7 +85,10 @@ document.addEventListener('DOMContentLoaded',()=> {
 
   form.querySelectorAll('[name="follow_up_choice"]').forEach(el=>{
     el.addEventListener('change',()=>{
-      contactFields.hidden=form.querySelector('[name="follow_up_choice"]:checked')?.value!=='yes';
+      const follow=form.querySelector('[name="follow_up_choice"]:checked')?.value==='yes';
+      contactFields.hidden=!follow;
+      const email=contactFields.querySelector('[name="email"]');
+      if(email)email.required=follow;
     });
   });
 
@@ -134,7 +144,12 @@ document.addEventListener('DOMContentLoaded',()=> {
       session_id:ids[1]||null
     };
 
-    const {error}=await client.from('website_feedback').insert(payload);
+    let error;
+    try{
+      ({error}=await client.from('website_feedback').insert(payload));
+    }catch(_){
+      error=true;
+    }
     if(error){
       status.className='fb-status error';
       status.textContent='We could not save your feedback right now. Please try once more.';
@@ -151,6 +166,6 @@ document.addEventListener('DOMContentLoaded',()=> {
     form.hidden=true;
     document.querySelector('.fb-progress-shell').hidden=true;
     thanks.hidden=false;
-    window.scrollTo({top:Math.max(0,thanks.offsetTop-130),behavior:'smooth'});
+    window.scrollTo({top:Math.max(0,thanks.offsetTop-130),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
   });
 });

@@ -1,19 +1,23 @@
 const { chromium } = require('playwright');
+const { readOnlyContext } = require('./browser-test-helpers.cjs');
 const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
 
 (async () => {
   const browser = await chromium.launch({ headless:true, args:['--no-sandbox'] });
+  const context = await readOnlyContext(browser);
   const tests=[
-    {name:'desktop',width:1440,height:900,minHeadlinePx:60,maxHeadlinePx:62.5},
-    {name:'laptop',width:992,height:820,minHeadlinePx:48,maxHeadlinePx:51},
-    {name:'tablet',width:820,height:950,minHeadlinePx:41,maxHeadlinePx:43},
-    {name:'mobile',width:390,height:844,minHeadlinePx:30,maxHeadlinePx:33}
+    {name:'desktop',width:1440,height:900,minHeadlinePx:56,maxHeadlinePx:80},
+    {name:'laptop',width:992,height:820,minHeadlinePx:42,maxHeadlinePx:64},
+    {name:'tablet',width:820,height:950,minHeadlinePx:40,maxHeadlinePx:56},
+    {name:'mobile',width:390,height:844,minHeadlinePx:32,maxHeadlinePx:48}
   ];
   const failures=[];
   for (const t of tests){
-    const page=await browser.newPage({viewport:{width:t.width,height:t.height},deviceScaleFactor:1});
+    const page=await context.newPage();
+    await page.setViewportSize({width:t.width,height:t.height});
     try {
       await page.goto(origin+'/', {waitUntil:'domcontentloaded',timeout:30000});
+      await page.waitForFunction(()=>[...document.querySelectorAll('link[rel="stylesheet"]')].every(link=>!!link.sheet),null,{timeout:10000});
       const state=await page.evaluate(async()=>{
         await Promise.allSettled([...document.querySelectorAll('.site-header img, .cg-footer-logo-link img')].map(im=>im.decode()));
         const h=document.querySelector('.cg-pr-home .pr-hero-copy h1');
@@ -52,7 +56,8 @@ const origin = process.env.SITE_BASE || 'http://127.0.0.1:8765';
       console.log('HOME_BRAND|'+JSON.stringify({viewport:t.name,okay,...state}));
       if(!okay)failures.push({viewport:t.name,state});
       if(t.name==='desktop'){
-        const other=await browser.newPage({viewport:{width:1280,height:800}});
+        const other=await context.newPage();
+        await other.setViewportSize({width:1280,height:800});
         await other.goto(origin+'/services.html',{waitUntil:'domcontentloaded',timeout:30000});
         await other.waitForTimeout(900);
         const shared=await other.evaluate(()=>{

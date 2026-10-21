@@ -23,6 +23,8 @@ jobs:
         run: python3 -m pip install Pillow --break-system-packages
       - name: Verify every image asset and reference
         run: python3 scripts/check_image_assets.py
+      - name: Verify engineering calculation accuracy and invalid inputs
+        run: node --test scripts/check_calculators.cjs
       - name: Check JavaScript syntax
         run: |
           for script in assets/js/*.js admin/assets/*.js; do

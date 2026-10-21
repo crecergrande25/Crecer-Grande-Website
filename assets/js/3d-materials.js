@@ -8,14 +8,15 @@
     const host=document.querySelector('[data-material-advisor]'); if(!host)return;
     const mats=await getMaterials();
     const buttons=[...host.querySelectorAll('[data-usecase]')],out=host.querySelector('[data-advisor-result]');
+    out.setAttribute('aria-live','polite');
     const map={
       'visual':['visual','detail','smooth'],'functional':['functional','engineering'],'outdoor':['outdoor','uv'],
       'flexible':['flexible'],'heat':['heat'],'fixture':['jig-fixture','rigid'],'clear':['clear'],'production':['production','batch']
     };
     function show(key){
-      buttons.forEach(b=>b.classList.toggle('active',b.dataset.usecase===key));
+      buttons.forEach(b=>{const active=b.dataset.usecase===key;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
       const tags=map[key]||[];
-      const ranked=mats.map(m=>({m,score:tags.reduce((s,t)=>s+(m.tags||[]).includes(t)?1:0,0)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||b.m.properties.strength-a.m.properties.strength).slice(0,3);
+      const ranked=mats.map(m=>({m,score:tags.reduce((s,t)=>s+((m.tags||[]).includes(t)?1:0),0)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||b.m.properties.strength-a.m.properties.strength).slice(0,3);
       out.innerHTML=ranked.map(({m})=>`<div class="mini"><b>${esc(m.name)}</b><span>${esc(m.use)}</span><a href="/request-quote.html?requirement=${encodeURIComponent(`3D Printing - ${m.name}`)}">Configure →</a></div>`).join('')||'<div class="mini"><b>Engineering review</b><span>Tell CG the required property and service environment.</span></div>';
     }
     buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset.usecase))); show('functional');
@@ -53,5 +54,8 @@
     }
     [process,use,search].forEach(el=>el.addEventListener('input',render)); render(); renderCompare();
   }
-  document.addEventListener('DOMContentLoaded',()=>{initAdvisor().catch(()=>{});initMaterialPage().catch(()=>{})});
+  document.addEventListener('DOMContentLoaded',()=>{initAdvisor().catch(()=>{
+    const out=document.querySelector('[data-advisor-result]');
+    if(out)out.innerHTML='<p>Material guidance could not be loaded. <a href="/request-quote.html?requirement=3D%20Printing">Send your intended use for an engineering review.</a></p>';
+  });initMaterialPage().catch(()=>{})});
 })();

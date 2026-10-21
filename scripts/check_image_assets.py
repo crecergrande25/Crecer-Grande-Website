@@ -3,7 +3,6 @@
 from pathlib import Path
 from PIL import Image
 import re,sys
-import xml.etree.ElementTree as ET
 
 root=Path(__file__).resolve().parents[1]
 images=root/"assets/images"
@@ -19,21 +18,19 @@ for p in images.rglob("*"):
                 print(f"NOTICE unusually small image: {p.relative_to(root)} ({im.width}x{im.height})")
     except Exception as exc:bad.append(f"Unreadable: {p.relative_to(root)} — {exc}")
 
-# Verify all content illustrations are parseable SVGs rather than broken HTML responses.
-svg_count=0
-for svg in images.rglob('*.svg'):
-    svg_count+=1
-    try:
-        el=ET.parse(svg).getroot()
-        if not el.tag.endswith('svg'):
-            bad.append(f'Invalid SVG root: {svg.relative_to(root)}')
-    except Exception as exc:
-        bad.append(f'Invalid SVG XML: {svg.relative_to(root)} — {exc}')
+# The current photography requirement excludes SVG artwork, including unused
+# assets that could accidentally be restored by an old generation script.
+svgs=list(images.rglob('*.svg'))
+for svg in svgs:
+    bad.append(f'SVG artwork is not permitted: {svg.relative_to(root)}')
 
 # Repeated content must be illustrated rather than replaced by plain-text cards.
 leftovers=[]
 for page in root.rglob('*.html'):
-    if 'cg-art-placeholder' in page.read_text(encoding='utf8',errors='replace'):
+    html=page.read_text(encoding='utf8',errors='replace')
+    if re.search(r'<svg\b|data:image/svg',html,re.I):
+        bad.append(f'Inline SVG is not permitted: {page.relative_to(root)}')
+    if 'cg-art-placeholder' in html:
         leftovers.append(str(page.relative_to(root)))
 if leftovers:
     bad.append('Text-only content artwork placeholders remain: '+', '.join(leftovers))
@@ -52,4 +49,4 @@ for p in root.rglob("*"):
 if bad:
     for msg in bad:print("ERROR",msg)
     sys.exit(1)
-print(f"PASS {count} raster assets decoded, {svg_count} SVGs valid, {checked} image paths resolved; zero content placeholders")
+print(f"PASS {count} raster assets decoded, {checked} image paths resolved; zero SVG assets or content placeholders")

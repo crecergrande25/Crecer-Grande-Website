@@ -25,6 +25,7 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/crecer-home-test.log 2>&1 &
           sleep 3
           node scripts/check_home_brand.cjs
+          node scripts/check_functional_flows.cjs
 
   live:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -40,7 +41,7 @@ jobs:
       - name: Wait for updated homepage assets
         run: |
           for attempt in $(seq 1 30); do
-            if curl --fail --silent --location --max-time 12 https://crecergrande.in/ | grep -Fq 'site.css?v=3.1.3' && curl --fail --silent --location --max-time 12 https://crecergrande.in/assets/css/site.css | grep -Fq 'Homepage editorial typography and original transparent logo'; then
+            if curl --fail --silent --location --max-time 12 https://crecergrande.in/ | grep -Fq 'experience.css?v=1.0.0' && curl --fail --silent --location --max-time 12 https://crecergrande.in/assets/css/experience.css | grep -Fq 'Shared, responsive photographic design'; then
               echo "Production homepage and styles have updated."
               exit 0
             fi

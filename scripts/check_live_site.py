@@ -8,7 +8,7 @@ import sys
 
 BASE = "https://crecergrande.in"
 PAGES = {
-    "/": ["Send a Requirement", "Design, drafting"],
+    "/": ['id="cg-global-search"', "experience.css?v=1.0.0"],
     "/about.html": ["Five divisions connected by one Engineering Desk", "04 · Automation Solutions"],
     "/services.html": ["Engineering Capabilities & Industrial Services", "Industrial Automation"],
     "/divisions/automation-solutions.html": ["Industrial automation and PLC support", "PLC and HMI assessment"],
