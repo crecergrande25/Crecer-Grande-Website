@@ -13,7 +13,7 @@
   const HEADER = "<header class=\"site-header\"><div class=\"container navrow\"><a aria-label=\"Crecer Grande home\" class=\"brand\" href=\"/\"><img alt=\"Crecer Grande\" class=\"cg-original-brand-logo\" decoding=\"async\" height=\"786\" src=\"/assets/images/Logo-R01.png\" width=\"2048\"/></a><button aria-controls=\"site-navigation\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" class=\"menu-btn\" type=\"button\"><span></span><span></span><span></span></button><nav aria-label=\"Main navigation\" class=\"nav\" id=\"site-navigation\"><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/insights.html\">Insights</a><a href=\"/about.html\">About</a><a href=\"/contact.html\">Contact Us</a><a class=\"quote-nav\" href=\"/request-quote.html\">Request a Quote \u2192</a></nav></div></header>";
 
   const FOOTER_CTA = "<section class=\"cg-footer-cta\">\n<div class=\"container cg-footer-cta-inner\">\n<div>\n<h2>Have an engineering or industrial requirement?</h2>\n<p>Send a drawing, sample, photograph, machine model, part number or problem statement. We will identify the most practical next step.</p>\n</div>\n<a class=\"cg-footer-cta-btn\" href=\"/request-quote.html\">Send Requirement</a>\n</div>\n</section>";
-  const FOOTER = "<footer class=\"cg-footer\"><div class=\"container cg-footer-grid\"><div class=\"cg-footer-brand\"><a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><img alt=\"Crecer Grande\" class=\"cg-original-brand-logo\" decoding=\"async\" height=\"786\" src=\"/assets/images/Logo-R01.png\" width=\"2048\"/></a><p class=\"cg-footer-tagline\">CAD design, custom parts and machine support.</p><p class=\"cg-footer-desc\">Design, manufacturing and industrial support from Kolkata, West Bengal.</p></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Explore</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/estimate.html\">Engineering tools</a><a href=\"/insights.html\">Insights &amp; guides</a></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Company</h2><a href=\"/about.html\">About Crecer Grande</a><a href=\"/industries.html\">Industries</a><a href=\"/contact.html\">Contact Us</a><a href=\"/feedback.html\">Give feedback</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div><div class=\"cg-footer-col cg-footer-contact\"><h2 class=\"cg-footer-heading\">Contact Us</h2><a class=\"cg-contact-line\" data-site-field=\"phone_primary\" data-site-link=\"tel\" href=\"tel:+917003301781\">+91 7003301781</a><a class=\"cg-contact-line\" data-site-field=\"email_primary\" data-site-link=\"mailto\" href=\"mailto:crecergrande@outlook.com\">crecergrande@outlook.com</a><p class=\"cg-contact-address\" data-site-field=\"address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal \u2013 700135</p><div class=\"cg-footer-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\" title=\"Whatsapp\"><img alt=\"Whatsapp\" decoding=\"async\" height=\"28\" loading=\"lazy\" src=\"/assets/images/brands/whatsapp.png\" width=\"28\"/></a><a aria-label=\"Instagram Crecer Grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\" title=\"Instagram\"><img alt=\"Instagram\" decoding=\"async\" height=\"28\" loading=\"lazy\" src=\"/assets/images/brands/instagram.png\" width=\"28\"/></a></div><p class=\"cg-registration\"><span data-site-field=\"gstin\" data-site-prefix=\"GSTIN: \">GSTIN: 19BBJPB4158H1ZM</span><br/><span data-site-field=\"udyam\" data-site-prefix=\"Udyam: \">Udyam: UDYAM-WB-14-0231207</span></p></div></div><div class=\"container cg-footer-bottom\"><span>\u00a9 2026 Crecer Grande. All rights reserved.</span><span>Kolkata, West Bengal, India.</span></div></footer>";
+  const FOOTER = "<footer class=\"cg-footer\"><div class=\"container cg-footer-grid\"><div class=\"cg-footer-brand\"><a aria-label=\"Crecer Grande home\" class=\"cg-footer-logo-link\" href=\"/\"><img alt=\"Crecer Grande\" class=\"cg-original-brand-logo\" decoding=\"async\" height=\"786\" src=\"/assets/images/Logo-R01.png\" width=\"2048\"/></a><p class=\"cg-footer-tagline\">CAD design, custom parts and machine support.</p><p class=\"cg-footer-desc\">Design, manufacturing and industrial support from Kolkata, West Bengal.</p></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Explore</h2><a href=\"/engineering-desk.html\">Engineering Desk</a><a href=\"/services.html\">Services</a><a href=\"/estimate.html\">Engineering tools</a><a href=\"/insights.html\">Insights &amp; guides</a></div><div class=\"cg-footer-col\"><h2 class=\"cg-footer-heading\">Company</h2><a href=\"/about.html\">About Crecer Grande</a><a href=\"/industries.html\">Industries</a><a href=\"/contact.html\">Contact Us</a><a href=\"/feedback.html\">Give feedback</a><a href=\"/privacy.html\">Privacy</a><a href=\"/disclaimer.html\">Disclaimer</a></div><div class=\"cg-footer-col cg-footer-contact\"><h2 class=\"cg-footer-heading\">Contact Us</h2><a class=\"cg-contact-line\" data-site-field=\"phone_primary\" data-site-link=\"tel\" href=\"tel:+917003301781\">+91 7003301781</a><a class=\"cg-contact-line\" data-site-field=\"email_primary\" data-site-link=\"mailto\" href=\"mailto:crecergrande@outlook.com\">crecergrande@outlook.com</a><p class=\"cg-contact-address\" data-site-field=\"address\">Plot No. LR-645, Mathpara Rd., Rajarhat, West Bengal \u2013 700135</p><div class=\"cg-footer-socials\"><a aria-label=\"WhatsApp Crecer Grande\" class=\"cg-social-pill\" href=\"https://wa.me/916291001781\" rel=\"noopener\" target=\"_blank\" title=\"Whatsapp\"><img alt=\"Whatsapp\" decoding=\"async\" height=\"28\" loading=\"lazy\" src=\"/assets/images/brands/whatsapp.png\" width=\"28\"/></a><a aria-label=\"Instagram Crecer Grande\" class=\"cg-social-pill\" href=\"https://www.instagram.com/crecer_grande/\" rel=\"noopener\" target=\"_blank\" title=\"Instagram\"><img alt=\"Instagram\" decoding=\"async\" height=\"28\" loading=\"lazy\" src=\"/assets/images/brands/instagram.png\" width=\"28\"/></a></div></div></div><div class=\"container cg-footer-bottom\"><span>\u00a9 2026 Crecer Grande. All rights reserved.</span><p class=\"cg-registration\"><span data-site-field=\"gstin\" data-site-prefix=\"GSTIN: \">GSTIN: 19BBJPB4158H1ZM</span> \u00b7 <span data-site-field=\"udyam\" data-site-prefix=\"Udyam: \">Udyam: UDYAM-WB-14-0231207</span></p></div></footer>";
 
   function injectHeaderStyles(){
     if($('#cg-common-header-style')) return;
@@ -170,17 +170,17 @@
   }
 
   const BOTCHA = `<div class="ask cg-botcha" data-botcha-root>
-    <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Ask us a question">
-      <span class="cg-botcha-mark" aria-hidden="true">?</span>
-      <span class="cg-botcha-launch-copy"><b>Ask us a question</b><small>Engineering service guide</small></span>
+    <button class="cg-botcha-launcher" type="button" aria-expanded="false" aria-controls="cg-botcha-panel" aria-label="Ask Cresiq">
+      <span class="cg-botcha-mark" aria-hidden="true"><img src="/assets/images/cresiq.png" alt="" width="40" height="40"></span>
+      <span class="cg-botcha-launch-copy"><b>Ask Cresiq</b><small>Engineering service guide</small></span>
       <span class="cg-botcha-live-dot" aria-hidden="true"></span>
     </button>
-    <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Service guide" aria-hidden="true">
+    <section class="cg-botcha-chat" id="cg-botcha-panel" role="dialog" aria-label="Cresiq engineering assistant" aria-hidden="true">
       <header class="cg-botcha-head">
-        <span class="cg-botcha-mark" aria-hidden="true">?</span>
-        <div class="cg-botcha-head-copy"><h2 class="cg-botcha-title">Ask us a question</h2><p>Quick service guide</p></div>
+        <span class="cg-botcha-mark" aria-hidden="true"><img src="/assets/images/cresiq.png" alt="" width="40" height="40"></span>
+        <div class="cg-botcha-head-copy"><h2 class="cg-botcha-title">Ask Cresiq</h2><p>Your engineering companion</p></div>
         <span class="cg-botcha-ai-badge">SERVICE GUIDE</span>
-        <button class="cg-botcha-close" type="button" aria-label="Close service guide">×</button>
+        <button class="cg-botcha-close" type="button" aria-label="Close Cresiq">×</button>
       </header>
       <div class="cg-botcha-context"><strong>Ask about CG services, machines, drawings or quotations</strong><span class="cg-botcha-status">Service guide</span></div>
       <div class="cg-botcha-messages" aria-live="polite" aria-relevant="additions text"></div>
@@ -190,7 +190,7 @@
         <button class="cg-botcha-send" type="submit" aria-label="Send message">→</button>
       </form>
       <footer class="cg-botcha-foot">
-        <a href="https://wa.me/916291001781" target="_blank" rel="noopener">Human help →</a>
+        <button type="button" class="cg-botcha-reset">New chat</button><a href="https://wa.me/916291001781" target="_blank" rel="noopener">Human help →</a>
         <span>Guidance only. Final scope and technical commitments are reviewed by the CG team.</span>
       </footer>
     </section>
@@ -200,13 +200,13 @@
     if(!document.querySelector('link[data-cg-botcha-css]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href='/assets/css/botcha.css?v=8.0.0';
+      link.href='/assets/css/botcha.css?v=15.0.0';
       link.dataset.cgBotchaCss='1';
       document.head.appendChild(link);
     }
     if(!document.querySelector('script[src^="/assets/js/botcha.js"]')){
       const script=document.createElement('script');
-      script.src='/assets/js/botcha.js?v=8.0.0';
+      script.src='/assets/js/botcha.js?v=15.0.0';
       script.dataset.cgBotchaJs='1';
       script.defer=true;
       document.body.appendChild(script);

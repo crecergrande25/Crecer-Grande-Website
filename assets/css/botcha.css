@@ -40,3 +40,11 @@
   .cg-botcha-bubble{max-width:88%}
 }
 @media(prefers-reduced-motion:reduce){.cg-botcha-chat.open,.cg-botcha-live-dot,.cg-botcha-typing span{animation:none!important}}
+/* Cresiq identity and readable conversations. */
+.cg-botcha-mark img{display:block;width:100%;height:100%;object-fit:contain}
+.cg-botcha-bubble p{font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.cg-botcha-answer-meta{color:#596b7b!important;font-size:10px!important}
+.cg-botcha-reset{background:transparent;border:1px solid #9aaab6;border-radius:6px;color:#12375b;padding:6px 8px;cursor:pointer;white-space:nowrap}
+.cg-botcha-input{font-size:16px}
+.cg-botcha-avatar img{width:27px;height:27px;object-fit:contain}
+@media(prefers-reduced-motion:reduce){.cg-botcha *{animation:none!important;transition:none!important}}
